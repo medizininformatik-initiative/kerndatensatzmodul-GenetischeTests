@@ -1,0 +1,76 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "Modul-MolekulargenetischerBefundbericht",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-molekulargenetischer-befundbericht/ImplementationGuide/Modul-MolekulargenetischerBefundbericht",
+  "version": "0.1.0",
+  "name": "KerndatensatzModulMolekulargenetischerBefundbericht",
+  "title": "Medizininformatik-Initiative - Modul Molekulargenetischer Befundbericht",
+  "status": "draft",
+  "publisher": "Medizininformatik-Initiative",
+  "contact": [
+    {
+      "name": "Medizininformatik-Initiative",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de/"
+        },
+        {
+          "system": "email",
+          "value": "info@medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "packageId": "Modul-MolekulargenetischerBefundbericht",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.fhir.uv.genomics-reporting",
+      "version": "1.0.0",
+      "uri": "http://hl7.org/fhir/uv/genomics-reporting/ImplementationGuide/hl7.fhir.uv.genomics-reporting",
+      "id": "hl7_fhir_uv_genomics_reporting"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.meta",
+      "uri": "https://simplifier.net/guide/medizininformatikinitiative-implementationguide-manteldokument",
+      "version": "1.0.3",
+      "id": "de_medizininformatikinitiative_kerndatensatz_meta"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/MolekulargenetischerBefundbericht"
+        },
+        "name": "MolekulargenetischerBefundbericht",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2021+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      }
+    ]
+  }
+}
