@@ -6,3 +6,4 @@ Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen B
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
+* result[variant] only Reference(SD_MII_MolGen_Variante)
