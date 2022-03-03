@@ -1,17 +1,35 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "MolekulargenetischerBefundbericht",
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-molekulargenetischer-befundbericht/StructureDefinition/MolekulargenetischerBefundbericht",
+  "id": "ProfileMolekulargenetischerBefundbericht",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Diagnostics"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-molekulargenetischer-befundbericht/StructureDefinition/molekulargenetischer-befundbericht",
   "version": "0.1.0",
   "name": "MolekulargenetischerBefundbericht",
-  "status": "active",
+  "title": "Profile - DiagnosticReport - Molekulargenetischer Befundbericht",
+  "status": "draft",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de/"
+        }
+      ]
+    }
+  ],
+  "description": "Der DiagnosticReport ist zentraler Bestandteil aller genetischen Befundberichte und enthält Metadaten über den gesamten Bericht sowie alle relevanten Informationen, die im Rahmen der molekulargenetischen Analyse gefunden wurden.",
   "fhirVersion": "4.0.1",
   "mapping": [
-    {
-      "identity": "v2-cg-results",
-      "uri": "http://unknown.org/V2-CG-Results",
-      "name": "V2-CG-Results"
-    },
     {
       "identity": "workflow",
       "uri": "http://hl7.org/fhir/workflow",
@@ -41,6 +59,11 @@
   "differential": {
     "element": [
       {
+        "id": "DiagnosticReport",
+        "path": "DiagnosticReport",
+        "comment": "MI-I Molekulargenetischer Befundbericht"
+      },
+      {
         "id": "DiagnosticReport.subject",
         "path": "DiagnosticReport.subject",
         "type": [
@@ -51,8 +74,7 @@
             ],
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/Group",
-              "http://hl7.org/fhir/StructureDefinition/Location"
+              "http://hl7.org/fhir/StructureDefinition/Group"
             ]
           }
         ]

@@ -29,7 +29,7 @@
   "dependsOn": [
     {
       "packageId": "hl7.fhir.uv.genomics-reporting",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "uri": "http://hl7.org/fhir/uv/genomics-reporting/ImplementationGuide/hl7.fhir.uv.genomics-reporting",
       "id": "hl7_fhir_uv_genomics_reporting"
     },
@@ -44,9 +44,18 @@
     "resource": [
       {
         "reference": {
-          "reference": "StructureDefinition/MolekulargenetischerBefundbericht"
+          "reference": "StructureDefinition/ProfileMolekulargenetischerBefundbericht"
         },
-        "name": "MolekulargenetischerBefundbericht",
+        "name": "Profile - DiagnosticReport - Molekulargenetischer Befundbericht",
+        "description": "Der DiagnosticReport ist zentraler Bestandteil aller genetischen Befundberichte und enthält Metadaten über den gesamten Bericht sowie alle relevanten Informationen, die im Rahmen der molekulargenetischen Analyse gefunden wurden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/sd-mii-molgen-variante"
+        },
+        "name": "SD MII MolGen Variante",
+        "description": "Dieses Profil ermöglicht eine vollständige Beschreibung der gefundenen Variante unter Verwendung von Eigenschaften aus einer Vielzahl von Testmethoden.",
         "exampleBoolean": false
       }
     ],
