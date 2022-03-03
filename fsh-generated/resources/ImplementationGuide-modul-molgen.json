@@ -1,10 +1,10 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "Modul-MolekulargenetischerBefundbericht",
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-molekulargenetischer-befundbericht/ImplementationGuide/Modul-MolekulargenetischerBefundbericht",
+  "id": "modul-molgen",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/modul-molgen",
   "version": "0.1.0",
-  "name": "KerndatensatzModulMolekulargenetischerBefundbericht",
-  "title": "Medizininformatik-Initiative - Modul Molekulargenetischer Befundbericht",
+  "name": "IG_MII_MolGen",
+  "title": "IG MII Modul Molekulargenetischer Befundbericht",
   "status": "draft",
   "publisher": "Medizininformatik-Initiative",
   "contact": [
@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "packageId": "Modul-MolekulargenetischerBefundbericht",
+  "packageId": "modul-molgen",
   "fhirVersion": [
     "4.0.1"
   ],
@@ -44,9 +44,9 @@
     "resource": [
       {
         "reference": {
-          "reference": "StructureDefinition/ProfileMolekulargenetischerBefundbericht"
+          "reference": "StructureDefinition/sd-mii-modul-molgen-molekulargenetischer-befundbericht"
         },
-        "name": "Profile - DiagnosticReport - Molekulargenetischer Befundbericht",
+        "name": "SD MII MolGen Molekulargenetischer Befundbericht",
         "description": "Der DiagnosticReport ist zentraler Bestandteil aller genetischen Befundberichte und enthält Metadaten über den gesamten Bericht sowie alle relevanten Informationen, die im Rahmen der molekulargenetischen Analyse gefunden wurden.",
         "exampleBoolean": false
       },
