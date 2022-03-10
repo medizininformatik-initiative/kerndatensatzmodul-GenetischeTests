@@ -68,6 +68,40 @@
         ]
       },
       {
+        "id": "ServiceRequest.basedOn",
+        "path": "ServiceRequest.basedOn",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1742",
+            "comment": "Zuvor durchgeführte Tests Methode"
+          },
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1743",
+            "comment": "Zuvor durchgeführte Tests Gen"
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.code",
+        "path": "ServiceRequest.code",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1761",
+            "comment": "Zu testende Gene, ID"
+          },
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1704",
+            "comment": "Einheitlicher Bewertungsmaßstab"
+          }
+        ]
+      },
+      {
         "id": "ServiceRequest.subject",
         "path": "ServiceRequest.subject",
         "type": [
@@ -80,6 +114,31 @@
               "http://hl7.org/fhir/StructureDefinition/Patient",
               "http://hl7.org/fhir/StructureDefinition/Group"
             ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.authoredOn",
+        "path": "ServiceRequest.authoredOn",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1766",
+            "comment": "Datum der Anforderung"
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.requester",
+        "path": "ServiceRequest.requester",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1746",
+            "comment": "Anforderer"
           }
         ]
       },
@@ -98,11 +157,24 @@
       {
         "id": "ServiceRequest.reasonReference",
         "path": "ServiceRequest.reasonReference",
-        "mustSupport": true
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1744",
+            "comment": "Ergebnisse vorheriger Tests"
+          },
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1745",
+            "comment": "Bereichtsverweis"
+          }
+        ]
       },
       {
         "id": "ServiceRequest.supportingInfo",
         "path": "ServiceRequest.supportingInfo",
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "MII-KDS",
@@ -113,6 +185,28 @@
             "identity": "MII-KDS",
             "map": "mide-dataelement-1739",
             "comment": "Krankengeschichte Patient"
+          },
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1740",
+            "comment": "Krankengeschichte Familie"
+          },
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1741",
+            "comment": "Anlageträger"
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.note",
+        "path": "ServiceRequest.note",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1763",
+            "comment": "Anforderungstext"
           }
         ]
       }
