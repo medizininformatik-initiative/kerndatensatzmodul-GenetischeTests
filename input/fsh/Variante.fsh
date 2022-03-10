@@ -10,7 +10,7 @@ Description: "Dieses Profil ermöglicht eine vollständige Beschreibung der gefu
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
-* component contains dna-region 0..1
+* component contains dna-region 0..*
 * component[dna-region].code = LNC#47999-8
 * component[dna-region].code ^short = "47999-8"
 * component[dna-region] ^short = "DNA region name [Identifier]"

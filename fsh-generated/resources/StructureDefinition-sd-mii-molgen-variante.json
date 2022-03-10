@@ -80,7 +80,7 @@
         "short": "DNA region name [Identifier]",
         "definition": "A human readable name for the region of interest. Typically Exon #, Intron # or other.",
         "min": 0,
-        "max": "1"
+        "max": "*"
       },
       {
         "id": "Observation.component:dna-region.code",
