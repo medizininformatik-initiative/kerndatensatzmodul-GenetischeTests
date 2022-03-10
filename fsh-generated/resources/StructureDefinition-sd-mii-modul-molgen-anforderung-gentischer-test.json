@@ -99,6 +99,22 @@
         "id": "ServiceRequest.reasonReference",
         "path": "ServiceRequest.reasonReference",
         "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.supportingInfo",
+        "path": "ServiceRequest.supportingInfo",
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1738",
+            "comment": "Aktueller Gesundheitszustand"
+          },
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1739",
+            "comment": "Krankengeschichte Patient"
+          }
+        ]
       }
     ]
   }

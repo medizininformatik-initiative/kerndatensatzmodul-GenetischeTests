@@ -15,3 +15,5 @@ Title: "MII KDS Mapping"
 Source: SD_MII_MolGen_AnforderungGenetischerTest
 * -> "mide-dataelement-1733" "Indikation / Anforderung"
 * reasonCode -> "mide-dataelement-1736" "Indikation"
+* supportingInfo -> "mide-dataelement-1738" "Aktueller Gesundheitszustand"
+* supportingInfo -> "mide-dataelement-1739" "Krankengeschichte Patient"
