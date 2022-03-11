@@ -38,6 +38,10 @@
       "identity": "w5",
       "uri": "http://hl7.org/fhir/fivews",
       "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "MII-KDS",
+      "name": "MII KDS Mapping"
     }
   ],
   "kind": "resource",
@@ -47,6 +51,32 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "DiagnosticReport",
+        "path": "DiagnosticReport",
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1371",
+            "comment": "Molekulargenetischer Befundbericht"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.status",
+        "path": "DiagnosticReport.status",
+        "alias": [
+          "Berichtstatus"
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1448",
+            "comment": "Berichtstatus"
+          }
+        ]
+      },
       {
         "id": "DiagnosticReport.subject",
         "path": "DiagnosticReport.subject",
@@ -61,7 +91,67 @@
               "http://hl7.org/fhir/StructureDefinition/Group"
             ]
           }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.issued",
+        "path": "DiagnosticReport.issued",
+        "alias": [
+          "Datum des Berichtes",
+          "Date Issued",
+          "Date Verified"
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1452",
+            "comment": "Datum des Berichtes"
+          }
         ]
+      },
+      {
+        "id": "DiagnosticReport.performer",
+        "path": "DiagnosticReport.performer",
+        "alias": [
+          "Labor / Institution/ Ansprechpartner",
+          "Service",
+          "Practitioner",
+          "Department",
+          "Company",
+          "Authorized by",
+          "Director"
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1453",
+            "comment": "Labor / Institution/ Ansprechpartner"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.resultsInterpreter",
+        "path": "DiagnosticReport.resultsInterpreter",
+        "alias": [
+          "Labor / Institution/ Ansprechpartner",
+          "Reported by"
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1453",
+            "comment": "Labor / Institution/ Ansprechpartner"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.result",
+        "path": "DiagnosticReport.result",
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.result:variant",
@@ -73,6 +163,23 @@
             "targetProfile": [
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
             ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.media",
+        "path": "DiagnosticReport.media",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1698",
+            "comment": "Daten"
+          },
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1447",
+            "comment": "Anhänge"
           }
         ]
       }
