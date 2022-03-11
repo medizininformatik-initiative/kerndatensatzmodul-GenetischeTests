@@ -102,6 +102,20 @@
         ]
       },
       {
+        "id": "ServiceRequest.code.text",
+        "path": "ServiceRequest.code.text",
+        "alias": [
+          "Anforderungstext"
+        ],
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1763",
+            "comment": "Anforderungstext"
+          }
+        ]
+      },
+      {
         "id": "ServiceRequest.subject",
         "path": "ServiceRequest.subject",
         "type": [
@@ -121,6 +135,9 @@
       {
         "id": "ServiceRequest.authoredOn",
         "path": "ServiceRequest.authoredOn",
+        "alias": [
+          "Datum der Anforderung"
+        ],
         "mustSupport": true,
         "mapping": [
           {
@@ -133,6 +150,10 @@
       {
         "id": "ServiceRequest.requester",
         "path": "ServiceRequest.requester",
+        "alias": [
+          "Anforderer",
+          "orderer"
+        ],
         "mustSupport": true,
         "mapping": [
           {
@@ -145,6 +166,9 @@
       {
         "id": "ServiceRequest.reasonCode",
         "path": "ServiceRequest.reasonCode",
+        "alias": [
+          "Indikation"
+        ],
         "mustSupport": true,
         "mapping": [
           {
@@ -201,6 +225,9 @@
       {
         "id": "ServiceRequest.note",
         "path": "ServiceRequest.note",
+        "alias": [
+          "Anforderungstext"
+        ],
         "mustSupport": true,
         "mapping": [
           {

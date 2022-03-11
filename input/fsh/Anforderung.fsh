@@ -6,15 +6,20 @@ Description: "Der Laborauftrag oder die Anfrage, die die Durchführung des genet
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
 * basedOn MS
 * code MS
+* code.text ^alias[+] = "Anforderungstext"
 * subject MS
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
 * authoredOn MS
+* authoredOn ^alias[+] = "Datum der Anforderung"
 * requester MS
+* requester ^alias[+] = "Anforderer"
 * reasonCode MS
+* reasonCode ^alias[+] = "Indikation"
 * reasonReference MS 
 * supportingInfo MS
 * note MS
+* note ^alias[+] = "Anforderungstext"
 
 Mapping: MolGen-Anforderung
 Id: MII-KDS
@@ -33,6 +38,7 @@ Source: SD_MII_MolGen_AnforderungGenetischerTest
 * basedOn -> "mide-dataelement-1743" "Zuvor durchgeführte Tests Gen"
 * code -> "mide-dataelement-1761" "Zu testende Gene, ID"
 * code -> "mide-dataelement-1704" "Einheitlicher Bewertungsmaßstab"
+* code.text -> "mide-dataelement-1763" "Anforderungstext"
 * note -> "mide-dataelement-1763" "Anforderungstext"
 * authoredOn -> "mide-dataelement-1766" "Datum der Anforderung"
 
