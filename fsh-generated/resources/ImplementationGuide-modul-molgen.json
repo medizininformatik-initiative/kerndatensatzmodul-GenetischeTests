@@ -52,6 +52,22 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/sd-mii-modul-molgen-ergebnis-zusammenfassung"
+        },
+        "name": "SD MII MolGen Ergbenis Zusammenfassung",
+        "description": "Mit diesem Profil kann das Labor das zusammenfassende Ergebnis des Tests deklarieren (z. B. Positiv, Negativ, Unbekannt).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/sd-mii-modul-molgen-gruppierung-beobachtungen"
+        },
+        "name": "SD MII MolGen Gruppierung Beobachtungen",
+        "description": "Mit diesem Profil können genetische Beobachtungen auf verschiedene Weise organisiert und gruppiert werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/sd-mii-modul-molgen-molekulargenetischer-befundbericht"
         },
         "name": "SD MII MolGen Molekulargenetischer Befundbericht",
