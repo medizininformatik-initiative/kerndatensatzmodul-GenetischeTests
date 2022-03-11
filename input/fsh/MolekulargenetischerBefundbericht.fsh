@@ -16,6 +16,10 @@ Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen B
 * resultsInterpreter MS
 * resultsInterpreter ^alias[+] = "Labor / Institution/ Ansprechpartner"
 * result MS
+* result[gen-grouper] only Reference(SD_MII_MolGen_GruppierungBeobachtungen)
+* result[overall] only Reference(SD_MII_MolGen_ErgebnisZusammenfassung)
+* result[diagnostic-implication] only Reference(SD_MII_MolGen_DiagnostischeImplikation)
+* result[therapeutic-implication] only Reference(SD_MII_MolGen_TherapeutischeImplikation)
 * result[variant] only Reference(SD_MII_MolGen_Variante)
 * media MS
 

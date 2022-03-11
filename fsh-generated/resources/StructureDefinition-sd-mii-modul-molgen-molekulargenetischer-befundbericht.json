@@ -154,6 +154,58 @@
         "mustSupport": true
       },
       {
+        "id": "DiagnosticReport.result:gen-grouper",
+        "path": "DiagnosticReport.result",
+        "sliceName": "gen-grouper",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/gruppierung-beobachtungen"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.result:overall",
+        "path": "DiagnosticReport.result",
+        "sliceName": "overall",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/ergebnis-zusammenfassung"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.result:diagnostic-implication",
+        "path": "DiagnosticReport.result",
+        "sliceName": "diagnostic-implication",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.result:therapeutic-implication",
+        "path": "DiagnosticReport.result",
+        "sliceName": "therapeutic-implication",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation"
+            ]
+          }
+        ]
+      },
+      {
         "id": "DiagnosticReport.result:variant",
         "path": "DiagnosticReport.result",
         "sliceName": "variant",

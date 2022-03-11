@@ -7,6 +7,7 @@ Description: "Dieses Profil beschreibt den möglichen Einfluss genetischer Merkm
 * subject MS 
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
+* derivedFrom[variant] only Reference(SD_MII_MolGen_Variante)
 * component[evidence-level] MS
 
 Mapping: MolGen-TherapeutischeImplikation

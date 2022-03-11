@@ -7,6 +7,10 @@ Description: "Mit diesem Profil können genetische Beobachtungen auf verschieden
 * subject MS 
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
+* hasMember[grouper-ref] only Reference(SD_MII_MolGen_GruppierungBeobachtungen)
+* hasMember[overall] only Reference(SD_MII_MolGen_ErgebnisZusammenfassung)
+* hasMember[diagnostic-implication] only Reference(SD_MII_MolGen_DiagnostischeImplikation)
+* hasMember[therapeutic-implication] only Reference(SD_MII_MolGen_TherapeutischeImplikation)
 * hasMember[variant] only Reference(SD_MII_MolGen_Variante)
 
 Mapping: MolGen-Gruppierung

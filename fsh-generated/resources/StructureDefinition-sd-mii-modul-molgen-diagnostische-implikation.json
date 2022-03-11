@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "sd-mii-modul-molgen-therapeutische-implikation",
+  "id": "sd-mii-modul-molgen-diagnostische-implikation",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +11,12 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation",
   "version": "0.1.0",
-  "name": "SD_MII_MolGen_TherapeutischeImplikation",
-  "title": "SD MII MolGen Therapeutische Implikation",
+  "name": "SD_MII_MolGen_DiagnostischeImplikation",
+  "title": "SD MII MolGen Diagnostische Implikation",
   "status": "active",
-  "description": "Dieses Profil beschreibt den möglichen Einfluss genetischer Merkmale auf eine medikamentöse oder nicht-medikamentöse Therapie.",
+  "description": "Dieses Profil beschreibt den Zusammenhang zwischen einem oder mehreren Genotyp/Haplotyp/Varianten und Beweisen für oder gegen eine bestimmte Krankheit.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -57,21 +57,10 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapeutic-implication",
+  "baseDefinition": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication",
   "derivation": "constraint",
   "differential": {
     "element": [
-      {
-        "id": "Observation",
-        "path": "Observation",
-        "mapping": [
-          {
-            "identity": "MII-KDS",
-            "map": "mide-dataelement-1724",
-            "comment": "Empfehlungen (Therapie, Allg.)"
-          }
-        ]
-      },
       {
         "id": "Observation.subject",
         "path": "Observation.subject",
@@ -112,6 +101,19 @@
             "identity": "MII-KDS",
             "map": "mide-dataelement-1720",
             "comment": "Clinical Annotation Level Of Evidence"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:clinical-significance",
+        "path": "Observation.component",
+        "sliceName": "clinical-significance",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-2015",
+            "comment": "Klinische Signifikanz"
           }
         ]
       }

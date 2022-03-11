@@ -52,6 +52,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/sd-mii-modul-molgen-diagnostische-implikation"
+        },
+        "name": "SD MII MolGen Diagnostische Implikation",
+        "description": "Dieses Profil beschreibt den Zusammenhang zwischen einem oder mehreren Genotyp/Haplotyp/Varianten und Beweisen für oder gegen eine bestimmte Krankheit.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/sd-mii-modul-molgen-ergebnis-zusammenfassung"
         },
         "name": "SD MII MolGen Ergbenis Zusammenfassung",
@@ -72,6 +80,14 @@
         },
         "name": "SD MII MolGen Molekulargenetischer Befundbericht",
         "description": "Der DiagnosticReport ist zentraler Bestandteil aller genetischen Befundberichte und enthält Metadaten über den gesamten Bericht sowie alle relevanten Informationen, die im Rahmen der molekulargenetischen Analyse gefunden wurden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/sd-mii-modul-molgen-therapeutische-implikation"
+        },
+        "name": "SD MII MolGen Therapeutische Implikation",
+        "description": "Dieses Profil beschreibt den möglichen Einfluss genetischer Merkmale auf eine medikamentöse oder nicht-medikamentöse Therapie.",
         "exampleBoolean": false
       },
       {
