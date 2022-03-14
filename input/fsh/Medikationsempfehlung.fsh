@@ -13,3 +13,4 @@ Mapping: MolGen-Medikationsempfehlung
 Id: MII-KDS
 Title: "MII KDS Mapping"
 Source: SD_MII_MolGen_Medikationsempfehlung
+* -> "mide-dataelement-1724" "Empfehlungen (Therapie, Allg.)"

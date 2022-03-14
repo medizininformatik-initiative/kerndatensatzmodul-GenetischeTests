@@ -52,6 +52,17 @@
   "differential": {
     "element": [
       {
+        "id": "Task",
+        "path": "Task",
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1724",
+            "comment": "Empfehlungen (Therapie, Allg.)"
+          }
+        ]
+      },
+      {
         "id": "Task.for",
         "path": "Task.for",
         "type": [
