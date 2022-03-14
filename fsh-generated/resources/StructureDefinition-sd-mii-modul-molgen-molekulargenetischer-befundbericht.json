@@ -63,6 +63,21 @@
         ]
       },
       {
+        "id": "DiagnosticReport.extension:recommended-action",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "recommended-action",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-massnahme"
+            ]
+          }
+        ]
+      },
+      {
         "id": "DiagnosticReport.status",
         "path": "DiagnosticReport.status",
         "alias": [
