@@ -108,6 +108,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/sd-mii-modul-molgen-mutationslast"
+        },
+        "name": "SD MII MolGen Mutationslast",
+        "description": "Dieses Profil beschreibt die Gesamtzahl der in der DNA von Krebszellen gefundenen Mutationen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/sd-mii-modul-molgen-therapeutische-implikation"
         },
         "name": "SD MII MolGen Therapeutische Implikation",
@@ -169,6 +177,14 @@
         "name": "Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom",
         "description": "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorektalem Adenokarzniom.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-molgen-mutationslast-1"
+        },
+        "name": "Beispiel Mutationslast in Tumorprobe",
+        "description": "Beispiel für Mutationslast in Tumorprobe.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast"
       },
       {
         "reference": {
