@@ -232,6 +232,19 @@
         ]
       },
       {
+        "id": "DiagnosticReport.result:region-studied",
+        "path": "DiagnosticReport.result",
+        "sliceName": "region-studied",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+            ]
+          }
+        ]
+      },
+      {
         "id": "DiagnosticReport.media",
         "path": "DiagnosticReport.media",
         "mustSupport": true,

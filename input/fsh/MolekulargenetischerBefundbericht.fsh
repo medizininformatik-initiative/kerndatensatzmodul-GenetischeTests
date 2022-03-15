@@ -23,6 +23,7 @@ Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen B
 * result[diagnostic-implication] only Reference(SD_MII_MolGen_DiagnostischeImplikation)
 * result[therapeutic-implication] only Reference(SD_MII_MolGen_TherapeutischeImplikation)
 * result[variant] only Reference(SD_MII_MolGen_Variante)
+* result[region-studied] only Reference(SD_MII_MolGen_UntersuchteRegion)
 * media MS
 
 Mapping: MolGen-Befundbericht
@@ -54,6 +55,7 @@ Description: "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorek
 * result[diagnostic-implication] = Reference(example-mii-molgen-diagnostische-implikation-1)
 * result[therapeutic-implication] = Reference(example-mii-molgen-therapeutische-implikation-1)
 * result[variant] = Reference(example-mii-molgen-variante-1)
+* result[region-studied] = Reference(example-mii-molgen-untersuchte-region-1)
 * conclusion = "BRAF p.V600E Mutation liegt vor. Bitte Therapieoption mit einem BRAF-Inhibitor prüfen."
 
 

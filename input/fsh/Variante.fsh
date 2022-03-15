@@ -38,6 +38,7 @@ Description: "Beispiel für genetische Variante im BRAF Gen an Hand von NGS."
 * method = LNC#LA26398-0 "Sequencing"
 * specimen = Reference(Specimen/tbd)
 * device = Reference(Device/MiSeq)
+* derivedFrom = Reference(example-mii-molgen-untersuchte-region-1)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:1097 "BRAF"
 * component[genomic-ref-seq].code = LNC#48013-7 "Genomic reference sequence [ID]"
