@@ -156,6 +156,14 @@
       },
       {
         "reference": {
+          "reference": "Task/example-mii-molgen-folgemassnahme-1"
+        },
+        "name": "BRAF Empfohlene Folgemaßnahme",
+        "description": "Beispiel für empfohlene Folgemaßnahme abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme"
+      },
+      {
+        "reference": {
           "reference": "Observation/example-mii-molgen-gruppierung-beobachtungen-1"
         },
         "name": "Molekulargentischer Befund 1: BRAF Beobachtungen",

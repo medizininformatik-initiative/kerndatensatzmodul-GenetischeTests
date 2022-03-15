@@ -46,7 +46,8 @@ Usage: #example
 Title: "Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom"
 Description: "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorektalem Adenokarzniom."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
-* extension[RecommendedAction].valueReference = Reference(example-mii-molgen-medikationsempfehlung-1)
+* extension[RecommendedAction][+].valueReference = Reference(example-mii-molgen-medikationsempfehlung-1)
+* extension[RecommendedAction][+].valueReference = Reference(example-mii-molgen-folgemassnahme-1)
 * basedOn = Reference(servicerequest/example)
 * status = DiagRepStatus#final
 * category = v2-0074#GE "Genetics"
