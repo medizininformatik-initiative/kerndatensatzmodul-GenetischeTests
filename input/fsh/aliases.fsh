@@ -8,3 +8,4 @@ Alias:  dbSNP = http://www.ncbi.nlm.nih.gov/projects/SNP
 Alias:  ISCN = urn:oid:2.16.840.1.113883.6.299
 Alias:  ChromLoc = urn:oid:2.16.840.1.113883.6.335
 Alias:  GenTbd = http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes
+Alias:  ATC = http://www.whocc.no/atc
