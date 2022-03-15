@@ -15,3 +15,16 @@ Id: MII-KDS
 Title: "MII KDS Mapping"
 Source: SD_MII_MolGen_Medikationsempfehlung
 * -> "mide-dataelement-1724" "Empfehlungen (Therapie, Allg.)"
+
+Instance: example-mii-molgen-medikationsempfehlung-1
+InstanceOf: sd-mii-modul-molgen-medikationsempfehlung
+Usage: #example
+Title: "BRAF Variante Medikationsempfehlung"
+Description: "Beispiel für Medikationsempfehlung abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS."
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/task-med-chg"
+* basedOn = Reference(servicerequest/example)
+* status = TaskStatus#requested
+* intent = RequestIntent#proposal
+* code = LNC#LA26421-0 "Consider alternative medication"
+* for = Reference(Patient/example)
+* reasonReference = Reference(example-mii-molgen-therapeutische-implikation-1)

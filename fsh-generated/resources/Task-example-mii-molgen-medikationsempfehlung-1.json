@@ -1,0 +1,32 @@
+{
+  "resourceType": "Task",
+  "id": "example-mii-molgen-medikationsempfehlung-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung",
+      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/task-med-chg"
+    ]
+  },
+  "status": "requested",
+  "intent": "proposal",
+  "basedOn": [
+    {
+      "reference": "servicerequest/example"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "LA26421-0",
+        "system": "http://loinc.org",
+        "display": "Consider alternative medication"
+      }
+    ]
+  },
+  "for": {
+    "reference": "Patient/example"
+  },
+  "reasonReference": {
+    "reference": "Observation/example-mii-molgen-therapeutische-implikation-1"
+  }
+}
