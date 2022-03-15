@@ -13,3 +13,4 @@ Alias:  TaskStatus = http://hl7.org/fhir/task-status
 Alias:  RequestIntent = http://hl7.org/fhir/request-intent
 Alias:  DiagRepStatus = http://hl7.org/fhir/diagnostic-report-status
 Alias:  v2-0074 = http://terminology.hl7.org/CodeSystem/v2-0074
+Alias:  UCUM = http://unitsofmeasure.org

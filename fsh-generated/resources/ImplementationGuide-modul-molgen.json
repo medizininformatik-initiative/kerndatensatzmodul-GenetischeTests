@@ -116,6 +116,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/sd-mii-modul-molgen-untersuchte-region"
+        },
+        "name": "SD MII MolGen Untersuchte Region",
+        "description": "Dieses Profil beschreibt die Region oder die Regionen, die im Rahmen dieses Befundberichts untersucht wurden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/sd-mii-molgen-variante"
         },
         "name": "SD MII MolGen Variante",
@@ -169,6 +177,14 @@
         "name": "BRAF Variante Therapeutische Implikation",
         "description": "Beispiel für therapeutische Implikation abgeleitet von genetische Variante im BRAF Gen an Hand von NGS.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-molgen-untersuchte-region-1"
+        },
+        "name": "Untersuchte Region BRAF",
+        "description": "Beispiel für untersuchte Region BRAF Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
       },
       {
         "reference": {
