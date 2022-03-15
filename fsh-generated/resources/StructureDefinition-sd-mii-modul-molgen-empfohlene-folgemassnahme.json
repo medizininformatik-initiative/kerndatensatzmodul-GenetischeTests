@@ -11,12 +11,12 @@
       "valueCode": "not-classified"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme",
   "version": "0.1.0",
   "name": "SD_MII_MolGen_EmpfohleneFolgemassnahme",
   "title": "SD MII MolGen Empfohlene Folgemaßnahme",
-  "status": "active",
-  "description": "Das Profil dieser Task Ressource dient dazu, auf der Grundlage der genetischen Ergebnisse medikamanetöse Maßnahmen vorzuschlagen.",
+  "status": "draft",
+  "description": "Das Profil dieser Task Ressource beschreibt die empfohlenen Folgemaßnahmen.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -52,13 +52,18 @@
   "differential": {
     "element": [
       {
-        "id": "Task",
-        "path": "Task",
+        "id": "Task.code",
+        "path": "Task.code",
         "mapping": [
           {
             "identity": "MII-KDS",
             "map": "mide-dataelement-1724",
             "comment": "Empfehlungen (Therapie, Allg.)"
+          },
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1443",
+            "comment": "Beratung"
           }
         ]
       },
