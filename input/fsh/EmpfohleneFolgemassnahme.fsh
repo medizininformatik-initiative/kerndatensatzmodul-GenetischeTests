@@ -27,6 +27,6 @@ Description: "Beispiel für empfohlene Folgemaßnahme abgeleitet von genetischer
 * status = TaskStatus#requested
 * intent = RequestIntent#proposal
 * code = LNC#LA14020-4 "Genetic counseling recommended"
-* description = "Genetische Beratung empfohlene mit Dr. Rosalind Franklin"
+* description = "Genetische Beratung empfohlen mit Dr. Rosalind Franklin"
 * for = Reference(Patient/example)
 * reasonReference = Reference(example-mii-molgen-therapeutische-implikation-1)
