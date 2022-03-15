@@ -54,10 +54,12 @@ Description: "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorek
 * subject = Reference(Patient/example)
 * performer = Reference(Practitioner/example)
 * specimen = Reference(Specimen/example)
+* result[gen-grouper] = Reference(example-mii-molgen-gruppierung-beobachtungen-1)
 * result[diagnostic-implication] = Reference(example-mii-molgen-diagnostische-implikation-1)
 * result[therapeutic-implication] = Reference(example-mii-molgen-therapeutische-implikation-1)
 * result[variant] = Reference(example-mii-molgen-variante-1)
 * result[region-studied] = Reference(example-mii-molgen-untersuchte-region-1)
+* result[tumor-mutation-burden] = Reference(example-mii-molgen-mutationslast-1)
 * conclusion = "BRAF p.V600E Mutation liegt vor. Bitte Therapieoption mit einem BRAF-Inhibitor prüfen."
 
 
