@@ -36,3 +36,24 @@ Source: SD_MII_MolGen_MolekulargenetischerBefundbericht
 * resultsInterpreter -> "mide-dataelement-1453" "Labor / Institution/ Ansprechpartner"
 * media -> "mide-dataelement-1698" "Daten"
 * media -> "mide-dataelement-1447" "Anhänge"
+
+Instance: example-mii-molgen-molekulargenetischer-befundbericht-1
+InstanceOf: sd-mii-modul-molgen-molekulargenetischer-befundbericht
+Usage: #example
+Title: "Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom"
+Description: "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorektalem Adenokarzniom."
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
+* extension[RecommendedAction].valueReference = Reference(example-mii-molgen-medikationsempfehlung-1)
+* basedOn = Reference(servicerequest/example)
+* status = DiagRepStatus#final
+* category = v2-0074#GE "Genetics"
+* code = LNC#51969-4 "Genetic analysis report"
+* subject = Reference(Patient/example)
+* performer = Reference(Practitioner/example)
+* specimen = Reference(Specimen/example)
+* result[diagnostic-implication] = Reference(example-mii-molgen-diagnostische-implikation-1)
+* result[therapeutic-implication] = Reference(example-mii-molgen-therapeutische-implikation-1)
+* result[variant] = Reference(example-mii-molgen-variante-1)
+* conclusion = "BRAF p.V600E Mutation liegt vor. Bitte Therapieoption mit einem BRAF-Inhibitor prüfen."
+
+
