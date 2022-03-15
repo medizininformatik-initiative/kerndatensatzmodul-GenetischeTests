@@ -113,6 +113,14 @@
         "name": "SD MII MolGen Empfohlene Maßnahme",
         "description": "Die Extension verweist auf eine vorgeschlagene Maßnahme, die auf der Grundlage der Ergebnisse des Befundberichts empfohlen wird.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-molgen-variante-1"
+        },
+        "name": "BRAF Variante",
+        "description": "Beispiel für genetische Variante im BRAF Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
       }
     ],
     "page": {
