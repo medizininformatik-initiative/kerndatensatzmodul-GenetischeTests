@@ -9,8 +9,8 @@ Description: "Das Profil dieser Task Ressource dient dazu, auf der Grundlage der
 * for only Reference(Patient)
 * reasonReference only Reference(SD_MII_MolGen_TherapeutischeImplikation)
 
-Mapping: MolGen-Medikationsempfehlung
+Mapping: MolGen-EmpfohleneFolgemassnahme
 Id: MII-KDS
 Title: "MII KDS Mapping"
-Source: SD_MII_MolGen_Medikationsempfehlung
+Source: SD_MII_MolGen_EmpfohleneFolgemassnahme
 * -> "mide-dataelement-1724" "Empfehlungen (Therapie, Allg.)"

@@ -4,6 +4,7 @@ Id: sd-mii-modul-molgen-ergebnis-zusammenfassung
 Title: "SD MII MolGen Ergbenis Zusammenfassung"
 Description: "Mit diesem Profil kann das Labor das zusammenfassende Ergebnis des Tests deklarieren (z. B. Positiv, Negativ, Unbekannt)."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/ergebnis-zusammenfassung"
+* ^status = #draft
 * subject MS 
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)

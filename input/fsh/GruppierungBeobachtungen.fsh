@@ -4,6 +4,7 @@ Id: sd-mii-modul-molgen-gruppierung-beobachtungen
 Title: "SD MII MolGen Gruppierung Beobachtungen"
 Description: "Mit diesem Profil können genetische Beobachtungen auf verschiedene Weise organisiert und gruppiert werden."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/gruppierung-beobachtungen"
+* ^status = #draft
 * subject MS 
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)

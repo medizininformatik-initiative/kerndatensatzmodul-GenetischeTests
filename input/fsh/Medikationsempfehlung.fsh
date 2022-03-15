@@ -4,6 +4,7 @@ Id: sd-mii-modul-molgen-medikationsempfehlung
 Title: "SD MII MolGen Medikationsempfehlung"
 Description: "Das Profil dieser Task Ressource dient dazu, auf der Grundlage der genetischen Ergebnisse medikamanetöse Maßnahmen vorzuschlagen."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung"
+* ^status = #draft
 * for MS 
 * for only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * for only Reference(Patient)
