@@ -18,3 +18,19 @@ Title: "MII KDS Mapping"
 Source: SD_MII_MolGen_DiagnostischeImplikation
 * component[evidence-level] -> "mide-dataelement-1720" "Clinical Annotation Level Of Evidence"
 * component[clinical-significance] -> "mide-dataelement-2015" "Klinische Signifikanz"
+
+Instance: example-mii-molgen-diagnostische-implikation-1
+InstanceOf: sd-mii-modul-molgen-diagnostische-implikation
+Usage: #example
+Title: "BRAF Variante Diagnostische Implikation"
+Description: "Beispiel für diagnostische Implikation abgeleitet von genetische Variante im BRAF Gen an Hand von NGS."
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
+* status = #final
+* category = ObsCat#laboratory "Laboratory"
+* code = GenTbd#diagnostic-implication
+* subject = Reference(Patient/example)
+* performer = Reference(Practitioner/example)
+* derivedFrom[variant] = Reference(example-mii-molgen-variante-1)
+* component[conclusion-string].code = GenTbd#conclusion-string
+* component[conclusion-string].valueString = "Nachweis einer aktivierenden Mutation BRAF V600E"
+
