@@ -245,6 +245,21 @@
         ]
       },
       {
+        "id": "DiagnosticReport.result:tumor-mutation-burden",
+        "path": "DiagnosticReport.result",
+        "sliceName": "tumor-mutation-burden",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast"
+            ]
+          }
+        ]
+      },
+      {
         "id": "DiagnosticReport.media",
         "path": "DiagnosticReport.media",
         "mustSupport": true,
