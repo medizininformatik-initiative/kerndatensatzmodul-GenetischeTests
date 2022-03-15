@@ -27,7 +27,7 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von genetische 
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
 * status = #final
 * category = ObsCat#laboratory "Laboratory"
-* code = GenTbd#diagnostic-implication
+* code = GenTbd#diagnostic-implication "Diagnostische Implikation"
 * subject = Reference(Patient/example)
 * performer = Reference(Practitioner/example)
 * derivedFrom[variant] = Reference(example-mii-molgen-variante-1)
