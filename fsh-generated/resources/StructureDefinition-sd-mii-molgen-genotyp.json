@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "sd-mii-molgen-variante",
+  "id": "sd-mii-molgen-genotyp",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +11,12 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp",
   "version": "0.1.0",
-  "name": "SD_MII_MolGen_Variante",
-  "title": "SD MII MolGen Variante",
+  "name": "SD_MII_MolGen_Genotyp",
+  "title": "SD MII MolGen Genotyp",
   "status": "draft",
-  "description": "Dieses Profil ermöglicht eine vollständige Beschreibung der gefundenen Variante unter Verwendung von Eigenschaften aus einer Vielzahl von Testmethoden.",
+  "description": "Dieses Profil beschreibt die Feststellung eines bestimmten Genotyps auf der Grundlage einer oder mehrerer Varianten oder Haplotypen.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -57,7 +57,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant",
+  "baseDefinition": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -90,34 +90,26 @@
         ]
       },
       {
-        "id": "Observation.component:dna-region",
+        "id": "Observation.component:CytogenicLocation",
         "path": "Observation.component",
-        "sliceName": "dna-region",
-        "short": "DNA region name [Identifier]",
-        "definition": "A human readable name for the region of interest. Typically Exon #, Intron # or other.",
-        "min": 0,
-        "max": "*"
-      },
-      {
-        "id": "Observation.component:dna-region.code",
-        "path": "Observation.component.code",
-        "short": "47999-8",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "47999-8",
-              "system": "http://loinc.org"
-            }
-          ]
-        }
-      },
-      {
-        "id": "Observation.component:dna-region.value[x]",
-        "path": "Observation.component.value[x]",
-        "min": 1,
-        "type": [
+        "sliceName": "CytogenicLocation",
+        "mapping": [
           {
-            "code": "string"
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1434",
+            "comment": "Zytogenetische Lokalisierung (Lokus)"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:RefSequenceAssembly",
+        "path": "Observation.component",
+        "sliceName": "RefSequenceAssembly",
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1788",
+            "comment": "Referenzgenom"
           }
         ]
       }

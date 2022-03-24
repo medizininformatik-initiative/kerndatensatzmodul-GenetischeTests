@@ -23,6 +23,7 @@ Mapping: MolGen-Variante
 Id: MII-KDS
 Title: "MII KDS Mapping"
 Source: SD_MII_MolGen_Variante
+* component[gene-studied] -> "mide-dataelement-1400" "Getestete Gene ID"
 
 Instance: example-mii-molgen-variante-1
 InstanceOf: sd-mii-molgen-variante
