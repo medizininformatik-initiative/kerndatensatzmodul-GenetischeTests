@@ -1,0 +1,102 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "sd-familienanamnese",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Summary"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese",
+  "version": "0.1.0",
+  "name": "SD_Familienanamnese",
+  "title": "SD MII MolGen Familienanamnese",
+  "status": "active",
+  "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "FamilyMemberHistory",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "FamilyMemberHistory.patient",
+        "path": "FamilyMemberHistory.patient",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference"
+            ],
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FamilyMemberHistory.date",
+        "path": "FamilyMemberHistory.date",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.relationship",
+        "path": "FamilyMemberHistory.relationship",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.relationship.coding",
+        "path": "FamilyMemberHistory.relationship.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "FamilyMemberHistory.relationship.coding:snomed",
+        "path": "FamilyMemberHistory.relationship.coding",
+        "sliceName": "snomed",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/vs-family-member-snomed"
+        }
+      }
+    ]
+  }
+}

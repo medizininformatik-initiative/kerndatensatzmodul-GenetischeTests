@@ -44,6 +44,14 @@
     "resource": [
       {
         "reference": {
+          "reference": "StructureDefinition/sd-familienanamnese"
+        },
+        "name": "SD MII MolGen Familienanamnese",
+        "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/sd-mii-modul-molgen-anforderung-gentischer-test"
         },
         "name": "SD MII MolGen Anforderung genetischer Test",
@@ -156,6 +164,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/vs-family-member-snomed"
+        },
+        "name": "ValueSet Family Member SNOMED",
+        "description": "The ValueSet contains codes for related family member types from SNOMED CT.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ServiceRequest/example-mii-molgen-anforderung-1"
         },
         "name": "Anforderung BRAF Genetische Testung",
@@ -182,7 +198,7 @@
           "reference": "FamilyMemberHistory/example-mii-molgen-family-member-history-1"
         },
         "name": "example-mii-molgen-family-member-history-1",
-        "exampleBoolean": true
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
       },
       {
         "reference": {

@@ -1,6 +1,11 @@
 {
   "resourceType": "FamilyMemberHistory",
   "id": "example-mii-molgen-family-member-history-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
+    ]
+  },
   "status": "completed",
   "patient": {
     "reference": "Patient/example-mii-molgen-patient"

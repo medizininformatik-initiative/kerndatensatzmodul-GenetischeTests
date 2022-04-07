@@ -85,17 +85,3 @@ Usage: #example
 * manufacturer = "Illumina"
 * deviceName.name = "MiSeq"
 * deviceName.type = DeviceNameType#manufacturer-name
-
-Instance: example-mii-molgen-family-member-history-1
-InstanceOf: FamilyMemberHistory
-Usage: #example
-* status = #completed
-* patient = Reference(example-mii-molgen-patient)
-* date = "2022-04-07"
-* relationship = SCT#72705000 "Mother (person)"
-* sex.coding[0] = AdminGender#female
-* sex.coding[+] = SCT#248152002 "Female (finding)"
-* deceasedBoolean = true
-* reasonCode = SCT#447886005 "Adenocarcinoma of anorectum (disorder)"
-* condition[0].code = SCT#830150003 "Malignant melanoma with B-Raf proto-oncogene, serine/threonine kinase V600E mutation (disorder)"
-* condition[=].contributedToDeath = true

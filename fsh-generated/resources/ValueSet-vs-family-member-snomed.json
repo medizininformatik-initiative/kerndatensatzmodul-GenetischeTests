@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VS_FamilyMember_SNOMED",
+  "id": "vs-family-member-snomed",
+  "title": "ValueSet Family Member SNOMED",
+  "description": "The ValueSet contains codes for related family member types from SNOMED CT.",
+  "version": "0.1.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/vs-family-member-snomed",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "125677006"
+          }
+        ]
+      }
+    ]
+  }
+}
