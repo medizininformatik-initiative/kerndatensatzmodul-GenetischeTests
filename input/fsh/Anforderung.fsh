@@ -60,4 +60,5 @@ Description: "Beispiel für Anforderun für genetische Testung auf genetische Va
 * authoredOn = "2022-04-07"
 * requester = Reference(example-mii-molgen-practitioner-physician)
 * reasonCode = SCT#447886005 "Adenocarcinoma of anorectum (disorder)"
+* supportingInfo = Reference(example-mii-molgen-family-member-history-1)
 

@@ -1,0 +1,57 @@
+{
+  "resourceType": "FamilyMemberHistory",
+  "id": "example-mii-molgen-family-member-history-1",
+  "status": "completed",
+  "patient": {
+    "reference": "Patient/example-mii-molgen-patient"
+  },
+  "date": "2022-04-07",
+  "relationship": {
+    "coding": [
+      {
+        "code": "72705000",
+        "system": "http://snomed.info/sct",
+        "display": "Mother (person)"
+      }
+    ]
+  },
+  "sex": {
+    "coding": [
+      {
+        "code": "female",
+        "system": "http://hl7.org/fhir/administrative-gender"
+      },
+      {
+        "code": "248152002",
+        "system": "http://snomed.info/sct",
+        "display": "Female (finding)"
+      }
+    ]
+  },
+  "deceasedBoolean": true,
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "code": "447886005",
+          "system": "http://snomed.info/sct",
+          "display": "Adenocarcinoma of anorectum (disorder)"
+        }
+      ]
+    }
+  ],
+  "condition": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "830150003",
+            "system": "http://snomed.info/sct",
+            "display": "Malignant melanoma with B-Raf proto-oncogene, serine/threonine kinase V600E mutation (disorder)"
+          }
+        ]
+      },
+      "contributedToDeath": true
+    }
+  ]
+}

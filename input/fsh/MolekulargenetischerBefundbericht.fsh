@@ -48,6 +48,7 @@ Description: "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorek
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
 * extension[RecommendedAction][+].valueReference = Reference(example-mii-molgen-medikationsempfehlung-1)
 * extension[RecommendedAction][+].valueReference = Reference(example-mii-molgen-folgemassnahme-1)
+* extension[SupportingInfo].valueReference = Reference(example-mii-molgen-family-member-history-1)
 * basedOn = Reference(example-mii-molgen-anforderung-1)
 * status = DiagRepStatus#final
 * category = v2-0074#GE "Genetics"
