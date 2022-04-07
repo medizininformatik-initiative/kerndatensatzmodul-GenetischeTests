@@ -70,7 +70,7 @@
   ],
   "status": "final",
   "subject": {
-    "reference": "Patient/example"
+    "reference": "Patient/example-mii-molgen-patient"
   },
   "valueCodeableConcept": {
     "text": "BRAF rs113488022 T>A"
@@ -85,10 +85,10 @@
     ]
   },
   "specimen": {
-    "reference": "Specimen/tbd"
+    "reference": "example-mii-molgen-specimen"
   },
   "device": {
-    "reference": "Device/MiSeq"
+    "reference": "Device/example-mii-molgen-device-sequencer"
   },
   "derivedFrom": [
     {

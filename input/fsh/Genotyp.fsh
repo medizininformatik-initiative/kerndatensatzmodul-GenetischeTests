@@ -25,11 +25,11 @@ Description: "Beispiel für Genotyp BRAF Gen."
 * status = #final
 * category = ObsCat#laboratory "Laboratory"
 * code = LNC#84413-4 "Genotype display name"
-* subject = Reference(Patient/example)
+* subject = Reference(example-mii-molgen-patient)
 * valueCodeableConcept.text = "BRAF rs113488022 T>A"
 * method = LNC#LA26398-0 "Sequencing"
-* specimen = Reference(Specimen/tbd)
-* device = Reference(Device/MiSeq)
+* specimen = Reference(example-mii-molgen-specimen)
+* device = Reference(example-mii-molgen-device-sequencer)
 * derivedFrom = Reference(example-mii-molgen-variante-1)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:1097 "BRAF"

@@ -27,8 +27,8 @@ Description: "Beispiel für therapeutische Implikation abgeleitet von genetische
 * status = #final
 * category = ObsCat#laboratory "Laboratory"
 * code = GenTbd#therapeutic-implication "Therapeutische Implikation"
-* subject = Reference(Patient/example)
-* performer = Reference(Practitioner/example)
+* subject = Reference(example-mii-molgen-patient)
+* performer = Reference(example-mii-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(example-mii-molgen-variante-1)
 * component[conclusion-string].code = GenTbd#conclusion-string
 * component[conclusion-string].valueString = "Nachweis einer aktivierenden Mutation BRAF V600E. Triple-Therapie mit einem EGFR-Antikörper sowie einem BRAF- und einem MEK- Inhibitor prüfen."

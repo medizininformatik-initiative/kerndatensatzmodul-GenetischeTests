@@ -151,11 +151,11 @@
   ],
   "status": "final",
   "subject": {
-    "reference": "Patient/example"
+    "reference": "Patient/example-mii-molgen-patient"
   },
   "performer": [
     {
-      "reference": "Practitioner/example"
+      "reference": "Practitioner/example-mii-molgen-practitioner-lab"
     }
   ],
   "method": {
@@ -168,9 +168,9 @@
     ]
   },
   "specimen": {
-    "reference": "Specimen/tbd"
+    "reference": "example-mii-molgen-specimen"
   },
   "device": {
-    "reference": "Device/MiSeq"
+    "reference": "Device/example-mii-molgen-device-sequencer"
   }
 }

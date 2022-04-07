@@ -43,5 +43,21 @@ Source: SD_MII_MolGen_AnforderungGenetischerTest
 * note -> "mide-dataelement-1763" "Anforderungstext"
 * authoredOn -> "mide-dataelement-1766" "Datum der Anforderung"
 
-
+Instance: example-mii-molgen-anforderung-1
+InstanceOf: sd-mii-modul-molgen-anforderung-gentischer-test
+Usage: #example
+Title: "Anforderung BRAF Genetische Testung"
+Description: "Beispiel für Anforderun für genetische Testung auf genetische Variante im BRAF Gen an Hand von NGS."
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/servicerequest"
+* status = #active
+* intent = #order
+* category = SCT#108252007 "Laboratory procedure (procedure)"
+* code.coding[0] = SCT#405825005 "Molecular genetic test (procedure)"
+* code.coding[+] = LNC#53844-7 "BRAF gene targeted mutation analysis in Blood or Tissue by Molecular genetics method"
+* code.coding[+] = HGNC#HGNC:1097 "BRAF"
+* code.text = "BRAF: Exon 15 (Codon 600)"
+* subject = Reference(example-mii-molgen-patient)
+* authoredOn = "2022-04-07"
+* requester = Reference(example-mii-molgen-practitioner-physician)
+* reasonCode = SCT#447886005 "Adenocarcinoma of anorectum (disorder)"
 

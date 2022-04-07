@@ -1,4 +1,5 @@
 Alias:  LNC = http://loinc.org
+Alias:  SCT = http://snomed.info/sct
 Alias:  ObsCat = http://terminology.hl7.org/CodeSystem/observation-category
 Alias:  HGNC = http://www.genenames.org/geneId
 Alias:  HGVS = http://varnomen.hgvs.org
@@ -14,3 +15,4 @@ Alias:  RequestIntent = http://hl7.org/fhir/request-intent
 Alias:  DiagRepStatus = http://hl7.org/fhir/diagnostic-report-status
 Alias:  v2-0074 = http://terminology.hl7.org/CodeSystem/v2-0074
 Alias:  UCUM = http://unitsofmeasure.org
+Alias:  DeviceNameType = http://hl7.org/fhir/device-nametype

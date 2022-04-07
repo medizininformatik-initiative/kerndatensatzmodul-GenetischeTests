@@ -29,8 +29,8 @@
   "dependsOn": [
     {
       "packageId": "hl7.fhir.uv.genomics-reporting",
+      "uri": "hl7.fhir.uv.genomics-reporting",
       "version": "1.1.0",
-      "uri": "http://hl7.org/fhir/uv/genomics-reporting/ImplementationGuide/hl7.fhir.uv.genomics-reporting",
       "id": "hl7_fhir_uv_genomics_reporting"
     },
     {
@@ -156,6 +156,21 @@
       },
       {
         "reference": {
+          "reference": "ServiceRequest/example-mii-molgen-anforderung-1"
+        },
+        "name": "Anforderung BRAF Genetische Testung",
+        "description": "Beispiel für Anforderun für genetische Testung auf genetische Variante im BRAF Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
+      },
+      {
+        "reference": {
+          "reference": "Device/example-mii-molgen-device-sequencer"
+        },
+        "name": "example-mii-molgen-device-sequencer",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Observation/example-mii-molgen-diagnostische-implikation-1"
         },
         "name": "BRAF Variante Diagnostische Implikation",
@@ -217,6 +232,27 @@
         "name": "Beispiel Mutationslast in Tumorprobe",
         "description": "Beispiel für Mutationslast in Tumorprobe.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast"
+      },
+      {
+        "reference": {
+          "reference": "Patient/example-mii-molgen-patient"
+        },
+        "name": "example-mii-molgen-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/example-mii-molgen-practitioner-lab"
+        },
+        "name": "example-mii-molgen-practitioner-lab",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/example-mii-molgen-practitioner-physician"
+        },
+        "name": "example-mii-molgen-practitioner-physician",
+        "exampleBoolean": true
       },
       {
         "reference": {

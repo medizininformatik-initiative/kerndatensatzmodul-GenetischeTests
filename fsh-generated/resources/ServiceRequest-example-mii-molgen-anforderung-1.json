@@ -1,0 +1,61 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "example-mii-molgen-anforderung-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test",
+      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/servicerequest"
+    ]
+  },
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "108252007",
+          "system": "http://snomed.info/sct",
+          "display": "Laboratory procedure (procedure)"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "405825005",
+        "system": "http://snomed.info/sct",
+        "display": "Molecular genetic test (procedure)"
+      },
+      {
+        "code": "53844-7",
+        "system": "http://loinc.org",
+        "display": "BRAF gene targeted mutation analysis in Blood or Tissue by Molecular genetics method"
+      },
+      {
+        "code": "HGNC:1097",
+        "system": "http://www.genenames.org/geneId",
+        "display": "BRAF"
+      }
+    ],
+    "text": "BRAF: Exon 15 (Codon 600)"
+  },
+  "subject": {
+    "reference": "Patient/example-mii-molgen-patient"
+  },
+  "authoredOn": "2022-04-07",
+  "requester": {
+    "reference": "Practitioner/example-mii-molgen-practitioner-physician"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "code": "447886005",
+          "system": "http://snomed.info/sct",
+          "display": "Adenocarcinoma of anorectum (disorder)"
+        }
+      ]
+    }
+  ]
+}

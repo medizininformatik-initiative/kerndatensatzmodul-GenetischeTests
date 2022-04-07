@@ -48,18 +48,19 @@ Description: "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorek
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
 * extension[RecommendedAction][+].valueReference = Reference(example-mii-molgen-medikationsempfehlung-1)
 * extension[RecommendedAction][+].valueReference = Reference(example-mii-molgen-folgemassnahme-1)
-* basedOn = Reference(servicerequest/example)
+* basedOn = Reference(example-mii-molgen-anforderung-1)
 * status = DiagRepStatus#final
 * category = v2-0074#GE "Genetics"
 * code = LNC#51969-4 "Genetic analysis report"
-* subject = Reference(Patient/example)
-* performer = Reference(Practitioner/example)
-* specimen = Reference(Specimen/example)
+* subject = Reference(example-mii-molgen-patient)
+* performer = Reference(example-mii-molgen-practitioner-lab)
+* specimen = Reference(example-mii-molgen-specimen)
 * result[gen-grouper] = Reference(example-mii-molgen-gruppierung-beobachtungen-1)
 * result[diagnostic-implication] = Reference(example-mii-molgen-diagnostische-implikation-1)
 * result[therapeutic-implication] = Reference(example-mii-molgen-therapeutische-implikation-1)
 * result[variant] = Reference(example-mii-molgen-variante-1)
 * result[region-studied] = Reference(example-mii-molgen-untersuchte-region-1)
+* result[genotype] = Reference(example-mii-molgen-genotyp-1)
 * result[tumor-mutation-burden] = Reference(example-mii-molgen-mutationslast-1)
 * conclusion = "BRAF p.V600E Mutation liegt vor. Bitte Therapieoption mit einem BRAF-Inhibitor prüfen."
 

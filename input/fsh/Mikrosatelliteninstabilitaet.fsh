@@ -24,8 +24,8 @@ Description: "Beispiel für Mikrosatelliteninstabilität in Tumorprobe."
 * status = #final
 * category = ObsCat#laboratory "Laboratory"
 * code = LNC#81695-9 "Microsatellite instability [Interpretation] in Cancer specimen Qualitative"
-* subject = Reference(Patient/example)
+* subject = Reference(example-mii-molgen-patient)
 * valueCodeableConcept = LNC#LA14122-8 "Stable"
-* specimen = Reference(Specimen/tbd)
+* specimen = Reference(example-mii-molgen-specimen)
 * component[conclusion-string].code = GenTbd#conclusion-string
 * component[conclusion-string].valueString = "Tumor weist ein mikrosatellitenstabiles Wachstum auf."

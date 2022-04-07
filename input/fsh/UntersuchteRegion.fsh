@@ -31,11 +31,11 @@ Description: "Beispiel für untersuchte Region BRAF Gen an Hand von NGS."
 * status = #final
 * category = ObsCat#laboratory "Laboratory"
 * code = LNC#53041-0 "DNA region of interest panel"
-* subject = Reference(Patient/example)
-* performer = Reference(Practitioner/example)
+* subject = Reference(example-mii-molgen-patient)
+* performer = Reference(example-mii-molgen-practitioner-lab)
 * method = LNC#LA26398-0 "Sequencing"
-* specimen = Reference(Specimen/tbd)
-* device = Reference(Device/MiSeq)
+* specimen = Reference(example-mii-molgen-specimen)
+* device = Reference(example-mii-molgen-device-sequencer)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:1097 "BRAF"
 * component[gene-mutations].code = LNC#36908-2 "Gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"

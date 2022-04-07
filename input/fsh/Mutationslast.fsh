@@ -24,7 +24,7 @@ Description: "Beispiel für Mutationslast in Tumorprobe."
 * status = #final
 * category = ObsCat#laboratory "Laboratory"
 * code = LNC#94076-7 "Mutations/Megabase [# Ratio] in Tumor"
-* subject = Reference(Patient/example)
-* performer = Reference(Practitioner/example)
+* subject = Reference(example-mii-molgen-patient)
+* performer = Reference(example-mii-molgen-practitioner-lab)
 * valueQuantity = 12 UCUM#1/1000000{Base} "Mutations/Megabase"
-* specimen = Reference(Specimen/tbd)
+* specimen = Reference(example-mii-molgen-specimen)

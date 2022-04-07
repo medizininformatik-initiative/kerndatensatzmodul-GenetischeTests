@@ -27,5 +27,5 @@ Description: "Beispiel für Medikationsempfehlung abgeleitet von genetischer Var
 * intent = RequestIntent#proposal
 * code = LNC#LA26421-0 "Consider alternative medication"
 * code.text = "Alternative Medikation in Erwägung ziehen"
-* for = Reference(Patient/example)
+* for = Reference(example-mii-molgen-patient)
 * reasonReference = Reference(example-mii-molgen-therapeutische-implikation-1)

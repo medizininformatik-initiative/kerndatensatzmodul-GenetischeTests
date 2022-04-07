@@ -34,7 +34,7 @@
   ],
   "basedOn": [
     {
-      "reference": "servicerequest/example"
+      "reference": "ServiceRequest/example-mii-molgen-anforderung-1"
     }
   ],
   "status": "final",
@@ -48,16 +48,16 @@
     ]
   },
   "subject": {
-    "reference": "Patient/example"
+    "reference": "Patient/example-mii-molgen-patient"
   },
   "performer": [
     {
-      "reference": "Practitioner/example"
+      "reference": "Practitioner/example-mii-molgen-practitioner-lab"
     }
   ],
   "specimen": [
     {
-      "reference": "Specimen/example"
+      "reference": "example-mii-molgen-specimen"
     }
   ],
   "result": [
@@ -75,6 +75,9 @@
     },
     {
       "reference": "Observation/example-mii-molgen-untersuchte-region-1"
+    },
+    {
+      "reference": "Observation/example-mii-molgen-genotyp-1"
     },
     {
       "reference": "Observation/example-mii-molgen-mutationslast-1"

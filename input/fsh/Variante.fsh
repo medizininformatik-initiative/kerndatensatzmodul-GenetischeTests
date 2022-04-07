@@ -31,14 +31,15 @@ Usage: #example
 Title: "BRAF Variante"
 Description: "Beispiel für genetische Variante im BRAF Gen an Hand von NGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
+* basedOn = Reference(example-mii-molgen-anforderung-1)
 * status = #final
 * category = ObsCat#laboratory "Laboratory"
 * code = LNC#69548-6 "Genetic variant assessment"
-* subject = Reference(Patient/example)
+* subject = Reference(example-mii-molgen-patient)
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * method = LNC#LA26398-0 "Sequencing"
-* specimen = Reference(Specimen/tbd)
-* device = Reference(Device/MiSeq)
+* specimen = Reference(example-mii-molgen-specimen)
+* device = Reference(example-mii-molgen-device-sequencer)
 * derivedFrom = Reference(example-mii-molgen-untersuchte-region-1)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:1097 "BRAF"

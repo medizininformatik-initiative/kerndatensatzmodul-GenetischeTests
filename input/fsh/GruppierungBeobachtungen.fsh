@@ -31,7 +31,7 @@ Description: "Beispiel für gruppierte Beobachtungen bezüglich BRAF."
 * category = ObsCat#laboratory "Laboratory"
 * code = GenTbd#grouper "Beobachtungen Gruppiert"
 * code.text = "BRAF Beobachtungen gruppiert"
-* subject = Reference(Patient/example)
+* subject = Reference(example-mii-molgen-patient)
 * hasMember[diagnostic-implication] = Reference(example-mii-molgen-diagnostische-implikation-1)
 * hasMember[therapeutic-implication] = Reference(example-mii-molgen-therapeutische-implikation-1)
 * hasMember[variant] = Reference(example-mii-molgen-variante-1)
