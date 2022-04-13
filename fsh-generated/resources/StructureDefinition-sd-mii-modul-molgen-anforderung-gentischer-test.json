@@ -198,6 +198,15 @@
       {
         "id": "ServiceRequest.supportingInfo",
         "path": "ServiceRequest.supportingInfo",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "resolve()"
+            }
+          ],
+          "rules": "open"
+        },
         "mustSupport": true,
         "mapping": [
           {
@@ -219,6 +228,21 @@
             "identity": "MII-KDS",
             "map": "mide-dataelement-1741",
             "comment": "Anlageträger"
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.supportingInfo:familienanamnese",
+        "path": "ServiceRequest.supportingInfo",
+        "sliceName": "familienanamnese",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
+            ]
           }
         ]
       },
