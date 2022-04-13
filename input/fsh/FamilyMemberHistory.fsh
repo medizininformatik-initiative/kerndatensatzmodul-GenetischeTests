@@ -1,9 +1,10 @@
-Profile: SD_Familienanamnese
+Profile: SD_MII_MolGen_Familienanamnese
 Parent: FamilyMemberHistory
-Id: sd-familienanamnese
+Id: sd-mii-molgen-familienanamnese
 Title: "SD MII MolGen Familienanamnese"
 Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
+* ^status = #draft
 * patient only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * date MS
 * relationship MS
@@ -42,6 +43,7 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * reasonCode.coding[orphanet].system 1.. MS
 * reasonCode.coding[orphanet].code 1.. MS
 * reasonReference MS
+* condition MS
 * condition.code MS
 * condition.code.coding 1.. MS
 * condition.code.coding ^slicing.discriminator.type = #pattern
@@ -71,8 +73,14 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * condition.code.coding[orphanet].system 1.. MS
 * condition.code.coding[orphanet].code 1.. MS
 
+Mapping: MolGen-Familienanamnese
+Id: MII-KDS
+Title: "MII KDS Mapping"
+Source: SD_MII_MolGen_Familienanamnese
+* -> "mide-dataelement-1740" "Krankengeschichte Familie"
+
 Instance: example-mii-molgen-family-member-history-1
-InstanceOf: sd-familienanamnese
+InstanceOf: sd-mii-molgen-familienanamnese
 Usage: #example
 * status = #completed
 * patient = Reference(example-mii-molgen-patient)

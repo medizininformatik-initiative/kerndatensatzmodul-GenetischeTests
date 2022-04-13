@@ -56,14 +56,6 @@
     "resource": [
       {
         "reference": {
-          "reference": "StructureDefinition/sd-familienanamnese"
-        },
-        "name": "SD MII MolGen Familienanamnese",
-        "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/sd-mii-modul-molgen-anforderung-gentischer-test"
         },
         "name": "SD MII MolGen Anforderung genetischer Test",
@@ -92,6 +84,14 @@
         },
         "name": "SD MII MolGen Ergbenis Zusammenfassung",
         "description": "Mit diesem Profil kann das Labor das zusammenfassende Ergebnis des Tests deklarieren (z. B. Positiv, Negativ, Unbekannt).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/sd-mii-molgen-familienanamnese"
+        },
+        "name": "SD MII MolGen Familienanamnese",
+        "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen.",
         "exampleBoolean": false
       },
       {

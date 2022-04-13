@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "sd-familienanamnese",
+  "id": "sd-mii-molgen-familienanamnese",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -13,9 +13,9 @@
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese",
   "version": "0.1.0",
-  "name": "SD_Familienanamnese",
+  "name": "SD_MII_MolGen_Familienanamnese",
   "title": "SD MII MolGen Familienanamnese",
-  "status": "active",
+  "status": "draft",
   "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen.",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -38,6 +38,10 @@
       "identity": "w5",
       "uri": "http://hl7.org/fhir/fivews",
       "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "MII-KDS",
+      "name": "MII KDS Mapping"
     }
   ],
   "kind": "resource",
@@ -47,6 +51,17 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "FamilyMemberHistory",
+        "path": "FamilyMemberHistory",
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1740",
+            "comment": "Krankengeschichte Familie"
+          }
+        ]
+      },
       {
         "id": "FamilyMemberHistory.patient",
         "path": "FamilyMemberHistory.patient",
@@ -246,6 +261,11 @@
       {
         "id": "FamilyMemberHistory.reasonReference",
         "path": "FamilyMemberHistory.reasonReference",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition",
+        "path": "FamilyMemberHistory.condition",
         "mustSupport": true
       },
       {
