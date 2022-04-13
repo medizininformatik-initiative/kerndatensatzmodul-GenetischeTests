@@ -96,6 +96,298 @@
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/vs-family-member-snomed"
         }
+      },
+      {
+        "id": "FamilyMemberHistory.sex",
+        "path": "FamilyMemberHistory.sex",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.reasonCode",
+        "path": "FamilyMemberHistory.reasonCode",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.reasonCode.coding",
+        "path": "FamilyMemberHistory.reasonCode.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.reasonCode.coding:icd10-gm",
+        "path": "FamilyMemberHistory.reasonCode.coding",
+        "sliceName": "icd10-gm",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "http://fhir.de/StructureDefinition/CodingICD10GM"
+            ]
+          }
+        ],
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/ValueSet/bfarm/icd-10-gm"
+        }
+      },
+      {
+        "id": "FamilyMemberHistory.reasonCode.coding:icd10-gm.system",
+        "path": "FamilyMemberHistory.reasonCode.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.reasonCode.coding:icd10-gm.version",
+        "path": "FamilyMemberHistory.reasonCode.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.reasonCode.coding:icd10-gm.code",
+        "path": "FamilyMemberHistory.reasonCode.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.reasonCode.coding:alpha-id",
+        "path": "FamilyMemberHistory.reasonCode.coding",
+        "sliceName": "alpha-id",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "http://fhir.de/StructureDefinition/CodingAlphaID"
+            ]
+          }
+        ],
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/bfarm/alpha-id"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/ValueSet/bfarm/alpha-id"
+        }
+      },
+      {
+        "id": "FamilyMemberHistory.reasonCode.coding:alpha-id.system",
+        "path": "FamilyMemberHistory.reasonCode.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.reasonCode.coding:alpha-id.code",
+        "path": "FamilyMemberHistory.reasonCode.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.reasonCode.coding:sct",
+        "path": "FamilyMemberHistory.reasonCode.coding",
+        "sliceName": "sct",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://snomed.info/sct"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct"
+        }
+      },
+      {
+        "id": "FamilyMemberHistory.reasonCode.coding:sct.system",
+        "path": "FamilyMemberHistory.reasonCode.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.reasonCode.coding:sct.code",
+        "path": "FamilyMemberHistory.reasonCode.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.reasonCode.coding:orphanet",
+        "path": "FamilyMemberHistory.reasonCode.coding",
+        "sliceName": "orphanet",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://www.orpha.net"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.reasonCode.coding:orphanet.system",
+        "path": "FamilyMemberHistory.reasonCode.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.reasonCode.coding:orphanet.code",
+        "path": "FamilyMemberHistory.reasonCode.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.reasonReference",
+        "path": "FamilyMemberHistory.reasonReference",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code",
+        "path": "FamilyMemberHistory.condition.code",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding",
+        "path": "FamilyMemberHistory.condition.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:icd10-gm",
+        "path": "FamilyMemberHistory.condition.code.coding",
+        "sliceName": "icd10-gm",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "http://fhir.de/StructureDefinition/CodingICD10GM"
+            ]
+          }
+        ],
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/ValueSet/bfarm/icd-10-gm"
+        }
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:icd10-gm.system",
+        "path": "FamilyMemberHistory.condition.code.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:icd10-gm.version",
+        "path": "FamilyMemberHistory.condition.code.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:icd10-gm.code",
+        "path": "FamilyMemberHistory.condition.code.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:alpha-id",
+        "path": "FamilyMemberHistory.condition.code.coding",
+        "sliceName": "alpha-id",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "http://fhir.de/StructureDefinition/CodingAlphaID"
+            ]
+          }
+        ],
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/bfarm/alpha-id"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/ValueSet/bfarm/alpha-id"
+        }
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:alpha-id.system",
+        "path": "FamilyMemberHistory.condition.code.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:alpha-id.code",
+        "path": "FamilyMemberHistory.condition.code.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:sct",
+        "path": "FamilyMemberHistory.condition.code.coding",
+        "sliceName": "sct",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://snomed.info/sct"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct"
+        }
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:sct.system",
+        "path": "FamilyMemberHistory.condition.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:sct.code",
+        "path": "FamilyMemberHistory.condition.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:orphanet",
+        "path": "FamilyMemberHistory.condition.code.coding",
+        "sliceName": "orphanet",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://www.orpha.net"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:orphanet.system",
+        "path": "FamilyMemberHistory.condition.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.code.coding:orphanet.code",
+        "path": "FamilyMemberHistory.condition.code.coding.code",
+        "min": 1,
+        "mustSupport": true
       }
     ]
   }
