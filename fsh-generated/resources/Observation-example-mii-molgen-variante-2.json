@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "example-mii-molgen-variante-1",
+  "id": "example-mii-molgen-variante-2",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante",
@@ -41,9 +41,9 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "HGNC:1097",
+            "code": "HGNC:28862",
             "system": "http://www.genenames.org/geneId",
-            "display": "BRAF"
+            "display": "NIPBL"
           }
         ]
       }
@@ -61,7 +61,7 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "NM_004333.4",
+            "code": "NM_133433.4",
             "system": "http://www.ncbi.nlm.nih.gov/refseq"
           }
         ]
@@ -77,19 +77,7 @@
           }
         ]
       },
-      "valueString": "Exon #15"
-    },
-    {
-      "code": {
-        "coding": [
-          {
-            "code": "47999-8",
-            "system": "http://loinc.org",
-            "display": "DNA region name [Identifier]"
-          }
-        ]
-      },
-      "valueString": "Codon #582 - #612"
+      "valueString": "Exon #10"
     },
     {
       "code": {
@@ -104,7 +92,7 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "NM_004333.4:c.1799T>A",
+            "code": "NM_133433.4:c.2207del",
             "system": "http://varnomen.hgvs.org"
           }
         ]
@@ -123,7 +111,7 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "p.(Val600Glu)",
+            "code": "p.(Pro736Glnfs*58)",
             "system": "http://varnomen.hgvs.org"
           }
         ]
@@ -134,32 +122,17 @@
         "coding": [
           {
             "system": "http://loinc.org",
-            "code": "81258-6",
-            "display": "Sample variant allelic frequency [NFr]"
-          }
-        ]
-      },
-      "valueQuantity": {
-        "value": 30.25,
-        "code": "%",
-        "system": "http://unitsofmeasure.org"
-      }
-    },
-    {
-      "code": {
-        "coding": [
-          {
-            "system": "http://loinc.org",
-            "code": "48001-2",
-            "display": "Cytogenetic (chromosome) location"
+            "code": "53034-5",
+            "display": "Allelic state"
           }
         ]
       },
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "7q34",
-            "system": "urn:oid:2.16.840.1.113883.6.335"
+            "code": "LA6706-1",
+            "system": "http://loinc.org",
+            "display": "Heterozygous"
           }
         ]
       }
@@ -177,9 +150,9 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "SO:1000008",
+            "code": "SO:0000159",
             "system": "http://sequenceontology.org",
-            "display": "point_mutation"
+            "display": "deletion"
           }
         ]
       }
@@ -197,9 +170,28 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "LA6698-0",
+            "code": "LA6694-9",
             "system": "http://loinc.org",
-            "display": "Missense"
+            "display": "Frameshift"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "48001-2",
+            "display": "Cytogenetic (chromosome) location"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "5p13.2",
+            "system": "urn:oid:2.16.840.1.113883.6.335"
           }
         ]
       }
@@ -217,8 +209,12 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "rs113488022",
-            "system": "http://www.ncbi.nlm.nih.gov/projects/SNP"
+            "code": "1076298",
+            "system": "http://www.ncbi.nlm.nih.gov/clinvar"
+          },
+          {
+            "code": "VCV001076298.1",
+            "system": "http://www.ncbi.nlm.nih.gov/clinvar"
           }
         ]
       }
@@ -226,12 +222,12 @@
   ],
   "basedOn": [
     {
-      "reference": "ServiceRequest/example-mii-molgen-anforderung-1"
+      "reference": "ServiceRequest/example-mii-molgen-anforderung-2"
     }
   ],
   "status": "final",
   "subject": {
-    "reference": "Patient/example-mii-molgen-patient"
+    "reference": "Patient/example-mii-molgen-patient-2"
   },
   "valueCodeableConcept": {
     "coding": [
@@ -248,18 +244,15 @@
         "code": "LA26398-0",
         "system": "http://loinc.org",
         "display": "Sequencing"
+      },
+      {
+        "code": "86206-0",
+        "system": "http://loinc.org",
+        "display": "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
       }
     ]
   },
-  "specimen": {
-    "reference": "example-mii-molgen-specimen"
-  },
   "device": {
-    "reference": "Device/example-mii-molgen-device-sequencer"
-  },
-  "derivedFrom": [
-    {
-      "reference": "Observation/example-mii-molgen-untersuchte-region-1"
-    }
-  ]
+    "reference": "Device/example-mii-molgen-device-sequencer-2"
+  }
 }

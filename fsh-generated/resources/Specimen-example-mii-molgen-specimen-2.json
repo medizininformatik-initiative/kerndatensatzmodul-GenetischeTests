@@ -1,0 +1,32 @@
+{
+  "resourceType": "Specimen",
+  "id": "example-mii-molgen-specimen-2",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore"
+    ]
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "445295009",
+        "display": "Blood specimen with edetic acid (specimen)"
+      }
+    ]
+  },
+  "status": "available",
+  "subject": {
+    "reference": "Patient/example-mii-molgen-patient"
+  },
+  "receivedTime": "2021-11-24",
+  "collection": {
+    "collectedDateTime": "2021-11-23"
+  },
+  "identifier": [
+    {
+      "system": "https://www.charite.de/fhir/sid/bioproben",
+      "value": "specimen_02"
+    }
+  ]
+}

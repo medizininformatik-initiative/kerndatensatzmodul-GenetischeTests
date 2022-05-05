@@ -52,7 +52,7 @@ Instance: example-mii-molgen-anforderung-1
 InstanceOf: sd-mii-modul-molgen-anforderung-gentischer-test
 Usage: #example
 Title: "Anforderung BRAF Genetische Testung"
-Description: "Beispiel für Anforderun für genetische Testung auf genetische Variante im BRAF Gen an Hand von NGS."
+Description: "Beispiel für Anforderung für genetische Testung auf genetische Variante im BRAF Gen an Hand von NGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/servicerequest"
 * status = #active
 * intent = #order
@@ -67,3 +67,28 @@ Description: "Beispiel für Anforderun für genetische Testung auf genetische Va
 * reasonCode = SCT#447886005 "Adenocarcinoma of anorectum (disorder)"
 * supportingInfo[familienanamnese] = Reference(example-mii-molgen-family-member-history-1)
 
+Instance: example-mii-molgen-anforderung-2
+InstanceOf: sd-mii-modul-molgen-anforderung-gentischer-test
+Usage: #example
+Title: "Anforderung Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom"
+Description: "Beispiel für Anforderung für genetische Testung auf pathogene Variante im NIPBL Gen."
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/servicerequest"
+* identifier.system = "https://www.charite.de/fhir/auftragsnummern"
+* identifier.value = "gen_test_02"
+* status = #active
+* intent = #order
+* category = SCT#108252007 "Laboratory procedure (procedure)"
+* code.coding[0] = SCT#405825005 "Molecular genetic test (procedure)"
+* code.coding[+] = LNC#40428-5 "NIPBL gene targeted mutation analysis in Blood or Tissue by Molecular genetics method"
+* code.coding[+] = HGNC#HGNC:28862 "NIPBL"
+* code.text = "Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom (MIM122470),autosomal dominanter Erbgang"
+* subject = Reference(example-mii-molgen-patient-2)
+* authoredOn = "2022-03-16"
+* requester = Reference(example-mii-molgen-practitioner-physician)
+* reasonCode[0] = SCT#40354009 "De Lange syndrome (disorder)"
+* reasonCode[1] = SCT#395507008 "Premature infant (finding)"
+* reasonCode[2] = SCT#276610007 "Low birth weight infant (disorder)"
+* reasonCode[3] = SCT#431265009 "Fetal microcephaly (disorder)"
+* reasonCode[4] = SCT#137511000119103 "Carrier of muscular dystrophy (finding)"
+* reasonCode[5] = HPO#HP:0000527 "Long eyelashes"
+* reasonCode[6] = OMIM#122470 "Cornelia de Lange syndrome 1"

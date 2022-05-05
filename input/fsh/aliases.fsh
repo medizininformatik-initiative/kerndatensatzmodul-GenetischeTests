@@ -23,3 +23,6 @@ Alias:  ICD10GM-Coding = http://fhir.de/StructureDefinition/CodingICD10GM
 Alias:  AlphaID-Coding = http://fhir.de/StructureDefinition/CodingAlphaID
 Alias:  AlphaID-VS = http://fhir.de/ValueSet/bfarm/alpha-id
 Alias:  SCT-Diagnoses-VS = https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct
+Alias:  HPO = http://github.com/phenopackets/core-ig/CodeSystem/hpo
+Alias:  OMIM = http://www.omim.org
+Alias:  ClinVarVID = http://www.ncbi.nlm.nih.gov/clinvar

@@ -23,7 +23,7 @@ Instance: example-mii-molgen-diagnostische-implikation-1
 InstanceOf: sd-mii-modul-molgen-diagnostische-implikation
 Usage: #example
 Title: "BRAF Variante Diagnostische Implikation"
-Description: "Beispiel für diagnostische Implikation abgeleitet von genetische Variante im BRAF Gen an Hand von NGS."
+Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
 * status = #final
 * category = ObsCat#laboratory "Laboratory"
@@ -34,3 +34,23 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von genetische 
 * component[conclusion-string].code = GenTbd#conclusion-string
 * component[conclusion-string].valueString = "Nachweis einer aktivierenden Mutation BRAF V600E"
 
+Instance: example-mii-molgen-diagnostische-implikation-2
+InstanceOf: sd-mii-modul-molgen-diagnostische-implikation
+Usage: #example
+Title: "NIPBL Variante Diagnostische Implikation"
+Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im NIPBL Gen an Hand von WGS."
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
+* status = #final
+* category = ObsCat#laboratory "Laboratory"
+* code = GenTbd#diagnostic-implication "Diagnostische Implikation"
+* subject = Reference(example-mii-molgen-patient-2)
+* performer = Reference(example-mii-molgen-practitioner-lab)
+* derivedFrom[variant] = Reference(example-mii-molgen-variante-2)
+* component[conclusion-string].code = GenTbd#conclusion-string
+* component[conclusion-string].valueString = "Nachweis einer pathogenen Variante im NIPBL-Gen in heterozygoter Form."
+* component[clinical-significance].code = LNC#53037-8 "Genetic variation clinical significance [Imp]"
+* component[clinical-significance].valueCodeableConcept = LNC#LA6668-3 "Pathogenic"
+* component[mode-of-inheritance].code = GenTbd#condition-inheritance //CS updaten, wenn gen-reporting v2.0
+* component[mode-of-inheritance].valueCodeableConcept = HPO#HP:0000006 "Autosomal dominant inheritance"
+* component[associated-phenotype].code = LNC#81259-4 "Associated phenotype"
+* component[associated-phenotype].valueCodeableConcept = SCT#40354009 "De Lange syndrome (disorder)"

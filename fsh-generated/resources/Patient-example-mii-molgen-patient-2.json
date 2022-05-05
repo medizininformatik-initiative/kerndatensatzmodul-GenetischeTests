@@ -1,6 +1,6 @@
 {
   "resourceType": "Patient",
-  "id": "example-mii-molgen-patient",
+  "id": "example-mii-molgen-patient-2",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient"
@@ -17,8 +17,8 @@
           }
         ]
       },
-      "system": "https://www.example.org/fhir/sid/patienten",
-      "value": "42285243",
+      "system": "https://www.charite.de/fhir/sid/patienten",
+      "value": "146314909",
       "assigner": {
         "display": "Charité - Universitätsmedizin Berlin",
         "identifier": {
@@ -38,7 +38,7 @@
         ]
       },
       "system": "http://fhir.de/sid/gkv/kvid-10",
-      "value": "Z234567890",
+      "value": "Z900211002",
       "assigner": {
         "identifier": {
           "use": "official",
@@ -46,60 +46,28 @@
           "system": "http://fhir.de/sid/arge-ik/iknr"
         }
       }
-    },
-    {
-      "use": "secondary",
-      "type": {
-        "coding": [
-          {
-            "code": "PKV",
-            "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
-          }
-        ]
-      },
-      "value": "123456",
-      "assigner": {
-        "display": "Signal Iduna"
-      }
     }
   ],
   "name": [
     {
       "use": "official",
-      "family": "Van-der-Dussen",
+      "family": "Müller",
       "_family": {
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-            "valueString": "Van-der-Dussen"
+            "valueString": "Müller"
           }
         ]
       },
       "given": [
-        "Maja",
-        "Julia"
-      ],
-      "prefix": [
-        "Prof. Dr. med."
-      ],
-      "_prefix": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
-              "valueCode": "AC"
-            }
-          ]
-        }
+        "Melanie",
+        "Marie"
       ]
-    },
-    {
-      "use": "maiden",
-      "family": "Haffer"
     }
   ],
   "gender": "female",
-  "birthDate": "1968-09-19",
+  "birthDate": "2021-09-19",
   "deceasedBoolean": false,
   "address": [
     {
