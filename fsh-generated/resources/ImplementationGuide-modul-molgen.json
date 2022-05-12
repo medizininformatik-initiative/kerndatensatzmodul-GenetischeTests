@@ -267,6 +267,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/example-mii-molgen-gruppierung-beobachtungen-2-nipbl"
+        },
+        "name": "Molekulargentischer Befund 2: NIPBL Beobachtungen",
+        "description": "Beispiel für gruppierte Beobachtungen bezüglich NIPBL.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/gruppierung-beobachtungen"
+      },
+      {
+        "reference": {
           "reference": "Task/example-mii-molgen-medikationsempfehlung-1"
         },
         "name": "BRAF Variante Medikationsempfehlung",
@@ -287,6 +295,14 @@
         },
         "name": "Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom",
         "description": "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorektalem Adenokarzniom.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/example-mii-molgen-molekulargenetischer-befundbericht-2"
+        },
+        "name": "Molekulargentischer Befund 2: Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang",
+        "description": "Beispiel für molekulargenetischen Befund Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
       },
       {
@@ -346,6 +362,54 @@
         },
         "name": "Untersuchte Region BRAF",
         "description": "Beispiel für untersuchte Region BRAF Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-molgen-untersuchte-region-2-hdac8"
+        },
+        "name": "Untersuchte Region HDAC8",
+        "description": "Beispiel für untersuchte Region HDAC8 Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-molgen-untersuchte-region-2-nipbl"
+        },
+        "name": "Untersuchte Region NIPBL",
+        "description": "Beispiel für untersuchte Region NIPBL Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-molgen-untersuchte-region-2-rad21"
+        },
+        "name": "Untersuchte Region HDAC8",
+        "description": "Beispiel für untersuchte Region RAD21 Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-molgen-untersuchte-region-2-smc1a"
+        },
+        "name": "Untersuchte Region SMC1A",
+        "description": "Beispiel für untersuchte Region SMC1A Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-molgen-untersuchte-region-2-smc3"
+        },
+        "name": "Untersuchte Region SMC3",
+        "description": "Beispiel für untersuchte Region SMC3 Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-molgen-untersuchte-region-2-tp63"
+        },
+        "name": "Untersuchte Region TP63",
+        "description": "Beispiel für untersuchte Region TP63 Gen an Hand von NGS.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
       },
       {

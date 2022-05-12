@@ -65,4 +65,28 @@ Description: "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorek
 * result[tumor-mutation-burden] = Reference(example-mii-molgen-mutationslast-1)
 * conclusion = "BRAF p.V600E Mutation liegt vor. Bitte Therapieoption mit einem BRAF-Inhibitor prüfen."
 
+Instance: example-mii-molgen-molekulargenetischer-befundbericht-2
+InstanceOf: sd-mii-modul-molgen-molekulargenetischer-befundbericht
+Usage: #example
+Title: "Molekulargentischer Befund 2: Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang"
+Description: "Beispiel für molekulargenetischen Befund Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang."
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
+* basedOn = Reference(example-mii-molgen-anforderung-2)
+* status = DiagRepStatus#final
+* category = v2-0074#GE "Genetics"
+* code = LNC#51969-4 "Genetic analysis report"
+* subject = Reference(example-mii-molgen-patient-2)
+* performer = Reference(example-mii-molgen-practitioner-lab)
+//* specimen = Reference(example-mii-molgen-specimen)
+* result[gen-grouper] = Reference(example-mii-molgen-gruppierung-beobachtungen-2-nipbl)
+* result[diagnostic-implication] = Reference(example-mii-molgen-diagnostische-implikation-2)
+* result[variant] = Reference(example-mii-molgen-variante-2)
+* result[region-studied][+] = Reference(example-mii-molgen-untersuchte-region-2-nipbl)
+* result[region-studied][+] = Reference(example-mii-molgen-untersuchte-region-2-hdac8)
+* result[region-studied][+] = Reference(example-mii-molgen-untersuchte-region-2-rad21)
+* result[region-studied][+] = Reference(example-mii-molgen-untersuchte-region-2-smc1a)
+* result[region-studied][+] = Reference(example-mii-molgen-untersuchte-region-2-smc3)
+* result[region-studied][+] = Reference(example-mii-molgen-untersuchte-region-2-tp63)
+* conclusion = "Nachweis der pathogenen Variante c.2207del p.(Pro736Glnfs*58) (heterozygot) im NIPBL-Gen."
+
 

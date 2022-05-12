@@ -1,0 +1,46 @@
+{
+  "resourceType": "Observation",
+  "id": "example-mii-molgen-gruppierung-beobachtungen-2-nipbl",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/gruppierung-beobachtungen",
+      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/grouper"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes",
+        "code": "grouper",
+        "display": "Beobachtungen Gruppiert"
+      }
+    ],
+    "text": "NIPBL Beobachtungen gruppiert"
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example-mii-molgen-patient-2"
+  },
+  "hasMember": [
+    {
+      "reference": "Observation/example-mii-molgen-diagnostische-implikation-2"
+    },
+    {
+      "reference": "Observation/example-mii-molgen-variante-2"
+    },
+    {
+      "reference": "Observation/example-mii-molgen-untersuchte-region-2-nipbl"
+    }
+  ]
+}

@@ -37,3 +37,18 @@ Description: "Beispiel für gruppierte Beobachtungen bezüglich BRAF."
 * hasMember[variant] = Reference(example-mii-molgen-variante-1)
 * hasMember[region-studied] = Reference(example-mii-molgen-untersuchte-region-1)
 * hasMember[tumor-mutation-burden] = Reference(example-mii-molgen-mutationslast-1)
+
+Instance: example-mii-molgen-gruppierung-beobachtungen-2-nipbl
+InstanceOf: sd-mii-modul-molgen-gruppierung-beobachtungen
+Usage: #example
+Title: "Molekulargentischer Befund 2: NIPBL Beobachtungen"
+Description: "Beispiel für gruppierte Beobachtungen bezüglich NIPBL."
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/grouper"
+* status = #final
+* category = ObsCat#laboratory "Laboratory"
+* code = GenTbd#grouper "Beobachtungen Gruppiert"
+* code.text = "NIPBL Beobachtungen gruppiert"
+* subject = Reference(example-mii-molgen-patient-2)
+* hasMember[diagnostic-implication] = Reference(example-mii-molgen-diagnostische-implikation-2)
+* hasMember[variant] = Reference(example-mii-molgen-variante-2)
+* hasMember[region-studied] = Reference(example-mii-molgen-untersuchte-region-2-nipbl)

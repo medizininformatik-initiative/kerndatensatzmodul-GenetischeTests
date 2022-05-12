@@ -26,3 +26,4 @@ Alias:  SCT-Diagnoses-VS = https://www.medizininformatik-initiative.de/fhir/core
 Alias:  HPO = http://github.com/phenopackets/core-ig/CodeSystem/hpo
 Alias:  OMIM = http://www.omim.org
 Alias:  ClinVarVID = http://www.ncbi.nlm.nih.gov/clinvar
+Alias:  RelArtType = http://hl7.org/fhir/related-artifact-type
