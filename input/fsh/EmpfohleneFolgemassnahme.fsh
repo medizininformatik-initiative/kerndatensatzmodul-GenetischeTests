@@ -1,5 +1,5 @@
 Profile: SD_MII_MolGen_EmpfohleneFolgemassnahme
-Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/task-rec-followup
+Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/followup-recommendation
 Id: sd-mii-modul-molgen-empfohlene-folgemassnahme
 Title: "SD MII MolGen Empfohlene Folgemaßnahme"
 Description: "Das Profil dieser Task Ressource beschreibt die empfohlenen Folgemaßnahmen."
@@ -22,7 +22,7 @@ InstanceOf: sd-mii-modul-molgen-empfohlene-folgemassnahme
 Usage: #example
 Title: "BRAF Empfohlene Folgemaßnahme"
 Description: "Beispiel für empfohlene Folgemaßnahme abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/task-rec-followup"
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/followup-recommendation"
 * basedOn = Reference(servicerequest/example)
 * status = TaskStatus#requested
 * intent = RequestIntent#proposal

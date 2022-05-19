@@ -40,10 +40,10 @@ Usage: #example
 Title: "NIPBL Variante Diagnostische Implikation"
 Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im NIPBL Gen an Hand von WGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
-* extension[relatedArtifact].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/CGRelatedArtifact"
-* extension[relatedArtifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
-* extension[relatedArtifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
-* extension[relatedArtifact].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/25741868/"
+* extension[genomics-artifact].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
+* extension[genomics-artifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
+* extension[genomics-artifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
+* extension[genomics-artifact].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/25741868/"
 * status = #final
 * category = ObsCat#laboratory "Laboratory"
 * code = GenTbd#diagnostic-implication "Diagnostische Implikation"
@@ -56,7 +56,7 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer
 * component[clinical-significance].valueCodeableConcept = LNC#LA6668-3 "Pathogenic"
 * component[mode-of-inheritance].code = GenTbd#condition-inheritance //CS updaten, wenn gen-reporting v2.0
 * component[mode-of-inheritance].valueCodeableConcept = HPO#HP:0000006 "Autosomal dominant inheritance"
-* component[associated-phenotype].code = LNC#81259-4 "Associated phenotype"
-* component[associated-phenotype].valueCodeableConcept = SCT#40354009 "De Lange syndrome (disorder)"
+* component[predicted-phenotype].code = LNC#81259-4 "Associated phenotype"
+* component[predicted-phenotype].valueCodeableConcept = SCT#40354009 "De Lange syndrome (disorder)"
 
 

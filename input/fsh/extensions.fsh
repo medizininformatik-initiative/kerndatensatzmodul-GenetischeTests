@@ -1,5 +1,5 @@
 Extension: SD_MII_MolGen_EmpfohleneMassnahme
-Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/RecommendedAction
+Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/recommended-action
 Id: sd-mii-modul-molgen-empfohlene-massnahme
 Title: "SD MII MolGen Empfohlene Maßnahme"
 Description: "Die Extension verweist auf eine vorgeschlagene Maßnahme, die auf der Grundlage der Ergebnisse des Befundberichts empfohlen wird."

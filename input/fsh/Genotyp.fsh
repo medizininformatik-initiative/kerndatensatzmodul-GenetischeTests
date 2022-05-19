@@ -13,8 +13,8 @@ Id: MII-KDS
 Title: "MII KDS Mapping"
 Source: SD_MII_MolGen_Genotyp
 * component[gene-studied] -> "mide-dataelement-1400" "Getestete Gene ID"
-* component[CytogenicLocation] -> "mide-dataelement-1434" "Zytogenetische Lokalisierung (Lokus)"
-* component[RefSequenceAssembly] -> "mide-dataelement-1788" "Referenzgenom"
+* component[cytogenetic-location] -> "mide-dataelement-1434" "Zytogenetische Lokalisierung (Lokus)"
+* component[reference-sequence-assembly] -> "mide-dataelement-1788" "Referenzgenom"
 
 Instance: example-mii-molgen-genotyp-1
 InstanceOf: sd-mii-molgen-genotyp
@@ -33,8 +33,8 @@ Description: "Beispiel für Genotyp BRAF Gen."
 * derivedFrom = Reference(example-mii-molgen-variante-1)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:1097 "BRAF"
-* component[CytogenicLocation].code = LNC#48001-2 "Cytogenetic (chromosome) location"
-* component[CytogenicLocation].valueCodeableConcept = ChromLoc#7q34
+* component[cytogenetic-location].code = LNC#48001-2 "Cytogenetic (chromosome) location"
+* component[cytogenetic-location].valueCodeableConcept = ChromLoc#7q34
 
 //Instance: example-mii-molgen-genotyp-2
 //InstanceOf: sd-mii-molgen-genotyp

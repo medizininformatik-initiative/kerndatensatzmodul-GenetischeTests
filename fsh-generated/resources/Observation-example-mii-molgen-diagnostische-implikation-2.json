@@ -10,7 +10,7 @@
   "code": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes",
+        "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
         "code": "diagnostic-implication",
         "display": "Diagnostische Implikation"
       }
@@ -29,7 +29,7 @@
   ],
   "extension": [
     {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/CGRelatedArtifact",
+      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact",
       "valueRelatedArtifact": {
         "type": "citation",
         "citation": "Richards et al., Genet Med. 2015; 17:405-24",
@@ -42,7 +42,7 @@
       "code": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes",
+            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
             "code": "conclusion-string"
           }
         ]
@@ -73,7 +73,7 @@
       "code": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes",
+            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
             "code": "condition-inheritance"
           }
         ]

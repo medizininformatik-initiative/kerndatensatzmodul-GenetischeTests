@@ -7,6 +7,15 @@
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapeutic-implication"
     ]
   },
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+        "code": "therapeutic-implication",
+        "display": "Therapeutische Implikation"
+      }
+    ]
+  },
   "category": [
     {
       "coding": [
@@ -23,7 +32,7 @@
       "code": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes",
+            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
             "code": "conclusion-string"
           }
         ]
@@ -92,15 +101,6 @@
     }
   ],
   "status": "final",
-  "code": {
-    "coding": [
-      {
-        "code": "therapeutic-implication",
-        "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes",
-        "display": "Therapeutische Implikation"
-      }
-    ]
-  },
   "subject": {
     "reference": "Patient/example-mii-molgen-patient"
   },

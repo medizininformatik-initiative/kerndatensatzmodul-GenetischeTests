@@ -20,19 +20,19 @@
   ],
   "extension": [
     {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/RecommendedAction",
+      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/recommended-action",
       "valueReference": {
         "reference": "Task/example-mii-molgen-medikationsempfehlung-1"
       }
     },
     {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/RecommendedAction",
+      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/recommended-action",
       "valueReference": {
         "reference": "Task/example-mii-molgen-folgemassnahme-1"
       }
     },
     {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/SupportingInfo",
+      "url": "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo",
       "valueReference": {
         "reference": "FamilyMemberHistory/example-mii-molgen-family-member-history-1"
       }
@@ -67,9 +67,6 @@
     }
   ],
   "result": [
-    {
-      "reference": "Observation/example-mii-molgen-gruppierung-beobachtungen-1"
-    },
     {
       "reference": "Observation/example-mii-molgen-diagnostische-implikation-1"
     },

@@ -1,5 +1,5 @@
 Profile: SD_MII_MolGen_Medikationsempfehlung
-Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/task-med-chg
+Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation
 Id: sd-mii-modul-molgen-medikationsempfehlung
 Title: "SD MII MolGen Medikationsempfehlung"
 Description: "Das Profil dieser Task Ressource dient dazu, auf der Grundlage der genetischen Ergebnisse medikamanetöse Maßnahmen vorzuschlagen."
@@ -21,7 +21,7 @@ InstanceOf: sd-mii-modul-molgen-medikationsempfehlung
 Usage: #example
 Title: "BRAF Variante Medikationsempfehlung"
 Description: "Beispiel für Medikationsempfehlung abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/task-med-chg"
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation"
 * basedOn = Reference(servicerequest/example)
 * status = TaskStatus#requested
 * intent = RequestIntent#proposal

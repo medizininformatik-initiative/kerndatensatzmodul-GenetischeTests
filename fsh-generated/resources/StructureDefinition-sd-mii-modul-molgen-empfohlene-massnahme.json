@@ -24,11 +24,15 @@
   "context": [
     {
       "type": "element",
-      "expression": "Element"
+      "expression": "DiagnosticReport"
+    },
+    {
+      "type": "element",
+      "expression": "Observation"
     }
   ],
   "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/RecommendedAction",
+  "baseDefinition": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/recommended-action",
   "derivation": "constraint",
   "differential": {
     "element": [

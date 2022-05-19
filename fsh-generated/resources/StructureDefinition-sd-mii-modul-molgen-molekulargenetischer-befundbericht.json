@@ -63,9 +63,9 @@
         ]
       },
       {
-        "id": "DiagnosticReport.extension:RecommendedAction",
+        "id": "DiagnosticReport.extension:recommended-action",
         "path": "DiagnosticReport.extension",
-        "sliceName": "RecommendedAction",
+        "sliceName": "recommended-action",
         "type": [
           {
             "code": "Extension",
@@ -165,19 +165,6 @@
         "id": "DiagnosticReport.result",
         "path": "DiagnosticReport.result",
         "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.result:gen-grouper",
-        "path": "DiagnosticReport.result",
-        "sliceName": "gen-grouper",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/gruppierung-beobachtungen"
-            ]
-          }
-        ]
       },
       {
         "id": "DiagnosticReport.result:overall",

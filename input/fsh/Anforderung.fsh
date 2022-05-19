@@ -1,5 +1,5 @@
 Profile: SD_MII_MolGen_AnforderungGenetischerTest
-Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/servicerequest
+Parent: ServiceRequest
 Id: sd-mii-modul-molgen-anforderung-gentischer-test
 Title: "SD MII MolGen Anforderung genetischer Test"
 Description: "Der Laborauftrag oder die Anfrage, die die Durchführung des genetischen Tests auslöst."
@@ -53,7 +53,7 @@ InstanceOf: sd-mii-modul-molgen-anforderung-gentischer-test
 Usage: #example
 Title: "Anforderung BRAF Genetische Testung"
 Description: "Beispiel für Anforderung für genetische Testung auf genetische Variante im BRAF Gen an Hand von NGS."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/servicerequest"
+//* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/servicerequest"
 * status = #active
 * intent = #order
 * category = SCT#108252007 "Laboratory procedure (procedure)"
@@ -72,7 +72,7 @@ InstanceOf: sd-mii-modul-molgen-anforderung-gentischer-test
 Usage: #example
 Title: "Anforderung Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom"
 Description: "Beispiel für Anforderung für genetische Testung auf pathogene Variante im NIPBL Gen."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/servicerequest"
+//* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/servicerequest"
 * identifier.system = "https://www.charite.de/fhir/auftragsnummern"
 * identifier.value = "gen_test_02"
 * status = #active

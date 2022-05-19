@@ -30,7 +30,7 @@
     {
       "packageId": "hl7.fhir.uv.genomics-reporting",
       "uri": "hl7.fhir.uv.genomics-reporting",
-      "version": "1.1.0",
+      "version": "2.0.0",
       "id": "hl7_fhir_uv_genomics_reporting"
     },
     {
@@ -106,14 +106,6 @@
         },
         "name": "SD MII MolGen Genotyp",
         "description": "Dieses Profil beschreibt die Feststellung eines bestimmten Genotyps auf der Grundlage einer oder mehrerer Varianten oder Haplotypen.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/sd-mii-modul-molgen-gruppierung-beobachtungen"
-        },
-        "name": "SD MII MolGen Gruppierung Beobachtungen",
-        "description": "Mit diesem Profil können genetische Beobachtungen auf verschiedene Weise organisiert und gruppiert werden.",
         "exampleBoolean": false
       },
       {
@@ -256,22 +248,6 @@
         "name": "Genotyp BRAF",
         "description": "Beispiel für Genotyp BRAF Gen.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp"
-      },
-      {
-        "reference": {
-          "reference": "Observation/example-mii-molgen-gruppierung-beobachtungen-1"
-        },
-        "name": "Molekulargentischer Befund 1: BRAF Beobachtungen",
-        "description": "Beispiel für gruppierte Beobachtungen bezüglich BRAF.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/gruppierung-beobachtungen"
-      },
-      {
-        "reference": {
-          "reference": "Observation/example-mii-molgen-gruppierung-beobachtungen-2-nipbl"
-        },
-        "name": "Molekulargentischer Befund 2: NIPBL Beobachtungen",
-        "description": "Beispiel für gruppierte Beobachtungen bezüglich NIPBL.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/gruppierung-beobachtungen"
       },
       {
         "reference": {
