@@ -139,3 +139,13 @@ Usage: #example
 * manufacturer = "Illumina"
 * deviceName.name = "NovaSeq 6000-Sequencer"
 * deviceName.type = DeviceNameType#manufacturer-name
+
+Instance: example-mii-molgen-chargeitem-ebm-2
+InstanceOf: http://fhir.de/StructureDefinition/chargeitem-de-ebm
+Usage: #example
+Title: "example-mii-molgen-chargeitem-ebm-2"
+Description: "Beispiel für Dokumentation einer erbrachten Leistung gemäß EBM-Katalog"
+* status = #billable
+* code = EBM#11513 "Postnatale Mutationssuche zum Nachweis oder Ausschluss einer krankheitsrelevanten oder krankheitsauslösenden konstitutionellen genomischen Mutation"
+* subject = Reference(example-mii-molgen-patient-2)
+* quantity.value = 72

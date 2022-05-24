@@ -27,3 +27,4 @@ Alias:  HPO = http://github.com/phenopackets/core-ig/CodeSystem/hpo
 Alias:  OMIM = http://www.omim.org
 Alias:  ClinVarVID = http://www.ncbi.nlm.nih.gov/clinvar
 Alias:  RelArtType = http://hl7.org/fhir/related-artifact-type
+Alias:  EBM = https://fhir.kbv.de/NamingSystem/KBV_NS_Base_EBM
