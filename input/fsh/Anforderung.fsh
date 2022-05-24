@@ -65,6 +65,7 @@ Description: "Beispiel für Anforderung für genetische Testung auf genetische V
 * authoredOn = "2022-04-07"
 * requester = Reference(example-mii-molgen-practitioner-physician)
 * reasonCode = SCT#447886005 "Adenocarcinoma of anorectum (disorder)"
+* specimen = Reference(example-mii-molgen-specimen-1)
 * supportingInfo[familienanamnese] = Reference(example-mii-molgen-family-member-history-1)
 
 Instance: example-mii-molgen-anforderung-2
@@ -72,7 +73,6 @@ InstanceOf: sd-mii-modul-molgen-anforderung-gentischer-test
 Usage: #example
 Title: "Anforderung Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom"
 Description: "Beispiel für Anforderung für genetische Testung auf pathogene Variante im NIPBL Gen."
-//* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/servicerequest"
 * identifier.system = "https://www.charite.de/fhir/auftragsnummern"
 * identifier.value = "gen_test_02"
 * status = #active
@@ -85,6 +85,7 @@ Description: "Beispiel für Anforderung für genetische Testung auf pathogene Va
 * subject = Reference(example-mii-molgen-patient-2)
 * authoredOn = "2022-03-16"
 * requester = Reference(example-mii-molgen-practitioner-physician)
+* specimen = Reference(example-mii-molgen-specimen-2)
 * reasonCode[0] = SCT#40354009 "De Lange syndrome (disorder)"
 * reasonCode[1] = SCT#395507008 "Premature infant (finding)"
 * reasonCode[2] = SCT#276610007 "Low birth weight infant (disorder)"

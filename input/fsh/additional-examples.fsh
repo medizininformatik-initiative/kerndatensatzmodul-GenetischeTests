@@ -65,18 +65,16 @@ Usage: #example
 * name.given = "Linda"
 * name.prefix = "Dr."
 
-//Instance: example-mii-molgen-specimen
-//InstanceOf: SD_MII_MolGen_Probe
-//InstanceOf: Specimen
-//Usage: #example
-//* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/specimen"
-//* type = SCT#128159001 "Tissue specimen from colon (specimen)"
-//* collection.collectedDateTime = "2022-03-24T12:44:00+01:00"
-//* collection.bodySite = SCT#71854001 "Colon structure (body structure)"
-//* identifier.system = "https://biobank.uk-musterstadt.de/fhir/sid/proben"
-//* identifier.value = "5432"
-//* status = #available
-//* subject = Reference(example-mii-molgen-patient)
+Instance: example-mii-molgen-specimen-1
+InstanceOf: https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore
+Usage: #example
+* type = SCT#128159001 "Tissue specimen from colon (specimen)"
+* collection.collectedDateTime = "2022-03-24T12:44:00+01:00"
+* collection.bodySite = SCT#71854001 "Colon structure (body structure)"
+* identifier.system = "https://biobank.uk-musterstadt.de/fhir/sid/proben"
+* identifier.value = "5432"
+* status = #available
+* subject = Reference(example-mii-molgen-patient)
 
 Instance: example-mii-molgen-device-sequencer
 InstanceOf: Device

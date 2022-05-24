@@ -28,7 +28,7 @@ Description: "Beispiel für Genotyp BRAF Gen."
 * subject = Reference(example-mii-molgen-patient)
 * valueCodeableConcept.text = "BRAF rs113488022 T>A"
 * method = LNC#LA26398-0 "Sequencing"
-* specimen = Reference(example-mii-molgen-specimen)
+* specimen = Reference(example-mii-molgen-specimen-1)
 * device = Reference(example-mii-molgen-device-sequencer)
 * derivedFrom = Reference(example-mii-molgen-variante-1)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"

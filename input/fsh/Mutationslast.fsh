@@ -27,4 +27,4 @@ Description: "Beispiel für Mutationslast in Tumorprobe."
 * subject = Reference(example-mii-molgen-patient)
 * performer = Reference(example-mii-molgen-practitioner-lab)
 * valueQuantity = 12 UCUM#1/1000000{Base} "Mutations/Megabase"
-* specimen = Reference(example-mii-molgen-specimen)
+* specimen = Reference(example-mii-molgen-specimen-1)

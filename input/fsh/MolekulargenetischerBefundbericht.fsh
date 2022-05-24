@@ -55,7 +55,7 @@ Description: "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorek
 * code = LNC#51969-4 "Genetic analysis report"
 * subject = Reference(example-mii-molgen-patient)
 * performer = Reference(example-mii-molgen-practitioner-lab)
-* specimen = Reference(example-mii-molgen-specimen)
+* specimen = Reference(example-mii-molgen-specimen-1)
 //* result[gen-grouper] = Reference(example-mii-molgen-gruppierung-beobachtungen-1)
 * result[diagnostic-implication] = Reference(example-mii-molgen-diagnostische-implikation-1)
 * result[therapeutic-implication] = Reference(example-mii-molgen-therapeutische-implikation-1)
@@ -93,7 +93,7 @@ Description: "Beispiel für molekulargenetischen Befund Molekulargenetische Diag
 * code = LNC#51969-4 "Genetic analysis report"
 * subject = Reference(example-mii-molgen-patient-2)
 * performer = Reference(example-mii-molgen-practitioner-lab)
-//* specimen = Reference(example-mii-molgen-specimen)
+* specimen = Reference(example-mii-molgen-specimen-2)
 //* result[gen-grouper] = Reference(example-mii-molgen-gruppierung-beobachtungen-2-nipbl)
 * result[diagnostic-implication] = Reference(example-mii-molgen-diagnostische-implikation-2)
 * result[variant] = Reference(example-mii-molgen-variante-2)

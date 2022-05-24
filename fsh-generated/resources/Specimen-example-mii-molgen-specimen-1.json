@@ -1,0 +1,40 @@
+{
+  "resourceType": "Specimen",
+  "id": "example-mii-molgen-specimen-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore"
+    ]
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "128159001",
+        "display": "Tissue specimen from colon (specimen)"
+      }
+    ]
+  },
+  "collection": {
+    "collectedDateTime": "2022-03-24T12:44:00+01:00",
+    "bodySite": {
+      "coding": [
+        {
+          "code": "71854001",
+          "system": "http://snomed.info/sct",
+          "display": "Colon structure (body structure)"
+        }
+      ]
+    }
+  },
+  "identifier": [
+    {
+      "system": "https://biobank.uk-musterstadt.de/fhir/sid/proben",
+      "value": "5432"
+    }
+  ],
+  "status": "available",
+  "subject": {
+    "reference": "Patient/example-mii-molgen-patient"
+  }
+}

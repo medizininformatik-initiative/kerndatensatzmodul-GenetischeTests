@@ -34,7 +34,7 @@ Description: "Beispiel für untersuchte Region BRAF Gen an Hand von NGS."
 * subject = Reference(example-mii-molgen-patient)
 * performer = Reference(example-mii-molgen-practitioner-lab)
 * method = LNC#LA26398-0 "Sequencing"
-* specimen = Reference(example-mii-molgen-specimen)
+* specimen = Reference(example-mii-molgen-specimen-1)
 * device = Reference(example-mii-molgen-device-sequencer)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:1097 "BRAF"
@@ -63,7 +63,7 @@ Description: "Beispiel für untersuchte Region NIPBL Gen an Hand von NGS."
 * subject = Reference(example-mii-molgen-patient-2)
 * performer = Reference(example-mii-molgen-practitioner-lab)
 * method = LNC#LA26398-0 "Sequencing"
-//* specimen = Reference(example-mii-molgen-specimen)
+* specimen = Reference(example-mii-molgen-specimen-2)
 * device = Reference(example-mii-molgen-device-sequencer-2)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:28862 "NIPBL"
@@ -84,7 +84,7 @@ Description: "Beispiel für untersuchte Region HDAC8 Gen an Hand von NGS."
 * subject = Reference(example-mii-molgen-patient-2)
 * performer = Reference(example-mii-molgen-practitioner-lab)
 * method = LNC#LA26398-0 "Sequencing"
-//* specimen = Reference(example-mii-molgen-specimen)
+* specimen = Reference(example-mii-molgen-specimen-2)
 * device = Reference(example-mii-molgen-device-sequencer-2)
 * component[conclusion-string].code = GenTbd#conclusion-string
 * component[conclusion-string].valueString = "Keine pathogene Variante identifiziert."
@@ -107,7 +107,7 @@ Description: "Beispiel für untersuchte Region RAD21 Gen an Hand von NGS."
 * subject = Reference(example-mii-molgen-patient-2)
 * performer = Reference(example-mii-molgen-practitioner-lab)
 * method = LNC#LA26398-0 "Sequencing"
-//* specimen = Reference(example-mii-molgen-specimen)
+* specimen = Reference(example-mii-molgen-specimen-2)
 * device = Reference(example-mii-molgen-device-sequencer-2)
 * component[conclusion-string].code = GenTbd#conclusion-string
 * component[conclusion-string].valueString = "Keine pathogene Variante identifiziert."
@@ -130,7 +130,7 @@ Description: "Beispiel für untersuchte Region SMC1A Gen an Hand von NGS."
 * subject = Reference(example-mii-molgen-patient-2)
 * performer = Reference(example-mii-molgen-practitioner-lab)
 * method = LNC#LA26398-0 "Sequencing"
-//* specimen = Reference(example-mii-molgen-specimen)
+* specimen = Reference(example-mii-molgen-specimen-2)
 * device = Reference(example-mii-molgen-device-sequencer-2)
 * component[conclusion-string].code = GenTbd#conclusion-string
 * component[conclusion-string].valueString = "Keine pathogene Variante identifiziert."
@@ -153,7 +153,7 @@ Description: "Beispiel für untersuchte Region SMC3 Gen an Hand von NGS."
 * subject = Reference(example-mii-molgen-patient-2)
 * performer = Reference(example-mii-molgen-practitioner-lab)
 * method = LNC#LA26398-0 "Sequencing"
-//* specimen = Reference(example-mii-molgen-specimen)
+* specimen = Reference(example-mii-molgen-specimen-2)
 * device = Reference(example-mii-molgen-device-sequencer-2)
 * component[conclusion-string].code = GenTbd#conclusion-string
 * component[conclusion-string].valueString = "Keine pathogene Variante identifiziert."
@@ -176,7 +176,7 @@ Description: "Beispiel für untersuchte Region TP63 Gen an Hand von NGS."
 * subject = Reference(example-mii-molgen-patient-2)
 * performer = Reference(example-mii-molgen-practitioner-lab)
 * method = LNC#LA26398-0 "Sequencing"
-//* specimen = Reference(example-mii-molgen-specimen)
+* specimen = Reference(example-mii-molgen-specimen-2)
 * device = Reference(example-mii-molgen-device-sequencer-2)
 * component[conclusion-string].code = GenTbd#conclusion-string
 * component[conclusion-string].valueString = "Keine pathogene Variante identifiziert."

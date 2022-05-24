@@ -38,7 +38,7 @@ Description: "Beispiel für genetische Variante im BRAF Gen an Hand von NGS."
 * subject = Reference(example-mii-molgen-patient)
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * method = LNC#LA26398-0 "Sequencing"
-* specimen = Reference(example-mii-molgen-specimen)
+* specimen = Reference(example-mii-molgen-specimen-1)
 * device = Reference(example-mii-molgen-device-sequencer)
 * derivedFrom = Reference(example-mii-molgen-untersuchte-region-1)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
@@ -78,7 +78,7 @@ Description: "Beispiel für genetische Variante im NIPBL Gen an Hand von WGS."
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * method.coding[0] = LNC#LA26398-0 "Sequencing"
 * method.coding[1] = LNC#86206-0 "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
-//* specimen = Reference(example-mii-molgen-specimen-2)
+* specimen = Reference(example-mii-molgen-specimen-2)
 * device = Reference(example-mii-molgen-device-sequencer-2)
 //* derivedFrom = Reference(example-mii-molgen-untersuchte-region-1)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
