@@ -1,6 +1,6 @@
 {
   "resourceType": "ChargeItem",
-  "id": "example-mii-molgen-chargeitem-ebm-2",
+  "id": "example-mii-molgen-chargeitem-ebm-24",
   "meta": {
     "profile": [
       "http://fhir.de/StructureDefinition/chargeitem-de-ebm"
@@ -10,8 +10,8 @@
     "coding": [
       {
         "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_EBM",
-        "code": "11513",
-        "display": "Postnatale Mutationssuche zum Nachweis oder Ausschluss einer krankheitsrelevanten oder krankheitsauslösenden konstitutionellen genomischen Mutation"
+        "code": "11301",
+        "display": "Grundpauschale humangenetische in-vitro-Diagnostik bei Probeneinsendung"
       }
     ]
   },
@@ -20,6 +20,6 @@
     "reference": "Patient/example-mii-molgen-patient-2"
   },
   "quantity": {
-    "value": 72
+    "value": 1
   }
 }

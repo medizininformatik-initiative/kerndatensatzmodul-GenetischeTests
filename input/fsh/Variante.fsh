@@ -11,13 +11,19 @@ Description: "Dieses Profil ermöglicht eine vollständige Beschreibung der gefu
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
-* component contains dna-region 0..*
+* component contains dna-region 0..* and gene-fusion 0..1
 * component[dna-region].code = LNC#47999-8
 * component[dna-region].code ^short = "47999-8"
 * component[dna-region] ^short = "DNA region name [Identifier]"
 * component[dna-region] ^definition = "A human readable name for the region of interest. Typically Exon #, Intron # or other."
 * component[dna-region].value[x] only string
 * component[dna-region].value[x] 1..1
+* component[gene-fusion].code = LNC#95123-6
+* component[gene-fusion] ^short = "Gene fusion transcript details in Blood or Tissue by Molecular genetics method Narrative"
+* component[gene-fusion].value[x] only CodeableConcept 
+* component[gene-fusion].value[x] ^short = "HGNC recommends for products of gene translocations or fusions (format GENESYMBOL1::GENESYMBOL2) and readthrough transcripts (format GENESYMBOL1-GENESYMBOL2)"
+* component[gene-fusion].value[x] 1..1
+* component[gene-fusion].value[x] from http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgnc-vs (extensible)
 
 Mapping: MolGen-Variante
 Id: MII-KDS
@@ -102,6 +108,31 @@ Description: "Beispiel für genetische Variante im NIPBL Gen an Hand von WGS."
 * component[variation-code].code = LNC#81252-9 "Discrete genetic variant"
 * component[variation-code].valueCodeableConcept.coding[0] = ClinVarVID#1076298
 * component[variation-code].valueCodeableConcept.coding[1] = ClinVarVID#VCV001076298.1
+
+Instance: example-mii-molgen-variante-fusion-3
+InstanceOf: sd-mii-molgen-variante
+Usage: #example
+Title: "Variante FGFR2-DBP Fusion"
+Description: "Beispiel für genetische Variante FGFR2-DBP Fusion."
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
+* basedOn = Reference(example-mii-molgen-anforderung-2)
+* status = #final
+* category = ObsCat#laboratory "Laboratory"
+* code = LNC#69548-6 "Genetic variant assessment"
+* subject = Reference(example-mii-molgen-patient-2)
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* method.coding[0] = LNC#LA26398-0 "Sequencing"
+* method.coding[1] = LNC#86206-0 "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
+* specimen = Reference(example-mii-molgen-specimen-2)
+* device = Reference(example-mii-molgen-device-sequencer-2)
+* derivedFrom = Reference(example-mii-molgen-untersuchte-region-1)
+* component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
+* component[gene-studied].valueCodeableConcept = HGNC#HGNC:3689 "FGFR2"
+* component[coding-change-type].valueCodeableConcept = SO#SO:0001565 "gene_fusion"
+* component[gene-fusion].valueCodeableConcept = HGNC#HGNC:XXXX "FGFR2::DBP"
+
+//http://varnomen.hgvs.org/recommendations/RNA/variant/delins/ (12.pdf)
+
 
 
 

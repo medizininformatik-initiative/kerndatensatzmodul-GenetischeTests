@@ -198,9 +198,33 @@
       },
       {
         "reference": {
-          "reference": "ChargeItem/example-mii-molgen-chargeitem-ebm-2"
+          "reference": "ChargeItem/example-mii-molgen-chargeitem-ebm-21"
         },
-        "name": "example-mii-molgen-chargeitem-ebm-2",
+        "name": "example-mii-molgen-chargeitem-ebm-21",
+        "description": "Beispiel für Dokumentation einer erbrachten Leistung gemäß EBM-Katalog",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ChargeItem/example-mii-molgen-chargeitem-ebm-22"
+        },
+        "name": "example-mii-molgen-chargeitem-ebm-22",
+        "description": "Beispiel für Dokumentation einer erbrachten Leistung gemäß EBM-Katalog",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ChargeItem/example-mii-molgen-chargeitem-ebm-23"
+        },
+        "name": "example-mii-molgen-chargeitem-ebm-23",
+        "description": "Beispiel für Dokumentation einer erbrachten Leistung gemäß EBM-Katalog",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ChargeItem/example-mii-molgen-chargeitem-ebm-24"
+        },
+        "name": "example-mii-molgen-chargeitem-ebm-24",
         "description": "Beispiel für Dokumentation einer erbrachten Leistung gemäß EBM-Katalog",
         "exampleBoolean": true
       },
@@ -417,6 +441,14 @@
         },
         "name": "NIPBL Variante",
         "description": "Beispiel für genetische Variante im NIPBL Gen an Hand von WGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-molgen-variante-fusion-3"
+        },
+        "name": "Variante FGFR2-DBP Fusion",
+        "description": "Beispiel für genetische Variante FGFR2-DBP Fusion.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
       }
     ],

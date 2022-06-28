@@ -140,12 +140,42 @@ Usage: #example
 * deviceName.name = "NovaSeq 6000-Sequencer"
 * deviceName.type = DeviceNameType#manufacturer-name
 
-Instance: example-mii-molgen-chargeitem-ebm-2
+Instance: example-mii-molgen-chargeitem-ebm-21
 InstanceOf: http://fhir.de/StructureDefinition/chargeitem-de-ebm
 Usage: #example
-Title: "example-mii-molgen-chargeitem-ebm-2"
+Title: "example-mii-molgen-chargeitem-ebm-21"
 Description: "Beispiel für Dokumentation einer erbrachten Leistung gemäß EBM-Katalog"
 * status = #billable
 * code = EBM#11513 "Postnatale Mutationssuche zum Nachweis oder Ausschluss einer krankheitsrelevanten oder krankheitsauslösenden konstitutionellen genomischen Mutation"
 * subject = Reference(example-mii-molgen-patient-2)
 * quantity.value = 72
+
+Instance: example-mii-molgen-chargeitem-ebm-22
+InstanceOf: http://fhir.de/StructureDefinition/chargeitem-de-ebm
+Usage: #example
+Title: "example-mii-molgen-chargeitem-ebm-22"
+Description: "Beispiel für Dokumentation einer erbrachten Leistung gemäß EBM-Katalog"
+* status = #billable
+* code = EBM#11512 "Gezielter Nachweis oder Ausschluss von krankheitsrelevanten oder krankheitsauslösenden großen Deletionen und/oder Duplikationen"
+* subject = Reference(example-mii-molgen-patient-2)
+* quantity.value = 6
+
+Instance: example-mii-molgen-chargeitem-ebm-23
+InstanceOf: http://fhir.de/StructureDefinition/chargeitem-de-ebm
+Usage: #example
+Title: "example-mii-molgen-chargeitem-ebm-23"
+Description: "Beispiel für Dokumentation einer erbrachten Leistung gemäß EBM-Katalog"
+* status = #billable
+* code = EBM#11302 "Zuschlag für Gemeinkosten und die wissenschaftliche ärztliche Beurteilung und Befundung komplexer genetischer Analysen im individuellen klinischen Kontext bei seltenen Erkrankungen"
+* subject = Reference(example-mii-molgen-patient-2)
+* quantity.value = 1
+
+Instance: example-mii-molgen-chargeitem-ebm-24
+InstanceOf: http://fhir.de/StructureDefinition/chargeitem-de-ebm
+Usage: #example
+Title: "example-mii-molgen-chargeitem-ebm-24"
+Description: "Beispiel für Dokumentation einer erbrachten Leistung gemäß EBM-Katalog"
+* status = #billable
+* code = EBM#11301 "Grundpauschale humangenetische in-vitro-Diagnostik bei Probeneinsendung"
+* subject = Reference(example-mii-molgen-patient-2)
+* quantity.value = 1
