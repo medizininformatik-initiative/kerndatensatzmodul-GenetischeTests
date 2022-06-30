@@ -134,5 +134,32 @@ Description: "Beispiel für genetische Variante FGFR2-DBP Fusion."
 //http://varnomen.hgvs.org/recommendations/RNA/variant/delins/ (12.pdf)
 
 
-
+// CNV
+Instance: example-mii-molgen-variante-cnv-4
+InstanceOf: sd-mii-molgen-variante
+Usage: #example
+Title: "Variante SMO CNV"
+Description: "Beispiel für genetische Copy Number Variante SMO Gen."
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
+//* basedOn = Reference(example-mii-molgen-anforderung-2)
+* status = #final
+* category = ObsCat#laboratory "Laboratory"
+* code = LNC#69548-6 "Genetic variant assessment"
+* subject = Reference(example-mii-molgen-patient-2)
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* method.coding[0] = LNC#LA26398-0 "Sequencing"
+//* method.coding[1] = LNC#86206-0 "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
+//* specimen = Reference(example-mii-molgen-specimen-2)
+//* device = Reference(example-mii-molgen-device-sequencer-2)
+//* derivedFrom = Reference(example-mii-molgen-untersuchte-region-1)
+* component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
+* component[gene-studied].valueCodeableConcept = HGNC#HGNC:11119 "SMO"
+* component[coding-change-type].valueCodeableConcept = SO#SO:0001742 "copy_number_gain"
+* component[copy-number].valueQuantity = 6 UCUM#{#} "#"
+* component[dna-region].valueString = "Ex 1-10"
+* component[chromosome-identifier].valueCodeableConcept = LNC#LA21260-7 "Chromosome 7"
+* component[cytogenetic-location].valueCodeableConcept = ChromLoc#7q32.1
+* component[sample-allelic-frequency].valueQuantity = 55 UCUM#% "%"
+* component[molecular-consequence].valueCodeableConcept = SO#SO:0001458 "unigene_cluster"
+// cluster?
 

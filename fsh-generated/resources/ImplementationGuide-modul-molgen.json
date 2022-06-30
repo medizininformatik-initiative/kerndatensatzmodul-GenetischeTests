@@ -260,6 +260,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/example-mii-molgen-diagnostische-implikation-cnv-4"
+        },
+        "name": "CNV SMO Diagnostische Implikation",
+        "description": "Beispiel für diagnostische Implikation abgeleitet von Copy Number Variante im SMO Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
+      },
+      {
+        "reference": {
           "reference": "FamilyMemberHistory/example-mii-molgen-family-member-history-1"
         },
         "name": "example-mii-molgen-family-member-history-1",
@@ -441,6 +449,14 @@
         },
         "name": "NIPBL Variante",
         "description": "Beispiel für genetische Variante im NIPBL Gen an Hand von WGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-molgen-variante-cnv-4"
+        },
+        "name": "Variante SMO CNV",
+        "description": "Beispiel für genetische Copy Number Variante SMO Gen.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
       },
       {

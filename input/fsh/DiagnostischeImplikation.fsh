@@ -60,3 +60,25 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer
 * component[predicted-phenotype].valueCodeableConcept = SCT#40354009 "De Lange syndrome (disorder)"
 
 
+// CNV
+Instance: example-mii-molgen-diagnostische-implikation-cnv-4
+InstanceOf: sd-mii-modul-molgen-diagnostische-implikation
+Usage: #example
+Title: "CNV SMO Diagnostische Implikation"
+Description: "Beispiel für diagnostische Implikation abgeleitet von Copy Number Variante im SMO Gen."
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
+//* extension[genomics-artifact].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
+//* extension[genomics-artifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
+//* extension[genomics-artifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
+//* extension[genomics-artifact].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/25741868/"
+* status = #final
+* category = ObsCat#laboratory "Laboratory"
+* code = GenTbd#diagnostic-implication "Diagnostische Implikation"
+* subject = Reference(example-mii-molgen-patient-2)
+* performer = Reference(example-mii-molgen-practitioner-lab)
+* derivedFrom[variant] = Reference(example-mii-molgen-variante-cnv-4)
+* component[conclusion-string].code = GenTbd#conclusion-string
+* component[conclusion-string].valueString = "onkogene Veränderung mögl. Überexpression"
+* component[clinical-significance].code = LNC#53037-8 "Genetic variation clinical significance [Imp]"
+* component[clinical-significance].valueCodeableConcept = LNC#LA26332-9 "Likely pathogenic"
+
