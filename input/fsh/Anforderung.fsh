@@ -11,6 +11,7 @@ Description: "Der Laborauftrag oder die Anfrage, die die Durchführung des genet
 * subject MS
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
+* encounter MS
 * authoredOn MS
 * authoredOn ^alias[+] = "Datum der Anforderung"
 * requester MS

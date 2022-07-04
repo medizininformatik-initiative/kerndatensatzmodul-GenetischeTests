@@ -62,6 +62,11 @@
   "differential": {
     "element": [
       {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.category",
         "path": "Observation.category",
         "mustSupport": true
@@ -74,6 +79,7 @@
       {
         "id": "Observation.subject",
         "path": "Observation.subject",
+        "min": 1,
         "type": [
           {
             "code": "Reference",

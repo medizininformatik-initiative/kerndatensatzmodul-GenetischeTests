@@ -5,9 +5,15 @@ Title: "SD MII MolGen Mikrosatelliteninstabilität"
 Description: "Mikrosatelliteninstabilität (MSI) ist ein Zustand genetischer Hypermutabilität (Neigung zu Mutationen), der aus einer gestörten DNA-Mismatch-Reparatur (MMR) resultiert."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet"
 * ^status = #draft
-* subject MS 
+* status MS
+* category MS
+* code MS
+* subject 1.. MS 
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
+* encounter MS
+* value[x] MS
+* component[conclusion-string] MS
 
 Mapping: MolGen-Mikrosatelliteninstabilitaet
 Id: MII-KDS
@@ -22,7 +28,7 @@ Title: "Mikrosatelliteninstabilität"
 Description: "Beispiel für Mikrosatelliteninstabilität in Tumorprobe."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/msi"
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#81695-9 "Microsatellite instability [Interpretation] in Cancer specimen Qualitative"
 * subject = Reference(example-mii-molgen-patient)
 * valueCodeableConcept = LNC#LA14122-8 "Stable"

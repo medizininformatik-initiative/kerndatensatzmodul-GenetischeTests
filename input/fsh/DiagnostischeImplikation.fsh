@@ -11,8 +11,11 @@ Description: "Dieses Profil beschreibt den Zusammenhang zwischen einem oder mehr
 * subject MS 
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
+* encounter MS
 * derivedFrom MS
 * derivedFrom[variant] only Reference(SD_MII_MolGen_Variante)
+* component MS
+* component[predicted-phenotype] MS
 * component[conclusion-string] MS
 * component[evidence-level] MS
 * component[clinical-significance] MS

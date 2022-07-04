@@ -5,11 +5,24 @@ Title: "SD MII MolGen Therapeutische Implikation"
 Description: "Dieses Profil beschreibt den möglichen Einfluss genetischer Merkmale auf eine medikamentöse oder nicht-medikamentöse Therapie."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation"
 * ^status = #draft
-* subject MS 
+* status MS
+* category MS
+* code MS
+* subject 1.. MS 
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
+* encounter MS
+* derivedFrom MS
+* derivedFrom[variant] MS
 * derivedFrom[variant] only Reference(SD_MII_MolGen_Variante)
+* component MS
+* component[conclusion-string] MS
+* component[prognosis] MS
 * component[evidence-level] MS
+* component[phenotypic-treatment-context] MS
+* component[medication-assessed] MS
+* component[therapy-assessed] MS
+* component[predicted-therapeutic-implication] MS
 
 Mapping: MolGen-TherapeutischeImplikation
 Id: MII-KDS
@@ -25,7 +38,7 @@ Title: "BRAF Variante Therapeutische Implikation"
 Description: "Beispiel für therapeutische Implikation abgeleitet von genetische Variante im BRAF Gen an Hand von NGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapeutic-implication"
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = GenTbd#therapeutic-implication "Therapeutische Implikation"
 * subject = Reference(example-mii-molgen-patient)
 * performer = Reference(example-mii-molgen-practitioner-lab)

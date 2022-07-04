@@ -52,8 +52,19 @@
   "differential": {
     "element": [
       {
+        "id": "Task.status",
+        "path": "Task.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Task.intent",
+        "path": "Task.intent",
+        "mustSupport": true
+      },
+      {
         "id": "Task.code",
         "path": "Task.code",
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "MII-KDS",
@@ -70,6 +81,7 @@
       {
         "id": "Task.for",
         "path": "Task.for",
+        "min": 1,
         "type": [
           {
             "code": "Reference",
@@ -84,6 +96,16 @@
         "mustSupport": true
       },
       {
+        "id": "Task.encounter",
+        "path": "Task.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "Task.reasonCode",
+        "path": "Task.reasonCode",
+        "mustSupport": true
+      },
+      {
         "id": "Task.reasonReference",
         "path": "Task.reasonReference",
         "type": [
@@ -93,7 +115,8 @@
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       }
     ]
   }

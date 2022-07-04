@@ -5,9 +5,15 @@ Title: "SD MII MolGen Empfohlene Folgemaßnahme"
 Description: "Das Profil dieser Task Ressource beschreibt die empfohlenen Folgemaßnahmen."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme"
 * ^status = #draft
-* for MS 
+* status MS
+* intent MS
+* code MS
+* for 1.. MS 
 * for only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * for only Reference(Patient)
+* encounter MS
+* reasonCode MS
+* reasonReference MS
 * reasonReference only Reference(SD_MII_MolGen_TherapeutischeImplikation)
 
 Mapping: MolGen-EmpfohleneFolgemassnahme

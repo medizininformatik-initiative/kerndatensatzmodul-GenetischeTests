@@ -62,8 +62,24 @@
   "differential": {
     "element": [
       {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.subject",
         "path": "Observation.subject",
+        "min": 1,
         "type": [
           {
             "code": "Reference",
@@ -75,12 +91,40 @@
               "http://hl7.org/fhir/StructureDefinition/Group"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:conclusion-string",
+        "path": "Observation.component",
+        "sliceName": "conclusion-string",
+        "mustSupport": true
       },
       {
         "id": "Observation.component:gene-studied",
         "path": "Observation.component",
         "sliceName": "gene-studied",
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "MII-KDS",
@@ -93,6 +137,7 @@
         "id": "Observation.component:cytogenetic-location",
         "path": "Observation.component",
         "sliceName": "cytogenetic-location",
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "MII-KDS",
@@ -105,6 +150,7 @@
         "id": "Observation.component:reference-sequence-assembly",
         "path": "Observation.component",
         "sliceName": "reference-sequence-assembly",
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "MII-KDS",

@@ -5,12 +5,21 @@ Title: "SD MII MolGen Untersuchte Region"
 Description: "Dieses Profil beschreibt die Region oder die Regionen, die im Rahmen dieses Befundberichts untersucht wurden."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
 * ^status = #draft
-* subject MS 
+* status MS
+* category MS
+* code MS
+* subject 1.. MS 
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
+* encounter MS
+* component[conclusion-string] MS
 * component[gene-studied] MS
+* component[gene-mutations] MS
+* component[region-description] MS
 * component[region-coverage] MS
+* component[ranges-examined] MS
 * component[genomic-ref-seq] MS
+* component[uncallable-regions] MS
 
 
 Mapping: MolGen-UntersuchteRegion
@@ -29,7 +38,7 @@ Title: "Untersuchte Region BRAF"
 Description: "Beispiel für untersuchte Region BRAF Gen an Hand von NGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied"
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#53041-0 "DNA region of interest panel"
 * subject = Reference(example-mii-molgen-patient)
 * performer = Reference(example-mii-molgen-practitioner-lab)
@@ -58,7 +67,7 @@ Title: "Untersuchte Region NIPBL"
 Description: "Beispiel für untersuchte Region NIPBL Gen an Hand von NGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied"
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#53041-0 "DNA region of interest panel"
 * subject = Reference(example-mii-molgen-patient-2)
 * performer = Reference(example-mii-molgen-practitioner-lab)
@@ -79,7 +88,7 @@ Title: "Untersuchte Region HDAC8"
 Description: "Beispiel für untersuchte Region HDAC8 Gen an Hand von NGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied"
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#53041-0 "DNA region of interest panel"
 * subject = Reference(example-mii-molgen-patient-2)
 * performer = Reference(example-mii-molgen-practitioner-lab)
@@ -102,7 +111,7 @@ Title: "Untersuchte Region HDAC8"
 Description: "Beispiel für untersuchte Region RAD21 Gen an Hand von NGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied"
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#53041-0 "DNA region of interest panel"
 * subject = Reference(example-mii-molgen-patient-2)
 * performer = Reference(example-mii-molgen-practitioner-lab)
@@ -125,7 +134,7 @@ Title: "Untersuchte Region SMC1A"
 Description: "Beispiel für untersuchte Region SMC1A Gen an Hand von NGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied"
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#53041-0 "DNA region of interest panel"
 * subject = Reference(example-mii-molgen-patient-2)
 * performer = Reference(example-mii-molgen-practitioner-lab)
@@ -148,7 +157,7 @@ Title: "Untersuchte Region SMC3"
 Description: "Beispiel für untersuchte Region SMC3 Gen an Hand von NGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied"
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#53041-0 "DNA region of interest panel"
 * subject = Reference(example-mii-molgen-patient-2)
 * performer = Reference(example-mii-molgen-practitioner-lab)
@@ -171,7 +180,7 @@ Title: "Untersuchte Region TP63"
 Description: "Beispiel für untersuchte Region TP63 Gen an Hand von NGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied"
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#53041-0 "DNA region of interest panel"
 * subject = Reference(example-mii-molgen-patient-2)
 * performer = Reference(example-mii-molgen-practitioner-lab)

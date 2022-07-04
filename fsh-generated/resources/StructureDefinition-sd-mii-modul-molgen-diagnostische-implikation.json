@@ -95,6 +95,11 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
         "mustSupport": true
@@ -111,6 +116,11 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "mustSupport": true
       },
       {
         "id": "Observation.component:conclusion-string",
@@ -130,6 +140,12 @@
             "comment": "Clinical Annotation Level Of Evidence"
           }
         ]
+      },
+      {
+        "id": "Observation.component:predicted-phenotype",
+        "path": "Observation.component",
+        "sliceName": "predicted-phenotype",
+        "mustSupport": true
       },
       {
         "id": "Observation.component:mode-of-inheritance",

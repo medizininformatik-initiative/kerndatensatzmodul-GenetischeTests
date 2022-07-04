@@ -73,7 +73,20 @@
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-massnahme"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:coded-note",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "coded-note",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:supporting-info",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "supporting-info",
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.status",
@@ -93,6 +106,7 @@
       {
         "id": "DiagnosticReport.subject",
         "path": "DiagnosticReport.subject",
+        "min": 1,
         "type": [
           {
             "code": "Reference",
@@ -105,6 +119,11 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.encounter",
+        "path": "DiagnosticReport.encounter",
         "mustSupport": true
       },
       {
@@ -162,6 +181,11 @@
         ]
       },
       {
+        "id": "DiagnosticReport.specimen",
+        "path": "DiagnosticReport.specimen",
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.result",
         "path": "DiagnosticReport.result",
         "mustSupport": true
@@ -177,7 +201,8 @@
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/ergebnis-zusammenfassung"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.result:diagnostic-implication",
@@ -190,7 +215,8 @@
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.result:therapeutic-implication",
@@ -203,7 +229,8 @@
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.result:variant",
@@ -216,7 +243,8 @@
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.result:region-studied",
@@ -229,7 +257,22 @@
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.result:genotype",
+        "path": "DiagnosticReport.result",
+        "sliceName": "genotype",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp"
+            ]
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.result:tumor-mutation-burden",
@@ -244,7 +287,8 @@
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.media",
@@ -262,6 +306,16 @@
             "comment": "Anhänge"
           }
         ]
+      },
+      {
+        "id": "DiagnosticReport.conclusion",
+        "path": "DiagnosticReport.conclusion",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.conclusionCode",
+        "path": "DiagnosticReport.conclusionCode",
+        "mustSupport": true
       }
     ]
   }

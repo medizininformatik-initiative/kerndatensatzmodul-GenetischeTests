@@ -5,9 +5,17 @@ Title: "SD MII MolGen Mutationslast"
 Description: "Dieses Profil beschreibt die Gesamtzahl der in der DNA von Krebszellen gefundenen Mutationen."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast"
 * ^status = #draft
-* subject MS 
+* status MS
+* category MS
+* code MS
+* subject 1.. MS 
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
+* encounter MS
+* value[x] MS
+* specimen MS
+* component MS
+* component[conclusion-string] MS
 
 Mapping: MolGen-Mutationslast
 Id: MII-KDS
@@ -22,7 +30,7 @@ Title: "Beispiel Mutationslast in Tumorprobe"
 Description: "Beispiel für Mutationslast in Tumorprobe."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/tmb"
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#94076-7 "Mutations/Megabase [# Ratio] in Tumor"
 * subject = Reference(example-mii-molgen-patient)
 * performer = Reference(example-mii-molgen-practitioner-lab)

@@ -62,8 +62,24 @@
   "differential": {
     "element": [
       {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.subject",
         "path": "Observation.subject",
+        "min": 1,
         "type": [
           {
             "code": "Reference",
@@ -76,6 +92,17 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:conclusion-string",
+        "path": "Observation.component",
+        "sliceName": "conclusion-string",
         "mustSupport": true
       },
       {
@@ -92,6 +119,18 @@
         ]
       },
       {
+        "id": "Observation.component:gene-mutations",
+        "path": "Observation.component",
+        "sliceName": "gene-mutations",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:region-description",
+        "path": "Observation.component",
+        "sliceName": "region-description",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.component:region-coverage",
         "path": "Observation.component",
         "sliceName": "region-coverage",
@@ -105,6 +144,12 @@
         ]
       },
       {
+        "id": "Observation.component:ranges-examined",
+        "path": "Observation.component",
+        "sliceName": "ranges-examined",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.component:genomic-ref-seq",
         "path": "Observation.component",
         "sliceName": "genomic-ref-seq",
@@ -116,6 +161,12 @@
             "comment": "Referenzsequenz"
           }
         ]
+      },
+      {
+        "id": "Observation.component:uncallable-regions",
+        "path": "Observation.component",
+        "sliceName": "uncallable-regions",
+        "mustSupport": true
       }
     ]
   }

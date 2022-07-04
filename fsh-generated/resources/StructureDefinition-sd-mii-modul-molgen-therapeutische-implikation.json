@@ -73,8 +73,24 @@
         ]
       },
       {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.subject",
         "path": "Observation.subject",
+        "min": 1,
         "type": [
           {
             "code": "Reference",
@@ -90,6 +106,16 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.derivedFrom:variant",
         "path": "Observation.derivedFrom",
         "sliceName": "variant",
@@ -100,7 +126,19 @@
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:conclusion-string",
+        "path": "Observation.component",
+        "sliceName": "conclusion-string",
+        "mustSupport": true
       },
       {
         "id": "Observation.component:evidence-level",
@@ -114,6 +152,36 @@
             "comment": "Clinical Annotation Level Of Evidence"
           }
         ]
+      },
+      {
+        "id": "Observation.component:prognosis",
+        "path": "Observation.component",
+        "sliceName": "prognosis",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:phenotypic-treatment-context",
+        "path": "Observation.component",
+        "sliceName": "phenotypic-treatment-context",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:medication-assessed",
+        "path": "Observation.component",
+        "sliceName": "medication-assessed",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:therapy-assessed",
+        "path": "Observation.component",
+        "sliceName": "therapy-assessed",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:predicted-therapeutic-implication",
+        "path": "Observation.component",
+        "sliceName": "predicted-therapeutic-implication",
+        "mustSupport": true
       }
     ]
   }

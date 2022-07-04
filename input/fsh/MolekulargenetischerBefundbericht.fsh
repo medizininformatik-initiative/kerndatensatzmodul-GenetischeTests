@@ -5,28 +5,43 @@ Title: "SD MII MolGen Molekulargenetischer Befundbericht"
 Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen Befundberichte und enthält Metadaten über den gesamten Bericht sowie alle relevanten Informationen, die im Rahmen der molekulargenetischen Analyse gefunden wurden."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
 * ^status = #draft
+* extension[recommended-action] MS
 * extension[recommended-action] only SD_MII_MolGen_EmpfohleneMassnahme
+* extension[supporting-info] MS
+* extension[coded-note] MS
 * status ^alias[+] = "Berichtstatus"
 * status MS
-* subject MS 
+* subject 1.. MS 
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
+* encounter MS
 * issued MS
 * issued ^alias[+] = "Datum des Berichtes"
 * performer MS
 * performer ^alias[+] = "Labor / Institution/ Ansprechpartner"
 * resultsInterpreter MS
 * resultsInterpreter ^alias[+] = "Labor / Institution/ Ansprechpartner"
+* specimen MS
 * result MS
 * result contains tumor-mutation-burden 0..*
 //* result[gen-grouper] only Reference(SD_MII_MolGen_GruppierungBeobachtungen)
+* result[overall] MS
 * result[overall] only Reference(SD_MII_MolGen_ErgebnisZusammenfassung)
+* result[diagnostic-implication] MS
 * result[diagnostic-implication] only Reference(SD_MII_MolGen_DiagnostischeImplikation)
+* result[therapeutic-implication] MS
 * result[therapeutic-implication] only Reference(SD_MII_MolGen_TherapeutischeImplikation)
+* result[variant] MS
 * result[variant] only Reference(SD_MII_MolGen_Variante)
+* result[region-studied] MS
 * result[region-studied] only Reference(SD_MII_MolGen_UntersuchteRegion)
+* result[tumor-mutation-burden] MS
 * result[tumor-mutation-burden] only Reference(SD_MII_MolGen_Mutationslast)
+* result[genotype] MS
+* result[genotype] only Reference(SD_MII_MolGen_Genotyp)
 * media MS
+* conclusion MS
+* conclusionCode MS
 
 Mapping: MolGen-Befundbericht
 Id: MII-KDS
@@ -51,7 +66,7 @@ Description: "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorek
 * extension[supportingInfo].valueReference = Reference(example-mii-molgen-family-member-history-1)
 * basedOn = Reference(example-mii-molgen-anforderung-1)
 * status = DiagRepStatus#final
-* category = v2-0074#GE "Genetics"
+* category[Genetics] = v2-0074#GE "Genetics"
 * code = LNC#51969-4 "Genetic analysis report"
 * subject = Reference(example-mii-molgen-patient)
 * performer = Reference(example-mii-molgen-practitioner-lab)
@@ -101,7 +116,7 @@ Description: "Beispiel für molekulargenetischen Befund Molekulargenetische Diag
 * extension[supporting-info][=].valueReference = Reference(example-mii-molgen-chargeitem-ebm-24)
 * basedOn = Reference(example-mii-molgen-anforderung-2)
 * status = DiagRepStatus#final
-* category = v2-0074#GE "Genetics"
+* category[Genetics] = v2-0074#GE "Genetics"
 * code[+] = LNC#51969-4 "Genetic analysis report"
 * subject = Reference(example-mii-molgen-patient-2)
 * performer = Reference(example-mii-molgen-practitioner-lab)

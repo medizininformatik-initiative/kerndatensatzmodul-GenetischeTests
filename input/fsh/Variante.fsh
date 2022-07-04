@@ -5,9 +5,10 @@ Title: "SD MII MolGen Variante"
 Description: "Dieses Profil ermöglicht eine vollständige Beschreibung der gefundenen Variante unter Verwendung von Eigenschaften aus einer Vielzahl von Testmethoden."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
 * ^status = #draft
+* status MS
 * category MS
 * code MS
-* subject MS
+* subject 1.. MS
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
 * value[x] MS
@@ -191,6 +192,7 @@ Description: "Beispiel für genetische Copy Number Variante SMO Gen."
 * subject = Reference(example-mii-molgen-patient-2)
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * method.coding[0] = LNC#LA26398-0 "Sequencing"
+* method.text = "Analysepipeline XXX, Auswertungssoftware XXX, Prozessierungssystem XXX"
 //* method.coding[1] = LNC#86206-0 "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
 //* specimen = Reference(example-mii-molgen-specimen-2)
 //* device = Reference(example-mii-molgen-device-sequencer-2)

@@ -5,8 +5,20 @@ Title: "SD MII MolGen Genotyp"
 Description: "Dieses Profil beschreibt die Feststellung eines bestimmten Genotyps auf der Grundlage einer oder mehrerer Varianten oder Haplotypen."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp"
 * ^status = #draft
+* status MS
+* category MS
+* code MS
+* subject 1.. MS
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
+* encounter MS
+* value[x] MS
+* derivedFrom MS
+* component MS
+* component[conclusion-string] MS
+* component[gene-studied] MS
+* component[cytogenetic-location] MS
+* component[reference-sequence-assembly] MS
 
 Mapping: MolGen-Genotyp
 Id: MII-KDS
@@ -23,7 +35,7 @@ Title: "Genotyp BRAF"
 Description: "Beispiel für Genotyp BRAF Gen."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype"
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#84413-4 "Genotype display name"
 * subject = Reference(example-mii-molgen-patient)
 * valueCodeableConcept.text = "BRAF rs113488022 T>A"
