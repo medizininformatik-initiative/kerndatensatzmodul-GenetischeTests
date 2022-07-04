@@ -4,6 +4,7 @@ Alias:  ObsCat = http://terminology.hl7.org/CodeSystem/observation-category
 Alias:  HGNC = http://www.genenames.org/geneId
 Alias:  HGVS = http://varnomen.hgvs.org
 Alias:  SO = http://sequenceontology.org
+Alias:  NCIT = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 Alias:  RefSeq = http://www.ncbi.nlm.nih.gov/refseq
 Alias:  dbSNP = http://www.ncbi.nlm.nih.gov/projects/SNP
 Alias:  ISCN = urn:oid:2.16.840.1.113883.6.299

@@ -5,12 +5,19 @@ Title: "SD MII MolGen Diagnostische Implikation"
 Description: "Dieses Profil beschreibt den Zusammenhang zwischen einem oder mehreren Genotyp/Haplotyp/Varianten und Beweisen für oder gegen eine bestimmte Krankheit."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
 * ^status = #draft
+* extension[genomics-artifact] MS
+* category MS
+* code MS
 * subject MS 
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
+* derivedFrom MS
 * derivedFrom[variant] only Reference(SD_MII_MolGen_Variante)
+* component[conclusion-string] MS
 * component[evidence-level] MS
 * component[clinical-significance] MS
+* component[functional-effect] MS
+* component[mode-of-inheritance] MS
 
 Mapping: MolGen-DiagnostischeImplikation
 Id: MII-KDS
@@ -26,7 +33,7 @@ Title: "BRAF Variante Diagnostische Implikation"
 Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = GenTbd#diagnostic-implication "Diagnostische Implikation"
 * subject = Reference(example-mii-molgen-patient)
 * performer = Reference(example-mii-molgen-practitioner-lab)
@@ -45,7 +52,7 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer
 * extension[genomics-artifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
 * extension[genomics-artifact].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/25741868/"
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = GenTbd#diagnostic-implication "Diagnostische Implikation"
 * subject = Reference(example-mii-molgen-patient-2)
 * performer = Reference(example-mii-molgen-practitioner-lab)
@@ -60,7 +67,7 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer
 * component[predicted-phenotype].valueCodeableConcept = SCT#40354009 "De Lange syndrome (disorder)"
 
 
-// CNV
+// CNV (17.pdf)
 Instance: example-mii-molgen-diagnostische-implikation-cnv-4
 InstanceOf: sd-mii-modul-molgen-diagnostische-implikation
 Usage: #example
@@ -72,7 +79,7 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von Copy Number
 //* extension[genomics-artifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
 //* extension[genomics-artifact].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/25741868/"
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = GenTbd#diagnostic-implication "Diagnostische Implikation"
 * subject = Reference(example-mii-molgen-patient-2)
 * performer = Reference(example-mii-molgen-practitioner-lab)
@@ -81,4 +88,6 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von Copy Number
 * component[conclusion-string].valueString = "onkogene Veränderung mögl. Überexpression"
 * component[clinical-significance].code = LNC#53037-8 "Genetic variation clinical significance [Imp]"
 * component[clinical-significance].valueCodeableConcept = LNC#LA26332-9 "Likely pathogenic"
-
+* component[functional-effect].valueCodeableConcept.coding[+] = SO#SO:0002315 "increased_gene_product_level"
+* component[functional-effect].valueCodeableConcept.coding[+] = NCIT#C36337 "Messenger RNA Overexpression"
+* component[functional-effect].valueCodeableConcept.text = "mögl. Überexpression" // (13581-fach, Rang 1)???

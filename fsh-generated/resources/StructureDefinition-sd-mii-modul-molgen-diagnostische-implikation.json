@@ -62,6 +62,22 @@
   "differential": {
     "element": [
       {
+        "id": "Observation.extension:related-artifact",
+        "path": "Observation.extension",
+        "sliceName": "related-artifact",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.subject",
         "path": "Observation.subject",
         "type": [
@@ -79,6 +95,11 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.derivedFrom:variant",
         "path": "Observation.derivedFrom",
         "sliceName": "variant",
@@ -90,6 +111,12 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Observation.component:conclusion-string",
+        "path": "Observation.component",
+        "sliceName": "conclusion-string",
+        "mustSupport": true
       },
       {
         "id": "Observation.component:evidence-level",
@@ -105,6 +132,12 @@
         ]
       },
       {
+        "id": "Observation.component:mode-of-inheritance",
+        "path": "Observation.component",
+        "sliceName": "mode-of-inheritance",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.component:clinical-significance",
         "path": "Observation.component",
         "sliceName": "clinical-significance",
@@ -116,6 +149,12 @@
             "comment": "Klinische Signifikanz"
           }
         ]
+      },
+      {
+        "id": "Observation.component:functional-effect",
+        "path": "Observation.component",
+        "sliceName": "functional-effect",
+        "mustSupport": true
       }
     ]
   }
