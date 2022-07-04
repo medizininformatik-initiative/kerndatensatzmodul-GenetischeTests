@@ -165,6 +165,23 @@
           }
         ]
       }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "87706-8",
+            "system": "http://loinc.org"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 95,
+        "comparator": ">",
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "code": "%"
+      }
     }
   ],
   "status": "final",

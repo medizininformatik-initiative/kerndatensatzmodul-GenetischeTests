@@ -5,25 +5,68 @@ Title: "SD MII MolGen Variante"
 Description: "Dieses Profil ermöglicht eine vollständige Beschreibung der gefundenen Variante unter Verwendung von Eigenschaften aus einer Vielzahl von Testmethoden."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
 * ^status = #draft
+* category MS
+* code MS
+* subject MS
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
+* value[x] MS
+* method MS
+* specimen MS
+* device MS
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
-* component contains dna-region 0..* and gene-fusion 0..1
+* component contains dna-region 0..* and gene-fusion 0..1 and detection-limit 0..1
+* component[conclusion-string] MS
+* component[gene-studied] MS
+* component[cytogenetic-location] MS
+* component[reference-sequence-assembly] MS
+* component[coding-hgvs] MS
+* component[genomic-hgvs] MS
+//* component[cytogenomic-nomenclature] MS
+* component[genomic-ref-seq] MS
+* component[transcript-ref-seq] MS
+* component[exact-start-end] MS
+* component[inner-start-end] MS
+* component[outer-start-end] MS
+//* component[coordinate-system] MS
+* component[ref-allele] MS
+* component[alt-allele] MS
+* component[coding-change-type] MS
+* component[genomic-source-class] MS
+* component[sample-allelic-frequency] MS
+* component[allelic-read-depth] MS
+* component[allelic-state] MS
+* component[variant-inheritance] MS
+* component[variation-code] MS
+* component[chromosome-identifier] MS
+* component[protein-hgvs] MS
+* component[amino-acid-change-type] MS
+* component[molecular-consequence] MS
+* component[copy-number] MS
+* component[variant-confidence-status] MS
+* component[dna-region] MS
 * component[dna-region].code = LNC#47999-8
 * component[dna-region].code ^short = "47999-8"
 * component[dna-region] ^short = "DNA region name [Identifier]"
 * component[dna-region] ^definition = "A human readable name for the region of interest. Typically Exon #, Intron # or other."
 * component[dna-region].value[x] only string
 * component[dna-region].value[x] 1..1
+* component[gene-fusion] MS
 * component[gene-fusion].code = LNC#95123-6
 * component[gene-fusion] ^short = "Gene fusion transcript details in Blood or Tissue by Molecular genetics method Narrative"
 * component[gene-fusion].value[x] only CodeableConcept 
 * component[gene-fusion].value[x] ^short = "HGNC recommends for products of gene translocations or fusions (format GENESYMBOL1::GENESYMBOL2) and readthrough transcripts (format GENESYMBOL1-GENESYMBOL2)"
 * component[gene-fusion].value[x] 1..1
 * component[gene-fusion].value[x] from http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgnc-vs (extensible)
+* component[detection-limit] MS
+* component[detection-limit].code = LNC#87706-8
+* component[detection-limit] ^short = "Laboratory device Detection limit"
+* component[detection-limit].value[x] only Quantity
+* component[detection-limit].value[x] ^short = "Usually reported as percentage."
+
 
 Mapping: MolGen-Variante
 Id: MII-KDS
@@ -39,7 +82,7 @@ Description: "Beispiel für genetische Variante im BRAF Gen an Hand von NGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
 * basedOn = Reference(example-mii-molgen-anforderung-1)
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(example-mii-molgen-patient)
 * valueCodeableConcept = LNC#LA9633-4 "Present"
@@ -78,7 +121,7 @@ Description: "Beispiel für genetische Variante im NIPBL Gen an Hand von WGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
 * basedOn = Reference(example-mii-molgen-anforderung-2)
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(example-mii-molgen-patient-2)
 * valueCodeableConcept = LNC#LA9633-4 "Present"
@@ -117,7 +160,7 @@ Description: "Beispiel für genetische Variante FGFR2-DBP Fusion."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
 * basedOn = Reference(example-mii-molgen-anforderung-2)
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(example-mii-molgen-patient-2)
 * valueCodeableConcept = LNC#LA9633-4 "Present"
@@ -143,7 +186,7 @@ Description: "Beispiel für genetische Copy Number Variante SMO Gen."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
 //* basedOn = Reference(example-mii-molgen-anforderung-2)
 * status = #final
-* category = ObsCat#laboratory "Laboratory"
+* category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(example-mii-molgen-patient-2)
 * valueCodeableConcept = LNC#LA9633-4 "Present"
@@ -161,5 +204,10 @@ Description: "Beispiel für genetische Copy Number Variante SMO Gen."
 * component[cytogenetic-location].valueCodeableConcept = ChromLoc#7q32.1
 * component[sample-allelic-frequency].valueQuantity = 55 UCUM#% "%"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001458 "unigene_cluster"
+* component[detection-limit].valueQuantity.value = 95 
+* component[detection-limit].valueQuantity.comparator = #>
+* component[detection-limit].valueQuantity.unit = "%"
+* component[detection-limit].valueQuantity.system = "http://unitsofmeasure.org"
+* component[detection-limit].valueQuantity.code = #%
 // cluster?
 

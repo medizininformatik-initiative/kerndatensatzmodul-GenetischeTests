@@ -62,6 +62,16 @@
   "differential": {
     "element": [
       {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.subject",
         "path": "Observation.subject",
         "type": [
@@ -75,12 +85,40 @@
               "http://hl7.org/fhir/StructureDefinition/Group"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.method",
+        "path": "Observation.method",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.device",
+        "path": "Observation.device",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:conclusion-string",
+        "path": "Observation.component",
+        "sliceName": "conclusion-string",
+        "mustSupport": true
       },
       {
         "id": "Observation.component:gene-studied",
         "path": "Observation.component",
         "sliceName": "gene-studied",
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "MII-KDS",
@@ -90,13 +128,158 @@
         ]
       },
       {
+        "id": "Observation.component:cytogenetic-location",
+        "path": "Observation.component",
+        "sliceName": "cytogenetic-location",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:reference-sequence-assembly",
+        "path": "Observation.component",
+        "sliceName": "reference-sequence-assembly",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:coding-hgvs",
+        "path": "Observation.component",
+        "sliceName": "coding-hgvs",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:genomic-hgvs",
+        "path": "Observation.component",
+        "sliceName": "genomic-hgvs",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:genomic-ref-seq",
+        "path": "Observation.component",
+        "sliceName": "genomic-ref-seq",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:transcript-ref-seq",
+        "path": "Observation.component",
+        "sliceName": "transcript-ref-seq",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:exact-start-end",
+        "path": "Observation.component",
+        "sliceName": "exact-start-end",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:inner-start-end",
+        "path": "Observation.component",
+        "sliceName": "inner-start-end",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:outer-start-end",
+        "path": "Observation.component",
+        "sliceName": "outer-start-end",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:ref-allele",
+        "path": "Observation.component",
+        "sliceName": "ref-allele",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:alt-allele",
+        "path": "Observation.component",
+        "sliceName": "alt-allele",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:coding-change-type",
+        "path": "Observation.component",
+        "sliceName": "coding-change-type",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:genomic-source-class",
+        "path": "Observation.component",
+        "sliceName": "genomic-source-class",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:sample-allelic-frequency",
+        "path": "Observation.component",
+        "sliceName": "sample-allelic-frequency",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:allelic-read-depth",
+        "path": "Observation.component",
+        "sliceName": "allelic-read-depth",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:allelic-state",
+        "path": "Observation.component",
+        "sliceName": "allelic-state",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:variant-inheritance",
+        "path": "Observation.component",
+        "sliceName": "variant-inheritance",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:variation-code",
+        "path": "Observation.component",
+        "sliceName": "variation-code",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:chromosome-identifier",
+        "path": "Observation.component",
+        "sliceName": "chromosome-identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:protein-hgvs",
+        "path": "Observation.component",
+        "sliceName": "protein-hgvs",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:amino-acid-change-type",
+        "path": "Observation.component",
+        "sliceName": "amino-acid-change-type",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:molecular-consequence",
+        "path": "Observation.component",
+        "sliceName": "molecular-consequence",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:copy-number",
+        "path": "Observation.component",
+        "sliceName": "copy-number",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:variant-confidence-status",
+        "path": "Observation.component",
+        "sliceName": "variant-confidence-status",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.component:dna-region",
         "path": "Observation.component",
         "sliceName": "dna-region",
         "short": "DNA region name [Identifier]",
         "definition": "A human readable name for the region of interest. Typically Exon #, Intron # or other.",
         "min": 0,
-        "max": "*"
+        "max": "*",
+        "mustSupport": true
       },
       {
         "id": "Observation.component:dna-region.code",
@@ -127,7 +310,8 @@
         "sliceName": "gene-fusion",
         "short": "Gene fusion transcript details in Blood or Tissue by Molecular genetics method Narrative",
         "min": 0,
-        "max": "1"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "Observation.component:gene-fusion.code",
@@ -155,6 +339,37 @@
           "strength": "extensible",
           "valueSet": "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgnc-vs"
         }
+      },
+      {
+        "id": "Observation.component:detection-limit",
+        "path": "Observation.component",
+        "sliceName": "detection-limit",
+        "short": "Laboratory device Detection limit",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:detection-limit.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "87706-8",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:detection-limit.value[x]",
+        "path": "Observation.component.value[x]",
+        "short": "Usually reported as percentage.",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
       }
     ]
   }
