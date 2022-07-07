@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "modul-molgen",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/modul-molgen",
-  "version": "0.1.0",
+  "version": "1.0.0-ballot",
   "name": "IG_MII_MolGen",
   "title": "IG MII Modul Molekulargenetischer Befundbericht",
   "status": "draft",
@@ -178,6 +178,13 @@
         },
         "name": "ValueSet Family Member SNOMED",
         "description": "The ValueSet contains codes for related family member types from SNOMED CT.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/cps-mii-molgen-capabilitystatement"
+        },
+        "name": "cps-mii-molgen-capabilitystatement",
         "exampleBoolean": false
       },
       {
@@ -466,6 +473,20 @@
         "name": "Variante FGFR2-DBP Fusion",
         "description": "Beispiel für genetische Variante FGFR2-DBP Fusion.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/sp-mii-molgen-servicerequest-reasoncode"
+        },
+        "name": "sp-mii-molgen-servicerequest-reasoncode",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/sp-mii-molgen-servicerequest-reasonreference"
+        },
+        "name": "sp-mii-molgen-servicerequest-reasonreference",
+        "exampleBoolean": false
       }
     ],
     "page": {
