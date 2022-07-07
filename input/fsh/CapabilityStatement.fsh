@@ -99,8 +99,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/ServiceRequest-ReasonReference"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Explanation/Justification for procedure or service"
-
-* rest.resource[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #SHALL
 * rest.resource[=].type = #DiagnosticReport
 * rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
