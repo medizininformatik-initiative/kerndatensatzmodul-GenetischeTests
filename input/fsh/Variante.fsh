@@ -200,7 +200,7 @@ Description: "Beispiel für genetische Copy Number Variante SMO Gen."
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:11119 "SMO"
 * component[coding-change-type].valueCodeableConcept = SO#SO:0001742 "copy_number_gain"
-* component[copy-number].valueQuantity = 6 UCUM#{#} "#"
+* component[copy-number].valueQuantity = 6 UCUM#1 "1"
 * component[dna-region].valueString = "Ex 1-10"
 * component[chromosome-identifier].valueCodeableConcept = LNC#LA21260-7 "Chromosome 7"
 * component[cytogenetic-location].valueCodeableConcept = ChromLoc#7q32.1
