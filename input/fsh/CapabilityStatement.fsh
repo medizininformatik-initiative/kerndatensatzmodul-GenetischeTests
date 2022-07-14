@@ -1,3 +1,35 @@
+Alias: $exp = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
+
+RuleSet: SupportResource (resource, expectation)
+* rest.resource[+].type = #{resource}
+* rest.resource[=].extension[0].url = $exp
+* rest.resource[=].extension[0].valueCode = {expectation}
+
+RuleSet: Profile (profile, expectation)
+* rest.resource[=].profile[+] = "{profile}"
+* rest.resource[=].profile[=].extension[0].url = $exp
+* rest.resource[=].profile[=].extension[0].valueCode = {expectation}
+
+RuleSet: SupportProfile (profile, expectation)
+// This rule set must follow a SupportResource rule set, and applies to that resource.
+* rest.resource[=].supportedProfile[+] = "{profile}"
+* rest.resource[=].supportedProfile[=].extension[0].url = $exp
+* rest.resource[=].supportedProfile[=].extension[0].valueCode = {expectation}
+
+RuleSet: SupportInteraction (interaction, expectation)
+// This rule set must follow a SupportResource rule set, and applies to that resource.
+* rest.resource[=].interaction[+].code = {interaction}
+* rest.resource[=].interaction[=].extension[0].url = $exp
+* rest.resource[=].interaction[=].extension[0].valueCode = {expectation}
+
+RuleSet: SupportSearchParam (name, canonical, type, expectation)
+// This rule set must follow a SupportResource rule set, and applies to that resource.
+* rest.resource[=].searchParam[+].name = "{name}"
+* rest.resource[=].searchParam[=].definition = "{canonical}"
+* rest.resource[=].searchParam[=].type = {type}
+* rest.resource[=].searchParam[=].extension[0].url = $exp
+* rest.resource[=].searchParam[=].extension[0].valueCode = {expectation}
+
 Instance: cps-mii-molgen-capabilitystatement
 InstanceOf: CapabilityStatement
 Usage: #definition
@@ -29,178 +61,92 @@ Usage: #definition
 * rest.resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #search-type
-* rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "_count"
-* rest.resource[=].searchParam[=].type = #number
-* rest.resource[=].searchParam[=].documentation = "The number of resources returned per page"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "_format"
-* rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[=].documentation = "Specify the returned format of the payload response"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
-* rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Logical id of this artifact"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "_lastUpdated"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
-* rest.resource[=].searchParam[=].type = #date
-* rest.resource[=].searchParam[=].documentation = "When the resource version last changed"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "_profile"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-profile"
-* rest.resource[=].searchParam[=].type = #uri
-* rest.resource[=].searchParam[=].documentation = "Profiles this resource claims to conform to"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "code"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-code"
-* rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Multiple Resources: \r\n\r\n* [AllergyIntolerance](allergyintolerance.html): Code that identifies the allergy or intolerance\r\n* [Condition](condition.html): Code for the condition\r\n* [DeviceRequest](devicerequest.html): Code for what is being requested/ordered\r\n* [DiagnosticReport](diagnosticreport.html): The code for the report, as opposed to codes for the atomic results, which are the names on the observation resource referred to from the result\r\n* [FamilyMemberHistory](familymemberhistory.html): A search by a condition code\r\n* [List](list.html): What the purpose of this list is\r\n* [Medication](medication.html): Returns medications for a specific code\r\n* [MedicationAdministration](medicationadministration.html): Return administrations of this medication code\r\n* [MedicationDispense](medicationdispense.html): Returns dispenses of this medicine code\r\n* [MedicationRequest](medicationrequest.html): Return prescriptions of this medication code\r\n* [MedicationStatement](medicationstatement.html): Return statements of this medication code\r\n* [Observation](observation.html): The code of the observation type\r\n* [Procedure](procedure.html): A code to identify a  procedure\r\n* [ServiceRequest](servicerequest.html): What is being requested/ordered"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "based-on"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/ServiceRequest-based-on"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "What request fulfills"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "subject"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/ServiceRequest-subject"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "Search by subject"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "authored"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/ServiceRequest-authored"
-* rest.resource[=].searchParam[=].type = #date
-* rest.resource[=].searchParam[=].documentation = "Date request signed"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "requester"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/ServiceRequest-requester"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "Who/what is requesting service"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "reason-code"
-* rest.resource[=].searchParam[=].definition = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/ServiceRequest-ReasonCode"
-* rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Explanation/Justification for procedure or service"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "reason-reference"
-* rest.resource[=].searchParam[=].definition = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/ServiceRequest-ReasonReference"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "Explanation/Justification for procedure or service"
-* rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].extension.valueCode = #SHALL
-* rest.resource[=].type = #DiagnosticReport
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
-* rest.resource[=].supportedProfile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht|1.0.0-ballot"
-* rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].interaction[=].extension.valueCode = #SHALL
-* rest.resource[=].interaction[=].code = #read
-* rest.resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].interaction[=].extension.valueCode = #SHALL
-* rest.resource[=].interaction[=].code = #search-type
-* rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "_count"
-* rest.resource[=].searchParam[=].type = #number
-* rest.resource[=].searchParam[=].documentation = "The number of resources returned per page"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "_format"
-* rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[=].documentation = "Specify the returned format of the payload response"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
-* rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Logical id of this artifact"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "_lastUpdated"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
-* rest.resource[=].searchParam[=].type = #date
-* rest.resource[=].searchParam[=].documentation = "When the resource version last changed"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "_profile"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-profile"
-* rest.resource[=].searchParam[=].type = #uri
-* rest.resource[=].searchParam[=].documentation = "Profiles this resource claims to conform to"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "category"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/DiagnosticReport-category"
-* rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Which diagnostic discipline/department created the report"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "code"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-code"
-* rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Multiple Resources: \r\n\r\n* [AllergyIntolerance](allergyintolerance.html): Code that identifies the allergy or intolerance\r\n* [Condition](condition.html): Code for the condition\r\n* [DeviceRequest](devicerequest.html): Code for what is being requested/ordered\r\n* [DiagnosticReport](diagnosticreport.html): The code for the report, as opposed to codes for the atomic results, which are the names on the observation resource referred to from the result\r\n* [FamilyMemberHistory](familymemberhistory.html): A search by a condition code\r\n* [List](list.html): What the purpose of this list is\r\n* [Medication](medication.html): Returns medications for a specific code\r\n* [MedicationAdministration](medicationadministration.html): Return administrations of this medication code\r\n* [MedicationDispense](medicationdispense.html): Returns dispenses of this medicine code\r\n* [MedicationRequest](medicationrequest.html): Return prescriptions of this medication code\r\n* [MedicationStatement](medicationstatement.html): Return statements of this medication code\r\n* [Observation](observation.html): The code of the observation type\r\n* [Procedure](procedure.html): A code to identify a  procedure\r\n* [ServiceRequest](servicerequest.html): What is being requested/ordered"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "subject"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/DiagnosticReport-subject"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "The subject of the report"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "encounter"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-encounter"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "The Encounter when the order was made"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "date"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-date"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "The clinically relevant time of the report"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "issued"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/DiagnosticReport-issued"
-* rest.resource[=].searchParam[=].type = #date
-* rest.resource[=].searchParam[=].documentation = "When the report was issued"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "performer"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/DiagnosticReport-performer"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "Who is responsible for the report"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "results-interpreter"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/DiagnosticReport-results-interpreter"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "Who was the source of the report"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "specimen"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/DiagnosticReport-specimen"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "The specimen details"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "result"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/DiagnosticReport-result"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "Link to an atomic result (observation resource)"
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].name = "media"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/DiagnosticReport-media"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "A reference to the image source."
+
+// ServiceRequest requirements
+* insert SupportResource(ServiceRequest, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/ServiceRequest, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test|0.9.0-ballot, #SHALL)
+* insert SupportInteraction(#read, #SHALL)
+* insert SupportInteraction(#search-type, #SHALL)
+* insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
+* insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
+* insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
+* insert SupportSearchParam(code, http://hl7.org/fhir/SearchParameter/clinical-code, #token, #SHALL)
+* insert SupportSearchParam(based-on, http://hl7.org/fhir/SearchParameter/ServiceRequest-based-on, #reference, #SHALL)
+* insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/ServiceRequest-subject, #reference, #SHALL)
+* insert SupportSearchParam(authored, http://hl7.org/fhir/SearchParameter/ServiceRequest-authored, #date, #SHALL)
+* insert SupportSearchParam(requester, http://hl7.org/fhir/SearchParameter/ServiceRequest-requester, #reference, #SHALL)
+* insert SupportSearchParam(reason-code, https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/ServiceRequest-ReasonCode, #token, #SHALL)
+* insert SupportSearchParam(reason-reference, https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/ServiceRequest-ReasonReference, #reference, #SHALL)
+* insert SupportSearchParam(authored, http://hl7.org/fhir/SearchParameter/ServiceRequest-authored, #reference, #SHALL)
+
+// DiagnosticReport requirements
+* insert SupportResource(DiagnosticReport, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/DiagnosticReport, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht|0.9.0-ballot, #SHALL)
+* insert SupportInteraction(#read, #SHALL)
+* insert SupportInteraction(#search-type, #SHALL)
+* insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
+* insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
+* insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
+* insert SupportSearchParam(category, http://hl7.org/fhir/SearchParameter/DiagnosticReport-category, #token, #SHALL)
+* insert SupportSearchParam(code, http://hl7.org/fhir/SearchParameter/clinical-code, #token, #SHALL)
+* insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/DiagnosticReport-subject, #reference, #SHALL)
+* insert SupportSearchParam(encounter, http://hl7.org/fhir/SearchParameter/clinical-encounter, #reference, #SHALL)
+* insert SupportSearchParam(date, http://hl7.org/fhir/SearchParameter/clinical-date, #date, #SHALL)
+* insert SupportSearchParam(issued, http://hl7.org/fhir/SearchParameter/DiagnosticReport-issued, #date, #SHALL)
+* insert SupportSearchParam(performer, http://hl7.org/fhir/SearchParameter/DiagnosticReport-performer, #reference, #SHALL)
+* insert SupportSearchParam(results-interpreter, http://hl7.org/fhir/SearchParameter/DiagnosticReport-results-interpreter, #reference, #SHALL)
+* insert SupportSearchParam(specimen, http://hl7.org/fhir/SearchParameter/DiagnosticReport-specimen, #reference, #SHALL)
+* insert SupportSearchParam(result, http://hl7.org/fhir/SearchParameter/DiagnosticReport-result, #reference, #SHALL)
+* insert SupportSearchParam(media, http://hl7.org/fhir/SearchParameter/DiagnosticReport-media, #reference, #SHALL)
+
+// Observation requirements
+* insert SupportResource(Observation, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Observation, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/ergebnis-zusammenfassung|0.9.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation|0.9.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation|0.9.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|0.9.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region|0.9.0-ballot, #SHALL)
+* insert SupportProfile(http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp|0.9.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast|0.9.0-ballot, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet|0.9.0-ballot, #SHALL)
+* insert SupportInteraction(#read, #SHALL)
+* insert SupportInteraction(#search-type, #SHALL)
+* insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
+* insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
+* insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
+* insert SupportSearchParam(based-on, http://hl7.org/fhir/SearchParameter/Observation-based-on, #reference, #SHALL)
+* insert SupportSearchParam(category, http://hl7.org/fhir/SearchParameter/Observation-category, #token, #SHALL)
+* insert SupportSearchParam(code, http://hl7.org/fhir/SearchParameter/clinical-code, #token, #SHALL)
+* insert SupportSearchParam(code-value-concept, http://hl7.org/fhir/SearchParameter/Observation-code-value-concept, #composite, #SHALL)
+* insert SupportSearchParam(code-value-date, http://hl7.org/fhir/SearchParameter/Observation-code-value-date, #composite, #SHALL)
+* insert SupportSearchParam(code-value-quantity, http://hl7.org/fhir/SearchParameter/Observation-code-value-quantity, #composite, #SHALL)
+* insert SupportSearchParam(code-value-string, http://hl7.org/fhir/SearchParameter/Observation-code-value-string, #composite, #SHALL)
+* insert SupportSearchParam(component-code, http://hl7.org/fhir/SearchParameter/Observation-component-code, #token, #SHALL)
+* insert SupportSearchParam(component-code-value-concept, http://hl7.org/fhir/SearchParameter/Observation-component-code-value-concept, #composite, #SHALL)
+* insert SupportSearchParam(component-code-value-quantity, http://hl7.org/fhir/SearchParameter/Observation-component-code-value-quantity, #composite, #SHALL)
+* insert SupportSearchParam(component-data-absent-reason, http://hl7.org/fhir/SearchParameter/Observation-component-data-absent-reason, #token, #SHALL)
+* insert SupportSearchParam(component-value-concept, http://hl7.org/fhir/SearchParameter/Observation-component-value-concept, #token, #SHALL)
+* insert SupportSearchParam(component-value-quantity, http://hl7.org/fhir/SearchParameter/Observation-component-value-quantity, #quantity, #SHALL)
+* insert SupportSearchParam(data-absent-reason, http://hl7.org/fhir/SearchParameter/Observation-data-absent-reason, #token, #SHALL)
+* insert SupportSearchParam(date, http://hl7.org/fhir/SearchParameter/clinical-date, #date, #SHALL)
+* insert SupportSearchParam(derived-from, http://hl7.org/fhir/SearchParameter/Observation-derived-from, #reference, #SHALL)
+* insert SupportSearchParam(device, http://hl7.org/fhir/SearchParameter/Observation-device, #reference, #SHALL)
+* insert SupportSearchParam(encounter, http://hl7.org/fhir/SearchParameter/clinical-encounter, #reference, #SHALL)
+* insert SupportSearchParam(focus, http://hl7.org/fhir/SearchParameter/Observation-focus, #reference, #SHALL)
+* insert SupportSearchParam(has-member, http://hl7.org/fhir/SearchParameter/Observation-has-member, #reference, #SHALL)
+* insert SupportSearchParam(identifier, http://hl7.org/fhir/SearchParameter/clinical-identifier, #token, #SHALL)
+* insert SupportSearchParam(method, http://hl7.org/fhir/SearchParameter/Observation-method, #token, #SHALL)
+* insert SupportSearchParam(part-of, http://hl7.org/fhir/SearchParameter/Observation-part-of, #reference, #SHALL)
+* insert SupportSearchParam(patient, http://hl7.org/fhir/SearchParameter/clinical-patient, #reference, #SHALL)
+* insert SupportSearchParam(performer, http://hl7.org/fhir/SearchParameter/Observation-performer, #reference, #SHALL)
+* insert SupportSearchParam(specimen, http://hl7.org/fhir/SearchParameter/Observation-specimen, #reference, #SHALL)
+* insert SupportSearchParam(status, http://hl7.org/fhir/SearchParameter/Observation-status, #token, #SHALL)
+* insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/Observation-subject, #reference, #SHALL)
+* insert SupportSearchParam(value-concept, http://hl7.org/fhir/SearchParameter/Observation-value-concept, #token, #SHALL)
+* insert SupportSearchParam(value-date, http://hl7.org/fhir/SearchParameter/Observation-value-date, #date, #SHALL)
+* insert SupportSearchParam(value-quantity, http://hl7.org/fhir/SearchParameter/Observation-value-quantity, #quantity, #SHALL)
+* insert SupportSearchParam(value-string, http://hl7.org/fhir/SearchParameter/Observation-value-string, #string, #SHALL)
