@@ -182,6 +182,13 @@
       },
       {
         "reference": {
+          "reference": "Bundle/befund-bundle-1"
+        },
+        "name": "befund-bundle-1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "CapabilityStatement/cps-mii-molgen-capabilitystatement"
         },
         "name": "cps-mii-molgen-capabilitystatement",
@@ -476,6 +483,27 @@
       },
       {
         "reference": {
+          "reference": "SearchParameter/sp-mii-molgen-familymemberhistory-condition"
+        },
+        "name": "sp-mii-molgen-familymemberhistory-condition",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/sp-mii-molgen-familymemberhistory-reasoncode"
+        },
+        "name": "sp-mii-molgen-familymemberhistory-reasoncode",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/sp-mii-molgen-familymemberhistory-reasonreference"
+        },
+        "name": "sp-mii-molgen-familymemberhistory-reasonreference",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/sp-mii-molgen-servicerequest-reasoncode"
         },
         "name": "sp-mii-molgen-servicerequest-reasoncode",
@@ -486,6 +514,27 @@
           "reference": "SearchParameter/sp-mii-molgen-servicerequest-reasonreference"
         },
         "name": "sp-mii-molgen-servicerequest-reasonreference",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/sp-mii-molgen-task-for"
+        },
+        "name": "sp-mii-molgen-task-for",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/sp-mii-molgen-task-reasoncode"
+        },
+        "name": "sp-mii-molgen-task-reasoncode",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/sp-mii-molgen-task-reasonreference"
+        },
+        "name": "sp-mii-molgen-task-reasonreference",
         "exampleBoolean": false
       }
     ],

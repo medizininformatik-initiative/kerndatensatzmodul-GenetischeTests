@@ -6,7 +6,7 @@ Usage: #example
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient"
 * identifier[0].use = #usual
 * identifier[=].type = http://terminology.hl7.org/CodeSystem/v2-0203#MR
-* identifier[=].system = "https://www.example.org/fhir/sid/patienten"
+* identifier[=].system = "https://www.medizininformatik-initiative.de/fhir/sid/patienten"
 * identifier[=].value = "42285243"
 * identifier[=].assigner.display = "Charité - Universitätsmedizin Berlin"
 * identifier[=].assigner.identifier.system = "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier"
@@ -39,8 +39,6 @@ Usage: #example
 * address.type = #both
 * address.line = "Anna-Louisa-Karsch Str. 2"
 * address.city = "Berlin"
-* address.city.extension.url = "http://fhir.de/StructureDefinition/destatis/ags"
-* address.city.extension.valueCoding = http://fhir.de/sid/destatis/ags#11000000
 * address.state = "DE-BE"
 * address.postalCode = "10178"
 * address.country = "DE"
@@ -125,8 +123,6 @@ Usage: #example
 * address.type = #both
 * address.line = "Anna-Louisa-Karsch Str. 2"
 * address.city = "Berlin"
-* address.city.extension.url = "http://fhir.de/StructureDefinition/destatis/ags"
-* address.city.extension.valueCoding = http://fhir.de/sid/destatis/ags#11000000
 * address.state = "DE-BE"
 * address.postalCode = "10178"
 * address.country = "DE"
