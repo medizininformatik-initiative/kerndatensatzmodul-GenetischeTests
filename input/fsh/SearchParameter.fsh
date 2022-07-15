@@ -107,17 +107,3 @@ Usage: #definition
 * target[+] = #DocumentReference
 * target[+] = #AllergyIntolerance
 * target[+] = #QuestionnaireResponse
-
-Instance: sp-mii-molgen-familymemberhistory-condition
-InstanceOf: SearchParameter
-Usage: #definition
-* url = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/FamilyMemberHistory-Condition"
-* name = "SP_MII_MolGen_FamilyMemberHistory_Condition"
-* status = #draft
-* experimental = false
-* date = "2022-07-07"
-* description = "Suchparameter für FamilyMemberHistory.condition.code"
-* code = #condition
-* base = #FamilyMemberHistory
-* type = #token
-* expression = "FamilyMemberHistory.condition.code"

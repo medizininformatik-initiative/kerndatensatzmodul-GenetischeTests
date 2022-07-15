@@ -1324,6 +1324,50 @@
         "method": "POST",
         "url": "Observation"
       }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/example-mii-molgen-device-sequencer",
+      "resource": {
+        "resourceType": "Device",
+        "id": "example-mii-molgen-device-sequencer",
+        "status": "active",
+        "manufacturer": "Illumina",
+        "deviceName": [
+          {
+            "name": "MiSeq",
+            "type": "manufacturer-name"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Device"
+      }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/example-mii-molgen-practitioner-physician",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "example-mii-molgen-practitioner-physician",
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "text": "Dr. Linda Rubens",
+            "family": "Rubens",
+            "given": [
+              "Linda"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
     }
   ]
 }

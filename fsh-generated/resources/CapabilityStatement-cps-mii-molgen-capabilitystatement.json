@@ -288,6 +288,17 @@
               ]
             },
             {
+              "name": "status",
+              "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-status",
+              "type": "token",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
               "name": "category",
               "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-category",
               "type": "token",
@@ -390,6 +401,17 @@
               "name": "result",
               "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-result",
               "type": "reference",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "conclusion",
+              "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-conclusion",
+              "type": "token",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
