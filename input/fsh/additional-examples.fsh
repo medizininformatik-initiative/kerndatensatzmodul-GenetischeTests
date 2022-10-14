@@ -194,7 +194,7 @@ Usage: #example
 * entry[=].request.method = #POST
 * entry[=].request.url = "Task"
 * entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/example-mii-molgen-family-member-history-1"
-* entry[=].resource = example-mii-molgen-family-member-history-1
+* entry[=].resource = mii-exa-molgen-family-member-history-1
 * entry[=].request.method = #POST
 * entry[=].request.url = "FamilyMemberHistory"
 * entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/example-mii-molgen-anforderung-1"

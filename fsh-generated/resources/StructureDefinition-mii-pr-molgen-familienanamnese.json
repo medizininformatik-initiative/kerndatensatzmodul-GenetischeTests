@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "sd-mii-molgen-familienanamnese",
+  "id": "mii-pr-molgen-familienanamnese",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -13,8 +13,8 @@
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese",
   "version": "0.9.0-ballot",
-  "name": "SD_MII_MolGen_Familienanamnese",
-  "title": "SD MII MolGen Familienanamnese",
+  "name": "MII_PR_MolGen_Familienanamnese",
+  "title": "MII PR MolGen Familienanamnese",
   "status": "draft",
   "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen.",
   "fhirVersion": "4.0.1",
@@ -115,7 +115,7 @@
         "max": "1",
         "binding": {
           "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/vs-family-member-snomed"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-family-member-snomed"
         }
       },
       {

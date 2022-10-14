@@ -42,7 +42,7 @@
           {
             "url": "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo",
             "valueReference": {
-              "reference": "FamilyMemberHistory/example-mii-molgen-family-member-history-1"
+              "reference": "example-mii-molgen-family-member-history-1"
             }
           }
         ],
@@ -185,7 +185,7 @@
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/example-mii-molgen-family-member-history-1",
       "resource": {
         "resourceType": "FamilyMemberHistory",
-        "id": "example-mii-molgen-family-member-history-1",
+        "id": "mii-exa-molgen-family-member-history-1",
         "meta": {
           "profile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
@@ -318,7 +318,7 @@
         ],
         "supportingInfo": [
           {
-            "reference": "FamilyMemberHistory/example-mii-molgen-family-member-history-1"
+            "reference": "FamilyMemberHistory/mii-exa-molgen-family-member-history-1"
           }
         ]
       },

@@ -24,7 +24,7 @@ Description: "Der Laborauftrag oder die Anfrage, die die Durchführung des genet
 * supportingInfo ^slicing.discriminator.path = "resolve()"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo contains familienanamnese 0..*
-* supportingInfo[familienanamnese] only Reference(SD_MII_MolGen_Familienanamnese)
+* supportingInfo[familienanamnese] only Reference(mii-pr-molgen-familienanamnese)
 * note MS
 * note ^alias[+] = "Anforderungstext"
 
@@ -67,7 +67,7 @@ Description: "Beispiel für Anforderung für genetische Testung auf genetische V
 * requester = Reference(example-mii-molgen-practitioner-physician)
 * reasonCode = SCT#447886005 "Adenocarcinoma of anorectum (disorder)"
 * specimen = Reference(example-mii-molgen-specimen-1)
-* supportingInfo[familienanamnese] = Reference(example-mii-molgen-family-member-history-1)
+* supportingInfo[familienanamnese] = Reference(mii-exa-molgen-family-member-history-1)
 
 Instance: example-mii-molgen-anforderung-2
 InstanceOf: sd-mii-modul-molgen-anforderung-gentischer-test

@@ -1362,17 +1362,6 @@
                   "valueCode": "SHALL"
                 }
               ]
-            },
-            {
-              "name": "condition",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/FamilyMemberHistory-Condition",
-              "type": "token",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
             }
           ]
         }
