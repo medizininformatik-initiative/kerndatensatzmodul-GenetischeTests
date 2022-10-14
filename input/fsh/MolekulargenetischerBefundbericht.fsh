@@ -26,7 +26,7 @@ Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen B
 * result contains tumor-mutation-burden 0..*
 //* result[gen-grouper] only Reference(SD_MII_MolGen_GruppierungBeobachtungen)
 * result[overall] MS
-* result[overall] only Reference(SD_MII_MolGen_ErgebnisZusammenfassung)
+* result[overall] only Reference(mii-pr-modul-molgen-ergebnis-zusammenfassung)
 * result[diagnostic-implication] MS
 * result[diagnostic-implication] only Reference(SD_MII_MolGen_DiagnostischeImplikation)
 * result[therapeutic-implication] MS
@@ -72,6 +72,7 @@ Description: "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorek
 * performer = Reference(example-mii-molgen-practitioner-lab)
 * specimen = Reference(example-mii-molgen-specimen-1)
 //* result[gen-grouper] = Reference(example-mii-molgen-gruppierung-beobachtungen-1)
+* result[overall] = Reference(mii-exa-molgen-ergebnis-zusammenfassung-1)
 * result[diagnostic-implication] = Reference(example-mii-molgen-diagnostische-implikation-1)
 * result[therapeutic-implication] = Reference(example-mii-molgen-therapeutische-implikation-1)
 * result[variant] = Reference(example-mii-molgen-variante-1)

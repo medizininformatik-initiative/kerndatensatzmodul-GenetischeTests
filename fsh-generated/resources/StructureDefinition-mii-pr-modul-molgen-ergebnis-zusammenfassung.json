@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "sd-mii-modul-molgen-ergebnis-zusammenfassung",
+  "id": "mii-pr-modul-molgen-ergebnis-zusammenfassung",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -13,8 +13,8 @@
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/ergebnis-zusammenfassung",
   "version": "0.9.0-ballot",
-  "name": "SD_MII_MolGen_ErgebnisZusammenfassung",
-  "title": "SD MII MolGen Ergbenis Zusammenfassung",
+  "name": "MII_PR_MolGen_ErgebnisZusammenfassung",
+  "title": "MII PR MolGen Ergebnis Zusammenfassung",
   "status": "draft",
   "description": "Mit diesem Profil kann das Labor das zusammenfassende Ergebnis des Tests deklarieren (z. B. Positiv, Negativ, Unbekannt).",
   "fhirVersion": "4.0.1",
