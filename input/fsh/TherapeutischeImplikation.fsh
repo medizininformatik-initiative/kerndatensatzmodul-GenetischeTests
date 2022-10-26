@@ -46,8 +46,10 @@ Description: "Beispiel für therapeutische Implikation abgeleitet von genetische
 * component[conclusion-string].code = GenTbd#conclusion-string
 * component[conclusion-string].valueString = "Nachweis einer aktivierenden Mutation BRAF V600E. Triple-Therapie mit einem EGFR-Antikörper sowie einem BRAF- und einem MEK- Inhibitor prüfen."
 * component[medication-assessed][+].code = LNC#51963-7 "Medication assessed [ID]"
-* component[medication-assessed][=].valueCodeableConcept = ATC#L01EC "B-Raf serine-threonine kinase (BRAF) inhibitors"
+* component[medication-assessed][=].valueCodeableConcept.coding[0] = ATC#L01EC "B-Raf serine-threonine kinase (BRAF) inhibitors"
+* component[medication-assessed][=].valueCodeableConcept.coding[1] = SCT#703645005 "Product containing B-Raf inhibitor (product)"
+* component[medication-assessed][=].valueCodeableConcept.text = "BRAF Inhibitor"
 * component[medication-assessed][+].code = LNC#51963-7 "Medication assessed [ID]"
-* component[medication-assessed][=].valueCodeableConcept = ATC#L01FE "EGFR (Epidermal Growth Factor Receptor) inhibitors"
+* component[medication-assessed][=].valueCodeableConcept.coding[0] = ATC#L01FE "EGFR (Epidermal Growth Factor Receptor) inhibitors"
 * component[medication-assessed][+].code = LNC#51963-7 "Medication assessed [ID]"
 * component[medication-assessed][=].valueCodeableConcept = ATC#L01EE "Mitogen-activated protein kinase (MEK) inhibitors"
