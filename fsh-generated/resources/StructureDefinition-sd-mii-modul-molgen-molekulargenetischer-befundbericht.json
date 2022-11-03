@@ -77,6 +77,12 @@
         "mustSupport": true
       },
       {
+        "id": "DiagnosticReport.extension:genomics-risk-assessment",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "genomics-risk-assessment",
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.extension:coded-note",
         "path": "DiagnosticReport.extension",
         "sliceName": "coded-note",
@@ -289,6 +295,13 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.result:polygenic-risk-score",
+        "path": "DiagnosticReport.result",
+        "sliceName": "polygenic-risk-score",
+        "min": 0,
+        "max": "*"
       },
       {
         "id": "DiagnosticReport.media",
