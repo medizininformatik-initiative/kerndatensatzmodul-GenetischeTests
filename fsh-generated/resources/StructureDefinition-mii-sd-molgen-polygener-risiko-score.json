@@ -1,0 +1,169 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-sd-molgen-polygener-risiko-score",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Care Provision"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-sd-molgen-polygener-risiko-score",
+  "version": "0.9.0-ballot",
+  "name": "MII_SD_MolGen_PolygenerRisikoScore",
+  "title": "MII SD MolGen Polygener Risiko Score",
+  "status": "active",
+  "description": "Profil für Polygenen Risiko Score",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "openehr",
+      "uri": "http://openehr.org",
+      "name": "Open EHR Archetype Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "RiskAssessment",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/RiskAssessment",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "RiskAssessment.identifier",
+        "path": "RiskAssessment.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.status",
+        "path": "RiskAssessment.status",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.code",
+        "path": "RiskAssessment.code",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.subject",
+        "path": "RiskAssessment.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference"
+            ],
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/Group"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.encounter",
+        "path": "RiskAssessment.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.occurrence[x]",
+        "path": "RiskAssessment.occurrence[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.condition",
+        "path": "RiskAssessment.condition",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.basis",
+        "path": "RiskAssessment.basis",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction",
+        "path": "RiskAssessment.prediction",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction.extension",
+        "path": "RiskAssessment.prediction.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "RiskAssessment.prediction.extension:whenCodeableConcept",
+        "path": "RiskAssessment.prediction.extension",
+        "sliceName": "whenCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/risk-assessment-einflussfaktor"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction.outcome",
+        "path": "RiskAssessment.prediction.outcome",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction.probability[x]",
+        "path": "RiskAssessment.prediction.probability[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction.qualitativeRisk",
+        "path": "RiskAssessment.prediction.qualitativeRisk",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction.relativeRisk",
+        "path": "RiskAssessment.prediction.relativeRisk",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction.when[x]",
+        "path": "RiskAssessment.prediction.when[x]",
+        "mustSupport": true
+      }
+    ]
+  }
+}
