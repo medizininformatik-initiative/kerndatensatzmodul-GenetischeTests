@@ -133,8 +133,7 @@ Description: "Beispiel für genetische Variante im NIPBL Gen an Hand von WGS."
 //* derivedFrom = Reference(example-mii-molgen-untersuchte-region-1)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:28862 "NIPBL"
-* component[genomic-ref-seq].code = LNC#48013-7 "Genomic reference sequence [ID]"
-* component[genomic-ref-seq].valueCodeableConcept = RefSeq#NM_133433.4
+* component[transcript-ref-seq].valueCodeableConcept = RefSeq#NM_133433.4
 * component[dna-region][+].code = LNC#47999-8 "DNA region name [Identifier]"
 * component[dna-region][=].valueString = "Exon #10"
 * component[coding-hgvs].code = LNC#48004-6 "DNA change (c.HGVS)"
@@ -212,4 +211,42 @@ Description: "Beispiel für genetische Copy Number Variante SMO Gen."
 * component[detection-limit].valueQuantity.system = "http://unitsofmeasure.org"
 * component[detection-limit].valueQuantity.code = #%
 // cluster?
+
+// 04 docx
+// https://www.ncbi.nlm.nih.gov/clinvar/RCV000119097.19/
+Instance: mii-exa-molgen-variante-brca1
+InstanceOf: sd-mii-molgen-variante
+Usage: #example
+Title: "Variante BRCA1"
+Description: "Beispiel für genetische Variante BRCA1"
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
+//* basedOn = Reference(example-mii-molgen-anforderung-2)
+* status = #final
+* category[labCategory] = ObsCat#laboratory "Laboratory"
+* code = LNC#69548-6 "Genetic variant assessment"
+* subject = Reference(example-mii-molgen-patient-2)
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* method.coding[0] = LNC#LA26398-0 "Sequencing"
+//* specimen = Reference(example-mii-molgen-specimen-2)
+//* device = Reference(example-mii-molgen-device-sequencer-2)
+//* derivedFrom = Reference(example-mii-molgen-untersuchte-region-1)
+* component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
+* component[gene-studied].valueCodeableConcept = HGNC#HGNC:1100 "BRCA1"
+* component[coding-change-type].valueCodeableConcept = SO#SO:0001536 "functional_effect_variant"
+* component[cytogenetic-location].valueCodeableConcept = ChromLoc#17q21.31
+* component[coding-hgvs].valueCodeableConcept = HGVS#NM_007294.3:c.5266dupC
+* component[transcript-ref-seq].valueCodeableConcept = RefSeq#NM_007294.3
+* component[coding-change-type].valueCodeableConcept = SO#SO:1000035 "duplication"
+* component[allelic-read-depth].valueQuantity = 50 UCUM#1 "Abdeckung der Fragmente"
+* component[variation-code].valueCodeableConcept = dbSNP#rs80357906
+* component[chromosome-identifier].valueCodeableConcept = LNC#LA21270-6 "Chromosome 17"
+* component[protein-hgvs].valueCodeableConcept = HGVS#p.Gln1756Profs 
+* component[amino-acid-change-type].valueCodeableConcept = LNC#LA6694-9 "Frameshift"
+* component[detection-limit].valueQuantity.value = 95 
+* component[detection-limit].valueQuantity.comparator = #>
+* component[detection-limit].valueQuantity.unit = "%"
+* component[detection-limit].valueQuantity.system = "http://unitsofmeasure.org"
+* component[detection-limit].valueQuantity.code = #%
+
+
 
