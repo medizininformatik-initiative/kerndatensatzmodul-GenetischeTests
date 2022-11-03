@@ -53,7 +53,7 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer
 * extension[genomics-artifact].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
 * extension[genomics-artifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
 * extension[genomics-artifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
-* extension[genomics-artifact].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/25741868/"
+* extension[genomics-artifact].valueRelatedArtifact.url = "https://doi.org/10.1038/gim.2015.30"
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = GenTbd#diagnostic-implication "Diagnostische Implikation"
