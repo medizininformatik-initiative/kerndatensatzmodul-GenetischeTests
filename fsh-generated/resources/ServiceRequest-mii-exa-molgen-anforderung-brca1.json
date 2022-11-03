@@ -1,0 +1,98 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "mii-exa-molgen-anforderung-brca1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "https://www.charite.de/fhir/auftragsnummern",
+      "value": "gen_test_03"
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "108252007",
+          "system": "http://snomed.info/sct",
+          "display": "Laboratory procedure (procedure)"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "405825005",
+        "system": "http://snomed.info/sct",
+        "display": "Molecular genetic test (procedure)"
+      },
+      {
+        "code": "21639-0",
+        "system": "http://loinc.org",
+        "display": "BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
+      },
+      {
+        "code": "HGNC:1100",
+        "system": "http://www.genenames.org/geneId",
+        "display": "BRCA1"
+      }
+    ],
+    "text": "Panelanalyse TruRisk®-V3 mit NGS basierter CNV-Analyse Bestimmung des Polygenen Risikoscores (PRS) für Brustkrebs"
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient-brca1"
+  },
+  "authoredOn": "2022-11-01",
+  "requester": {
+    "reference": "Practitioner/example-mii-molgen-practitioner-physician"
+  },
+  "specimen": [
+    {
+      "reference": "Specimen/mii-exa-molgen-specimen-brca1"
+    }
+  ],
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "code": "429740004",
+          "system": "http://snomed.info/sct",
+          "display": "Family history of malignant neoplasm of breast (situation)"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "430705002",
+          "system": "http://snomed.info/sct",
+          "display": "Family history of malignant neoplasm of ovary (situation)"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "ORPHA:145",
+          "system": "http://www.orpha.net",
+          "display": "Hereditary breast and ovarian cancer syndrome"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "604370",
+          "system": "http://www.omim.org",
+          "display": "BREAST-OVARIAN CANCER, FAMILIAL, SUSCEPTIBILITY TO, 1; BROVCA1"
+        }
+      ]
+    }
+  ]
+}

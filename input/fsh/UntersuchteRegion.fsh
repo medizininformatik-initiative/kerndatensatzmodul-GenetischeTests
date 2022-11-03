@@ -12,6 +12,7 @@ Description: "Dieses Profil beschreibt die Region oder die Regionen, die im Rahm
 * subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
 * encounter MS
+* component contains transcript-ref-seq 0..1
 * component[conclusion-string] MS
 * component[gene-studied] MS
 * component[gene-mutations] MS
@@ -20,6 +21,16 @@ Description: "Dieses Profil beschreibt die Region oder die Regionen, die im Rahm
 * component[ranges-examined] MS
 * component[genomic-ref-seq] MS
 * component[uncallable-regions] MS
+* component[transcript-ref-seq] MS
+* component[transcript-ref-seq] ^short = "Reference Transcript"
+* component[transcript-ref-seq] ^definition = "NCBI's RefSeq ('NM_...'), Ensembl ('ENST...'), and LRG ('LRG...' plus 't1' to indicate transcript)"
+* component[transcript-ref-seq].code = LNC#51958-7
+* component[transcript-ref-seq].code ^short = "51958-7"
+* component[transcript-ref-seq].value[x] 1..
+* component[transcript-ref-seq].value[x] only CodeableConcept
+* component[transcript-ref-seq].value[x] ^short = "Versioned transcript reference sequence identifier"
+* component[transcript-ref-seq].value[x] ^binding.strength = #example
+* component[transcript-ref-seq].value[x] ^binding.description = "Multiple bindings acceptable (NCBI or LRG)"
 
 
 Mapping: MolGen-UntersuchteRegion
@@ -195,3 +206,118 @@ Description: "Beispiel für untersuchte Region TP63 Gen an Hand von NGS."
 * component[region-description].valueString = "Analyse aller kodierenden Exons der zu untersuchenden Gene einschließlich flankierender intronischer Regionen (mindestens von -3 bis +8)."
 * component[genomic-ref-seq].code = LNC#48013-7 "Genomic reference sequence [ID]"
 * component[genomic-ref-seq].valueCodeableConcept = RefSeq#NM_003722.4
+
+Instance: mii-exa-molgen-untersuchte-region-true-risk-panel-v3-ATM
+InstanceOf: sd-mii-modul-molgen-untersuchte-region
+Usage: #example
+Title: "Untersuchte Region True Risk Panel V3 ATM Gen"
+Description: "Beispiel für untersuchte Region True Risk Panel V3 ATM Gen."
+* insert Region(HGNC:795, ATM, NM_000051.3)
+
+Instance: mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA1
+InstanceOf: sd-mii-modul-molgen-untersuchte-region
+Usage: #example
+Title: "Untersuchte Region True Risk Panel V3 BRCA1 Gen"
+Description: "Beispiel für untersuchte Region True Risk Panel V3 BRCA1 Gen."
+* insert Region(HGNC:1100, BRCA1, NM_007294.3)
+
+Instance: mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BARD1
+InstanceOf: sd-mii-modul-molgen-untersuchte-region
+Usage: #example
+Title: "Untersuchte Region True Risk Panel V3 BARD1 Gen"
+Description: "Beispiel für untersuchte Region True Risk Panel V3 BARD1 Gen."
+* insert Region(HGNC:952, BARD1, NM_000465.3)
+
+
+Instance: mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA2
+InstanceOf: sd-mii-modul-molgen-untersuchte-region
+Usage: #example
+Title: "Untersuchte Region True Risk Panel V3 BRCA2 Gen"
+Description: "Beispiel für untersuchte Region True Risk Panel V3 BRCA2 Gen."
+* insert Region(HGNC:1101, BRCA2, NM_000059.3)
+
+Instance: mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRIP1
+InstanceOf: sd-mii-modul-molgen-untersuchte-region
+Usage: #example
+Title: "Untersuchte Region True Risk Panel V3 BRIP1 Gen"
+Description: "Beispiel für untersuchte Region True Risk Panel V3 BRIP1 Gen."
+* insert Region(HGNC:20473, BRIP1, NM_032043.2)
+
+
+Instance: mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CDH1
+InstanceOf: sd-mii-modul-molgen-untersuchte-region
+Usage: #example
+Title: "Untersuchte Region True Risk Panel V3 CDH1 Gen"
+Description: "Beispiel für untersuchte Region True Risk Panel V3 CDH1 Gen."
+* insert Region(HGNC:1748, CDH1, NM_004360.3)
+
+
+Instance: mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CHECK2
+InstanceOf: sd-mii-modul-molgen-untersuchte-region
+Usage: #example
+Title: "Untersuchte Region True Risk Panel V3 CHECK2 Gen"
+Description: "Beispiel für untersuchte Region True Risk Panel V3 CHECK2 Gen."
+* insert Region(HGNC:16627, CHECK2, NM_007194.3)
+
+Instance: mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MLH1
+InstanceOf: sd-mii-modul-molgen-untersuchte-region
+Usage: #example
+Title: "Untersuchte Region True Risk Panel V3 MLH1 Gen"
+Description: "Beispiel für untersuchte Region True Risk Panel V3 MLH1 Gen."
+* insert Region(HGNC:7127, MLH1, NM_000249.3) 
+
+Instance: mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH2
+InstanceOf: sd-mii-modul-molgen-untersuchte-region
+Usage: #example
+Title: "Untersuchte Region True Risk Panel V3 MSH2 Gen"
+Description: "Beispiel für untersuchte Region True Risk Panel V3 MSH2 Gen."
+* insert Region(HGNC:7325, MSH2, NM_000251.2)
+
+Instance: mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH6
+InstanceOf: sd-mii-modul-molgen-untersuchte-region
+Usage: #example
+Title: "Untersuchte Region True Risk Panel V3 MSH6 Gen"
+Description: "Beispiel für untersuchte Region True Risk Panel V3 MSH6 Gen."
+* insert Region(HGNC:7329, MSH6, NM_000179.2)
+
+Instance: mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PALB2
+InstanceOf: sd-mii-modul-molgen-untersuchte-region
+Usage: #example
+Title: "Untersuchte Region True Risk Panel V3 PALB2 Gen"
+Description: "Beispiel für untersuchte Region True Risk Panel V3 PALB2 Gen."
+* insert Region(HGNC:26144, PALB2, NM_024675.3)
+
+Instance: mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PMS2
+InstanceOf: sd-mii-modul-molgen-untersuchte-region
+Usage: #example
+Title: "Untersuchte Region True Risk Panel V3 PMS2 Gen"
+Description: "Beispiel für untersuchte Region True Risk Panel V3 PMS2 Gen."
+* insert Region(HGNC:9122, PMS2, NM_000535.5)
+
+Instance: mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PTEN
+InstanceOf: sd-mii-modul-molgen-untersuchte-region
+Usage: #example
+Title: "Untersuchte Region True Risk Panel V3 PTEN Gen"
+Description: "Beispiel für untersuchte Region True Risk Panel V3 PTEN Gen."
+* insert Region(HGNC:9588, PTEN, NM_000314.4)
+
+Instance: mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51C
+InstanceOf: sd-mii-modul-molgen-untersuchte-region
+Usage: #example
+Title: "Untersuchte Region True Risk Panel V3 RAD51C Gen"
+Description: "Beispiel für untersuchte Region True Risk Panel V3 RAD51C Gen."
+* insert Region(HGNC:9820, RAD51C, NM_058216.2)
+
+Instance: mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51D
+InstanceOf: sd-mii-modul-molgen-untersuchte-region
+Usage: #example
+Title: "Untersuchte Region True Risk Panel V3 RAD51D Gen"
+Description: "Beispiel für untersuchte Region True Risk Panel V3 RAD51D Gen."
+* insert Region(HGNC:9823, RAD51D, NM_002878.3)
+
+Instance: mii-exa-molgen-untersuchte-region-true-risk-panel-v3-TP53
+InstanceOf: sd-mii-modul-molgen-untersuchte-region
+Usage: #example
+Title: "Untersuchte Region True Risk Panel V3 TP53 Gen"
+Description: "Beispiel für untersuchte Region True Risk Panel V3 TP53 Gen."
+* insert Region(HGNC:11998, TP53, NM_000546.5)

@@ -245,3 +245,55 @@ Usage: #example
 * entry[=].resource = example-mii-molgen-practitioner-physician
 * entry[=].request.method = #POST
 * entry[=].request.url = "Practitioner"
+
+Instance: mii-exa-molgen-specimen-brca1
+InstanceOf: https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore
+Usage: #example
+* status = #available
+* type = SCT#127457009 "Tissue specimen from breast (specimen)"
+* subject = Reference(example-mii-molgen-patient-2)
+* receivedTime = "2022-11-01"
+* collection.collectedDateTime = "2022-11-01"
+* identifier.system = "https://www.charite.de/fhir/sid/bioproben"
+* identifier.value = "specimen_03"
+
+Instance: mii-exa-molgen-patient-brca1
+InstanceOf: Patient
+Usage: #example
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient"
+* identifier[0].use = #usual
+* identifier[=].type = http://terminology.hl7.org/CodeSystem/v2-0203#MR
+* identifier[=].system = "https://www.charite.de/fhir/sid/patienten"
+* identifier[=].value = "9166147031"
+* identifier[=].assigner.display = "Charité - Universitätsmedizin Berlin"
+* identifier[=].assigner.identifier.system = "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier"
+* identifier[=].assigner.identifier.value = "Charité"
+* identifier[+].use = #official
+* identifier[=].type = http://fhir.de/CodeSystem/identifier-type-de-basis#GKV
+* identifier[=].system = "http://fhir.de/sid/gkv/kvid-10"
+* identifier[=].value = "Z977188448"
+* identifier[=].assigner.identifier.use = #official
+* identifier[=].assigner.identifier.value = "109519005"
+* identifier[=].assigner.identifier.system = "http://fhir.de/sid/arge-ik/iknr"
+* name[0].use = #official
+* name[=].family = "Schmidt-Huber"
+* name[=].family.extension.url = "http://hl7.org/fhir/StructureDefinition/humanname-own-name"
+* name[=].family.extension.valueString = "Schmidt"
+* name[=].given[0] = "Elisa"
+* gender = #female
+* birthDate = "1973-03-12"
+* deceasedBoolean = false
+* address.type = #both
+* address.line = "Anna-Louisa-Karsch Str. 2"
+* address.city = "Berlin"
+* address.state = "DE-BE"
+* address.postalCode = "10178"
+* address.country = "DE"
+
+Instance: mii-exa-molgen-device-sequencer-nextseq
+InstanceOf: Device
+Usage: #example
+* status = #active
+* manufacturer = "Illumina"
+* deviceName.name = "NextSeq"
+* deviceName.type = DeviceNameType#manufacturer-name

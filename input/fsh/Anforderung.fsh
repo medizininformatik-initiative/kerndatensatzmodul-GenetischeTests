@@ -94,3 +94,26 @@ Description: "Beispiel für Anforderung für genetische Testung auf pathogene Va
 * reasonCode[4] = SCT#137511000119103 "Carrier of muscular dystrophy (finding)"
 * reasonCode[5] = HPO#HP:0000527 "Long eyelashes"
 * reasonCode[6] = OMIM#122470 "Cornelia de Lange syndrome 1"
+
+Instance: mii-exa-molgen-anforderung-brca1
+InstanceOf: sd-mii-modul-molgen-anforderung-gentischer-test
+Usage: #example
+Title: "Anforderung Molekulargenetische Diagnose Familiäre Belastung für Brust- und Eierstockkrebs"
+Description: "Beispiel für Anforderung für genetische Testung bei Familiärer Belastung für Brust- und Eierstockkrebs."
+* identifier.system = "https://www.charite.de/fhir/auftragsnummern"
+* identifier.value = "gen_test_03"
+* status = #active
+* intent = #order
+* category = SCT#108252007 "Laboratory procedure (procedure)"
+* code.coding[0] = SCT#405825005 "Molecular genetic test (procedure)"
+* code.coding[+] = LNC#21639-0 "BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
+* code.coding[+] = HGNC#HGNC:1100 "BRCA1"
+* code.text = "Panelanalyse TruRisk®-V3 mit NGS basierter CNV-Analyse Bestimmung des Polygenen Risikoscores (PRS) für Brustkrebs"
+* subject = Reference(mii-exa-molgen-patient-brca1)
+* authoredOn = "2022-11-01"
+* requester = Reference(example-mii-molgen-practitioner-physician)
+* specimen = Reference(mii-exa-molgen-specimen-brca1)
+* reasonCode[0] = SCT#429740004 "Family history of malignant neoplasm of breast (situation)"
+* reasonCode[1] = SCT#430705002 "Family history of malignant neoplasm of ovary (situation)"
+* reasonCode[2] = ORPHA#ORPHA:145 "Hereditary breast and ovarian cancer syndrome"
+* reasonCode[3] = OMIM#604370 "BREAST-OVARIAN CANCER, FAMILIAL, SUSCEPTIBILITY TO, 1; BROVCA1"

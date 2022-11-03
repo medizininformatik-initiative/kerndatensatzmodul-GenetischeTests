@@ -1,0 +1,32 @@
+{
+  "resourceType": "Specimen",
+  "id": "mii-exa-molgen-specimen-brca1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore"
+    ]
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "127457009",
+        "display": "Tissue specimen from breast (specimen)"
+      }
+    ]
+  },
+  "status": "available",
+  "subject": {
+    "reference": "Patient/example-mii-molgen-patient-2"
+  },
+  "receivedTime": "2022-11-01",
+  "collection": {
+    "collectedDateTime": "2022-11-01"
+  },
+  "identifier": [
+    {
+      "system": "https://www.charite.de/fhir/sid/bioproben",
+      "value": "specimen_03"
+    }
+  ]
+}

@@ -167,6 +167,44 @@
         "path": "Observation.component",
         "sliceName": "uncallable-regions",
         "mustSupport": true
+      },
+      {
+        "id": "Observation.component:transcript-ref-seq",
+        "path": "Observation.component",
+        "sliceName": "transcript-ref-seq",
+        "short": "Reference Transcript",
+        "definition": "NCBI's RefSeq ('NM_...'), Ensembl ('ENST...'), and LRG ('LRG...' plus 't1' to indicate transcript)",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:transcript-ref-seq.code",
+        "path": "Observation.component.code",
+        "short": "51958-7",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "51958-7",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:transcript-ref-seq.value[x]",
+        "path": "Observation.component.value[x]",
+        "short": "Versioned transcript reference sequence identifier",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Multiple bindings acceptable (NCBI or LRG)"
+        }
       }
     ]
   }

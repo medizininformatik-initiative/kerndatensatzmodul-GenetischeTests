@@ -229,9 +229,14 @@
       }
     }
   ],
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/mii-exa-molgen-anforderung-brca1"
+    }
+  ],
   "status": "final",
   "subject": {
-    "reference": "Patient/example-mii-molgen-patient-2"
+    "reference": "Patient/mii-exa-molgen-patient-brca1"
   },
   "valueCodeableConcept": {
     "coding": [
@@ -250,5 +255,11 @@
         "display": "Sequencing"
       }
     ]
+  },
+  "specimen": {
+    "reference": "Specimen/mii-exa-molgen-specimen-brca1"
+  },
+  "device": {
+    "reference": "Device/mii-exa-molgen-device-sequencer-nextseq"
   }
 }

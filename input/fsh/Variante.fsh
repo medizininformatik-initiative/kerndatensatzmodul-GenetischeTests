@@ -220,15 +220,15 @@ Usage: #example
 Title: "Variante BRCA1"
 Description: "Beispiel für genetische Variante BRCA1"
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
-//* basedOn = Reference(example-mii-molgen-anforderung-2)
+* basedOn = Reference(mii-exa-molgen-anforderung-brca1)
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#69548-6 "Genetic variant assessment"
-* subject = Reference(example-mii-molgen-patient-2)
+* subject = Reference(mii-exa-molgen-patient-brca1)
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * method.coding[0] = LNC#LA26398-0 "Sequencing"
-//* specimen = Reference(example-mii-molgen-specimen-2)
-//* device = Reference(example-mii-molgen-device-sequencer-2)
+* specimen = Reference(mii-exa-molgen-specimen-brca1)
+* device = Reference(mii-exa-molgen-device-sequencer-nextseq)
 //* derivedFrom = Reference(example-mii-molgen-untersuchte-region-1)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:1100 "BRCA1"
