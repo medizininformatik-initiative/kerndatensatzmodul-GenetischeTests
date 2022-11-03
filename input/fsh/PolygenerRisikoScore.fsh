@@ -3,6 +3,7 @@ Parent: RiskAssessment
 Id: mii-sd-molgen-polygener-risiko-score
 Title: "MII SD MolGen Polygener Risiko Score"
 Description: "Profil für Polygenen Risiko Score"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score"
 * identifier MS
 * status MS
 * code MS //Neoplasm Polygenic Risk Score (Code C158975) NCIt
