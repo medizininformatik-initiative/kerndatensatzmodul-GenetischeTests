@@ -308,7 +308,6 @@ Usage: #example
 * insert Bundle(mii-exa-molgen-folgemassnahme-brca1, Task)
 * insert Bundle(mii-exa-molgen-prs-brca1, RiskAssessment)
 * insert Bundle(mii-exa-molgen-anforderung-trurisk-panel, ServiceRequest)
-* insert Bundle(mii-exa-molgen-anforderung-trurisk-panel, ServiceRequest)
 * insert Bundle(example-mii-molgen-practitioner-lab, Practitioner)
 * insert Bundle(mii-exa-molgen-specimen-brca1, Observation)
 * insert Bundle(mii-exa-molgen-ergebnis-zusammenfassung-trurisk-panel, Observation)
