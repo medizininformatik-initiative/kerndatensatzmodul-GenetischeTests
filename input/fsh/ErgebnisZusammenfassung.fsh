@@ -34,3 +34,17 @@ Description: "Beispiel zusammenfassendes Ergebnis"
 * subject = Reference(example-mii-molgen-patient)
 * valueCodeableConcept = LNC#LA6576-8 "Positive"
 * component[conclusion-string].valueString = "BRAF p.V600E Mutation liegt vor. Bitte Therapieoption mit einem BRAF-Inhibitor prüfen."
+
+// 04 docx
+Instance: mii-exa-molgen-ergebnis-zusammenfassung-trurisk-panel
+InstanceOf: mii-pr-modul-molgen-ergebnis-zusammenfassung
+Usage: #example
+Title: "Ergebnis Zusammenfassung Befund "
+Description: "Beispiel zusammenfassendes Ergebnis bei BRCA1 Variante bei Familiärer Belastung für Brust- und Eierstockkrebs"
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/overall-interpretation"
+* status = #final
+* category[labCategory] = ObsCat#laboratory "Laboratory"
+* code = LNC#51968-6
+* subject = Reference(mii-exa-molgen-patient-brca1)
+* valueCodeableConcept = LNC#LA6576-8 "Positive"
+* component[conclusion-string].valueString = "Nachweis heterozygoter Sequenzveränderung, die zum Funktionsverlust führt"

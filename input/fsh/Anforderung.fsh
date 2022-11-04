@@ -95,7 +95,7 @@ Description: "Beispiel für Anforderung für genetische Testung auf pathogene Va
 * reasonCode[5] = HPO#HP:0000527 "Long eyelashes"
 * reasonCode[6] = OMIM#122470 "Cornelia de Lange syndrome 1"
 
-Instance: mii-exa-molgen-anforderung-brca1
+Instance: mii-exa-molgen-anforderung-trurisk-panel
 InstanceOf: sd-mii-modul-molgen-anforderung-gentischer-test
 Usage: #example
 Title: "Anforderung Molekulargenetische Diagnose Familiäre Belastung für Brust- und Eierstockkrebs"
@@ -106,8 +106,6 @@ Description: "Beispiel für Anforderung für genetische Testung bei Familiärer 
 * intent = #order
 * category = SCT#108252007 "Laboratory procedure (procedure)"
 * code.coding[0] = SCT#405825005 "Molecular genetic test (procedure)"
-* code.coding[+] = LNC#21639-0 "BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
-* code.coding[+] = HGNC#HGNC:1100 "BRCA1"
 * code.text = "Panelanalyse TruRisk®-V3 mit NGS basierter CNV-Analyse Bestimmung des Polygenen Risikoscores (PRS) für Brustkrebs"
 * subject = Reference(mii-exa-molgen-patient-brca1)
 * authoredOn = "2022-11-01"

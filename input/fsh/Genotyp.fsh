@@ -67,3 +67,21 @@ Description: "Beispiel für Genotyp BRAF Gen."
 //* component[gene-studied].valueCodeableConcept = HGNC#HGNC:28862 "NIPBL"
 //* component[CytogenicLocation].code = LNC#48001-2 "Cytogenetic (chromosome) location"
 //* component[CytogenicLocation].valueCodeableConcept = ChromLoc#7q34
+
+//Instance: mii-exa-molgen-genotyp-brca1
+//InstanceOf: sd-mii-molgen-genotyp
+//Usage: #example
+//Title: "Genotyp BRCA1"
+//Description: "Beispiel für Genotyp BRCA1 Gen."
+//* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype"
+//* status = #final
+//* category[labCategory] = ObsCat#laboratory "Laboratory"
+//* code = LNC#84413-4 "Genotype display name"
+//* subject = Reference(mii-exa-molgen-patient-brca1)
+//* valueCodeableConcept.text = "BRCA1, c.5266dup, p.(Gln1756Profs*74)"
+//* method = LNC#LA26398-0 "Sequencing"
+//* specimen = Reference(mii-exa-molgen-specimen-brca1)
+//* device = Reference(mii-exa-molgen-device-sequencer-nextseq)
+//* derivedFrom = Reference(mii-exa-molgen-variante-brca1)
+//* component[gene-studied].valueCodeableConcept = HGNC#HGNC:1100 "BRCA1"
+//* component[cytogenetic-location].valueCodeableConcept = ChromLoc#17q21.31

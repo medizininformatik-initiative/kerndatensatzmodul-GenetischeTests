@@ -232,7 +232,6 @@ Description: "Beispiel für genetische Variante BRCA1"
 //* derivedFrom = Reference(example-mii-molgen-untersuchte-region-1)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:1100 "BRCA1"
-* component[coding-change-type].valueCodeableConcept = SO#SO:0001536 "functional_effect_variant"
 * component[cytogenetic-location].valueCodeableConcept = ChromLoc#17q21.31
 * component[coding-hgvs].valueCodeableConcept = HGVS#NM_007294.3:c.5266dupC
 * component[transcript-ref-seq].valueCodeableConcept = RefSeq#NM_007294.3

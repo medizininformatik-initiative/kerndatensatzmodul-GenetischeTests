@@ -31,3 +31,4 @@ Alias:  RelArtType = http://hl7.org/fhir/related-artifact-type
 Alias:  EBM = https://fhir.kbv.de/NamingSystem/KBV_NS_Base_EBM
 Alias:  RiskProbability = http://terminology.hl7.org/CodeSystem/risk-probability
 Alias:  ORPHA = http://www.orpha.net
+Alias:  ClinVarEvLv = http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/clinvar-evidence-level-custom-cs

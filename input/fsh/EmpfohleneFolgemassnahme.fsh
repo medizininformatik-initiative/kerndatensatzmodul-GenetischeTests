@@ -36,3 +36,16 @@ Description: "Beispiel für empfohlene Folgemaßnahme abgeleitet von genetischer
 * description = "Genetische Beratung empfohlen mit Dr. Rosalind Franklin"
 * for = Reference(example-mii-molgen-patient)
 * reasonReference = Reference(example-mii-molgen-therapeutische-implikation-1)
+
+Instance: mii-exa-molgen-folgemassnahme-brca1
+InstanceOf: sd-mii-modul-molgen-empfohlene-folgemassnahme
+Usage: #example
+Title: "Empfohlene Folgemaßnahme bei BRCA1 Variante"
+Description: "Beispiel für empfohlene Folgemaßnahme abgeleitet von genetischer Variante im BRCA1 Gen an Hand von NGS."
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/followup-recommendation"
+* basedOn = Reference(mii-exa-molgen-anforderung-trurisk-panel)
+* status = TaskStatus#requested
+* intent = RequestIntent#proposal
+* code = LNC#LA14020-4 "Genetic counseling recommended"
+* description = "Eine genetische Beratung hinsichtlich einer gezielten Testung leiblicher Familienmitglieder wird empfohlen."
+* for = Reference(mii-exa-molgen-patient-brca1)

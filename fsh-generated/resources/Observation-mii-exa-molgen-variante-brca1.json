@@ -53,25 +53,6 @@
         "coding": [
           {
             "system": "http://loinc.org",
-            "code": "48019-4"
-          }
-        ]
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "SO:1000035",
-            "system": "http://sequenceontology.org",
-            "display": "duplication"
-          }
-        ]
-      }
-    },
-    {
-      "code": {
-        "coding": [
-          {
-            "system": "http://loinc.org",
             "code": "48001-2"
           }
         ]
@@ -117,6 +98,25 @@
           {
             "code": "NM_007294.3",
             "system": "http://www.ncbi.nlm.nih.gov/refseq"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "48019-4"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "SO:1000035",
+            "system": "http://sequenceontology.org",
+            "display": "duplication"
           }
         ]
       }
@@ -231,7 +231,7 @@
   ],
   "basedOn": [
     {
-      "reference": "ServiceRequest/mii-exa-molgen-anforderung-brca1"
+      "reference": "mii-exa-molgen-anforderung-brca1"
     }
   ],
   "status": "final",

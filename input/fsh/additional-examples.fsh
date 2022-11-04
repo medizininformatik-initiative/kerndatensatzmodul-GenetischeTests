@@ -297,3 +297,36 @@ Usage: #example
 * manufacturer = "Illumina"
 * deviceName.name = "NextSeq"
 * deviceName.type = DeviceNameType#manufacturer-name
+
+Instance: befund-bundle-fam-his-breast-ovar-can
+InstanceOf: Bundle
+Usage: #example
+* type = #transaction
+* timestamp = "2022-07-14T12:11:00+01:00"
+* insert Bundle(mii-exa-molgen-patient-brca1, Patient)
+* insert Bundle(mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel, DiagnosticReport)
+* insert Bundle(mii-exa-molgen-folgemassnahme-brca1, Task)
+* insert Bundle(mii-exa-molgen-prs-brca1, RiskAssessment)
+* insert Bundle(mii-exa-molgen-anforderung-trurisk-panel, ServiceRequest)
+* insert Bundle(mii-exa-molgen-anforderung-trurisk-panel, ServiceRequest)
+* insert Bundle(example-mii-molgen-practitioner-lab, Practitioner)
+* insert Bundle(mii-exa-molgen-specimen-brca1, Observation)
+* insert Bundle(mii-exa-molgen-ergebnis-zusammenfassung-trurisk-panel, Observation)
+* insert Bundle(mii-exa-molgen-variante-brca1, Observation)
+* insert Bundle(mii-exa-molgen-diagnostische-implikation-brca1, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-ATM, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA1, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BARD1, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA2, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRIP1, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CDH1, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CHECK2, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MLH1, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH2, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH6, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PALB2, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PMS2, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PTEN, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51C, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51D, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-TP53, Observation)

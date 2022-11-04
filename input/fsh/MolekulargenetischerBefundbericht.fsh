@@ -164,51 +164,32 @@ Description: "Beispiel für molekulargenetischen Befund Molekulargenetische Diag
 //* conclusion = "Nachweises der bekannten treibenden FGFR2-Fusion"
 
 // 04 docx
-Instance: mii-exa-molgen-molekulargenetischer-befundbericht-brca1
+Instance: mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel
 InstanceOf: sd-mii-modul-molgen-molekulargenetischer-befundbericht
 Usage: #example
-Title: "Molekulargentischer Befund BRCA1: Familiäre Belastung für Brust- und Eierstockkrebs"
+Title: "Molekulargentischer Befund Familiäre Belastung für Brust- und Eierstockkrebs"
 Description: "Beispiel für molekulargenetischen Befund einer BRCA1 Variante bei Familiärer Belastung für Brust- und Eierstockkrebs."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
-//* extension[genomics-artifact][+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
-//* extension[genomics-artifact][=].valueRelatedArtifact.type = RelArtType#citation "Citation"
-//* extension[genomics-artifact][=].valueRelatedArtifact.citation = "Gillis LA, McCallum J, Kaur M, DeScipio C, Yaeger D, Mariani A, Kline AD, Li HH, Devoto M, Jackson LG, Krantz ID. NIPBL mutational analysis in 120 individuals with Cornelia de Lange syndrome and evaluation of genotype-phenotype correlations. Am J Hum Genet. 2004 Oct;75(4):610-23. doi: 10.1086/424698. Epub 2004 Aug 18. PMID: 15318302; PMCID: PMC1182048."
-//* extension[genomics-artifact][=].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/15318302/"
-//* extension[genomics-artifact][+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
-//* extension[genomics-artifact][=].valueRelatedArtifact.type = RelArtType#citation "Citation"
-//* extension[genomics-artifact][=].valueRelatedArtifact.citation = "Kawauchi S, Calof AL, Santos R, Lopez-Burks ME, Young CM, Hoang MP, Chua A, Lao T, Lechner MS, Daniel JA, Nussenzweig A, Kitzes L, Yokomori K, Hallgrimsson B, Lander AD. Multiple organ system defects and transcriptional dysregulation in the Nipbl(+/-) mouse, a model of Cornelia de Lange Syndrome. PLoS Genet. 2009 Sep;5(9):e1000650. doi: 10.1371/journal.pgen.1000650. Epub 2009 Sep 18. PMID: 19763162; PMCID: PMC2730539."
-//* extension[genomics-artifact][=].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/19763162/"
-//* extension[genomics-artifact][+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
-//* extension[genomics-artifact][=].valueRelatedArtifact.type = RelArtType#citation "Citation"
-//* extension[genomics-artifact][=].valueRelatedArtifact.citation = "Huisman SA, Redeker EJ, Maas SM, Mannens MM, Hennekam RC. High rate of mosaicism in individuals with Cornelia de Lange syndrome. J Med Genet. 2013 May;50(5):339-44. doi: 10.1136/jmedgenet-2012-101477. Epub 2013 Mar 15. PMID: 23505322."
-//* extension[genomics-artifact][=].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/23505322/"
-//* extension[genomics-artifact][+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
-//* extension[genomics-artifact][=].valueRelatedArtifact.type = RelArtType#citation "Citation"
-//* extension[genomics-artifact][=].valueRelatedArtifact.citation = "Kline AD, Moss JF, Selicorni A, Bisgaard AM, Deardorff MA, Gillett PM, Ishman SL, Kerr LM, Levin AV, Mulder PA, Ramos FJ, Wierzba J, Ajmone PF, Axtell D, Blagowidow N, Cereda A, Costantino A, Cormier-Daire V, FitzPatrick D, Grados M, Groves L, Guthrie W, Huisman S, Kaiser FJ, Koekkoek G, Levis M, Mariani M, McCleery JP, Menke LA, Metrena A, O'Connor J, Oliver C, Pie J, Piening S, Potter CJ, Quaglio AL, Redeker E, Richman D, Rigamonti C, Shi A, Tümer Z, Van Balkom IDC, Hennekam RC. Diagnosis and management of Cornelia de Lange syndrome: first international consensus statement. Nat Rev Genet. 2018 Oct;19(10):649-666. doi: 10.1038/s41576-018-0031-0. PMID: 29995837; PMCID: PMC7136165."
-//* extension[genomics-artifact][=].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/29995837/"
-//* extension[coded-note][+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report-note"
-//* extension[coded-note][=].valueAnnotation.extension[code].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/annotation-code"
-//* extension[coded-note][=].valueAnnotation.extension[code].valueCodeableConcept = SCT#116148004 "Molecular genetics procedure (procedure)"
-//* extension[coded-note][=].valueAnnotation.text = "Gen-Panel zusammengestellt nach den aktuellen Empfehlungen des Deutschen Konsortiums für erblichen Brust- und Eierstockkrebs sowie der ClinGen Breast/Ovarian Cancer Working Group (Lee et al. 2019, PMID: 30504931). Nach DNA-Extraktion wurden alle kodierenden Exons der zu untersuchenden Gene einschließlich flankierender intronischer Regionen (mindestens von -3 bis +8) angereichert (Custom Panel V02, IDT) und auf einem Illumina NextSeq 500-, NextSeq 550- oder NovaSeq 6000-Sequencer sequenziert. Zur Verifizierung der DNA-Probe wurden 14 SNPs (Single Nucleotide Polymorphism) mittels kompetitiver allelspezifischer PCR unter Verwendung fluoreszenzmarkierter Primer amplifiziert (StepOnePlus System, ThermoFisher Scientific) und analysiert (StepOnePlus software für Genotyping Experiments) und die Ergebnisse mit den Daten der NGS-Analyse verglichen (megSAP). Der Abgleich der ermittelten DNA-Sequenz erfolgte mit den in den Gendatenbanken niedergelegten Sequenzen: BRCA1 - NCBI Reference Sequence NM_007294.2, BRCA2 - ensembl ENST00000380152, ATM - NCBI Reference Sequence NM_000051.3, BARD1 - ENST00000260947.4, BRIP1 - NCBI Reference Sequence NM_032043.2, CDH1 - ensembl ENST00000261769, CHEK2 - NCBI Reference Sequence NM_007194.3, PALB2 - ensembl ENST00000261584, PTEN -  NCBI Reference Sequence NM_000214.4, RAD51C - ensembl ENST00000337432, RAD51D - ensembl ENST00000345365,  STK11 -  ensembl ENST00000326873.7 und TP53 - ensembl ENST00000269305. Es wurden außerdem Varianten nachgewiesen, die nach heutigem Wissensstand als Normvarianten ohne pathologische Bedeutung zu werten sind."
-//* extension[supporting-info][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo"
-//* extension[supporting-info][=].valueReference = Reference(example-mii-molgen-chargeitem-ebm-21)
-//* extension[supporting-info][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo"
-//* extension[supporting-info][=].valueReference = Reference(example-mii-molgen-chargeitem-ebm-22)
-//* extension[supporting-info][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo"
-//* extension[supporting-info][=].valueReference = Reference(example-mii-molgen-chargeitem-ebm-23)
-//* extension[supporting-info][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo"
-//* extension[supporting-info][=].valueReference = Reference(example-mii-molgen-chargeitem-ebm-24)
+* extension[genomics-artifact][+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
+* extension[genomics-artifact][=].valueRelatedArtifact.type = RelArtType#citation "Citation"
+* extension[genomics-artifact][=].valueRelatedArtifact.citation = "Plon SE, Eccles DM, Easton D, Foulkes WD, Genuardi M, Greenblatt MS, Hogervorst FB, Hoogerbrugge N, Spurdle AB, Tavtigian SV; IARC Unclassified Genetic Variants Working Group. Sequence variant classification and reporting: recommendations for improving the interpretation of cancer susceptibility genetic test results. Hum Mutat. 2008 Nov;29(11):1282-91. doi: 10.1002/humu.20880. PMID: 18951446; PMCID: PMC3075918."
+* extension[genomics-artifact][=].valueRelatedArtifact.url = "https://doi.org/10.1002/humu.20880"
+* extension[genomics-artifact][+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
+* extension[genomics-artifact][=].valueRelatedArtifact.type = RelArtType#citation "Citation"
+* extension[genomics-artifact][=].valueRelatedArtifact.citation = "Rhiem K, Auber B, Briest S, Dikow N, Ditsch N, Dragicevic N, Grill S, Hahnen E, Horvath J, Jaeger B, Kast K, Kiechle M, Leinert E, Morlot S, Püsken M, Schäfer D, Schott S, Schroeder C, Siebers-Renelt U, Solbach C, Weber-Lassalle N, Witzel I, Zeder-Göß C, Schmutzler RK. Consensus Recommendations of the German Consortium for Hereditary Breast and Ovarian Cancer. Breast Care (Basel). 2022 Apr;17(2):199-207. doi: 10.1159/000516376. Epub 2021 Jul 19. PMID: 35702495; PMCID: PMC9149395."
+* extension[genomics-artifact][=].valueRelatedArtifact.url = "https://doi.org/10.1159%2F000516376"
+* extension[recommended-action].valueReference = Reference(mii-exa-molgen-folgemassnahme-brca1)
 * extension[genomics-risk-assessment].valueReference = Reference(mii-exa-molgen-prs-brca1)
-* basedOn = Reference(mii-exa-molgen-anforderung-brca1)
+* basedOn = Reference(mii-exa-molgen-anforderung-trurisk-panel)
 * status = DiagRepStatus#final
 * category[Genetics] = v2-0074#GE "Genetics"
 * code[+] = LNC#51969-4 "Genetic analysis report"
 * subject = Reference(mii-exa-molgen-patient-brca1)
 * performer = Reference(example-mii-molgen-practitioner-lab)
 * specimen = Reference(mii-exa-molgen-specimen-brca1)
-//* result[gen-grouper] = Reference(example-mii-molgen-gruppierung-beobachtungen-2-nipbl)
-//* result[diagnostic-implication] = Reference(example-mii-molgen-diagnostische-implikation-2)
+* result[overall] = Reference(mii-exa-molgen-ergebnis-zusammenfassung-trurisk-panel)
 * result[variant] = Reference(mii-exa-molgen-variante-brca1)
+* result[diagnostic-implication] = Reference(mii-exa-molgen-diagnostische-implikation-brca1)
 * result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-ATM)
 * result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA1)
 * result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BARD1)

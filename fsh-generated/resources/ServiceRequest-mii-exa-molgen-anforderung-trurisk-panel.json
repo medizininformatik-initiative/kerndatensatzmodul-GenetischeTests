@@ -1,6 +1,6 @@
 {
   "resourceType": "ServiceRequest",
-  "id": "mii-exa-molgen-anforderung-brca1",
+  "id": "mii-exa-molgen-anforderung-trurisk-panel",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
@@ -31,16 +31,6 @@
         "code": "405825005",
         "system": "http://snomed.info/sct",
         "display": "Molecular genetic test (procedure)"
-      },
-      {
-        "code": "21639-0",
-        "system": "http://loinc.org",
-        "display": "BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
-      },
-      {
-        "code": "HGNC:1100",
-        "system": "http://www.genenames.org/geneId",
-        "display": "BRCA1"
       }
     ],
     "text": "Panelanalyse TruRisk®-V3 mit NGS basierter CNV-Analyse Bestimmung des Polygenen Risikoscores (PRS) für Brustkrebs"
