@@ -304,6 +304,22 @@
         "max": "*"
       },
       {
+        "id": "DiagnosticReport.result:microsatellite-instability",
+        "path": "DiagnosticReport.result",
+        "sliceName": "microsatellite-instability",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.media",
         "path": "DiagnosticReport.media",
         "mustSupport": true,

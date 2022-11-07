@@ -26,7 +26,8 @@ Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen B
 * result MS
 * result contains 
     tumor-mutation-burden 0..* and
-    polygenic-risk-score 0..*
+    polygenic-risk-score 0..* and
+    microsatellite-instability 0..*
 //* result[gen-grouper] only Reference(SD_MII_MolGen_GruppierungBeobachtungen)
 * result[overall] MS
 * result[overall] only Reference(mii-pr-modul-molgen-ergebnis-zusammenfassung)
@@ -42,6 +43,8 @@ Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen B
 * result[tumor-mutation-burden] only Reference(SD_MII_MolGen_Mutationslast)
 * result[genotype] MS
 * result[genotype] only Reference(SD_MII_MolGen_Genotyp)
+* result[microsatellite-instability] MS
+* result[microsatellite-instability] only Reference(SD_MII_MolGen_Mikrosatelliteninstabilitaet)
 * media MS
 * conclusion MS
 * conclusionCode MS
@@ -82,6 +85,7 @@ Description: "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorek
 * result[region-studied] = Reference(example-mii-molgen-untersuchte-region-1)
 * result[genotype] = Reference(example-mii-molgen-genotyp-1)
 * result[tumor-mutation-burden] = Reference(example-mii-molgen-mutationslast-1)
+* result[microsatellite-instability] = Reference(example-mii-molgen-mikrosatelliteninstabilitaet-1)
 * conclusion = "BRAF p.V600E Mutation liegt vor. Bitte Therapieoption mit einem BRAF-Inhibitor prüfen."
 
 Instance: example-mii-molgen-molekulargenetischer-befundbericht-2
