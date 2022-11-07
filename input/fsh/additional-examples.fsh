@@ -302,7 +302,7 @@ Instance: befund-bundle-fam-his-breast-ovar-can
 InstanceOf: Bundle
 Usage: #example
 * type = #transaction
-* timestamp = "2022-07-14T12:11:00+01:00"
+* timestamp = "2022-11-04T13:47:00+01:00"
 * insert Bundle(mii-exa-molgen-patient-brca1, Patient)
 * insert Bundle(mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel, DiagnosticReport)
 * insert Bundle(mii-exa-molgen-folgemassnahme-brca1, Task)
