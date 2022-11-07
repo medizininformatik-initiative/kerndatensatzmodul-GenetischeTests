@@ -10,6 +10,8 @@ Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen B
 * extension[supporting-info] MS
 * extension[coded-note] MS
 * extension[genomics-risk-assessment] MS
+* extension[genomics-artifact] MS
+* extension[genomics-file] MS
 * status ^alias[+] = "Berichtstatus"
 * status MS
 * subject 1.. MS 
@@ -26,7 +28,6 @@ Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen B
 * result MS
 * result contains 
     tumor-mutation-burden 0..* and
-    polygenic-risk-score 0..* and
     microsatellite-instability 0..*
 //* result[gen-grouper] only Reference(SD_MII_MolGen_GruppierungBeobachtungen)
 * result[overall] MS
@@ -45,6 +46,9 @@ Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen B
 * result[genotype] only Reference(SD_MII_MolGen_Genotyp)
 * result[microsatellite-instability] MS
 * result[microsatellite-instability] only Reference(SD_MII_MolGen_Mikrosatelliteninstabilitaet)
+* result[sequence-phase-relation] MS
+* result[haplotype] MS
+
 * media MS
 * conclusion MS
 * conclusionCode MS

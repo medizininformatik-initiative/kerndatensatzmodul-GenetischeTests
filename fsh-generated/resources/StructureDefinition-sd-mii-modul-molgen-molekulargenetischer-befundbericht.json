@@ -63,6 +63,18 @@
         ]
       },
       {
+        "id": "DiagnosticReport.extension:genomics-artifact",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "genomics-artifact",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:genomics-file",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "genomics-file",
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.extension:recommended-action",
         "path": "DiagnosticReport.extension",
         "sliceName": "recommended-action",
@@ -253,6 +265,12 @@
         "mustSupport": true
       },
       {
+        "id": "DiagnosticReport.result:sequence-phase-relation",
+        "path": "DiagnosticReport.result",
+        "sliceName": "sequence-phase-relation",
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.result:region-studied",
         "path": "DiagnosticReport.result",
         "sliceName": "region-studied",
@@ -281,6 +299,12 @@
         "mustSupport": true
       },
       {
+        "id": "DiagnosticReport.result:haplotype",
+        "path": "DiagnosticReport.result",
+        "sliceName": "haplotype",
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.result:tumor-mutation-burden",
         "path": "DiagnosticReport.result",
         "sliceName": "tumor-mutation-burden",
@@ -295,13 +319,6 @@
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.result:polygenic-risk-score",
-        "path": "DiagnosticReport.result",
-        "sliceName": "polygenic-risk-score",
-        "min": 0,
-        "max": "*"
       },
       {
         "id": "DiagnosticReport.result:microsatellite-instability",
