@@ -15,7 +15,9 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * relationship.coding ^slicing.rules = #open
 * relationship.coding contains snomed 1..1 and v3-RoleCode 0..1
 * relationship.coding[snomed] from MII_VS_MolGen_FamilyMember_SNOMED (required)
+* relationship.coding[snomed] ^patternCoding.system = "http://snomed.info/sct"
 * relationship.coding[v3-RoleCode] from v3-RoleCode-vs (required)
+* relationship.coding[v3-RoleCode] ^patternCoding.system = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
 * sex MS
 * reasonCode MS
 * reasonCode.coding 1.. MS

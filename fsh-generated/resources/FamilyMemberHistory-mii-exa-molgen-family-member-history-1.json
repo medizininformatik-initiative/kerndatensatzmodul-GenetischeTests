@@ -6,16 +6,11 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
     ]
   },
-  "status": "completed",
-  "patient": {
-    "reference": "Patient/example-mii-molgen-patient"
-  },
-  "date": "2022-04-07",
   "relationship": {
     "coding": [
       {
-        "code": "72705000",
         "system": "http://snomed.info/sct",
+        "code": "72705000",
         "display": "Mother (person)"
       },
       {
@@ -25,6 +20,11 @@
       }
     ]
   },
+  "status": "completed",
+  "patient": {
+    "reference": "Patient/example-mii-molgen-patient"
+  },
+  "date": "2022-04-07",
   "sex": {
     "coding": [
       {
