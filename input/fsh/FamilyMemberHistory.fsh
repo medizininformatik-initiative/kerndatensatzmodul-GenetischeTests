@@ -13,8 +13,9 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * relationship.coding ^slicing.discriminator.type = #pattern
 * relationship.coding ^slicing.discriminator.path = "$this"
 * relationship.coding ^slicing.rules = #open
-* relationship.coding contains snomed 1..1
+* relationship.coding contains snomed 1..1 and v3-RoleCode 0..1
 * relationship.coding[snomed] from MII_VS_MolGen_FamilyMember_SNOMED (required)
+* relationship.coding[v3-RoleCode] from v3-RoleCode-vs (required)
 * sex MS
 * reasonCode MS
 * reasonCode.coding 1.. MS
@@ -88,6 +89,7 @@ Usage: #example
 * patient = Reference(example-mii-molgen-patient)
 * date = "2022-04-07"
 * relationship.coding[snomed] = SCT#72705000 "Mother (person)"
+* relationship.coding[v3-RoleCode] = v3-RoleCode-cs#MTH "mother"
 * sex.coding[0] = AdminGender#female
 * sex.coding[+] = SCT#248152002 "Female (finding)"
 * deceasedBoolean = true

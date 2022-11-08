@@ -32,3 +32,5 @@ Alias:  EBM = https://fhir.kbv.de/NamingSystem/KBV_NS_Base_EBM
 Alias:  RiskProbability = http://terminology.hl7.org/CodeSystem/risk-probability
 Alias:  ORPHA = http://www.orpha.net
 Alias:  ClinVarEvLv = http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/clinvar-evidence-level-custom-cs
+Alias:  v3-RoleCode-cs = http://terminology.hl7.org/CodeSystem/v3-RoleCode
+Alias:  v3-RoleCode-vs = http://terminology.hl7.org/ValueSet/v3-PersonalRelationshipRoleType
