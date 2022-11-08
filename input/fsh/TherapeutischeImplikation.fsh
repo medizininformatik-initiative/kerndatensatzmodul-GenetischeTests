@@ -3,6 +3,7 @@ Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapeuti
 Id: sd-mii-modul-molgen-therapeutische-implikation
 Title: "SD MII MolGen Therapeutische Implikation"
 Description: "Dieses Profil beschreibt den möglichen Einfluss genetischer Merkmale auf eine medikamentöse oder nicht-medikamentöse Therapie."
+* insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation"
 * ^status = #draft
 * status MS

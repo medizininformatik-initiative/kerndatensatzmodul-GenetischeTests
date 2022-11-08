@@ -3,6 +3,7 @@ Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/overall-in
 Id: mii-pr-modul-molgen-ergebnis-zusammenfassung
 Title: "MII PR MolGen Ergebnis Zusammenfassung"
 Description: "Mit diesem Profil kann das Labor das zusammenfassende Ergebnis des Tests deklarieren (z. B. Positiv, Negativ, Unbekannt)."
+* insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/ergebnis-zusammenfassung"
 * ^status = #draft
 * status MS

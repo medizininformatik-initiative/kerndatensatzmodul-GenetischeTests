@@ -3,6 +3,7 @@ Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/recommende
 Id: sd-mii-modul-molgen-empfohlene-massnahme
 Title: "SD MII MolGen Empfohlene Maßnahme"
 Description: "Die Extension verweist auf eine vorgeschlagene Maßnahme, die auf der Grundlage der Ergebnisse des Befundberichts empfohlen wird."
+* insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-massnahme"
 * ^status = #draft
 * value[x] only Reference(SD_MII_MolGen_Medikationsempfehlung or SD_MII_MolGen_EmpfohleneFolgemassnahme)

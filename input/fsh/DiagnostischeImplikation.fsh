@@ -3,6 +3,7 @@ Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic
 Id: sd-mii-modul-molgen-diagnostische-implikation
 Title: "SD MII MolGen Diagnostische Implikation"
 Description: "Dieses Profil beschreibt den Zusammenhang zwischen einem oder mehreren Genotyp/Haplotyp/Varianten und Beweisen für oder gegen eine bestimmte Krankheit."
+* insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
 * ^status = #draft
 * extension[genomics-artifact] MS

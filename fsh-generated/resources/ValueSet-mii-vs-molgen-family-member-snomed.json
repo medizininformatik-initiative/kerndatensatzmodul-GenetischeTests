@@ -7,6 +7,17 @@
   "description": "The ValueSet contains codes for related family member types from SNOMED CT.",
   "version": "0.9.0-ballot",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-family-member-snomed",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {

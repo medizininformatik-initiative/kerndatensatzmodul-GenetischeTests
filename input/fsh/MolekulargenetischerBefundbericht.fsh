@@ -3,6 +3,7 @@ Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-r
 Id: sd-mii-modul-molgen-molekulargenetischer-befundbericht
 Title: "SD MII MolGen Molekulargenetischer Befundbericht"
 Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen Befundberichte und enthält Metadaten über den gesamten Bericht sowie alle relevanten Informationen, die im Rahmen der molekulargenetischen Analyse gefunden wurden."
+* insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
 * ^status = #draft
 * extension[recommended-action] MS

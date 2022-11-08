@@ -3,6 +3,7 @@ Parent: RiskAssessment
 Id: mii-sd-molgen-polygener-risiko-score
 Title: "MII SD MolGen Polygener Risiko Score"
 Description: "Profil für Polygenen Risiko Score"
+* insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score"
 * ^status = #draft
 * identifier MS

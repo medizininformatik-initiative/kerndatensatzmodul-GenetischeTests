@@ -7,6 +7,17 @@
   "description": "ValueSet für die Angabe eines Verwandtschaftsverhältnis zwischen Patient und Familienangehörigen.",
   "version": "0.9.0-ballot",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {

@@ -3,6 +3,7 @@ Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-stu
 Id: sd-mii-modul-molgen-untersuchte-region
 Title: "SD MII MolGen Untersuchte Region"
 Description: "Dieses Profil beschreibt die Region oder die Regionen, die im Rahmen dieses Befundberichts untersucht wurden."
+* insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
 * ^status = #draft
 * status MS

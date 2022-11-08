@@ -1,6 +1,7 @@
 Instance: sp-mii-molgen-servicerequest-reasoncode
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/ServiceRequest-ReasonCode"
 * name = "SP_MII_MolGen_ServiceRequest_ReasonCode"
 * status = #draft
@@ -15,6 +16,7 @@ Usage: #definition
 Instance: sp-mii-molgen-servicerequest-reasonreference
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/ServiceRequest-ReasonReference"
 * name = "SP_MII_MolGen_ServiceRequest_ReasonReference"
 * status = #draft
@@ -33,6 +35,7 @@ Usage: #definition
 Instance: sp-mii-molgen-task-reasoncode
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/Task-ReasonCode"
 * name = "SP_MII_MolGen_Task_ReasonCode"
 * status = #draft
@@ -47,6 +50,7 @@ Usage: #definition
 Instance: sp-mii-molgen-task-reasonreference
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/Task-ReasonReference"
 * name = "SP_MII_MolGen_Task_ReasonReference"
 * status = #draft
@@ -62,6 +66,7 @@ Usage: #definition
 Instance: sp-mii-molgen-task-for
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/Task-For"
 * name = "SP_MII_MolGen_Task_For"
 * status = #draft
@@ -77,6 +82,7 @@ Usage: #definition
 Instance: sp-mii-molgen-familymemberhistory-reasoncode
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/FamilyMemberHistory-ReasonCode"
 * name = "SP_MII_MolGen_FamilyMemberHistory_ReasonCode"
 * status = #draft
@@ -91,6 +97,7 @@ Usage: #definition
 Instance: sp-mii-molgen-familymemberhistory-reasonreference
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/FamilyMemberHistory-ReasonReference"
 * name = "SP_MII_MolGen_FamilyMemberHistory_ReasonReference"
 * status = #draft

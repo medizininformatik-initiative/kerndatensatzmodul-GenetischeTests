@@ -3,6 +3,7 @@ Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/followup-r
 Id: sd-mii-modul-molgen-empfohlene-folgemassnahme
 Title: "SD MII MolGen Empfohlene Folgemaßnahme"
 Description: "Das Profil dieser Task Ressource beschreibt die empfohlenen Folgemaßnahmen."
+* insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme"
 * ^status = #draft
 * status MS

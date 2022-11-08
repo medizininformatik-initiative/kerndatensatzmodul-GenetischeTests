@@ -3,6 +3,7 @@ Parent: ServiceRequest
 Id: sd-mii-modul-molgen-anforderung-gentischer-test
 Title: "SD MII MolGen Anforderung genetischer Test"
 Description: "Der Laborauftrag oder die Anfrage, die die Durchführung des genetischen Tests auslöst."
+* insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
 * ^status = #draft
 * basedOn MS

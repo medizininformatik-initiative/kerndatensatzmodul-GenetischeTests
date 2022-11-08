@@ -7,6 +7,17 @@
   "description": "ValueSet für die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen.",
   "version": "0.9.0-ballot",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-mol-gen-verwandtschaftsgrad",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {
