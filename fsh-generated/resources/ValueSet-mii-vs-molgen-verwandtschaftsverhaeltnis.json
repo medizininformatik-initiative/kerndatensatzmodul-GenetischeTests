@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_MolGen_Verwandtsverhaeltnis",
+  "id": "mii-vs-molgen-verwandtschaftsverhaeltnis",
+  "title": "MII VS MolGen Verwandtschaftsverhaeltnis",
+  "description": "ValueSet für die Angabe eines Verwandtschaftsverhältnis zwischen Patient und Familienangehörigen.",
+  "version": "0.9.0-ballot",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "75226009",
+            "display": "Natural child (person)"
+          },
+          {
+            "code": "13646006",
+            "display": "Natural parent (person)"
+          },
+          {
+            "code": "60614009",
+            "display": "Natural brother (person)"
+          },
+          {
+            "code": "73678001",
+            "display": "Natural sister (person)"
+          },
+          {
+            "code": "45929001",
+            "display": "Half-brother (person)"
+          },
+          {
+            "code": "2272004",
+            "display": "Half-sister (person)"
+          },
+          {
+            "code": "62296006",
+            "display": "Natural grandfather (person)"
+          },
+          {
+            "code": "17945006",
+            "display": "Natural grandmother (person)"
+          }
+        ]
+      }
+    ]
+  }
+}

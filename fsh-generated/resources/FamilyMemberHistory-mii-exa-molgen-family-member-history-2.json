@@ -1,0 +1,68 @@
+{
+  "resourceType": "FamilyMemberHistory",
+  "id": "mii-exa-molgen-family-member-history-2",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
+    ]
+  },
+  "relationship": {
+    "coding": [
+      {
+        "extension": [
+          {
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-mol-gen-verwandtschaftsgrad",
+            "valueCoding": {
+              "code": "699110007",
+              "system": "http://snomed.info/sct",
+              "display": "Second degree blood relative (person)"
+            }
+          },
+          {
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis",
+            "valueCoding": {
+              "code": "17945006",
+              "system": "http://snomed.info/sct",
+              "display": "Natural grandmother (person)"
+            }
+          },
+          {
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-familiare-linie",
+            "valueCoding": {
+              "code": "66839005",
+              "system": "http://snomed.info/sct",
+              "display": "Father (person)"
+            }
+          }
+        ],
+        "system": "http://snomed.info/sct",
+        "code": "394858009",
+        "display": "Paternal grandmother (person)"
+      },
+      {
+        "code": "PGRMTH",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+        "display": "paternal grandmother"
+      }
+    ]
+  },
+  "status": "completed",
+  "patient": {
+    "reference": "Patient/example-mii-molgen-patient"
+  },
+  "date": "2022-11-08",
+  "sex": {
+    "coding": [
+      {
+        "code": "female",
+        "system": "http://hl7.org/fhir/administrative-gender"
+      },
+      {
+        "code": "248152002",
+        "system": "http://snomed.info/sct",
+        "display": "Female (finding)"
+      }
+    ]
+  },
+  "deceasedBoolean": true
+}

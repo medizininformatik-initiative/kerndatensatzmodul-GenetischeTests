@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_MolGen_FamiliaereLinie",
+  "id": "mii-vs-molgen-familiaere-linie",
+  "title": "MII VS MolGen Familiäre Linie",
+  "description": "ValueSet für die Angabe der familären Linie zwischen Patient und Familienangehörigen.",
+  "version": "0.9.0-ballot",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-familiaere-linie",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "72705000",
+            "display": "Mother (person)"
+          },
+          {
+            "code": "66839005",
+            "display": "Father (person)"
+          }
+        ]
+      }
+    ]
+  }
+}
