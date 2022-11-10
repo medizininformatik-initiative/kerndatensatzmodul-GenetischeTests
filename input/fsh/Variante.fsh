@@ -1,7 +1,7 @@
-Profile: SD_MII_MolGen_Variante
+Profile: MII_PR_MolGen_Variante
 Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant
-Id: sd-mii-molgen-variante
-Title: "SD MII MolGen Variante"
+Id: mii-pr-molgen-variante
+Title: "MII PR MolGen Variante"
 Description: "Dieses Profil ermöglicht eine vollständige Beschreibung der gefundenen Variante unter Verwendung von Eigenschaften aus einer Vielzahl von Testmethoden."
 * insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
@@ -73,25 +73,25 @@ Description: "Dieses Profil ermöglicht eine vollständige Beschreibung der gefu
 Mapping: MolGen-Variante
 Id: MII-KDS
 Title: "MII KDS Mapping"
-Source: SD_MII_MolGen_Variante
+Source: MII_PR_MolGen_Variante
 * component[gene-studied] -> "mide-dataelement-1400" "Getestete Gene ID"
 
-Instance: example-mii-molgen-variante-1
-InstanceOf: sd-mii-molgen-variante
+Instance: mii-exa-molgen-variante-1
+InstanceOf: mii-pr-molgen-variante
 Usage: #example
 Title: "BRAF Variante"
 Description: "Beispiel für genetische Variante im BRAF Gen an Hand von NGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
-* basedOn = Reference(example-mii-molgen-anforderung-1)
+* basedOn = Reference(mii-exa-molgen-anforderung-1)
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#69548-6 "Genetic variant assessment"
-* subject = Reference(example-mii-molgen-patient)
+* subject = Reference(mii-exa-molgen-patient)
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * method = LNC#LA26398-0 "Sequencing"
-* specimen = Reference(example-mii-molgen-specimen-1)
-* device = Reference(example-mii-molgen-device-sequencer)
-* derivedFrom = Reference(example-mii-molgen-untersuchte-region-1)
+* specimen = Reference(mii-exa-molgen-specimen-1)
+* device = Reference(mii-exa-molgen-device-sequencer)
+* derivedFrom = Reference(mii-exa-molgen-untersuchte-region-1)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:1097 "BRAF"
 * component[genomic-ref-seq].code = LNC#48013-7 "Genomic reference sequence [ID]"
@@ -115,23 +115,23 @@ Description: "Beispiel für genetische Variante im BRAF Gen an Hand von NGS."
 * component[variation-code].code = LNC#81252-9 "Discrete genetic variant"
 * component[variation-code].valueCodeableConcept = dbSNP#rs113488022
 
-Instance: example-mii-molgen-variante-2
-InstanceOf: sd-mii-molgen-variante
+Instance: mii-exa-molgen-variante-2
+InstanceOf: mii-pr-molgen-variante
 Usage: #example
 Title: "NIPBL Variante"
 Description: "Beispiel für genetische Variante im NIPBL Gen an Hand von WGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
-* basedOn = Reference(example-mii-molgen-anforderung-2)
+* basedOn = Reference(mii-exa-molgen-anforderung-2)
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#69548-6 "Genetic variant assessment"
-* subject = Reference(example-mii-molgen-patient-2)
+* subject = Reference(mii-exa-molgen-patient-2)
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * method.coding[0] = LNC#LA26398-0 "Sequencing"
 * method.coding[1] = LNC#86206-0 "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
-* specimen = Reference(example-mii-molgen-specimen-2)
-* device = Reference(example-mii-molgen-device-sequencer-2)
-//* derivedFrom = Reference(example-mii-molgen-untersuchte-region-1)
+* specimen = Reference(mii-exa-molgen-specimen-2)
+* device = Reference(mii-exa-molgen-device-sequencer-2)
+//* derivedFrom = Reference(mii-exa-molgen-untersuchte-region-1)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:28862 "NIPBL"
 * component[transcript-ref-seq].valueCodeableConcept = RefSeq#NM_133433.4
@@ -153,23 +153,23 @@ Description: "Beispiel für genetische Variante im NIPBL Gen an Hand von WGS."
 * component[variation-code].valueCodeableConcept.coding[0] = ClinVarVID#1076298
 * component[variation-code].valueCodeableConcept.coding[1] = ClinVarVID#VCV001076298.1
 
-Instance: example-mii-molgen-variante-fusion-3
-InstanceOf: sd-mii-molgen-variante
+Instance: mii-exa-molgen-variante-fusion-3
+InstanceOf: mii-pr-molgen-variante
 Usage: #example
 Title: "Variante FGFR2-DBP Fusion"
 Description: "Beispiel für genetische Variante FGFR2-DBP Fusion."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
-* basedOn = Reference(example-mii-molgen-anforderung-2)
+* basedOn = Reference(mii-exa-molgen-anforderung-2)
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#69548-6 "Genetic variant assessment"
-* subject = Reference(example-mii-molgen-patient-2)
+* subject = Reference(mii-exa-molgen-patient-2)
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * method.coding[0] = LNC#LA26398-0 "Sequencing"
 * method.coding[1] = LNC#86206-0 "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
-* specimen = Reference(example-mii-molgen-specimen-2)
-* device = Reference(example-mii-molgen-device-sequencer-2)
-* derivedFrom = Reference(example-mii-molgen-untersuchte-region-1)
+* specimen = Reference(mii-exa-molgen-specimen-2)
+* device = Reference(mii-exa-molgen-device-sequencer-2)
+* derivedFrom = Reference(mii-exa-molgen-untersuchte-region-1)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:3689 "FGFR2"
 * component[coding-change-type].valueCodeableConcept = SO#SO:0001565 "gene_fusion"
@@ -179,24 +179,24 @@ Description: "Beispiel für genetische Variante FGFR2-DBP Fusion."
 
 
 // CNV
-Instance: example-mii-molgen-variante-cnv-4
-InstanceOf: sd-mii-molgen-variante
+Instance: mii-exa-molgen-variante-cnv-4
+InstanceOf: mii-pr-molgen-variante
 Usage: #example
 Title: "Variante SMO CNV"
 Description: "Beispiel für genetische Copy Number Variante SMO Gen."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
-//* basedOn = Reference(example-mii-molgen-anforderung-2)
+//* basedOn = Reference(mii-exa-molgen-anforderung-2)
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#69548-6 "Genetic variant assessment"
-* subject = Reference(example-mii-molgen-patient-2)
+* subject = Reference(mii-exa-molgen-patient-2)
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * method.coding[0] = LNC#LA26398-0 "Sequencing"
 * method.text = "Analysepipeline XXX, Auswertungssoftware XXX, Prozessierungssystem XXX"
 //* method.coding[1] = LNC#86206-0 "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
-//* specimen = Reference(example-mii-molgen-specimen-2)
-//* device = Reference(example-mii-molgen-device-sequencer-2)
-//* derivedFrom = Reference(example-mii-molgen-untersuchte-region-1)
+//* specimen = Reference(mii-exa-molgen-specimen-2)
+//* device = Reference(mii-exa-molgen-device-sequencer-2)
+//* derivedFrom = Reference(mii-exa-molgen-untersuchte-region-1)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:11119 "SMO"
 * component[coding-change-type].valueCodeableConcept = SO#SO:0001742 "copy_number_gain"
@@ -216,7 +216,7 @@ Description: "Beispiel für genetische Copy Number Variante SMO Gen."
 // 04 docx
 // https://www.ncbi.nlm.nih.gov/clinvar/RCV000119097.19/
 Instance: mii-exa-molgen-variante-brca1
-InstanceOf: sd-mii-molgen-variante
+InstanceOf: mii-pr-molgen-variante
 Usage: #example
 Title: "Variante BRCA1"
 Description: "Beispiel für genetische Variante BRCA1"
@@ -230,7 +230,7 @@ Description: "Beispiel für genetische Variante BRCA1"
 * method.coding[0] = LNC#LA26398-0 "Sequencing"
 * specimen = Reference(mii-exa-molgen-specimen-brca1)
 * device = Reference(mii-exa-molgen-device-sequencer-nextseq)
-//* derivedFrom = Reference(example-mii-molgen-untersuchte-region-1)
+//* derivedFrom = Reference(mii-exa-molgen-untersuchte-region-1)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:1100 "BRCA1"
 * component[cytogenetic-location].valueCodeableConcept = ChromLoc#17q21.31

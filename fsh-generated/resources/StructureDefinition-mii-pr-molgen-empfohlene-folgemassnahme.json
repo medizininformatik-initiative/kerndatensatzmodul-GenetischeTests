@@ -1,0 +1,134 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-molgen-empfohlene-folgemassnahme",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Base.Workflow"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "not-classified"
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme",
+  "version": "0.9.0-ballot",
+  "name": "MII_PR_MolGen_EmpfohleneFolgemassnahme",
+  "title": "MII PR MolGen Empfohlene Folgemaßnahme",
+  "status": "draft",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Das Profil dieser Task Ressource beschreibt die empfohlenen Folgemaßnahmen.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "MII-KDS",
+      "name": "MII KDS Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Task",
+  "baseDefinition": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/followup-recommendation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Task.status",
+        "path": "Task.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Task.intent",
+        "path": "Task.intent",
+        "mustSupport": true
+      },
+      {
+        "id": "Task.code",
+        "path": "Task.code",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1724",
+            "comment": "Empfehlungen (Therapie, Allg.)"
+          },
+          {
+            "identity": "MII-KDS",
+            "map": "mide-dataelement-1443",
+            "comment": "Beratung"
+          }
+        ]
+      },
+      {
+        "id": "Task.for",
+        "path": "Task.for",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference"
+            ],
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Task.encounter",
+        "path": "Task.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "Task.reasonCode",
+        "path": "Task.reasonCode",
+        "mustSupport": true
+      },
+      {
+        "id": "Task.reasonReference",
+        "path": "Task.reasonReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

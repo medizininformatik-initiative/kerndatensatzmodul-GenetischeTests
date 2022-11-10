@@ -1,6 +1,6 @@
 Profile: MII_PR_MolGen_ErgebnisZusammenfassung
 Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/overall-interpretation
-Id: mii-pr-modul-molgen-ergebnis-zusammenfassung
+Id: mii-pr-molgen-ergebnis-zusammenfassung
 Title: "MII PR MolGen Ergebnis Zusammenfassung"
 Description: "Mit diesem Profil kann das Labor das zusammenfassende Ergebnis des Tests deklarieren (z. B. Positiv, Negativ, Unbekannt)."
 * insert Publisher
@@ -24,7 +24,7 @@ Source: MII_PR_MolGen_ErgebnisZusammenfassung
 * component[conclusion-string] -> "mide-dataelement-1414" "Zusammenfassung"
 
 Instance: mii-exa-molgen-ergebnis-zusammenfassung-1
-InstanceOf: mii-pr-modul-molgen-ergebnis-zusammenfassung
+InstanceOf: mii-pr-molgen-ergebnis-zusammenfassung
 Usage: #example
 Title: "Ergebnis Zusammenfassung Befund-1"
 Description: "Beispiel zusammenfassendes Ergebnis"
@@ -32,13 +32,13 @@ Description: "Beispiel zusammenfassendes Ergebnis"
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#51968-6
-* subject = Reference(example-mii-molgen-patient)
+* subject = Reference(mii-exa-molgen-patient)
 * valueCodeableConcept = LNC#LA6576-8 "Positive"
 * component[conclusion-string].valueString = "BRAF p.V600E Mutation liegt vor. Bitte Therapieoption mit einem BRAF-Inhibitor prüfen."
 
 // 04 docx
 Instance: mii-exa-molgen-ergebnis-zusammenfassung-trurisk-panel
-InstanceOf: mii-pr-modul-molgen-ergebnis-zusammenfassung
+InstanceOf: mii-pr-molgen-ergebnis-zusammenfassung
 Usage: #example
 Title: "Ergebnis Zusammenfassung Befund "
 Description: "Beispiel zusammenfassendes Ergebnis bei BRCA1 Variante bei Familiärer Belastung für Brust- und Eierstockkrebs"

@@ -1,0 +1,25 @@
+{
+  "resourceType": "ChargeItem",
+  "id": "mii-exa-molgen-chargeitem-ebm-22",
+  "meta": {
+    "profile": [
+      "http://fhir.de/StructureDefinition/chargeitem-de-ebm"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_EBM",
+        "code": "11512",
+        "display": "Gezielter Nachweis oder Ausschluss von krankheitsrelevanten oder krankheitsauslösenden großen Deletionen und/oder Duplikationen"
+      }
+    ]
+  },
+  "status": "billable",
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient-2"
+  },
+  "quantity": {
+    "value": 6
+  }
+}

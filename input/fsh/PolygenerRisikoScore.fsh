@@ -1,7 +1,7 @@
-Profile: MII_SD_MolGen_PolygenerRisikoScore
+Profile: MII_PR_MolGen_PolygenerRisikoScore
 Parent: RiskAssessment
-Id: mii-sd-molgen-polygener-risiko-score
-Title: "MII SD MolGen Polygener Risiko Score"
+Id: mii-pr-molgen-polygener-risiko-score
+Title: "MII PR MolGen Polygener Risiko Score"
 Description: "Profil für Polygenen Risiko Score"
 * insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score"
@@ -17,7 +17,7 @@ Description: "Profil für Polygenen Risiko Score"
 * condition MS
 * basis MS
 * prediction MS
-  * extension contains mii-ex-modul-molgen-risk-assessment-einflussfaktor named whenCodeableConcept 0..1 MS
+  * extension contains mii-ex-molgen-risk-assessment-einflussfaktor named whenCodeableConcept 0..1 MS
   * outcome MS
   * probability[x] MS
   * qualitativeRisk MS
@@ -25,7 +25,7 @@ Description: "Profil für Polygenen Risiko Score"
   * when[x] MS
 
 Extension: MII_EX_MolGen_RiskAssessment_Einflussfaktor
-Id: mii-ex-modul-molgen-risk-assessment-einflussfaktor
+Id: mii-ex-molgen-risk-assessment-einflussfaktor
 Title: "MII EX MolGen RiskAssessment Einflussfaktor"
 Description: "Die Extension erweitert RiskAssessment.prediction um die Möglichkeit, weitere ausschlaggebende Faktoren mit Einfluss auf die Risikoberechnung anzugeben."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/risk-assessment-einflussfaktor"
@@ -35,12 +35,12 @@ Description: "Die Extension erweitert RiskAssessment.prediction um die Möglichk
 * value[x] only CodeableConcept
 
 Instance: mii-exa-molgen-prs-brca1
-InstanceOf: mii-sd-molgen-polygener-risiko-score
+InstanceOf: mii-pr-molgen-polygener-risiko-score
 Usage: #example
 Title: "Polygener Risiko Score BRCA1 Variante"
 Description: "Beispiel für Polygenen Risiko Score bei Variante BRCA1"
 * status = #final
-* subject = Reference(example-mii-molgen-patient-2)
+* subject = Reference(mii-exa-molgen-patient-2)
 * occurrenceDateTime = "2022-11-01"
 * basis = Reference(mii-exa-molgen-variante-brca1)
 * prediction.outcome = SCT#718220008 "Hereditary breast and ovarian cancer syndrome (disorder)"

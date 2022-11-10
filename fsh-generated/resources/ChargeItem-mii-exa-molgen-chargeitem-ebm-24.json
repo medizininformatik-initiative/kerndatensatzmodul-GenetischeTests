@@ -1,0 +1,25 @@
+{
+  "resourceType": "ChargeItem",
+  "id": "mii-exa-molgen-chargeitem-ebm-24",
+  "meta": {
+    "profile": [
+      "http://fhir.de/StructureDefinition/chargeitem-de-ebm"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_EBM",
+        "code": "11301",
+        "display": "Grundpauschale humangenetische in-vitro-Diagnostik bei Probeneinsendung"
+      }
+    ]
+  },
+  "status": "billable",
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient-2"
+  },
+  "quantity": {
+    "value": 1
+  }
+}

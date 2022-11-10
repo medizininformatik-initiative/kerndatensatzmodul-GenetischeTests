@@ -1,7 +1,7 @@
-Profile: SD_MII_MolGen_DiagnostischeImplikation
+Profile: MII_PR_MolGen_DiagnostischeImplikation
 Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication
-Id: sd-mii-modul-molgen-diagnostische-implikation
-Title: "SD MII MolGen Diagnostische Implikation"
+Id: mii-pr-molgen-diagnostische-implikation
+Title: "MII PR MolGen Diagnostische Implikation"
 Description: "Dieses Profil beschreibt den Zusammenhang zwischen einem oder mehreren Genotyp/Haplotyp/Varianten und Beweisen für oder gegen eine bestimmte Krankheit."
 * insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
@@ -14,7 +14,7 @@ Description: "Dieses Profil beschreibt den Zusammenhang zwischen einem oder mehr
 * subject only Reference(Patient or Group)
 * encounter MS
 * derivedFrom MS
-* derivedFrom[variant] only Reference(SD_MII_MolGen_Variante)
+* derivedFrom[variant] only Reference(MII_PR_MolGen_Variante)
 * component MS
 * component[predicted-phenotype] MS
 * component[conclusion-string] MS
@@ -26,12 +26,12 @@ Description: "Dieses Profil beschreibt den Zusammenhang zwischen einem oder mehr
 Mapping: MolGen-DiagnostischeImplikation
 Id: MII-KDS
 Title: "MII KDS Mapping"
-Source: SD_MII_MolGen_DiagnostischeImplikation
+Source: MII_PR_MolGen_DiagnostischeImplikation
 * component[evidence-level] -> "mide-dataelement-1720" "Clinical Annotation Level Of Evidence"
 * component[clinical-significance] -> "mide-dataelement-2015" "Klinische Signifikanz"
 
-Instance: example-mii-molgen-diagnostische-implikation-1
-InstanceOf: sd-mii-modul-molgen-diagnostische-implikation
+Instance: mii-exa-molgen-diagnostische-implikation-1
+InstanceOf: mii-pr-molgen-diagnostische-implikation
 Usage: #example
 Title: "BRAF Variante Diagnostische Implikation"
 Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS."
@@ -39,14 +39,14 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = GenTbd#diagnostic-implication "Diagnostische Implikation"
-* subject = Reference(example-mii-molgen-patient)
-* performer = Reference(example-mii-molgen-practitioner-lab)
-* derivedFrom[variant] = Reference(example-mii-molgen-variante-1)
+* subject = Reference(mii-exa-molgen-patient)
+* performer = Reference(mii-exa-molgen-practitioner-lab)
+* derivedFrom[variant] = Reference(mii-exa-molgen-variante-1)
 * component[conclusion-string].code = GenTbd#conclusion-string
 * component[conclusion-string].valueString = "Nachweis einer aktivierenden Mutation BRAF V600E"
 
-Instance: example-mii-molgen-diagnostische-implikation-2
-InstanceOf: sd-mii-modul-molgen-diagnostische-implikation
+Instance: mii-exa-molgen-diagnostische-implikation-2
+InstanceOf: mii-pr-molgen-diagnostische-implikation
 Usage: #example
 Title: "NIPBL Variante Diagnostische Implikation"
 Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im NIPBL Gen an Hand von WGS."
@@ -58,9 +58,9 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = GenTbd#diagnostic-implication "Diagnostische Implikation"
-* subject = Reference(example-mii-molgen-patient-2)
-* performer = Reference(example-mii-molgen-practitioner-lab)
-* derivedFrom[variant] = Reference(example-mii-molgen-variante-2)
+* subject = Reference(mii-exa-molgen-patient-2)
+* performer = Reference(mii-exa-molgen-practitioner-lab)
+* derivedFrom[variant] = Reference(mii-exa-molgen-variante-2)
 * component[conclusion-string].code = GenTbd#conclusion-string
 * component[conclusion-string].valueString = "Nachweis einer pathogenen Variante im NIPBL-Gen in heterozygoter Form."
 * component[clinical-significance].code = LNC#53037-8 "Genetic variation clinical significance [Imp]"
@@ -72,8 +72,8 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer
 
 
 // CNV (17.pdf)
-Instance: example-mii-molgen-diagnostische-implikation-cnv-4
-InstanceOf: sd-mii-modul-molgen-diagnostische-implikation
+Instance: mii-exa-molgen-diagnostische-implikation-cnv-4
+InstanceOf: mii-pr-molgen-diagnostische-implikation
 Usage: #example
 Title: "CNV SMO Diagnostische Implikation"
 Description: "Beispiel für diagnostische Implikation abgeleitet von Copy Number Variante im SMO Gen."
@@ -85,9 +85,9 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von Copy Number
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = GenTbd#diagnostic-implication "Diagnostische Implikation"
-* subject = Reference(example-mii-molgen-patient-2)
-* performer = Reference(example-mii-molgen-practitioner-lab)
-* derivedFrom[variant] = Reference(example-mii-molgen-variante-cnv-4)
+* subject = Reference(mii-exa-molgen-patient-2)
+* performer = Reference(mii-exa-molgen-practitioner-lab)
+* derivedFrom[variant] = Reference(mii-exa-molgen-variante-cnv-4)
 * component[conclusion-string].code = GenTbd#conclusion-string
 * component[conclusion-string].valueString = "onkogene Veränderung mögl. Überexpression"
 * component[clinical-significance].code = LNC#53037-8 "Genetic variation clinical significance [Imp]"
@@ -98,7 +98,7 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von Copy Number
 
 // 04 docx
 Instance: mii-exa-molgen-diagnostische-implikation-brca1
-InstanceOf: sd-mii-modul-molgen-diagnostische-implikation
+InstanceOf: mii-pr-molgen-diagnostische-implikation
 Usage: #example
 Title: "Diagnostische Implikation BRCA1 Variante"
 Description: "Beispiel für diagnostische Implikation abgeleitet von SNP im BRCA1."
@@ -111,7 +111,7 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von SNP im BRCA
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = GenTbd#diagnostic-implication "Diagnostische Implikation"
 * subject = Reference(mii-exa-molgen-patient-brca1)
-* performer = Reference(example-mii-molgen-practitioner-lab)
+* performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-brca1)
 * component[conclusion-string].code = GenTbd#conclusion-string
 * component[conclusion-string].valueString = "Nachweis heterozygoter Sequenzveränderung, die zum Funktionsverlust führt"

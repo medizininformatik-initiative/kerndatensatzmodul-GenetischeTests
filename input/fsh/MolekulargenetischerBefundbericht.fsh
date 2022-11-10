@@ -1,13 +1,13 @@
-Profile: SD_MII_MolGen_MolekulargenetischerBefundbericht
+Profile: MII_PR_MolGen_MolekulargenetischerBefundbericht
 Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report
-Id: sd-mii-modul-molgen-molekulargenetischer-befundbericht
-Title: "SD MII MolGen Molekulargenetischer Befundbericht"
+Id: mii-pr-molgen-molekulargenetischer-befundbericht
+Title: "MII PR MolGen Molekulargenetischer Befundbericht"
 Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen Befundberichte und enthält Metadaten über den gesamten Bericht sowie alle relevanten Informationen, die im Rahmen der molekulargenetischen Analyse gefunden wurden."
 * insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
 * ^status = #draft
 * extension[recommended-action] MS
-* extension[recommended-action] only SD_MII_MolGen_EmpfohleneMassnahme
+* extension[recommended-action] only MII_EX_MolGen_EmpfohleneMassnahme
 * extension[supporting-info] MS
 * extension[coded-note] MS
 * extension[genomics-risk-assessment] MS
@@ -32,24 +32,23 @@ Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen B
     microsatellite-instability 0..*
 //* result[gen-grouper] only Reference(SD_MII_MolGen_GruppierungBeobachtungen)
 * result[overall] MS
-* result[overall] only Reference(mii-pr-modul-molgen-ergebnis-zusammenfassung)
+* result[overall] only Reference(mii-pr-molgen-ergebnis-zusammenfassung)
 * result[diagnostic-implication] MS
-* result[diagnostic-implication] only Reference(SD_MII_MolGen_DiagnostischeImplikation)
+* result[diagnostic-implication] only Reference(MII_PR_MolGen_DiagnostischeImplikation)
 * result[therapeutic-implication] MS
-* result[therapeutic-implication] only Reference(SD_MII_MolGen_TherapeutischeImplikation)
+* result[therapeutic-implication] only Reference(MII_PR_MolGen_TherapeutischeImplikation)
 * result[variant] MS
-* result[variant] only Reference(SD_MII_MolGen_Variante)
+* result[variant] only Reference(MII_PR_MolGen_Variante)
 * result[region-studied] MS
-* result[region-studied] only Reference(SD_MII_MolGen_UntersuchteRegion)
+* result[region-studied] only Reference(MII_PR_MolGen_UntersuchteRegion)
 * result[tumor-mutation-burden] MS
-* result[tumor-mutation-burden] only Reference(SD_MII_MolGen_Mutationslast)
+* result[tumor-mutation-burden] only Reference(MII_PR_MolGen_Mutationslast)
 * result[genotype] MS
-* result[genotype] only Reference(SD_MII_MolGen_Genotyp)
+* result[genotype] only Reference(MII_PR_MolGen_Genotyp)
 * result[microsatellite-instability] MS
-* result[microsatellite-instability] only Reference(SD_MII_MolGen_Mikrosatelliteninstabilitaet)
+* result[microsatellite-instability] only Reference(MII_PR_MolGen_Mikrosatelliteninstabilitaet)
 * result[sequence-phase-relation] MS
 * result[haplotype] MS
-
 * media MS
 * conclusion MS
 * conclusionCode MS
@@ -57,7 +56,7 @@ Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen B
 Mapping: MolGen-Befundbericht
 Id: MII-KDS
 Title: "MII KDS Mapping"
-Source: SD_MII_MolGen_MolekulargenetischerBefundbericht
+Source: MII_PR_MolGen_MolekulargenetischerBefundbericht
 * -> "mide-dataelement-1371" "Molekulargenetischer Befundbericht"
 * status -> "mide-dataelement-1448" "Berichtstatus"
 * issued -> "mide-dataelement-1452" "Datum des Berichtes"
@@ -66,35 +65,35 @@ Source: SD_MII_MolGen_MolekulargenetischerBefundbericht
 * media -> "mide-dataelement-1698" "Daten"
 * media -> "mide-dataelement-1447" "Anhänge"
 
-Instance: example-mii-molgen-molekulargenetischer-befundbericht-1
-InstanceOf: sd-mii-modul-molgen-molekulargenetischer-befundbericht
+Instance: mii-exa-molgen-molekulargenetischer-befundbericht-1
+InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
 Title: "Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom"
 Description: "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorektalem Adenokarzniom."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
-* extension[RecommendedAction][+].valueReference = Reference(example-mii-molgen-medikationsempfehlung-1)
-* extension[RecommendedAction][+].valueReference = Reference(example-mii-molgen-folgemassnahme-1)
-* extension[supportingInfo].valueReference = Reference(example-mii-molgen-family-member-history-1)
-* basedOn = Reference(example-mii-molgen-anforderung-1)
+* extension[RecommendedAction][+].valueReference = Reference(mii-exa-molgen-medikationsempfehlung-1)
+* extension[RecommendedAction][+].valueReference = Reference(mii-exa-molgen-folgemassnahme-1)
+* extension[supportingInfo].valueReference = Reference(mii-exa-molgen-family-member-history-1)
+* basedOn = Reference(mii-exa-molgen-anforderung-1)
 * status = DiagRepStatus#final
 * category[Genetics] = v2-0074#GE "Genetics"
 * code = LNC#51969-4 "Genetic analysis report"
-* subject = Reference(example-mii-molgen-patient)
-* performer = Reference(example-mii-molgen-practitioner-lab)
-* specimen = Reference(example-mii-molgen-specimen-1)
-//* result[gen-grouper] = Reference(example-mii-molgen-gruppierung-beobachtungen-1)
+* subject = Reference(mii-exa-molgen-patient)
+* performer = Reference(mii-exa-molgen-practitioner-lab)
+* specimen = Reference(mii-exa-molgen-specimen-1)
+//* result[gen-grouper] = Reference(mii-exa-molgen-gruppierung-beobachtungen-1)
 * result[overall] = Reference(mii-exa-molgen-ergebnis-zusammenfassung-1)
-* result[diagnostic-implication] = Reference(example-mii-molgen-diagnostische-implikation-1)
-* result[therapeutic-implication] = Reference(example-mii-molgen-therapeutische-implikation-1)
-* result[variant] = Reference(example-mii-molgen-variante-1)
-* result[region-studied] = Reference(example-mii-molgen-untersuchte-region-1)
-* result[genotype] = Reference(example-mii-molgen-genotyp-1)
-* result[tumor-mutation-burden] = Reference(example-mii-molgen-mutationslast-1)
-* result[microsatellite-instability] = Reference(example-mii-molgen-mikrosatelliteninstabilitaet-1)
+* result[diagnostic-implication] = Reference(mii-exa-molgen-diagnostische-implikation-1)
+* result[therapeutic-implication] = Reference(mii-exa-molgen-therapeutische-implikation-1)
+* result[variant] = Reference(mii-exa-molgen-variante-1)
+* result[region-studied] = Reference(mii-exa-molgen-untersuchte-region-1)
+* result[genotype] = Reference(mii-exa-molgen-genotyp-1)
+* result[tumor-mutation-burden] = Reference(mii-exa-molgen-mutationslast-1)
+* result[microsatellite-instability] = Reference(mii-exa-molgen-mikrosatelliteninstabilitaet-1)
 * conclusion = "BRAF p.V600E Mutation liegt vor. Bitte Therapieoption mit einem BRAF-Inhibitor prüfen."
 
-Instance: example-mii-molgen-molekulargenetischer-befundbericht-2
-InstanceOf: sd-mii-modul-molgen-molekulargenetischer-befundbericht
+Instance: mii-exa-molgen-molekulargenetischer-befundbericht-2
+InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
 Title: "Molekulargentischer Befund 2: Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang"
 Description: "Beispiel für molekulargenetischen Befund Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang."
@@ -120,61 +119,61 @@ Description: "Beispiel für molekulargenetischen Befund Molekulargenetische Diag
 * extension[coded-note][=].valueAnnotation.extension[code].valueCodeableConcept = SCT#116148004 "Molecular genetics procedure (procedure)"
 * extension[coded-note][=].valueAnnotation.text = "Gen-Panel zusammengestellt nach den aktuellen Empfehlungen des Deutschen Konsortiums für erblichen Brust- und Eierstockkrebs sowie der ClinGen Breast/Ovarian Cancer Working Group (Lee et al. 2019, PMID: 30504931). Nach DNA-Extraktion wurden alle kodierenden Exons der zu untersuchenden Gene einschließlich flankierender intronischer Regionen (mindestens von -3 bis +8) angereichert (Custom Panel V02, IDT) und auf einem Illumina NextSeq 500-, NextSeq 550- oder NovaSeq 6000-Sequencer sequenziert. Zur Verifizierung der DNA-Probe wurden 14 SNPs (Single Nucleotide Polymorphism) mittels kompetitiver allelspezifischer PCR unter Verwendung fluoreszenzmarkierter Primer amplifiziert (StepOnePlus System, ThermoFisher Scientific) und analysiert (StepOnePlus software für Genotyping Experiments) und die Ergebnisse mit den Daten der NGS-Analyse verglichen (megSAP). Der Abgleich der ermittelten DNA-Sequenz erfolgte mit den in den Gendatenbanken niedergelegten Sequenzen: BRCA1 - NCBI Reference Sequence NM_007294.2, BRCA2 - ensembl ENST00000380152, ATM - NCBI Reference Sequence NM_000051.3, BARD1 - ENST00000260947.4, BRIP1 - NCBI Reference Sequence NM_032043.2, CDH1 - ensembl ENST00000261769, CHEK2 - NCBI Reference Sequence NM_007194.3, PALB2 - ensembl ENST00000261584, PTEN -  NCBI Reference Sequence NM_000214.4, RAD51C - ensembl ENST00000337432, RAD51D - ensembl ENST00000345365,  STK11 -  ensembl ENST00000326873.7 und TP53 - ensembl ENST00000269305. Es wurden außerdem Varianten nachgewiesen, die nach heutigem Wissensstand als Normvarianten ohne pathologische Bedeutung zu werten sind."
 * extension[supporting-info][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo"
-* extension[supporting-info][=].valueReference = Reference(example-mii-molgen-chargeitem-ebm-21)
+* extension[supporting-info][=].valueReference = Reference(mii-exa-molgen-chargeitem-ebm-21)
 * extension[supporting-info][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo"
-* extension[supporting-info][=].valueReference = Reference(example-mii-molgen-chargeitem-ebm-22)
+* extension[supporting-info][=].valueReference = Reference(mii-exa-molgen-chargeitem-ebm-22)
 * extension[supporting-info][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo"
-* extension[supporting-info][=].valueReference = Reference(example-mii-molgen-chargeitem-ebm-23)
+* extension[supporting-info][=].valueReference = Reference(mii-exa-molgen-chargeitem-ebm-23)
 * extension[supporting-info][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo"
-* extension[supporting-info][=].valueReference = Reference(example-mii-molgen-chargeitem-ebm-24)
-* basedOn = Reference(example-mii-molgen-anforderung-2)
+* extension[supporting-info][=].valueReference = Reference(mii-exa-molgen-chargeitem-ebm-24)
+* basedOn = Reference(mii-exa-molgen-anforderung-2)
 * status = DiagRepStatus#final
 * category[Genetics] = v2-0074#GE "Genetics"
 * code[+] = LNC#51969-4 "Genetic analysis report"
-* subject = Reference(example-mii-molgen-patient-2)
-* performer = Reference(example-mii-molgen-practitioner-lab)
-* specimen = Reference(example-mii-molgen-specimen-2)
-//* result[gen-grouper] = Reference(example-mii-molgen-gruppierung-beobachtungen-2-nipbl)
-* result[diagnostic-implication] = Reference(example-mii-molgen-diagnostische-implikation-2)
-* result[variant] = Reference(example-mii-molgen-variante-2)
-* result[region-studied][+] = Reference(example-mii-molgen-untersuchte-region-2-nipbl)
-* result[region-studied][+] = Reference(example-mii-molgen-untersuchte-region-2-hdac8)
-* result[region-studied][+] = Reference(example-mii-molgen-untersuchte-region-2-rad21)
-* result[region-studied][+] = Reference(example-mii-molgen-untersuchte-region-2-smc1a)
-* result[region-studied][+] = Reference(example-mii-molgen-untersuchte-region-2-smc3)
-* result[region-studied][+] = Reference(example-mii-molgen-untersuchte-region-2-tp63)
+* subject = Reference(mii-exa-molgen-patient-2)
+* performer = Reference(mii-exa-molgen-practitioner-lab)
+* specimen = Reference(mii-exa-molgen-specimen-2)
+//* result[gen-grouper] = Reference(mii-exa-molgen-gruppierung-beobachtungen-2-nipbl)
+* result[diagnostic-implication] = Reference(mii-exa-molgen-diagnostische-implikation-2)
+* result[variant] = Reference(mii-exa-molgen-variante-2)
+* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-2-nipbl)
+* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-2-hdac8)
+* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-2-rad21)
+* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-2-smc1a)
+* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-2-smc3)
+* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-2-tp63)
 * conclusion = "Nachweis der pathogenen Variante c.2207del p.(Pro736Glnfs*58) (heterozygot) im NIPBL-Gen."
 
 //Fusion
 
-//Instance: example-mii-molgen-molekulargenetischer-befundbericht-tumorboard-3
+//Instance: mii-exa-molgen-molekulargenetischer-befundbericht-tumorboard-3
 //InstanceOf: sd-mii-modul-molgen-molekulargenetischer-befundbericht
 //Usage: #example
 //Title: "Molekulargentischer Befund 3: Tumorboard Genfusion"
 //Description: "Beispiel für molekulargenetischen Befund Tumorboard Genfusion."
 //* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
-//* extension[RecommendedAction][+].valueReference = Reference(example-mii-molgen-medikationsempfehlung-1)
-//* extension[RecommendedAction][+].valueReference = Reference(example-mii-molgen-folgemassnahme-1)
-//* extension[supportingInfo].valueReference = Reference(example-mii-molgen-family-member-history-1)
-//* basedOn = Reference(example-mii-molgen-anforderung-1)
+//* extension[RecommendedAction][+].valueReference = Reference(mii-exa-molgen-medikationsempfehlung-1)
+//* extension[RecommendedAction][+].valueReference = Reference(mii-exa-molgen-folgemassnahme-1)
+//* extension[supportingInfo].valueReference = Reference(mii-exa-molgen-family-member-history-1)
+//* basedOn = Reference(mii-exa-molgen-anforderung-1)
 //* status = DiagRepStatus#final
 //* category = v2-0074#GE "Genetics"
 //* code = LNC#51969-4 "Genetic analysis report"
-//* subject = Reference(example-mii-molgen-patient)
-//* performer = Reference(example-mii-molgen-practitioner-lab)
-//* specimen = Reference(example-mii-molgen-specimen-1)
-//* result[gen-grouper] = Reference(example-mii-molgen-gruppierung-beobachtungen-1)
-//* result[diagnostic-implication] = Reference(example-mii-molgen-diagnostische-implikation-1)
-//* result[therapeutic-implication] = Reference(example-mii-molgen-therapeutische-implikation-1)
-//* result[variant] = Reference(example-mii-molgen-variante-1)
-//* result[region-studied] = Reference(example-mii-molgen-untersuchte-region-1)
-//* result[genotype] = Reference(example-mii-molgen-genotyp-1)
-//* result[tumor-mutation-burden] = Reference(example-mii-molgen-mutationslast-1)
+//* subject = Reference(mii-exa-molgen-patient)
+//* performer = Reference(mii-exa-molgen-practitioner-lab)
+//* specimen = Reference(mii-exa-molgen-specimen-1)
+//* result[gen-grouper] = Reference(mii-exa-molgen-gruppierung-beobachtungen-1)
+//* result[diagnostic-implication] = Reference(mii-exa-molgen-diagnostische-implikation-1)
+//* result[therapeutic-implication] = Reference(mii-exa-molgen-therapeutische-implikation-1)
+//* result[variant] = Reference(mii-exa-molgen-variante-1)
+//* result[region-studied] = Reference(mii-exa-molgen-untersuchte-region-1)
+//* result[genotype] = Reference(mii-exa-molgen-genotyp-1)
+//* result[tumor-mutation-burden] = Reference(mii-exa-molgen-mutationslast-1)
 //* conclusion = "Nachweises der bekannten treibenden FGFR2-Fusion"
 
 // 04 docx
 Instance: mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel
-InstanceOf: sd-mii-modul-molgen-molekulargenetischer-befundbericht
+InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
 Title: "Molekulargentischer Befund Familiäre Belastung für Brust- und Eierstockkrebs"
 Description: "Beispiel für molekulargenetischen Befund einer BRCA1 Variante bei Familiärer Belastung für Brust- und Eierstockkrebs."
@@ -194,7 +193,7 @@ Description: "Beispiel für molekulargenetischen Befund einer BRCA1 Variante bei
 * category[Genetics] = v2-0074#GE "Genetics"
 * code[+] = LNC#51969-4 "Genetic analysis report"
 * subject = Reference(mii-exa-molgen-patient-brca1)
-* performer = Reference(example-mii-molgen-practitioner-lab)
+* performer = Reference(mii-exa-molgen-practitioner-lab)
 * specimen = Reference(mii-exa-molgen-specimen-brca1)
 * result[overall] = Reference(mii-exa-molgen-ergebnis-zusammenfassung-trurisk-panel)
 * result[variant] = Reference(mii-exa-molgen-variante-brca1)

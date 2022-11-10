@@ -87,7 +87,7 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * condition.code.coding[orphanet].code 1.. MS
 
 Extension: MII_EX_MolGen_Verwandtschaftsgrad
-Id: mii-ex-mol-gen-verwandtschaftsgrad
+Id: mii-ex-molgen-verwandtschaftsgrad
 Title: "MII EX Mol Gen Verwandtschaftsgrad"
 Description: "Extension erlaubt die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen."
 * insert Publisher
@@ -99,7 +99,7 @@ Description: "Extension erlaubt die Angabe eines Verwandtschaftsgrades zwischen 
 * value[x] from MII_VS_MolGen_Verwandtschaftsgrad (required)
 
 ValueSet: MII_VS_MolGen_Verwandtschaftsgrad
-Id: mii-vs-mol-gen-verwandtschaftsgrad
+Id: mii-vs-molgen-verwandtschaftsgrad
 Title: "MII VS Mol Gen Verwandtschaftsgrad"
 Description: "ValueSet für die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen."
 * insert Publisher
@@ -165,7 +165,7 @@ Instance: mii-exa-molgen-family-member-history-1
 InstanceOf: mii-pr-molgen-familienanamnese
 Usage: #example
 * status = #completed
-* patient = Reference(example-mii-molgen-patient)
+* patient = Reference(mii-exa-molgen-patient)
 * date = "2022-04-07"
 * relationship.coding[snomed] = SCT#72705000 "Mother (person)"
 * relationship.coding[v3-RoleCode] = v3-RoleCode-cs#MTH "mother"
@@ -180,7 +180,7 @@ Instance: mii-exa-molgen-family-member-history-2
 InstanceOf: mii-pr-molgen-familienanamnese
 Usage: #example
 * status = #completed
-* patient = Reference(example-mii-molgen-patient)
+* patient = Reference(mii-exa-molgen-patient)
 * date = "2022-11-08"
 * relationship.coding[snomed] = SCT#394858009 "Paternal grandmother (person)"
 * relationship.coding[snomed].extension[Verwandtschaftsgrad].valueCoding = SCT#699110007 "Second degree blood relative (person)"

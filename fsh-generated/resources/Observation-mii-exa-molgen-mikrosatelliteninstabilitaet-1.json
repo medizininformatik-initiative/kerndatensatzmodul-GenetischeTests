@@ -1,0 +1,59 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-molgen-mikrosatelliteninstabilitaet-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet",
+      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/msi"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "81695-9",
+        "display": "Microsatellite instability [Interpretation] in Cancer specimen Qualitative"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+            "code": "conclusion-string"
+          }
+        ]
+      },
+      "valueString": "Tumor weist ein mikrosatellitenstabiles Wachstum auf."
+    }
+  ],
+  "status": "final",
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "LA14122-8",
+        "system": "http://loinc.org",
+        "display": "Stable"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "mii-exa-molgen-specimen-1"
+  }
+}

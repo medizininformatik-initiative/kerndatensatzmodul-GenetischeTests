@@ -1,7 +1,7 @@
-Profile: SD_MII_MolGen_Genotyp
+Profile: MII_PR_MolGen_Genotyp
 Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype
-Id: sd-mii-molgen-genotyp
-Title: "SD MII MolGen Genotyp"
+Id: mii-pr-molgen-genotyp
+Title: "MII PR MolGen Genotyp"
 Description: "Dieses Profil beschreibt die Feststellung eines bestimmten Genotyps auf der Grundlage einer oder mehrerer Varianten oder Haplotypen."
 * insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp"
@@ -24,13 +24,13 @@ Description: "Dieses Profil beschreibt die Feststellung eines bestimmten Genotyp
 Mapping: MolGen-Genotyp
 Id: MII-KDS
 Title: "MII KDS Mapping"
-Source: SD_MII_MolGen_Genotyp
+Source: MII_PR_MolGen_Genotyp
 * component[gene-studied] -> "mide-dataelement-1400" "Getestete Gene ID"
 * component[cytogenetic-location] -> "mide-dataelement-1434" "Zytogenetische Lokalisierung (Lokus)"
 * component[reference-sequence-assembly] -> "mide-dataelement-1788" "Referenzgenom"
 
-Instance: example-mii-molgen-genotyp-1
-InstanceOf: sd-mii-molgen-genotyp
+Instance: mii-exa-molgen-genotyp-1
+InstanceOf: mii-pr-molgen-genotyp
 Usage: #example
 Title: "Genotyp BRAF"
 Description: "Beispiel für Genotyp BRAF Gen."
@@ -38,12 +38,12 @@ Description: "Beispiel für Genotyp BRAF Gen."
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#84413-4 "Genotype display name"
-* subject = Reference(example-mii-molgen-patient)
+* subject = Reference(mii-exa-molgen-patient)
 * valueCodeableConcept.text = "BRAF rs113488022 T>A"
 * method = LNC#LA26398-0 "Sequencing"
-* specimen = Reference(example-mii-molgen-specimen-1)
-* device = Reference(example-mii-molgen-device-sequencer)
-* derivedFrom = Reference(example-mii-molgen-variante-1)
+* specimen = Reference(mii-exa-molgen-specimen-1)
+* device = Reference(mii-exa-molgen-device-sequencer)
+* derivedFrom = Reference(mii-exa-molgen-variante-1)
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:1097 "BRAF"
 * component[cytogenetic-location].code = LNC#48001-2 "Cytogenetic (chromosome) location"

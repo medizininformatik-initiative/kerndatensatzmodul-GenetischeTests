@@ -30,13 +30,13 @@ RuleSet: SupportSearchParam (name, canonical, type, expectation)
 * rest.resource[=].searchParam[=].extension[0].url = $exp
 * rest.resource[=].searchParam[=].extension[0].valueCode = {expectation}
 
-Instance: cps-mii-molgen-capabilitystatement
+Instance: mii-cps-molgen-capabilitystatement
 InstanceOf: CapabilityStatement
 Usage: #definition
 * insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/CapabilityStatement/metadata"
-* name = "CpS_MII_MolGen_CapabilityStatement"
-* title = "CpS MII MolGen CapabilityStatement"
+* name = "MII_CPS_MolGen_CapabilityStatement"
+* title = "MII CPS MolGen CapabilityStatement"
 * status = #draft
 * experimental = false
 * date = "2022-07-07"
