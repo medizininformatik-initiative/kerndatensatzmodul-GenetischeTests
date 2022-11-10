@@ -1,0 +1,38 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_MolGen_Verwandtschaftsgrad",
+  "id": "mii-vs-molgen-verwandtschaftsgrad",
+  "title": "MII VS Mol Gen Verwandtschaftsgrad",
+  "description": "ValueSet für die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen.",
+  "version": "0.9.0-ballot",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-verwandtschaftsgrad",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "125678001",
+            "display": "First degree blood relative (person)"
+          },
+          {
+            "code": "699110007",
+            "display": "Second degree blood relative (person)"
+          }
+        ]
+      }
+    ]
+  }
+}

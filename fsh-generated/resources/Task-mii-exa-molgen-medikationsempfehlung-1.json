@@ -1,0 +1,33 @@
+{
+  "resourceType": "Task",
+  "id": "mii-exa-molgen-medikationsempfehlung-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung",
+      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation"
+    ]
+  },
+  "status": "requested",
+  "intent": "proposal",
+  "basedOn": [
+    {
+      "reference": "servicerequest/example"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "LA26421-0",
+        "system": "http://loinc.org",
+        "display": "Consider alternative medication"
+      }
+    ],
+    "text": "Alternative Medikation in Erwägung ziehen"
+  },
+  "for": {
+    "reference": "Patient/mii-exa-molgen-patient"
+  },
+  "reasonReference": {
+    "reference": "Observation/mii-exa-molgen-therapeutische-implikation-1"
+  }
+}

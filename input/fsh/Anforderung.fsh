@@ -1,7 +1,7 @@
-Profile: SD_MII_MolGen_AnforderungGenetischerTest
+Profile: MII_PR_MolGen_AnforderungGenetischerTest
 Parent: ServiceRequest
-Id: sd-mii-modul-molgen-anforderung-gentischer-test
-Title: "SD MII MolGen Anforderung genetischer Test"
+Id: mii-pr-molgen-anforderung-gentischer-test
+Title: "MII PR MolGen Anforderung genetischer Test"
 Description: "Der Laborauftrag oder die Anfrage, die die Durchführung des genetischen Tests auslöst."
 * insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
@@ -32,7 +32,7 @@ Description: "Der Laborauftrag oder die Anfrage, die die Durchführung des genet
 Mapping: MolGen-Anforderung
 Id: MII-KDS
 Title: "MII KDS Mapping"
-Source: SD_MII_MolGen_AnforderungGenetischerTest
+Source: MII_PR_MolGen_AnforderungGenetischerTest
 * -> "mide-dataelement-1733" "Indikation / Anforderung"
 * requester -> "mide-dataelement-1746" "Anforderer"
 * reasonCode -> "mide-dataelement-1736" "Indikation"
@@ -50,8 +50,8 @@ Source: SD_MII_MolGen_AnforderungGenetischerTest
 * note -> "mide-dataelement-1763" "Anforderungstext"
 * authoredOn -> "mide-dataelement-1766" "Datum der Anforderung"
 
-Instance: example-mii-molgen-anforderung-1
-InstanceOf: sd-mii-modul-molgen-anforderung-gentischer-test
+Instance: mii-exa-molgen-anforderung-1
+InstanceOf: mii-pr-molgen-anforderung-gentischer-test
 Usage: #example
 Title: "Anforderung BRAF Genetische Testung"
 Description: "Beispiel für Anforderung für genetische Testung auf genetische Variante im BRAF Gen an Hand von NGS."
@@ -63,15 +63,15 @@ Description: "Beispiel für Anforderung für genetische Testung auf genetische V
 * code.coding[+] = LNC#53844-7 "BRAF gene targeted mutation analysis in Blood or Tissue by Molecular genetics method"
 * code.coding[+] = HGNC#HGNC:1097 "BRAF"
 * code.text = "BRAF: Exon 15 (Codon 600)"
-* subject = Reference(example-mii-molgen-patient)
+* subject = Reference(mii-exa-molgen-patient)
 * authoredOn = "2022-04-07"
-* requester = Reference(example-mii-molgen-practitioner-physician)
+* requester = Reference(mii-exa-molgen-practitioner-physician)
 * reasonCode = SCT#447886005 "Adenocarcinoma of anorectum (disorder)"
-* specimen = Reference(example-mii-molgen-specimen-1)
+* specimen = Reference(mii-exa-molgen-specimen-1)
 * supportingInfo[familienanamnese] = Reference(mii-exa-molgen-family-member-history-1)
 
-Instance: example-mii-molgen-anforderung-2
-InstanceOf: sd-mii-modul-molgen-anforderung-gentischer-test
+Instance: mii-exa-molgen-anforderung-2
+InstanceOf: mii-pr-molgen-anforderung-gentischer-test
 Usage: #example
 Title: "Anforderung Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom"
 Description: "Beispiel für Anforderung für genetische Testung auf pathogene Variante im NIPBL Gen."
@@ -84,10 +84,10 @@ Description: "Beispiel für Anforderung für genetische Testung auf pathogene Va
 * code.coding[+] = LNC#40428-5 "NIPBL gene targeted mutation analysis in Blood or Tissue by Molecular genetics method"
 * code.coding[+] = HGNC#HGNC:28862 "NIPBL"
 * code.text = "Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom (MIM122470),autosomal dominanter Erbgang"
-* subject = Reference(example-mii-molgen-patient-2)
+* subject = Reference(mii-exa-molgen-patient-2)
 * authoredOn = "2022-03-16"
-* requester = Reference(example-mii-molgen-practitioner-physician)
-* specimen = Reference(example-mii-molgen-specimen-2)
+* requester = Reference(mii-exa-molgen-practitioner-physician)
+* specimen = Reference(mii-exa-molgen-specimen-2)
 * reasonCode[0] = SCT#40354009 "De Lange syndrome (disorder)"
 * reasonCode[1] = SCT#395507008 "Premature infant (finding)"
 * reasonCode[2] = SCT#276610007 "Low birth weight infant (disorder)"
@@ -97,7 +97,7 @@ Description: "Beispiel für Anforderung für genetische Testung auf pathogene Va
 * reasonCode[6] = OMIM#122470 "Cornelia de Lange syndrome 1"
 
 Instance: mii-exa-molgen-anforderung-trurisk-panel
-InstanceOf: sd-mii-modul-molgen-anforderung-gentischer-test
+InstanceOf: mii-pr-molgen-anforderung-gentischer-test
 Usage: #example
 Title: "Anforderung Molekulargenetische Diagnose Familiäre Belastung für Brust- und Eierstockkrebs"
 Description: "Beispiel für Anforderung für genetische Testung bei Familiärer Belastung für Brust- und Eierstockkrebs."
@@ -110,7 +110,7 @@ Description: "Beispiel für Anforderung für genetische Testung bei Familiärer 
 * code.text = "Panelanalyse TruRisk®-V3 mit NGS basierter CNV-Analyse Bestimmung des Polygenen Risikoscores (PRS) für Brustkrebs"
 * subject = Reference(mii-exa-molgen-patient-brca1)
 * authoredOn = "2022-11-01"
-* requester = Reference(example-mii-molgen-practitioner-physician)
+* requester = Reference(mii-exa-molgen-practitioner-physician)
 * specimen = Reference(mii-exa-molgen-specimen-brca1)
 * reasonCode[0] = SCT#429740004 "Family history of malignant neoplasm of breast (situation)"
 * reasonCode[1] = SCT#430705002 "Family history of malignant neoplasm of ovary (situation)"

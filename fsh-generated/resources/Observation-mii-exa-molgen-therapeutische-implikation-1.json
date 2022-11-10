@@ -1,0 +1,123 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-molgen-therapeutische-implikation-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation",
+      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapeutic-implication"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+        "code": "therapeutic-implication",
+        "display": "Therapeutische Implikation"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+            "code": "conclusion-string"
+          }
+        ]
+      },
+      "valueString": "Nachweis einer aktivierenden Mutation BRAF V600E. Triple-Therapie mit einem EGFR-Antikörper sowie einem BRAF- und einem MEK- Inhibitor prüfen."
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "51963-7",
+            "display": "Medication assessed [ID]"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "L01EC",
+            "system": "http://www.whocc.no/atc",
+            "display": "B-Raf serine-threonine kinase (BRAF) inhibitors"
+          },
+          {
+            "code": "703645005",
+            "system": "http://snomed.info/sct",
+            "display": "Product containing B-Raf inhibitor (product)"
+          }
+        ],
+        "text": "BRAF Inhibitor"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "51963-7",
+            "display": "Medication assessed [ID]"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "L01FE",
+            "system": "http://www.whocc.no/atc",
+            "display": "EGFR (Epidermal Growth Factor Receptor) inhibitors"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "51963-7",
+            "display": "Medication assessed [ID]"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "L01EE",
+            "system": "http://www.whocc.no/atc",
+            "display": "Mitogen-activated protein kinase (MEK) inhibitors"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "final",
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient"
+  },
+  "performer": [
+    {
+      "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
+    }
+  ],
+  "derivedFrom": [
+    {
+      "reference": "Observation/mii-exa-molgen-variante-1"
+    }
+  ]
+}

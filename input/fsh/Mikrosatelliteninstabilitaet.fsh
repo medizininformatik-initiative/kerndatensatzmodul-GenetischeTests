@@ -1,7 +1,7 @@
-Profile: SD_MII_MolGen_Mikrosatelliteninstabilitaet
+Profile: MII_PR_MolGen_Mikrosatelliteninstabilitaet
 Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/msi
-Id: sd-mii-modul-molgen-mikrosatelliteninstabilitaet
-Title: "SD MII MolGen Mikrosatelliteninstabilität"
+Id: mii-pr-molgen-mikrosatelliteninstabilitaet
+Title: "MII PR MolGen Mikrosatelliteninstabilität"
 Description: "Mikrosatelliteninstabilität (MSI) ist ein Zustand genetischer Hypermutabilität (Neigung zu Mutationen), der aus einer gestörten DNA-Mismatch-Reparatur (MMR) resultiert."
 * insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet"
@@ -19,11 +19,11 @@ Description: "Mikrosatelliteninstabilität (MSI) ist ein Zustand genetischer Hyp
 Mapping: MolGen-Mikrosatelliteninstabilitaet
 Id: MII-KDS
 Title: "MII KDS Mapping"
-Source: SD_MII_MolGen_Mikrosatelliteninstabilitaet
+Source: MII_PR_MolGen_Mikrosatelliteninstabilitaet
 * valueCodeableConcept -> "mide-dataelement-2013" "Mikrosatelliteninstabilität"
 
-Instance: example-mii-molgen-mikrosatelliteninstabilitaet-1
-InstanceOf: sd-mii-modul-molgen-mikrosatelliteninstabilitaet
+Instance: mii-exa-molgen-mikrosatelliteninstabilitaet-1
+InstanceOf: mii-pr-molgen-mikrosatelliteninstabilitaet
 Usage: #example
 Title: "Mikrosatelliteninstabilität"
 Description: "Beispiel für Mikrosatelliteninstabilität in Tumorprobe."
@@ -31,8 +31,8 @@ Description: "Beispiel für Mikrosatelliteninstabilität in Tumorprobe."
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#81695-9 "Microsatellite instability [Interpretation] in Cancer specimen Qualitative"
-* subject = Reference(example-mii-molgen-patient)
+* subject = Reference(mii-exa-molgen-patient)
 * valueCodeableConcept = LNC#LA14122-8 "Stable"
-* specimen = Reference(example-mii-molgen-specimen-1)
+* specimen = Reference(mii-exa-molgen-specimen-1)
 * component[conclusion-string].code = GenTbd#conclusion-string
 * component[conclusion-string].valueString = "Tumor weist ein mikrosatellitenstabiles Wachstum auf."

@@ -4,7 +4,7 @@ RuleSet: Region(HGNC-ID, HGNC-symbol, RefSeq)
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#53041-0 "DNA region of interest panel"
 * subject = Reference(mii-exa-molgen-patient-brca1)
-* performer = Reference(example-mii-molgen-practitioner-lab)
+* performer = Reference(mii-exa-molgen-practitioner-lab)
 * method = LNC#LA26398-0 "Sequencing"
 * specimen = Reference(mii-exa-molgen-specimen-brca1)
 * device = Reference(mii-exa-molgen-device-sequencer-nextseq)
