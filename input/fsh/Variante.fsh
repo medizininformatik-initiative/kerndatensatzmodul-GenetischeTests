@@ -221,7 +221,7 @@ Usage: #example
 Title: "Variante BRCA1"
 Description: "Beispiel für genetische Variante BRCA1"
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
-* basedOn = Reference(mii-exa-molgen-anforderung-brca1)
+* basedOn = Reference(mii-exa-molgen-anforderung-trurisk-panel)
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#69548-6 "Genetic variant assessment"

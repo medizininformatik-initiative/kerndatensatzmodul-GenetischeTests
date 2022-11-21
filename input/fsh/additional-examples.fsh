@@ -290,6 +290,31 @@ Usage: #example
 * deviceName.name = "NextSeq"
 * deviceName.type = DeviceNameType#manufacturer-name
 
+Instance: mii-exa-befund-bundle-befund-2-nipbl
+InstanceOf: Bundle
+Usage: #example
+* type = #transaction
+* timestamp = "2022-11-21T14:44:00+01:00"
+* insert Bundle(mii-exa-molgen-patient-2, Patient)
+* insert Bundle(mii-exa-molgen-molekulargenetischer-befundbericht-2, DiagnosticReport)
+* insert Bundle(mii-exa-molgen-anforderung-2, ServiceRequest)
+* insert Bundle(mii-exa-molgen-chargeitem-ebm-21, ChargeItem)
+* insert Bundle(mii-exa-molgen-chargeitem-ebm-22, ChargeItem)
+* insert Bundle(mii-exa-molgen-chargeitem-ebm-23, ChargeItem)
+* insert Bundle(mii-exa-molgen-chargeitem-ebm-24, ChargeItem)
+* insert Bundle(mii-exa-molgen-practitioner-lab, Practitioner)
+* insert Bundle(mii-exa-molgen-specimen-2, Specimen)
+* insert Bundle(mii-exa-molgen-diagnostische-implikation-2, Observation)
+* insert Bundle(mii-exa-molgen-variante-2, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-nipbl, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-hdac8, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-rad21, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-smc1a, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-smc3, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-tp63, Observation)
+
+
+
 Instance: mii-exa-befund-bundle-fam-his-breast-ovar-can
 InstanceOf: Bundle
 Usage: #example
