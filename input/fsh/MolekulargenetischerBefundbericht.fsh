@@ -126,6 +126,8 @@ Description: "Beispiel für molekulargenetischen Befund Molekulargenetische Diag
 * extension[supporting-info][=].valueReference = Reference(mii-exa-molgen-chargeitem-ebm-23)
 * extension[supporting-info][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo"
 * extension[supporting-info][=].valueReference = Reference(mii-exa-molgen-chargeitem-ebm-24)
+* extension[supporting-info][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo"
+* extension[supporting-info][=].valueReference = Reference(mii-exa-befund-bundle-befund-2-nipbl-condition-lab)
 * basedOn = Reference(mii-exa-molgen-anforderung-2)
 * status = DiagRepStatus#final
 * category[Genetics] = v2-0074#GE "Genetics"

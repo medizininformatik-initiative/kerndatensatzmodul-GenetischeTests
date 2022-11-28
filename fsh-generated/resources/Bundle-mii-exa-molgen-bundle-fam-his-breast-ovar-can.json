@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "mii-exa-befund-bundle-fam-his-breast-ovar-can",
+  "id": "mii-exa-molgen-bundle-fam-his-breast-ovar-can",
   "type": "transaction",
   "timestamp": "2022-11-04T13:47:00+01:00",
   "entry": [
@@ -90,8 +90,8 @@
         ]
       },
       "request": {
-        "method": "POST",
-        "url": "Patient"
+        "method": "PUT",
+        "url": "Patient/mii-exa-molgen-patient-brca1"
       }
     },
     {
@@ -236,8 +236,8 @@
         "conclusion": "Nachweis heterozygoter Sequenzveränderung, die zum Funktionsverlust führt."
       },
       "request": {
-        "method": "POST",
-        "url": "DiagnosticReport"
+        "method": "PUT",
+        "url": "DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel"
       }
     },
     {
@@ -273,8 +273,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Task"
+        "method": "PUT",
+        "url": "Task/mii-exa-molgen-folgemassnahme-brca1"
       }
     },
     {
@@ -336,8 +336,8 @@
         ]
       },
       "request": {
-        "method": "POST",
-        "url": "RiskAssessment"
+        "method": "PUT",
+        "url": "RiskAssessment/mii-exa-molgen-prs-brca1"
       }
     },
     {
@@ -431,8 +431,8 @@
         ]
       },
       "request": {
-        "method": "POST",
-        "url": "ServiceRequest"
+        "method": "PUT",
+        "url": "ServiceRequest/mii-exa-molgen-anforderung-trurisk-panel"
       }
     },
     {
@@ -456,8 +456,8 @@
         ]
       },
       "request": {
-        "method": "POST",
-        "url": "Practitioner"
+        "method": "PUT",
+        "url": "Practitioner/mii-exa-molgen-practitioner-lab"
       }
     },
     {
@@ -495,8 +495,8 @@
         ]
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-specimen-brca1"
       }
     },
     {
@@ -557,8 +557,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-ergebnis-zusammenfassung-trurisk-panel"
       }
     },
     {
@@ -829,8 +829,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-variante-brca1"
       }
     },
     {
@@ -929,12 +929,12 @@
               "coding": [
                 {
                   "code": "HP:0003002",
-                  "system": "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+                  "system": "http://human-phenotype-ontology.org",
                   "display": "Breast carcinoma"
                 },
                 {
                   "code": "HP:0100615",
-                  "system": "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+                  "system": "http://human-phenotype-ontology.org",
                   "display": "Ovarian neoplasm"
                 }
               ]
@@ -976,8 +976,8 @@
         ]
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-diagnostische-implikation-brca1"
       }
     },
     {
@@ -1089,8 +1089,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-ATM"
       }
     },
     {
@@ -1202,8 +1202,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA1"
       }
     },
     {
@@ -1315,8 +1315,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BARD1"
       }
     },
     {
@@ -1428,8 +1428,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA2"
       }
     },
     {
@@ -1541,8 +1541,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRIP1"
       }
     },
     {
@@ -1654,8 +1654,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CDH1"
       }
     },
     {
@@ -1767,8 +1767,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CHECK2"
       }
     },
     {
@@ -1880,8 +1880,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MLH1"
       }
     },
     {
@@ -1993,8 +1993,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH2"
       }
     },
     {
@@ -2106,8 +2106,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH6"
       }
     },
     {
@@ -2219,8 +2219,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PALB2"
       }
     },
     {
@@ -2332,8 +2332,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PMS2"
       }
     },
     {
@@ -2445,8 +2445,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PTEN"
       }
     },
     {
@@ -2558,8 +2558,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51C"
       }
     },
     {
@@ -2671,8 +2671,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51D"
       }
     },
     {
@@ -2784,8 +2784,8 @@
         }
       },
       "request": {
-        "method": "POST",
-        "url": "Observation"
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-TP53"
       }
     }
   ]

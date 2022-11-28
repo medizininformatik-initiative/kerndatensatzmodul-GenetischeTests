@@ -61,15 +61,6 @@
     {
       "coding": [
         {
-          "code": "40354009",
-          "system": "http://snomed.info/sct",
-          "display": "De Lange syndrome (disorder)"
-        }
-      ]
-    },
-    {
-      "coding": [
-        {
           "code": "395507008",
           "system": "http://snomed.info/sct",
           "display": "Premature infant (finding)"
@@ -82,6 +73,11 @@
           "code": "276610007",
           "system": "http://snomed.info/sct",
           "display": "Low birth weight infant (disorder)"
+        },
+        {
+          "code": "HP:0001518",
+          "system": "http://human-phenotype-ontology.org",
+          "display": "Small for gestational age"
         }
       ]
     },
@@ -91,6 +87,11 @@
           "code": "431265009",
           "system": "http://snomed.info/sct",
           "display": "Fetal microcephaly (disorder)"
+        },
+        {
+          "code": "HP:0000252",
+          "system": "http://human-phenotype-ontology.org",
+          "display": "Microcephaly"
         }
       ]
     },
@@ -100,6 +101,11 @@
           "code": "137511000119103",
           "system": "http://snomed.info/sct",
           "display": "Carrier of muscular dystrophy (finding)"
+        },
+        {
+          "code": "HP:0003560",
+          "system": "http://human-phenotype-ontology.org",
+          "display": "Muscular dystrophy"
         }
       ]
     },
@@ -107,19 +113,24 @@
       "coding": [
         {
           "code": "HP:0000527",
-          "system": "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+          "system": "http://human-phenotype-ontology.org",
           "display": "Long eyelashes"
         }
       ]
+    }
+  ],
+  "reasonReference": [
+    {
+      "reference": "Observation/mii-exa-molgen-phenotypic-feature-1"
     },
     {
-      "coding": [
-        {
-          "code": "122470",
-          "system": "http://www.omim.org",
-          "display": "Cornelia de Lange syndrome 1"
-        }
-      ]
+      "reference": "Observation/mii-exa-molgen-phenotypic-feature-2"
+    },
+    {
+      "reference": "Observation/mii-exa-molgen-phenotypic-feature-3"
+    },
+    {
+      "reference": "Observation/mii-exa-molgen-phenotypic-feature-4"
     }
   ]
 }

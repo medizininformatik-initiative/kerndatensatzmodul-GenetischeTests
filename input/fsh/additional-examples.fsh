@@ -290,32 +290,7 @@ Usage: #example
 * deviceName.name = "NextSeq"
 * deviceName.type = DeviceNameType#manufacturer-name
 
-Instance: mii-exa-befund-bundle-befund-2-nipbl
-InstanceOf: Bundle
-Usage: #example
-* type = #transaction
-* timestamp = "2022-11-21T14:44:00+01:00"
-* insert Bundle(mii-exa-molgen-patient-2, Patient)
-* insert Bundle(mii-exa-molgen-molekulargenetischer-befundbericht-2, DiagnosticReport)
-* insert Bundle(mii-exa-molgen-anforderung-2, ServiceRequest)
-* insert Bundle(mii-exa-molgen-chargeitem-ebm-21, ChargeItem)
-* insert Bundle(mii-exa-molgen-chargeitem-ebm-22, ChargeItem)
-* insert Bundle(mii-exa-molgen-chargeitem-ebm-23, ChargeItem)
-* insert Bundle(mii-exa-molgen-chargeitem-ebm-24, ChargeItem)
-* insert Bundle(mii-exa-molgen-practitioner-lab, Practitioner)
-* insert Bundle(mii-exa-molgen-specimen-2, Specimen)
-* insert Bundle(mii-exa-molgen-diagnostische-implikation-2, Observation)
-* insert Bundle(mii-exa-molgen-variante-2, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-nipbl, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-hdac8, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-rad21, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-smc1a, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-smc3, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-tp63, Observation)
-
-
-
-Instance: mii-exa-befund-bundle-fam-his-breast-ovar-can
+Instance: mii-exa-molgen-bundle-fam-his-breast-ovar-can
 InstanceOf: Bundle
 Usage: #example
 * type = #transaction
@@ -346,3 +321,148 @@ Usage: #example
 * insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51C, Observation)
 * insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51D, Observation)
 * insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-TP53, Observation)
+
+// NIPBL
+Instance: mii-exa-molgen-bundle-befund-2-nipbl
+InstanceOf: Bundle
+Usage: #example
+* type = #transaction
+* timestamp = "2022-11-21T14:44:00+01:00"
+* insert Bundle(mii-exa-molgen-patient-2, Patient)
+* insert Bundle(mii-exa-molgen-molekulargenetischer-befundbericht-2, DiagnosticReport)
+* insert Bundle(mii-exa-molgen-anforderung-2, ServiceRequest)
+* insert Bundle(mii-exa-molgen-chargeitem-ebm-21, ChargeItem)
+* insert Bundle(mii-exa-molgen-chargeitem-ebm-22, ChargeItem)
+* insert Bundle(mii-exa-molgen-chargeitem-ebm-23, ChargeItem)
+* insert Bundle(mii-exa-molgen-chargeitem-ebm-24, ChargeItem)
+* insert Bundle(mii-exa-molgen-practitioner-lab, Practitioner)
+* insert Bundle(mii-exa-molgen-practitioner-physician, Practitioner)
+* insert Bundle(mii-exa-molgen-specimen-2, Specimen)
+* insert Bundle(mii-exa-molgen-diagnostische-implikation-2, Observation)
+* insert Bundle(mii-exa-molgen-variante-2, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-nipbl, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-hdac8, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-rad21, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-smc1a, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-smc3, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-tp63, Observation)
+* insert Bundle(mii-exa-molgen-bundle-befund-2-nipbl-condition-lab, Condition)
+
+Instance: mii-exa-molgen-bundle-befund-2-nipbl-condition-lab
+InstanceOf: Condition
+Usage: #example
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose"
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
+* verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#provisional
+* code.coding[0].extension[0].url = "http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit"
+* code.coding[=].extension[=].valueCoding = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT#V
+* code.coding[=].version = "2021"
+* code.coding[=] = http://fhir.de/CodeSystem/bfarm/icd-10-gm#Q87.1 "Angeborene Fehlbildungssyndrome, die vorwiegend mit Kleinwuchs einhergehen"
+* code.coding[1] = OMIM#122470 "Cornelia de Lange syndrome 1"
+* subject = Reference(mii-exa-molgen-patient-2)
+* recorder = Reference(mii-exa-molgen-practitioner-lab)
+* asserter = Reference(mii-exa-molgen-practitioner-lab)
+//* encounter = Reference(Patient/12345)
+//* onsetPeriod.start = "2019-09-26T12:45:00+01:00"
+//* onsetPeriod.end = "2020-03-25T13:00:00+01:00"
+* recordedDate = "2022-03-05T10:49:00+01:00"
+
+Instance: mii-exa-molgen-condition-nipbl-clinical
+InstanceOf: Condition
+Usage: #example
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose"
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
+* verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
+* code.coding[0].extension[0].url = "http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit"
+* code.coding[=].extension[=].valueCoding = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT#G
+* code.coding[=].version = "2021"
+* code.coding[=] = http://fhir.de/CodeSystem/bfarm/icd-10-gm#Q87.1 "Angeborene Fehlbildungssyndrome, die vorwiegend mit Kleinwuchs einhergehen"
+* code.coding[1] = OMIM#122470 "Cornelia de Lange syndrome 1"
+* subject = Reference(mii-exa-molgen-patient-2)
+//* encounter = Reference(Patient/12345)
+* recorder = Reference(mii-exa-molgen-practitioner-physician)
+* asserter = Reference(mii-exa-molgen-practitioner-physician)
+* onsetPeriod.start = "2021-09-19"
+* onsetPeriod.start.extension.url = "http://fhir.de/StructureDefinition/lebensphase"
+* onsetPeriod.start.extension.valueCoding = SCT#255407002 "Neonatal (qualifier value)"
+* recordedDate = "2022-03-06T07:36:00+01:00"
+* evidence.detail = Reference(mii-exa-molgen-molekulargenetischer-befundbericht-2)
+
+Instance: mii-exa-molgen-phenotypic-feature-1
+InstanceOf: Observation
+Usage: #example
+* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"
+* status = #final
+* category = http://terminology.hl7.org/CodeSystem/observation-category#exam
+* code = HPO#HP:0000527 "Long eyelashes"
+* effectiveDateTime = "2022-03-13T09:30:00+01:00"
+* subject = Reference(mii-exa-molgen-patient-2)
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* performer = Reference(mii-exa-molgen-practitioner-physician)
+
+Instance: mii-exa-molgen-phenotypic-feature-2
+InstanceOf: Observation
+Usage: #example
+* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"
+* status = #final
+* category = http://terminology.hl7.org/CodeSystem/observation-category#exam
+* code = HPO#HP:0001518 "Small for gestational age"
+* effectiveDateTime = "2022-03-13T09:30:00+01:00"
+* subject = Reference(mii-exa-molgen-patient-2)
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* performer = Reference(mii-exa-molgen-practitioner-physician)
+
+Instance: mii-exa-molgen-phenotypic-feature-3
+InstanceOf: Observation
+Usage: #example
+* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"
+* status = #final
+* category = http://terminology.hl7.org/CodeSystem/observation-category#exam
+* code = HPO#HP:0000252 "Microcephaly"
+* effectiveDateTime = "2022-03-13T09:30:00+01:00"
+* subject = Reference(mii-exa-molgen-patient-2)
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* performer = Reference(mii-exa-molgen-practitioner-physician)
+
+Instance: mii-exa-molgen-phenotypic-feature-4
+InstanceOf: Observation
+Usage: #example
+* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"
+* status = #final
+* category = http://terminology.hl7.org/CodeSystem/observation-category#exam
+* code = HPO#HP:0003560 "Muscular dystrophy"
+* effectiveDateTime = "2022-03-13T09:30:00+01:00"
+* subject = Reference(mii-exa-molgen-patient-2)
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* performer = Reference(mii-exa-molgen-practitioner-physician)
+
+Instance: mii-exa-befund-bundle-befund-2-nipbl-clinical
+InstanceOf: Bundle
+Usage: #example
+* type = #transaction
+* timestamp = "2022-11-21T14:44:00+01:00"
+* insert Bundle(mii-exa-molgen-patient-2, Patient)
+* insert Bundle(mii-exa-molgen-practitioner-lab, Practitioner)
+* insert Bundle(mii-exa-molgen-practitioner-physician, Practitioner)
+* insert Bundle(mii-exa-molgen-condition-nipbl-clinical, Condition)
+* insert Bundle(mii-exa-molgen-phenotypic-feature-1, Observation)
+* insert Bundle(mii-exa-molgen-phenotypic-feature-2, Observation)
+* insert Bundle(mii-exa-molgen-phenotypic-feature-3, Observation)
+* insert Bundle(mii-exa-molgen-phenotypic-feature-4, Observation)
+* insert Bundle(mii-exa-molgen-molekulargenetischer-befundbericht-2, DiagnosticReport)
+* insert Bundle(mii-exa-molgen-anforderung-2, ServiceRequest)
+* insert Bundle(mii-exa-molgen-chargeitem-ebm-21, ChargeItem)
+* insert Bundle(mii-exa-molgen-chargeitem-ebm-22, ChargeItem)
+* insert Bundle(mii-exa-molgen-chargeitem-ebm-23, ChargeItem)
+* insert Bundle(mii-exa-molgen-chargeitem-ebm-24, ChargeItem)
+* insert Bundle(mii-exa-molgen-specimen-2, Specimen)
+* insert Bundle(mii-exa-molgen-diagnostische-implikation-2, Observation)
+* insert Bundle(mii-exa-molgen-variante-2, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-nipbl, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-hdac8, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-rad21, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-smc1a, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-smc3, Observation)
+* insert Bundle(mii-exa-molgen-untersuchte-region-2-tp63, Observation)
+* insert Bundle(mii-exa-molgen-bundle-befund-2-nipbl-condition-lab, Condition)
+

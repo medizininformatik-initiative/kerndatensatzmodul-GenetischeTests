@@ -88,13 +88,18 @@ Description: "Beispiel für Anforderung für genetische Testung auf pathogene Va
 * authoredOn = "2022-03-16"
 * requester = Reference(mii-exa-molgen-practitioner-physician)
 * specimen = Reference(mii-exa-molgen-specimen-2)
-* reasonCode[0] = SCT#40354009 "De Lange syndrome (disorder)"
-* reasonCode[1] = SCT#395507008 "Premature infant (finding)"
-* reasonCode[2] = SCT#276610007 "Low birth weight infant (disorder)"
-* reasonCode[3] = SCT#431265009 "Fetal microcephaly (disorder)"
-* reasonCode[4] = SCT#137511000119103 "Carrier of muscular dystrophy (finding)"
-* reasonCode[5] = HPO#HP:0000527 "Long eyelashes"
-* reasonCode[6] = OMIM#122470 "Cornelia de Lange syndrome 1"
+* reasonCode[0] = SCT#395507008 "Premature infant (finding)"
+* reasonCode[1].coding[0] = SCT#276610007 "Low birth weight infant (disorder)"
+* reasonCode[1].coding[1] = HPO#HP:0001518 "Small for gestational age"
+* reasonCode[2].coding[0] = SCT#431265009 "Fetal microcephaly (disorder)"
+* reasonCode[2].coding[1] = HPO#HP:0000252 "Microcephaly"
+* reasonCode[3].coding[0] = SCT#137511000119103 "Carrier of muscular dystrophy (finding)"
+* reasonCode[3].coding[1] = HPO#HP:0003560 "Muscular dystrophy"
+* reasonCode[4] = HPO#HP:0000527 "Long eyelashes"
+* reasonReference[0] = Reference(mii-exa-molgen-phenotypic-feature-1)
+* reasonReference[1] = Reference(mii-exa-molgen-phenotypic-feature-2)
+* reasonReference[2] = Reference(mii-exa-molgen-phenotypic-feature-3)
+* reasonReference[3] = Reference(mii-exa-molgen-phenotypic-feature-4)
 
 Instance: mii-exa-molgen-anforderung-trurisk-panel
 InstanceOf: mii-pr-molgen-anforderung-gentischer-test
