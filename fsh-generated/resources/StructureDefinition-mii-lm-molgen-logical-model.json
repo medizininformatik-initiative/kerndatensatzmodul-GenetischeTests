@@ -1,0 +1,1042 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-lm-molgen-logical-model",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-lm-molgen-logical-model",
+  "version": "0.9.0-ballot",
+  "name": "MII_LM_MolGen_LogicalModel",
+  "title": "MII LM MolGen LogicalModel",
+  "status": "draft",
+  "description": "LogicalModel des MII Moduls Molekulargenetischer Befundbericht",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "FHIR",
+      "name": "MolGen LogicalModel FHIR Mapping"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-lm-molgen-logical-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "mii-lm-molgen-logical-model",
+        "path": "mii-lm-molgen-logical-model",
+        "short": "MII LM MolGen LogicalModel",
+        "definition": "LogicalModel des MII Moduls Molekulargenetischer Befundbericht"
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Probeninformation",
+        "path": "mii-lm-molgen-logical-model.Probeninformation",
+        "short": "Probeninformation",
+        "definition": "Probeninformation",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Probeninformation.Patient",
+        "path": "mii-lm-molgen-logical-model.Probeninformation.Patient",
+        "short": "Patient",
+        "definition": "Abgebildet im KDS Modul Person",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Patient"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Probeninformation.Probe",
+        "path": "mii-lm-molgen-logical-model.Probeninformation.Probe",
+        "short": "Probe",
+        "definition": "Abgebildet im KDS Modul Biobank",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Specimen"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Specimen"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Anforderung",
+        "path": "mii-lm-molgen-logical-model.Anforderung",
+        "short": "Anforderung",
+        "definition": "Anforderung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Anforderung.Indikation",
+        "path": "mii-lm-molgen-logical-model.Anforderung.Indikation",
+        "short": "Indikation",
+        "definition": "Indikation",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Anforderung.Indikation.Indikation",
+        "path": "mii-lm-molgen-logical-model.Anforderung.Indikation.Indikation",
+        "short": "Indikation",
+        "definition": "Indikation; (mögliche) Erkrankung Terminologien: ICD-10, SNOMED, Orpha, HPO - Bsp.: Verdacht auf… / Ausschluss von… / Mögliche Therapie für ...",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Anforderung.Indikation.Gesundheitszustand",
+        "path": "mii-lm-molgen-logical-model.Anforderung.Indikation.Gesundheitszustand",
+        "short": "Gesundheitszustand",
+        "definition": "Aktueller Gesundheitszustand; Angabe aktueller Beschwerden oder nachgewiesener Erkrankung - Terminologie: HPO",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Condition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Anforderung.Indikation.Krankengeschichte-Familie",
+        "path": "mii-lm-molgen-logical-model.Anforderung.Indikation.Krankengeschichte-Familie",
+        "short": "Krankengeschichte Familie",
+        "definition": "Krankengeschichte Familie",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Anforderung.Indikation.Anlagetraeger",
+        "path": "mii-lm-molgen-logical-model.Anforderung.Indikation.Anlagetraeger",
+        "short": "Anlageträger",
+        "definition": "Anlageträgerstatus der Familie - Ist gefordert wenn Verwandte des Index-Falles ebenfalls sequenziert wurden - Terminologie: PED",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",
+              "http://hl7.org/fhir/StructureDefinition/Condition",
+              "http://hl7.org/fhir/StructureDefinition/Observation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Anforderung.Indikation.RelevanteVorergebnisse",
+        "path": "mii-lm-molgen-logical-model.Anforderung.Indikation.RelevanteVorergebnisse",
+        "short": "Relevante Vorergebnisse",
+        "definition": "Angabe zuvor durchgeführter relevanter Tests (inklusive z.B. Methode, getestete Gene, und Ergebnisse)",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Condition",
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+              "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Anforderung.Anforderer",
+        "path": "mii-lm-molgen-logical-model.Anforderung.Anforderer",
+        "short": "Anforderer",
+        "definition": "Informationen zur Person, die die molekulargenetischen Untersuchungen in Auftrag gibt",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/StructureDefinition/Device"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Anforderung.Anforderer.Zu-testende-Gene",
+        "path": "mii-lm-molgen-logical-model.Anforderung.Anforderer.Zu-testende-Gene",
+        "short": "Zu testende Gene",
+        "definition": "Angabe der zu testenden Gene",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Anforderung.Anforderer.Einheitlicher-Bewertungsmassstab",
+        "path": "mii-lm-molgen-logical-model.Anforderung.Anforderer.Einheitlicher-Bewertungsmassstab",
+        "short": "Einheitlicher Bewertungsmaßstab",
+        "definition": "Der Einheitliche Bewertungsmaßstab definiert den Inhalt der abrechnungsfähigen vertragsärztlichen Leistungen Einheitlicher Bewertungsmaßstab (EBM): Angabe der Ziffern",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ChargeItem"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Anforderung.Anforderer.Anforderungstext",
+        "path": "mii-lm-molgen-logical-model.Anforderung.Anforderer.Anforderungstext",
+        "short": "Anforderungstext",
+        "definition": "Freitext für die Angabe von entweder originaler, unveränderter Anforderungstext, oder alternativ: zusätzliche Anforderungen oder angeforderter Test",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Anforderung.Datum-der-Anforderung",
+        "path": "mii-lm-molgen-logical-model.Anforderung.Datum-der-Anforderung",
+        "short": "Datum der Anforderung",
+        "definition": "Angabe des Datums der Anforderung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Anforderung.Bemerkungen",
+        "path": "mii-lm-molgen-logical-model.Anforderung.Bemerkungen",
+        "short": "Bemerkungen",
+        "definition": "Bemerkungen",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Annotation"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Methoden",
+        "path": "mii-lm-molgen-logical-model.Methoden",
+        "short": "Methoden",
+        "definition": "Methoden",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Methoden.Methode",
+        "path": "mii-lm-molgen-logical-model.Methoden.Methode",
+        "short": "Methode",
+        "definition": "Methode und Referenz zur Methode - beinhaltet alle sequenzbasierenden Analytik-Methoden, während nicht sequenzbasierende Aufarbeitungsmethoden in das Modul Pathologie zuzuordnen sind.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Methoden.Relevante-Parameter",
+        "path": "mii-lm-molgen-logical-model.Methoden.Relevante-Parameter",
+        "short": "Relevante Parameter",
+        "definition": "Relevante Parameter (Angabe von Primer / Zyklenanzahl, Panel)",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/RelatedArtifact",
+              "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Methoden.Geräte-Software-Kits",
+        "path": "mii-lm-molgen-logical-model.Methoden.Geräte-Software-Kits",
+        "short": "Geräte / Software / Kits",
+        "definition": "Angaben verwendeter Geräte / Software / Kits inklusive Target enrichment für die Analyse (u.U. Angabe von  Hersteller; Versionsnummer)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Device"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Methoden.Getestete-Gene",
+        "path": "mii-lm-molgen-logical-model.Methoden.Getestete-Gene",
+        "short": "Getestete Gene",
+        "definition": "Angabe der getesteten Gene",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Methoden.Referenzsequenz",
+        "path": "mii-lm-molgen-logical-model.Methoden.Referenzsequenz",
+        "short": "Referenzsequenz",
+        "definition": "Transkript Referenzsequenz (Ensembl und RefSeq)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Methoden.Read-Depth-Coverage",
+        "path": "mii-lm-molgen-logical-model.Methoden.Read-Depth-Coverage",
+        "short": "Read depth/Coverage",
+        "definition": "Anzahl der Ablesungen eines bestimmten Nukleotids im Genom in einem Experiment",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Methoden.Intron-Spanning-IVS",
+        "path": "mii-lm-molgen-logical-model.Methoden.Intron-Spanning-IVS",
+        "short": "Intron spanning / IVS",
+        "definition": "Intron spanning  oder  IVS (InterVening Sequence, z.B. Introns)",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Methoden.Start-und-Endnukleotid",
+        "path": "mii-lm-molgen-logical-model.Methoden.Start-und-Endnukleotid",
+        "short": "Start- und Endnukleotid",
+        "definition": "Start- und Endnukleotid",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Range"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Methoden.Sensitivitaet-Detektionslimit",
+        "path": "mii-lm-molgen-logical-model.Methoden.Sensitivitaet-Detektionslimit",
+        "short": "Sensitivität/Detektionslimit",
+        "definition": "Sensitivität/Detektionslimit",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Methoden.Limitierungen-Bemerkungen",
+        "path": "mii-lm-molgen-logical-model.Methoden.Limitierungen-Bemerkungen",
+        "short": "Limitierungen/Bemerkungen",
+        "definition": "Limitierungen/Bemerkungen, Freitext",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Annotation"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse",
+        "short": "Ergebnisse",
+        "definition": "Ergebnisse",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Zusammenfassung",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Zusammenfassung",
+        "short": "Zusammenfassung",
+        "definition": "Zusammenfassung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://loinc.org/vs/LL541-4"
+        }
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen",
+        "short": "Veränderungen",
+        "definition": "Veränderungen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Veraenderung-Proteinebene",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Veraenderung-Proteinebene",
+        "short": "Veränderungen auf Proteinebene: Terminologie: HGVS - Angabe möglich von: Formal Protein (pHGVS) 3-letter code:  Bsp.: p.(Cys47Tyr),  p.(Val600Glu) - Formal Protein (pHGVS) 1-letter code:  Bsp.: p.(C47Y) - Trivialname (Kurzform):  Bsp.: C47Y",
+        "definition": "Veränderungen auf Proteinebene: Terminologie: HGVS - Angabe möglich von: Formal Protein (pHGVS) 3-letter code:  Bsp.: p.(Cys47Tyr),  p.(Val600Glu) - Formal Protein (pHGVS) 1-letter code:  Bsp.: p.(C47Y) - Trivialname (Kurzform):  Bsp.: C47Y",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.DNA-Veraenderungen",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.DNA-Veraenderungen",
+        "short": "Veränderung auf DNA-Level, formale Beschreibung  mittels cHGVS",
+        "definition": "Veränderung auf DNA-Level, formale Beschreibung  mittels cHGVS",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Genomische-DNA-Veraenderung",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Genomische-DNA-Veraenderung",
+        "short": "Genomische DNA Veränderung gHGVS",
+        "definition": "Genomische DNA Veränderung gHGVS",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Transkript-ID",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Transkript-ID",
+        "short": "Transkript- ID (Code) - Terminologie: NCBI, Ensembl, GTR, LRG",
+        "definition": "Transkript- ID (Code) - Terminologie: NCBI, Ensembl, GTR, LRG",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Referenzgenom",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Referenzgenom",
+        "short": "Referenzgenom - Der Genome Build hat zwei Formate, entweder hg und eine Nummer (hg18, hg19, hg38) oder GRCh/NCBI und eine Nummer (NCBI35, NCBI36, GRCh37, GRCh38).",
+        "definition": "Referenzgenom - Der Genome Build hat zwei Formate, entweder hg und eine Nummer (hg18, hg19, hg38) oder GRCh/NCBI und eine Nummer (NCBI35, NCBI36, GRCh37, GRCh38).",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Ref-Allel",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Ref-Allel",
+        "short": "Referenzallel",
+        "definition": "Referenzallel",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Alt-Allel",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Alt-Allel",
+        "short": "Jedes alternative (ALT) Allel an dem untersuchten Lokus",
+        "definition": "Jedes alternative (ALT) Allel an dem untersuchten Lokus",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.DNA-Mutationstyp",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.DNA-Mutationstyp",
+        "short": "Varianten-Typ bzw. Mutationsart - Terminologie: Sequence Ontology (include codes from http://sequenceontology.org where concept IsA SO:0002072)",
+        "definition": "Varianten-Typ bzw. Mutationsart - Terminologie: Sequence Ontology (include codes from http://sequenceontology.org where concept IsA SO:0002072)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Mutationskonsequenz-Funktionell",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Mutationskonsequenz-Funktionell",
+        "short": "Mutationskonsequenz (funktionell) - Terminologie: Sequence Ontology",
+        "definition": "Mutationskonsequenz (funktionell) - Terminologie: Sequence Ontology",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://loinc.org/vs/LL380-7"
+        }
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Proben-Allelfrequenz",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Proben-Allelfrequenz",
+        "short": "Allelfrequenz",
+        "definition": "Allelfrequenz",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Ursprung-der-Variante",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Ursprung-der-Variante",
+        "short": "Ursprung der Variante",
+        "definition": "Ursprung der Variante",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://loinc.org/vs/LL378-1"
+        }
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Varianten-ID",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Varianten-ID",
+        "short": "Varianten ID; eindeutige Beschreibung der Variante - Terminologie: ClinVar, HGMD, COSMIC, PMID, dbSNP",
+        "definition": "Varianten ID; eindeutige Beschreibung der Variante - Terminologie: ClinVar, HGMD, COSMIC, PMID, dbSNP",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Chromosom",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Chromosom",
+        "short": "Chromosom",
+        "definition": "Chromosom",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://loinc.org/vs/LL2938-0"
+        }
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Exon",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Exon",
+        "short": "Exon",
+        "definition": "Exon",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Zytogenetische-Lokalisation",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Zytogenetische-Lokalisation",
+        "short": "Variante - Terminologie: ISCN",
+        "definition": "Variante - Terminologie: ISCN",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Kopienzahlvariationen",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Kopienzahlvariationen",
+        "short": "Kopienzahlvariationen der betroffenen Gene",
+        "definition": "Kopienzahlvariationen der betroffenen Gene",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Mutationslast",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Mutationslast",
+        "short": "Somat. Mutationen / Mutationslast",
+        "definition": "Somat. Mutationen / Mutationslast",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Mikrosatelliteninstabilität",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Mikrosatelliteninstabilität",
+        "short": "Mikrosatelliteninstabilität",
+        "definition": "Mikrosatelliteninstabilität",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://loinc.org/vs/LL3994-2"
+        }
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Ergebnisse.Daten",
+        "path": "mii-lm-molgen-logical-model.Ergebnisse.Daten",
+        "short": "Rohdaten / Link auf die Datei/Dateien",
+        "definition": "Rohdaten / Link auf die Datei/Dateien",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Interpretation",
+        "path": "mii-lm-molgen-logical-model.Interpretation",
+        "short": "Interpretation",
+        "definition": "Interpretation",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Interpretation.Klinische-Signifikanz",
+        "path": "mii-lm-molgen-logical-model.Interpretation.Klinische-Signifikanz",
+        "short": "Finale Interpretation / Einschätzung",
+        "definition": "Finale Interpretation / Einschätzung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://loinc.org/vs/LL4034-6"
+        }
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Interpretation.Referenzen",
+        "path": "mii-lm-molgen-logical-model.Interpretation.Referenzen",
+        "short": "Referenzen",
+        "definition": "Referenzen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/RelatedArtifact"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Interpretation.ClinicalAnnotationLevelOfEvidence",
+        "path": "mii-lm-molgen-logical-model.Interpretation.ClinicalAnnotationLevelOfEvidence",
+        "short": "Clinical Annotation Level Of Evidence",
+        "definition": "Clinical Annotation Level Of Evidence",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "valueSet": "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/evidence-level-example-vs"
+        }
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Interpretation.Assoziierter-Phaenotyp",
+        "path": "mii-lm-molgen-logical-model.Interpretation.Assoziierter-Phaenotyp",
+        "short": "Mit Präsenz einer Variante assoziierter Phänotyp",
+        "definition": "Mit Präsenz einer Variante assoziierter Phänotyp",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Interpretation.Vererbungsmodus",
+        "path": "mii-lm-molgen-logical-model.Interpretation.Vererbungsmodus",
+        "short": "Art der Vererbung für beschriebenen Phänotyp",
+        "definition": "Art der Vererbung für beschriebenen Phänotyp",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/condition-inheritance-mode-vs"
+        }
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Interpretation.Zusammenfassung",
+        "path": "mii-lm-molgen-logical-model.Interpretation.Zusammenfassung",
+        "short": "Zusammenfassung als Freitext, kann inhaltlich folgende Punkte beinhalten: Antwort auf ursprüngliche Fragestellung ausformuliert Therapeutikum/Wirkstoff/Wirkstoffklasse Effekt/Auswirkung",
+        "definition": "Zusammenfassung als Freitext, kann inhaltlich folgende Punkte beinhalten: Antwort auf ursprüngliche Fragestellung ausformuliert Therapeutikum/Wirkstoff/Wirkstoffklasse Effekt/Auswirkung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Interpretation.Medikamentenbewertung",
+        "path": "mii-lm-molgen-logical-model.Interpretation.Medikamentenbewertung",
+        "short": "Medikamentenbewertung",
+        "definition": "Medikamentenbewertung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Interpretation.Empfehlungen",
+        "path": "mii-lm-molgen-logical-model.Interpretation.Empfehlungen",
+        "short": "Empfehlungen: Andere/Allgemeine Empfehlungen (Freitext / Links) / Generelle ergänzende Referenz(en) (Bsp: PuMed-link / PMID)",
+        "definition": "Empfehlungen: Andere/Allgemeine Empfehlungen (Freitext / Links) / Generelle ergänzende Referenz(en) (Bsp: PuMed-link / PMID)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://loinc.org/vs/LL1037-2"
+        }
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Interpretation.Medikationsempfehlung",
+        "path": "mii-lm-molgen-logical-model.Interpretation.Medikationsempfehlung",
+        "short": "Medikationsempfehlung - Terminologie: LOINC",
+        "definition": "Medikationsempfehlung - Terminologie: LOINC",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://loinc.org/vs/LL4049-4"
+        }
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Weiteres",
+        "path": "mii-lm-molgen-logical-model.Weiteres",
+        "short": "WeiteresFormales",
+        "definition": "WeiteresFormales",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Weiteres.Bericht-ID",
+        "path": "mii-lm-molgen-logical-model.Weiteres.Bericht-ID",
+        "short": "Identifikationsnummer des Berichtes",
+        "definition": "Identifikationsnummer des Berichtes",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Weiteres.Anhaenge",
+        "path": "mii-lm-molgen-logical-model.Weiteres.Anhaenge",
+        "short": "Anhänge z.B. Tabellarische Übersicht Panel",
+        "definition": "Anhänge z.B. Tabellarische Übersicht Panel",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Media",
+              "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Weiteres.Berichtstatus",
+        "path": "mii-lm-molgen-logical-model.Weiteres.Berichtstatus",
+        "short": "Berichtstatus (z.B. vorab oder final)",
+        "definition": "Berichtstatus (z.B. vorab oder final)",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
+        }
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Weiteres.Datum-des-Berichts",
+        "path": "mii-lm-molgen-logical-model.Weiteres.Datum-des-Berichts",
+        "short": "Datum des Berichtes /Zeitstempel (Bericht verfasst / freigegeben am)",
+        "definition": "Datum des Berichtes /Zeitstempel (Bericht verfasst / freigegeben am)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "instant"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner",
+        "path": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner",
+        "short": "LaborInstitutionAnsprechpartner",
+        "definition": "LaborInstitutionAnsprechpartner",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner.Laborakkreditierungen",
+        "path": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner.Laborakkreditierungen",
+        "short": "Labor-Akkreditierungen",
+        "definition": "Labor-Akkreditierungen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner.Name-Ansprechpartner",
+        "path": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner.Name-Ansprechpartner",
+        "short": "Name Ansprechpartner (Titel - Nachname - Zuname - Vorname)",
+        "definition": "Name Ansprechpartner (Titel - Nachname - Zuname - Vorname)",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "HumanName"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner.Adresse",
+        "path": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner.Adresse",
+        "short": "Adresszeile 1  & 2, Angabe von Stadt, Postleitzahl, Land",
+        "definition": "Adresszeile 1  & 2, Angabe von Stadt, Postleitzahl, Land",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Address"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner.Kontakt",
+        "path": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner.Kontakt",
+        "short": "Angabe von Telefonnummer, Faxnummer und Email",
+        "definition": "Angabe von Telefonnummer, Faxnummer und Email",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ContactPoint"
+          }
+        ]
+      }
+    ]
+  }
+}
