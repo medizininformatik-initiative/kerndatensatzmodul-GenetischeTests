@@ -4,7 +4,7 @@ Usage: #definition
 * insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/ServiceRequest-ReasonCode"
 * name = "SP_MII_MolGen_ServiceRequest_ReasonCode"
-* status = #draft
+* status = #active
 * experimental = false
 * date = "2022-07-07"
 * description = "Suchparameter für ServiceRequest.reasonCode"
@@ -19,7 +19,7 @@ Usage: #definition
 * insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/ServiceRequest-ReasonReference"
 * name = "SP_MII_MolGen_ServiceRequest_ReasonReference"
-* status = #draft
+* status = #active
 * experimental = false
 * date = "2022-07-07"
 * description = "Suchparameter für ServiceRequest.reasonReference"
@@ -38,7 +38,7 @@ Usage: #definition
 * insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/Task-ReasonCode"
 * name = "SP_MII_MolGen_Task_ReasonCode"
-* status = #draft
+* status = #active
 * experimental = false
 * date = "2022-07-07"
 * description = "Suchparameter für Task.reasonCode"
@@ -53,7 +53,7 @@ Usage: #definition
 * insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/Task-ReasonReference"
 * name = "SP_MII_MolGen_Task_ReasonReference"
-* status = #draft
+* status = #active
 * experimental = false
 * date = "2022-07-07"
 * description = "Suchparameter für Task.reasonReference"
@@ -69,7 +69,7 @@ Usage: #definition
 * insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/Task-For"
 * name = "SP_MII_MolGen_Task_For"
-* status = #draft
+* status = #active
 * experimental = false
 * date = "2022-07-07"
 * description = "Suchparameter für Task.for"
@@ -85,7 +85,7 @@ Usage: #definition
 * insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/FamilyMemberHistory-ReasonCode"
 * name = "SP_MII_MolGen_FamilyMemberHistory_ReasonCode"
-* status = #draft
+* status = #active
 * experimental = false
 * date = "2022-07-07"
 * description = "Suchparameter für FamilyMemberHistory.reasonCode"
@@ -100,7 +100,7 @@ Usage: #definition
 * insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/FamilyMemberHistory-ReasonReference"
 * name = "SP_MII_MolGen_FamilyMemberHistory_ReasonReference"
-* status = #draft
+* status = #active
 * experimental = false
 * date = "2022-07-07"
 * description = "Suchparameter für FamilyMemberHistory.reasonReference"

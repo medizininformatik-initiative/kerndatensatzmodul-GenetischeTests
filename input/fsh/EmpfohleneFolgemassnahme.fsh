@@ -5,7 +5,7 @@ Title: "MII PR MolGen Empfohlene Folgemaßnahme"
 Description: "Das Profil dieser Task Ressource beschreibt die empfohlenen Folgemaßnahmen."
 * insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme"
-* ^status = #draft
+//* ^status = #draft
 * status MS
 * intent MS
 * code MS

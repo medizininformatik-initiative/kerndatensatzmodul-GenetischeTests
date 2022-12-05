@@ -5,7 +5,7 @@ Title: "MII PR MolGen Familienanamnese"
 Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen."
 * insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
-* ^status = #draft
+//* ^status = #draft
 * status MS
 * patient MS
 * patient only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 

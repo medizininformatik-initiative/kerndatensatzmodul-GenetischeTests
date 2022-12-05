@@ -5,7 +5,7 @@ Title: "MII PR MolGen Anforderung genetischer Test"
 Description: "Der Laborauftrag oder die Anfrage, die die Durchführung des genetischen Tests auslöst."
 * insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
-* ^status = #draft
+//* ^status = #draft
 * basedOn MS
 * code MS
 * code.text ^alias[+] = "Anforderungstext"

@@ -5,7 +5,7 @@ Title: "MII PR MolGen Medikationsempfehlung"
 Description: "Das Profil dieser Task Ressource dient dazu, auf der Grundlage der genetischen Ergebnisse medikamanetöse Maßnahmen vorzuschlagen."
 * insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung"
-* ^status = #draft
+//* ^status = #draft
 * status MS
 * intent MS
 * code 1.. MS

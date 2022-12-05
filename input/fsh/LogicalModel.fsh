@@ -3,7 +3,7 @@ Parent: Element
 Id: mii-lm-molgen-logical-model
 Title: "MII LM MolGen LogicalModel"
 Description: "LogicalModel des MII Moduls Molekulargenetischer Befundbericht"
-* ^status = #draft
+//* ^status = #draft
 * Probeninformation 1..1 BackboneElement "Probeninformation"
   * Patient 1..1 Reference(Patient) "Patient" "Abgebildet im KDS Modul Person"
   * Probe 0..* Reference(Specimen) "Probe" "Abgebildet im KDS Modul Biobank"

@@ -5,7 +5,7 @@ Title: "MII PR MolGen Variante"
 Description: "Dieses Profil ermöglicht eine vollständige Beschreibung der gefundenen Variante unter Verwendung von Eigenschaften aus einer Vielzahl von Testmethoden."
 * insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
-* ^status = #draft
+//* status = #draft
 * status MS
 * category MS
 * code MS

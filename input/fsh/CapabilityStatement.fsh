@@ -37,7 +37,7 @@ Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/CapabilityStatement/metadata"
 * name = "MII_CPS_MolGen_CapabilityStatement"
 * title = "MII CPS MolGen CapabilityStatement"
-* status = #draft
+* status = #active
 * experimental = false
 * date = "2022-07-07"
 * publisher = "Medizininformatik Initiative"

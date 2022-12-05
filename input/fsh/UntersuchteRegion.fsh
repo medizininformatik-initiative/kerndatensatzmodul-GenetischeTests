@@ -5,7 +5,7 @@ Title: "MII PR MolGen Untersuchte Region"
 Description: "Dieses Profil beschreibt die Region oder die Regionen, die im Rahmen dieses Befundberichts untersucht wurden."
 * insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-* ^status = #draft
+//* status = #draft
 * status MS
 * category MS
 * code MS

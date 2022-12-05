@@ -5,7 +5,7 @@ Title: "MII PR MolGen Genotyp"
 Description: "Dieses Profil beschreibt die Feststellung eines bestimmten Genotyps auf der Grundlage einer oder mehrerer Varianten oder Haplotypen."
 * insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp"
-* ^status = #draft
+//* ^status = #draft
 * status MS
 * category MS
 * code MS
