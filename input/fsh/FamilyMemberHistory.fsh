@@ -91,7 +91,6 @@ Id: mii-ex-molgen-verwandtschaftsgrad
 Title: "MII EX Mol Gen Verwandtschaftsgrad"
 Description: "Extension erlaubt die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen."
 * insert Publisher
-* ^status = #draft
 * ^context.type = #element
 * ^context.expression = "FamilyMemberHistory.relationship.coding"
 * value[x] 1..
@@ -103,7 +102,6 @@ Id: mii-vs-molgen-verwandtschaftsgrad
 Title: "MII VS Mol Gen Verwandtschaftsgrad"
 Description: "ValueSet für die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen."
 * insert Publisher
-* ^status = #draft
 * SCT#125678001 "First degree blood relative (person)"
 * SCT#699110007 "Second degree blood relative (person)"
 
@@ -112,7 +110,6 @@ Id: mii-ex-molgen-verwandtschaftsverhaeltnis
 Title: "MII EX MolGen Verwandtschaftsverhaeltnis"
 Description: "Extension erlaubt die Angabe eines Verwandtschaftsverhältnisses zwischen Patient und Familienangehörigen."
 * insert Publisher
-* ^status = #draft
 * ^context.type = #element
 * ^context.expression = "FamilyMemberHistory.relationship.coding"
 * value[x] 1..
@@ -124,7 +121,6 @@ Id: mii-vs-molgen-verwandtschaftsverhaeltnis
 Title: "MII VS MolGen Verwandtschaftsverhaeltnis"
 Description: "ValueSet für die Angabe eines Verwandtschaftsverhältnis zwischen Patient und Familienangehörigen."
 * insert Publisher
-* ^status = #draft
 * SCT#75226009 "Natural child (person)"
 * SCT#13646006 "Natural parent (person)"
 * SCT#60614009 "Natural brother (person)"
@@ -139,7 +135,6 @@ Id: mii-ex-molgen-familiare-linie
 Title: "MII EX MolGen Familiare Linie"
 Description: "Extension erlaubt die Angabe der familiären Linie zwischen Patient und Familienangehörigen."
 * insert Publisher
-* ^status = #draft
 * ^context.type = #element
 * ^context.expression = "FamilyMemberHistory.relationship.coding"
 * value[x] 1..
@@ -151,7 +146,6 @@ Id: mii-vs-molgen-familiaere-linie
 Title: "MII VS MolGen Familiäre Linie"
 Description: "ValueSet für die Angabe der familären Linie zwischen Patient und Familienangehörigen."
 * insert Publisher
-* ^status = #draft
 * SCT#72705000 "Mother (person)"
 * SCT#66839005 "Father (person)"
 
