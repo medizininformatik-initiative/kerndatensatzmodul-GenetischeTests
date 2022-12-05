@@ -456,6 +456,7 @@ Usage: #example
 * insert Bundle(mii-exa-molgen-chargeitem-ebm-23, ChargeItem)
 * insert Bundle(mii-exa-molgen-chargeitem-ebm-24, ChargeItem)
 * insert Bundle(mii-exa-molgen-specimen-2, Specimen)
+* insert Bundle(mii-exa-molgen-device-sequencer-2, Device)
 * insert Bundle(mii-exa-molgen-diagnostische-implikation-2, Observation)
 * insert Bundle(mii-exa-molgen-variante-2, Observation)
 * insert Bundle(mii-exa-molgen-untersuchte-region-2-nipbl, Observation)
