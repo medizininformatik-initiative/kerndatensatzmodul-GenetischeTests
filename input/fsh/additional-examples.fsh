@@ -87,7 +87,7 @@ InstanceOf: https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/S
 Usage: #example
 * status = #available
 * type = SCT#445295009 "Blood specimen with edetic acid (specimen)"
-* subject = Reference(mii-exa-molgen-patient)
+* subject = Reference(mii-exa-molgen-patient-2)
 * receivedTime = "2021-11-24"
 * collection.collectedDateTime = "2021-11-23"
 * identifier.system = "https://www.charite.de/fhir/sid/bioproben"
@@ -243,7 +243,7 @@ InstanceOf: https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/S
 Usage: #example
 * status = #available
 * type = SCT#127457009 "Tissue specimen from breast (specimen)"
-* subject = Reference(mii-exa-molgen-patient-2)
+* subject = Reference(mii-exa-molgen-patient-brca1)
 * receivedTime = "2022-11-01"
 * collection.collectedDateTime = "2022-11-01"
 * identifier.system = "https://www.charite.de/fhir/sid/bioproben"
