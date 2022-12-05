@@ -29,7 +29,7 @@ Id: mii-ex-molgen-risk-assessment-einflussfaktor
 Title: "MII EX MolGen RiskAssessment Einflussfaktor"
 Description: "Die Extension erweitert RiskAssessment.prediction um die Möglichkeit, weitere ausschlaggebende Faktoren mit Einfluss auf die Risikoberechnung anzugeben."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/risk-assessment-einflussfaktor"
-* ^status = #draft
+//* ^status = #draft
 * ^context[0].type = #element
 * ^context[=].expression = "RiskAssessment.prediction"
 * value[x] only CodeableConcept
