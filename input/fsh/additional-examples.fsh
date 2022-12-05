@@ -391,7 +391,7 @@ Usage: #example
 Instance: mii-exa-molgen-phenotypic-feature-1
 InstanceOf: Observation
 Usage: #example
-* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"
+//* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
 * code = HPO#HP:0000527 "Long eyelashes"
@@ -403,7 +403,7 @@ Usage: #example
 Instance: mii-exa-molgen-phenotypic-feature-2
 InstanceOf: Observation
 Usage: #example
-* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"
+//* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
 * code = HPO#HP:0001518 "Small for gestational age"
@@ -415,7 +415,7 @@ Usage: #example
 Instance: mii-exa-molgen-phenotypic-feature-3
 InstanceOf: Observation
 Usage: #example
-* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"
+//* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
 * code = HPO#HP:0000252 "Microcephaly"
@@ -427,7 +427,7 @@ Usage: #example
 Instance: mii-exa-molgen-phenotypic-feature-4
 InstanceOf: Observation
 Usage: #example
-* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"
+//* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
 * code = HPO#HP:0003560 "Muscular dystrophy"
