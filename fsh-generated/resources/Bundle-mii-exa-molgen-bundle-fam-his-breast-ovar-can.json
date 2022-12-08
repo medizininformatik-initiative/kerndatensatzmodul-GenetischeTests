@@ -496,7 +496,26 @@
       },
       "request": {
         "method": "PUT",
-        "url": "Observation/mii-exa-molgen-specimen-brca1"
+        "url": "Specimen/mii-exa-molgen-specimen-brca1"
+      }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-device-sequencer-nextseq",
+      "resource": {
+        "resourceType": "Device",
+        "id": "mii-exa-molgen-device-sequencer-nextseq",
+        "status": "active",
+        "manufacturer": "Illumina",
+        "deviceName": [
+          {
+            "name": "NextSeq",
+            "type": "manufacturer-name"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Device/mii-exa-molgen-device-sequencer-nextseq"
       }
     },
     {
