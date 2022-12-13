@@ -385,7 +385,7 @@ Usage: #example
 * asserter = Reference(mii-exa-molgen-practitioner-physician)
 * onsetPeriod.start = "2021-09-19"
 * onsetPeriod.start.extension.url = "http://fhir.de/StructureDefinition/lebensphase"
-* onsetPeriod.start.extension.valueCoding = SCT#255407002 "Neonatal (qualifier value)"
+* onsetPeriod.start.extension.valueCodeableConcept = SCT#255407002 "Neonatal (qualifier value)"
 * recordedDate = "2022-03-06T07:36:00+01:00"
 * evidence.detail = Reference(mii-exa-molgen-molekulargenetischer-befundbericht-2)
 

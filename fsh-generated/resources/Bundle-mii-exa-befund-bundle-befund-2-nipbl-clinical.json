@@ -210,10 +210,14 @@
             "extension": [
               {
                 "url": "http://fhir.de/StructureDefinition/lebensphase",
-                "valueCoding": {
-                  "code": "255407002",
-                  "system": "http://snomed.info/sct",
-                  "display": "Neonatal (qualifier value)"
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "255407002",
+                      "system": "http://snomed.info/sct",
+                      "display": "Neonatal (qualifier value)"
+                    }
+                  ]
                 }
               }
             ]
