@@ -114,7 +114,7 @@ Description: "Beispiel für untersuchte Region HDAC8 Gen an Hand von NGS."
 * component[region-description].code = LNC#81293-3 "Description of ranges of DNA sequences examined"
 * component[region-description].valueString = "Analyse aller kodierenden Exons der zu untersuchenden Gene einschließlich flankierender intronischer Regionen (mindestens von -3 bis +8)."
 * component[genomic-ref-seq].code = LNC#48013-7 "Genomic reference sequence [ID]"
-* component[genomic-ref-seq].valueCodeableConcept = RefSeq#NM_078486.2
+* component[genomic-ref-seq].valueCodeableConcept = RefSeq#NM_018486.2
 
 Instance: mii-exa-molgen-untersuchte-region-2-rad21
 InstanceOf: mii-pr-molgen-untersuchte-region

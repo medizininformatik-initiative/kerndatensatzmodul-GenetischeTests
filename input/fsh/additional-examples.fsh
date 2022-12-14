@@ -301,6 +301,7 @@ Usage: #example
 * insert Bundle(mii-exa-molgen-prs-brca1, RiskAssessment)
 * insert Bundle(mii-exa-molgen-anforderung-trurisk-panel, ServiceRequest)
 * insert Bundle(mii-exa-molgen-practitioner-lab, Practitioner)
+* insert Bundle(mii-exa-molgen-practitioner-physician, Practitioner)
 * insert Bundle(mii-exa-molgen-specimen-brca1, Specimen)
 * insert Bundle(mii-exa-molgen-device-sequencer-nextseq, Device)
 * insert Bundle(mii-exa-molgen-ergebnis-zusammenfassung-trurisk-panel, Observation)

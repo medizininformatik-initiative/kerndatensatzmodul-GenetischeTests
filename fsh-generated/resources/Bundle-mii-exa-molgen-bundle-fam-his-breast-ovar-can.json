@@ -461,6 +461,31 @@
       }
     },
     {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-practitioner-physician",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "mii-exa-molgen-practitioner-physician",
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "text": "Dr. Linda Rubens",
+            "family": "Rubens",
+            "given": [
+              "Linda"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Practitioner/mii-exa-molgen-practitioner-physician"
+      }
+    },
+    {
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-specimen-brca1",
       "resource": {
         "resourceType": "Specimen",
