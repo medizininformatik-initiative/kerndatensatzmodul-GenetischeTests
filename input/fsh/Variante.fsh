@@ -153,31 +153,6 @@ Description: "Beispiel für genetische Variante im NIPBL Gen an Hand von WGS."
 * component[variation-code].valueCodeableConcept.coding[0] = ClinVarVID#1076298
 * component[variation-code].valueCodeableConcept.coding[1] = ClinVarVID#VCV001076298.1
 
-Instance: mii-exa-molgen-variante-fusion-3
-InstanceOf: mii-pr-molgen-variante
-Usage: #example
-Title: "Variante FGFR2-DBP Fusion"
-Description: "Beispiel für genetische Variante FGFR2-DBP Fusion."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
-* basedOn = Reference(mii-exa-molgen-anforderung-2)
-* status = #final
-* category[labCategory] = ObsCat#laboratory "Laboratory"
-* code = LNC#69548-6 "Genetic variant assessment"
-* subject = Reference(mii-exa-molgen-patient-2)
-* valueCodeableConcept = LNC#LA9633-4 "Present"
-* method.coding[0] = LNC#LA26398-0 "Sequencing"
-* method.coding[1] = LNC#86206-0 "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
-* specimen = Reference(mii-exa-molgen-specimen-2)
-* device = Reference(mii-exa-molgen-device-sequencer-2)
-* derivedFrom = Reference(mii-exa-molgen-untersuchte-region-1)
-* component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
-* component[gene-studied].valueCodeableConcept = HGNC#HGNC:3689 "FGFR2"
-* component[coding-change-type].valueCodeableConcept = SO#SO:0001565 "gene_fusion"
-* component[gene-fusion].valueCodeableConcept = HGNC#HGNC:XXXX "FGFR2::DBP"
-
-//http://varnomen.hgvs.org/recommendations/RNA/variant/delins/ (12.pdf)
-
-
 // CNV
 Instance: mii-exa-molgen-variante-cnv-4
 InstanceOf: mii-pr-molgen-variante

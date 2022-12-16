@@ -1,0 +1,62 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "mii-exa-molgen-anforderung-fgfr2-fusion",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "https://www.charite.de/fhir/auftragsnummern",
+      "value": "PRK4QE59A"
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "108252007",
+          "system": "http://snomed.info/sct",
+          "display": "Laboratory procedure (procedure)"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "405825005",
+        "system": "http://snomed.info/sct",
+        "display": "Molecular genetic test (procedure)"
+      }
+    ],
+    "text": "Therapierelevante genetische Veränderungen bei Intrahepatischem Gallengangskarzinom"
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient-fgfr2-fusion"
+  },
+  "authoredOn": "2022-11-30",
+  "requester": {
+    "reference": "Practitioner/mii-exa-molgen-practitioner-physician"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "code": "109842005",
+          "system": "http://snomed.info/sct",
+          "display": "Intrahepatic bile duct carcinoma (disorder)"
+        },
+        {
+          "code": "C22.1",
+          "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "version": "2022",
+          "display": "Intrahepatisches Gallengangskarzinom"
+        }
+      ]
+    }
+  ]
+}

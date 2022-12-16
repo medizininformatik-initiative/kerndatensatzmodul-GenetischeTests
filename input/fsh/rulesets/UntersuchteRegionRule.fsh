@@ -1,13 +1,13 @@
-RuleSet: Region(HGNC-ID, HGNC-symbol, RefSeq)
+RuleSet: Region(subject, specimen, device, HGNC-ID, HGNC-symbol, RefSeq)
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied"
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = LNC#53041-0 "DNA region of interest panel"
-* subject = Reference(mii-exa-molgen-patient-brca1)
+* subject = Reference({subject})
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * method = LNC#LA26398-0 "Sequencing"
-* specimen = Reference(mii-exa-molgen-specimen-brca1)
-* device = Reference(mii-exa-molgen-device-sequencer-nextseq)
+* specimen = Reference({specimen})
+* device = Reference({device})
 * component[gene-studied].code = LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = HGNC#{HGNC-ID} "{HGNC-symbol}"
 * component[region-description].code = LNC#81293-3 "Description of ranges of DNA sequences examined"

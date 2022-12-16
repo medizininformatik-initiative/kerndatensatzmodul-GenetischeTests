@@ -591,92 +591,92 @@ Usage: #example
 Instance: mii-exa-molgen-untersuchte-region-srcc-apc
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:583, APC, NM_000038.4)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:583, APC, NM_000038.4)
 
 Instance: mii-exa-molgen-untersuchte-region-srcc-atm
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:795, ATM, NM_000051.3)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:795, ATM, NM_000051.3)
 
 Instance: mii-exa-molgen-untersuchte-region-srcc-brca1
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:1100, BRCA1, NM_007294.3)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:1100, BRCA1, NM_007294.3)
 
 Instance: mii-exa-molgen-untersuchte-region-srcc-brca2
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:1101, BRCA2, NM_000059.3)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:1101, BRCA2, NM_000059.3)
 
 Instance: mii-exa-molgen-untersuchte-region-srcc-cdh1
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:1748, CDH1, NM_004360.4)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:1748, CDH1, NM_004360.4)
 
 Instance: mii-exa-molgen-untersuchte-region-srcc-mlh1
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:7127, MLH1, NM_000249.3)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:7127, MLH1, NM_000249.3)
 
 Instance: mii-exa-molgen-untersuchte-region-srcc-msh2
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:7325, MSH2, NM_000251.2)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:7325, MSH2, NM_000251.2)
 
 Instance: mii-exa-molgen-untersuchte-region-srcc-msh3
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:7326, MSH3, NM_002439.4)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:7326, MSH3, NM_002439.4)
 
 Instance: mii-exa-molgen-untersuchte-region-srcc-msh6
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:7329, MSH6, NM_000179.2)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:7329, MSH6, NM_000179.2)
 
 Instance: mii-exa-molgen-untersuchte-region-srcc-mutyh
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:7527, MUTYH, NM_001128425.1)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:7527, MUTYH, NM_001128425.1)
 
 Instance: mii-exa-molgen-untersuchte-region-srcc-nthl1
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:8028, NTHL1, NM_002528.7)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:8028, NTHL1, NM_002528.7)
 
 Instance: mii-exa-molgen-untersuchte-region-srcc-pms2
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:9122, PMS2, NM_000535.5)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:9122, PMS2, NM_000535.5)
 
 Instance: mii-exa-molgen-untersuchte-region-srcc-pold1
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:9175, POLD1, NM_001256849.1)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:9175, POLD1, NM_001256849.1)
 
 Instance: mii-exa-molgen-untersuchte-region-srcc-pole
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:9177, POLE, NM_006231.3)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:9177, POLE, NM_006231.3)
 
 Instance: mii-exa-molgen-untersuchte-region-srcc-stk11
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:11389, STK11, NM_000455.4)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:11389, STK11, NM_000455.4)
 
 Instance: mii-exa-molgen-untersuchte-region-srcc-smad4
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:6770, SMAD4, NM_005359.5)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:6770, SMAD4, NM_005359.5)
 
 Instance: mii-exa-molgen-untersuchte-region-srcc-tp53
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:11998, TP53, NM_000546.5)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:11998, TP53, NM_000546.5)
 
 Instance: mii-exa-molgen-untersuchte-region-srcc-ctnna1
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
-* insert Region(HGNC:2509, CTNNA1, NM_001903.5)
+* insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:2509, CTNNA1, NM_001903.5)
 
 Instance: mii-exa-molgen-molekulargenetischer-befundbericht-srcc
 InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
@@ -747,3 +747,126 @@ Usage: #example
 * insert Bundle(mii-exa-molgen-untersuchte-region-srcc-stk11, Observation)
 * insert Bundle(mii-exa-molgen-untersuchte-region-srcc-tp53, Observation)
 * insert Bundle(mii-exa-molgen-untersuchte-region-srcc-ctnna1, Observation)
+
+//http://varnomen.hgvs.org/recommendations/RNA/variant/delins/ (12.pdf)
+Instance: mii-exa-molgen-patient-fgfr2-fusion
+InstanceOf: Patient
+Usage: #example
+//* meta.profile = "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert"
+* identifier.use = #usual
+* identifier.type = http://terminology.hl7.org/CodeSystem/v3-ObservationValue#PSEUDED
+* identifier.system = "https://www.charite.de/fhir/sid/pseudonym"
+* identifier.value = "3337167192"
+* deceasedBoolean = false
+* address.type = #both
+* address.postalCode = "10"
+* address.country = "DE"
+* gender = #female
+* birthDate = "1964-05"
+
+Instance: mii-exa-molgen-anforderung-fgfr2-fusion
+InstanceOf: mii-pr-molgen-anforderung-gentischer-test
+Usage: #example
+* identifier.system = "https://www.charite.de/fhir/auftragsnummern"
+* identifier.value = "PRK4QE59A"
+* status = #active
+* intent = #order
+* category = SCT#108252007 "Laboratory procedure (procedure)"
+* code.coding[0] = SCT#405825005 "Molecular genetic test (procedure)"
+* code.text = "Therapierelevante genetische Veränderungen bei Intrahepatischem Gallengangskarzinom"
+* subject = Reference(mii-exa-molgen-patient-fgfr2-fusion)
+* authoredOn = "2022-11-30"
+* requester = Reference(mii-exa-molgen-practitioner-physician)
+* reasonCode[0].coding[0] = SCT#109842005 "Intrahepatic bile duct carcinoma (disorder)"
+* reasonCode[0].coding[1] = ICD10GM|2022#C22.1 "Intrahepatisches Gallengangskarzinom"
+
+Instance: mii-exa-molgen-variante-fgfr2-fusion
+InstanceOf: mii-pr-molgen-variante
+Usage: #example
+Title: "Variante FGFR2-DBP Fusion"
+Description: "Beispiel für genetische Variante FGFR2-DBP Fusion."
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
+* basedOn = Reference(mii-exa-molgen-anforderung-fgfr2-fusion)
+* status = #final
+* category[labCategory] = ObsCat#laboratory "Laboratory"
+* code = LNC#69548-6 "Genetic variant assessment"
+* subject = Reference(mii-exa-molgen-patient-fgfr2-fusion)
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* method.coding[0] = LNC#LA26398-0 "Sequencing"
+* method.coding[1] = LNC#86206-0 "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
+* component[gene-studied].valueCodeableConcept = HGNC#HGNC:3689 "FGFR2"
+* component[coding-change-type].valueCodeableConcept = SO#SO:0001565 "gene_fusion"
+* component[gene-fusion].valueCodeableConcept = HGNC#HGNC:3689::HGNC:2697 "FGFR2::DBP"
+
+Instance: mii-exa-molgen-diagnostische-implikation-fgfr2-fusion
+InstanceOf: mii-pr-molgen-diagnostische-implikation
+Usage: #example
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
+* status = #final
+* category[labCategory] = ObsCat#laboratory "Laboratory"
+* code = GenTbd#diagnostic-implication "Diagnostische Implikation"
+* subject = Reference(mii-exa-molgen-patient-fgfr2-fusion)
+* performer = Reference(mii-exa-molgen-practitioner-lab)
+* derivedFrom[variant] = Reference(mii-exa-molgen-variante-fgfr2-fusion)
+* component[conclusion-string].valueString = "starke Überexpression (25-fach)"
+
+Instance: mii-exa-molgen-therapeutische-implikation-fgfr2-fusion
+InstanceOf: mii-pr-molgen-therapeutische-implikation
+Usage: #example
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapeutic-implication"
+* status = #final
+* category[labCategory] = ObsCat#laboratory "Laboratory"
+* code = GenTbd#therapeutic-implication "Therapeutische Implikation"
+* subject = Reference(mii-exa-molgen-patient-fgfr2-fusion)
+* performer = Reference(mii-exa-molgen-practitioner-lab)
+* derivedFrom[variant] = Reference(mii-exa-molgen-variante-fgfr2-fusion)
+* component[conclusion-string].valueString = "Hochselektiver FGFR2-Inhibitor RLY-4008 bei Patienten mit Cholangiokarzinomen und anderen soliden Tumoren, mit oder ohne FGFR- gerichtete Vortherapie."
+* component[medication-assessed][+].code = LNC#51963-7 "Medication assessed [ID]"
+* component[medication-assessed][=].valueCodeableConcept.coding[0] = ATC|2022#L01EN "Fibroblasten-Wachstumsfaktor-Rezeptor (FGFR)-Tyrosinkinase-Inhibitoren"
+* component[medication-assessed][=].valueCodeableConcept.coding[1] = SCT#1162485005 "Substance with fibroblast growth factor receptor inhibitor mechanism of action (substance)"
+* component[evidence-level].valueCodeableConcept.text = "m1c"
+* component[phenotypic-treatment-context].valueCodeableConcept.coding[0] = SCT#109842005 "Intrahepatic bile duct carcinoma (disorder)"
+* component[phenotypic-treatment-context].valueCodeableConcept.coding[1] = ICD10GM|2022#C22.1 "Intrahepatisches Gallengangskarzinom"
+
+Instance: mii-exa-molgen-medikationsempfehlung-fgfr2-fusion
+InstanceOf: mii-pr-molgen-medikationsempfehlung
+Usage: #example
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation"
+* basedOn = Reference(mii-exa-molgen-anforderung-fgfr2-fusion)
+* status = TaskStatus#requested
+* intent = RequestIntent#proposal
+* code = LNC#LA26421-0 "Consider alternative medication"
+* code.text = "Hochselektive FGFR-Inhibitor-Therapie"
+* for = Reference(mii-exa-molgen-patient-fgfr2-fusion)
+* reasonReference = Reference(mii-exa-molgen-therapeutische-implikation-fgfr2-fusion)
+
+Instance: mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion
+InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
+Usage: #example
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
+* extension[recommended-action].valueReference = Reference(mii-exa-molgen-medikationsempfehlung-fgfr2-fusion)
+* basedOn = Reference(mii-exa-molgen-anforderung-fgfr2-fusion)
+* status = DiagRepStatus#final
+* category[Genetics] = v2-0074#GE "Genetics"
+* code[+] = LNC#51969-4 "Genetic analysis report"
+* subject = Reference(mii-exa-molgen-patient-fgfr2-fusion)
+* performer = Reference(mii-exa-molgen-practitioner-lab)
+* result[diagnostic-implication] = Reference(mii-exa-molgen-diagnostische-implikation-fgfr2-fusion)
+* result[variant] = Reference(mii-exa-molgen-variante-fgfr2-fusion)
+* result[therapeutic-implication] = Reference(mii-exa-molgen-therapeutische-implikation-fgfr2-fusion)
+* conclusion = "Nachweis FGFR2-Fusion. Empfehlung: Hochselektive FGFR-Inhibitor-Therapie."
+
+Instance: mii-exa-befund-bundle-befund-fgfr2-fusion
+InstanceOf: Bundle
+Usage: #example
+* type = #transaction
+* timestamp = "2022-12-16T13:47:00+01:00"
+* insert Bundle(mii-exa-molgen-patient-fgfr2-fusion, Patient)
+* insert Bundle(mii-exa-molgen-practitioner-lab, Practitioner)
+* insert Bundle(mii-exa-molgen-practitioner-physician, Practitioner)
+* insert Bundle(mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion, DiagnosticReport)
+* insert Bundle(mii-exa-molgen-anforderung-fgfr2-fusion, ServiceRequest)
+* insert Bundle(mii-exa-molgen-variante-fgfr2-fusion, Observation)
+* insert Bundle(mii-exa-molgen-diagnostische-implikation-fgfr2-fusion, Observation)
+* insert Bundle(mii-exa-molgen-therapeutische-implikation-fgfr2-fusion, Observation)
+* insert Bundle(mii-exa-molgen-medikationsempfehlung-fgfr2-fusion, Task)

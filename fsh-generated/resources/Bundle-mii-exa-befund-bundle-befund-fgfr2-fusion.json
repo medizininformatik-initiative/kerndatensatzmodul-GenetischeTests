@@ -1,0 +1,594 @@
+{
+  "resourceType": "Bundle",
+  "id": "mii-exa-befund-bundle-befund-fgfr2-fusion",
+  "type": "transaction",
+  "timestamp": "2022-12-16T13:47:00+01:00",
+  "entry": [
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-patient-fgfr2-fusion",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "mii-exa-molgen-patient-fgfr2-fusion",
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "code": "PSEUDED",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
+                }
+              ]
+            },
+            "system": "https://www.charite.de/fhir/sid/pseudonym",
+            "value": "3337167192"
+          }
+        ],
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "type": "both",
+            "postalCode": "10",
+            "country": "DE"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1964-05"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/mii-exa-molgen-patient-fgfr2-fusion"
+      }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-practitioner-lab",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "mii-exa-molgen-practitioner-lab",
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "text": "Dr. Daniel Schmidt",
+            "family": "Schmidt",
+            "given": [
+              "Daniel"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Practitioner/mii-exa-molgen-practitioner-lab"
+      }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-practitioner-physician",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "mii-exa-molgen-practitioner-physician",
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "text": "Dr. Linda Rubens",
+            "family": "Rubens",
+            "given": [
+              "Linda"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Practitioner/mii-exa-molgen-practitioner-physician"
+      }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht",
+            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "GE",
+                "display": "Genetics"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-massnahme",
+            "valueReference": {
+              "reference": "Task/mii-exa-molgen-medikationsempfehlung-fgfr2-fusion"
+            }
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "ServiceRequest/mii-exa-molgen-anforderung-fgfr2-fusion"
+          }
+        ],
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "51969-4",
+              "system": "http://loinc.org",
+              "display": "Genetic analysis report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient-fgfr2-fusion"
+        },
+        "performer": [
+          {
+            "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
+          }
+        ],
+        "result": [
+          {
+            "reference": "Observation/mii-exa-molgen-diagnostische-implikation-fgfr2-fusion"
+          },
+          {
+            "reference": "Observation/mii-exa-molgen-variante-fgfr2-fusion"
+          },
+          {
+            "reference": "Observation/mii-exa-molgen-therapeutische-implikation-fgfr2-fusion"
+          }
+        ],
+        "conclusion": "Nachweis FGFR2-Fusion. Empfehlung: Hochselektive FGFR-Inhibitor-Therapie."
+      },
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion"
+      }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-anforderung-fgfr2-fusion",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "mii-exa-molgen-anforderung-fgfr2-fusion",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://www.charite.de/fhir/auftragsnummern",
+            "value": "PRK4QE59A"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "108252007",
+                "system": "http://snomed.info/sct",
+                "display": "Laboratory procedure (procedure)"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "405825005",
+              "system": "http://snomed.info/sct",
+              "display": "Molecular genetic test (procedure)"
+            }
+          ],
+          "text": "Therapierelevante genetische Veränderungen bei Intrahepatischem Gallengangskarzinom"
+        },
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient-fgfr2-fusion"
+        },
+        "authoredOn": "2022-11-30",
+        "requester": {
+          "reference": "Practitioner/mii-exa-molgen-practitioner-physician"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "code": "109842005",
+                "system": "http://snomed.info/sct",
+                "display": "Intrahepatic bile duct carcinoma (disorder)"
+              },
+              {
+                "code": "C22.1",
+                "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                "version": "2022",
+                "display": "Intrahepatisches Gallengangskarzinom"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "ServiceRequest/mii-exa-molgen-anforderung-fgfr2-fusion"
+      }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-variante-fgfr2-fusion",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-molgen-variante-fgfr2-fusion",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante",
+            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "69548-6",
+              "display": "Genetic variant assessment"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "48018-6"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "HGNC:3689",
+                  "system": "http://www.genenames.org/geneId",
+                  "display": "FGFR2"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "48019-4"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "SO:0001565",
+                  "system": "http://sequenceontology.org",
+                  "display": "gene_fusion"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "95123-6",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "HGNC:3689::HGNC:2697",
+                  "system": "http://www.genenames.org/geneId",
+                  "display": "FGFR2::DBP"
+                }
+              ]
+            }
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "ServiceRequest/mii-exa-molgen-anforderung-fgfr2-fusion"
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient-fgfr2-fusion"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "LA9633-4",
+              "system": "http://loinc.org",
+              "display": "Present"
+            }
+          ]
+        },
+        "method": {
+          "coding": [
+            {
+              "code": "LA26398-0",
+              "system": "http://loinc.org",
+              "display": "Sequencing"
+            },
+            {
+              "code": "86206-0",
+              "system": "http://loinc.org",
+              "display": "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-variante-fgfr2-fusion"
+      }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-diagnostische-implikation-fgfr2-fusion",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-molgen-diagnostische-implikation-fgfr2-fusion",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation",
+            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+              "code": "diagnostic-implication",
+              "display": "Diagnostische Implikation"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+                  "code": "conclusion-string"
+                }
+              ]
+            },
+            "valueString": "starke Überexpression (25-fach)"
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient-fgfr2-fusion"
+        },
+        "performer": [
+          {
+            "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
+          }
+        ],
+        "derivedFrom": [
+          {
+            "reference": "Observation/mii-exa-molgen-variante-fgfr2-fusion"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-diagnostische-implikation-fgfr2-fusion"
+      }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-therapeutische-implikation-fgfr2-fusion",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-molgen-therapeutische-implikation-fgfr2-fusion",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation",
+            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapeutic-implication"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+              "code": "therapeutic-implication",
+              "display": "Therapeutische Implikation"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+                  "code": "conclusion-string"
+                }
+              ]
+            },
+            "valueString": "Hochselektiver FGFR2-Inhibitor RLY-4008 bei Patienten mit Cholangiokarzinomen und anderen soliden Tumoren, mit oder ohne FGFR- gerichtete Vortherapie."
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "51963-7",
+                  "display": "Medication assessed [ID]"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "L01EN",
+                  "system": "http://www.whocc.no/atc",
+                  "version": "2022",
+                  "display": "Fibroblasten-Wachstumsfaktor-Rezeptor (FGFR)-Tyrosinkinase-Inhibitoren"
+                },
+                {
+                  "code": "1162485005",
+                  "system": "http://snomed.info/sct",
+                  "display": "Substance with fibroblast growth factor receptor inhibitor mechanism of action (substance)"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "93044-6"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "text": "m1c"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "81259-4"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "109842005",
+                  "system": "http://snomed.info/sct",
+                  "display": "Intrahepatic bile duct carcinoma (disorder)"
+                },
+                {
+                  "code": "C22.1",
+                  "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                  "version": "2022",
+                  "display": "Intrahepatisches Gallengangskarzinom"
+                }
+              ]
+            }
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient-fgfr2-fusion"
+        },
+        "performer": [
+          {
+            "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
+          }
+        ],
+        "derivedFrom": [
+          {
+            "reference": "Observation/mii-exa-molgen-variante-fgfr2-fusion"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-therapeutische-implikation-fgfr2-fusion"
+      }
+    },
+    {
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-medikationsempfehlung-fgfr2-fusion",
+      "resource": {
+        "resourceType": "Task",
+        "id": "mii-exa-molgen-medikationsempfehlung-fgfr2-fusion",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung",
+            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation"
+          ]
+        },
+        "status": "requested",
+        "intent": "proposal",
+        "basedOn": [
+          {
+            "reference": "ServiceRequest/mii-exa-molgen-anforderung-fgfr2-fusion"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "LA26421-0",
+              "system": "http://loinc.org",
+              "display": "Consider alternative medication"
+            }
+          ],
+          "text": "Hochselektive FGFR-Inhibitor-Therapie"
+        },
+        "for": {
+          "reference": "Patient/mii-exa-molgen-patient-fgfr2-fusion"
+        },
+        "reasonReference": {
+          "reference": "Observation/mii-exa-molgen-therapeutische-implikation-fgfr2-fusion"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Task/mii-exa-molgen-medikationsempfehlung-fgfr2-fusion"
+      }
+    }
+  ]
+}

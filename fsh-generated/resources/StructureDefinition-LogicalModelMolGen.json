@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-lm-molgen-logical-model",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-lm-molgen-logical-model",
+  "id": "LogicalModelMolGen",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/LogicalModelMolGen",
   "version": "1.0.0",
   "name": "MII_LM_MolGen_LogicalModel",
   "title": "MII LM MolGen LogicalModel",
@@ -21,20 +21,20 @@
   ],
   "kind": "logical",
   "abstract": false,
-  "type": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-lm-molgen-logical-model",
+  "type": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/LogicalModelMolGen",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [
       {
-        "id": "mii-lm-molgen-logical-model",
-        "path": "mii-lm-molgen-logical-model",
+        "id": "LogicalModelMolGen",
+        "path": "LogicalModelMolGen",
         "short": "MII LM MolGen LogicalModel",
         "definition": "LogicalModel des MII Moduls Molekulargenetischer Befundbericht"
       },
       {
-        "id": "mii-lm-molgen-logical-model.Probeninformation",
-        "path": "mii-lm-molgen-logical-model.Probeninformation",
+        "id": "LogicalModelMolGen.Probeninformation",
+        "path": "LogicalModelMolGen.Probeninformation",
         "short": "Probeninformation",
         "definition": "Probeninformation",
         "min": 1,
@@ -46,8 +46,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Probeninformation.Patient",
-        "path": "mii-lm-molgen-logical-model.Probeninformation.Patient",
+        "id": "LogicalModelMolGen.Probeninformation.Patient",
+        "path": "LogicalModelMolGen.Probeninformation.Patient",
         "short": "Patient",
         "definition": "Abgebildet im KDS Modul Person",
         "min": 1,
@@ -68,8 +68,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Probeninformation.Probe",
-        "path": "mii-lm-molgen-logical-model.Probeninformation.Probe",
+        "id": "LogicalModelMolGen.Probeninformation.Probe",
+        "path": "LogicalModelMolGen.Probeninformation.Probe",
         "short": "Probe",
         "definition": "Abgebildet im KDS Modul Biobank",
         "min": 0,
@@ -90,8 +90,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Anforderung",
-        "path": "mii-lm-molgen-logical-model.Anforderung",
+        "id": "LogicalModelMolGen.Anforderung",
+        "path": "LogicalModelMolGen.Anforderung",
         "short": "Anforderung",
         "definition": "Anforderung",
         "min": 0,
@@ -103,8 +103,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Anforderung.Indikation",
-        "path": "mii-lm-molgen-logical-model.Anforderung.Indikation",
+        "id": "LogicalModelMolGen.Anforderung.Indikation",
+        "path": "LogicalModelMolGen.Anforderung.Indikation",
         "short": "Indikation",
         "definition": "Indikation",
         "min": 0,
@@ -116,8 +116,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Anforderung.Indikation.Indikation",
-        "path": "mii-lm-molgen-logical-model.Anforderung.Indikation.Indikation",
+        "id": "LogicalModelMolGen.Anforderung.Indikation.Indikation",
+        "path": "LogicalModelMolGen.Anforderung.Indikation.Indikation",
         "short": "Indikation",
         "definition": "Indikation; (mögliche) Erkrankung Terminologien: ICD-10, SNOMED, Orpha, HPO - Bsp.: Verdacht auf… / Ausschluss von… / Mögliche Therapie für ...",
         "min": 0,
@@ -129,8 +129,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Anforderung.Indikation.Gesundheitszustand",
-        "path": "mii-lm-molgen-logical-model.Anforderung.Indikation.Gesundheitszustand",
+        "id": "LogicalModelMolGen.Anforderung.Indikation.Gesundheitszustand",
+        "path": "LogicalModelMolGen.Anforderung.Indikation.Gesundheitszustand",
         "short": "Gesundheitszustand",
         "definition": "Aktueller Gesundheitszustand; Angabe aktueller Beschwerden oder nachgewiesener Erkrankung - Terminologie: HPO",
         "min": 0,
@@ -145,8 +145,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Anforderung.Indikation.Krankengeschichte-Familie",
-        "path": "mii-lm-molgen-logical-model.Anforderung.Indikation.Krankengeschichte-Familie",
+        "id": "LogicalModelMolGen.Anforderung.Indikation.Krankengeschichte-Familie",
+        "path": "LogicalModelMolGen.Anforderung.Indikation.Krankengeschichte-Familie",
         "short": "Krankengeschichte Familie",
         "definition": "Krankengeschichte Familie",
         "min": 0,
@@ -161,8 +161,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Anforderung.Indikation.Anlagetraeger",
-        "path": "mii-lm-molgen-logical-model.Anforderung.Indikation.Anlagetraeger",
+        "id": "LogicalModelMolGen.Anforderung.Indikation.Anlagetraeger",
+        "path": "LogicalModelMolGen.Anforderung.Indikation.Anlagetraeger",
         "short": "Anlageträger",
         "definition": "Anlageträgerstatus der Familie - Ist gefordert wenn Verwandte des Index-Falles ebenfalls sequenziert wurden - Terminologie: PED",
         "min": 0,
@@ -179,8 +179,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Anforderung.Indikation.RelevanteVorergebnisse",
-        "path": "mii-lm-molgen-logical-model.Anforderung.Indikation.RelevanteVorergebnisse",
+        "id": "LogicalModelMolGen.Anforderung.Indikation.RelevanteVorergebnisse",
+        "path": "LogicalModelMolGen.Anforderung.Indikation.RelevanteVorergebnisse",
         "short": "Relevante Vorergebnisse",
         "definition": "Angabe zuvor durchgeführter relevanter Tests (inklusive z.B. Methode, getestete Gene, und Ergebnisse)",
         "min": 0,
@@ -198,8 +198,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Anforderung.Anforderer",
-        "path": "mii-lm-molgen-logical-model.Anforderung.Anforderer",
+        "id": "LogicalModelMolGen.Anforderung.Anforderer",
+        "path": "LogicalModelMolGen.Anforderung.Anforderer",
         "short": "Anforderer",
         "definition": "Informationen zur Person, die die molekulargenetischen Untersuchungen in Auftrag gibt",
         "min": 0,
@@ -219,8 +219,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Anforderung.Anforderer.Zu-testende-Gene",
-        "path": "mii-lm-molgen-logical-model.Anforderung.Anforderer.Zu-testende-Gene",
+        "id": "LogicalModelMolGen.Anforderung.Anforderer.Zu-testende-Gene",
+        "path": "LogicalModelMolGen.Anforderung.Anforderer.Zu-testende-Gene",
         "short": "Zu testende Gene",
         "definition": "Angabe der zu testenden Gene",
         "min": 0,
@@ -232,8 +232,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Anforderung.Anforderer.Einheitlicher-Bewertungsmassstab",
-        "path": "mii-lm-molgen-logical-model.Anforderung.Anforderer.Einheitlicher-Bewertungsmassstab",
+        "id": "LogicalModelMolGen.Anforderung.Anforderer.Einheitlicher-Bewertungsmassstab",
+        "path": "LogicalModelMolGen.Anforderung.Anforderer.Einheitlicher-Bewertungsmassstab",
         "short": "Einheitlicher Bewertungsmaßstab",
         "definition": "Der Einheitliche Bewertungsmaßstab definiert den Inhalt der abrechnungsfähigen vertragsärztlichen Leistungen Einheitlicher Bewertungsmaßstab (EBM): Angabe der Ziffern",
         "min": 0,
@@ -248,8 +248,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Anforderung.Anforderer.Anforderungstext",
-        "path": "mii-lm-molgen-logical-model.Anforderung.Anforderer.Anforderungstext",
+        "id": "LogicalModelMolGen.Anforderung.Anforderer.Anforderungstext",
+        "path": "LogicalModelMolGen.Anforderung.Anforderer.Anforderungstext",
         "short": "Anforderungstext",
         "definition": "Freitext für die Angabe von entweder originaler, unveränderter Anforderungstext, oder alternativ: zusätzliche Anforderungen oder angeforderter Test",
         "min": 0,
@@ -261,8 +261,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Anforderung.Datum-der-Anforderung",
-        "path": "mii-lm-molgen-logical-model.Anforderung.Datum-der-Anforderung",
+        "id": "LogicalModelMolGen.Anforderung.Datum-der-Anforderung",
+        "path": "LogicalModelMolGen.Anforderung.Datum-der-Anforderung",
         "short": "Datum der Anforderung",
         "definition": "Angabe des Datums der Anforderung",
         "min": 0,
@@ -274,8 +274,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Anforderung.Bemerkungen",
-        "path": "mii-lm-molgen-logical-model.Anforderung.Bemerkungen",
+        "id": "LogicalModelMolGen.Anforderung.Bemerkungen",
+        "path": "LogicalModelMolGen.Anforderung.Bemerkungen",
         "short": "Bemerkungen",
         "definition": "Bemerkungen",
         "min": 0,
@@ -287,8 +287,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Methoden",
-        "path": "mii-lm-molgen-logical-model.Methoden",
+        "id": "LogicalModelMolGen.Methoden",
+        "path": "LogicalModelMolGen.Methoden",
         "short": "Methoden",
         "definition": "Methoden",
         "min": 0,
@@ -300,8 +300,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Methoden.Methode",
-        "path": "mii-lm-molgen-logical-model.Methoden.Methode",
+        "id": "LogicalModelMolGen.Methoden.Methode",
+        "path": "LogicalModelMolGen.Methoden.Methode",
         "short": "Methode",
         "definition": "Methode und Referenz zur Methode - beinhaltet alle sequenzbasierenden Analytik-Methoden, während nicht sequenzbasierende Aufarbeitungsmethoden in das Modul Pathologie zuzuordnen sind.",
         "min": 0,
@@ -313,8 +313,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Methoden.Relevante-Parameter",
-        "path": "mii-lm-molgen-logical-model.Methoden.Relevante-Parameter",
+        "id": "LogicalModelMolGen.Methoden.Relevante-Parameter",
+        "path": "LogicalModelMolGen.Methoden.Relevante-Parameter",
         "short": "Relevante Parameter",
         "definition": "Relevante Parameter (Angabe von Primer / Zyklenanzahl, Panel)",
         "min": 0,
@@ -324,15 +324,14 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Observation",
-              "http://hl7.org/fhir/StructureDefinition/RelatedArtifact",
               "http://hl7.org/fhir/StructureDefinition/DocumentReference"
             ]
           }
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Methoden.Geräte-Software-Kits",
-        "path": "mii-lm-molgen-logical-model.Methoden.Geräte-Software-Kits",
+        "id": "LogicalModelMolGen.Methoden.Geraete-Software-Kits",
+        "path": "LogicalModelMolGen.Methoden.Geraete-Software-Kits",
         "short": "Geräte / Software / Kits",
         "definition": "Angaben verwendeter Geräte / Software / Kits inklusive Target enrichment für die Analyse (u.U. Angabe von  Hersteller; Versionsnummer)",
         "min": 0,
@@ -347,8 +346,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Methoden.Getestete-Gene",
-        "path": "mii-lm-molgen-logical-model.Methoden.Getestete-Gene",
+        "id": "LogicalModelMolGen.Methoden.Getestete-Gene",
+        "path": "LogicalModelMolGen.Methoden.Getestete-Gene",
         "short": "Getestete Gene",
         "definition": "Angabe der getesteten Gene",
         "min": 0,
@@ -360,8 +359,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Methoden.Referenzsequenz",
-        "path": "mii-lm-molgen-logical-model.Methoden.Referenzsequenz",
+        "id": "LogicalModelMolGen.Methoden.Referenzsequenz",
+        "path": "LogicalModelMolGen.Methoden.Referenzsequenz",
         "short": "Referenzsequenz",
         "definition": "Transkript Referenzsequenz (Ensembl und RefSeq)",
         "min": 0,
@@ -373,8 +372,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Methoden.Read-Depth-Coverage",
-        "path": "mii-lm-molgen-logical-model.Methoden.Read-Depth-Coverage",
+        "id": "LogicalModelMolGen.Methoden.Read-Depth-Coverage",
+        "path": "LogicalModelMolGen.Methoden.Read-Depth-Coverage",
         "short": "Read depth/Coverage",
         "definition": "Anzahl der Ablesungen eines bestimmten Nukleotids im Genom in einem Experiment",
         "min": 0,
@@ -386,8 +385,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Methoden.Intron-Spanning-IVS",
-        "path": "mii-lm-molgen-logical-model.Methoden.Intron-Spanning-IVS",
+        "id": "LogicalModelMolGen.Methoden.Intron-Spanning-IVS",
+        "path": "LogicalModelMolGen.Methoden.Intron-Spanning-IVS",
         "short": "Intron spanning / IVS",
         "definition": "Intron spanning  oder  IVS (InterVening Sequence, z.B. Introns)",
         "min": 0,
@@ -399,8 +398,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Methoden.Start-und-Endnukleotid",
-        "path": "mii-lm-molgen-logical-model.Methoden.Start-und-Endnukleotid",
+        "id": "LogicalModelMolGen.Methoden.Start-und-Endnukleotid",
+        "path": "LogicalModelMolGen.Methoden.Start-und-Endnukleotid",
         "short": "Start- und Endnukleotid",
         "definition": "Start- und Endnukleotid",
         "min": 0,
@@ -412,8 +411,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Methoden.Sensitivitaet-Detektionslimit",
-        "path": "mii-lm-molgen-logical-model.Methoden.Sensitivitaet-Detektionslimit",
+        "id": "LogicalModelMolGen.Methoden.Sensitivitaet-Detektionslimit",
+        "path": "LogicalModelMolGen.Methoden.Sensitivitaet-Detektionslimit",
         "short": "Sensitivität/Detektionslimit",
         "definition": "Sensitivität/Detektionslimit",
         "min": 0,
@@ -425,8 +424,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Methoden.Limitierungen-Bemerkungen",
-        "path": "mii-lm-molgen-logical-model.Methoden.Limitierungen-Bemerkungen",
+        "id": "LogicalModelMolGen.Methoden.Limitierungen-Bemerkungen",
+        "path": "LogicalModelMolGen.Methoden.Limitierungen-Bemerkungen",
         "short": "Limitierungen/Bemerkungen",
         "definition": "Limitierungen/Bemerkungen, Freitext",
         "min": 0,
@@ -438,8 +437,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse",
+        "id": "LogicalModelMolGen.Ergebnisse",
+        "path": "LogicalModelMolGen.Ergebnisse",
         "short": "Ergebnisse",
         "definition": "Ergebnisse",
         "min": 0,
@@ -451,8 +450,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Zusammenfassung",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Zusammenfassung",
+        "id": "LogicalModelMolGen.Ergebnisse.Zusammenfassung",
+        "path": "LogicalModelMolGen.Ergebnisse.Zusammenfassung",
         "short": "Zusammenfassung",
         "definition": "Zusammenfassung",
         "min": 0,
@@ -468,8 +467,8 @@
         }
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen",
+        "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen",
+        "path": "LogicalModelMolGen.Ergebnisse.Veraenderungen",
         "short": "Veränderungen",
         "definition": "Veränderungen",
         "min": 0,
@@ -481,8 +480,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Veraenderung-Proteinebene",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Veraenderung-Proteinebene",
+        "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Veraenderung-Proteinebene",
+        "path": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Veraenderung-Proteinebene",
         "short": "Veränderungen auf Proteinebene: Terminologie: HGVS - Angabe möglich von: Formal Protein (pHGVS) 3-letter code:  Bsp.: p.(Cys47Tyr),  p.(Val600Glu) - Formal Protein (pHGVS) 1-letter code:  Bsp.: p.(C47Y) - Trivialname (Kurzform):  Bsp.: C47Y",
         "definition": "Veränderungen auf Proteinebene: Terminologie: HGVS - Angabe möglich von: Formal Protein (pHGVS) 3-letter code:  Bsp.: p.(Cys47Tyr),  p.(Val600Glu) - Formal Protein (pHGVS) 1-letter code:  Bsp.: p.(C47Y) - Trivialname (Kurzform):  Bsp.: C47Y",
         "min": 0,
@@ -494,8 +493,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.DNA-Veraenderungen",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.DNA-Veraenderungen",
+        "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.DNA-Veraenderungen",
+        "path": "LogicalModelMolGen.Ergebnisse.Veraenderungen.DNA-Veraenderungen",
         "short": "Veränderung auf DNA-Level, formale Beschreibung  mittels cHGVS",
         "definition": "Veränderung auf DNA-Level, formale Beschreibung  mittels cHGVS",
         "min": 0,
@@ -507,8 +506,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Genomische-DNA-Veraenderung",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Genomische-DNA-Veraenderung",
+        "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Genomische-DNA-Veraenderung",
+        "path": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Genomische-DNA-Veraenderung",
         "short": "Genomische DNA Veränderung gHGVS",
         "definition": "Genomische DNA Veränderung gHGVS",
         "min": 0,
@@ -520,8 +519,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Transkript-ID",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Transkript-ID",
+        "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Transkript-ID",
+        "path": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Transkript-ID",
         "short": "Transkript- ID (Code) - Terminologie: NCBI, Ensembl, GTR, LRG",
         "definition": "Transkript- ID (Code) - Terminologie: NCBI, Ensembl, GTR, LRG",
         "min": 0,
@@ -533,8 +532,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Referenzgenom",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Referenzgenom",
+        "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Referenzgenom",
+        "path": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Referenzgenom",
         "short": "Referenzgenom - Der Genome Build hat zwei Formate, entweder hg und eine Nummer (hg18, hg19, hg38) oder GRCh/NCBI und eine Nummer (NCBI35, NCBI36, GRCh37, GRCh38).",
         "definition": "Referenzgenom - Der Genome Build hat zwei Formate, entweder hg und eine Nummer (hg18, hg19, hg38) oder GRCh/NCBI und eine Nummer (NCBI35, NCBI36, GRCh37, GRCh38).",
         "min": 0,
@@ -546,8 +545,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Ref-Allel",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Ref-Allel",
+        "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Ref-Allel",
+        "path": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Ref-Allel",
         "short": "Referenzallel",
         "definition": "Referenzallel",
         "min": 0,
@@ -559,8 +558,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Alt-Allel",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Alt-Allel",
+        "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Alt-Allel",
+        "path": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Alt-Allel",
         "short": "Jedes alternative (ALT) Allel an dem untersuchten Lokus",
         "definition": "Jedes alternative (ALT) Allel an dem untersuchten Lokus",
         "min": 0,
@@ -572,8 +571,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.DNA-Mutationstyp",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.DNA-Mutationstyp",
+        "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.DNA-Mutationstyp",
+        "path": "LogicalModelMolGen.Ergebnisse.Veraenderungen.DNA-Mutationstyp",
         "short": "Varianten-Typ bzw. Mutationsart - Terminologie: Sequence Ontology (include codes from http://sequenceontology.org where concept IsA SO:0002072)",
         "definition": "Varianten-Typ bzw. Mutationsart - Terminologie: Sequence Ontology (include codes from http://sequenceontology.org where concept IsA SO:0002072)",
         "min": 0,
@@ -585,8 +584,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Mutationskonsequenz-Funktionell",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Mutationskonsequenz-Funktionell",
+        "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Mutationskonsequenz-Funktionell",
+        "path": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Mutationskonsequenz-Funktionell",
         "short": "Mutationskonsequenz (funktionell) - Terminologie: Sequence Ontology",
         "definition": "Mutationskonsequenz (funktionell) - Terminologie: Sequence Ontology",
         "min": 0,
@@ -602,8 +601,8 @@
         }
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Proben-Allelfrequenz",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Proben-Allelfrequenz",
+        "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Proben-Allelfrequenz",
+        "path": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Proben-Allelfrequenz",
         "short": "Allelfrequenz",
         "definition": "Allelfrequenz",
         "min": 0,
@@ -615,8 +614,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Ursprung-der-Variante",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Ursprung-der-Variante",
+        "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Ursprung-der-Variante",
+        "path": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Ursprung-der-Variante",
         "short": "Ursprung der Variante",
         "definition": "Ursprung der Variante",
         "min": 0,
@@ -632,8 +631,8 @@
         }
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Varianten-ID",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Varianten-ID",
+        "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Varianten-ID",
+        "path": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Varianten-ID",
         "short": "Varianten ID; eindeutige Beschreibung der Variante - Terminologie: ClinVar, HGMD, COSMIC, PMID, dbSNP",
         "definition": "Varianten ID; eindeutige Beschreibung der Variante - Terminologie: ClinVar, HGMD, COSMIC, PMID, dbSNP",
         "min": 0,
@@ -645,8 +644,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Chromosom",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Chromosom",
+        "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Chromosom",
+        "path": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Chromosom",
         "short": "Chromosom",
         "definition": "Chromosom",
         "min": 0,
@@ -662,8 +661,8 @@
         }
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Exon",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Exon",
+        "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Exon",
+        "path": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Exon",
         "short": "Exon",
         "definition": "Exon",
         "min": 0,
@@ -675,8 +674,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Zytogenetische-Lokalisation",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Zytogenetische-Lokalisation",
+        "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Zytogenetische-Lokalisation",
+        "path": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Zytogenetische-Lokalisation",
         "short": "Variante - Terminologie: ISCN",
         "definition": "Variante - Terminologie: ISCN",
         "min": 0,
@@ -688,8 +687,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Kopienzahlvariationen",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Veraenderungen.Kopienzahlvariationen",
+        "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Kopienzahlvariationen",
+        "path": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Kopienzahlvariationen",
         "short": "Kopienzahlvariationen der betroffenen Gene",
         "definition": "Kopienzahlvariationen der betroffenen Gene",
         "min": 0,
@@ -701,8 +700,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Mutationslast",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Mutationslast",
+        "id": "LogicalModelMolGen.Ergebnisse.Mutationslast",
+        "path": "LogicalModelMolGen.Ergebnisse.Mutationslast",
         "short": "Somat. Mutationen / Mutationslast",
         "definition": "Somat. Mutationen / Mutationslast",
         "min": 0,
@@ -714,8 +713,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Mikrosatelliteninstabilität",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Mikrosatelliteninstabilität",
+        "id": "LogicalModelMolGen.Ergebnisse.Mikrosatelliteninstabilität",
+        "path": "LogicalModelMolGen.Ergebnisse.Mikrosatelliteninstabilität",
         "short": "Mikrosatelliteninstabilität",
         "definition": "Mikrosatelliteninstabilität",
         "min": 0,
@@ -731,8 +730,8 @@
         }
       },
       {
-        "id": "mii-lm-molgen-logical-model.Ergebnisse.Daten",
-        "path": "mii-lm-molgen-logical-model.Ergebnisse.Daten",
+        "id": "LogicalModelMolGen.Ergebnisse.Daten",
+        "path": "LogicalModelMolGen.Ergebnisse.Daten",
         "short": "Rohdaten / Link auf die Datei/Dateien",
         "definition": "Rohdaten / Link auf die Datei/Dateien",
         "min": 0,
@@ -747,8 +746,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Interpretation",
-        "path": "mii-lm-molgen-logical-model.Interpretation",
+        "id": "LogicalModelMolGen.Interpretation",
+        "path": "LogicalModelMolGen.Interpretation",
         "short": "Interpretation",
         "definition": "Interpretation",
         "min": 0,
@@ -760,8 +759,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Interpretation.Klinische-Signifikanz",
-        "path": "mii-lm-molgen-logical-model.Interpretation.Klinische-Signifikanz",
+        "id": "LogicalModelMolGen.Interpretation.Klinische-Signifikanz",
+        "path": "LogicalModelMolGen.Interpretation.Klinische-Signifikanz",
         "short": "Finale Interpretation / Einschätzung",
         "definition": "Finale Interpretation / Einschätzung",
         "min": 0,
@@ -777,24 +776,21 @@
         }
       },
       {
-        "id": "mii-lm-molgen-logical-model.Interpretation.Referenzen",
-        "path": "mii-lm-molgen-logical-model.Interpretation.Referenzen",
+        "id": "LogicalModelMolGen.Interpretation.Referenzen",
+        "path": "LogicalModelMolGen.Interpretation.Referenzen",
         "short": "Referenzen",
         "definition": "Referenzen",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/RelatedArtifact"
-            ]
+            "code": "RelatedArtifact"
           }
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Interpretation.ClinicalAnnotationLevelOfEvidence",
-        "path": "mii-lm-molgen-logical-model.Interpretation.ClinicalAnnotationLevelOfEvidence",
+        "id": "LogicalModelMolGen.Interpretation.ClinicalAnnotationLevelOfEvidence",
+        "path": "LogicalModelMolGen.Interpretation.ClinicalAnnotationLevelOfEvidence",
         "short": "Clinical Annotation Level Of Evidence",
         "definition": "Clinical Annotation Level Of Evidence",
         "min": 0,
@@ -810,8 +806,8 @@
         }
       },
       {
-        "id": "mii-lm-molgen-logical-model.Interpretation.Assoziierter-Phaenotyp",
-        "path": "mii-lm-molgen-logical-model.Interpretation.Assoziierter-Phaenotyp",
+        "id": "LogicalModelMolGen.Interpretation.Assoziierter-Phaenotyp",
+        "path": "LogicalModelMolGen.Interpretation.Assoziierter-Phaenotyp",
         "short": "Mit Präsenz einer Variante assoziierter Phänotyp",
         "definition": "Mit Präsenz einer Variante assoziierter Phänotyp",
         "min": 0,
@@ -823,8 +819,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Interpretation.Vererbungsmodus",
-        "path": "mii-lm-molgen-logical-model.Interpretation.Vererbungsmodus",
+        "id": "LogicalModelMolGen.Interpretation.Vererbungsmodus",
+        "path": "LogicalModelMolGen.Interpretation.Vererbungsmodus",
         "short": "Art der Vererbung für beschriebenen Phänotyp",
         "definition": "Art der Vererbung für beschriebenen Phänotyp",
         "min": 0,
@@ -840,8 +836,8 @@
         }
       },
       {
-        "id": "mii-lm-molgen-logical-model.Interpretation.Zusammenfassung",
-        "path": "mii-lm-molgen-logical-model.Interpretation.Zusammenfassung",
+        "id": "LogicalModelMolGen.Interpretation.Zusammenfassung",
+        "path": "LogicalModelMolGen.Interpretation.Zusammenfassung",
         "short": "Zusammenfassung als Freitext, kann inhaltlich folgende Punkte beinhalten: Antwort auf ursprüngliche Fragestellung ausformuliert Therapeutikum/Wirkstoff/Wirkstoffklasse Effekt/Auswirkung",
         "definition": "Zusammenfassung als Freitext, kann inhaltlich folgende Punkte beinhalten: Antwort auf ursprüngliche Fragestellung ausformuliert Therapeutikum/Wirkstoff/Wirkstoffklasse Effekt/Auswirkung",
         "min": 0,
@@ -853,8 +849,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Interpretation.Medikamentenbewertung",
-        "path": "mii-lm-molgen-logical-model.Interpretation.Medikamentenbewertung",
+        "id": "LogicalModelMolGen.Interpretation.Medikamentenbewertung",
+        "path": "LogicalModelMolGen.Interpretation.Medikamentenbewertung",
         "short": "Medikamentenbewertung",
         "definition": "Medikamentenbewertung",
         "min": 0,
@@ -866,8 +862,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Interpretation.Empfehlungen",
-        "path": "mii-lm-molgen-logical-model.Interpretation.Empfehlungen",
+        "id": "LogicalModelMolGen.Interpretation.Empfehlungen",
+        "path": "LogicalModelMolGen.Interpretation.Empfehlungen",
         "short": "Empfehlungen: Andere/Allgemeine Empfehlungen (Freitext / Links) / Generelle ergänzende Referenz(en) (Bsp: PuMed-link / PMID)",
         "definition": "Empfehlungen: Andere/Allgemeine Empfehlungen (Freitext / Links) / Generelle ergänzende Referenz(en) (Bsp: PuMed-link / PMID)",
         "min": 0,
@@ -883,8 +879,8 @@
         }
       },
       {
-        "id": "mii-lm-molgen-logical-model.Interpretation.Medikationsempfehlung",
-        "path": "mii-lm-molgen-logical-model.Interpretation.Medikationsempfehlung",
+        "id": "LogicalModelMolGen.Interpretation.Medikationsempfehlung",
+        "path": "LogicalModelMolGen.Interpretation.Medikationsempfehlung",
         "short": "Medikationsempfehlung - Terminologie: LOINC",
         "definition": "Medikationsempfehlung - Terminologie: LOINC",
         "min": 0,
@@ -900,8 +896,8 @@
         }
       },
       {
-        "id": "mii-lm-molgen-logical-model.Weiteres",
-        "path": "mii-lm-molgen-logical-model.Weiteres",
+        "id": "LogicalModelMolGen.Weiteres",
+        "path": "LogicalModelMolGen.Weiteres",
         "short": "WeiteresFormales",
         "definition": "WeiteresFormales",
         "min": 0,
@@ -913,8 +909,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Weiteres.Bericht-ID",
-        "path": "mii-lm-molgen-logical-model.Weiteres.Bericht-ID",
+        "id": "LogicalModelMolGen.Weiteres.Bericht-ID",
+        "path": "LogicalModelMolGen.Weiteres.Bericht-ID",
         "short": "Identifikationsnummer des Berichtes",
         "definition": "Identifikationsnummer des Berichtes",
         "min": 0,
@@ -926,8 +922,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Weiteres.Anhaenge",
-        "path": "mii-lm-molgen-logical-model.Weiteres.Anhaenge",
+        "id": "LogicalModelMolGen.Weiteres.Anhaenge",
+        "path": "LogicalModelMolGen.Weiteres.Anhaenge",
         "short": "Anhänge z.B. Tabellarische Übersicht Panel",
         "definition": "Anhänge z.B. Tabellarische Übersicht Panel",
         "min": 0,
@@ -943,8 +939,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Weiteres.Berichtstatus",
-        "path": "mii-lm-molgen-logical-model.Weiteres.Berichtstatus",
+        "id": "LogicalModelMolGen.Weiteres.Berichtstatus",
+        "path": "LogicalModelMolGen.Weiteres.Berichtstatus",
         "short": "Berichtstatus (z.B. vorab oder final)",
         "definition": "Berichtstatus (z.B. vorab oder final)",
         "min": 1,
@@ -960,8 +956,8 @@
         }
       },
       {
-        "id": "mii-lm-molgen-logical-model.Weiteres.Datum-des-Berichts",
-        "path": "mii-lm-molgen-logical-model.Weiteres.Datum-des-Berichts",
+        "id": "LogicalModelMolGen.Weiteres.Datum-des-Berichts",
+        "path": "LogicalModelMolGen.Weiteres.Datum-des-Berichts",
         "short": "Datum des Berichtes /Zeitstempel (Bericht verfasst / freigegeben am)",
         "definition": "Datum des Berichtes /Zeitstempel (Bericht verfasst / freigegeben am)",
         "min": 0,
@@ -973,8 +969,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner",
-        "path": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner",
+        "id": "LogicalModelMolGen.Weiteres.Labor-Institution-Ansprechpartner",
+        "path": "LogicalModelMolGen.Weiteres.Labor-Institution-Ansprechpartner",
         "short": "LaborInstitutionAnsprechpartner",
         "definition": "LaborInstitutionAnsprechpartner",
         "min": 0,
@@ -986,8 +982,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner.Laborakkreditierungen",
-        "path": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner.Laborakkreditierungen",
+        "id": "LogicalModelMolGen.Weiteres.Labor-Institution-Ansprechpartner.Laborakkreditierungen",
+        "path": "LogicalModelMolGen.Weiteres.Labor-Institution-Ansprechpartner.Laborakkreditierungen",
         "short": "Labor-Akkreditierungen",
         "definition": "Labor-Akkreditierungen",
         "min": 0,
@@ -999,8 +995,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner.Name-Ansprechpartner",
-        "path": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner.Name-Ansprechpartner",
+        "id": "LogicalModelMolGen.Weiteres.Labor-Institution-Ansprechpartner.Name-Ansprechpartner",
+        "path": "LogicalModelMolGen.Weiteres.Labor-Institution-Ansprechpartner.Name-Ansprechpartner",
         "short": "Name Ansprechpartner (Titel - Nachname - Zuname - Vorname)",
         "definition": "Name Ansprechpartner (Titel - Nachname - Zuname - Vorname)",
         "min": 0,
@@ -1012,8 +1008,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner.Adresse",
-        "path": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner.Adresse",
+        "id": "LogicalModelMolGen.Weiteres.Labor-Institution-Ansprechpartner.Adresse",
+        "path": "LogicalModelMolGen.Weiteres.Labor-Institution-Ansprechpartner.Adresse",
         "short": "Adresszeile 1  & 2, Angabe von Stadt, Postleitzahl, Land",
         "definition": "Adresszeile 1  & 2, Angabe von Stadt, Postleitzahl, Land",
         "min": 0,
@@ -1025,8 +1021,8 @@
         ]
       },
       {
-        "id": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner.Kontakt",
-        "path": "mii-lm-molgen-logical-model.Weiteres.Labor-Institution-Ansprechpartner.Kontakt",
+        "id": "LogicalModelMolGen.Weiteres.Labor-Institution-Ansprechpartner.Kontakt",
+        "path": "LogicalModelMolGen.Weiteres.Labor-Institution-Ansprechpartner.Kontakt",
         "short": "Angabe von Telefonnummer, Faxnummer und Email",
         "definition": "Angabe von Telefonnummer, Faxnummer und Email",
         "min": 0,

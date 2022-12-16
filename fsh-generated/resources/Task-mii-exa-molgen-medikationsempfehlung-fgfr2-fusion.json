@@ -1,0 +1,33 @@
+{
+  "resourceType": "Task",
+  "id": "mii-exa-molgen-medikationsempfehlung-fgfr2-fusion",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung",
+      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation"
+    ]
+  },
+  "status": "requested",
+  "intent": "proposal",
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/mii-exa-molgen-anforderung-fgfr2-fusion"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "LA26421-0",
+        "system": "http://loinc.org",
+        "display": "Consider alternative medication"
+      }
+    ],
+    "text": "Hochselektive FGFR-Inhibitor-Therapie"
+  },
+  "for": {
+    "reference": "Patient/mii-exa-molgen-patient-fgfr2-fusion"
+  },
+  "reasonReference": {
+    "reference": "Observation/mii-exa-molgen-therapeutische-implikation-fgfr2-fusion"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "mii-exa-molgen-variante-fusion-3",
+  "id": "mii-exa-molgen-variante-fgfr2-fusion",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante",
@@ -33,8 +33,7 @@
         "coding": [
           {
             "system": "http://loinc.org",
-            "code": "48018-6",
-            "display": "Gene studied [ID]"
+            "code": "48018-6"
           }
         ]
       },
@@ -79,7 +78,7 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "HGNC:XXXX",
+            "code": "HGNC:3689::HGNC:2697",
             "system": "http://www.genenames.org/geneId",
             "display": "FGFR2::DBP"
           }
@@ -89,12 +88,12 @@
   ],
   "basedOn": [
     {
-      "reference": "ServiceRequest/mii-exa-molgen-anforderung-2"
+      "reference": "ServiceRequest/mii-exa-molgen-anforderung-fgfr2-fusion"
     }
   ],
   "status": "final",
   "subject": {
-    "reference": "Patient/mii-exa-molgen-patient-2"
+    "reference": "Patient/mii-exa-molgen-patient-fgfr2-fusion"
   },
   "valueCodeableConcept": {
     "coding": [
@@ -118,16 +117,5 @@
         "display": "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
       }
     ]
-  },
-  "specimen": {
-    "reference": "Specimen/mii-exa-molgen-specimen-2"
-  },
-  "device": {
-    "reference": "Device/mii-exa-molgen-device-sequencer-2"
-  },
-  "derivedFrom": [
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-1"
-    }
-  ]
+  }
 }
