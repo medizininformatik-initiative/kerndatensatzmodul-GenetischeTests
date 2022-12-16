@@ -1,0 +1,78 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "mii-exa-molgen-anforderung-srcc",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "https://www.charite.de/fhir/auftragsnummern",
+      "value": "7B369EB0"
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "108252007",
+          "system": "http://snomed.info/sct",
+          "display": "Laboratory procedure (procedure)"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "405825005",
+        "system": "http://snomed.info/sct",
+        "display": "Molecular genetic test (procedure)"
+      }
+    ],
+    "text": "Molekulargenetische Untersuchung (Stufendiagnostik) der relevanten Gene"
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient-srcc"
+  },
+  "authoredOn": "2022-11-30",
+  "requester": {
+    "reference": "Practitioner/mii-exa-molgen-practitioner-physician"
+  },
+  "specimen": [
+    {
+      "reference": "Specimen/mii-exa-molgen-specimen-srcc"
+    }
+  ],
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "code": "87737001",
+          "system": "http://snomed.info/sct",
+          "display": "Signet ring cell carcinoma (morphologic abnormality)"
+        },
+        {
+          "code": "C16.9",
+          "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "version": "2022",
+          "display": "Bösartige Neubildung des Magens, nicht näher bezeichnet"
+        }
+      ],
+      "text": "Eigenanamnese: Siegelringkarzinom des Magens, diffus wachsend"
+    },
+    {
+      "coding": [
+        {
+          "code": "429740004",
+          "system": "http://snomed.info/sct",
+          "display": "Family history of malignant neoplasm of breast (situation)"
+        }
+      ],
+      "text": "Mutter an Brustkrebs verstorben"
+    }
+  ]
+}

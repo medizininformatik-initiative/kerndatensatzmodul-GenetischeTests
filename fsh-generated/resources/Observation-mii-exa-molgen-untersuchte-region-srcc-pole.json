@@ -1,18 +1,18 @@
 {
   "resourceType": "Observation",
-  "id": "mii-exa-molgen-genotyp-1",
+  "id": "mii-exa-molgen-untersuchte-region-srcc-pole",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp",
-      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region",
+      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied"
     ]
   },
   "code": {
     "coding": [
       {
         "system": "http://loinc.org",
-        "code": "84413-4",
-        "display": "Genotype display name"
+        "code": "53041-0",
+        "display": "DNA region of interest panel"
       }
     ]
   },
@@ -41,9 +41,9 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "HGNC:1097",
+            "code": "HGNC:9177",
             "system": "http://www.genenames.org/geneId",
-            "display": "BRAF"
+            "display": "POLE"
           }
         ]
       }
@@ -53,16 +53,27 @@
         "coding": [
           {
             "system": "http://loinc.org",
-            "code": "48001-2",
-            "display": "Cytogenetic (chromosome) location"
+            "code": "81293-3",
+            "display": "Description of ranges of DNA sequences examined"
+          }
+        ]
+      },
+      "valueString": "direkte Sequenzierung der codierenden Exons inkl. flankierender intronischer Bereiche"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "51958-7",
+            "system": "http://loinc.org"
           }
         ]
       },
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "7q34",
-            "system": "urn:oid:2.16.840.1.113883.6.335"
+            "code": "NM_006231.3",
+            "system": "http://www.ncbi.nlm.nih.gov/refseq"
           }
         ]
       }
@@ -70,11 +81,13 @@
   ],
   "status": "final",
   "subject": {
-    "reference": "Patient/mii-exa-molgen-patient"
+    "reference": "Patient/mii-exa-molgen-patient-brca1"
   },
-  "valueCodeableConcept": {
-    "text": "BRAF rs113488022 T>A"
-  },
+  "performer": [
+    {
+      "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
+    }
+  ],
   "method": {
     "coding": [
       {
@@ -85,14 +98,9 @@
     ]
   },
   "specimen": {
-    "reference": "Specimen/mii-exa-molgen-specimen-1"
+    "reference": "Specimen/mii-exa-molgen-specimen-brca1"
   },
   "device": {
-    "reference": "Device/mii-exa-molgen-device-sequencer"
-  },
-  "derivedFrom": [
-    {
-      "reference": "Observation/mii-exa-molgen-variante-1"
-    }
-  ]
+    "reference": "Device/mii-exa-molgen-device-sequencer-nextseq"
+  }
 }
