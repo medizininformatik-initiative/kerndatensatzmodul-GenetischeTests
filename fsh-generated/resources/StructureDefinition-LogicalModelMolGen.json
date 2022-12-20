@@ -100,6 +100,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ServiceRequest"
+          }
         ]
       },
       {
@@ -126,6 +132,16 @@
           {
             "code": "CodeableConcept"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ServiceRequest.reasonCode"
+          },
+          {
+            "identity": "FHIR",
+            "map": "ServiceRequest.reasonReference"
+          }
         ]
       },
       {
@@ -142,6 +158,12 @@
               "http://hl7.org/fhir/StructureDefinition/Condition"
             ]
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ServiceRequest.supportingInfo"
+          }
         ]
       },
       {
@@ -157,6 +179,12 @@
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory"
             ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "FamilyMemberHistory"
           }
         ]
       },
@@ -176,6 +204,20 @@
               "http://hl7.org/fhir/StructureDefinition/Observation"
             ]
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "FamilyMemberHistory"
+          },
+          {
+            "identity": "FHIR",
+            "map": "Condition"
+          },
+          {
+            "identity": "FHIR",
+            "map": "Observation"
+          }
         ]
       },
       {
@@ -194,6 +236,24 @@
               "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
               "http://hl7.org/fhir/StructureDefinition/DocumentReference"
             ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition"
+          },
+          {
+            "identity": "FHIR",
+            "map": "Observation"
+          },
+          {
+            "identity": "FHIR",
+            "map": "DiagnosticReport"
+          },
+          {
+            "identity": "FHIR",
+            "map": "DocumentReference"
           }
         ]
       },
@@ -216,6 +276,20 @@
               "http://hl7.org/fhir/StructureDefinition/Device"
             ]
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Practitioner"
+          },
+          {
+            "identity": "FHIR",
+            "map": "PractitionerRole"
+          },
+          {
+            "identity": "FHIR",
+            "map": "Organization"
+          }
         ]
       },
       {
@@ -228,6 +302,12 @@
         "type": [
           {
             "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ServiceRequest.code"
           }
         ]
       },
@@ -245,6 +325,12 @@
               "http://hl7.org/fhir/StructureDefinition/ChargeItem"
             ]
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ChargeItem"
+          }
         ]
       },
       {
@@ -257,6 +343,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ServiceRequest.code.text"
           }
         ]
       },
@@ -271,6 +363,12 @@
           {
             "code": "dateTime"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ServiceRequest.authoredOn"
+          }
         ]
       },
       {
@@ -283,6 +381,12 @@
         "type": [
           {
             "code": "Annotation"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "ServiceRequest.note"
           }
         ]
       },
@@ -310,6 +414,12 @@
           {
             "code": "CodeableConcept"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.method"
+          }
         ]
       },
       {
@@ -327,6 +437,16 @@
               "http://hl7.org/fhir/StructureDefinition/DocumentReference"
             ]
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation"
+          },
+          {
+            "identity": "FHIR",
+            "map": "DocumentReference"
+          }
         ]
       },
       {
@@ -343,6 +463,12 @@
               "http://hl7.org/fhir/StructureDefinition/Device"
             ]
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Device"
+          }
         ]
       },
       {
@@ -355,6 +481,12 @@
         "type": [
           {
             "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:gene-studied"
           }
         ]
       },
@@ -369,6 +501,12 @@
           {
             "code": "CodeableConcept"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:transcript-ref-seq"
+          }
         ]
       },
       {
@@ -381,6 +519,12 @@
         "type": [
           {
             "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:allelic-read-depth"
           }
         ]
       },
@@ -395,6 +539,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:dna-region"
+          }
         ]
       },
       {
@@ -407,6 +557,12 @@
         "type": [
           {
             "code": "Range"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:exact-start-end"
           }
         ]
       },
@@ -421,6 +577,12 @@
           {
             "code": "Quantity"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:detection-limit"
+          }
         ]
       },
       {
@@ -433,6 +595,12 @@
         "type": [
           {
             "code": "Annotation"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.note"
           }
         ]
       },
@@ -464,7 +632,13 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://loinc.org/vs/LL541-4"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept"
+          }
+        ]
       },
       {
         "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen",
@@ -490,6 +664,12 @@
           {
             "code": "CodeableConcept"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:protein-hgvs"
+          }
         ]
       },
       {
@@ -502,6 +682,12 @@
         "type": [
           {
             "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:coding-hgvs"
           }
         ]
       },
@@ -516,6 +702,12 @@
           {
             "code": "CodeableConcept"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:genomic-hgvs"
+          }
         ]
       },
       {
@@ -528,6 +720,12 @@
         "type": [
           {
             "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:transcript-ref-seq"
           }
         ]
       },
@@ -542,6 +740,12 @@
           {
             "code": "CodeableConcept"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:reference-sequence-assembly"
+          }
         ]
       },
       {
@@ -554,6 +758,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:ref-allele"
           }
         ]
       },
@@ -568,6 +778,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:alt-allele"
+          }
         ]
       },
       {
@@ -580,6 +796,12 @@
         "type": [
           {
             "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:coding-change-type"
           }
         ]
       },
@@ -598,7 +820,13 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://loinc.org/vs/LL380-7"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:amino-acid-change-type"
+          }
+        ]
       },
       {
         "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Proben-Allelfrequenz",
@@ -610,6 +838,12 @@
         "type": [
           {
             "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:sample-allelic-frequency"
           }
         ]
       },
@@ -628,7 +862,13 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://loinc.org/vs/LL378-1"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:genomic-source-class"
+          }
+        ]
       },
       {
         "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Varianten-ID",
@@ -640,6 +880,12 @@
         "type": [
           {
             "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:variation-code"
           }
         ]
       },
@@ -658,7 +904,13 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://loinc.org/vs/LL2938-0"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:chromosome-identifier"
+          }
+        ]
       },
       {
         "id": "LogicalModelMolGen.Ergebnisse.Veraenderungen.Exon",
@@ -670,6 +922,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:dna-region"
           }
         ]
       },
@@ -684,6 +942,12 @@
           {
             "code": "CodeableConcept"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:cytogenetic-location"
+          }
         ]
       },
       {
@@ -697,6 +961,12 @@
           {
             "code": "Quantity"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:copy-number"
+          }
         ]
       },
       {
@@ -709,6 +979,12 @@
         "type": [
           {
             "code": "Quantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueQuantity"
           }
         ]
       },
@@ -727,7 +1003,13 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "http://loinc.org/vs/LL3994-2"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.valueCodeableConcept"
+          }
+        ]
       },
       {
         "id": "LogicalModelMolGen.Ergebnisse.Daten",
@@ -742,6 +1024,12 @@
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/DocumentReference"
             ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "DocumentReference"
           }
         ]
       },
@@ -773,7 +1061,13 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "http://loinc.org/vs/LL4034-6"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:clinical-significance"
+          }
+        ]
       },
       {
         "id": "LogicalModelMolGen.Interpretation.Referenzen",
@@ -785,6 +1079,12 @@
         "type": [
           {
             "code": "RelatedArtifact"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "RelatedArtifact"
           }
         ]
       },
@@ -803,7 +1103,13 @@
         "binding": {
           "strength": "example",
           "valueSet": "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/evidence-level-example-vs"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:evidence-level"
+          }
+        ]
       },
       {
         "id": "LogicalModelMolGen.Interpretation.Assoziierter-Phaenotyp",
@@ -815,6 +1121,16 @@
         "type": [
           {
             "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:predicted-phenotype"
+          },
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:phenotypic-treatment-context"
           }
         ]
       },
@@ -833,7 +1149,13 @@
         "binding": {
           "strength": "preferred",
           "valueSet": "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/condition-inheritance-mode-vs"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:mode-of-inheritance"
+          }
+        ]
       },
       {
         "id": "LogicalModelMolGen.Interpretation.Zusammenfassung",
@@ -845,6 +1167,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:conclusion-string"
           }
         ]
       },
@@ -876,7 +1204,13 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "http://loinc.org/vs/LL1037-2"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Task.code"
+          }
+        ]
       },
       {
         "id": "LogicalModelMolGen.Interpretation.Medikationsempfehlung",
@@ -893,7 +1227,13 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://loinc.org/vs/LL4049-4"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Task.code"
+          }
+        ]
       },
       {
         "id": "LogicalModelMolGen.Weiteres",
@@ -919,6 +1259,12 @@
           {
             "code": "Identifier"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "DiagnosticReport.identifier"
+          }
         ]
       },
       {
@@ -935,6 +1281,16 @@
               "http://hl7.org/fhir/StructureDefinition/Media",
               "http://hl7.org/fhir/StructureDefinition/DocumentReference"
             ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Media"
+          },
+          {
+            "identity": "FHIR",
+            "map": "DocumentReference"
           }
         ]
       },
@@ -953,7 +1309,13 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "DiagnosticReport.status"
+          }
+        ]
       },
       {
         "id": "LogicalModelMolGen.Weiteres.Datum-des-Berichts",
@@ -965,6 +1327,12 @@
         "type": [
           {
             "code": "instant"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "DiagnosticReport.issued"
           }
         ]
       },
@@ -979,6 +1347,20 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Practitioner"
+          },
+          {
+            "identity": "FHIR",
+            "map": "Organization"
+          },
+          {
+            "identity": "FHIR",
+            "map": "PractitionerRole"
+          }
         ]
       },
       {
@@ -991,6 +1373,12 @@
         "type": [
           {
             "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Practitioner.qualification"
           }
         ]
       },
@@ -1005,6 +1393,12 @@
           {
             "code": "HumanName"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Practitioner.name"
+          }
         ]
       },
       {
@@ -1018,6 +1412,12 @@
           {
             "code": "Address"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Practitioner.address"
+          }
         ]
       },
       {
@@ -1030,6 +1430,12 @@
         "type": [
           {
             "code": "ContactPoint"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Practitioner.telecom"
           }
         ]
       }
