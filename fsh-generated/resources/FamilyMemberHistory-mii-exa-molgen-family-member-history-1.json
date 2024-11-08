@@ -14,12 +14,37 @@
         "display": "Mother (person)"
       },
       {
-        "code": "MTH",
         "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+        "code": "MTH",
         "display": "mother"
       }
     ]
   },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "447886005",
+          "display": "Adenocarcinoma of anorectum (disorder)"
+        }
+      ]
+    }
+  ],
+  "condition": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "830150003",
+            "display": "Malignant melanoma with B-Raf proto-oncogene, serine/threonine kinase V600E mutation (disorder)"
+          }
+        ]
+      },
+      "contributedToDeath": true
+    }
+  ],
   "status": "completed",
   "patient": {
     "reference": "Patient/mii-exa-molgen-patient"
@@ -38,30 +63,5 @@
       }
     ]
   },
-  "deceasedBoolean": true,
-  "reasonCode": [
-    {
-      "coding": [
-        {
-          "code": "447886005",
-          "system": "http://snomed.info/sct",
-          "display": "Adenocarcinoma of anorectum (disorder)"
-        }
-      ]
-    }
-  ],
-  "condition": [
-    {
-      "code": {
-        "coding": [
-          {
-            "code": "830150003",
-            "system": "http://snomed.info/sct",
-            "display": "Malignant melanoma with B-Raf proto-oncogene, serine/threonine kinase V600E mutation (disorder)"
-          }
-        ]
-      },
-      "contributedToDeath": true
-    }
-  ]
+  "deceasedBoolean": true
 }

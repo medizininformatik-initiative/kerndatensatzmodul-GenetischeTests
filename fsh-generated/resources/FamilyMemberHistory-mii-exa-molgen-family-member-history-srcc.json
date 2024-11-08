@@ -14,12 +14,37 @@
         "display": "Mother (person)"
       },
       {
-        "code": "MTH",
         "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+        "code": "MTH",
         "display": "mother"
       }
     ]
   },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "87737001",
+          "display": "Signet ring cell carcinoma (morphologic abnormality)"
+        }
+      ]
+    }
+  ],
+  "condition": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "254837009",
+            "display": "Malignant neoplasm of breast (disorder)"
+          }
+        ]
+      },
+      "contributedToDeath": true
+    }
+  ],
   "status": "completed",
   "patient": {
     "reference": "Patient/mii-exa-molgen-patient-srcc"
@@ -38,30 +63,5 @@
       }
     ]
   },
-  "deceasedBoolean": true,
-  "reasonCode": [
-    {
-      "coding": [
-        {
-          "code": "87737001",
-          "system": "http://snomed.info/sct",
-          "display": "Signet ring cell carcinoma (morphologic abnormality)"
-        }
-      ]
-    }
-  ],
-  "condition": [
-    {
-      "code": {
-        "coding": [
-          {
-            "code": "254837009",
-            "system": "http://snomed.info/sct",
-            "display": "Malignant neoplasm of breast (disorder)"
-          }
-        ]
-      },
-      "contributedToDeath": true
-    }
-  ]
+  "deceasedBoolean": true
 }

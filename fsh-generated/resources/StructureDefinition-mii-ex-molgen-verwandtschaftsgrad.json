@@ -2,7 +2,6 @@
   "resourceType": "StructureDefinition",
   "id": "mii-ex-molgen-verwandtschaftsgrad",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad",
-  "version": "1.0.0",
   "name": "MII_EX_MolGen_Verwandtschaftsgrad",
   "title": "MII EX Mol Gen Verwandtschaftsgrad",
   "status": "active",
@@ -19,13 +18,6 @@
   ],
   "description": "Extension erlaubt die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen.",
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    }
-  ],
   "kind": "complex-type",
   "abstract": false,
   "context": [

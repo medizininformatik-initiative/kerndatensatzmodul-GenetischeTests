@@ -1,18 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mii-pr-molgen-familienanamnese",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Clinical.Summary"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-      "valueCode": "patient"
-    }
-  ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese",
-  "version": "1.0.0",
   "name": "MII_PR_MolGen_Familienanamnese",
   "title": "MII PR MolGen Familienanamnese",
   "status": "active",
@@ -30,26 +19,6 @@
   "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen.",
   "fhirVersion": "4.0.1",
   "mapping": [
-    {
-      "identity": "workflow",
-      "uri": "http://hl7.org/fhir/workflow",
-      "name": "Workflow Pattern"
-    },
-    {
-      "identity": "v2",
-      "uri": "http://hl7.org/v2",
-      "name": "HL7 v2 Mapping"
-    },
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    },
-    {
-      "identity": "w5",
-      "uri": "http://hl7.org/fhir/fivews",
-      "name": "FiveWs Pattern Mapping"
-    },
     {
       "identity": "MII-KDS",
       "name": "MII KDS Mapping"
@@ -81,17 +50,6 @@
       {
         "id": "FamilyMemberHistory.patient",
         "path": "FamilyMemberHistory.patient",
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference"
-            ],
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Patient"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
