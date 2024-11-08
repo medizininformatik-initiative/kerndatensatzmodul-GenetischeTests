@@ -1,16 +1,17 @@
 {
   "name": "de.medizininformatikinitiative.kerndatensatz.molgen",
-  "version": "1.0.0",
+  "version": "2025.0.0",
   "description": "Medizininformatik Initiative - Modul Molekulargenetischer Befundbericht",
-  "author": "juliansass",
+  "author": "thomasdebertshaeuser",
   "fhirVersions": [
     "4.0.1"
   ],
   "dependencies": {
     "hl7.terminology.r4": "5.0.0",
-    "de.basisprofil.r4": "1.4.0",
+    "de.basisprofil.r4": "1.5.0",
     "hl7.fhir.uv.genomics-reporting": "2.0.0",
-    "de.medizininformatikinitiative.kerndatensatz.meta": "1.0.3",
+    "de.medizininformatikinitiative.kerndatensatz.meta": "2025.0.0-alpha1",
+    "de.medizininformatikinitiative.kerndatensatz.biobank": "2025.0.0-rc", 
     "hl7.fhir.r4.core": "4.0.1"
   }
 }
