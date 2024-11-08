@@ -10,7 +10,6 @@ Description: "Dieses Profil beschreibt den Zusammenhang zwischen einem oder mehr
 * category MS
 * code MS
 * subject MS 
-* subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
 * encounter MS
 * derivedFrom MS

@@ -10,7 +10,6 @@ Description: "Dieses Profil beschreibt die Region oder die Regionen, die im Rahm
 * category MS
 * code MS
 * subject 1.. MS 
-* subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
 * encounter MS
 * component contains transcript-ref-seq 0..1

@@ -10,7 +10,6 @@ Description: "Dieses Profil beschreibt den möglichen Einfluss genetischer Merkm
 * category MS
 * code MS
 * subject 1.. MS 
-* subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
 * encounter MS
 * derivedFrom MS

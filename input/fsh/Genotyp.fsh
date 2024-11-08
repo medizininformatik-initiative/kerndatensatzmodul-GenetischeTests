@@ -10,7 +10,6 @@ Description: "Dieses Profil beschreibt die Feststellung eines bestimmten Genotyp
 * category MS
 * code MS
 * subject 1.. MS
-* subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
 * encounter MS
 * value[x] MS

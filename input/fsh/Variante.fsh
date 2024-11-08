@@ -10,7 +10,6 @@ Description: "Dieses Profil ermöglicht eine vollständige Beschreibung der gefu
 * category MS
 * code MS
 * subject 1.. MS
-* subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
 * value[x] MS
 * method MS

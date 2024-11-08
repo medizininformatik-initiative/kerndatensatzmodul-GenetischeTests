@@ -8,7 +8,6 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 //* ^status = #draft
 * status MS
 * patient MS
-* patient only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * date MS
 * relationship MS
 * relationship.coding ^slicing.discriminator.type = #pattern

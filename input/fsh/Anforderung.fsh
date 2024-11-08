@@ -10,7 +10,6 @@ Description: "Der Laborauftrag oder die Anfrage, die die Durchführung des genet
 * code MS
 * code.text ^alias[+] = "Anforderungstext"
 * subject MS
-* subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
 * encounter MS
 * authoredOn MS

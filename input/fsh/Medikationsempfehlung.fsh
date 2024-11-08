@@ -10,7 +10,6 @@ Description: "Das Profil dieser Task Ressource dient dazu, auf der Grundlage der
 * intent MS
 * code 1.. MS
 * for 1.. MS 
-* for only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * for only Reference(Patient)
 * encounter MS
 * reasonCode MS

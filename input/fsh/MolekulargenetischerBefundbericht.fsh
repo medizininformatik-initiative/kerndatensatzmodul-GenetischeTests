@@ -16,7 +16,6 @@ Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen B
 * status ^alias[+] = "Berichtstatus"
 * status MS
 * subject 1.. MS 
-* subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
 * encounter MS
 * issued MS
