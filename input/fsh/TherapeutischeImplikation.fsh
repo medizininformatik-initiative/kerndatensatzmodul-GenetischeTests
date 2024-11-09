@@ -4,8 +4,10 @@ Id: mii-pr-molgen-therapeutische-implikation
 Title: "MII PR MolGen Therapeutische Implikation"
 Description: "Dieses Profil beschreibt den möglichen Einfluss genetischer Merkmale auf eine medikamentöse oder nicht-medikamentöse Therapie."
 * insert Publisher
+* insert PR_CS_VS_Version
+* ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation"
-//* status = #draft
+
 * status MS
 * category MS
 * code MS

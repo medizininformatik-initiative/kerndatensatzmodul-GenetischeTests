@@ -4,8 +4,10 @@ Id: mii-pr-molgen-diagnostische-implikation
 Title: "MII PR MolGen Diagnostische Implikation"
 Description: "Dieses Profil beschreibt den Zusammenhang zwischen einem oder mehreren Genotyp/Haplotyp/Varianten und Beweisen für oder gegen eine bestimmte Krankheit."
 * insert Publisher
+* insert PR_CS_VS_Version
+* ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
-//* ^status = #draft
+
 * extension[genomics-artifact] MS
 * category MS
 * code MS

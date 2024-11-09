@@ -4,8 +4,10 @@ Id: mii-pr-molgen-mutationslast
 Title: "MII PR MolGen Mutationslast"
 Description: "Dieses Profil beschreibt die Gesamtzahl der in der DNA von Krebszellen gefundenen Mutationen."
 * insert Publisher
+* insert PR_CS_VS_Version
+* ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast"
-//* ^status = #draft
+
 * status MS
 * category MS
 * code MS

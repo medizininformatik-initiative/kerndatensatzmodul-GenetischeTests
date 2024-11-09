@@ -4,6 +4,8 @@ Id: mii-pr-molgen-anforderung-gentischer-test
 Title: "MII PR MolGen Anforderung genetischer Test"
 Description: "Der Laborauftrag oder die Anfrage, die die Durchführung des genetischen Tests auslöst."
 * insert Publisher
+* insert PR_CS_VS_Version
+* ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
 //* ^status = #draft
 * basedOn MS
