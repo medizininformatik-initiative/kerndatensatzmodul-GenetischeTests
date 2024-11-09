@@ -183,5 +183,5 @@ Usage: #definition
 * insert SupportSearchParam(relationship, http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-relationship, #token, #SHALL)
 * insert SupportSearchParam(sex, http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-sex, #token, #SHALL)
 * insert SupportSearchParam(status, http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-status, #token, #SHALL)
-* insert SupportSearchParam(reason-code, https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/FamilyMemberHistory-ReasonCode, #token, #SHALL)
-* insert SupportSearchParam(reason-reference, https://www.medizininformatik-initiative.de/fhir/core/modul-molgen/SearchParameter/FamilyMemberHistory-ReasonReference, #reference, #SHALL)
+* insert SupportSearchParam(reason-code, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-familymemberhistory-Reasoncode, #token, #SHALL)
+* insert SupportSearchParam(reason-reference, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-familymemberhistory-reasonreference, #reference, #SHALL)
