@@ -4,12 +4,13 @@ Id: mii-pr-molgen-polygener-risiko-score
 Title: "MII PR MolGen Polygener Risiko Score"
 Description: "Profil für Polygenen Risiko Score"
 * insert Publisher
+* insert PR_CS_VS_Version
+* ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score"
 //* ^status = #draft
 * identifier MS
 * status MS
 * code MS //Neoplasm Polygenic Risk Score (Code C158975) NCIt
-* subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
 * subject MS
 * encounter MS

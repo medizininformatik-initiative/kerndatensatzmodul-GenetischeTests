@@ -4,13 +4,14 @@ Id: mii-pr-molgen-ergebnis-zusammenfassung
 Title: "MII PR MolGen Ergebnis Zusammenfassung"
 Description: "Mit diesem Profil kann das Labor das zusammenfassende Ergebnis des Tests deklarieren (z. B. Positiv, Negativ, Unbekannt)."
 * insert Publisher
+* insert PR_CS_VS_Version
+* ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/ergebnis-zusammenfassung"
 //* ^status = #draft
 * status MS
 * category MS
 * code MS
 * subject 1.. MS 
-* subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
 * encounter MS
 * value[x] MS

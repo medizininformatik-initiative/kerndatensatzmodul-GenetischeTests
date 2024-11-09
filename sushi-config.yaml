@@ -2,12 +2,12 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: de.medizininformatikinitiative.kerndatensatz.molgen
+id: mii-ig-molgen-de-v2025
 canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen
 title: "IG MII Modul Molekulargenetischer Befundbericht"
-name: IG_MII_MolGen
+name: IG_MII_MolGen_DE_2025.x
 status: active
-version: "1.0.0"
+version: "2025.0.0"
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build
@@ -21,16 +21,16 @@ dependencies:
     version: 2.0.0
   de.medizininformatikinitiative.kerndatensatz.meta:
     uri: https://simplifier.net/guide/medizininformatikinitiative-implementationguide-manteldokument
-    version: 1.0.3
+    version: 2025.0.0-alpha1
   de.basisprofil.r4 :
     uri: de.basisprofil.r4
-    version: 1.4.0
+    version: 1.5.0
   de.medizininformatikinitiative.kerndatensatz.diagnose:
     uri: de.medizininformatikinitiative.kerndatensatz.diagnose
-    version: 2.0.0-alpha3
+    version: 2025.0.0-alpha1
   de.medizininformatikinitiative.kerndatensatz.biobank:
     uri: de.medizininformatikinitiative.kerndatensatz.biobank
-    version: 1.0.1
+    version: 2025.0.0-rc
   hl7.terminology.r4:
     uri: hl7.terminology.r4
     version: 4.0.0

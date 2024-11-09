@@ -4,13 +4,14 @@ Id: mii-pr-molgen-untersuchte-region
 Title: "MII PR MolGen Untersuchte Region"
 Description: "Dieses Profil beschreibt die Region oder die Regionen, die im Rahmen dieses Befundberichts untersucht wurden."
 * insert Publisher
+* insert PR_CS_VS_Version
+* ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-//* status = #draft
+
 * status MS
 * category MS
 * code MS
 * subject 1.. MS 
-* subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
 * encounter MS
 * component contains transcript-ref-seq 0..1

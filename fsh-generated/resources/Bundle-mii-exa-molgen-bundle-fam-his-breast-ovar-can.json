@@ -134,7 +134,7 @@
             }
           },
           {
-            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-massnahme",
+            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/recommended-action",
             "valueReference": {
               "reference": "Task/mii-exa-molgen-folgemassnahme-brca1"
             }
@@ -495,16 +495,16 @@
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore"
           ]
         },
+        "status": "available",
         "type": {
           "coding": [
             {
-              "system": "http://snomed.info/sct",
               "code": "127457009",
+              "system": "http://snomed.info/sct",
               "display": "Tissue specimen from breast (specimen)"
             }
           ]
         },
-        "status": "available",
         "subject": {
           "reference": "Patient/mii-exa-molgen-patient-brca1"
         },

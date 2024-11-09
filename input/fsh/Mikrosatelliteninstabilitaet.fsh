@@ -4,13 +4,14 @@ Id: mii-pr-molgen-mikrosatelliteninstabilitaet
 Title: "MII PR MolGen Mikrosatelliteninstabilität"
 Description: "Mikrosatelliteninstabilität (MSI) ist ein Zustand genetischer Hypermutabilität (Neigung zu Mutationen), der aus einer gestörten DNA-Mismatch-Reparatur (MMR) resultiert."
 * insert Publisher
+* insert PR_CS_VS_Version
+* ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet"
-//* ^status = #draft
+
 * status MS
 * category MS
 * code MS
 * subject 1.. MS 
-* subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference 
 * subject only Reference(Patient or Group)
 * encounter MS
 * value[x] MS

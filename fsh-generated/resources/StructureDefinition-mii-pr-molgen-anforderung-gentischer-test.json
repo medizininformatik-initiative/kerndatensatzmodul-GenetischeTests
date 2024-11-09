@@ -1,18 +1,8 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mii-pr-molgen-anforderung-gentischer-test",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Clinical.Care Provision"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-      "valueCode": "patient"
-    }
-  ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test",
-  "version": "1.0.0",
+  "version": "2025.0.0",
   "name": "MII_PR_MolGen_AnforderungGenetischerTest",
   "title": "MII PR MolGen Anforderung genetischer Test",
   "status": "active",
@@ -30,31 +20,6 @@
   "description": "Der Laborauftrag oder die Anfrage, die die Durchführung des genetischen Tests auslöst.",
   "fhirVersion": "4.0.1",
   "mapping": [
-    {
-      "identity": "workflow",
-      "uri": "http://hl7.org/fhir/workflow",
-      "name": "Workflow Pattern"
-    },
-    {
-      "identity": "v2",
-      "uri": "http://hl7.org/v2",
-      "name": "HL7 v2 Mapping"
-    },
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    },
-    {
-      "identity": "w5",
-      "uri": "http://hl7.org/fhir/fivews",
-      "name": "FiveWs Pattern Mapping"
-    },
-    {
-      "identity": "quick",
-      "uri": "http://siframework.org/cqf",
-      "name": "Quality Improvement and Clinical Knowledge (QUICK)"
-    },
     {
       "identity": "MII-KDS",
       "name": "MII KDS Mapping"
@@ -132,9 +97,6 @@
         "type": [
           {
             "code": "Reference",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference"
-            ],
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Patient",
               "http://hl7.org/fhir/StructureDefinition/Group"
