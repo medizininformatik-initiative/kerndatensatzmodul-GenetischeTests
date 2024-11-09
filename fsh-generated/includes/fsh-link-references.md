@@ -99,13 +99,6 @@
 [mii-exa-molgen-untersuchte-region-srcc-stk11]: Observation-mii-exa-molgen-untersuchte-region-srcc-stk11.html
 [mii-exa-molgen-untersuchte-region-srcc-tp53]: Observation-mii-exa-molgen-untersuchte-region-srcc-tp53.html
 [mii-exa-molgen-variante-srcc-ctnna1]: Observation-mii-exa-molgen-variante-srcc-ctnna1.html
-[mii-sp-molgen-familymemberhistory-reasoncode]: SearchParameter-mii-sp-molgen-familymemberhistory-reasoncode.html
-[mii-sp-molgen-familymemberhistory-reasonreference]: SearchParameter-mii-sp-molgen-familymemberhistory-reasonreference.html
-[mii-sp-molgen-servicerequest-reasoncode]: SearchParameter-mii-sp-molgen-servicerequest-reasoncode.html
-[mii-sp-molgen-servicerequest-reasonreference]: SearchParameter-mii-sp-molgen-servicerequest-reasonreference.html
-[mii-sp-molgen-task-for]: SearchParameter-mii-sp-molgen-task-for.html
-[mii-sp-molgen-task-reasoncode]: SearchParameter-mii-sp-molgen-task-reasoncode.html
-[mii-sp-molgen-task-reasonreference]: SearchParameter-mii-sp-molgen-task-reasonreference.html
 [mii-exa-molgen-mikrosatelliteninstabilitaet-1]: Observation-mii-exa-molgen-mikrosatelliteninstabilitaet-1.html
 [mii-exa-molgen-molekulargenetischer-befundbericht-1]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-1.html
 [mii-exa-molgen-molekulargenetischer-befundbericht-2]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-2.html
