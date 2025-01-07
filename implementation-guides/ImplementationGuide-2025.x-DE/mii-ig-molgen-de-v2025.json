@@ -1,11 +1,11 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "mii-ig-molgen-1.0",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/ig-version-1.0",
-  "version": "1.0.0",
-  "name": "MII_IG_MolGen_1_0",
+  "id": "mii-ig-molgen-DE-2025",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen-v2025-DE",
+  "version": "2025.0.x",
+  "name": "MII_IG_MolGen_v2025_DE",
   "status": "active",
-  "description": "Medizininformatik Initiative - Modul Molekulargenetischer Befundbericht - ImplementationGuide Version 1.0",
+  "description": "Medizininformatik Initiative - Modul MolGen-Befund - ImplementationGuide Version v2025.0.x DE",
   "fhirVersion": [
     "4.0.1"
   ],
@@ -1073,89 +1073,89 @@
       }
     ],
     "page": {
-      "nameUrl": "implementation-guides/ImplementationGuide-1.x/IGMIIKDSModulMolekulargenetischerBefundbericht.md",
+      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/IGMIIKDSModulMolekulargenetischerBefundbericht.md",
       "title": "IG MII KDS Modul Molekulargenetischer Befundbericht",
       "generation": "markdown",
       "page": [
         {
-          "nameUrl": "implementation-guides/ImplementationGuide-1.x/BeschreibungModulMolekulargenetischerBefundbericht.md",
+          "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/BeschreibungModulMolekulargenetischerBefundbericht.md",
           "title": "Beschreibung Modul Molekulargenetischer Befundbericht",
           "generation": "markdown"
         },
         {
-          "nameUrl": "implementation-guides/ImplementationGuide-1.x/KontextimGesamtprojektBezgezuanderenModulen.md",
+          "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/KontextimGesamtprojektBezgezuanderenModulen.md",
           "title": "Kontext im Gesamtprojekt / Bezüge zu anderen Modulen",
           "generation": "markdown"
         },
         {
-          "nameUrl": "implementation-guides/ImplementationGuide-1.x/Referenzen.md",
+          "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/Referenzen.md",
           "title": "Referenzen",
           "generation": "markdown"
         },
         {
-          "nameUrl": "implementation-guides/ImplementationGuide-1.x/AnwendungsflleInformationsmodell.md",
+          "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/AnwendungsflleInformationsmodell.md",
           "title": "Anwendungsfälle / Informationsmodell",
           "generation": "markdown",
           "page": [
             {
-              "nameUrl": "implementation-guides/ImplementationGuide-1.x/BeschreibungvonSzenarienfrdieAnwendungderModule.md",
+              "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/BeschreibungvonSzenarienfrdieAnwendungderModule.md",
               "title": "Beschreibung von Szenarien für die Anwendung der Module",
               "generation": "markdown"
             },
             {
-              "nameUrl": "implementation-guides/ImplementationGuide-1.x/Datenstzeinkl.Beschreibungen.md",
+              "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/Datenstzeinkl.Beschreibungen.md",
               "title": "Datensätze inkl. Beschreibungen",
               "generation": "markdown"
             },
             {
-              "nameUrl": "implementation-guides/ImplementationGuide-1.x/UML.md",
+              "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/UML.md",
               "title": "UML",
               "generation": "markdown"
             }
           ]
         },
         {
-          "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/TechnischeImplementierung.md",
+          "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/TechnischeImplementierung.md",
           "title": "Technische Implementierung",
           "generation": "markdown",
           "page": [
             {
-              "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/FHIRProfile.md",
+              "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/FHIRProfile.md",
               "title": "FHIR Profile",
               "generation": "markdown",
               "page": [
                 {
-                  "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/Anforderung-ServiceRequest.md",
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Anforderung-ServiceRequest.md",
                   "title": "Anforderung - ServiceRequest",
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/Befundbericht-DiagnosticReport.md",
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Befundbericht-DiagnosticReport.md",
                   "title": "Befundbericht - DiagnosticReport",
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/ErgebnisZusammenfassung-Observation.md",
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/ErgebnisZusammenfassung-Observation.md",
                   "title": "Ergebnis Zusammenfassung - Observation",
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/TherapeutischeImplikation-Observation.md",
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/TherapeutischeImplikation-Observation.md",
                   "title": "Therapeutische Implikation - Observation",
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/DiagnostischeImplikation-Observation.md",
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/DiagnostischeImplikation-Observation.md",
                   "title": "Diagnostische Implikation - Observation",
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/Medikationsempfehlung-Task.md",
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Medikationsempfehlung-Task.md",
                   "title": "Medikationsempfehlung - Task",
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/EmpfohleneFolgemanahme-Task.md",
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/EmpfohleneFolgemanahme-Task.md",
                   "title": "Empfohlene Folgemaßnahme - Task",
                   "generation": "markdown"
                 },
@@ -1165,141 +1165,141 @@
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/UntersuchteRegion-Observation.md",
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/UntersuchteRegion-Observation.md",
                   "title": "Untersuchte Region - Observation",
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/Haplotype-Observation.md",
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Haplotype-Observation.md",
                   "title": "Haplotype - Observation",
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/Genotyp---Observation.md",
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Genotyp---Observation.md",
                   "title": "Genotyp - Observation",
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/Sequence-Phase-Relationship---Observation.md",
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Sequence-Phase-Relationship---Observation.md",
                   "title": "Sequence Phase Relationship - Observation",
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/Mutationslast-Observation.md",
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Mutationslast-Observation.md",
                   "title": "Mutationslast - Observation",
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/Mikrosatelliteninstabilitt-Observation.md",
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Mikrosatelliteninstabilitt-Observation.md",
                   "title": "Mikrosatelliteninstabilität - Observation",
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/Familienanamnese---FamilyMemberHistory.md",
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Familienanamnese---FamilyMemberHistory.md",
                   "title": "Familienanamnese - FamilyMemberHistory",
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/Polygener-Risiko-Score---RiskAssessment.md",
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Polygener-Risiko-Score---RiskAssessment.md",
                   "title": "Polygener Risiko Score - RiskAssessment",
                   "generation": "markdown"
                 }
               ]
             },
             {
-              "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/Terminologien.md",
+              "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Terminologien.md",
               "title": "Terminologien",
               "generation": "markdown",
               "page": [
                 {
-                  "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/CodeSystems.md",
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/CodeSystems.md",
                   "title": "CodeSystems",
                   "generation": "markdown",
                   "page": [
                     {
-                      "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/TBD-Codes.md",
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/TBD-Codes.md",
                       "title": "TBD Codes",
                       "generation": "markdown"
                     },
                     {
-                      "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/ClinVar-Evidence-Level-Example-Codes.md",
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/ClinVar-Evidence-Level-Example-Codes.md",
                       "title": "ClinVar Evidence Level Example Codes",
                       "generation": "markdown"
                     },
                     {
-                      "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/PharmGKB-Evidence-Level-Example-Codes.md",
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/PharmGKB-Evidence-Level-Example-Codes.md",
                       "title": "PharmGKB Evidence Level Example Codes",
                       "generation": "markdown"
                     }
                   ]
                 },
                 {
-                  "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/ValueSets.md",
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/ValueSets.md",
                   "title": "ValueSets",
                   "generation": "markdown",
                   "page": [
                     {
-                      "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/HighLowcodes.md",
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/HighLowcodes.md",
                       "title": "High/Low codes",
                       "generation": "markdown"
                     },
                     {
-                      "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/HGVSValueSet.md",
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/HGVSValueSet.md",
                       "title": "HGVS Value Set",
                       "generation": "markdown"
                     },
                     {
-                      "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/HGNCValueSet.md",
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/HGNCValueSet.md",
                       "title": "HGNC Value Set",
                       "generation": "markdown"
                     },
                     {
-                      "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/TBDValueSet.md",
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/TBDValueSet.md",
                       "title": "TBD Value Set",
                       "generation": "markdown"
                     },
                     {
-                      "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/DNAChangeType.md",
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/DNAChangeType.md",
                       "title": "DNA Change Type",
                       "generation": "markdown"
                     },
                     {
-                      "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/MolecularConsequence.md",
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/MolecularConsequence.md",
                       "title": "Molecular Consequence",
                       "generation": "markdown"
                     },
                     {
-                      "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/VariantInheritance.md",
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/VariantInheritance.md",
                       "title": "Variant Inheritance",
                       "generation": "markdown"
                     },
                     {
-                      "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/Genetic-Therapeutic-Implications.md",
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Genetic-Therapeutic-Implications.md",
                       "title": "Genetic Therapeutic Implications",
                       "generation": "markdown"
                     },
                     {
-                      "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/Functional-Effect.md",
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Functional-Effect.md",
                       "title": "Functional Effect",
                       "generation": "markdown"
                     },
                     {
-                      "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/Condition-Inheritance-Pattern.md",
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Condition-Inheritance-Pattern.md",
                       "title": "Condition Inheritance Pattern",
                       "generation": "markdown"
                     },
                     {
-                      "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/Evidence-Level-Examples.md",
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Evidence-Level-Examples.md",
                       "title": "Evidence Level Examples",
                       "generation": "markdown"
                     },
                     {
-                      "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/Variant-Confidence-Status.md",
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Variant-Confidence-Status.md",
                       "title": "Variant Confidence Status",
                       "generation": "markdown"
                     },
                     {
-                      "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/Family-Member-History-duplicate-2.md",
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Family-Member-History-duplicate-2.md",
                       "title": "Family Member History",
                       "generation": "markdown"
                     }
@@ -1308,7 +1308,7 @@
               ]
             },
             {
-              "nameUrl": "implementation-guides/ImplementationGuide-1.x/TechnischeImplementierung/CapabilityStatement.md",
+              "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/CapabilityStatement.md",
               "title": "CapabilityStatement",
               "generation": "markdown"
             }
