@@ -9,6 +9,44 @@
   "fhirVersion": [
     "4.0.1"
   ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.fhir.uv.genomics-reporting",
+      "uri": "hl7.fhir.uv.genomics-reporting",
+      "version": "2.0.x",
+      "id": "hl7_fhir_uv_genomics_reporting"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.meta",
+      "uri": "de.medizininformatikinitiative.kerndatensatz.meta",
+      "version": "2025.0.x",
+      "id": "de_medizininformatikinitiative_kerndatensatz_meta"
+    },
+    {
+      "packageId": "de.basisprofil.r4",
+      "uri": "de.basisprofil.r4",
+      "version": "1.5.x",
+      "id": "de_basisprofil_r4"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.diagnose",
+      "uri": "de.medizininformatikinitiative.kerndatensatz.diagnose",
+      "version": "2025.0.x",
+      "id": "de_medizininformatikinitiative_kerndatensatz_diagnose"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.biobank",
+      "uri": "de.medizininformatikinitiative.kerndatensatz.biobank",
+      "version": "2025.0.x",
+      "id": "de_medizininformatikinitiative_kerndatensatz_biobank"
+    },
+    {
+      "packageId": "hl7.terminology.r4",
+      "uri": "hl7.terminology.r4",
+      "version": "6.1.x",
+      "id": "hl7_terminology_r4"
+    }
+  ],
   "packageId": "de.medizininformatikinitiative.kerndatensatz.molgen",
   "definition": {
     "resource": [
