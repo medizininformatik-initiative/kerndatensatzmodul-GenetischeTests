@@ -6,7 +6,7 @@
 
 Der Laborauftrag oder die Anfrage, die die Durchführung des genetischen Tests auslöst.
 
-In der Anforderung können auch ein oder mehrere bekannte Symptome über das reasonReference Element als ['Phenotypic Features'](http://phenopackets.org/core-ig/StructureDefinition-PhenotypicFeature.html), die in GA4GH's Phenopackets IG profiliert sind, angegeben werden.
+In der Anforderung können auch ein oder mehrere bekannte Symptome über das reasonReference Element als ['Phenotypic Features'](https://build.fhir.org/ig/HL7/phenomics-exchange-ig/branches/v0.1.0/StructureDefinition-PhenotypicFeature.html), die in GA4GH's Phenopackets IG profiliert sind, angegeben werden.
 
 
 @```
