@@ -1,0 +1,1358 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "mii-ig-molgen-DE-2026",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen-v2025-DE",
+  "version": "2026.0.0-alpha",
+  "name": "MII_IG_MolGen_v2026_DE",
+  "status": "active",
+  "description": "Medizininformatik Initiative - Modul MolGen-Befund - ImplementationGuide Version v2025.0.x DE",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.fhir.uv.genomics-reporting",
+      "uri": "hl7.fhir.uv.genomics-reporting",
+      "version": "2.0.x",
+      "id": "hl7_fhir_uv_genomics_reporting"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.meta",
+      "uri": "de.medizininformatikinitiative.kerndatensatz.meta",
+      "version": "2025.0.x",
+      "id": "de_medizininformatikinitiative_kerndatensatz_meta"
+    },
+    {
+      "packageId": "de.basisprofil.r4",
+      "uri": "de.basisprofil.r4",
+      "version": "1.5.x",
+      "id": "de_basisprofil_r4"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.diagnose",
+      "uri": "de.medizininformatikinitiative.kerndatensatz.diagnose",
+      "version": "2025.0.x",
+      "id": "de_medizininformatikinitiative_kerndatensatz_diagnose"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.biobank",
+      "uri": "de.medizininformatikinitiative.kerndatensatz.biobank",
+      "version": "2025.0.x",
+      "id": "de_medizininformatikinitiative_kerndatensatz_biobank"
+    },
+    {
+      "packageId": "hl7.terminology.r4",
+      "uri": "hl7.terminology.r4",
+      "version": "6.1.x",
+      "id": "hl7_terminology_r4"
+    }
+  ],
+  "packageId": "de.medizininformatikinitiative.kerndatensatz.molgen",
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-anforderung-gentischer-test"
+        },
+        "name": "MII PR MolGen Anforderung genetischer Test",
+        "description": "Der Laborauftrag oder die Anfrage, die die Durchführung des genetischen Tests auslöst.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-diagnostische-implikation"
+        },
+        "name": "MII PR MolGen Diagnostische Implikation",
+        "description": "Dieses Profil beschreibt den Zusammenhang zwischen einem oder mehreren Genotyp/Haplotyp/Varianten und Beweisen für oder gegen eine bestimmte Krankheit.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-empfohlene-folgemassnahme"
+        },
+        "name": "MII PR MolGen Empfohlene Folgemaßnahme",
+        "description": "Das Profil dieser Task Ressource beschreibt die empfohlenen Folgemaßnahmen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-ergebnis-zusammenfassung"
+        },
+        "name": "MII PR MolGen Ergebnis Zusammenfassung",
+        "description": "Mit diesem Profil kann das Labor das zusammenfassende Ergebnis des Tests deklarieren (z. B. Positiv, Negativ, Unbekannt).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-familienanamnese"
+        },
+        "name": "MII PR MolGen Familienanamnese",
+        "description": "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-genotyp"
+        },
+        "name": "MII PR MolGen Genotyp",
+        "description": "Dieses Profil beschreibt die Feststellung eines bestimmten Genotyps auf der Grundlage einer oder mehrerer Varianten oder Haplotypen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-medikationsempfehlung"
+        },
+        "name": "MII PR MolGen Medikationsempfehlung",
+        "description": "Das Profil dieser Task Ressource dient dazu, auf der Grundlage der genetischen Ergebnisse medikamanetöse Maßnahmen vorzuschlagen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-mikrosatelliteninstabilitaet"
+        },
+        "name": "MII PR MolGen Mikrosatelliteninstabilität",
+        "description": "Mikrosatelliteninstabilität (MSI) ist ein Zustand genetischer Hypermutabilität (Neigung zu Mutationen), der aus einer gestörten DNA-Mismatch-Reparatur (MMR) resultiert.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-molekulargenetischer-befundbericht"
+        },
+        "name": "MII PR MolGen Molekulargenetischer Befundbericht",
+        "description": "Der DiagnosticReport ist zentraler Bestandteil aller genetischen Befundberichte und enthält Metadaten über den gesamten Bericht sowie alle relevanten Informationen, die im Rahmen der molekulargenetischen Analyse gefunden wurden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-mutationslast"
+        },
+        "name": "MII PR MolGen Mutationslast",
+        "description": "Dieses Profil beschreibt die Gesamtzahl der in der DNA von Krebszellen gefundenen Mutationen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-polygener-risiko-score"
+        },
+        "name": "MII PR MolGen Polygener Risiko Score",
+        "description": "Profil für Polygenen Risiko Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-therapeutische-implikation"
+        },
+        "name": "MII PR MolGen Therapeutische Implikation",
+        "description": "Dieses Profil beschreibt den möglichen Einfluss genetischer Merkmale auf eine medikamentöse oder nicht-medikamentöse Therapie.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-untersuchte-region"
+        },
+        "name": "MII PR MolGen Untersuchte Region",
+        "description": "Dieses Profil beschreibt die Region oder die Regionen, die im Rahmen dieses Befundberichts untersucht wurden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-variante"
+        },
+        "name": "MII PR MolGen Variante",
+        "description": "Dieses Profil ermöglicht eine vollständige Beschreibung der gefundenen Variante unter Verwendung von Eigenschaften aus einer Vielzahl von Testmethoden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-molgen-empfohlene-massnahme"
+        },
+        "name": "MII EX MolGen Empfohlene Maßnahme",
+        "description": "Die Extension verweist auf eine vorgeschlagene Maßnahme, die auf der Grundlage der Ergebnisse des Befundberichts empfohlen wird.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-molgen-familiare-linie"
+        },
+        "name": "MII EX MolGen Familiare Linie",
+        "description": "Extension erlaubt die Angabe der familiären Linie zwischen Patient und Familienangehörigen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-molgen-risk-assessment-einflussfaktor"
+        },
+        "name": "MII EX MolGen RiskAssessment Einflussfaktor",
+        "description": "Die Extension erweitert RiskAssessment.prediction um die Möglichkeit, weitere ausschlaggebende Faktoren mit Einfluss auf die Risikoberechnung anzugeben.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-molgen-verwandtschaftsgrad"
+        },
+        "name": "MII EX Mol Gen Verwandtschaftsgrad",
+        "description": "Extension erlaubt die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis"
+        },
+        "name": "MII EX MolGen Verwandtschaftsverhaeltnis",
+        "description": "Extension erlaubt die Angabe eines Verwandtschaftsverhältnisses zwischen Patient und Familienangehörigen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/LogicalModelMolGen"
+        },
+        "name": "MII LM MolGen LogicalModel",
+        "description": "LogicalModel des MII Moduls Molekulargenetischer Befundbericht",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-molgen-familiaere-linie"
+        },
+        "name": "MII VS MolGen Familiäre Linie",
+        "description": "ValueSet für die Angabe der familären Linie zwischen Patient und Familienangehörigen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-molgen-family-member-snomed"
+        },
+        "name": "MII VS MolGen Family Member SNOMED",
+        "description": "The ValueSet contains codes for related family member types from SNOMED CT.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-molgen-verwandtschaftsgrad"
+        },
+        "name": "MII VS Mol Gen Verwandtschaftsgrad",
+        "description": "ValueSet für die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis"
+        },
+        "name": "MII VS MolGen Verwandtschaftsverhaeltnis",
+        "description": "ValueSet für die Angabe eines Verwandtschaftsverhältnis zwischen Patient und Familienangehörigen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/mii-cps-molgen-capabilitystatement"
+        },
+        "name": "mii-cps-molgen-capabilitystatement",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-befund-bundle-1-braf"
+        },
+        "name": "mii-exa-befund-bundle-1-braf",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-befund-bundle-befund-2-nipbl-clinical"
+        },
+        "name": "mii-exa-befund-bundle-befund-2-nipbl-clinical",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-befund-bundle-befund-fgfr2-fusion"
+        },
+        "name": "mii-exa-befund-bundle-befund-fgfr2-fusion",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-befund-bundle-befund-srcc"
+        },
+        "name": "mii-exa-befund-bundle-befund-srcc",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/mii-exa-molgen-anforderung-1"
+        },
+        "name": "Anforderung BRAF Genetische Testung",
+        "description": "Beispiel für Anforderung für genetische Testung auf genetische Variante im BRAF Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/mii-exa-molgen-anforderung-2"
+        },
+        "name": "Anforderung Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom",
+        "description": "Beispiel für Anforderung für genetische Testung auf pathogene Variante im NIPBL Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/mii-exa-molgen-anforderung-fgfr2-fusion"
+        },
+        "name": "mii-exa-molgen-anforderung-fgfr2-fusion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/mii-exa-molgen-anforderung-srcc"
+        },
+        "name": "mii-exa-molgen-anforderung-srcc",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/mii-exa-molgen-anforderung-trurisk-panel"
+        },
+        "name": "Anforderung Molekulargenetische Diagnose Familiäre Belastung für Brust- und Eierstockkrebs",
+        "description": "Beispiel für Anforderung für genetische Testung bei Familiärer Belastung für Brust- und Eierstockkrebs.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-molgen-bundle-befund-2-nipbl"
+        },
+        "name": "mii-exa-molgen-bundle-befund-2-nipbl",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-molgen-bundle-befund-2-nipbl-condition-lab"
+        },
+        "name": "mii-exa-molgen-bundle-befund-2-nipbl-condition-lab",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-molgen-bundle-fam-his-breast-ovar-can"
+        },
+        "name": "mii-exa-molgen-bundle-fam-his-breast-ovar-can",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ChargeItem/mii-exa-molgen-chargeitem-ebm-21"
+        },
+        "name": "mii-exa-molgen-chargeitem-ebm-21",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ChargeItem/mii-exa-molgen-chargeitem-ebm-22"
+        },
+        "name": "mii-exa-molgen-chargeitem-ebm-22",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ChargeItem/mii-exa-molgen-chargeitem-ebm-23"
+        },
+        "name": "mii-exa-molgen-chargeitem-ebm-23",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ChargeItem/mii-exa-molgen-chargeitem-ebm-24"
+        },
+        "name": "mii-exa-molgen-chargeitem-ebm-24",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-molgen-condition-nipbl-clinical"
+        },
+        "name": "mii-exa-molgen-condition-nipbl-clinical",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Device/mii-exa-molgen-device-sequencer"
+        },
+        "name": "mii-exa-molgen-device-sequencer",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Device/mii-exa-molgen-device-sequencer-2"
+        },
+        "name": "mii-exa-molgen-device-sequencer-2",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Device/mii-exa-molgen-device-sequencer-nextseq"
+        },
+        "name": "mii-exa-molgen-device-sequencer-nextseq",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-diagnostische-implikation-1"
+        },
+        "name": "BRAF Variante Diagnostische Implikation",
+        "description": "Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-diagnostische-implikation-2"
+        },
+        "name": "NIPBL Variante Diagnostische Implikation",
+        "description": "Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im NIPBL Gen an Hand von WGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-diagnostische-implikation-brca1"
+        },
+        "name": "Diagnostische Implikation BRCA1 Variante",
+        "description": "Beispiel für diagnostische Implikation abgeleitet von SNP im BRCA1.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-diagnostische-implikation-cnv-4"
+        },
+        "name": "CNV SMO Diagnostische Implikation",
+        "description": "Beispiel für diagnostische Implikation abgeleitet von Copy Number Variante im SMO Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-diagnostische-implikation-fgfr2-fusion"
+        },
+        "name": "mii-exa-molgen-diagnostische-implikation-fgfr2-fusion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-diagnostische-implikation-srcc-ctnna1"
+        },
+        "name": "mii-exa-molgen-diagnostische-implikation-srcc-ctnna1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-ergebnis-zusammenfassung-1"
+        },
+        "name": "Ergebnis Zusammenfassung Befund-1",
+        "description": "Beispiel zusammenfassendes Ergebnis",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/ergebnis-zusammenfassung"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-ergebnis-zusammenfassung-trurisk-panel"
+        },
+        "name": "Ergebnis Zusammenfassung Befund",
+        "description": "Beispiel zusammenfassendes Ergebnis bei BRCA1 Variante bei Familiärer Belastung für Brust- und Eierstockkrebs",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/ergebnis-zusammenfassung"
+      },
+      {
+        "reference": {
+          "reference": "FamilyMemberHistory/mii-exa-molgen-family-member-history-1"
+        },
+        "name": "mii-exa-molgen-family-member-history-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
+      },
+      {
+        "reference": {
+          "reference": "FamilyMemberHistory/mii-exa-molgen-family-member-history-2"
+        },
+        "name": "mii-exa-molgen-family-member-history-2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
+      },
+      {
+        "reference": {
+          "reference": "FamilyMemberHistory/mii-exa-molgen-family-member-history-srcc"
+        },
+        "name": "mii-exa-molgen-family-member-history-srcc",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
+      },
+      {
+        "reference": {
+          "reference": "Task/mii-exa-molgen-folgemassnahme-1"
+        },
+        "name": "BRAF Empfohlene Folgemaßnahme",
+        "description": "Beispiel für empfohlene Folgemaßnahme abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme"
+      },
+      {
+        "reference": {
+          "reference": "Task/mii-exa-molgen-folgemassnahme-brca1"
+        },
+        "name": "Empfohlene Folgemaßnahme bei BRCA1 Variante",
+        "description": "Beispiel für empfohlene Folgemaßnahme abgeleitet von genetischer Variante im BRCA1 Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-genotyp-1"
+        },
+        "name": "Genotyp BRAF",
+        "description": "Beispiel für Genotyp BRAF Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp"
+      },
+      {
+        "reference": {
+          "reference": "Task/mii-exa-molgen-medikationsempfehlung-1"
+        },
+        "name": "BRAF Variante Medikationsempfehlung",
+        "description": "Beispiel für Medikationsempfehlung abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung"
+      },
+      {
+        "reference": {
+          "reference": "Task/mii-exa-molgen-medikationsempfehlung-fgfr2-fusion"
+        },
+        "name": "mii-exa-molgen-medikationsempfehlung-fgfr2-fusion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-mikrosatelliteninstabilitaet-1"
+        },
+        "name": "Mikrosatelliteninstabilität",
+        "description": "Beispiel für Mikrosatelliteninstabilität in Tumorprobe.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-1"
+        },
+        "name": "Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom",
+        "description": "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorektalem Adenokarzniom.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-2"
+        },
+        "name": "Molekulargentischer Befund 2: Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang",
+        "description": "Beispiel für molekulargenetischen Befund Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion"
+        },
+        "name": "mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-srcc"
+        },
+        "name": "mii-exa-molgen-molekulargenetischer-befundbericht-srcc",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel"
+        },
+        "name": "Molekulargentischer Befund Familiäre Belastung für Brust- und Eierstockkrebs",
+        "description": "Beispiel für molekulargenetischen Befund einer BRCA1 Variante bei Familiärer Belastung für Brust- und Eierstockkrebs.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-mutationslast-1"
+        },
+        "name": "Beispiel Mutationslast in Tumorprobe",
+        "description": "Beispiel für Mutationslast in Tumorprobe.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast"
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-molgen-patient"
+        },
+        "name": "mii-exa-molgen-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-molgen-patient-2"
+        },
+        "name": "mii-exa-molgen-patient-2",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-molgen-patient-brca1"
+        },
+        "name": "mii-exa-molgen-patient-brca1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-molgen-patient-fgfr2-fusion"
+        },
+        "name": "mii-exa-molgen-patient-fgfr2-fusion",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-molgen-patient-srcc"
+        },
+        "name": "mii-exa-molgen-patient-srcc",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-phenotypic-feature-1"
+        },
+        "name": "mii-exa-molgen-phenotypic-feature-1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-phenotypic-feature-2"
+        },
+        "name": "mii-exa-molgen-phenotypic-feature-2",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-phenotypic-feature-3"
+        },
+        "name": "mii-exa-molgen-phenotypic-feature-3",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-phenotypic-feature-4"
+        },
+        "name": "mii-exa-molgen-phenotypic-feature-4",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
+        },
+        "name": "mii-exa-molgen-practitioner-lab",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/mii-exa-molgen-practitioner-physician"
+        },
+        "name": "mii-exa-molgen-practitioner-physician",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "RiskAssessment/mii-exa-molgen-prs-brca1"
+        },
+        "name": "Polygener Risiko Score BRCA1 Variante",
+        "description": "Beispiel für Polygenen Risiko Score bei Variante BRCA1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-molgen-specimen-1"
+        },
+        "name": "mii-exa-molgen-specimen-1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-molgen-specimen-2"
+        },
+        "name": "mii-exa-molgen-specimen-2",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-molgen-specimen-brca1"
+        },
+        "name": "mii-exa-molgen-specimen-brca1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-molgen-specimen-srcc"
+        },
+        "name": "mii-exa-molgen-specimen-srcc",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-molgen-specimen-srcc-2"
+        },
+        "name": "mii-exa-molgen-specimen-srcc-2",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-therapeutische-implikation-1"
+        },
+        "name": "BRAF Variante Therapeutische Implikation",
+        "description": "Beispiel für therapeutische Implikation abgeleitet von genetische Variante im BRAF Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-therapeutische-implikation-fgfr2-fusion"
+        },
+        "name": "mii-exa-molgen-therapeutische-implikation-fgfr2-fusion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-1"
+        },
+        "name": "Untersuchte Region BRAF",
+        "description": "Beispiel für untersuchte Region BRAF Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-2-hdac8"
+        },
+        "name": "Untersuchte Region HDAC8",
+        "description": "Beispiel für untersuchte Region HDAC8 Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-2-nipbl"
+        },
+        "name": "Untersuchte Region NIPBL",
+        "description": "Beispiel für untersuchte Region NIPBL Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-2-rad21"
+        },
+        "name": "Untersuchte Region HDAC8",
+        "description": "Beispiel für untersuchte Region RAD21 Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-2-smc1a"
+        },
+        "name": "Untersuchte Region SMC1A",
+        "description": "Beispiel für untersuchte Region SMC1A Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-2-smc3"
+        },
+        "name": "Untersuchte Region SMC3",
+        "description": "Beispiel für untersuchte Region SMC3 Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-2-tp63"
+        },
+        "name": "Untersuchte Region TP63",
+        "description": "Beispiel für untersuchte Region TP63 Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-apc"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-apc",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-atm"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-atm",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-brca1"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-brca1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-brca2"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-brca2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-cdh1"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-cdh1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-ctnna1"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-ctnna1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-mlh1"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-mlh1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-msh2"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-msh2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-msh3"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-msh3",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-msh6"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-msh6",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-mutyh"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-mutyh",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-nthl1"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-nthl1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-pms2"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-pms2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-pold1"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-pold1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-pole"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-pole",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-smad4"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-smad4",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-stk11"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-stk11",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-tp53"
+        },
+        "name": "mii-exa-molgen-untersuchte-region-srcc-tp53",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-ATM"
+        },
+        "name": "Untersuchte Region True Risk Panel V3 ATM Gen",
+        "description": "Beispiel für untersuchte Region True Risk Panel V3 ATM Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BARD1"
+        },
+        "name": "Untersuchte Region True Risk Panel V3 BARD1 Gen",
+        "description": "Beispiel für untersuchte Region True Risk Panel V3 BARD1 Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA1"
+        },
+        "name": "Untersuchte Region True Risk Panel V3 BRCA1 Gen",
+        "description": "Beispiel für untersuchte Region True Risk Panel V3 BRCA1 Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA2"
+        },
+        "name": "Untersuchte Region True Risk Panel V3 BRCA2 Gen",
+        "description": "Beispiel für untersuchte Region True Risk Panel V3 BRCA2 Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRIP1"
+        },
+        "name": "Untersuchte Region True Risk Panel V3 BRIP1 Gen",
+        "description": "Beispiel für untersuchte Region True Risk Panel V3 BRIP1 Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CDH1"
+        },
+        "name": "Untersuchte Region True Risk Panel V3 CDH1 Gen",
+        "description": "Beispiel für untersuchte Region True Risk Panel V3 CDH1 Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CHECK2"
+        },
+        "name": "Untersuchte Region True Risk Panel V3 CHECK2 Gen",
+        "description": "Beispiel für untersuchte Region True Risk Panel V3 CHECK2 Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MLH1"
+        },
+        "name": "Untersuchte Region True Risk Panel V3 MLH1 Gen",
+        "description": "Beispiel für untersuchte Region True Risk Panel V3 MLH1 Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH2"
+        },
+        "name": "Untersuchte Region True Risk Panel V3 MSH2 Gen",
+        "description": "Beispiel für untersuchte Region True Risk Panel V3 MSH2 Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH6"
+        },
+        "name": "Untersuchte Region True Risk Panel V3 MSH6 Gen",
+        "description": "Beispiel für untersuchte Region True Risk Panel V3 MSH6 Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PALB2"
+        },
+        "name": "Untersuchte Region True Risk Panel V3 PALB2 Gen",
+        "description": "Beispiel für untersuchte Region True Risk Panel V3 PALB2 Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PMS2"
+        },
+        "name": "Untersuchte Region True Risk Panel V3 PMS2 Gen",
+        "description": "Beispiel für untersuchte Region True Risk Panel V3 PMS2 Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PTEN"
+        },
+        "name": "Untersuchte Region True Risk Panel V3 PTEN Gen",
+        "description": "Beispiel für untersuchte Region True Risk Panel V3 PTEN Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51C"
+        },
+        "name": "Untersuchte Region True Risk Panel V3 RAD51C Gen",
+        "description": "Beispiel für untersuchte Region True Risk Panel V3 RAD51C Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51D"
+        },
+        "name": "Untersuchte Region True Risk Panel V3 RAD51D Gen",
+        "description": "Beispiel für untersuchte Region True Risk Panel V3 RAD51D Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-TP53"
+        },
+        "name": "Untersuchte Region True Risk Panel V3 TP53 Gen",
+        "description": "Beispiel für untersuchte Region True Risk Panel V3 TP53 Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-variante-1"
+        },
+        "name": "BRAF Variante",
+        "description": "Beispiel für genetische Variante im BRAF Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-variante-2"
+        },
+        "name": "NIPBL Variante",
+        "description": "Beispiel für genetische Variante im NIPBL Gen an Hand von WGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-variante-brca1"
+        },
+        "name": "Variante BRCA1",
+        "description": "Beispiel für genetische Variante BRCA1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-variante-cnv-4"
+        },
+        "name": "Variante SMO CNV",
+        "description": "Beispiel für genetische Copy Number Variante SMO Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-variante-fgfr2-fusion"
+        },
+        "name": "Variante FGFR2-DBP Fusion",
+        "description": "Beispiel für genetische Variante FGFR2-DBP Fusion.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-variante-srcc-ctnna1"
+        },
+        "name": "mii-exa-molgen-variante-srcc-ctnna1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-molgen-familymemberhistory-reasoncode"
+        },
+        "name": "mii-sp-molgen-familymemberhistory-reasoncode",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-molgen-familymemberhistory-reasonreference"
+        },
+        "name": "mii-sp-molgen-familymemberhistory-reasonreference",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-molgen-servicerequest-reasoncode"
+        },
+        "name": "mii-sp-molgen-servicerequest-reasoncode",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-molgen-servicerequest-reasonreference"
+        },
+        "name": "mii-sp-molgen-servicerequest-reasonreference",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-molgen-task-for"
+        },
+        "name": "mii-sp-molgen-task-for",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-molgen-task-reasoncode"
+        },
+        "name": "mii-sp-molgen-task-reasoncode",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-molgen-task-reasonreference"
+        },
+        "name": "mii-sp-molgen-task-reasonreference",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/IGMIIKDSModulMolekulargenetischerBefundbericht.md",
+      "title": "IG MII KDS Modul Molekulargenetischer Befundbericht",
+      "generation": "markdown",
+      "page": [
+        {
+          "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/BeschreibungModulMolekulargenetischerBefundbericht.md",
+          "title": "Beschreibung Modul Molekulargenetischer Befundbericht",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/KontextimGesamtprojektBezgezuanderenModulen.md",
+          "title": "Kontext im Gesamtprojekt / Bezüge zu anderen Modulen",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/Referenzen.md",
+          "title": "Referenzen",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/AnwendungsflleInformationsmodell.md",
+          "title": "Anwendungsfälle / Informationsmodell",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/BeschreibungvonSzenarienfrdieAnwendungderModule.md",
+              "title": "Beschreibung von Szenarien für die Anwendung der Module",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/Datenstzeinkl.Beschreibungen.md",
+              "title": "Datensätze inkl. Beschreibungen",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/UML.md",
+              "title": "UML",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/TechnischeImplementierung.md",
+          "title": "Technische Implementierung",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/FHIRProfile.md",
+              "title": "FHIR Profile",
+              "generation": "markdown",
+              "page": [
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Anforderung-ServiceRequest.md",
+                  "title": "Anforderung - ServiceRequest",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Befundbericht-DiagnosticReport.md",
+                  "title": "Befundbericht - DiagnosticReport",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/ErgebnisZusammenfassung-Observation.md",
+                  "title": "Ergebnis Zusammenfassung - Observation",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/TherapeutischeImplikation-Observation.md",
+                  "title": "Therapeutische Implikation - Observation",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/DiagnostischeImplikation-Observation.md",
+                  "title": "Diagnostische Implikation - Observation",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Medikationsempfehlung-Task.md",
+                  "title": "Medikationsempfehlung - Task",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/EmpfohleneFolgemanahme-Task.md",
+                  "title": "Empfohlene Folgemaßnahme - Task",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Variante-Observation.md",
+                  "title": "Variante - Observation",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/UntersuchteRegion-Observation.md",
+                  "title": "Untersuchte Region - Observation",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Haplotype-Observation.md",
+                  "title": "Haplotype - Observation",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Genotyp---Observation.md",
+                  "title": "Genotyp - Observation",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Sequence-Phase-Relationship---Observation.md",
+                  "title": "Sequence Phase Relationship - Observation",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Mutationslast-Observation.md",
+                  "title": "Mutationslast - Observation",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Mikrosatelliteninstabilitt-Observation.md",
+                  "title": "Mikrosatelliteninstabilität - Observation",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Familienanamnese---FamilyMemberHistory.md",
+                  "title": "Familienanamnese - FamilyMemberHistory",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Polygener-Risiko-Score---RiskAssessment.md",
+                  "title": "Polygener Risiko Score - RiskAssessment",
+                  "generation": "markdown"
+                }
+              ]
+            },
+            {
+              "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Terminologien.md",
+              "title": "Terminologien",
+              "generation": "markdown",
+              "page": [
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/CodeSystems.md",
+                  "title": "CodeSystems",
+                  "generation": "markdown",
+                  "page": [
+                    {
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/TBD-Codes.md",
+                      "title": "TBD Codes",
+                      "generation": "markdown"
+                    },
+                    {
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/ClinVar-Evidence-Level-Example-Codes.md",
+                      "title": "ClinVar Evidence Level Example Codes",
+                      "generation": "markdown"
+                    },
+                    {
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/PharmGKB-Evidence-Level-Example-Codes.md",
+                      "title": "PharmGKB Evidence Level Example Codes",
+                      "generation": "markdown"
+                    }
+                  ]
+                },
+                {
+                  "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/ValueSets.md",
+                  "title": "ValueSets",
+                  "generation": "markdown",
+                  "page": [
+                    {
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/HighLowcodes.md",
+                      "title": "High/Low codes",
+                      "generation": "markdown"
+                    },
+                    {
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/HGVSValueSet.md",
+                      "title": "HGVS Value Set",
+                      "generation": "markdown"
+                    },
+                    {
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/HGNCValueSet.md",
+                      "title": "HGNC Value Set",
+                      "generation": "markdown"
+                    },
+                    {
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/TBDValueSet.md",
+                      "title": "TBD Value Set",
+                      "generation": "markdown"
+                    },
+                    {
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/DNAChangeType.md",
+                      "title": "DNA Change Type",
+                      "generation": "markdown"
+                    },
+                    {
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/MolecularConsequence.md",
+                      "title": "Molecular Consequence",
+                      "generation": "markdown"
+                    },
+                    {
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/VariantInheritance.md",
+                      "title": "Variant Inheritance",
+                      "generation": "markdown"
+                    },
+                    {
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Genetic-Therapeutic-Implications.md",
+                      "title": "Genetic Therapeutic Implications",
+                      "generation": "markdown"
+                    },
+                    {
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Functional-Effect.md",
+                      "title": "Functional Effect",
+                      "generation": "markdown"
+                    },
+                    {
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Condition-Inheritance-Pattern.md",
+                      "title": "Condition Inheritance Pattern",
+                      "generation": "markdown"
+                    },
+                    {
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Evidence-Level-Examples.md",
+                      "title": "Evidence Level Examples",
+                      "generation": "markdown"
+                    },
+                    {
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Variant-Confidence-Status.md",
+                      "title": "Variant Confidence Status",
+                      "generation": "markdown"
+                    },
+                    {
+                      "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/Family-Member-History-duplicate-2.md",
+                      "title": "Family Member History",
+                      "generation": "markdown"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "nameUrl": "implementation-guides/ImplementationGuide-2025.x-DE/MIIIGModulMolGenDE/TechnischeImplementierung/CapabilityStatement.md",
+              "title": "CapabilityStatement",
+              "generation": "markdown"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
