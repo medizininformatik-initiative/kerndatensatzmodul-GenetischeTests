@@ -25,6 +25,14 @@
           "display": "Laboratory"
         }
       ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code": "GE"
+        }
+      ]
     }
   ],
   "component": [
@@ -57,26 +65,6 @@
             "display": "Pathogenic"
           }
         ]
-      }
-    },
-    {
-      "code": {
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-            "code": "functional-effect"
-          }
-        ]
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "SO:0002054",
-            "system": "http://sequenceontology.org",
-            "display": "loss_of_function_variant"
-          }
-        ],
-        "text": "Funktionsverlust des Genprodukts"
       }
     },
     {

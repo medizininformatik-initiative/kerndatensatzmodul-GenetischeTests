@@ -25,6 +25,14 @@
           "display": "Laboratory"
         }
       ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code": "GE"
+        }
+      ]
     }
   ],
   "component": [
@@ -52,24 +60,6 @@
       "code": {
         "coding": [
           {
-            "system": "http://loinc.org",
-            "code": "51958-7"
-          }
-        ]
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "NM_133433.4",
-            "system": "http://www.ncbi.nlm.nih.gov/refseq"
-          }
-        ]
-      }
-    },
-    {
-      "code": {
-        "coding": [
-          {
             "code": "47999-8",
             "system": "http://loinc.org",
             "display": "DNA region name [Identifier]"
@@ -77,44 +67,6 @@
         ]
       },
       "valueString": "Exon #10"
-    },
-    {
-      "code": {
-        "coding": [
-          {
-            "system": "http://loinc.org",
-            "code": "48004-6",
-            "display": "DNA change (c.HGVS)"
-          }
-        ]
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "NM_133433.4:c.2207del",
-            "system": "http://varnomen.hgvs.org"
-          }
-        ]
-      }
-    },
-    {
-      "code": {
-        "coding": [
-          {
-            "system": "http://loinc.org",
-            "code": "48005-3",
-            "display": "Amino acid change (pHGVS)"
-          }
-        ]
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "p.(Pro736Glnfs*58)",
-            "system": "http://varnomen.hgvs.org"
-          }
-        ]
-      }
     },
     {
       "code": {
@@ -152,26 +104,6 @@
             "code": "SO:0000159",
             "system": "http://sequenceontology.org",
             "display": "deletion"
-          }
-        ]
-      }
-    },
-    {
-      "code": {
-        "coding": [
-          {
-            "system": "http://loinc.org",
-            "code": "48006-1",
-            "display": "Amino acid change [Type]"
-          }
-        ]
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "LA6694-9",
-            "system": "http://loinc.org",
-            "display": "Frameshift"
           }
         ]
       }

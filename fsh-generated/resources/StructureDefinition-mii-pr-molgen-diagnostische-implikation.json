@@ -33,12 +33,6 @@
   "differential": {
     "element": [
       {
-        "id": "Observation.extension:related-artifact",
-        "path": "Observation.extension",
-        "sliceName": "related-artifact",
-        "mustSupport": true
-      },
-      {
         "id": "Observation.category",
         "path": "Observation.category",
         "mustSupport": true
@@ -110,18 +104,6 @@
         ]
       },
       {
-        "id": "Observation.component:predicted-phenotype",
-        "path": "Observation.component",
-        "sliceName": "predicted-phenotype",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component:mode-of-inheritance",
-        "path": "Observation.component",
-        "sliceName": "mode-of-inheritance",
-        "mustSupport": true
-      },
-      {
         "id": "Observation.component:clinical-significance",
         "path": "Observation.component",
         "sliceName": "clinical-significance",
@@ -135,9 +117,15 @@
         ]
       },
       {
-        "id": "Observation.component:functional-effect",
+        "id": "Observation.component:predicted-phenotype",
         "path": "Observation.component",
-        "sliceName": "functional-effect",
+        "sliceName": "predicted-phenotype",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:mode-of-inheritance",
+        "path": "Observation.component",
+        "sliceName": "mode-of-inheritance",
         "mustSupport": true
       }
     ]

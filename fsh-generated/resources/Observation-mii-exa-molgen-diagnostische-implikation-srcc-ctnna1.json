@@ -25,16 +25,14 @@
           "display": "Laboratory"
         }
       ]
-    }
-  ],
-  "extension": [
+    },
     {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact",
-      "valueRelatedArtifact": {
-        "type": "citation",
-        "citation": "ClinGen",
-        "url": "https://search.clinicalgenome.org/kb/gene-dosage/HGNC:2509"
-      }
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code": "GE"
+        }
+      ]
     }
   ],
   "component": [
@@ -64,25 +62,6 @@
             "code": "LA6668-3",
             "system": "http://loinc.org",
             "display": "Pathogenic"
-          }
-        ]
-      }
-    },
-    {
-      "code": {
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-            "code": "functional-effect"
-          }
-        ]
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "SO:0002054",
-            "system": "http://sequenceontology.org",
-            "display": "loss_of_function_variant"
           }
         ]
       }

@@ -83,6 +83,20 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "code"
+            }
+          ],
+          "description": "Slice based on the component.code pattern",
+          "rules": "open"
+        }
+      },
+      {
         "id": "Observation.component:conclusion-string",
         "path": "Observation.component",
         "sliceName": "conclusion-string",
@@ -114,9 +128,9 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.component:coding-hgvs",
+        "id": "Observation.component:chromosome-identifier",
         "path": "Observation.component",
-        "sliceName": "coding-hgvs",
+        "sliceName": "chromosome-identifier",
         "mustSupport": true
       },
       {
@@ -129,12 +143,6 @@
         "id": "Observation.component:genomic-ref-seq",
         "path": "Observation.component",
         "sliceName": "genomic-ref-seq",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component:transcript-ref-seq",
-        "path": "Observation.component",
-        "sliceName": "transcript-ref-seq",
         "mustSupport": true
       },
       {
@@ -207,30 +215,6 @@
         "id": "Observation.component:variation-code",
         "path": "Observation.component",
         "sliceName": "variation-code",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component:chromosome-identifier",
-        "path": "Observation.component",
-        "sliceName": "chromosome-identifier",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component:protein-hgvs",
-        "path": "Observation.component",
-        "sliceName": "protein-hgvs",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component:amino-acid-change-type",
-        "path": "Observation.component",
-        "sliceName": "amino-acid-change-type",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component:molecular-consequence",
-        "path": "Observation.component",
-        "sliceName": "molecular-consequence",
         "mustSupport": true
       },
       {

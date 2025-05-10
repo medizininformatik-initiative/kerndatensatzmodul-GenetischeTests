@@ -25,16 +25,14 @@
           "display": "Laboratory"
         }
       ]
-    }
-  ],
-  "extension": [
+    },
     {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact",
-      "valueRelatedArtifact": {
-        "type": "citation",
-        "citation": "Richards et al., Genet Med. 2015; 17:405-24",
-        "url": "https://doi.org/10.1038/gim.2015.30"
-      }
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code": "GE"
+        }
+      ]
     }
   ],
   "component": [

@@ -25,6 +25,14 @@
           "display": "Laboratory"
         }
       ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code": "GE"
+        }
+      ]
     }
   ],
   "component": [
@@ -57,31 +65,6 @@
             "display": "Likely pathogenic"
           }
         ]
-      }
-    },
-    {
-      "code": {
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-            "code": "functional-effect"
-          }
-        ]
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "SO:0002315",
-            "system": "http://sequenceontology.org",
-            "display": "increased_gene_product_level"
-          },
-          {
-            "code": "C36337",
-            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-            "display": "Messenger RNA Overexpression"
-          }
-        ],
-        "text": "mögl. Überexpression"
       }
     }
   ],
