@@ -845,6 +845,44 @@
               "coding": [
                 {
                   "system": "http://loinc.org",
+                  "code": "48004-6",
+                  "display": "DNA change (c.HGVS)"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "NM_004333.4:c.1799T>A",
+                  "system": "http://varnomen.hgvs.org"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "48005-3",
+                  "display": "Amino acid change (pHGVS)"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "p.(Val600Glu)",
+                  "system": "http://varnomen.hgvs.org"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
                   "code": "81258-6",
                   "display": "Sample variant allelic frequency [NFr]"
                 }
@@ -947,23 +985,11 @@
         },
         "device": {
           "reference": "Device/mii-exa-molgen-device-sequencer"
-        },
-        "derivedFrom": [
-          {
-            "reference": "mii-exa-molgen-untersuchte-region-1"
-          }
-        ]
+        }
       },
       "request": {
         "method": "PUT",
         "url": "Observation/mii-exa-molgen-variante-1"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-1",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-1"
       }
     },
     {
@@ -1245,13 +1271,6 @@
       "request": {
         "method": "PUT",
         "url": "Observation/mii-exa-molgen-mikrosatelliteninstabilitaet-1"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-ergebnis-zusammenfassung-1",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-ergebnis-zusammenfassung-1"
       }
     }
   ]

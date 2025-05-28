@@ -135,7 +135,7 @@
           "reference": "Observation/mii-exa-molgen-molekulare-konsequenz-1"
         },
         "name": "BRAF Variante Molekulare Konsequenz",
-        "description": "Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS.",
+        "description": "Beispiel für molekulare Konsequenz abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz"
       },
       {
@@ -405,6 +405,13 @@
           "reference": "Bundle/mii-exa-befund-bundle-befund-fgfr2-fusion"
         },
         "name": "mii-exa-befund-bundle-befund-fgfr2-fusion",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-befund-bundle-befund-srcc"
+        },
+        "name": "mii-exa-befund-bundle-befund-srcc",
         "exampleBoolean": true
       },
       {
@@ -733,7 +740,7 @@
           "reference": "Observation/mii-exa-molgen-molekulare-konsequenz-2"
         },
         "name": "NIPBL Variante Molekulare Konsequenz",
-        "description": "Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im NIPBL Gen an Hand von WGS.",
+        "description": "Beispiel für molekulare Konsequenz abgeleitet von genetischer Variante im NIPBL Gen an Hand von WGS.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz"
       },
       {

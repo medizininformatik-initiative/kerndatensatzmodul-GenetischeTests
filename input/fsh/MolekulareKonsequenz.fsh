@@ -35,11 +35,11 @@ Instance: mii-exa-molgen-molekulare-konsequenz-1
 InstanceOf: mii-pr-molgen-molekulare-konsequenz
 Usage: #example
 Title: "BRAF Variante Molekulare Konsequenz"
-Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
+Description: "Beispiel für molekulare Konsequenz abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS."
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence"
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
-* code = GenTbd#diagnostic-implication "Diagnostische Implikation"
+* code = GenTbd#molecular-consequence "Molekulare Konsequenz"
 * subject = Reference(mii-exa-molgen-patient)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-1)
@@ -50,15 +50,15 @@ Instance: mii-exa-molgen-molekulare-konsequenz-2
 InstanceOf: mii-pr-molgen-molekulare-konsequenz
 Usage: #example
 Title: "NIPBL Variante Molekulare Konsequenz"
-Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im NIPBL Gen an Hand von WGS."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
-* extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/workflow-relatedArtifact"
+Description: "Beispiel für molekulare Konsequenz abgeleitet von genetischer Variante im NIPBL Gen an Hand von WGS."
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence"
+* extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.url = "https://doi.org/10.1038/gim.2015.30"
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
-* code = GenTbd#diagnostic-implication "Diagnostische Implikation"
+* code = GenTbd#molecular-consequence "Molekulare Konsequenz"
 * subject = Reference(mii-exa-molgen-patient-2)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-2)
@@ -66,8 +66,8 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer
 * component[conclusion-string].valueString = "Nachweis einer pathogenen Variante im NIPBL-Gen in heterozygoter Form."
 * component[clinical-significance].code = LNC#53037-8 "Genetic variation clinical significance [Imp]"
 * component[clinical-significance].valueCodeableConcept = LNC#LA6668-3 "Pathogenic"
-* component[mode-of-inheritance].code = GenTbd#condition-inheritance //CS updaten, wenn gen-reporting v2.0
-* component[mode-of-inheritance].valueCodeableConcept = HPO#HP:0000006 "Autosomal dominant inheritance"
+//* component[mode-of-inheritance].code = GenTbd#condition-inheritance //CS updaten, wenn gen-reporting v2.0
+//* component[mode-of-inheritance].valueCodeableConcept = HPO#HP:0000006 "Autosomal dominant inheritance"
 //* component[predicted-phenotype].code = LNC#81259-4 "Associated phenotype"
 //* component[predicted-phenotype].valueCodeableConcept = SCT#40354009 "De Lange syndrome (disorder)"
 
@@ -79,13 +79,13 @@ Usage: #example
 Title: "CNV SMO Diagnostische Implikation"
 Description: "Beispiel für diagnostische Implikation abgeleitet von Copy Number Variante im SMO Gen."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
-* extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/workflow-relatedArtifact"
+* extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/25741868/"
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
-* code = GenTbd#diagnostic-implication "Diagnostische Implikation"
+* code = GenTbd#molecular-consequence "Molekulare Konsequenz"
 * subject = Reference(mii-exa-molgen-patient-2)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-cnv-4)
@@ -104,13 +104,13 @@ Usage: #example
 Title: "Diagnostische Implikation BRCA1 Variante"
 Description: "Beispiel für diagnostische Implikation abgeleitet von SNP im BRCA1."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
-* extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/workflow-relatedArtifact"
+* extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/25741868/"
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
-* code = GenTbd#diagnostic-implication "Diagnostische Implikation"
+* code = GenTbd#molecular-consequence "Molekulare Konsequenz"
 * subject = Reference(mii-exa-molgen-patient-brca1)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-brca1)

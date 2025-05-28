@@ -41,6 +41,7 @@
 [mii-exa-befund-bundle-1-braf]: Bundle-mii-exa-befund-bundle-1-braf.html
 [mii-exa-befund-bundle-befund-2-nipbl-clinical]: Bundle-mii-exa-befund-bundle-befund-2-nipbl-clinical.html
 [mii-exa-befund-bundle-befund-fgfr2-fusion]: Bundle-mii-exa-befund-bundle-befund-fgfr2-fusion.html
+[mii-exa-befund-bundle-befund-srcc]: Bundle-mii-exa-befund-bundle-befund-srcc.html
 [mii-exa-molgen-anforderung-fgfr2-fusion]: ServiceRequest-mii-exa-molgen-anforderung-fgfr2-fusion.html
 [mii-exa-molgen-anforderung-srcc]: ServiceRequest-mii-exa-molgen-anforderung-srcc.html
 [mii-exa-molgen-bundle-befund-2-nipbl]: Bundle-mii-exa-molgen-bundle-befund-2-nipbl.html

@@ -4,14 +4,15 @@
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz",
-      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
+      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence"
     ]
   },
   "code": {
     "coding": [
       {
         "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-        "code": "molecular-consequence"
+        "code": "molecular-consequence",
+        "display": "Molekulare Konsequenz"
       }
     ]
   },

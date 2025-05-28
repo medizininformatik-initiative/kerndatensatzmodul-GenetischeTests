@@ -60,6 +60,42 @@
         "coding": [
           {
             "system": "http://loinc.org",
+            "code": "51958-7"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "NM_001903.5",
+            "system": "http://www.ncbi.nlm.nih.gov/refseq"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "48004-6"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "NM_001903.5:c.1030del",
+            "system": "http://varnomen.hgvs.org"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
             "code": "81290-9"
           }
         ]
@@ -87,6 +123,24 @@
           {
             "code": "NC_000005.9",
             "system": "http://www.ncbi.nlm.nih.gov/refseq"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "48005-3"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "p.(Leu344CysfsTer25)",
+            "system": "http://varnomen.hgvs.org"
           }
         ]
       }

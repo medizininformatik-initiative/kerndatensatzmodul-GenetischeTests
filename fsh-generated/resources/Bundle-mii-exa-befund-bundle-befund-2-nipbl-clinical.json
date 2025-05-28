@@ -443,7 +443,7 @@
         "meta": {
           "profile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht",
-            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
+            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
           ]
         },
         "code": {
@@ -1118,6 +1118,24 @@
             "code": {
               "coding": [
                 {
+                  "system": "http://loinc.org",
+                  "code": "51958-7"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "NM_133433.4",
+                  "system": "http://www.ncbi.nlm.nih.gov/refseq"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
                   "code": "47999-8",
                   "system": "http://loinc.org",
                   "display": "DNA region name [Identifier]"
@@ -1125,6 +1143,44 @@
               ]
             },
             "valueString": "Exon #10"
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "48004-6",
+                  "display": "DNA change (c.HGVS)"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "NM_133433.4:c.2207del",
+                  "system": "http://varnomen.hgvs.org"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "48005-3",
+                  "display": "Amino acid change (pHGVS)"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "p.(Pro736Glnfs*58)",
+                  "system": "http://varnomen.hgvs.org"
+                }
+              ]
+            }
           },
           {
             "code": {
@@ -1251,114 +1307,6 @@
       "request": {
         "method": "PUT",
         "url": "Observation/mii-exa-molgen-variante-2"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-2-nipbl",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-2-nipbl"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-2-hdac8",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-2-hdac8"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-2-rad21",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-2-rad21"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-2-smc1a",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-2-smc1a"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-2-smc3",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-2-smc3"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-2-tp63",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-2-tp63"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-bundle-befund-2-nipbl-condition-lab",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "mii-exa-molgen-bundle-befund-2-nipbl-condition-lab",
-        "meta": {
-          "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose"
-          ]
-        },
-        "clinicalStatus": {
-          "coding": [
-            {
-              "code": "active",
-              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
-            }
-          ]
-        },
-        "verificationStatus": {
-          "coding": [
-            {
-              "code": "provisional",
-              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
-            }
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "extension": [
-                {
-                  "url": "http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit",
-                  "valueCoding": {
-                    "code": "V",
-                    "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT"
-                  }
-                }
-              ],
-              "version": "2021",
-              "code": "Q87.1",
-              "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-              "display": "Angeborene Fehlbildungssyndrome, die vorwiegend mit Kleinwuchs einhergehen"
-            },
-            {
-              "code": "122470",
-              "system": "http://www.omim.org",
-              "display": "Cornelia de Lange syndrome 1"
-            }
-          ]
-        },
-        "subject": {
-          "reference": "Patient/mii-exa-molgen-patient-2"
-        },
-        "recorder": {
-          "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
-        },
-        "asserter": {
-          "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
-        },
-        "recordedDate": "2022-03-05T10:49:00+01:00"
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Condition/mii-exa-molgen-bundle-befund-2-nipbl-condition-lab"
       }
     }
   ]

@@ -102,7 +102,7 @@
         "meta": {
           "profile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht",
-            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
+            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
           ]
         },
         "code": {
@@ -146,6 +146,12 @@
             "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/recommended-action",
             "valueReference": {
               "reference": "Task/mii-exa-molgen-folgemassnahme-brca1"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-risk-assessment",
+            "valueReference": {
+              "reference": "RiskAssessment/mii-exa-molgen-prs-brca1"
             }
           }
         ],
@@ -487,13 +493,6 @@
       }
     },
     {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-ergebnis-zusammenfassung-trurisk-panel",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-ergebnis-zusammenfassung-trurisk-panel"
-      }
-    },
-    {
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-variante-brca1",
       "resource": {
         "resourceType": "Observation",
@@ -576,6 +575,42 @@
               "coding": [
                 {
                   "system": "http://loinc.org",
+                  "code": "48004-6"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "NM_007294.3:c.5266dupC",
+                  "system": "http://varnomen.hgvs.org"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "51958-7"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "NM_007294.3",
+                  "system": "http://www.ncbi.nlm.nih.gov/refseq"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
                   "code": "48019-4"
                 }
               ]
@@ -639,6 +674,24 @@
                   "code": "LA21270-6",
                   "system": "http://loinc.org",
                   "display": "Chromosome 17"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "48005-3"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "p.Gln1756Profs",
+                  "system": "http://varnomen.hgvs.org"
                 }
               ]
             }
@@ -833,118 +886,6 @@
       "request": {
         "method": "PUT",
         "url": "Observation/mii-exa-molgen-diagnostische-implikation-brca1"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-ATM",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-ATM"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA1",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA1"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BARD1",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BARD1"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA2",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA2"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRIP1",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRIP1"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CDH1",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CDH1"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CHECK2",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CHECK2"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MLH1",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MLH1"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH2",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH2"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH6",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH6"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PALB2",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PALB2"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PMS2",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PMS2"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PTEN",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PTEN"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51C",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51C"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51D",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51D"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-TP53",
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-TP53"
       }
     }
   ]

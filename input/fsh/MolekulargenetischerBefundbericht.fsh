@@ -96,20 +96,20 @@ InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
 Title: "Molekulargentischer Befund 2: Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang"
 Description: "Beispiel für molekulargenetischen Befund Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
-* extension[workflow-relatedArtifact][+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
+* extension[workflow-relatedArtifact][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.type = RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.citation = "Gillis LA, McCallum J, Kaur M, DeScipio C, Yaeger D, Mariani A, Kline AD, Li HH, Devoto M, Jackson LG, Krantz ID. NIPBL mutational analysis in 120 individuals with Cornelia de Lange syndrome and evaluation of genotype-phenotype correlations. Am J Hum Genet. 2004 Oct;75(4):610-23. doi: 10.1086/424698. Epub 2004 Aug 18. PMID: 15318302; PMCID: PMC1182048."
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/15318302/"
-* extension[workflow-relatedArtifact][+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
+* extension[workflow-relatedArtifact][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.type = RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.citation = "Kawauchi S, Calof AL, Santos R, Lopez-Burks ME, Young CM, Hoang MP, Chua A, Lao T, Lechner MS, Daniel JA, Nussenzweig A, Kitzes L, Yokomori K, Hallgrimsson B, Lander AD. Multiple organ system defects and transcriptional dysregulation in the Nipbl(+/-) mouse, a model of Cornelia de Lange Syndrome. PLoS Genet. 2009 Sep;5(9):e1000650. doi: 10.1371/journal.pgen.1000650. Epub 2009 Sep 18. PMID: 19763162; PMCID: PMC2730539."
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/19763162/"
-* extension[workflow-relatedArtifact][+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
+* extension[workflow-relatedArtifact][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.type = RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.citation = "Huisman SA, Redeker EJ, Maas SM, Mannens MM, Hennekam RC. High rate of mosaicism in individuals with Cornelia de Lange syndrome. J Med Genet. 2013 May;50(5):339-44. doi: 10.1136/jmedgenet-2012-101477. Epub 2013 Mar 15. PMID: 23505322."
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/23505322/"
-* extension[workflow-relatedArtifact][+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
+* extension[workflow-relatedArtifact][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.type = RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.citation = "Kline AD, Moss JF, Selicorni A, Bisgaard AM, Deardorff MA, Gillett PM, Ishman SL, Kerr LM, Levin AV, Mulder PA, Ramos FJ, Wierzba J, Ajmone PF, Axtell D, Blagowidow N, Cereda A, Costantino A, Cormier-Daire V, FitzPatrick D, Grados M, Groves L, Guthrie W, Huisman S, Kaiser FJ, Koekkoek G, Levis M, Mariani M, McCleery JP, Menke LA, Metrena A, O'Connor J, Oliver C, Pie J, Piening S, Potter CJ, Quaglio AL, Redeker E, Richman D, Rigamonti C, Shi A, Tümer Z, Van Balkom IDC, Hennekam RC. Diagnosis and management of Cornelia de Lange syndrome: first international consensus statement. Nat Rev Genet. 2018 Oct;19(10):649-666. doi: 10.1038/s41576-018-0031-0. PMID: 29995837; PMCID: PMC7136165."
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/29995837/"
@@ -178,17 +178,17 @@ InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
 Title: "Molekulargentischer Befund Familiäre Belastung für Brust- und Eierstockkrebs"
 Description: "Beispiel für molekulargenetischen Befund einer BRCA1 Variante bei Familiärer Belastung für Brust- und Eierstockkrebs."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
-* extension[workflow-relatedArtifact][+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
+* extension[workflow-relatedArtifact][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.type = RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.citation = "Plon SE, Eccles DM, Easton D, Foulkes WD, Genuardi M, Greenblatt MS, Hogervorst FB, Hoogerbrugge N, Spurdle AB, Tavtigian SV; IARC Unclassified Genetic Variants Working Group. Sequence variant classification and reporting: recommendations for improving the interpretation of cancer susceptibility genetic test results. Hum Mutat. 2008 Nov;29(11):1282-91. doi: 10.1002/humu.20880. PMID: 18951446; PMCID: PMC3075918."
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.url = "https://doi.org/10.1002/humu.20880"
-* extension[workflow-relatedArtifact][+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
+* extension[workflow-relatedArtifact][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.type = RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.citation = "Rhiem K, Auber B, Briest S, Dikow N, Ditsch N, Dragicevic N, Grill S, Hahnen E, Horvath J, Jaeger B, Kast K, Kiechle M, Leinert E, Morlot S, Püsken M, Schäfer D, Schott S, Schroeder C, Siebers-Renelt U, Solbach C, Weber-Lassalle N, Witzel I, Zeder-Göß C, Schmutzler RK. Consensus Recommendations of the German Consortium for Hereditary Breast and Ovarian Cancer. Breast Care (Basel). 2022 Apr;17(2):199-207. doi: 10.1159/000516376. Epub 2021 Jul 19. PMID: 35702495; PMCID: PMC9149395."
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.url = "https://doi.org/10.1159%2F000516376"
 * extension[recommended-action].valueReference = Reference(mii-exa-molgen-folgemassnahme-brca1)
-* extension[genomics-risk-assessment].valueReference = Reference(mii-exa-molgen-prs-brca1)
+* extension[genomic-risk-assessment].valueReference = Reference(mii-exa-molgen-prs-brca1)
 * basedOn = Reference(mii-exa-molgen-anforderung-trurisk-panel)
 * status = DiagRepStatus#final
 * category[Genetics] = v2-0074#GE "Genetics"
