@@ -1,8 +1,8 @@
 Profile: MII_PR_MolGen_Mikrosatelliteninstabilitaet
-Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/msi
+Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-biomarker
 Id: mii-pr-molgen-mikrosatelliteninstabilitaet
 Title: "MII PR MolGen Mikrosatelliteninstabilität"
-Description: "Mikrosatelliteninstabilität (MSI) ist ein Zustand genetischer Hypermutabilität (Neigung zu Mutationen), der aus einer gestörten DNA-Mismatch-Reparatur (MMR) resultiert."
+Description: "Mikrosatelliteninstabilität (MSI) ist ein Zustand genetischer Hypermutabilität (Neigung zu Mutationen), der aus einer gestörten DNA-Mismatch-Reparatur (MMR) resultiert. Das Profil basiert auf dem CG STU3 MolecularBiomarker-Profil"
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^status = #active
@@ -15,7 +15,6 @@ Description: "Mikrosatelliteninstabilität (MSI) ist ein Zustand genetischer Hyp
 * subject only Reference(Patient or Group)
 * encounter MS
 * value[x] MS
-* component[conclusion-string] MS
 
 Mapping: MolGen-Mikrosatelliteninstabilitaet
 Id: MII-KDS
@@ -35,5 +34,3 @@ Description: "Beispiel für Mikrosatelliteninstabilität in Tumorprobe."
 * subject = Reference(mii-exa-molgen-patient)
 * valueCodeableConcept = LNC#LA14122-8 "Stable"
 * specimen = Reference(mii-exa-molgen-specimen-1)
-* component[conclusion-string].code = GenTbd#conclusion-string
-* component[conclusion-string].valueString = "Tumor weist ein mikrosatellitenstabiles Wachstum auf."

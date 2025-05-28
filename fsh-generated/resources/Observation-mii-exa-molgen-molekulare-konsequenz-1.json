@@ -1,9 +1,9 @@
 {
   "resourceType": "Observation",
-  "id": "mii-exa-molgen-diagnostische-implikation-cnv-4",
+  "id": "mii-exa-molgen-molekulare-konsequenz-1",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation",
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz",
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
     ]
   },
@@ -11,8 +11,7 @@
     "coding": [
       {
         "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-        "code": "diagnostic-implication",
-        "display": "Diagnostische Implikation"
+        "code": "molecular-consequence"
       }
     ]
   },
@@ -45,32 +44,12 @@
           }
         ]
       },
-      "valueString": "onkogene Veränderung "
-    },
-    {
-      "code": {
-        "coding": [
-          {
-            "system": "http://loinc.org",
-            "code": "53037-8",
-            "display": "Genetic variation clinical significance [Imp]"
-          }
-        ]
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "LA26332-9",
-            "system": "http://loinc.org",
-            "display": "Likely pathogenic"
-          }
-        ]
-      }
+      "valueString": "Nachweis einer aktivierenden Mutation BRAF V600E"
     }
   ],
   "status": "final",
   "subject": {
-    "reference": "Patient/mii-exa-molgen-patient-2"
+    "reference": "Patient/mii-exa-molgen-patient"
   },
   "performer": [
     {
@@ -79,7 +58,7 @@
   ],
   "derivedFrom": [
     {
-      "reference": "Observation/mii-exa-molgen-variante-cnv-4"
+      "reference": "Observation/mii-exa-molgen-variante-1"
     }
   ]
 }

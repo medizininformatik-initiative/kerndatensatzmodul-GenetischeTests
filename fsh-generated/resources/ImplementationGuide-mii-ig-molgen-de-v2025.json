@@ -124,6 +124,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-molgen-molekulare-konsequenz-1"
+        },
+        "name": "BRAF Variante Molekulare Konsequenz",
+        "description": "Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-molgen-therapeutische-implikation-1"
         },
         "name": "BRAF Variante Therapeutische Implikation",
@@ -140,11 +148,27 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-molgen-molekulare-konsequenz-cnv-4"
+        },
+        "name": "CNV SMO Diagnostische Implikation",
+        "description": "Beispiel für diagnostische Implikation abgeleitet von Copy Number Variante im SMO Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-molgen-diagnostische-implikation-brca1"
         },
         "name": "Diagnostische Implikation BRCA1 Variante",
         "description": "Beispiel für diagnostische Implikation abgeleitet von SNP im BRCA1.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-molekulare-konsequenz-brca1"
+        },
+        "name": "Diagnostische Implikation BRCA1 Variante",
+        "description": "Beispiel für diagnostische Implikation abgeleitet von SNP im BRCA1.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz"
       },
       {
         "reference": {
@@ -264,6 +288,22 @@
         },
         "name": "MII PR MolGen Medikationsempfehlung",
         "description": "Das Profil dieser Task Ressource dient dazu, auf der Grundlage der genetischen Ergebnisse medikamanetöse Maßnahmen vorzuschlagen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-mikrosatelliteninstabilitaet"
+        },
+        "name": "MII PR MolGen Mikrosatelliteninstabilität",
+        "description": "Mikrosatelliteninstabilität (MSI) ist ein Zustand genetischer Hypermutabilität (Neigung zu Mutationen), der aus einer gestörten DNA-Mismatch-Reparatur (MMR) resultiert. Das Profil basiert auf dem CG STU3 MolecularBiomarker-Profil",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-molekulare-konsequenz"
+        },
+        "name": "MII PR MolGen Molekualre Konsequenz",
+        "description": "Dieses Profil beschreibt den Zusammenhang von bestimmten Varianten, Haplotypen oder Genotypen und bestimmten Konsequenzen auf Molekularer Ebene.",
         "exampleBoolean": false
       },
       {
@@ -569,6 +609,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-molgen-mikrosatelliteninstabilitaet-1"
+        },
+        "name": "Mikrosatelliteninstabilität",
+        "description": "Beispiel für Mikrosatelliteninstabilität in Tumorprobe.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-molgen-variante-2"
         },
         "name": "NIPBL Variante",
@@ -582,6 +630,14 @@
         "name": "NIPBL Variante Diagnostische Implikation",
         "description": "Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im NIPBL Gen an Hand von WGS.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-molekulare-konsequenz-2"
+        },
+        "name": "NIPBL Variante Molekulare Konsequenz",
+        "description": "Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im NIPBL Gen an Hand von WGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz"
       },
       {
         "reference": {

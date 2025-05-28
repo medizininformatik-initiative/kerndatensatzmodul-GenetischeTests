@@ -2,11 +2,19 @@
 # Release Notes
 
 ## 2026.0.0-alpha
-- Allgemeine Änderungen
-    - Dependency auf den Clinical Genomics Reporting von STU2 auf STU3
+- Dependency auf den Clinical Genomics Reporting von STU2 auf STU3
     - Neues MolecularBiomarker-Profil 
-    - DiagnosticImplication
-        - replaced `extension[genomic-artifact]` in `extension[workflow-relatedArtifact]`
+    - Neues Molekulare-Konsequenz-Profil (downstream-Beschreibung von genetischen Änderungen)
+    - DiagnosticImplication 
+        - Schärfung der Profilierung mit Fokus auf Erkrankungsrisiko, Auslagerung der reinen Beschreibung der Änderung ins Molekulare-Konsequenz-Profil
+            - replaced `extension[genomic-artifact]` with `extension[workflow-relatedArtifact]`
+    - Ergebnis-Zusammenfassung 
+        - Löschen des Profils (Grund: Redundanzen, Ergebnis kann über GenomicReport.conclusion/conclusionCode abgebildet werden)
+    - Mikrosatelliteninstabilität
+        - erbt jetzt vom STU3 Molecular Biomarker Profile
+        - `component[conclusion-string]` entfällt
+    - Beispiele entsprechend angepasst (alte Beispiele für Diagnostische Implikation entsprechen eher )
+    - Neue Ordnerstruktur im GitHub-Repo
 
 
 ## 2025.0.0

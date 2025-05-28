@@ -1,9 +1,9 @@
 {
   "resourceType": "Observation",
-  "id": "mii-exa-molgen-diagnostische-implikation-2",
+  "id": "mii-exa-molgen-molekulare-konsequenz-brca1",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation",
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz",
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
     ]
   },
@@ -11,8 +11,7 @@
     "coding": [
       {
         "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-        "code": "diagnostic-implication",
-        "display": "Diagnostische Implikation"
+        "code": "molecular-consequence"
       }
     ]
   },
@@ -41,7 +40,7 @@
       "valueRelatedArtifact": {
         "type": "citation",
         "citation": "Richards et al., Genet Med. 2015; 17:405-24",
-        "url": "https://doi.org/10.1038/gim.2015.30"
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25741868/"
       }
     }
   ],
@@ -55,7 +54,7 @@
           }
         ]
       },
-      "valueString": "Nachweis einer pathogenen Variante im NIPBL-Gen in heterozygoter Form."
+      "valueString": "Nachweis heterozygoter Sequenzveränderung, die zum Funktionsverlust führt"
     },
     {
       "code": {
@@ -82,18 +81,19 @@
         "coding": [
           {
             "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-            "code": "condition-inheritance"
+            "code": "functional-effect"
           }
         ]
       },
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "HP:0000006",
-            "system": "http://human-phenotype-ontology.org",
-            "display": "Autosomal dominant inheritance"
+            "code": "SO:0002054",
+            "system": "http://sequenceontology.org",
+            "display": "loss_of_function_variant"
           }
-        ]
+        ],
+        "text": "Funktionsverlust des Genprodukts"
       }
     },
     {
@@ -101,17 +101,16 @@
         "coding": [
           {
             "system": "http://loinc.org",
-            "code": "81259-4",
-            "display": "Associated phenotype"
+            "code": "93044-6"
           }
         ]
       },
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "40354009",
-            "system": "http://snomed.info/sct",
-            "display": "De Lange syndrome (disorder)"
+            "code": "2-star",
+            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/clinvar-evidence-level-custom-cs",
+            "display": "2 star"
           }
         ]
       }
@@ -119,7 +118,7 @@
   ],
   "status": "final",
   "subject": {
-    "reference": "Patient/mii-exa-molgen-patient-2"
+    "reference": "Patient/mii-exa-molgen-patient-brca1"
   },
   "performer": [
     {
@@ -128,7 +127,7 @@
   ],
   "derivedFrom": [
     {
-      "reference": "Observation/mii-exa-molgen-variante-2"
+      "reference": "Observation/mii-exa-molgen-variante-brca1"
     }
   ]
 }

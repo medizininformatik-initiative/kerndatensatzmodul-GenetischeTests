@@ -1,9 +1,9 @@
 {
   "resourceType": "Observation",
-  "id": "mii-exa-molgen-diagnostische-implikation-2",
+  "id": "mii-exa-molgen-molekulare-konsequenz-2",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation",
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz",
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
     ]
   },
@@ -11,8 +11,7 @@
     "coding": [
       {
         "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-        "code": "diagnostic-implication",
-        "display": "Diagnostische Implikation"
+        "code": "molecular-consequence"
       }
     ]
   },
@@ -73,45 +72,6 @@
             "code": "LA6668-3",
             "system": "http://loinc.org",
             "display": "Pathogenic"
-          }
-        ]
-      }
-    },
-    {
-      "code": {
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-            "code": "condition-inheritance"
-          }
-        ]
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "HP:0000006",
-            "system": "http://human-phenotype-ontology.org",
-            "display": "Autosomal dominant inheritance"
-          }
-        ]
-      }
-    },
-    {
-      "code": {
-        "coding": [
-          {
-            "system": "http://loinc.org",
-            "code": "81259-4",
-            "display": "Associated phenotype"
-          }
-        ]
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "40354009",
-            "system": "http://snomed.info/sct",
-            "display": "De Lange syndrome (disorder)"
           }
         ]
       }

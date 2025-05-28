@@ -8,7 +8,7 @@ Description: "Dieses Profil beschreibt den Zusammenhang zwischen einem oder mehr
 * ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
 
-* extension[genomics-artifact] MS
+* extension[workflow-relatedArtifact] MS
 * category MS
 * code MS
 * subject MS 
@@ -21,7 +21,6 @@ Description: "Dieses Profil beschreibt den Zusammenhang zwischen einem oder mehr
 * component[conclusion-string] MS
 * component[evidence-level] MS
 * component[clinical-significance] MS
-* component[functional-effect] MS
 * component[mode-of-inheritance] MS
 
 Mapping: MolGen-DiagnostischeImplikation
@@ -52,10 +51,10 @@ Usage: #example
 Title: "NIPBL Variante Diagnostische Implikation"
 Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im NIPBL Gen an Hand von WGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
-* extension[genomics-artifact].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
-* extension[genomics-artifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
-* extension[genomics-artifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
-* extension[genomics-artifact].valueRelatedArtifact.url = "https://doi.org/10.1038/gim.2015.30"
+* extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/workflow-relatedArtifact"
+* extension[workflow-relatedArtifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
+* extension[workflow-relatedArtifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
+* extension[workflow-relatedArtifact].valueRelatedArtifact.url = "https://doi.org/10.1038/gim.2015.30"
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = GenTbd#diagnostic-implication "Diagnostische Implikation"
@@ -79,10 +78,10 @@ Usage: #example
 Title: "CNV SMO Diagnostische Implikation"
 Description: "Beispiel für diagnostische Implikation abgeleitet von Copy Number Variante im SMO Gen."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
-//* extension[genomics-artifact].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
-//* extension[genomics-artifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
-//* extension[genomics-artifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
-//* extension[genomics-artifact].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/25741868/"
+//* extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/workflow-relatedArtifact"
+//* extension[workflow-relatedArtifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
+//* extension[workflow-relatedArtifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
+//* extension[workflow-relatedArtifact].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/25741868/"
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = GenTbd#diagnostic-implication "Diagnostische Implikation"
@@ -90,12 +89,9 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von Copy Number
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-cnv-4)
 * component[conclusion-string].code = GenTbd#conclusion-string
-* component[conclusion-string].valueString = "onkogene Veränderung mögl. Überexpression"
+* component[conclusion-string].valueString = "onkogene Veränderung "
 * component[clinical-significance].code = LNC#53037-8 "Genetic variation clinical significance [Imp]"
 * component[clinical-significance].valueCodeableConcept = LNC#LA26332-9 "Likely pathogenic"
-* component[functional-effect].valueCodeableConcept.coding[+] = SO#SO:0002315 "increased_gene_product_level"
-* component[functional-effect].valueCodeableConcept.coding[+] = NCIT#C36337 "Messenger RNA Overexpression"
-* component[functional-effect].valueCodeableConcept.text = "mögl. Überexpression" // (13581-fach, Rang 1)???
 
 // 04 docx
 Instance: mii-exa-molgen-diagnostische-implikation-brca1
@@ -104,10 +100,10 @@ Usage: #example
 Title: "Diagnostische Implikation BRCA1 Variante"
 Description: "Beispiel für diagnostische Implikation abgeleitet von SNP im BRCA1."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
-//* extension[genomics-artifact].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
-//* extension[genomics-artifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
-//* extension[genomics-artifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
-//* extension[genomics-artifact].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/25741868/"
+//* extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/workflow-relatedArtifact"
+//* extension[workflow-relatedArtifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
+//* extension[workflow-relatedArtifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
+//* extension[workflow-relatedArtifact].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/25741868/"
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = GenTbd#diagnostic-implication "Diagnostische Implikation"
@@ -118,8 +114,6 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von SNP im BRCA
 * component[conclusion-string].valueString = "Nachweis heterozygoter Sequenzveränderung, die zum Funktionsverlust führt"
 * component[clinical-significance].code = LNC#53037-8 "Genetic variation clinical significance [Imp]"
 * component[clinical-significance].valueCodeableConcept = LNC#LA6668-3 "Pathogenic"
-* component[functional-effect].valueCodeableConcept = SO#SO:0002054 "loss_of_function_variant"
-* component[functional-effect].valueCodeableConcept.text = "Funktionsverlust des Genprodukts"
 * component[predicted-phenotype].valueCodeableConcept.coding[0] = HPO#HP:0003002 "Breast carcinoma"
 * component[predicted-phenotype].valueCodeableConcept.coding[+] = HPO#HP:0100615 "Ovarian neoplasm"
 * component[evidence-level].valueCodeableConcept = ClinVarEvLv#2-star "2 star"

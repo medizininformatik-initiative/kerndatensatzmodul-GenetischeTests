@@ -5,9 +5,12 @@
 [mii-exa-molgen-variante-1]: Observation-mii-exa-molgen-variante-1.html
 [mii-exa-molgen-diagnostische-implikation-1]: Observation-mii-exa-molgen-diagnostische-implikation-1.html
 [mii-exa-molgen-medikationsempfehlung-1]: Task-mii-exa-molgen-medikationsempfehlung-1.html
+[mii-exa-molgen-molekulare-konsequenz-1]: Observation-mii-exa-molgen-molekulare-konsequenz-1.html
 [mii-exa-molgen-therapeutische-implikation-1]: Observation-mii-exa-molgen-therapeutische-implikation-1.html
 [mii-exa-molgen-diagnostische-implikation-cnv-4]: Observation-mii-exa-molgen-diagnostische-implikation-cnv-4.html
+[mii-exa-molgen-molekulare-konsequenz-cnv-4]: Observation-mii-exa-molgen-molekulare-konsequenz-cnv-4.html
 [mii-exa-molgen-diagnostische-implikation-brca1]: Observation-mii-exa-molgen-diagnostische-implikation-brca1.html
+[mii-exa-molgen-molekulare-konsequenz-brca1]: Observation-mii-exa-molgen-molekulare-konsequenz-brca1.html
 [mii-exa-molgen-folgemassnahme-brca1]: Task-mii-exa-molgen-folgemassnahme-brca1.html
 [mii-exa-molgen-genotyp-1]: Observation-mii-exa-molgen-genotyp-1.html
 [mii-cps-molgen-capabilitystatement]: CapabilityStatement-mii-cps-molgen-capabilitystatement.html
@@ -23,6 +26,8 @@
 [MII_PR_MolGen_Familienanamnese]: StructureDefinition-mii-pr-molgen-familienanamnese.html
 [MII_PR_MolGen_Genotyp]: StructureDefinition-mii-pr-molgen-genotyp.html
 [MII_PR_MolGen_Medikationsempfehlung]: StructureDefinition-mii-pr-molgen-medikationsempfehlung.html
+[MII_PR_MolGen_Mikrosatelliteninstabilitaet]: StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html
+[MII_PR_MolGen_MolekulareKonsequenz]: StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html
 [MII_PR_MolGen_PolygenerRisikoScore]: StructureDefinition-mii-pr-molgen-polygener-risiko-score.html
 [MII_PR_MolGen_TherapeutischeImplikation]: StructureDefinition-mii-pr-molgen-therapeutische-implikation.html
 [MII_PR_MolGen_Variante]: StructureDefinition-mii-pr-molgen-variante.html
@@ -65,8 +70,10 @@
 [mii-exa-molgen-specimen-srcc-2]: Specimen-mii-exa-molgen-specimen-srcc-2.html
 [mii-exa-molgen-therapeutische-implikation-fgfr2-fusion]: Observation-mii-exa-molgen-therapeutische-implikation-fgfr2-fusion.html
 [mii-exa-molgen-variante-srcc-ctnna1]: Observation-mii-exa-molgen-variante-srcc-ctnna1.html
+[mii-exa-molgen-mikrosatelliteninstabilitaet-1]: Observation-mii-exa-molgen-mikrosatelliteninstabilitaet-1.html
 [mii-exa-molgen-variante-2]: Observation-mii-exa-molgen-variante-2.html
 [mii-exa-molgen-diagnostische-implikation-2]: Observation-mii-exa-molgen-diagnostische-implikation-2.html
+[mii-exa-molgen-molekulare-konsequenz-2]: Observation-mii-exa-molgen-molekulare-konsequenz-2.html
 [mii-exa-molgen-prs-brca1]: RiskAssessment-mii-exa-molgen-prs-brca1.html
 [mii-exa-molgen-variante-brca1]: Observation-mii-exa-molgen-variante-brca1.html
 [mii-exa-molgen-variante-fgfr2-fusion]: Observation-mii-exa-molgen-variante-fgfr2-fusion.html

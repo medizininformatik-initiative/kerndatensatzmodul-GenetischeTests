@@ -108,32 +108,32 @@
     "fshName": "mii-exa-molgen-diagnostische-implikation-1",
     "fshType": "Instance",
     "fshFile": "DiagnostischeImplikation.fsh",
-    "startLine": 34,
-    "endLine": 47
+    "startLine": 33,
+    "endLine": 46
   },
   {
     "outputFile": "Observation-mii-exa-molgen-diagnostische-implikation-2.json",
     "fshName": "mii-exa-molgen-diagnostische-implikation-2",
     "fshType": "Instance",
     "fshFile": "DiagnostischeImplikation.fsh",
-    "startLine": 49,
-    "endLine": 72
+    "startLine": 48,
+    "endLine": 71
   },
   {
     "outputFile": "Observation-mii-exa-molgen-diagnostische-implikation-brca1.json",
     "fshName": "mii-exa-molgen-diagnostische-implikation-brca1",
     "fshType": "Instance",
     "fshFile": "DiagnostischeImplikation.fsh",
-    "startLine": 101,
-    "endLine": 125
+    "startLine": 97,
+    "endLine": 119
   },
   {
     "outputFile": "Observation-mii-exa-molgen-diagnostische-implikation-cnv-4.json",
     "fshName": "mii-exa-molgen-diagnostische-implikation-cnv-4",
     "fshType": "Instance",
     "fshFile": "DiagnostischeImplikation.fsh",
-    "startLine": 76,
-    "endLine": 98
+    "startLine": 75,
+    "endLine": 94
   },
   {
     "outputFile": "Observation-mii-exa-molgen-diagnostische-implikation-fgfr2-fusion.json",
@@ -158,6 +158,46 @@
     "fshFile": "Genotyp.fsh",
     "startLine": 33,
     "endLine": 51
+  },
+  {
+    "outputFile": "Observation-mii-exa-molgen-mikrosatelliteninstabilitaet-1.json",
+    "fshName": "mii-exa-molgen-mikrosatelliteninstabilitaet-1",
+    "fshType": "Instance",
+    "fshFile": "Mikrosatelliteninstabilitaet.fsh",
+    "startLine": 25,
+    "endLine": 36
+  },
+  {
+    "outputFile": "Observation-mii-exa-molgen-molekulare-konsequenz-1.json",
+    "fshName": "mii-exa-molgen-molekulare-konsequenz-1",
+    "fshType": "Instance",
+    "fshFile": "MolekulareKonsequenz.fsh",
+    "startLine": 34,
+    "endLine": 47
+  },
+  {
+    "outputFile": "Observation-mii-exa-molgen-molekulare-konsequenz-2.json",
+    "fshName": "mii-exa-molgen-molekulare-konsequenz-2",
+    "fshType": "Instance",
+    "fshFile": "MolekulareKonsequenz.fsh",
+    "startLine": 49,
+    "endLine": 72
+  },
+  {
+    "outputFile": "Observation-mii-exa-molgen-molekulare-konsequenz-brca1.json",
+    "fshName": "mii-exa-molgen-molekulare-konsequenz-brca1",
+    "fshType": "Instance",
+    "fshFile": "MolekulareKonsequenz.fsh",
+    "startLine": 101,
+    "endLine": 125
+  },
+  {
+    "outputFile": "Observation-mii-exa-molgen-molekulare-konsequenz-cnv-4.json",
+    "fshName": "mii-exa-molgen-molekulare-konsequenz-cnv-4",
+    "fshType": "Instance",
+    "fshFile": "MolekulareKonsequenz.fsh",
+    "startLine": 76,
+    "endLine": 98
   },
   {
     "outputFile": "Observation-mii-exa-molgen-phenotypic-feature-1.json",
@@ -461,7 +501,7 @@
     "fshType": "Profile",
     "fshFile": "DiagnostischeImplikation.fsh",
     "startLine": 1,
-    "endLine": 25
+    "endLine": 24
   },
   {
     "outputFile": "StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.json",
@@ -494,6 +534,22 @@
     "fshFile": "Medikationsempfehlung.fsh",
     "startLine": 1,
     "endLine": 18
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.json",
+    "fshName": "MII_PR_MolGen_Mikrosatelliteninstabilitaet",
+    "fshType": "Profile",
+    "fshFile": "Mikrosatelliteninstabilitaet.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.json",
+    "fshName": "MII_PR_MolGen_MolekulareKonsequenz",
+    "fshType": "Profile",
+    "fshFile": "MolekulareKonsequenz.fsh",
+    "startLine": 1,
+    "endLine": 25
   },
   {
     "outputFile": "StructureDefinition-mii-pr-molgen-polygener-risiko-score.json",
