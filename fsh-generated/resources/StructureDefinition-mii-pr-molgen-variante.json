@@ -134,6 +134,12 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.component:representative-coding-hgvs",
+        "path": "Observation.component",
+        "sliceName": "representative-coding-hgvs",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.component:genomic-hgvs",
         "path": "Observation.component",
         "sliceName": "genomic-hgvs",
@@ -143,6 +149,12 @@
         "id": "Observation.component:genomic-ref-seq",
         "path": "Observation.component",
         "sliceName": "genomic-ref-seq",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:representative-transcript-ref-seq",
+        "path": "Observation.component",
+        "sliceName": "representative-transcript-ref-seq",
         "mustSupport": true
       },
       {
@@ -215,6 +227,12 @@
         "id": "Observation.component:variation-code",
         "path": "Observation.component",
         "sliceName": "variation-code",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:representative-protein-hgvs",
+        "path": "Observation.component",
+        "sliceName": "representative-protein-hgvs",
         "mustSupport": true
       },
       {

@@ -92,6 +92,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-molgen-mutationslast-1"
+        },
+        "name": "Beispiel Mutationslast in Tumorprobe",
+        "description": "Beispiel für Mutationslast in Tumorprobe.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast"
+      },
+      {
+        "reference": {
           "reference": "Task/mii-exa-molgen-folgemassnahme-1"
         },
         "name": "BRAF Empfohlene Folgemaßnahme",
@@ -308,6 +316,22 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-molekulargenetischer-befundbericht"
+        },
+        "name": "MII PR MolGen Molekulargenetischer Befundbericht",
+        "description": "Der DiagnosticReport ist zentraler Bestandteil aller genetischen Befundberichte und enthält Metadaten über den gesamten Bericht sowie alle relevanten Informationen, die im Rahmen der molekulargenetischen Analyse gefunden wurden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-mutationslast"
+        },
+        "name": "MII PR MolGen Mutationslast",
+        "description": "Dieses Profil beschreibt die Gesamtzahl der in der DNA von Krebszellen gefundenen Mutationen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-molgen-polygener-risiko-score"
         },
         "name": "MII PR MolGen Polygener Risiko Score",
@@ -364,6 +388,27 @@
       },
       {
         "reference": {
+          "reference": "Bundle/mii-exa-befund-bundle-1-braf"
+        },
+        "name": "mii-exa-befund-bundle-1-braf",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-befund-bundle-befund-2-nipbl-clinical"
+        },
+        "name": "mii-exa-befund-bundle-befund-2-nipbl-clinical",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-befund-bundle-befund-fgfr2-fusion"
+        },
+        "name": "mii-exa-befund-bundle-befund-fgfr2-fusion",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "ServiceRequest/mii-exa-molgen-anforderung-fgfr2-fusion"
         },
         "name": "mii-exa-molgen-anforderung-fgfr2-fusion",
@@ -378,9 +423,23 @@
       },
       {
         "reference": {
+          "reference": "Bundle/mii-exa-molgen-bundle-befund-2-nipbl"
+        },
+        "name": "mii-exa-molgen-bundle-befund-2-nipbl",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Condition/mii-exa-molgen-bundle-befund-2-nipbl-condition-lab"
         },
         "name": "mii-exa-molgen-bundle-befund-2-nipbl-condition-lab",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-molgen-bundle-fam-his-breast-ovar-can"
+        },
+        "name": "mii-exa-molgen-bundle-fam-his-breast-ovar-can",
         "exampleBoolean": true
       },
       {
@@ -480,6 +539,20 @@
         },
         "name": "mii-exa-molgen-medikationsempfehlung-fgfr2-fusion",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion"
+        },
+        "name": "mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-srcc"
+        },
+        "name": "mii-exa-molgen-molekulargenetischer-befundbericht-srcc",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
       },
       {
         "reference": {
@@ -614,6 +687,30 @@
         "name": "Mikrosatelliteninstabilität",
         "description": "Beispiel für Mikrosatelliteninstabilität in Tumorprobe.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-1"
+        },
+        "name": "Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom",
+        "description": "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorektalem Adenokarzniom.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-2"
+        },
+        "name": "Molekulargentischer Befund 2: Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang",
+        "description": "Beispiel für molekulargenetischen Befund Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel"
+        },
+        "name": "Molekulargentischer Befund Familiäre Belastung für Brust- und Eierstockkrebs",
+        "description": "Beispiel für molekulargenetischen Befund einer BRCA1 Variante bei Familiärer Belastung für Brust- und Eierstockkrebs.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
       },
       {
         "reference": {

@@ -17,12 +17,12 @@ Description: "Dieses Profil beschreibt den Zusammenhang von bestimmten Varianten
 * derivedFrom MS
 * derivedFrom[variant] only Reference(MII_PR_MolGen_Variante)
 * component MS
-* component[predicted-phenotype] MS
+//* component[predicted-phenotype] MS
 * component[conclusion-string] MS
 * component[evidence-level] MS
 * component[clinical-significance] MS
 * component[functional-effect] MS
-* component[mode-of-inheritance] MS
+// * component[mode-of-inheritance] MS
 
 /*Mapping: MolGen-MolekulareKonsequenz
 Id: MII-KDS
@@ -68,8 +68,8 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer
 * component[clinical-significance].valueCodeableConcept = LNC#LA6668-3 "Pathogenic"
 * component[mode-of-inheritance].code = GenTbd#condition-inheritance //CS updaten, wenn gen-reporting v2.0
 * component[mode-of-inheritance].valueCodeableConcept = HPO#HP:0000006 "Autosomal dominant inheritance"
-* component[predicted-phenotype].code = LNC#81259-4 "Associated phenotype"
-* component[predicted-phenotype].valueCodeableConcept = SCT#40354009 "De Lange syndrome (disorder)"
+//* component[predicted-phenotype].code = LNC#81259-4 "Associated phenotype"
+//* component[predicted-phenotype].valueCodeableConcept = SCT#40354009 "De Lange syndrome (disorder)"
 
 
 // CNV (17.pdf)

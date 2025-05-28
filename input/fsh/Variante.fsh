@@ -25,11 +25,11 @@ Description: "Dieses Profil ermöglicht eine vollständige Beschreibung der gefu
 * component[gene-studied] MS
 * component[cytogenetic-location] MS
 * component[reference-sequence-assembly] MS
-* component[coding-hgvs] MS
+* component[representative-coding-hgvs] MS
 * component[genomic-hgvs] MS
 //* component[cytogenomic-nomenclature] MS
 * component[genomic-ref-seq] MS
-* component[transcript-ref-seq] MS
+* component[representative-transcript-ref-seq] MS
 * component[exact-start-end] MS
 * component[inner-start-end] MS
 * component[outer-start-end] MS
@@ -44,9 +44,9 @@ Description: "Dieses Profil ermöglicht eine vollständige Beschreibung der gefu
 * component[variant-inheritance] MS
 * component[variation-code] MS
 * component[chromosome-identifier] MS
-* component[protein-hgvs] MS
-* component[amino-acid-change-type] MS
-* component[molecular-consequence] MS
+* component[representative-protein-hgvs] MS
+//* component[amino-acid-change-type] MS
+//* component[molecular-consequence] MS
 * component[copy-number] MS
 * component[variant-confidence-status] MS
 * component[dna-region] MS

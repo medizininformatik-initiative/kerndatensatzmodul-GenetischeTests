@@ -1,5 +1,45 @@
 [
   {
+    "outputFile": "Bundle-mii-exa-befund-bundle-1-braf.json",
+    "fshName": "mii-exa-befund-bundle-1-braf",
+    "fshType": "Instance",
+    "fshFile": "additional-examples.fsh",
+    "startLine": 171,
+    "endLine": 241
+  },
+  {
+    "outputFile": "Bundle-mii-exa-befund-bundle-befund-2-nipbl-clinical.json",
+    "fshName": "mii-exa-befund-bundle-befund-2-nipbl-clinical",
+    "fshType": "Instance",
+    "fshFile": "additional-examples.fsh",
+    "startLine": 443,
+    "endLine": 472
+  },
+  {
+    "outputFile": "Bundle-mii-exa-befund-bundle-befund-fgfr2-fusion.json",
+    "fshName": "mii-exa-befund-bundle-befund-fgfr2-fusion",
+    "fshType": "Instance",
+    "fshFile": "additional-examples.fsh",
+    "startLine": 859,
+    "endLine": 872
+  },
+  {
+    "outputFile": "Bundle-mii-exa-molgen-bundle-befund-2-nipbl.json",
+    "fshName": "mii-exa-molgen-bundle-befund-2-nipbl",
+    "fshType": "Instance",
+    "fshFile": "additional-examples.fsh",
+    "startLine": 330,
+    "endLine": 353
+  },
+  {
+    "outputFile": "Bundle-mii-exa-molgen-bundle-fam-his-breast-ovar-can.json",
+    "fshName": "mii-exa-molgen-bundle-fam-his-breast-ovar-can",
+    "fshType": "Instance",
+    "fshFile": "additional-examples.fsh",
+    "startLine": 295,
+    "endLine": 327
+  },
+  {
     "outputFile": "CapabilityStatement-mii-cps-molgen-capabilitystatement.json",
     "fshName": "mii-cps-molgen-capabilitystatement",
     "fshType": "Instance",
@@ -78,6 +118,46 @@
     "fshFile": "additional-examples.fsh",
     "startLine": 77,
     "endLine": 83
+  },
+  {
+    "outputFile": "DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-1.json",
+    "fshName": "mii-exa-molgen-molekulargenetischer-befundbericht-1",
+    "fshType": "Instance",
+    "fshFile": "MolekulargenetischerBefundbericht.fsh",
+    "startLine": 67,
+    "endLine": 92
+  },
+  {
+    "outputFile": "DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-2.json",
+    "fshName": "mii-exa-molgen-molekulargenetischer-befundbericht-2",
+    "fshType": "Instance",
+    "fshFile": "MolekulargenetischerBefundbericht.fsh",
+    "startLine": 94,
+    "endLine": 146
+  },
+  {
+    "outputFile": "DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion.json",
+    "fshName": "mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion",
+    "fshType": "Instance",
+    "fshFile": "additional-examples.fsh",
+    "startLine": 843,
+    "endLine": 857
+  },
+  {
+    "outputFile": "DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-srcc.json",
+    "fshName": "mii-exa-molgen-molekulargenetischer-befundbericht-srcc",
+    "fshType": "Instance",
+    "fshFile": "additional-examples.fsh",
+    "startLine": 681,
+    "endLine": 715
+  },
+  {
+    "outputFile": "DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel.json",
+    "fshName": "mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel",
+    "fshType": "Instance",
+    "fshFile": "MolekulargenetischerBefundbericht.fsh",
+    "startLine": 176,
+    "endLine": 218
   },
   {
     "outputFile": "FamilyMemberHistory-mii-exa-molgen-family-member-history-1.json",
@@ -181,7 +261,7 @@
     "fshType": "Instance",
     "fshFile": "MolekulareKonsequenz.fsh",
     "startLine": 49,
-    "endLine": 72
+    "endLine": 70
   },
   {
     "outputFile": "Observation-mii-exa-molgen-molekulare-konsequenz-brca1.json",
@@ -189,7 +269,7 @@
     "fshType": "Instance",
     "fshFile": "MolekulareKonsequenz.fsh",
     "startLine": 101,
-    "endLine": 125
+    "endLine": 123
   },
   {
     "outputFile": "Observation-mii-exa-molgen-molekulare-konsequenz-cnv-4.json",
@@ -198,6 +278,14 @@
     "fshFile": "MolekulareKonsequenz.fsh",
     "startLine": 76,
     "endLine": 98
+  },
+  {
+    "outputFile": "Observation-mii-exa-molgen-mutationslast-1.json",
+    "fshName": "mii-exa-molgen-mutationslast-1",
+    "fshType": "Instance",
+    "fshFile": "Mutationslast.fsh",
+    "startLine": 28,
+    "endLine": 40
   },
   {
     "outputFile": "Observation-mii-exa-molgen-phenotypic-feature-1.json",
@@ -549,7 +637,23 @@
     "fshType": "Profile",
     "fshFile": "MolekulareKonsequenz.fsh",
     "startLine": 1,
-    "endLine": 25
+    "endLine": 24
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.json",
+    "fshName": "MII_PR_MolGen_MolekulargenetischerBefundbericht",
+    "fshType": "Profile",
+    "fshFile": "MolekulargenetischerBefundbericht.fsh",
+    "startLine": 1,
+    "endLine": 53
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-molgen-mutationslast.json",
+    "fshName": "MII_PR_MolGen_Mutationslast",
+    "fshType": "Profile",
+    "fshFile": "Mutationslast.fsh",
+    "startLine": 1,
+    "endLine": 19
   },
   {
     "outputFile": "StructureDefinition-mii-pr-molgen-polygener-risiko-score.json",

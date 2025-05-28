@@ -7,12 +7,35 @@
     - Neues Molekulare-Konsequenz-Profil (downstream-Beschreibung von genetischen Änderungen)
     - DiagnosticImplication 
         - Schärfung der Profilierung mit Fokus auf Erkrankungsrisiko, Auslagerung der reinen Beschreibung der Änderung ins Molekulare-Konsequenz-Profil
-            - replaced `extension[genomic-artifact]` with `extension[workflow-relatedArtifact]`
+        - replaced `extension[genomic-artifact]` with `extension[workflow-relatedArtifact]`
+        - component[functional-effect] in MolecularConsequence übertragen
     - Ergebnis-Zusammenfassung 
         - Löschen des Profils (Grund: Redundanzen, Ergebnis kann über GenomicReport.conclusion/conclusionCode abgebildet werden)
     - Mikrosatelliteninstabilität
         - erbt jetzt vom STU3 Molecular Biomarker Profile
         - `component[conclusion-string]` entfällt
+    - Molekulargenetischer Befundbericht erbt jetzt von genomic-report und nicht mehr genomics-report
+        - wegfallen des [overall]-Slices
+        - Zusammenlegen der extensions für [genomics-artifact] und [genomics-file] in [workflow-relatedArtifact]
+        - extension[genomics-risk-assessment] ist jetzt extension[genomic-risk-assessment]
+        - extension[region-studied] entfällt; Metadaten über die Untersuchte Region werden jetzt über GenomicStudy/GenomicStudyAnalysis abgebildet
+    - Mutationslast
+        - erbt jetzt vom neuen Molekularer Biomarker Modul
+        - damit entfällt `component[conclusion-string]`
+    - Therapeutische Implikation
+        - component[prognosis] fällt weg, weil in den (Gründe?)
+        - `component[predicted-therapeutic-implication]` zu `component[therapeutic-implication]` geändert
+    - Untersuchte Regiion
+        - Profil fällt weg, Information über Lokalisation und Geräte wird stattdessen über GenomicStudy/GenomicStudyAnalysis kodiert
+    - Variante
+        - component[coding-hgvs] umbenannt in component[representative-coding-hgvs]
+        - component[transcript-ref-seq] umbenannt in component[representative-transcript-ref-seq]
+        - component[protein-hgvs] umbenannt in component[representative-protein-hgvs]
+        - component[amino-acid-change-type] gelöscht 
+        - component[molecular-consequence] aus Variante gelöst und in MolecularConsequence überführt
+
+
+
     - Beispiele entsprechend angepasst (alte Beispiele für Diagnostische Implikation entsprechen eher )
     - Neue Ordnerstruktur im GitHub-Repo
 
