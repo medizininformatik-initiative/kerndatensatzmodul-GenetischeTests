@@ -217,10 +217,10 @@ Usage: #example
 * entry[=].resource = mii-exa-molgen-variante-1
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Observation/mii-exa-molgen-variante-1"
-* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-1"
-* entry[=].resource = mii-exa-molgen-untersuchte-region-1
-* entry[=].request.method = #PUT
-* entry[=].request.url = "Observation/mii-exa-molgen-untersuchte-region-1"
+//* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-1"
+//* entry[=].resource = mii-exa-molgen-untersuchte-region-1
+//* entry[=].request.method = #PUT
+//* entry[=].request.url = "Observation/mii-exa-molgen-untersuchte-region-1"
 * entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-genotyp-1"
 * entry[=].resource = mii-exa-molgen-genotyp-1
 * entry[=].request.method = #PUT
@@ -238,7 +238,7 @@ Usage: #example
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Practitioner/mii-exa-molgen-practitioner-physician"
 * insert Bundle(mii-exa-molgen-mikrosatelliteninstabilitaet-1, Observation)
-* insert Bundle(mii-exa-molgen-ergebnis-zusammenfassung-1, Observation)
+//* insert Bundle(mii-exa-molgen-ergebnis-zusammenfassung-1, Observation)
 
 Instance: mii-exa-molgen-specimen-brca1
 InstanceOf: https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore
@@ -306,25 +306,25 @@ Usage: #example
 * insert Bundle(mii-exa-molgen-practitioner-physician, Practitioner)
 * insert Bundle(mii-exa-molgen-specimen-brca1, Specimen)
 * insert Bundle(mii-exa-molgen-device-sequencer-nextseq, Device)
-* insert Bundle(mii-exa-molgen-ergebnis-zusammenfassung-trurisk-panel, Observation)
+//* insert Bundle(mii-exa-molgen-ergebnis-zusammenfassung-trurisk-panel, Observation)
 * insert Bundle(mii-exa-molgen-variante-brca1, Observation)
 * insert Bundle(mii-exa-molgen-diagnostische-implikation-brca1, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-ATM, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA1, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BARD1, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA2, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRIP1, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CDH1, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CHECK2, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MLH1, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH2, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH6, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PALB2, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PMS2, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PTEN, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51C, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51D, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-TP53, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-ATM, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA1, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BARD1, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA2, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRIP1, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CDH1, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CHECK2, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MLH1, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH2, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH6, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PALB2, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PMS2, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PTEN, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51C, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51D, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-true-risk-panel-v3-TP53, Observation)
 
 // NIPBL
 Instance: mii-exa-molgen-bundle-befund-2-nipbl
@@ -344,12 +344,12 @@ Usage: #example
 * insert Bundle(mii-exa-molgen-specimen-2, Specimen)
 * insert Bundle(mii-exa-molgen-diagnostische-implikation-2, Observation)
 * insert Bundle(mii-exa-molgen-variante-2, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-nipbl, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-hdac8, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-rad21, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-smc1a, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-smc3, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-tp63, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-2-nipbl, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-2-hdac8, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-2-rad21, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-2-smc1a, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-2-smc3, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-2-tp63, Observation)
 * insert Bundle(mii-exa-molgen-bundle-befund-2-nipbl-condition-lab, Condition)
 
 Instance: mii-exa-molgen-bundle-befund-2-nipbl-condition-lab
@@ -463,13 +463,13 @@ Usage: #example
 * insert Bundle(mii-exa-molgen-device-sequencer-2, Device)
 * insert Bundle(mii-exa-molgen-diagnostische-implikation-2, Observation)
 * insert Bundle(mii-exa-molgen-variante-2, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-nipbl, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-hdac8, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-rad21, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-smc1a, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-smc3, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-2-tp63, Observation)
-* insert Bundle(mii-exa-molgen-bundle-befund-2-nipbl-condition-lab, Condition)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-2-nipbl, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-2-hdac8, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-2-rad21, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-2-smc1a, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-2-smc3, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-2-tp63, Observation)
+//* insert Bundle(mii-exa-molgen-bundle-befund-2-nipbl-condition-lab, Condition)
 
 // 18.pdf
 Instance: mii-exa-molgen-patient-srcc
@@ -559,24 +559,24 @@ Usage: #example
 * specimen = Reference(mii-exa-molgen-specimen-srcc)
 * device = Reference(mii-exa-molgen-device-sequencer)
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:2509 "CTNNA1"
-* component[transcript-ref-seq].valueCodeableConcept = RefSeq#NM_001903.5
-* component[coding-hgvs].valueCodeableConcept = HGVS#NM_001903.5:c.1030del
+* component[representative-transcript-ref-seq].valueCodeableConcept = RefSeq#NM_001903.5
+* component[representative-coding-hgvs].valueCodeableConcept = HGVS#NM_001903.5:c.1030del
 * component[genomic-hgvs].valueCodeableConcept = HGVS#NC_000005.9:g.138163372del
 * component[genomic-ref-seq].valueCodeableConcept = RefSeq#NC_000005.9
-* component[protein-hgvs].valueCodeableConcept = HGVS#p.(Leu344CysfsTer25)
+* component[representative-protein-hgvs].valueCodeableConcept = HGVS#p.(Leu344CysfsTer25)
 * component[allelic-state].valueCodeableConcept = LNC#LA6706-1 "Heterozygous"
 * component[coding-change-type].valueCodeableConcept = SO#SO:0000159 "deletion"
-* component[amino-acid-change-type].valueCodeableConcept = LNC#LA6694-9 "Frameshift"
+//* component[amino-acid-change-type].valueCodeableConcept = LNC#LA6694-9 "Frameshift"
 * component[cytogenetic-location].valueCodeableConcept = ChromLoc#5q31.2
 
 Instance: mii-exa-molgen-diagnostische-implikation-srcc-ctnna1
 InstanceOf: mii-pr-molgen-diagnostische-implikation
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
-* extension[genomics-artifact].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"
-* extension[genomics-artifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
-* extension[genomics-artifact].valueRelatedArtifact.citation = "ClinGen"
-* extension[genomics-artifact].valueRelatedArtifact.url = "https://search.clinicalgenome.org/kb/gene-dosage/HGNC:2509"
+* extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
+* extension[workflow-relatedArtifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
+* extension[workflow-relatedArtifact].valueRelatedArtifact.citation = "ClinGen"
+* extension[workflow-relatedArtifact].valueRelatedArtifact.url = "https://search.clinicalgenome.org/kb/gene-dosage/HGNC:2509"
 * status = #final
 * category[labCategory] = ObsCat#laboratory "Laboratory"
 * code = GenTbd#diagnostic-implication "Diagnostische Implikation"
@@ -585,9 +585,9 @@ Usage: #example
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-srcc-ctnna1)
 * component[conclusion-string].valueString = "Diese Variante wird nach den ACMG/AMP-Kriterien zusammenfasssend als pathogen bewertet entsprechend IARC Class 5."
 * component[clinical-significance].valueCodeableConcept = LNC#LA6668-3 "Pathogenic"
-* component[functional-effect].valueCodeableConcept = SO#SO:0002054 "loss_of_function_variant"
+//* component[functional-effect].valueCodeableConcept = SO#SO:0002054 "loss_of_function_variant"
 * component[predicted-phenotype].valueCodeableConcept.coding[0] = HPO#716859000 "Hereditary diffuse carcinoma of stomach (disorder)"
-
+/*
 Instance: mii-exa-molgen-untersuchte-region-srcc-apc
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
@@ -677,7 +677,7 @@ Instance: mii-exa-molgen-untersuchte-region-srcc-ctnna1
 InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
 * insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:2509, CTNNA1, NM_001903.5)
-
+*/
 Instance: mii-exa-molgen-molekulargenetischer-befundbericht-srcc
 InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
@@ -694,24 +694,24 @@ Usage: #example
 //* result[gen-grouper] = Reference(mii-exa-molgen-gruppierung-beobachtungen-2-nipbl)
 * result[diagnostic-implication] = Reference(mii-exa-molgen-diagnostische-implikation-srcc-ctnna1)
 * result[variant] = Reference(mii-exa-molgen-variante-srcc-ctnna1)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-apc)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-atm)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-brca1)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-brca2)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-cdh1)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-mlh1)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-msh2)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-msh3)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-msh6)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-mutyh)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-nthl1)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-pms2)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-pold1)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-pole)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-smad4)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-stk11)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-tp53)
-* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-ctnna1)
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-apc)
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-atm)
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-brca1)
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-brca2)
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-cdh1)
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-mlh1)
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-msh2)
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-msh3)
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-msh6)//
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-muty//h)
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-nthl//1)
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-pms2)
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-pold1)
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-pole)
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-smad4)
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-stk11)
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-tp53)
+//* result[region-studied][+] = Reference(mii-exa-molgen-untersuchte-region-srcc-ctnna1)
 * conclusion = "Nachweis der pathogenen Variante im CTNNA1-Gen."
 
 Instance: mii-exa-befund-bundle-befund-srcc
@@ -729,24 +729,24 @@ Usage: #example
 * insert Bundle(mii-exa-molgen-device-sequencer, Device)
 * insert Bundle(mii-exa-molgen-variante-srcc-ctnna1, Observation)
 * insert Bundle(mii-exa-molgen-diagnostische-implikation-srcc-ctnna1, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-apc, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-atm, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-brca1, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-brca2, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-cdh1, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-mlh1, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-msh2, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-msh3, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-msh6, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-mutyh, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-nthl1, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-pms2, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-pold1, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-pole, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-smad4, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-stk11, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-tp53, Observation)
-* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-ctnna1, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-apc, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-atm, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-brca1, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-brca2, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-cdh1, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-mlh1, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-msh2, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-msh3, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-msh6, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-mutyh, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-nthl1, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-pms2, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-pold1, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-pole, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-smad4, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-stk11, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-tp53, Observation)
+//* insert Bundle(mii-exa-molgen-untersuchte-region-srcc-ctnna1, Observation)
 
 //http://varnomen.hgvs.org/recommendations/RNA/variant/delins/ (12.pdf)
 Instance: mii-exa-molgen-patient-fgfr2-fusion

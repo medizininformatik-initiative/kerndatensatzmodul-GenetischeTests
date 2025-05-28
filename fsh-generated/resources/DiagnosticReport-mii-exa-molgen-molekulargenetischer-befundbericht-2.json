@@ -4,7 +4,16 @@
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht",
-      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
+      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "51969-4",
+        "display": "Genetic analysis report"
+      }
     ]
   },
   "category": [
@@ -20,7 +29,7 @@
   ],
   "extension": [
     {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact",
+      "url": "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact",
       "valueRelatedArtifact": {
         "type": "citation",
         "citation": "Gillis LA, McCallum J, Kaur M, DeScipio C, Yaeger D, Mariani A, Kline AD, Li HH, Devoto M, Jackson LG, Krantz ID. NIPBL mutational analysis in 120 individuals with Cornelia de Lange syndrome and evaluation of genotype-phenotype correlations. Am J Hum Genet. 2004 Oct;75(4):610-23. doi: 10.1086/424698. Epub 2004 Aug 18. PMID: 15318302; PMCID: PMC1182048.",
@@ -28,7 +37,7 @@
       }
     },
     {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact",
+      "url": "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact",
       "valueRelatedArtifact": {
         "type": "citation",
         "citation": "Kawauchi S, Calof AL, Santos R, Lopez-Burks ME, Young CM, Hoang MP, Chua A, Lao T, Lechner MS, Daniel JA, Nussenzweig A, Kitzes L, Yokomori K, Hallgrimsson B, Lander AD. Multiple organ system defects and transcriptional dysregulation in the Nipbl(+/-) mouse, a model of Cornelia de Lange Syndrome. PLoS Genet. 2009 Sep;5(9):e1000650. doi: 10.1371/journal.pgen.1000650. Epub 2009 Sep 18. PMID: 19763162; PMCID: PMC2730539.",
@@ -36,7 +45,7 @@
       }
     },
     {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact",
+      "url": "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact",
       "valueRelatedArtifact": {
         "type": "citation",
         "citation": "Huisman SA, Redeker EJ, Maas SM, Mannens MM, Hennekam RC. High rate of mosaicism in individuals with Cornelia de Lange syndrome. J Med Genet. 2013 May;50(5):339-44. doi: 10.1136/jmedgenet-2012-101477. Epub 2013 Mar 15. PMID: 23505322.",
@@ -44,7 +53,7 @@
       }
     },
     {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact",
+      "url": "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact",
       "valueRelatedArtifact": {
         "type": "citation",
         "citation": "Kline AD, Moss JF, Selicorni A, Bisgaard AM, Deardorff MA, Gillett PM, Ishman SL, Kerr LM, Levin AV, Mulder PA, Ramos FJ, Wierzba J, Ajmone PF, Axtell D, Blagowidow N, Cereda A, Costantino A, Cormier-Daire V, FitzPatrick D, Grados M, Groves L, Guthrie W, Huisman S, Kaiser FJ, Koekkoek G, Levis M, Mariani M, McCleery JP, Menke LA, Metrena A, O'Connor J, Oliver C, Pie J, Piening S, Potter CJ, Quaglio AL, Redeker E, Richman D, Rigamonti C, Shi A, Tümer Z, Van Balkom IDC, Hennekam RC. Diagnosis and management of Cornelia de Lange syndrome: first international consensus statement. Nat Rev Genet. 2018 Oct;19(10):649-666. doi: 10.1038/s41576-018-0031-0. PMID: 29995837; PMCID: PMC7136165.",
@@ -108,15 +117,6 @@
     }
   ],
   "status": "final",
-  "code": {
-    "coding": [
-      {
-        "code": "51969-4",
-        "system": "http://loinc.org",
-        "display": "Genetic analysis report"
-      }
-    ]
-  },
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient-2"
   },
@@ -136,24 +136,6 @@
     },
     {
       "reference": "Observation/mii-exa-molgen-variante-2"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-2-nipbl"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-2-hdac8"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-2-rad21"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-2-smc1a"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-2-smc3"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-2-tp63"
     }
   ],
   "conclusion": "Nachweis der pathogenen Variante c.2207del p.(Pro736Glnfs*58) (heterozygot) im NIPBL-Gen."

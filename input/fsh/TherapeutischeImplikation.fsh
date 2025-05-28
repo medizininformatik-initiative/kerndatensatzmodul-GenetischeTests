@@ -19,12 +19,12 @@ Description: "Dieses Profil beschreibt den möglichen Einfluss genetischer Merkm
 * derivedFrom[variant] only Reference(MII_PR_MolGen_Variante)
 * component MS
 * component[conclusion-string] MS
-* component[prognosis] MS
+//* component[prognosis] MS
 * component[evidence-level] MS
 * component[phenotypic-treatment-context] MS
 * component[medication-assessed] MS
 * component[therapy-assessed] MS
-* component[predicted-therapeutic-implication] MS
+* component[therapeutic-implication] MS
 
 Mapping: MolGen-TherapeutischeImplikation
 Id: MII-KDS

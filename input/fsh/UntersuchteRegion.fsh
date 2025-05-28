@@ -1,4 +1,4 @@
-Profile: MII_PR_MolGen_UntersuchteRegion
+/*Profile: MII_PR_MolGen_UntersuchteRegion
 Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied
 Id: mii-pr-molgen-untersuchte-region
 Title: "MII PR MolGen Untersuchte Region"
@@ -323,3 +323,4 @@ Usage: #example
 Title: "Untersuchte Region True Risk Panel V3 TP53 Gen"
 Description: "Beispiel für untersuchte Region True Risk Panel V3 TP53 Gen."
 * insert Region(mii-exa-molgen-patient-brca1, mii-exa-molgen-specimen-brca1, mii-exa-molgen-device-sequencer-nextseq, HGNC:11998, TP53, NM_000546.5)
+*/

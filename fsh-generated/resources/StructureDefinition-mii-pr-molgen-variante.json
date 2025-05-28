@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-molgen-variante",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante",
-  "version": "2025.0.0",
+  "version": "2026.0.0-alpha.1",
   "name": "MII_PR_MolGen_Variante",
   "title": "MII PR MolGen Variante",
   "status": "active",
@@ -83,6 +83,20 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "code"
+            }
+          ],
+          "description": "Slice based on the component.code pattern",
+          "rules": "open"
+        }
+      },
+      {
         "id": "Observation.component:conclusion-string",
         "path": "Observation.component",
         "sliceName": "conclusion-string",
@@ -114,9 +128,15 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.component:coding-hgvs",
+        "id": "Observation.component:chromosome-identifier",
         "path": "Observation.component",
-        "sliceName": "coding-hgvs",
+        "sliceName": "chromosome-identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:representative-coding-hgvs",
+        "path": "Observation.component",
+        "sliceName": "representative-coding-hgvs",
         "mustSupport": true
       },
       {
@@ -132,9 +152,9 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.component:transcript-ref-seq",
+        "id": "Observation.component:representative-transcript-ref-seq",
         "path": "Observation.component",
-        "sliceName": "transcript-ref-seq",
+        "sliceName": "representative-transcript-ref-seq",
         "mustSupport": true
       },
       {
@@ -210,27 +230,9 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.component:chromosome-identifier",
+        "id": "Observation.component:representative-protein-hgvs",
         "path": "Observation.component",
-        "sliceName": "chromosome-identifier",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component:protein-hgvs",
-        "path": "Observation.component",
-        "sliceName": "protein-hgvs",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component:amino-acid-change-type",
-        "path": "Observation.component",
-        "sliceName": "amino-acid-change-type",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component:molecular-consequence",
-        "path": "Observation.component",
-        "sliceName": "molecular-consequence",
+        "sliceName": "representative-protein-hgvs",
         "mustSupport": true
       },
       {

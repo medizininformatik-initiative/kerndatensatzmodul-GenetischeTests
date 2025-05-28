@@ -7,15 +7,6 @@
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/msi"
     ]
   },
-  "code": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "81695-9",
-        "display": "Microsatellite instability [Interpretation] in Cancer specimen Qualitative"
-      }
-    ]
-  },
   "category": [
     {
       "coding": [
@@ -25,22 +16,26 @@
           "display": "Laboratory"
         }
       ]
-    }
-  ],
-  "component": [
+    },
     {
-      "code": {
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-            "code": "conclusion-string"
-          }
-        ]
-      },
-      "valueString": "Tumor weist ein mikrosatellitenstabiles Wachstum auf."
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+          "code": "biomarker-category"
+        }
+      ]
     }
   ],
   "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "81695-9",
+        "system": "http://loinc.org",
+        "display": "Microsatellite instability [Interpretation] in Cancer specimen Qualitative"
+      }
+    ]
+  },
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient"
   },

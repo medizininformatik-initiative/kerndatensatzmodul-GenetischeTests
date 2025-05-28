@@ -1,0 +1,113 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-molgen-molekulare-konsequenz",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz",
+  "version": "2026.0.0-alpha.1",
+  "name": "MII_PR_MolGen_MolekulareKonsequenz",
+  "title": "MII PR MolGen Molekualre Konsequenz",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Dieses Profil beschreibt den Zusammenhang von bestimmten Varianten, Haplotypen oder Genotypen und bestimmten Konsequenzen auf Molekularer Ebene.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.extension:workflow-relatedArtifact",
+        "path": "Observation.extension",
+        "sliceName": "workflow-relatedArtifact",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/Group"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.derivedFrom:variant",
+        "path": "Observation.derivedFrom",
+        "sliceName": "variant",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:conclusion-string",
+        "path": "Observation.component",
+        "sliceName": "conclusion-string",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:evidence-level",
+        "path": "Observation.component",
+        "sliceName": "evidence-level",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:clinical-significance",
+        "path": "Observation.component",
+        "sliceName": "clinical-significance",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:functional-effect",
+        "path": "Observation.component",
+        "sliceName": "functional-effect",
+        "mustSupport": true
+      }
+    ]
+  }
+}

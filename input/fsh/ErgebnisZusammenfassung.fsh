@@ -1,4 +1,4 @@
-Profile: MII_PR_MolGen_ErgebnisZusammenfassung
+/*Profile: MII_PR_MolGen_ErgebnisZusammenfassung
 Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/overall-interpretation
 Id: mii-pr-molgen-ergebnis-zusammenfassung
 Title: "MII PR MolGen Ergebnis Zusammenfassung"
@@ -50,3 +50,4 @@ Description: "Beispiel zusammenfassendes Ergebnis bei BRCA1 Variante bei Famili�
 * subject = Reference(mii-exa-molgen-patient-brca1)
 * valueCodeableConcept = LNC#LA6576-8 "Positive"
 * component[conclusion-string].valueString = "Nachweis heterozygoter Sequenzveränderung, die zum Funktionsverlust führt"
+*/

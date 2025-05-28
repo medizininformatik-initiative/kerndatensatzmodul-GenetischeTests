@@ -7,6 +7,15 @@
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
     ]
   },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "51969-4",
+        "display": "Genetic analysis report"
+      }
+    ]
+  },
   "category": [
     {
       "coding": [
@@ -32,15 +41,6 @@
     }
   ],
   "status": "final",
-  "code": {
-    "coding": [
-      {
-        "code": "51969-4",
-        "system": "http://loinc.org",
-        "display": "Genetic analysis report"
-      }
-    ]
-  },
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient-srcc"
   },
@@ -63,60 +63,6 @@
     },
     {
       "reference": "Observation/mii-exa-molgen-variante-srcc-ctnna1"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-apc"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-atm"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-brca1"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-brca2"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-cdh1"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-mlh1"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-msh2"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-msh3"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-msh6"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-mutyh"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-nthl1"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-pms2"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-pold1"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-pole"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-smad4"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-stk11"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-tp53"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-ctnna1"
     }
   ],
   "conclusion": "Nachweis der pathogenen Variante im CTNNA1-Gen."

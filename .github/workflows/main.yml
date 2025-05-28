@@ -1,0 +1,29 @@
+### copied from Procedure module 2025/05/05
+
+name: CI (FHIR Validation)
+
+on:
+  push:
+    branches: [ master, main, dev ]
+  pull_request:
+    branches: [ master, main, dev ]
+  workflow_dispatch:
+
+jobs:
+  DOTNET_FHIR_VALIDATION:
+    uses: medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_dotnet_validation.yml@master
+    with:
+      ref: ${{ github.event.pull_request.head.ref }}
+      SUSHI_VERSION: ${{ vars.SUSHI_VERSION }}
+    secrets: inherit
+
+  JAVA_FHIR_VALIDATION:
+    uses: medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_java_validation.yml@master
+    with:
+      ref: ${{ github.event.pull_request.head.ref }}
+      PATH_TO_CONFORMANCE_RESOURCES: fsh-generated/resources
+      PATH_TO_EXAMPLES: fsh-generated/resources
+      JAVA_VALIDATION_ENABLED: true
+      JAVA_VALIDATION_OPTIONS: ${{ vars.JAVA_VALIDATION_OPTIONS }}
+      JAVA_VALIDATOR_VERSION: ${{ vars.JAVA_VALIDATOR_VERSION }}
+    secrets: inherit

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-molgen-mikrosatelliteninstabilitaet",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet",
-  "version": "2025.0.0",
+  "version": "2026.0.0-alpha.1",
   "name": "MII_PR_MolGen_Mikrosatelliteninstabilitaet",
   "title": "MII PR MolGen Mikrosatelliteninstabilität",
   "status": "active",
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Mikrosatelliteninstabilität (MSI) ist ein Zustand genetischer Hypermutabilität (Neigung zu Mutationen), der aus einer gestörten DNA-Mismatch-Reparatur (MMR) resultiert.",
+  "description": "Mikrosatelliteninstabilität (MSI) ist ein Zustand genetischer Hypermutabilität (Neigung zu Mutationen), der aus einer gestörten DNA-Mismatch-Reparatur (MMR) resultiert. Das Profil basiert auf dem CG STU3 MolecularBiomarker-Profil",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -28,7 +28,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/msi",
+  "baseDefinition": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-biomarker",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -70,12 +70,24 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
+        "min": 0,
+        "max": "1",
         "type": [
           {
             "code": "CodeableConcept"
@@ -88,12 +100,6 @@
             "comment": "Mikrosatelliteninstabilität"
           }
         ]
-      },
-      {
-        "id": "Observation.component:conclusion-string",
-        "path": "Observation.component",
-        "sliceName": "conclusion-string",
-        "mustSupport": true
       }
     ]
   }

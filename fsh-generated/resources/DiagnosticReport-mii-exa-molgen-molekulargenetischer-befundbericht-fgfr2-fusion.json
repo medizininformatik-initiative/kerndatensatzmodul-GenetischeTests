@@ -7,6 +7,15 @@
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
     ]
   },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "51969-4",
+        "display": "Genetic analysis report"
+      }
+    ]
+  },
   "category": [
     {
       "coding": [
@@ -32,15 +41,6 @@
     }
   ],
   "status": "final",
-  "code": {
-    "coding": [
-      {
-        "code": "51969-4",
-        "system": "http://loinc.org",
-        "display": "Genetic analysis report"
-      }
-    ]
-  },
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient-fgfr2-fusion"
   },

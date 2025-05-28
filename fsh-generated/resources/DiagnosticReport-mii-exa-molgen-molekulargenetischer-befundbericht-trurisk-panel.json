@@ -4,7 +4,16 @@
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht",
-      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
+      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "51969-4",
+        "display": "Genetic analysis report"
+      }
     ]
   },
   "category": [
@@ -20,7 +29,7 @@
   ],
   "extension": [
     {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact",
+      "url": "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact",
       "valueRelatedArtifact": {
         "type": "citation",
         "citation": "Plon SE, Eccles DM, Easton D, Foulkes WD, Genuardi M, Greenblatt MS, Hogervorst FB, Hoogerbrugge N, Spurdle AB, Tavtigian SV; IARC Unclassified Genetic Variants Working Group. Sequence variant classification and reporting: recommendations for improving the interpretation of cancer susceptibility genetic test results. Hum Mutat. 2008 Nov;29(11):1282-91. doi: 10.1002/humu.20880. PMID: 18951446; PMCID: PMC3075918.",
@@ -28,7 +37,7 @@
       }
     },
     {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact",
+      "url": "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact",
       "valueRelatedArtifact": {
         "type": "citation",
         "citation": "Rhiem K, Auber B, Briest S, Dikow N, Ditsch N, Dragicevic N, Grill S, Hahnen E, Horvath J, Jaeger B, Kast K, Kiechle M, Leinert E, Morlot S, Püsken M, Schäfer D, Schott S, Schroeder C, Siebers-Renelt U, Solbach C, Weber-Lassalle N, Witzel I, Zeder-Göß C, Schmutzler RK. Consensus Recommendations of the German Consortium for Hereditary Breast and Ovarian Cancer. Breast Care (Basel). 2022 Apr;17(2):199-207. doi: 10.1159/000516376. Epub 2021 Jul 19. PMID: 35702495; PMCID: PMC9149395.",
@@ -42,7 +51,7 @@
       }
     },
     {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-risk-assessment",
+      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-risk-assessment",
       "valueReference": {
         "reference": "RiskAssessment/mii-exa-molgen-prs-brca1"
       }
@@ -54,15 +63,6 @@
     }
   ],
   "status": "final",
-  "code": {
-    "coding": [
-      {
-        "code": "51969-4",
-        "system": "http://loinc.org",
-        "display": "Genetic analysis report"
-      }
-    ]
-  },
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient-brca1"
   },
@@ -78,61 +78,10 @@
   ],
   "result": [
     {
-      "reference": "Observation/mii-exa-molgen-ergebnis-zusammenfassung-trurisk-panel"
-    },
-    {
       "reference": "Observation/mii-exa-molgen-variante-brca1"
     },
     {
       "reference": "Observation/mii-exa-molgen-diagnostische-implikation-brca1"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-ATM"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA1"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BARD1"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA2"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRIP1"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CDH1"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CHECK2"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MLH1"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH2"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH6"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PALB2"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PMS2"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PTEN"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51C"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51D"
-    },
-    {
-      "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-TP53"
     }
   ],
   "conclusion": "Nachweis heterozygoter Sequenzveränderung, die zum Funktionsverlust führt."

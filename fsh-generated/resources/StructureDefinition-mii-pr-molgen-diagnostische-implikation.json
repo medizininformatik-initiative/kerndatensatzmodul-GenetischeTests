@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-molgen-diagnostische-implikation",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation",
-  "version": "2025.0.0",
+  "version": "2026.0.0-alpha.1",
   "name": "MII_PR_MolGen_DiagnostischeImplikation",
   "title": "MII PR MolGen Diagnostische Implikation",
   "status": "active",
@@ -33,9 +33,9 @@
   "differential": {
     "element": [
       {
-        "id": "Observation.extension:related-artifact",
+        "id": "Observation.extension:workflow-relatedArtifact",
         "path": "Observation.extension",
-        "sliceName": "related-artifact",
+        "sliceName": "workflow-relatedArtifact",
         "mustSupport": true
       },
       {
@@ -110,18 +110,6 @@
         ]
       },
       {
-        "id": "Observation.component:predicted-phenotype",
-        "path": "Observation.component",
-        "sliceName": "predicted-phenotype",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component:mode-of-inheritance",
-        "path": "Observation.component",
-        "sliceName": "mode-of-inheritance",
-        "mustSupport": true
-      },
-      {
         "id": "Observation.component:clinical-significance",
         "path": "Observation.component",
         "sliceName": "clinical-significance",
@@ -135,9 +123,15 @@
         ]
       },
       {
-        "id": "Observation.component:functional-effect",
+        "id": "Observation.component:predicted-phenotype",
         "path": "Observation.component",
-        "sliceName": "functional-effect",
+        "sliceName": "predicted-phenotype",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:mode-of-inheritance",
+        "path": "Observation.component",
+        "sliceName": "mode-of-inheritance",
         "mustSupport": true
       }
     ]

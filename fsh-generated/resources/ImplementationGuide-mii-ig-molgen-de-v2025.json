@@ -30,7 +30,7 @@
     {
       "packageId": "hl7.fhir.uv.genomics-reporting",
       "uri": "hl7.fhir.uv.genomics-reporting",
-      "version": "2.0.x",
+      "version": "3.0.x",
       "id": "hl7_fhir_uv_genomics_reporting"
     },
     {
@@ -42,7 +42,7 @@
     {
       "packageId": "de.basisprofil.r4",
       "uri": "de.basisprofil.r4",
-      "version": "1.5.x",
+      "version": "1.5.1",
       "id": "de_basisprofil_r4"
     },
     {
@@ -132,6 +132,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-molgen-molekulare-konsequenz-1"
+        },
+        "name": "BRAF Variante Molekulare Konsequenz",
+        "description": "Beispiel für molekulare Konsequenz abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-molgen-therapeutische-implikation-1"
         },
         "name": "BRAF Variante Therapeutische Implikation",
@@ -148,6 +156,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-molgen-molekulare-konsequenz-cnv-4"
+        },
+        "name": "CNV SMO Diagnostische Implikation",
+        "description": "Beispiel für diagnostische Implikation abgeleitet von Copy Number Variante im SMO Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-molgen-diagnostische-implikation-brca1"
         },
         "name": "Diagnostische Implikation BRCA1 Variante",
@@ -156,27 +172,19 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-molgen-molekulare-konsequenz-brca1"
+        },
+        "name": "Diagnostische Implikation BRCA1 Variante",
+        "description": "Beispiel für diagnostische Implikation abgeleitet von SNP im BRCA1.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz"
+      },
+      {
+        "reference": {
           "reference": "Task/mii-exa-molgen-folgemassnahme-brca1"
         },
         "name": "Empfohlene Folgemaßnahme bei BRCA1 Variante",
         "description": "Beispiel für empfohlene Folgemaßnahme abgeleitet von genetischer Variante im BRCA1 Gen an Hand von NGS.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-ergebnis-zusammenfassung-trurisk-panel"
-        },
-        "name": "Ergebnis Zusammenfassung Befund ",
-        "description": "Beispiel zusammenfassendes Ergebnis bei BRCA1 Variante bei Familiärer Belastung für Brust- und Eierstockkrebs",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/ergebnis-zusammenfassung"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-ergebnis-zusammenfassung-1"
-        },
-        "name": "Ergebnis Zusammenfassung Befund-1",
-        "description": "Beispiel zusammenfassendes Ergebnis",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/ergebnis-zusammenfassung"
       },
       {
         "reference": {
@@ -268,14 +276,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-molgen-ergebnis-zusammenfassung"
-        },
-        "name": "MII PR MolGen Ergebnis Zusammenfassung",
-        "description": "Mit diesem Profil kann das Labor das zusammenfassende Ergebnis des Tests deklarieren (z. B. Positiv, Negativ, Unbekannt).",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/mii-pr-molgen-familienanamnese"
         },
         "name": "MII PR MolGen Familienanamnese",
@@ -303,7 +303,15 @@
           "reference": "StructureDefinition/mii-pr-molgen-mikrosatelliteninstabilitaet"
         },
         "name": "MII PR MolGen Mikrosatelliteninstabilität",
-        "description": "Mikrosatelliteninstabilität (MSI) ist ein Zustand genetischer Hypermutabilität (Neigung zu Mutationen), der aus einer gestörten DNA-Mismatch-Reparatur (MMR) resultiert.",
+        "description": "Mikrosatelliteninstabilität (MSI) ist ein Zustand genetischer Hypermutabilität (Neigung zu Mutationen), der aus einer gestörten DNA-Mismatch-Reparatur (MMR) resultiert. Das Profil basiert auf dem CG STU3 MolecularBiomarker-Profil",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-molekulare-konsequenz"
+        },
+        "name": "MII PR MolGen Molekualre Konsequenz",
+        "description": "Dieses Profil beschreibt den Zusammenhang von bestimmten Varianten, Haplotypen oder Genotypen und bestimmten Konsequenzen auf Molekularer Ebene.",
         "exampleBoolean": false
       },
       {
@@ -336,14 +344,6 @@
         },
         "name": "MII PR MolGen Therapeutische Implikation",
         "description": "Dieses Profil beschreibt den möglichen Einfluss genetischer Merkmale auf eine medikamentöse oder nicht-medikamentöse Therapie.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-molgen-untersuchte-region"
-        },
-        "name": "MII PR MolGen Untersuchte Region",
-        "description": "Dieses Profil beschreibt die Region oder die Regionen, die im Rahmen dieses Befundberichts untersucht wurden.",
         "exampleBoolean": false
       },
       {
@@ -682,132 +682,6 @@
       },
       {
         "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-apc"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-apc",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-atm"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-atm",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-brca1"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-brca1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-brca2"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-brca2",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-cdh1"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-cdh1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-ctnna1"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-ctnna1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-mlh1"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-mlh1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-msh2"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-msh2",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-msh3"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-msh3",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-msh6"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-msh6",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-mutyh"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-mutyh",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-nthl1"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-nthl1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-pms2"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-pms2",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-pold1"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-pold1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-pole"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-pole",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-smad4"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-smad4",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-stk11"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-stk11",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-srcc-tp53"
-        },
-        "name": "mii-exa-molgen-untersuchte-region-srcc-tp53",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
           "reference": "Observation/mii-exa-molgen-variante-srcc-ctnna1"
         },
         "name": "mii-exa-molgen-variante-srcc-ctnna1",
@@ -863,195 +737,19 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-molgen-molekulare-konsequenz-2"
+        },
+        "name": "NIPBL Variante Molekulare Konsequenz",
+        "description": "Beispiel für molekulare Konsequenz abgeleitet von genetischer Variante im NIPBL Gen an Hand von WGS.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz"
+      },
+      {
+        "reference": {
           "reference": "RiskAssessment/mii-exa-molgen-prs-brca1"
         },
         "name": "Polygener Risiko Score BRCA1 Variante",
         "description": "Beispiel für Polygenen Risiko Score bei Variante BRCA1",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-1"
-        },
-        "name": "Untersuchte Region BRAF",
-        "description": "Beispiel für untersuchte Region BRAF Gen an Hand von NGS.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-2-hdac8"
-        },
-        "name": "Untersuchte Region HDAC8",
-        "description": "Beispiel für untersuchte Region HDAC8 Gen an Hand von NGS.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-2-rad21"
-        },
-        "name": "Untersuchte Region HDAC8",
-        "description": "Beispiel für untersuchte Region RAD21 Gen an Hand von NGS.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-2-nipbl"
-        },
-        "name": "Untersuchte Region NIPBL",
-        "description": "Beispiel für untersuchte Region NIPBL Gen an Hand von NGS.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-2-smc1a"
-        },
-        "name": "Untersuchte Region SMC1A",
-        "description": "Beispiel für untersuchte Region SMC1A Gen an Hand von NGS.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-2-smc3"
-        },
-        "name": "Untersuchte Region SMC3",
-        "description": "Beispiel für untersuchte Region SMC3 Gen an Hand von NGS.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-2-tp63"
-        },
-        "name": "Untersuchte Region TP63",
-        "description": "Beispiel für untersuchte Region TP63 Gen an Hand von NGS.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-ATM"
-        },
-        "name": "Untersuchte Region True Risk Panel V3 ATM Gen",
-        "description": "Beispiel für untersuchte Region True Risk Panel V3 ATM Gen.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BARD1"
-        },
-        "name": "Untersuchte Region True Risk Panel V3 BARD1 Gen",
-        "description": "Beispiel für untersuchte Region True Risk Panel V3 BARD1 Gen.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA1"
-        },
-        "name": "Untersuchte Region True Risk Panel V3 BRCA1 Gen",
-        "description": "Beispiel für untersuchte Region True Risk Panel V3 BRCA1 Gen.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA2"
-        },
-        "name": "Untersuchte Region True Risk Panel V3 BRCA2 Gen",
-        "description": "Beispiel für untersuchte Region True Risk Panel V3 BRCA2 Gen.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRIP1"
-        },
-        "name": "Untersuchte Region True Risk Panel V3 BRIP1 Gen",
-        "description": "Beispiel für untersuchte Region True Risk Panel V3 BRIP1 Gen.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CDH1"
-        },
-        "name": "Untersuchte Region True Risk Panel V3 CDH1 Gen",
-        "description": "Beispiel für untersuchte Region True Risk Panel V3 CDH1 Gen.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CHECK2"
-        },
-        "name": "Untersuchte Region True Risk Panel V3 CHECK2 Gen",
-        "description": "Beispiel für untersuchte Region True Risk Panel V3 CHECK2 Gen.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MLH1"
-        },
-        "name": "Untersuchte Region True Risk Panel V3 MLH1 Gen",
-        "description": "Beispiel für untersuchte Region True Risk Panel V3 MLH1 Gen.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH2"
-        },
-        "name": "Untersuchte Region True Risk Panel V3 MSH2 Gen",
-        "description": "Beispiel für untersuchte Region True Risk Panel V3 MSH2 Gen.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH6"
-        },
-        "name": "Untersuchte Region True Risk Panel V3 MSH6 Gen",
-        "description": "Beispiel für untersuchte Region True Risk Panel V3 MSH6 Gen.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PALB2"
-        },
-        "name": "Untersuchte Region True Risk Panel V3 PALB2 Gen",
-        "description": "Beispiel für untersuchte Region True Risk Panel V3 PALB2 Gen.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PMS2"
-        },
-        "name": "Untersuchte Region True Risk Panel V3 PMS2 Gen",
-        "description": "Beispiel für untersuchte Region True Risk Panel V3 PMS2 Gen.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PTEN"
-        },
-        "name": "Untersuchte Region True Risk Panel V3 PTEN Gen",
-        "description": "Beispiel für untersuchte Region True Risk Panel V3 PTEN Gen.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51C"
-        },
-        "name": "Untersuchte Region True Risk Panel V3 RAD51C Gen",
-        "description": "Beispiel für untersuchte Region True Risk Panel V3 RAD51C Gen.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51D"
-        },
-        "name": "Untersuchte Region True Risk Panel V3 RAD51D Gen",
-        "description": "Beispiel für untersuchte Region True Risk Panel V3 RAD51D Gen.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-molgen-untersuchte-region-true-risk-panel-v3-TP53"
-        },
-        "name": "Untersuchte Region True Risk Panel V3 TP53 Gen",
-        "description": "Beispiel für untersuchte Region True Risk Panel V3 TP53 Gen.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
       },
       {
         "reference": {

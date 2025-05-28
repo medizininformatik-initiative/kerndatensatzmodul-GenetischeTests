@@ -443,7 +443,16 @@
         "meta": {
           "profile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht",
-            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
+            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "51969-4",
+              "display": "Genetic analysis report"
+            }
           ]
         },
         "category": [
@@ -459,7 +468,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact",
+            "url": "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact",
             "valueRelatedArtifact": {
               "type": "citation",
               "citation": "Gillis LA, McCallum J, Kaur M, DeScipio C, Yaeger D, Mariani A, Kline AD, Li HH, Devoto M, Jackson LG, Krantz ID. NIPBL mutational analysis in 120 individuals with Cornelia de Lange syndrome and evaluation of genotype-phenotype correlations. Am J Hum Genet. 2004 Oct;75(4):610-23. doi: 10.1086/424698. Epub 2004 Aug 18. PMID: 15318302; PMCID: PMC1182048.",
@@ -467,7 +476,7 @@
             }
           },
           {
-            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact",
+            "url": "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact",
             "valueRelatedArtifact": {
               "type": "citation",
               "citation": "Kawauchi S, Calof AL, Santos R, Lopez-Burks ME, Young CM, Hoang MP, Chua A, Lao T, Lechner MS, Daniel JA, Nussenzweig A, Kitzes L, Yokomori K, Hallgrimsson B, Lander AD. Multiple organ system defects and transcriptional dysregulation in the Nipbl(+/-) mouse, a model of Cornelia de Lange Syndrome. PLoS Genet. 2009 Sep;5(9):e1000650. doi: 10.1371/journal.pgen.1000650. Epub 2009 Sep 18. PMID: 19763162; PMCID: PMC2730539.",
@@ -475,7 +484,7 @@
             }
           },
           {
-            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact",
+            "url": "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact",
             "valueRelatedArtifact": {
               "type": "citation",
               "citation": "Huisman SA, Redeker EJ, Maas SM, Mannens MM, Hennekam RC. High rate of mosaicism in individuals with Cornelia de Lange syndrome. J Med Genet. 2013 May;50(5):339-44. doi: 10.1136/jmedgenet-2012-101477. Epub 2013 Mar 15. PMID: 23505322.",
@@ -483,7 +492,7 @@
             }
           },
           {
-            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact",
+            "url": "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact",
             "valueRelatedArtifact": {
               "type": "citation",
               "citation": "Kline AD, Moss JF, Selicorni A, Bisgaard AM, Deardorff MA, Gillett PM, Ishman SL, Kerr LM, Levin AV, Mulder PA, Ramos FJ, Wierzba J, Ajmone PF, Axtell D, Blagowidow N, Cereda A, Costantino A, Cormier-Daire V, FitzPatrick D, Grados M, Groves L, Guthrie W, Huisman S, Kaiser FJ, Koekkoek G, Levis M, Mariani M, McCleery JP, Menke LA, Metrena A, O'Connor J, Oliver C, Pie J, Piening S, Potter CJ, Quaglio AL, Redeker E, Richman D, Rigamonti C, Shi A, Tümer Z, Van Balkom IDC, Hennekam RC. Diagnosis and management of Cornelia de Lange syndrome: first international consensus statement. Nat Rev Genet. 2018 Oct;19(10):649-666. doi: 10.1038/s41576-018-0031-0. PMID: 29995837; PMCID: PMC7136165.",
@@ -547,15 +556,6 @@
           }
         ],
         "status": "final",
-        "code": {
-          "coding": [
-            {
-              "code": "51969-4",
-              "system": "http://loinc.org",
-              "display": "Genetic analysis report"
-            }
-          ]
-        },
         "subject": {
           "reference": "Patient/mii-exa-molgen-patient-2"
         },
@@ -575,24 +575,6 @@
           },
           {
             "reference": "Observation/mii-exa-molgen-variante-2"
-          },
-          {
-            "reference": "Observation/mii-exa-molgen-untersuchte-region-2-nipbl"
-          },
-          {
-            "reference": "Observation/mii-exa-molgen-untersuchte-region-2-hdac8"
-          },
-          {
-            "reference": "Observation/mii-exa-molgen-untersuchte-region-2-rad21"
-          },
-          {
-            "reference": "Observation/mii-exa-molgen-untersuchte-region-2-smc1a"
-          },
-          {
-            "reference": "Observation/mii-exa-molgen-untersuchte-region-2-smc3"
-          },
-          {
-            "reference": "Observation/mii-exa-molgen-untersuchte-region-2-tp63"
           }
         ],
         "conclusion": "Nachweis der pathogenen Variante c.2207del p.(Pro736Glnfs*58) (heterozygot) im NIPBL-Gen."
@@ -960,11 +942,19 @@
                 "display": "Laboratory"
               }
             ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "GE"
+              }
+            ]
           }
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact",
+            "url": "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact",
             "valueRelatedArtifact": {
               "type": "citation",
               "citation": "Richards et al., Genet Med. 2015; 17:405-24",
@@ -1091,6 +1081,14 @@
                 "system": "http://terminology.hl7.org/CodeSystem/observation-category",
                 "code": "laboratory",
                 "display": "Laboratory"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "GE"
               }
             ]
           }
@@ -1229,26 +1227,6 @@
               "coding": [
                 {
                   "system": "http://loinc.org",
-                  "code": "48006-1",
-                  "display": "Amino acid change [Type]"
-                }
-              ]
-            },
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "LA6694-9",
-                  "system": "http://loinc.org",
-                  "display": "Frameshift"
-                }
-              ]
-            }
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
                   "code": "48001-2",
                   "display": "Cytogenetic (chromosome) location"
                 }
@@ -1329,811 +1307,6 @@
       "request": {
         "method": "PUT",
         "url": "Observation/mii-exa-molgen-variante-2"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-2-nipbl",
-      "resource": {
-        "resourceType": "Observation",
-        "id": "mii-exa-molgen-untersuchte-region-2-nipbl",
-        "meta": {
-          "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region",
-            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied"
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "53041-0",
-              "display": "DNA region of interest panel"
-            }
-          ]
-        },
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "component": [
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "48018-6",
-                  "display": "Gene studied [ID]"
-                }
-              ]
-            },
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "HGNC:28862",
-                  "system": "http://www.genenames.org/geneId",
-                  "display": "NIPBL"
-                }
-              ]
-            }
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "81293-3",
-                  "display": "Description of ranges of DNA sequences examined"
-                }
-              ]
-            },
-            "valueString": "Analyse aller kodierenden Exons der zu untersuchenden Gene einschließlich flankierender intronischer Regionen (mindestens von -3 bis +8)."
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "48013-7",
-                  "display": "Genomic reference sequence [ID]"
-                }
-              ]
-            },
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "NM_133433.4",
-                  "system": "http://www.ncbi.nlm.nih.gov/refseq"
-                }
-              ]
-            }
-          }
-        ],
-        "status": "final",
-        "subject": {
-          "reference": "Patient/mii-exa-molgen-patient-2"
-        },
-        "performer": [
-          {
-            "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
-          }
-        ],
-        "method": {
-          "coding": [
-            {
-              "code": "LA26398-0",
-              "system": "http://loinc.org",
-              "display": "Sequencing"
-            }
-          ]
-        },
-        "specimen": {
-          "reference": "Specimen/mii-exa-molgen-specimen-2"
-        },
-        "device": {
-          "reference": "Device/mii-exa-molgen-device-sequencer-2"
-        }
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-2-nipbl"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-2-hdac8",
-      "resource": {
-        "resourceType": "Observation",
-        "id": "mii-exa-molgen-untersuchte-region-2-hdac8",
-        "meta": {
-          "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region",
-            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied"
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "53041-0",
-              "display": "DNA region of interest panel"
-            }
-          ]
-        },
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "component": [
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-                  "code": "conclusion-string"
-                }
-              ]
-            },
-            "valueString": "Keine pathogene Variante identifiziert."
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "48018-6",
-                  "display": "Gene studied [ID]"
-                }
-              ]
-            },
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "HGNC:13315",
-                  "system": "http://www.genenames.org/geneId",
-                  "display": "HDAC8"
-                }
-              ]
-            }
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "81293-3",
-                  "display": "Description of ranges of DNA sequences examined"
-                }
-              ]
-            },
-            "valueString": "Analyse aller kodierenden Exons der zu untersuchenden Gene einschließlich flankierender intronischer Regionen (mindestens von -3 bis +8)."
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "48013-7",
-                  "display": "Genomic reference sequence [ID]"
-                }
-              ]
-            },
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "NM_018486.2",
-                  "system": "http://www.ncbi.nlm.nih.gov/refseq"
-                }
-              ]
-            }
-          }
-        ],
-        "status": "final",
-        "subject": {
-          "reference": "Patient/mii-exa-molgen-patient-2"
-        },
-        "performer": [
-          {
-            "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
-          }
-        ],
-        "method": {
-          "coding": [
-            {
-              "code": "LA26398-0",
-              "system": "http://loinc.org",
-              "display": "Sequencing"
-            }
-          ]
-        },
-        "specimen": {
-          "reference": "Specimen/mii-exa-molgen-specimen-2"
-        },
-        "device": {
-          "reference": "Device/mii-exa-molgen-device-sequencer-2"
-        }
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-2-hdac8"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-2-rad21",
-      "resource": {
-        "resourceType": "Observation",
-        "id": "mii-exa-molgen-untersuchte-region-2-rad21",
-        "meta": {
-          "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region",
-            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied"
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "53041-0",
-              "display": "DNA region of interest panel"
-            }
-          ]
-        },
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "component": [
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-                  "code": "conclusion-string"
-                }
-              ]
-            },
-            "valueString": "Keine pathogene Variante identifiziert."
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "48018-6",
-                  "display": "Gene studied [ID]"
-                }
-              ]
-            },
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "HGNC:9811",
-                  "system": "http://www.genenames.org/geneId",
-                  "display": "RAD21"
-                }
-              ]
-            }
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "81293-3",
-                  "display": "Description of ranges of DNA sequences examined"
-                }
-              ]
-            },
-            "valueString": "Analyse aller kodierenden Exons der zu untersuchenden Gene einschließlich flankierender intronischer Regionen (mindestens von -3 bis +8)."
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "48013-7",
-                  "display": "Genomic reference sequence [ID]"
-                }
-              ]
-            },
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "NM_006265.2",
-                  "system": "http://www.ncbi.nlm.nih.gov/refseq"
-                }
-              ]
-            }
-          }
-        ],
-        "status": "final",
-        "subject": {
-          "reference": "Patient/mii-exa-molgen-patient-2"
-        },
-        "performer": [
-          {
-            "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
-          }
-        ],
-        "method": {
-          "coding": [
-            {
-              "code": "LA26398-0",
-              "system": "http://loinc.org",
-              "display": "Sequencing"
-            }
-          ]
-        },
-        "specimen": {
-          "reference": "Specimen/mii-exa-molgen-specimen-2"
-        },
-        "device": {
-          "reference": "Device/mii-exa-molgen-device-sequencer-2"
-        }
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-2-rad21"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-2-smc1a",
-      "resource": {
-        "resourceType": "Observation",
-        "id": "mii-exa-molgen-untersuchte-region-2-smc1a",
-        "meta": {
-          "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region",
-            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied"
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "53041-0",
-              "display": "DNA region of interest panel"
-            }
-          ]
-        },
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "component": [
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-                  "code": "conclusion-string"
-                }
-              ]
-            },
-            "valueString": "Keine pathogene Variante identifiziert."
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "48018-6",
-                  "display": "Gene studied [ID]"
-                }
-              ]
-            },
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "HGNC:11111",
-                  "system": "http://www.genenames.org/geneId",
-                  "display": "SMC1A"
-                }
-              ]
-            }
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "81293-3",
-                  "display": "Description of ranges of DNA sequences examined"
-                }
-              ]
-            },
-            "valueString": "Analyse aller kodierenden Exons der zu untersuchenden Gene einschließlich flankierender intronischer Regionen (mindestens von -3 bis +8)."
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "48013-7",
-                  "display": "Genomic reference sequence [ID]"
-                }
-              ]
-            },
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "NM_006306.3",
-                  "system": "http://www.ncbi.nlm.nih.gov/refseq"
-                }
-              ]
-            }
-          }
-        ],
-        "status": "final",
-        "subject": {
-          "reference": "Patient/mii-exa-molgen-patient-2"
-        },
-        "performer": [
-          {
-            "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
-          }
-        ],
-        "method": {
-          "coding": [
-            {
-              "code": "LA26398-0",
-              "system": "http://loinc.org",
-              "display": "Sequencing"
-            }
-          ]
-        },
-        "specimen": {
-          "reference": "Specimen/mii-exa-molgen-specimen-2"
-        },
-        "device": {
-          "reference": "Device/mii-exa-molgen-device-sequencer-2"
-        }
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-2-smc1a"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-2-smc3",
-      "resource": {
-        "resourceType": "Observation",
-        "id": "mii-exa-molgen-untersuchte-region-2-smc3",
-        "meta": {
-          "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region",
-            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied"
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "53041-0",
-              "display": "DNA region of interest panel"
-            }
-          ]
-        },
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "component": [
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-                  "code": "conclusion-string"
-                }
-              ]
-            },
-            "valueString": "Keine pathogene Variante identifiziert."
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "48018-6",
-                  "display": "Gene studied [ID]"
-                }
-              ]
-            },
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "HGNC:2468",
-                  "system": "http://www.genenames.org/geneId",
-                  "display": "SMC3"
-                }
-              ]
-            }
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "81293-3",
-                  "display": "Description of ranges of DNA sequences examined"
-                }
-              ]
-            },
-            "valueString": "Analyse aller kodierenden Exons der zu untersuchenden Gene einschließlich flankierender intronischer Regionen (mindestens von -3 bis +8)."
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "48013-7",
-                  "display": "Genomic reference sequence [ID]"
-                }
-              ]
-            },
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "NM_005445.3",
-                  "system": "http://www.ncbi.nlm.nih.gov/refseq"
-                }
-              ]
-            }
-          }
-        ],
-        "status": "final",
-        "subject": {
-          "reference": "Patient/mii-exa-molgen-patient-2"
-        },
-        "performer": [
-          {
-            "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
-          }
-        ],
-        "method": {
-          "coding": [
-            {
-              "code": "LA26398-0",
-              "system": "http://loinc.org",
-              "display": "Sequencing"
-            }
-          ]
-        },
-        "specimen": {
-          "reference": "Specimen/mii-exa-molgen-specimen-2"
-        },
-        "device": {
-          "reference": "Device/mii-exa-molgen-device-sequencer-2"
-        }
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-2-smc3"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-untersuchte-region-2-tp63",
-      "resource": {
-        "resourceType": "Observation",
-        "id": "mii-exa-molgen-untersuchte-region-2-tp63",
-        "meta": {
-          "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region",
-            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied"
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "53041-0",
-              "display": "DNA region of interest panel"
-            }
-          ]
-        },
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "component": [
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-                  "code": "conclusion-string"
-                }
-              ]
-            },
-            "valueString": "Keine pathogene Variante identifiziert."
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "48018-6",
-                  "display": "Gene studied [ID]"
-                }
-              ]
-            },
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "HGNC:15979",
-                  "system": "http://www.genenames.org/geneId",
-                  "display": "TP63"
-                }
-              ]
-            }
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "81293-3",
-                  "display": "Description of ranges of DNA sequences examined"
-                }
-              ]
-            },
-            "valueString": "Analyse aller kodierenden Exons der zu untersuchenden Gene einschließlich flankierender intronischer Regionen (mindestens von -3 bis +8)."
-          },
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "48013-7",
-                  "display": "Genomic reference sequence [ID]"
-                }
-              ]
-            },
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "NM_003722.4",
-                  "system": "http://www.ncbi.nlm.nih.gov/refseq"
-                }
-              ]
-            }
-          }
-        ],
-        "status": "final",
-        "subject": {
-          "reference": "Patient/mii-exa-molgen-patient-2"
-        },
-        "performer": [
-          {
-            "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
-          }
-        ],
-        "method": {
-          "coding": [
-            {
-              "code": "LA26398-0",
-              "system": "http://loinc.org",
-              "display": "Sequencing"
-            }
-          ]
-        },
-        "specimen": {
-          "reference": "Specimen/mii-exa-molgen-specimen-2"
-        },
-        "device": {
-          "reference": "Device/mii-exa-molgen-device-sequencer-2"
-        }
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-untersuchte-region-2-tp63"
-      }
-    },
-    {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-bundle-befund-2-nipbl-condition-lab",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "mii-exa-molgen-bundle-befund-2-nipbl-condition-lab",
-        "meta": {
-          "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose"
-          ]
-        },
-        "clinicalStatus": {
-          "coding": [
-            {
-              "code": "active",
-              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
-            }
-          ]
-        },
-        "verificationStatus": {
-          "coding": [
-            {
-              "code": "provisional",
-              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
-            }
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "extension": [
-                {
-                  "url": "http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit",
-                  "valueCoding": {
-                    "code": "V",
-                    "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT"
-                  }
-                }
-              ],
-              "version": "2021",
-              "code": "Q87.1",
-              "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-              "display": "Angeborene Fehlbildungssyndrome, die vorwiegend mit Kleinwuchs einhergehen"
-            },
-            {
-              "code": "122470",
-              "system": "http://www.omim.org",
-              "display": "Cornelia de Lange syndrome 1"
-            }
-          ]
-        },
-        "subject": {
-          "reference": "Patient/mii-exa-molgen-patient-2"
-        },
-        "recorder": {
-          "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
-        },
-        "asserter": {
-          "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
-        },
-        "recordedDate": "2022-03-05T10:49:00+01:00"
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Condition/mii-exa-molgen-bundle-befund-2-nipbl-condition-lab"
       }
     }
   ]

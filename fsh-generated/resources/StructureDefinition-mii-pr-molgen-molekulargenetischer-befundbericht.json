@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-molgen-molekulargenetischer-befundbericht",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht",
-  "version": "2025.0.0",
+  "version": "2026.0.0-alpha.1",
   "name": "MII_PR_MolGen_MolekulargenetischerBefundbericht",
   "title": "MII PR MolGen Molekulargenetischer Befundbericht",
   "status": "active",
@@ -28,7 +28,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "DiagnosticReport",
-  "baseDefinition": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report",
+  "baseDefinition": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -42,18 +42,6 @@
             "comment": "Molekulargenetischer Befundbericht"
           }
         ]
-      },
-      {
-        "id": "DiagnosticReport.extension:genomics-artifact",
-        "path": "DiagnosticReport.extension",
-        "sliceName": "genomics-artifact",
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.extension:genomics-file",
-        "path": "DiagnosticReport.extension",
-        "sliceName": "genomics-file",
-        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.extension:recommended-action",
@@ -70,9 +58,9 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.extension:genomics-risk-assessment",
+        "id": "DiagnosticReport.extension:genomic-risk-assessment",
         "path": "DiagnosticReport.extension",
-        "sliceName": "genomics-risk-assessment",
+        "sliceName": "genomic-risk-assessment",
         "mustSupport": true
       },
       {
@@ -85,6 +73,12 @@
         "id": "DiagnosticReport.extension:supporting-info",
         "path": "DiagnosticReport.extension",
         "sliceName": "supporting-info",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:workflow-relatedArtifact",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "workflow-relatedArtifact",
         "mustSupport": true
       },
       {
@@ -187,20 +181,6 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:overall",
-        "path": "DiagnosticReport.result",
-        "sliceName": "overall",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/ergebnis-zusammenfassung"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "DiagnosticReport.result:diagnostic-implication",
         "path": "DiagnosticReport.result",
         "sliceName": "diagnostic-implication",
@@ -246,20 +226,6 @@
         "id": "DiagnosticReport.result:sequence-phase-relation",
         "path": "DiagnosticReport.result",
         "sliceName": "sequence-phase-relation",
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.result:region-studied",
-        "path": "DiagnosticReport.result",
-        "sliceName": "region-studied",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/untersuchte-region"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {

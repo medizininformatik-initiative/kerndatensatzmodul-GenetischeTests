@@ -7,15 +7,6 @@
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/tmb"
     ]
   },
-  "code": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "94076-7",
-        "display": "Mutations/Megabase [# Ratio] in Tumor"
-      }
-    ]
-  },
   "category": [
     {
       "coding": [
@@ -25,15 +16,26 @@
           "display": "Laboratory"
         }
       ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+          "code": "biomarker-category"
+        }
+      ]
     }
   ],
-  "valueQuantity": {
-    "system": "http://unitsofmeasure.org",
-    "code": "1/1000000{Base}",
-    "value": 12,
-    "unit": "Mutations/Megabase"
-  },
   "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "94076-7",
+        "system": "http://loinc.org",
+        "display": "Mutations/Megabase [# Ratio] in Tumor"
+      }
+    ]
+  },
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient"
   },
@@ -42,6 +44,12 @@
       "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
     }
   ],
+  "valueQuantity": {
+    "value": 12,
+    "code": "1/1000000{Base}",
+    "system": "http://unitsofmeasure.org",
+    "unit": "Mutations/Megabase"
+  },
   "specimen": {
     "reference": "Specimen/mii-exa-molgen-specimen-1"
   }
