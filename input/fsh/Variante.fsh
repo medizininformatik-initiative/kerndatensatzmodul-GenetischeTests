@@ -16,7 +16,7 @@ Description: "Dieses Profil ermöglicht eine vollständige Beschreibung der gefu
 * method MS
 * specimen MS
 * device MS
-* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
