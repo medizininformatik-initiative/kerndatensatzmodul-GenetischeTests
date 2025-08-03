@@ -1,6 +1,6 @@
 Profile: MII_PR_MolGen_AnforderungGenetischerTest
 Parent: ServiceRequest
-Id: mii-pr-molgen-anforderung-gentischer-test
+Id: mii-pr-molgen-anforderung-genetischer-test
 Title: "MII PR MolGen Anforderung genetischer Test"
 Description: "Der Laborauftrag oder die Anfrage, die die Durchführung des genetischen Tests auslöst."
 * insert Publisher
@@ -52,7 +52,7 @@ Source: MII_PR_MolGen_AnforderungGenetischerTest
 * authoredOn -> "mide-dataelement-1766" "Datum der Anforderung"
 
 Instance: mii-exa-molgen-anforderung-1
-InstanceOf: mii-pr-molgen-anforderung-gentischer-test
+InstanceOf: mii-pr-molgen-anforderung-genetischer-test
 Usage: #example
 Title: "Anforderung BRAF Genetische Testung"
 Description: "Beispiel für Anforderung für genetische Testung auf genetische Variante im BRAF Gen an Hand von NGS."
@@ -72,7 +72,7 @@ Description: "Beispiel für Anforderung für genetische Testung auf genetische V
 * supportingInfo[familienanamnese] = Reference(mii-exa-molgen-family-member-history-1)
 
 Instance: mii-exa-molgen-anforderung-2
-InstanceOf: mii-pr-molgen-anforderung-gentischer-test
+InstanceOf: mii-pr-molgen-anforderung-genetischer-test
 Usage: #example
 Title: "Anforderung Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom"
 Description: "Beispiel für Anforderung für genetische Testung auf pathogene Variante im NIPBL Gen."
@@ -103,7 +103,7 @@ Description: "Beispiel für Anforderung für genetische Testung auf pathogene Va
 * reasonReference[3] = Reference(mii-exa-molgen-phenotypic-feature-4)
 
 Instance: mii-exa-molgen-anforderung-trurisk-panel
-InstanceOf: mii-pr-molgen-anforderung-gentischer-test
+InstanceOf: mii-pr-molgen-anforderung-genetischer-test
 Usage: #example
 Title: "Anforderung Molekulargenetische Diagnose Familiäre Belastung für Brust- und Eierstockkrebs"
 Description: "Beispiel für Anforderung für genetische Testung bei Familiärer Belastung für Brust- und Eierstockkrebs."

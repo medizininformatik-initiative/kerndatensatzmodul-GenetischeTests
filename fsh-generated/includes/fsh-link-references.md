@@ -21,7 +21,7 @@
 [MII_EX_MolGen_RiskAssessment_Einflussfaktor]: StructureDefinition-mii-ex-molgen-risk-assessment-einflussfaktor.html
 [MII_EX_MolGen_Verwandtschaftsverhaeltnis]: StructureDefinition-mii-ex-molgen-verwandtschaftsverhaeltnis.html
 [MII_LM_MolGen_LogicalModel]: StructureDefinition-LogicalModelMolGen.html
-[MII_PR_MolGen_AnforderungGenetischerTest]: StructureDefinition-mii-pr-molgen-anforderung-gentischer-test.html
+[MII_PR_MolGen_AnforderungGenetischerTest]: StructureDefinition-mii-pr-molgen-anforderung-genetischer-test.html
 [MII_PR_MolGen_DiagnostischeImplikation]: StructureDefinition-mii-pr-molgen-diagnostische-implikation.html
 [MII_PR_MolGen_EmpfohleneFolgemassnahme]: StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.html
 [MII_PR_MolGen_Familienanamnese]: StructureDefinition-mii-pr-molgen-familienanamnese.html

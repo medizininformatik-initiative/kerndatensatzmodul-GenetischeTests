@@ -10,7 +10,7 @@ Canonical: http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs
 
 ---
 
-Das CodeSystem [To Be Determined Codes](http://hl7.org/fhir/uv/genomics-reporting/STU2/CodeSystem-tbd-codes-cs.html) stammt aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU2/).
+Das CodeSystem [To Be Determined Codes](http://hl7.org/fhir/uv/genomics-reporting/STU3/CodeSystem-tbd-codes-cs.html) stammt aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
 
 ---
 

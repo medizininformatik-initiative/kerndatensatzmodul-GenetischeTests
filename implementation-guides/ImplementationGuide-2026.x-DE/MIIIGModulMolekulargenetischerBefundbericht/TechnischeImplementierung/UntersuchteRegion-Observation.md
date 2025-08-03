@@ -14,7 +14,7 @@ select Name: name, Canonical: url
 
 ---
 
-Das Profil ist abgeleitet vom Profil [Region Studied](http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-region-studied.html) aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU2/).
+Das Profil ist abgeleitet vom Profil [Region Studied](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-region-studied.html) aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
 
 ---
 

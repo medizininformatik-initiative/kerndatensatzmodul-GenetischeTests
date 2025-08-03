@@ -10,7 +10,7 @@ Canonical: http://hl7.org/fhir/uv/genomics-reporting/ValueSet/evidence-level-exa
 
 ---
 
-Das ValueSet [Evidence Level Examples](http://hl7.org/fhir/uv/genomics-reporting/STU2/ValueSet-evidence-level-example-vs.html) stammt aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU2/).
+Das ValueSet [Evidence Level Examples](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-evidence-level-example-vs.html) stammt aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
 
 ---
 

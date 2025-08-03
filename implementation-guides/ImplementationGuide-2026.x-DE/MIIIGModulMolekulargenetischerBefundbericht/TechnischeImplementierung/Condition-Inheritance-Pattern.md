@@ -10,7 +10,7 @@ Canonical: http://hl7.org/fhir/uv/genomics-reporting/ValueSet/condition-inherita
 
 ---
 
-Das ValueSet [Condition Inheritance Patterns](http://hl7.org/fhir/uv/genomics-reporting/STU2/ValueSet-condition-inheritance-mode-vs.html) stammt aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU2/).
+Das ValueSet [Condition Inheritance Patterns](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-condition-inheritance-mode-vs.html) stammt aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
 
 ---
 

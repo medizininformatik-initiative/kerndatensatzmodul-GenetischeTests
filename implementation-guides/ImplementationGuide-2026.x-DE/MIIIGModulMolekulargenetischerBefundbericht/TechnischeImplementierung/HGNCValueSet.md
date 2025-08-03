@@ -10,7 +10,7 @@ Canonical: http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgnc-vs
 
 ---
 
-Das ValueSet [HUGO Gene Nomenclature Committee Gene Names (HGNC)](http://hl7.org/fhir/uv/genomics-reporting/STU2/ValueSet-hgnc-vs.html) stammt aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU2/).
+Das ValueSet [HUGO Gene Nomenclature Committee Gene Names (HGNC)](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-hgnc-vs.html) stammt aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
 
 ---
 

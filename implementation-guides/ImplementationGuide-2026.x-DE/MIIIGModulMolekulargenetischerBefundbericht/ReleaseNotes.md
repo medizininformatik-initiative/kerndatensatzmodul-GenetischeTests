@@ -43,6 +43,9 @@
     - Sonderzeichen entfernt: Mikrosatelliteninstabilität → Mikrosatelliteninstabilitaet  
     - FHIR-Mappings entsprechend aktualisiert für Konsistenz
     - Alle Elementnamen folgen jetzt FHIR-Namenskonventionen (nur alphanumerische Zeichen)
+- Profile Korrektur (Anforderung.fsh)
+    - Typo korrigiert: "gentischer" → "genetischer" in Profile ID und InstanceOf Referenzen
+    - Korrekte Canonical URL: mii-pr-molgen-anforderung-genetischer-test
 
 
 ## 2025.0.0

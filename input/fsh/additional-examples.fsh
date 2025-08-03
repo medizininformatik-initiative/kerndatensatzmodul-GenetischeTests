@@ -511,7 +511,7 @@ Usage: #example
 * identifier.value = "00070025"
 
 Instance: mii-exa-molgen-anforderung-srcc
-InstanceOf: mii-pr-molgen-anforderung-gentischer-test
+InstanceOf: mii-pr-molgen-anforderung-genetischer-test
 Usage: #example
 * identifier.system = "https://www.charite.de/fhir/auftragsnummern"
 * identifier.value = "7B369EB0"
@@ -765,7 +765,7 @@ Usage: #example
 * birthDate = "1964-05"
 
 Instance: mii-exa-molgen-anforderung-fgfr2-fusion
-InstanceOf: mii-pr-molgen-anforderung-gentischer-test
+InstanceOf: mii-pr-molgen-anforderung-genetischer-test
 Usage: #example
 * identifier.system = "https://www.charite.de/fhir/auftragsnummern"
 * identifier.value = "PRK4QE59A"
