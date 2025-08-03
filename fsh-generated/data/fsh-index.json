@@ -53,7 +53,7 @@
     "fshType": "Instance",
     "fshFile": "CapabilityStatement.fsh",
     "startLine": 33,
-    "endLine": 187
+    "endLine": 217
   },
   {
     "outputFile": "ChargeItem-mii-exa-molgen-chargeitem-ebm-21.json",
@@ -448,6 +448,14 @@
     "endLine": 64
   },
   {
+    "outputFile": "Procedure-mii-exa-molgen-genomic-study-1.json",
+    "fshName": "mii-exa-molgen-genomic-study-1",
+    "fshType": "Instance",
+    "fshFile": "GenomicStudy.fsh",
+    "startLine": 17,
+    "endLine": 22
+  },
+  {
     "outputFile": "RiskAssessment-mii-exa-molgen-prs-brca1.json",
     "fshName": "mii-exa-molgen-prs-brca1",
     "fshType": "Instance",
@@ -614,6 +622,22 @@
     "fshFile": "FamilyMemberHistory.fsh",
     "startLine": 1,
     "endLine": 88
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-molgen-genomic-study-analysis.json",
+    "fshName": "MII_PR_MolGen_GenomicStudyAnalysis",
+    "fshType": "Profile",
+    "fshFile": "GenomicStudy.fsh",
+    "startLine": 24,
+    "endLine": 31
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-molgen-genomic-study.json",
+    "fshName": "MII_PR_MolGen_GenomicStudy",
+    "fshType": "Profile",
+    "fshFile": "GenomicStudy.fsh",
+    "startLine": 1,
+    "endLine": 8
   },
   {
     "outputFile": "StructureDefinition-mii-pr-molgen-genotyp.json",

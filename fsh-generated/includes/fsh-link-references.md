@@ -25,6 +25,8 @@
 [MII_PR_MolGen_DiagnostischeImplikation]: StructureDefinition-mii-pr-molgen-diagnostische-implikation.html
 [MII_PR_MolGen_EmpfohleneFolgemassnahme]: StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.html
 [MII_PR_MolGen_Familienanamnese]: StructureDefinition-mii-pr-molgen-familienanamnese.html
+[MII_PR_MolGen_GenomicStudy]: StructureDefinition-mii-pr-molgen-genomic-study.html
+[MII_PR_MolGen_GenomicStudyAnalysis]: StructureDefinition-mii-pr-molgen-genomic-study-analysis.html
 [MII_PR_MolGen_Genotyp]: StructureDefinition-mii-pr-molgen-genotyp.html
 [MII_PR_MolGen_Medikationsempfehlung]: StructureDefinition-mii-pr-molgen-medikationsempfehlung.html
 [MII_PR_MolGen_Mikrosatelliteninstabilitaet]: StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html
@@ -83,6 +85,7 @@
 [mii-exa-molgen-variante-srcc-ctnna1]: Observation-mii-exa-molgen-variante-srcc-ctnna1.html
 [mii-exa-molgen-mikrosatelliteninstabilitaet-1]: Observation-mii-exa-molgen-mikrosatelliteninstabilitaet-1.html
 [mii-exa-molgen-molekulargenetischer-befundbericht-1]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-1.html
+[mii-exa-molgen-genomic-study-1]: Procedure-mii-exa-molgen-genomic-study-1.html
 [mii-exa-molgen-molekulargenetischer-befundbericht-2]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-2.html
 [mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel.html
 [mii-exa-molgen-variante-2]: Observation-mii-exa-molgen-variante-2.html

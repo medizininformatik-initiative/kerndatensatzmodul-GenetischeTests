@@ -284,6 +284,22 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-genomic-study"
+        },
+        "name": "MII PR MolGen Genomic Study ",
+        "description": "Genomic Study ist ein Profil, dass die Durchführung von übergeorndenten molekulargenetischen Untersuchungen (Studies) beschreibt. Einzelne Assays werden dann als GenomicStudyAnalysis abgebildet. Es ist vom GenomicStudy-Profils aus dem Genomics Reporting IG abgeleitet .",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-molgen-genomic-study-analysis"
+        },
+        "name": "MII PR MolGen Genomic Study Analysis",
+        "description": "Genomic Study ist ein Profil, dass die Durchführung von konkreten molekulargenetischen Methoden und Assays beschreibt. Es ist vom GenomicStudyAnalysis-Profil aus dem Genomics Reporting IG abgeleitet .",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-molgen-genotyp"
         },
         "name": "MII PR MolGen Genotyp",
@@ -702,6 +718,14 @@
         "name": "Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom",
         "description": "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorektalem Adenokarzniom.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-molgen-genomic-study-1"
+        },
+        "name": "Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom",
+        "description": "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorektalem Adenokarzniom.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study"
       },
       {
         "reference": {

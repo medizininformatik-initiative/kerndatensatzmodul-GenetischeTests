@@ -5,7 +5,7 @@ Bundle-mii-exa-befund-bundle-befund-fgfr2-fusion.json                           
 Bundle-mii-exa-befund-bundle-befund-srcc.json                                          mii-exa-befund-bundle-befund-srcc                                Instance   additional-examples.fsh                717 - 731
 Bundle-mii-exa-molgen-bundle-befund-2-nipbl.json                                       mii-exa-molgen-bundle-befund-2-nipbl                             Instance   additional-examples.fsh                330 - 353
 Bundle-mii-exa-molgen-bundle-fam-his-breast-ovar-can.json                              mii-exa-molgen-bundle-fam-his-breast-ovar-can                    Instance   additional-examples.fsh                295 - 311
-CapabilityStatement-mii-cps-molgen-capabilitystatement.json                            mii-cps-molgen-capabilitystatement                               Instance   CapabilityStatement.fsh                33 - 187
+CapabilityStatement-mii-cps-molgen-capabilitystatement.json                            mii-cps-molgen-capabilitystatement                               Instance   CapabilityStatement.fsh                33 - 217
 ChargeItem-mii-exa-molgen-chargeitem-ebm-21.json                                       mii-exa-molgen-chargeitem-ebm-21                                 Instance   additional-examples.fsh                139 - 145
 ChargeItem-mii-exa-molgen-chargeitem-ebm-22.json                                       mii-exa-molgen-chargeitem-ebm-22                                 Instance   additional-examples.fsh                147 - 153
 ChargeItem-mii-exa-molgen-chargeitem-ebm-23.json                                       mii-exa-molgen-chargeitem-ebm-23                                 Instance   additional-examples.fsh                155 - 161
@@ -55,6 +55,7 @@ Patient-mii-exa-molgen-patient-srcc.json                                        
 Patient-mii-exa-molgen-patient.json                                                    mii-exa-molgen-patient                                           Instance   additional-examples.fsh                3 - 44
 Practitioner-mii-exa-molgen-practitioner-lab.json                                      mii-exa-molgen-practitioner-lab                                  Instance   additional-examples.fsh                46 - 54
 Practitioner-mii-exa-molgen-practitioner-physician.json                                mii-exa-molgen-practitioner-physician                            Instance   additional-examples.fsh                56 - 64
+Procedure-mii-exa-molgen-genomic-study-1.json                                          mii-exa-molgen-genomic-study-1                                   Instance   GenomicStudy.fsh                       17 - 22
 RiskAssessment-mii-exa-molgen-prs-brca1.json                                           mii-exa-molgen-prs-brca1                                         Instance   PolygenerRisikoScore.fsh               38 - 50
 ServiceRequest-mii-exa-molgen-anforderung-1.json                                       mii-exa-molgen-anforderung-1                                     Instance   Anforderung.fsh                        54 - 72
 ServiceRequest-mii-exa-molgen-anforderung-2.json                                       mii-exa-molgen-anforderung-2                                     Instance   Anforderung.fsh                        74 - 103
@@ -76,6 +77,8 @@ StructureDefinition-mii-pr-molgen-anforderung-gentischer-test.json              
 StructureDefinition-mii-pr-molgen-diagnostische-implikation.json                       MII_PR_MolGen_DiagnostischeImplikation                           Profile    DiagnostischeImplikation.fsh           1 - 24
 StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.json                       MII_PR_MolGen_EmpfohleneFolgemassnahme                           Profile    EmpfohleneFolgemassnahme.fsh           1 - 19
 StructureDefinition-mii-pr-molgen-familienanamnese.json                                MII_PR_MolGen_Familienanamnese                                   Profile    FamilyMemberHistory.fsh                1 - 88
+StructureDefinition-mii-pr-molgen-genomic-study-analysis.json                          MII_PR_MolGen_GenomicStudyAnalysis                               Profile    GenomicStudy.fsh                       24 - 31
+StructureDefinition-mii-pr-molgen-genomic-study.json                                   MII_PR_MolGen_GenomicStudy                                       Profile    GenomicStudy.fsh                       1 - 8
 StructureDefinition-mii-pr-molgen-genotyp.json                                         MII_PR_MolGen_Genotyp                                            Profile    Genotyp.fsh                            1 - 23
 StructureDefinition-mii-pr-molgen-medikationsempfehlung.json                           MII_PR_MolGen_Medikationsempfehlung                              Profile    Medikationsempfehlung.fsh              1 - 18
 StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.json                    MII_PR_MolGen_Mikrosatelliteninstabilitaet                       Profile    Mikrosatelliteninstabilitaet.fsh       1 - 17
