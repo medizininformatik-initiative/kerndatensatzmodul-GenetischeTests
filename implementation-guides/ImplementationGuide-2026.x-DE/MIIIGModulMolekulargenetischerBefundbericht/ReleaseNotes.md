@@ -38,6 +38,11 @@
 
     - Beispiele entsprechend angepasst (alte Beispiele für Diagnostische Implikation entsprechen eher )
     - Neue Ordnerstruktur im GitHub-Repo
+- Logical Model (LogicalModel.fsh)
+    - Elementnamen bereinigt: Bindestriche entfernt und durch CamelCase ersetzt (z.B. Krankengeschichte-Familie → KrankengeschichteFamilie)
+    - Sonderzeichen entfernt: Mikrosatelliteninstabilität → Mikrosatelliteninstabilitaet  
+    - FHIR-Mappings entsprechend aktualisiert für Konsistenz
+    - Alle Elementnamen folgen jetzt FHIR-Namenskonventionen (nur alphanumerische Zeichen)
 
 
 ## 2025.0.0
