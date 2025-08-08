@@ -1,0 +1,30 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "mii-sp-molgen-genomic-study-analysis-device",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-Device",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "name": "SP_MII_MolGen_GenomicStudyAnalysis_Device",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-11-08",
+  "description": "Suchparameter für verwendetes Gerät in GenomicStudyAnalysis",
+  "code": "device",
+  "base": [
+    "Procedure"
+  ],
+  "type": "reference",
+  "expression": "Procedure.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device').value",
+  "target": [
+    "Device"
+  ]
+}

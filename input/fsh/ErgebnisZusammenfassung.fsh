@@ -31,10 +31,10 @@ Title: "Ergebnis Zusammenfassung Befund-1"
 Description: "Beispiel zusammenfassendes Ergebnis"
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/overall-interpretation"
 * status = #final
-* category[labCategory] = ObsCat#laboratory "Laboratory"
-* code = LNC#51968-6
+* category[labCategory] = $ObsCat#laboratory "Laboratory"
+* code = $LNC#51968-6
 * subject = Reference(mii-exa-molgen-patient)
-* valueCodeableConcept = LNC#LA6576-8 "Positive"
+* valueCodeableConcept = $LNC#LA6576-8 "Positive"
 * component[conclusion-string].valueString = "BRAF p.V600E Mutation liegt vor. Bitte Therapieoption mit einem BRAF-Inhibitor prüfen."
 
 // 04 docx
@@ -45,9 +45,9 @@ Title: "Ergebnis Zusammenfassung Befund "
 Description: "Beispiel zusammenfassendes Ergebnis bei BRCA1 Variante bei Familiärer Belastung für Brust- und Eierstockkrebs"
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/overall-interpretation"
 * status = #final
-* category[labCategory] = ObsCat#laboratory "Laboratory"
-* code = LNC#51968-6
+* category[labCategory] = $ObsCat#laboratory "Laboratory"
+* code = $LNC#51968-6
 * subject = Reference(mii-exa-molgen-patient-brca1)
-* valueCodeableConcept = LNC#LA6576-8 "Positive"
+* valueCodeableConcept = $LNC#LA6576-8 "Positive"
 * component[conclusion-string].valueString = "Nachweis heterozygoter Sequenzveränderung, die zum Funktionsverlust führt"
 */

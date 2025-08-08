@@ -7,4 +7,4 @@ Description: "The ValueSet contains codes for related family member types from S
 * insert Publisher
 * ^status = #active
 
-* include codes from system SCT where concept descendent-of #125677006
+* include codes from system $SCT where concept descendent-of #125677006

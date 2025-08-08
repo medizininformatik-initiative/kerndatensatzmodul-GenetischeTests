@@ -1,0 +1,39 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "mii-exa-molgen-protocol-agilent-sureselect",
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "code": "protocol",
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "display": "Protocol"
+      }
+    ]
+  },
+  "name": "AgilentSureSelectV7",
+  "title": "Agilent SureSelect Human All Exon V7 Kit Protocol",
+  "description": "Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the human exome",
+  "action": [
+    {
+      "title": "DNA Fragmentation",
+      "description": "Fragment genomic DNA to 150-200bp using Covaris"
+    },
+    {
+      "title": "Library Preparation",
+      "description": "End repair, A-tailing, adapter ligation"
+    },
+    {
+      "title": "Hybridization",
+      "description": "Hybridize with SureSelect baits for 24 hours at 65°C"
+    },
+    {
+      "title": "Capture",
+      "description": "Streptavidin bead capture and washing"
+    },
+    {
+      "title": "Amplification",
+      "description": "PCR amplification of captured library"
+    }
+  ]
+}

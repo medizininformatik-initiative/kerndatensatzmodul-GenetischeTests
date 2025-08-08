@@ -14,8 +14,16 @@
       }
     ]
   },
-  "status": "final",
+  "status": "completed",
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient"
-  }
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-ext",
+      "valueReference": {
+        "reference": "Procedure/mii-exa-molgen-genomic-study-analysis-braf"
+      }
+    }
+  ]
 }

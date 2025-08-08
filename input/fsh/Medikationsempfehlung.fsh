@@ -31,8 +31,8 @@ Description: "Beispiel für Medikationsempfehlung abgeleitet von genetischer Var
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation"
 * basedOn = Reference(servicerequest/example)
 * status = TaskStatus#requested
-* intent = RequestIntent#proposal
-* code = LNC#LA26421-0 "Consider alternative medication"
+* intent = $RequestIntent#proposal
+* code = $LNC#LA26421-0 "Consider alternative medication"
 * code.text = "Alternative Medikation in Erwägung ziehen"
 * for = Reference(mii-exa-molgen-patient)
 * reasonReference = Reference(mii-exa-molgen-therapeutische-implikation-1)

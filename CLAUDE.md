@@ -58,6 +58,15 @@ The FSH source files are organized in `input/fsh/`:
 - **Value Sets**: `mii-vs-molgen-[domain]`
 - **Extensions**: `mii-ex-molgen-[purpose]`
 
+### Reference Sequence Standards
+
+**IMPORTANT**: Use MANE (Matched Annotation from NCBI and EMBL-EBI) transcripts for all HGVS notations:
+- **MANE Select**: Preferred default transcript for each gene
+- **MANE Plus Clinical**: Additional clinically relevant transcripts when needed
+- Reference: https://www.ncbi.nlm.nih.gov/refseq/MANE/
+- Benefits: Unified annotation, reduced ambiguity, improved interoperability
+- Format: Use RefSeq NM_ identifiers with version numbers (e.g., NM_007294.4)
+
 ### Dependencies
 
 Key FHIR package dependencies:

@@ -68,6 +68,14 @@
     "resource": [
       {
         "reference": {
+          "reference": "PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect"
+        },
+        "name": "Agilent SureSelect Human All Exon V7 Protocol",
+        "description": "Protokoll für Exom-Anreicherung",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "ServiceRequest/mii-exa-molgen-anforderung-1"
         },
         "name": "Anforderung BRAF Genetische Testung",
@@ -89,6 +97,21 @@
         "name": "Anforderung Molekulargenetische Diagnose Familiäre Belastung für Brust- und Eierstockkrebs",
         "description": "Beispiel für Anforderung für genetische Testung bei Familiärer Belastung für Brust- und Eierstockkrebs.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/mii-exa-molgen-anforderung-wes"
+        },
+        "name": "Anforderung Whole Exome Sequencing",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/mii-exa-molgen-documentreference-bed-file"
+        },
+        "name": "BED File for Target Regions",
+        "description": "BED-Datei mit den Zielregionen des Exom-Kits",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -164,6 +187,45 @@
       },
       {
         "reference": {
+          "reference": "Bundle/mii-exa-molgen-bundle-comprehensive-wes"
+        },
+        "name": "Comprehensive WES Bundle with Full Technical Documentation",
+        "description": "Transaktions-Bundle für eine vollständige Whole Exome Sequencing Analyse mit detaillierten technischen Angaben zu Geräten, Kits, Metriken und Bioinformatik-Pipeline. Dieses Beispiel zeigt die erweiterten Dokumentationsmöglichkeiten für Forschungsprojekte.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/mii-exa-molgen-befundbericht-comprehensive-wes"
+        },
+        "name": "Comprehensive WES Report with Full Technical Documentation",
+        "description": "Beispiel für einen vollständigen WES-Bericht mit detaillierten technischen Angaben",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-molgen-genomic-study-comprehensive-wes"
+        },
+        "name": "Comprehensive Whole Exome Sequencing Study",
+        "description": "Vollständiges Exom-Sequenzierung Beispiel mit detaillierten technischen Angaben",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study"
+      },
+      {
+        "reference": {
+          "reference": "Media/mii-exa-molgen-media-coverage-plot"
+        },
+        "name": "Coverage Plot",
+        "description": "Graphical representation of sequencing coverage",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-diagnostische-implikation-comprehensive"
+        },
+        "name": "Diagnostic Implication for KMT2A Variant",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-molgen-diagnostische-implikation-brca1"
         },
         "name": "Diagnostische Implikation BRCA1 Variante",
@@ -180,6 +242,22 @@
       },
       {
         "reference": {
+          "reference": "Specimen/mii-exa-molgen-specimen-dna-library"
+        },
+        "name": "DNA Library",
+        "description": "Prepared DNA library for sequencing",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-molgen-specimen-blood-edta"
+        },
+        "name": "EDTA Blood Sample",
+        "description": "EDTA-Blutprobe für DNA-Extraktion",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Task/mii-exa-molgen-folgemassnahme-brca1"
         },
         "name": "Empfohlene Folgemaßnahme bei BRCA1 Variante",
@@ -188,11 +266,98 @@
       },
       {
         "reference": {
+          "reference": "DocumentReference/mii-exa-molgen-documentreference-fastq"
+        },
+        "name": "FASTQ Sequencing Files",
+        "description": "Raw sequencing data files",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-molgen-genomic-study-analysis-braf"
+        },
+        "name": "Genomic Study Analysis BRAF",
+        "description": "Analyse der BRAF Region mittels NGS",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-molgen-genomic-study-analysis-cornelia-de-lange"
+        },
+        "name": "Genomic Study Analysis Cornelia de Lange Panel",
+        "description": "NGS-Analyse des Cornelia de Lange-Syndrom Panels",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-molgen-genomic-study-analysis-trurisk-panel"
+        },
+        "name": "Genomic Study Analysis TruRisk Panel v3",
+        "description": "NGS-Analyse des TruRisk Panel v3 für erblichen Brust- und Eierstockkrebs",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-molgen-genomic-study-cornelia-de-lange"
+        },
+        "name": "Genomic Study Cornelia de Lange Panel",
+        "description": "Genomische Studie für Cornelia de Lange-Syndrom Panel",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-molgen-genomic-study-trurisk-panel"
+        },
+        "name": "Genomic Study TruRisk Panel v3",
+        "description": "Genomische Studie für TruRisk Panel v3",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-molgen-genotyp-1"
         },
         "name": "Genotyp BRAF",
         "description": "Beispiel für Genotyp BRAF Gen.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-genotyp-brca1"
+        },
+        "name": "Genotyp BRCA1",
+        "description": "Beispiel für Genotyp BRCA1 Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-genotyp-2"
+        },
+        "name": "Genotyp NIPBL",
+        "description": "Beispiel für Genotyp NIPBL Gen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp"
+      },
+      {
+        "reference": {
+          "reference": "Device/mii-exa-molgen-device-illumina-novaseq"
+        },
+        "name": "Illumina NovaSeq 6000 Sequencer",
+        "description": "Beispiel für Sequenziergerät",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Device/mii-exa-molgen-device-thermofisher-ionchef"
+        },
+        "name": "Ion Chef System",
+        "description": "Library Preparation System",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-molgen-variante-comprehensive-pathogenic"
+        },
+        "name": "KMT2A Pathogenic Variant from WES",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
       },
       {
         "reference": {
@@ -295,7 +460,7 @@
           "reference": "StructureDefinition/mii-pr-molgen-genomic-study-analysis"
         },
         "name": "MII PR MolGen Genomic Study Analysis",
-        "description": "Genomic Study ist ein Profil, dass die Durchführung von konkreten molekulargenetischen Methoden und Assays beschreibt. Es ist vom GenomicStudyAnalysis-Profil aus dem Genomics Reporting IG abgeleitet .",
+        "description": "Genomic Study Analysis ist ein Profil, das die Durchführung von konkreten molekulargenetischen Methoden und Assays beschreibt. Es ist vom GenomicStudyAnalysis-Profil aus dem Genomics Reporting IG abgeleitet. Die Darstellung über GenomicStudyAnalysis ist präziser als die vorherige UntersuchteRegion, da sie eine klare Repräsentation ermöglicht, welche Regionen mit welchem Assay untersucht wurden und welche Bereiche callable bzw. nicht-callable waren. Dies ermöglicht eine genauere Qualitätsbewertung und Interpretation der Ergebnisse, insbesondere bei negativen Befunden.",
         "exampleBoolean": false
       },
       {
@@ -705,19 +870,43 @@
       },
       {
         "reference": {
+          "reference": "SearchParameter/mii-sp-molgen-genomic-study-analysis-device"
+        },
+        "name": "mii-sp-molgen-genomic-study-analysis-device",
+        "description": "Suchparameter für verwendetes Gerät in GenomicStudyAnalysis",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-molgen-genomic-study-analysis-method"
+        },
+        "name": "mii-sp-molgen-genomic-study-analysis-method",
+        "description": "Suchparameter für Methoden-Typ in GenomicStudyAnalysis",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-molgen-genomic-study-analysis-regions-studied"
+        },
+        "name": "mii-sp-molgen-genomic-study-analysis-regions-studied",
+        "description": "Suchparameter für untersuchte Gene/Regionen in GenomicStudyAnalysis",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-molgen-genomic-study-analysis-specimen"
+        },
+        "name": "mii-sp-molgen-genomic-study-analysis-specimen",
+        "description": "Suchparameter für Specimen in GenomicStudyAnalysis",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-molgen-mikrosatelliteninstabilitaet-1"
         },
         "name": "Mikrosatelliteninstabilität",
         "description": "Beispiel für Mikrosatelliteninstabilität in Tumorprobe.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet"
-      },
-      {
-        "reference": {
-          "reference": "Procedure/mii-exa-molgen-genomic-study-1"
-        },
-        "name": "Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom",
-        "description": "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorektalem Adenokarzniom.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study"
       },
       {
         "reference": {
@@ -729,10 +918,26 @@
       },
       {
         "reference": {
+          "reference": "Procedure/mii-exa-molgen-genomic-study-1"
+        },
+        "name": "Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom",
+        "description": "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorektalem Adenokarzniom.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study"
+      },
+      {
+        "reference": {
           "reference": "DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-2"
         },
         "name": "Molekulargentischer Befund 2: Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang",
         "description": "Beispiel für molekulargenetischen Befund Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-tumorboard-3"
+        },
+        "name": "Molekulargentischer Befund 3: Tumorboard Genfusion",
+        "description": "Beispiel für molekulargenetischen Befund Tumorboard Genfusion.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
       },
       {
@@ -769,6 +974,14 @@
       },
       {
         "reference": {
+          "reference": "Practitioner/mii-exa-molgen-practitioner-ordering"
+        },
+        "name": "Ordering Practitioner",
+        "description": "Anfordernder Arzt",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "RiskAssessment/mii-exa-molgen-prs-brca1"
         },
         "name": "Polygener Risiko Score BRCA1 Variante",
@@ -798,6 +1011,30 @@
         "name": "Variante SMO CNV",
         "description": "Beispiel für genetische Copy Number Variante SMO Gen.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-molgen-genomic-study-analysis-wes-bioinformatics"
+        },
+        "name": "WES Bioinformatics Analysis",
+        "description": "Bioinformatische Auswertung für Whole Exome Sequencing",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-molgen-genomic-study-analysis-wes-library-prep"
+        },
+        "name": "WES Library Preparation Analysis",
+        "description": "Library Preparation für Whole Exome Sequencing",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-molgen-genomic-study-analysis-wes-sequencing"
+        },
+        "name": "WES Sequencing Analysis",
+        "description": "Sequenzierung für Whole Exome Sequencing mit detaillierten Metriken",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"
       }
     ],
     "page": {

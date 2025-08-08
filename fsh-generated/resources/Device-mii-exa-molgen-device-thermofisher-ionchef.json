@@ -1,0 +1,29 @@
+{
+  "resourceType": "Device",
+  "id": "mii-exa-molgen-device-thermofisher-ionchef",
+  "identifier": [
+    {
+      "system": "https://example.org/lab-devices",
+      "value": "IONCHEF-IC12345"
+    }
+  ],
+  "manufacturer": "Thermo Fisher Scientific",
+  "modelNumber": "Ion Chef",
+  "serialNumber": "IC12345",
+  "deviceName": [
+    {
+      "name": "Ion Chef System",
+      "type": "model-name"
+    }
+  ],
+  "type": {
+    "coding": [
+      {
+        "code": "706689003",
+        "system": "http://snomed.info/sct",
+        "display": "Nucleic acid extraction system (physical object)"
+      }
+    ]
+  },
+  "status": "active"
+}

@@ -1,0 +1,32 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "mii-exa-molgen-documentreference-bed-file",
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "code": "GENOMIC",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "display": "Genomic"
+      }
+    ],
+    "text": "BED file - Agilent SureSelect V7 target regions"
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient"
+  },
+  "content": [
+    {
+      "attachment": {
+        "url": "https://example.org/files/agilent_v7_targets.bed",
+        "title": "Agilent SureSelect Human All Exon V7 Target Regions",
+        "contentType": "text/plain"
+      },
+      "format": {
+        "code": "BED",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "display": "BED file format"
+      }
+    }
+  ]
+}

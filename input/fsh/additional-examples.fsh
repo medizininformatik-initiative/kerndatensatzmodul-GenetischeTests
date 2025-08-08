@@ -66,9 +66,9 @@ Usage: #example
 Instance: mii-exa-molgen-specimen-1
 InstanceOf: https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore
 Usage: #example
-* type = SCT#128159001 "Tissue specimen from colon (specimen)"
+* type = $SCT#128159001 "Tissue specimen from colon (specimen)"
 * collection.collectedDateTime = "2022-03-24T12:44:00+01:00"
-* collection.bodySite = SCT#71854001 "Colon structure (body structure)"
+* collection.bodySite = $SCT#71854001 "Colon structure (body structure)"
 * identifier.system = "https://biobank.uk-musterstadt.de/fhir/sid/proben"
 * identifier.value = "5432"
 * status = #available
@@ -86,7 +86,7 @@ Instance: mii-exa-molgen-specimen-2
 InstanceOf: https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore
 Usage: #example
 * status = #available
-* type = SCT#445295009 "Blood specimen with edetic acid (specimen)"
+* type = $SCT#445295009 "Blood specimen with edetic acid (specimen)"
 * subject = Reference(mii-exa-molgen-patient-2)
 * receivedTime = "2021-11-24"
 * collection.collectedDateTime = "2021-11-23"
@@ -140,7 +140,7 @@ Instance: mii-exa-molgen-chargeitem-ebm-21
 InstanceOf: http://fhir.de/StructureDefinition/chargeitem-de-ebm
 Usage: #example
 * status = #billable
-* code = EBM#11513 "Postnatale Mutationssuche zum Nachweis oder Ausschluss einer krankheitsrelevanten oder krankheitsauslösenden konstitutionellen genomischen Mutation"
+* code = $EBM#11513 "Postnatale Mutationssuche zum Nachweis oder Ausschluss einer krankheitsrelevanten oder krankheitsauslösenden konstitutionellen genomischen Mutation"
 * subject = Reference(mii-exa-molgen-patient-2)
 * quantity.value = 72
 
@@ -148,7 +148,7 @@ Instance: mii-exa-molgen-chargeitem-ebm-22
 InstanceOf: http://fhir.de/StructureDefinition/chargeitem-de-ebm
 Usage: #example
 * status = #billable
-* code = EBM#11512 "Gezielter Nachweis oder Ausschluss von krankheitsrelevanten oder krankheitsauslösenden großen Deletionen und/oder Duplikationen"
+* code = $EBM#11512 "Gezielter Nachweis oder Ausschluss von krankheitsrelevanten oder krankheitsauslösenden großen Deletionen und/oder Duplikationen"
 * subject = Reference(mii-exa-molgen-patient-2)
 * quantity.value = 6
 
@@ -156,7 +156,7 @@ Instance: mii-exa-molgen-chargeitem-ebm-23
 InstanceOf: http://fhir.de/StructureDefinition/chargeitem-de-ebm
 Usage: #example
 * status = #billable
-* code = EBM#11302 "Zuschlag für Gemeinkosten und die wissenschaftliche ärztliche Beurteilung und Befundung komplexer genetischer Analysen im individuellen klinischen Kontext bei seltenen Erkrankungen"
+* code = $EBM#11302 "Zuschlag für Gemeinkosten und die wissenschaftliche ärztliche Beurteilung und Befundung komplexer genetischer Analysen im individuellen klinischen Kontext bei seltenen Erkrankungen"
 * subject = Reference(mii-exa-molgen-patient-2)
 * quantity.value = 1
 
@@ -164,7 +164,7 @@ Instance: mii-exa-molgen-chargeitem-ebm-24
 InstanceOf: http://fhir.de/StructureDefinition/chargeitem-de-ebm
 Usage: #example
 * status = #billable
-* code = EBM#11301 "Grundpauschale humangenetische in-vitro-Diagnostik bei Probeneinsendung"
+* code = $EBM#11301 "Grundpauschale humangenetische in-vitro-Diagnostik bei Probeneinsendung"
 * subject = Reference(mii-exa-molgen-patient-2)
 * quantity.value = 1
 
@@ -244,7 +244,7 @@ Instance: mii-exa-molgen-specimen-brca1
 InstanceOf: https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore
 Usage: #example
 * status = #available
-* type = SCT#127457009 "Tissue specimen from breast (specimen)"
+* type = $SCT#127457009 "Tissue specimen from breast (specimen)"
 * subject = Reference(mii-exa-molgen-patient-brca1)
 * receivedTime = "2022-11-01"
 * collection.collectedDateTime = "2022-11-01"
@@ -362,7 +362,7 @@ Usage: #example
 * code.coding[=].extension[=].valueCoding = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT#V
 * code.coding[=].version = "2021"
 * code.coding[=] = http://fhir.de/CodeSystem/bfarm/icd-10-gm#Q87.1 "Angeborene Fehlbildungssyndrome, die vorwiegend mit Kleinwuchs einhergehen"
-* code.coding[1] = OMIM#122470 "Cornelia de Lange syndrome 1"
+* code.coding[1] = $OMIM#122470 "Cornelia de Lange syndrome 1"
 * subject = Reference(mii-exa-molgen-patient-2)
 * recorder = Reference(mii-exa-molgen-practitioner-lab)
 * asserter = Reference(mii-exa-molgen-practitioner-lab)
@@ -381,14 +381,14 @@ Usage: #example
 * code.coding[=].extension[=].valueCoding = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT#G
 * code.coding[=].version = "2021"
 * code.coding[=] = http://fhir.de/CodeSystem/bfarm/icd-10-gm#Q87.1 "Angeborene Fehlbildungssyndrome, die vorwiegend mit Kleinwuchs einhergehen"
-* code.coding[1] = OMIM#122470 "Cornelia de Lange syndrome 1"
+* code.coding[1] = $OMIM#122470 "Cornelia de Lange syndrome 1"
 * subject = Reference(mii-exa-molgen-patient-2)
 //* encounter = Reference(Patient/12345)
 * recorder = Reference(mii-exa-molgen-practitioner-physician)
 * asserter = Reference(mii-exa-molgen-practitioner-physician)
 * onsetPeriod.start = "2021-09-19"
 * onsetPeriod.start.extension.url = "http://fhir.de/StructureDefinition/lebensphase"
-* onsetPeriod.start.extension.valueCodeableConcept = SCT#255407002 "Neonatal (qualifier value)"
+* onsetPeriod.start.extension.valueCodeableConcept = $SCT#255407002 "Neonatal (qualifier value)"
 * recordedDate = "2022-03-06T07:36:00+01:00"
 * evidence.detail = Reference(mii-exa-molgen-molekulargenetischer-befundbericht-2)
 
@@ -398,10 +398,10 @@ Usage: #example
 //* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
-* code = HPO#HP:0000527 "Long eyelashes"
+* code = $HPO#HP:0000527 "Long eyelashes"
 * effectiveDateTime = "2022-03-13T09:30:00+01:00"
 * subject = Reference(mii-exa-molgen-patient-2)
-* valueCodeableConcept = LNC#LA9633-4 "Present"
+* valueCodeableConcept = $LNC#LA9633-4 "Present"
 * performer = Reference(mii-exa-molgen-practitioner-physician)
 
 Instance: mii-exa-molgen-phenotypic-feature-2
@@ -410,10 +410,10 @@ Usage: #example
 //* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
-* code = HPO#HP:0001518 "Small for gestational age"
+* code = $HPO#HP:0001518 "Small for gestational age"
 * effectiveDateTime = "2022-03-13T09:30:00+01:00"
 * subject = Reference(mii-exa-molgen-patient-2)
-* valueCodeableConcept = LNC#LA9633-4 "Present"
+* valueCodeableConcept = $LNC#LA9633-4 "Present"
 * performer = Reference(mii-exa-molgen-practitioner-physician)
 
 Instance: mii-exa-molgen-phenotypic-feature-3
@@ -422,10 +422,10 @@ Usage: #example
 //* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
-* code = HPO#HP:0000252 "Microcephaly"
+* code = $HPO#HP:0000252 "Microcephaly"
 * effectiveDateTime = "2022-03-13T09:30:00+01:00"
 * subject = Reference(mii-exa-molgen-patient-2)
-* valueCodeableConcept = LNC#LA9633-4 "Present"
+* valueCodeableConcept = $LNC#LA9633-4 "Present"
 * performer = Reference(mii-exa-molgen-practitioner-physician)
 
 Instance: mii-exa-molgen-phenotypic-feature-4
@@ -434,10 +434,10 @@ Usage: #example
 //* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
-* code = HPO#HP:0003560 "Muscular dystrophy"
+* code = $HPO#HP:0003560 "Muscular dystrophy"
 * effectiveDateTime = "2022-03-13T09:30:00+01:00"
 * subject = Reference(mii-exa-molgen-patient-2)
-* valueCodeableConcept = LNC#LA9633-4 "Present"
+* valueCodeableConcept = $LNC#LA9633-4 "Present"
 * performer = Reference(mii-exa-molgen-practitioner-physician)
 
 Instance: mii-exa-befund-bundle-befund-2-nipbl-clinical
@@ -492,7 +492,7 @@ Instance: mii-exa-molgen-specimen-srcc
 InstanceOf: https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore
 Usage: #example
 * status = #available
-* type = SCT#445295009 "Blood specimen with edetic acid (specimen)"
+* type = $SCT#445295009 "Blood specimen with edetic acid (specimen)"
 * subject = Reference(mii-exa-molgen-patient-srcc)
 * receivedTime = "2022-11-30"
 * collection.collectedDateTime = "2022-11-30"
@@ -503,7 +503,7 @@ Instance: mii-exa-molgen-specimen-srcc-2
 InstanceOf: https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore
 Usage: #example
 * status = #available
-* type = SCT#445295009 "Blood specimen with edetic acid (specimen)"
+* type = $SCT#445295009 "Blood specimen with edetic acid (specimen)"
 * subject = Reference(mii-exa-molgen-patient-srcc)
 * receivedTime = "2022-11-30"
 * collection.collectedDateTime = "2022-11-30"
@@ -517,17 +517,17 @@ Usage: #example
 * identifier.value = "7B369EB0"
 * status = #active
 * intent = #order
-* category = SCT#108252007 "Laboratory procedure (procedure)"
-* code.coding[0] = SCT#405825005 "Molecular genetic test (procedure)"
+* category = $SCT#108252007 "Laboratory procedure (procedure)"
+* code.coding[0] = $SCT#405825005 "Molecular genetic test (procedure)"
 * code.text = "Molekulargenetische Untersuchung (Stufendiagnostik) der relevanten Gene"
 * subject = Reference(mii-exa-molgen-patient-srcc)
 * authoredOn = "2022-11-30"
 * requester = Reference(mii-exa-molgen-practitioner-physician)
 * specimen = Reference(mii-exa-molgen-specimen-srcc)
-* reasonCode[0].coding[0] = SCT#87737001 "Signet ring cell carcinoma (morphologic abnormality)"
-* reasonCode[0].coding[1] = ICD10GM|2022#C16.9 "Bösartige Neubildung des Magens, nicht näher bezeichnet"
+* reasonCode[0].coding[0] = $SCT#87737001 "Signet ring cell carcinoma (morphologic abnormality)"
+* reasonCode[0].coding[1] = $ICD10GM#C16.9 "Bösartige Neubildung des Magens, nicht näher bezeichnet"
 * reasonCode[0].text = "Eigenanamnese: Siegelringkarzinom des Magens, diffus wachsend"
-* reasonCode[1].coding[0] = SCT#429740004 "Family history of malignant neoplasm of breast (situation)"
+* reasonCode[1].coding[0] = $SCT#429740004 "Family history of malignant neoplasm of breast (situation)"
 * reasonCode[1].text = "Mutter an Brustkrebs verstorben"
 
 Instance: mii-exa-molgen-family-member-history-srcc
@@ -536,13 +536,13 @@ Usage: #example
 * status = #completed
 * patient = Reference(mii-exa-molgen-patient-srcc)
 * date = "2022-11-30"
-* relationship.coding[snomed] = SCT#72705000 "Mother (person)"
-* relationship.coding[v3-RoleCode] = v3-RoleCode-cs#MTH "mother"
-* sex.coding[0] = AdminGender#female
-* sex.coding[+] = SCT#248152002 "Female (finding)"
+* relationship.coding[snomed] = $SCT#72705000 "Mother (person)"
+* relationship.coding[v3-RoleCode] = $v3-RoleCode-cs#MTH "mother"
+* sex.coding[0] = $AdminGender#female
+* sex.coding[+] = $SCT#248152002 "Female (finding)"
 * deceasedBoolean = true
-* reasonCode.coding[sct] = SCT#87737001 "Signet ring cell carcinoma (morphologic abnormality)"
-* condition[0].code.coding[sct] = SCT#254837009 "Malignant neoplasm of breast (disorder)"
+* reasonCode.coding[sct] = $SCT#87737001 "Signet ring cell carcinoma (morphologic abnormality)"
+* condition[0].code.coding[sct] = $SCT#254837009 "Malignant neoplasm of breast (disorder)"
 * condition[=].contributedToDeath = true
 
 Instance: mii-exa-molgen-variante-srcc-ctnna1
@@ -551,42 +551,42 @@ Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
 * basedOn = Reference(mii-exa-molgen-anforderung-srcc)
 * status = #final
-* category[labCategory] = ObsCat#laboratory "Laboratory"
-* code = LNC#69548-6 "Genetic variant assessment"
+* category[labCategory] = $ObsCat#laboratory "Laboratory"
+* code = $LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(mii-exa-molgen-patient-srcc)
-* valueCodeableConcept = LNC#LA9633-4 "Present"
-* method.coding[0] = LNC#LA26398-0 "Sequencing"
+* valueCodeableConcept = $LNC#LA9633-4 "Present"
+* method.coding[0] = $LNC#LA26398-0 "Sequencing"
 * specimen = Reference(mii-exa-molgen-specimen-srcc)
 * device = Reference(mii-exa-molgen-device-sequencer)
-* component[gene-studied].valueCodeableConcept = HGNC#HGNC:2509 "CTNNA1"
-* component[representative-transcript-ref-seq].valueCodeableConcept = RefSeq#NM_001903.5
-* component[representative-coding-hgvs].valueCodeableConcept = HGVS#NM_001903.5:c.1030del
-* component[genomic-hgvs].valueCodeableConcept = HGVS#NC_000005.9:g.138163372del
-* component[genomic-ref-seq].valueCodeableConcept = RefSeq#NC_000005.9
-* component[representative-protein-hgvs].valueCodeableConcept = HGVS#p.(Leu344CysfsTer25)
-* component[allelic-state].valueCodeableConcept = LNC#LA6706-1 "Heterozygous"
-* component[coding-change-type].valueCodeableConcept = SO#SO:0000159 "deletion"
-//* component[amino-acid-change-type].valueCodeableConcept = LNC#LA6694-9 "Frameshift"
-* component[cytogenetic-location].valueCodeableConcept = ChromLoc#5q31.2
+* component[gene-studied].valueCodeableConcept = $HGNC#HGNC:2509 "CTNNA1"
+* component[representative-transcript-ref-seq].valueCodeableConcept = $RefSeq#NM_001903.5
+* component[representative-coding-hgvs].valueCodeableConcept = $HGVS#NM_001903.5:c.1030del
+* component[genomic-hgvs].valueCodeableConcept = $HGVS#NC_000005.9:g.138163372del
+* component[genomic-ref-seq].valueCodeableConcept = $RefSeq#NC_000005.9
+* component[representative-protein-hgvs].valueCodeableConcept = $HGVS#p.(Leu344CysfsTer25)
+* component[allelic-state].valueCodeableConcept = $LNC#LA6706-1 "Heterozygous"
+* component[coding-change-type].valueCodeableConcept = $SO#SO:0000159 "deletion"
+//* component[amino-acid-change-type].valueCodeableConcept = $LNC#LA6694-9 "Frameshift"
+* component[cytogenetic-location].valueCodeableConcept = $ChromLoc#5q31.2
 
 Instance: mii-exa-molgen-diagnostische-implikation-srcc-ctnna1
 InstanceOf: mii-pr-molgen-diagnostische-implikation
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
 * extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
-* extension[workflow-relatedArtifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
+* extension[workflow-relatedArtifact].valueRelatedArtifact.type = $RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.citation = "ClinGen"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.url = "https://search.clinicalgenome.org/kb/gene-dosage/HGNC:2509"
 * status = #final
-* category[labCategory] = ObsCat#laboratory "Laboratory"
-* code = GenTbd#diagnostic-implication "Diagnostische Implikation"
+* category[labCategory] = $ObsCat#laboratory "Laboratory"
+* code = $GenTbd#diagnostic-implication "Diagnostische Implikation"
 * subject = Reference(mii-exa-molgen-patient-srcc)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-srcc-ctnna1)
 * component[conclusion-string].valueString = "Diese Variante wird nach den ACMG/AMP-Kriterien zusammenfasssend als pathogen bewertet entsprechend IARC Class 5."
-* component[clinical-significance].valueCodeableConcept = LNC#LA6668-3 "Pathogenic"
-//* component[functional-effect].valueCodeableConcept = SO#SO:0002054 "loss_of_function_variant"
-* component[predicted-phenotype].valueCodeableConcept.coding[0] = HPO#716859000 "Hereditary diffuse carcinoma of stomach (disorder)"
+* component[clinical-significance].valueCodeableConcept = $LNC#LA6668-3 "Pathogenic"
+//* component[functional-effect].valueCodeableConcept = $SO#SO:0002054 "loss_of_function_variant"
+* component[predicted-phenotype].valueCodeableConcept.coding[0] = $HPO#716859000 "Hereditary diffuse carcinoma of stomach (disorder)"
 /*
 Instance: mii-exa-molgen-untersuchte-region-srcc-apc
 InstanceOf: mii-pr-molgen-untersuchte-region
@@ -684,9 +684,9 @@ Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
 * extension[supportingInfo].valueReference = Reference(mii-exa-molgen-family-member-history-srcc)
 * basedOn = Reference(mii-exa-molgen-anforderung-srcc)
-* status = DiagRepStatus#final
-* category[Genetics] = v2-0074#GE "Genetics"
-* code[+] = LNC#51969-4 "Genetic analysis report"
+* status = $DiagRepStatus#final
+* category[Genetics] = $v2-0074#GE "Genetics"
+* code[+] = $LNC#51969-4 "Genetic analysis report"
 * subject = Reference(mii-exa-molgen-patient-srcc)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * specimen[0] = Reference(mii-exa-molgen-specimen-srcc)
@@ -771,14 +771,14 @@ Usage: #example
 * identifier.value = "PRK4QE59A"
 * status = #active
 * intent = #order
-* category = SCT#108252007 "Laboratory procedure (procedure)"
-* code.coding[0] = SCT#405825005 "Molecular genetic test (procedure)"
+* category = $SCT#108252007 "Laboratory procedure (procedure)"
+* code.coding[0] = $SCT#405825005 "Molecular genetic test (procedure)"
 * code.text = "Therapierelevante genetische Veränderungen bei Intrahepatischem Gallengangskarzinom"
 * subject = Reference(mii-exa-molgen-patient-fgfr2-fusion)
 * authoredOn = "2022-11-30"
 * requester = Reference(mii-exa-molgen-practitioner-physician)
-* reasonCode[0].coding[0] = SCT#109842005 "Intrahepatic bile duct carcinoma (disorder)"
-* reasonCode[0].coding[1] = ICD10GM|2022#C22.1 "Intrahepatisches Gallengangskarzinom"
+* reasonCode[0].coding[0] = $SCT#109842005 "Intrahepatic bile duct carcinoma (disorder)"
+* reasonCode[0].coding[1] = $ICD10GM#C22.1 "Intrahepatisches Gallengangskarzinom"
 
 Instance: mii-exa-molgen-variante-fgfr2-fusion
 InstanceOf: mii-pr-molgen-variante
@@ -788,23 +788,23 @@ Description: "Beispiel für genetische Variante FGFR2-DBP Fusion."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
 * basedOn = Reference(mii-exa-molgen-anforderung-fgfr2-fusion)
 * status = #final
-* category[labCategory] = ObsCat#laboratory "Laboratory"
-* code = LNC#69548-6 "Genetic variant assessment"
+* category[labCategory] = $ObsCat#laboratory "Laboratory"
+* code = $LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(mii-exa-molgen-patient-fgfr2-fusion)
-* valueCodeableConcept = LNC#LA9633-4 "Present"
-* method.coding[0] = LNC#LA26398-0 "Sequencing"
-* method.coding[1] = LNC#86206-0 "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
-* component[gene-studied].valueCodeableConcept = HGNC#HGNC:3689 "FGFR2"
-* component[coding-change-type].valueCodeableConcept = SO#SO:0001565 "gene_fusion"
-* component[gene-fusion].valueCodeableConcept = HGNC#HGNC:3689::HGNC:2697 "FGFR2::DBP"
+* valueCodeableConcept = $LNC#LA9633-4 "Present"
+* method.coding[0] = $LNC#LA26398-0 "Sequencing"
+* method.coding[1] = $LNC#86206-0 "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
+* component[gene-studied].valueCodeableConcept = $HGNC#HGNC:3689 "FGFR2"
+* component[coding-change-type].valueCodeableConcept = $SO#SO:0001565 "gene_fusion"
+* component[gene-fusion].valueCodeableConcept = $HGNC#HGNC:3689::HGNC:2697 "FGFR2::DBP"
 
 Instance: mii-exa-molgen-diagnostische-implikation-fgfr2-fusion
 InstanceOf: mii-pr-molgen-diagnostische-implikation
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
 * status = #final
-* category[labCategory] = ObsCat#laboratory "Laboratory"
-* code = GenTbd#diagnostic-implication "Diagnostische Implikation"
+* category[labCategory] = $ObsCat#laboratory "Laboratory"
+* code = $GenTbd#diagnostic-implication "Diagnostische Implikation"
 * subject = Reference(mii-exa-molgen-patient-fgfr2-fusion)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-fgfr2-fusion)
@@ -815,18 +815,18 @@ InstanceOf: mii-pr-molgen-therapeutische-implikation
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapeutic-implication"
 * status = #final
-* category[labCategory] = ObsCat#laboratory "Laboratory"
-* code = GenTbd#therapeutic-implication "Therapeutische Implikation"
+* category[labCategory] = $ObsCat#laboratory "Laboratory"
+* code = $GenTbd#therapeutic-implication "Therapeutische Implikation"
 * subject = Reference(mii-exa-molgen-patient-fgfr2-fusion)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-fgfr2-fusion)
 * component[conclusion-string].valueString = "Hochselektiver FGFR2-Inhibitor RLY-4008 bei Patienten mit Cholangiokarzinomen und anderen soliden Tumoren, mit oder ohne FGFR- gerichtete Vortherapie."
-* component[medication-assessed][+].code = LNC#51963-7 "Medication assessed [ID]"
-* component[medication-assessed][=].valueCodeableConcept.coding[0] = ATC|2022#L01EN "Fibroblasten-Wachstumsfaktor-Rezeptor (FGFR)-Tyrosinkinase-Inhibitoren"
-* component[medication-assessed][=].valueCodeableConcept.coding[1] = SCT#1162485005 "Substance with fibroblast growth factor receptor inhibitor mechanism of action (substance)"
+* component[medication-assessed][+].code = $LNC#51963-7 "Medication assessed [ID]"
+* component[medication-assessed][=].valueCodeableConcept.coding[0] = $ATC#L01EN "Fibroblasten-Wachstumsfaktor-Rezeptor (FGFR)-Tyrosinkinase-Inhibitoren"
+* component[medication-assessed][=].valueCodeableConcept.coding[1] = $SCT#1162485005 "Substance with fibroblast growth factor receptor inhibitor mechanism of action (substance)"
 * component[evidence-level].valueCodeableConcept.text = "m1c"
-* component[phenotypic-treatment-context].valueCodeableConcept.coding[0] = SCT#109842005 "Intrahepatic bile duct carcinoma (disorder)"
-* component[phenotypic-treatment-context].valueCodeableConcept.coding[1] = ICD10GM|2022#C22.1 "Intrahepatisches Gallengangskarzinom"
+* component[phenotypic-treatment-context].valueCodeableConcept.coding[0] = $SCT#109842005 "Intrahepatic bile duct carcinoma (disorder)"
+* component[phenotypic-treatment-context].valueCodeableConcept.coding[1] = $ICD10GM#C22.1 "Intrahepatisches Gallengangskarzinom"
 
 Instance: mii-exa-molgen-medikationsempfehlung-fgfr2-fusion
 InstanceOf: mii-pr-molgen-medikationsempfehlung
@@ -834,8 +834,8 @@ Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation"
 * basedOn = Reference(mii-exa-molgen-anforderung-fgfr2-fusion)
 * status = TaskStatus#requested
-* intent = RequestIntent#proposal
-* code = LNC#LA26421-0 "Consider alternative medication"
+* intent = $RequestIntent#proposal
+* code = $LNC#LA26421-0 "Consider alternative medication"
 * code.text = "Hochselektive FGFR-Inhibitor-Therapie"
 * for = Reference(mii-exa-molgen-patient-fgfr2-fusion)
 * reasonReference = Reference(mii-exa-molgen-therapeutische-implikation-fgfr2-fusion)
@@ -846,9 +846,9 @@ Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
 * extension[recommended-action].valueReference = Reference(mii-exa-molgen-medikationsempfehlung-fgfr2-fusion)
 * basedOn = Reference(mii-exa-molgen-anforderung-fgfr2-fusion)
-* status = DiagRepStatus#final
-* category[Genetics] = v2-0074#GE "Genetics"
-* code[+] = LNC#51969-4 "Genetic analysis report"
+* status = $DiagRepStatus#final
+* category[Genetics] = $v2-0074#GE "Genetics"
+* code[+] = $LNC#51969-4 "Genetic analysis report"
 * subject = Reference(mii-exa-molgen-patient-fgfr2-fusion)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * result[diagnostic-implication] = Reference(mii-exa-molgen-diagnostische-implikation-fgfr2-fusion)

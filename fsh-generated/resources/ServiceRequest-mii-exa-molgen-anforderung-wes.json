@@ -1,0 +1,39 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "mii-exa-molgen-anforderung-wes",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
+    ]
+  },
+  "status": "completed",
+  "intent": "order",
+  "code": {
+    "coding": [
+      {
+        "code": "94077-5",
+        "system": "http://loinc.org",
+        "display": "Whole exome sequence analysis in Blood or Tissue by Molecular genetics method"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient"
+  },
+  "authoredOn": "2024-01-10",
+  "requester": {
+    "reference": "Practitioner/mii-exa-molgen-practitioner-ordering"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "code": "234123001",
+          "system": "http://snomed.info/sct",
+          "display": "Intellectual disability syndrome"
+        }
+      ],
+      "text": "Unklare Entwicklungsverzögerung mit Dysmorphiezeichen, V.a. genetisches Syndrom nach unauffälliger Chromosomenanalyse und Array-CGH"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "resourceType": "Device",
+  "id": "mii-exa-molgen-device-illumina-novaseq",
+  "identifier": [
+    {
+      "system": "https://example.org/lab-devices",
+      "value": "NOVASEQ-6000-SN12345"
+    }
+  ],
+  "manufacturer": "Illumina Inc.",
+  "modelNumber": "NovaSeq 6000",
+  "serialNumber": "SN12345",
+  "deviceName": [
+    {
+      "name": "NovaSeq 6000 Sequencing System",
+      "type": "model-name"
+    }
+  ],
+  "type": {
+    "coding": [
+      {
+        "code": "702659008",
+        "system": "http://snomed.info/sct",
+        "display": "Automated DNA sequencer, device (physical object)"
+      }
+    ]
+  },
+  "status": "active"
+}
