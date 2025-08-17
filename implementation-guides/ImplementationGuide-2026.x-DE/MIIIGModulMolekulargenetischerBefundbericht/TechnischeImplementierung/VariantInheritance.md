@@ -10,7 +10,7 @@ Canonical: http://hl7.org/fhir/uv/genomics-reporting/ValueSet/variant-inheritanc
 
 ---
 
-Das ValueSet [Variant Inheritances](http://hl7.org/fhir/uv/genomics-reporting/STU2/ValueSet-variant-inheritance-vs.html) stammt aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU2/).
+Das ValueSet [Variant Inheritances](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-variant-inheritance-vs.html) stammt aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
 
 ---
 

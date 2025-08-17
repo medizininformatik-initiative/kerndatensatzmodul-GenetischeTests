@@ -120,3 +120,66 @@
 // //Usage: #definition
 // //* insert SP_Publisher
 // //* insert SearchParam(riskassessment-reason-code, riskassessment-reason-code, Suche auf RiskAssessment ReasonCode, reason-code, RiskAssessment, token, RiskAssessment.reasonCode)
+
+// SearchParameters for GenomicStudy and GenomicStudyAnalysis
+Instance: mii-sp-molgen-genomic-study-analysis-specimen
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-Specimen"
+* name = "SP_MII_MolGen_GenomicStudyAnalysis_Specimen"
+* status = #active
+* experimental = false
+* date = "2024-11-08"
+* description = "Suchparameter für Specimen in GenomicStudyAnalysis"
+* code = #specimen
+* base = #Procedure
+* type = #reference
+* expression = "Procedure.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen').value"
+* target[+] = #Specimen
+
+Instance: mii-sp-molgen-genomic-study-analysis-method
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-MethodType"
+* name = "SP_MII_MolGen_GenomicStudyAnalysis_MethodType"
+* status = #active
+* experimental = false
+* date = "2024-11-08"
+* description = "Suchparameter für Methoden-Typ in GenomicStudyAnalysis"
+* code = #method-type
+* base = #Procedure
+* type = #token
+* expression = "Procedure.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type').value"
+
+Instance: mii-sp-molgen-genomic-study-analysis-regions-studied
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-RegionsStudied"
+* name = "SP_MII_MolGen_GenomicStudyAnalysis_RegionsStudied"
+* status = #active
+* experimental = false
+* date = "2024-11-08"
+* description = "Suchparameter für untersuchte Gene/Regionen in GenomicStudyAnalysis"
+* code = #regions-studied
+* base = #Procedure
+* type = #token
+* expression = "Procedure.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-regions').extension.where(url='studied').value"
+
+Instance: mii-sp-molgen-genomic-study-analysis-device
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-Device"
+* name = "SP_MII_MolGen_GenomicStudyAnalysis_Device"
+* status = #active
+* experimental = false
+* date = "2024-11-08"
+* description = "Suchparameter für verwendetes Gerät in GenomicStudyAnalysis"
+* code = #device
+* base = #Procedure
+* type = #reference
+* expression = "Procedure.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device').value"
+* target[+] = #Device

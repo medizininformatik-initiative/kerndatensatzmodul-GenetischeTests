@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-molgen-molekulargenetischer-befundbericht",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht",
-  "version": "2026.0.0-alpha.1",
+  "version": "2026.0.0-ballot",
   "name": "MII_PR_MolGen_MolekulargenetischerBefundbericht",
   "title": "MII PR MolGen Molekulargenetischer Befundbericht",
   "status": "active",
@@ -73,6 +73,12 @@
         "id": "DiagnosticReport.extension:supporting-info",
         "path": "DiagnosticReport.extension",
         "sliceName": "supporting-info",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:genomic-study",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "genomic-study",
         "mustSupport": true
       },
       {

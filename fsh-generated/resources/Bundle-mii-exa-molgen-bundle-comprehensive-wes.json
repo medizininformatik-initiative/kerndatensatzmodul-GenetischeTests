@@ -1,0 +1,944 @@
+{
+  "resourceType": "Bundle",
+  "id": "mii-exa-molgen-bundle-comprehensive-wes",
+  "type": "transaction",
+  "timestamp": "2024-01-20T10:00:00+01:00",
+  "entry": [
+    {
+      "fullUrl": "https://example.org/Patient/mii-exa-molgen-patient-wes",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "mii-exa-molgen-patient-wes",
+        "identifier": [
+          {
+            "system": "https://example.org/patient-ids",
+            "value": "WES2024001"
+          }
+        ],
+        "name": [
+          {
+            "family": "Mustermann",
+            "given": [
+              "Max"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1970-01-01"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/Device/mii-exa-molgen-device-illumina-novaseq",
+      "resource": {
+        "resourceType": "Device",
+        "id": "mii-exa-molgen-device-illumina-novaseq",
+        "identifier": [
+          {
+            "system": "https://example.org/lab-devices",
+            "value": "NOVASEQ-6000-SN12345"
+          }
+        ],
+        "manufacturer": "Illumina Inc.",
+        "modelNumber": "NovaSeq 6000",
+        "serialNumber": "SN12345",
+        "deviceName": [
+          {
+            "name": "NovaSeq 6000 Sequencing System",
+            "type": "model-name"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "code": "702659008",
+              "system": "http://snomed.info/sct",
+              "display": "Automated DNA sequencer, device (physical object)"
+            }
+          ]
+        },
+        "status": "active"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Device"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/Device/mii-exa-molgen-device-thermofisher-ionchef",
+      "resource": {
+        "resourceType": "Device",
+        "id": "mii-exa-molgen-device-thermofisher-ionchef",
+        "identifier": [
+          {
+            "system": "https://example.org/lab-devices",
+            "value": "IONCHEF-IC12345"
+          }
+        ],
+        "manufacturer": "Thermo Fisher Scientific",
+        "modelNumber": "Ion Chef",
+        "serialNumber": "IC12345",
+        "deviceName": [
+          {
+            "name": "Ion Chef System",
+            "type": "model-name"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "code": "706689003",
+              "system": "http://snomed.info/sct",
+              "display": "Nucleic acid extraction system (physical object)"
+            }
+          ]
+        },
+        "status": "active"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Device"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/Specimen/mii-exa-molgen-specimen-blood-edta",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "mii-exa-molgen-specimen-blood-edta-bundle",
+        "identifier": [
+          {
+            "system": "https://example.org/specimen-ids",
+            "value": "EDTA-2024-001"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "code": "119361006",
+              "system": "http://snomed.info/sct",
+              "display": "Plasma specimen"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient-wes"
+        },
+        "collection": {
+          "collectedDateTime": "2024-01-15T09:30:00+01:00"
+        },
+        "container": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "767384004",
+                  "system": "http://snomed.info/sct",
+                  "display": "Evacuated blood collection tube, K2 EDTA"
+                }
+              ]
+            },
+            "capacity": {
+              "value": 10,
+              "code": "mL",
+              "system": "http://unitsofmeasure.org",
+              "unit": "milliliter"
+            },
+            "specimenQuantity": {
+              "value": 10,
+              "code": "mL",
+              "system": "http://unitsofmeasure.org",
+              "unit": "milliliter"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Specimen"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/Specimen/mii-exa-molgen-specimen-dna-library",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "mii-exa-molgen-specimen-dna-library-bundle",
+        "identifier": [
+          {
+            "system": "https://example.org/specimen-ids",
+            "value": "LIB-2024-001"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "code": "119342007",
+              "system": "http://snomed.info/sct",
+              "display": "Saliva specimen"
+            }
+          ],
+          "text": "DNA Library"
+        },
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient-wes"
+        },
+        "parent": [
+          {
+            "reference": "Specimen/mii-exa-molgen-specimen-blood-edta"
+          }
+        ],
+        "processing": [
+          {
+            "description": "DNA extraction and library preparation using Agilent SureSelect",
+            "timeDateTime": "2024-01-16T14:00:00+01:00"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Specimen"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect",
+      "resource": {
+        "resourceType": "PlanDefinition",
+        "id": "mii-exa-molgen-protocol-agilent-sureselect",
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "code": "protocol",
+              "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+              "display": "Protocol"
+            }
+          ]
+        },
+        "name": "AgilentSureSelectV7",
+        "title": "Agilent SureSelect Human All Exon V7 Kit Protocol",
+        "description": "Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the human exome",
+        "action": [
+          {
+            "title": "DNA Fragmentation",
+            "description": "Fragment genomic DNA to 150-200bp using Covaris"
+          },
+          {
+            "title": "Library Preparation",
+            "description": "End repair, A-tailing, adapter ligation"
+          },
+          {
+            "title": "Hybridization",
+            "description": "Hybridize with SureSelect baits for 24 hours at 65°C"
+          },
+          {
+            "title": "Capture",
+            "description": "Streptavidin bead capture and washing"
+          },
+          {
+            "title": "Amplification",
+            "description": "PCR amplification of captured library"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "PlanDefinition"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/DocumentReference/mii-exa-molgen-documentreference-bed-file",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "mii-exa-molgen-documentreference-bed-file-bundle",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "code": "GENOMIC",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "display": "Genomic"
+            }
+          ],
+          "text": "BED file - Agilent SureSelect V7 target regions"
+        },
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient-wes"
+        },
+        "content": [
+          {
+            "attachment": {
+              "url": "https://example.org/files/agilent_v7_targets.bed",
+              "title": "Agilent SureSelect Human All Exon V7 Target Regions",
+              "contentType": "text/plain"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DocumentReference"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/DocumentReference/mii-exa-molgen-documentreference-fastq",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "mii-exa-molgen-documentreference-fastq-bundle",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "code": "GENOMIC",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "display": "Genomic"
+            }
+          ],
+          "text": "FASTQ files - paired-end sequencing data"
+        },
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient-wes"
+        },
+        "content": [
+          {
+            "attachment": {
+              "url": "https://example.org/files/sample_R1.fastq.gz",
+              "title": "Forward reads",
+              "contentType": "application/gzip"
+            }
+          },
+          {
+            "attachment": {
+              "url": "https://example.org/files/sample_R2.fastq.gz",
+              "title": "Reverse reads",
+              "contentType": "application/gzip"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DocumentReference"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/Procedure/mii-exa-molgen-genomic-study-comprehensive-wes",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "mii-exa-molgen-genomic-study-comprehensive-wes-bundle",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study"
+          ]
+        },
+        "category": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "laboratory"
+            }
+          ]
+        },
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient-wes"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-ext",
+            "valueReference": {
+              "reference": "Procedure/mii-exa-molgen-genomic-study-analysis-wes-library-prep"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-ext",
+            "valueReference": {
+              "reference": "Procedure/mii-exa-molgen-genomic-study-analysis-wes-sequencing"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-ext",
+            "valueReference": {
+              "reference": "Procedure/mii-exa-molgen-genomic-study-analysis-wes-bioinformatics"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Procedure"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/Procedure/mii-exa-molgen-genomic-study-analysis-wes-library-prep",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "mii-exa-molgen-genomic-study-analysis-wes-library-prep-bundle",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"
+          ]
+        },
+        "status": "completed",
+        "category": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "laboratory"
+            }
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen",
+            "valueReference": {
+              "reference": "Specimen/mii-exa-molgen-specimen-blood-edta"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device",
+            "extension": [
+              {
+                "url": "device",
+                "valueReference": {
+                  "reference": "Device/mii-exa-molgen-device-thermofisher-ionchef"
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA26811-2",
+                  "system": "http://loinc.org",
+                  "display": "Hybridization-based capture"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-protocol-performed",
+            "valueReference": {
+              "reference": "PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect"
+            }
+          }
+        ],
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient-wes"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Procedure"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/Procedure/mii-exa-molgen-genomic-study-analysis-wes-sequencing",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "mii-exa-molgen-genomic-study-analysis-wes-sequencing-bundle",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"
+          ]
+        },
+        "status": "completed",
+        "category": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "laboratory"
+            }
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen",
+            "valueReference": {
+              "reference": "Specimen/mii-exa-molgen-specimen-dna-library"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device",
+            "extension": [
+              {
+                "url": "device",
+                "valueReference": {
+                  "reference": "Device/mii-exa-molgen-device-illumina-novaseq"
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA26398-0",
+                  "system": "http://loinc.org",
+                  "display": "Sequencing"
+                }
+              ]
+            }
+          }
+        ],
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient-wes"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Procedure"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/Procedure/mii-exa-molgen-genomic-study-analysis-wes-bioinformatics",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "mii-exa-molgen-genomic-study-analysis-wes-bioinformatics-bundle",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"
+          ]
+        },
+        "status": "completed",
+        "category": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "laboratory"
+            }
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA26806-2",
+                  "system": "http://loinc.org",
+                  "display": "Computational analysis"
+                }
+              ]
+            }
+          }
+        ],
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient-wes"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Procedure"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/ServiceRequest/mii-exa-molgen-anforderung-wes",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "mii-exa-molgen-anforderung-wes-bundle",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
+          ]
+        },
+        "status": "completed",
+        "intent": "order",
+        "code": {
+          "coding": [
+            {
+              "code": "94077-5",
+              "system": "http://loinc.org",
+              "display": "Whole exome sequence analysis in Blood or Tissue by Molecular genetics method"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient-wes"
+        },
+        "authoredOn": "2024-01-10",
+        "requester": {
+          "reference": "Practitioner/mii-exa-molgen-practitioner"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "code": "234123001",
+                "system": "http://snomed.info/sct",
+                "display": "Intellectual disability syndrome"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "ServiceRequest"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/Observation/mii-exa-molgen-variante-comprehensive-pathogenic",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-molgen-variante-comprehensive-pathogenic-bundle",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "69548-6",
+              "display": "Genetic variant assessment"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "GE"
+              }
+            ]
+          }
+        ],
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "48018-6",
+                  "display": "Gene studied [ID]"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "HGNC:7132",
+                  "system": "http://www.genenames.org/geneId",
+                  "display": "KMT2A"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "48004-6",
+                  "display": "DNA change (c.HGVS)"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "text": "NM_005933.3:c.3463C>T"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "48005-3",
+                  "display": "Amino acid change (pHGVS)"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "text": "p.(Arg1155Ter)"
+            }
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient-wes"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "LA9633-4",
+              "system": "http://loinc.org",
+              "display": "Present"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/Observation/mii-exa-molgen-diagnostische-implikation-comprehensive",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "mii-exa-molgen-diagnostische-implikation-comprehensive-bundle",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+              "code": "diagnostic-implication",
+              "display": "Diagnostic Implication"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "GE"
+              }
+            ]
+          }
+        ],
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "53037-8"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA6668-3",
+                  "system": "http://loinc.org",
+                  "display": "Pathogenic"
+                }
+              ]
+            }
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient-wes"
+        },
+        "derivedFrom": [
+          {
+            "reference": "Observation/mii-exa-molgen-variante-comprehensive-pathogenic"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/Media/mii-exa-molgen-media-coverage-plot",
+      "resource": {
+        "resourceType": "Media",
+        "id": "mii-exa-molgen-media-coverage-plot",
+        "status": "completed",
+        "type": {
+          "coding": [
+            {
+              "code": "image",
+              "system": "http://terminology.hl7.org/CodeSystem/media-type",
+              "display": "Image"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient"
+        },
+        "createdDateTime": "2024-01-20T10:00:00+01:00",
+        "content": {
+          "contentType": "image/png",
+          "title": "Exome Coverage Distribution Plot",
+          "url": "https://example.org/plots/coverage_wes_2024001.png"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Media"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-comprehensive-wes",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "mii-exa-molgen-befundbericht-comprehensive-wes-bundle",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht",
+            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "51969-4",
+              "display": "Genetic analysis report"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "GE",
+                "display": "Genetics"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-reference",
+            "valueReference": {
+              "reference": "Procedure/mii-exa-molgen-genomic-study-comprehensive-wes"
+            }
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "ServiceRequest/mii-exa-molgen-anforderung-wes"
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient-wes"
+        },
+        "performer": [
+          {
+            "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
+          }
+        ],
+        "specimen": [
+          {
+            "reference": "Specimen/mii-exa-molgen-specimen-blood-edta"
+          }
+        ],
+        "result": [
+          {
+            "reference": "Observation/mii-exa-molgen-variante-comprehensive-pathogenic"
+          },
+          {
+            "reference": "Observation/mii-exa-molgen-diagnostische-implikation-comprehensive"
+          }
+        ],
+        "media": [
+          {
+            "comment": "Coverage plot showing uniform coverage across all exons",
+            "link": {
+              "reference": "Media/mii-exa-molgen-media-coverage-plot"
+            }
+          }
+        ],
+        "conclusion": "Whole exome sequencing identified a pathogenic de novo variant in the KMT2A gene, consistent with Wiedemann-Steiner syndrome. Technical quality metrics met all acceptance criteria.",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "code": "LA6576-8",
+                "system": "http://loinc.org",
+                "display": "Positive"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/Practitioner/mii-exa-molgen-practitioner",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "mii-exa-molgen-practitioner-bundle",
+        "identifier": [
+          {
+            "system": "https://example.org/practitioner-ids",
+            "value": "12345"
+          }
+        ],
+        "name": [
+          {
+            "family": "Schmidt",
+            "given": [
+              "Anna"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/Practitioner/mii-exa-molgen-practitioner-lab",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "mii-exa-molgen-practitioner-lab-bundle",
+        "identifier": [
+          {
+            "system": "https://example.org/practitioner-ids",
+            "value": "67890"
+          }
+        ],
+        "name": [
+          {
+            "family": "Weber",
+            "given": [
+              "Thomas"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    }
+  ]
+}

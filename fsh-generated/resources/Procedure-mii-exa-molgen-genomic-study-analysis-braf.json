@@ -1,0 +1,73 @@
+{
+  "resourceType": "Procedure",
+  "id": "mii-exa-molgen-genomic-study-analysis-braf",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"
+    ]
+  },
+  "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen",
+      "valueReference": {
+        "reference": "Specimen/mii-exa-molgen-specimen-1"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device",
+      "extension": [
+        {
+          "url": "device",
+          "valueReference": {
+            "reference": "Device/mii-exa-molgen-device-sequencer"
+          }
+        }
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "LA26398-0",
+            "system": "http://loinc.org",
+            "display": "Sequencing"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-regions",
+      "extension": [
+        {
+          "url": "description",
+          "valueString": "BRAF: Exon 15 (Codon 600)"
+        },
+        {
+          "url": "studied",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "HGNC:1097",
+                "system": "http://www.genenames.org/geneId",
+                "display": "BRAF"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient"
+  }
+}

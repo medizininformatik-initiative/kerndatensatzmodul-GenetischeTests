@@ -25,7 +25,7 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
     MII_EX_MolGen_Verwandtschaftsgrad named Verwandtschaftsgrad 0..1 MS and
     MII_EX_MolGen_Verwandtschaftsverhaeltnis named Verwandtschaftsverhaeltnis 0..1 MS and
     MII_EX_MolGen_FamiliareLinie named FamiliareLinie 0..1 MS
-* relationship.coding[v3-RoleCode] from v3-RoleCode-vs (required)
+* relationship.coding[v3-RoleCode] from $v3-RoleCode-vs (required)
 * relationship.coding[v3-RoleCode] ^patternCoding.system = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
 * sex MS
 * reasonCode MS
@@ -38,18 +38,18 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
     alpha-id 0..1 MS and
     sct 0..1 MS and
     orphanet 0..1 MS
-* reasonCode.coding[icd10-gm] only ICD10GM-Coding
-* reasonCode.coding[icd10-gm] from ICD10GM-VS (required)
+* reasonCode.coding[icd10-gm] only $ICD10GM-Coding
+* reasonCode.coding[icd10-gm] from $ICD10GM-VS (required)
 * reasonCode.coding[icd10-gm] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
 * reasonCode.coding[icd10-gm].system 1.. MS
 * reasonCode.coding[icd10-gm].version 1.. MS
 * reasonCode.coding[icd10-gm].code 1.. MS
-* reasonCode.coding[alpha-id] only AlphaID-Coding
-* reasonCode.coding[alpha-id] from AlphaID-VS (required)
+* reasonCode.coding[alpha-id] only $AlphaID-Coding
+* reasonCode.coding[alpha-id] from $AlphaID-VS (required)
 * reasonCode.coding[alpha-id] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/alpha-id"
 * reasonCode.coding[alpha-id].system 1.. MS
 * reasonCode.coding[alpha-id].code 1.. MS
-* reasonCode.coding[sct] from SCT-Diagnoses-VS (required)
+* reasonCode.coding[sct] from $SCT-Diagnoses-VS (required)
 * reasonCode.coding[sct] ^patternCoding.system = "http://snomed.info/sct"
 * reasonCode.coding[sct].system 1.. MS
 * reasonCode.coding[sct].code 1.. MS
@@ -68,18 +68,18 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
     alpha-id 0..1 MS and
     sct 0..1 MS and
     orphanet 0..1 MS
-* condition.code.coding[icd10-gm] only ICD10GM-Coding
-* condition.code.coding[icd10-gm] from ICD10GM-VS (required)
+* condition.code.coding[icd10-gm] only $ICD10GM-Coding
+* condition.code.coding[icd10-gm] from $ICD10GM-VS (required)
 * condition.code.coding[icd10-gm] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
 * condition.code.coding[icd10-gm].system 1.. MS
 * condition.code.coding[icd10-gm].version 1.. MS
 * condition.code.coding[icd10-gm].code 1.. MS
-* condition.code.coding[alpha-id] only AlphaID-Coding
-* condition.code.coding[alpha-id] from AlphaID-VS (required)
+* condition.code.coding[alpha-id] only $AlphaID-Coding
+* condition.code.coding[alpha-id] from $AlphaID-VS (required)
 * condition.code.coding[alpha-id] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/alpha-id"
 * condition.code.coding[alpha-id].system 1.. MS
 * condition.code.coding[alpha-id].code 1.. MS
-* condition.code.coding[sct] from SCT-Diagnoses-VS (required)
+* condition.code.coding[sct] from $SCT-Diagnoses-VS (required)
 * condition.code.coding[sct] ^patternCoding.system = "http://snomed.info/sct"
 * condition.code.coding[sct].system 1.. MS
 * condition.code.coding[sct].code 1.. MS
@@ -105,8 +105,8 @@ Description: "ValueSet für die Angabe eines Verwandtschaftsgrades zwischen Pati
 * insert Publisher
 * insert PR_CS_VS_Version
 
-* SCT#125678001 "First degree blood relative (person)"
-* SCT#699110007 "Second degree blood relative (person)"
+* $SCT#125678001 "First degree blood relative (person)"
+* $SCT#699110007 "Second degree blood relative (person)"
 
 Extension: MII_EX_MolGen_Verwandtschaftsverhaeltnis
 Id: mii-ex-molgen-verwandtschaftsverhaeltnis
@@ -128,14 +128,14 @@ Description: "ValueSet für die Angabe eines Verwandtschaftsverhältnis zwischen
 * insert Publisher
 * insert PR_CS_VS_Version
 
-* SCT#75226009 "Natural child (person)"
-* SCT#13646006 "Natural parent (person)"
-* SCT#60614009 "Natural brother (person)"
-* SCT#73678001 "Natural sister (person)"
-* SCT#45929001 "Half-brother (person)"
-* SCT#2272004 "Half-sister (person)"
-* SCT#62296006 "Natural grandfather (person)"
-* SCT#17945006 "Natural grandmother (person)"
+* $SCT#75226009 "Natural child (person)"
+* $SCT#13646006 "Natural parent (person)"
+* $SCT#60614009 "Natural brother (person)"
+* $SCT#73678001 "Natural sister (person)"
+* $SCT#45929001 "Half-brother (person)"
+* $SCT#2272004 "Half-sister (person)"
+* $SCT#62296006 "Natural grandfather (person)"
+* $SCT#17945006 "Natural grandmother (person)"
 
 Extension: MII_EX_MolGen_FamiliareLinie
 Id: mii-ex-molgen-familiare-linie
@@ -157,8 +157,8 @@ Description: "ValueSet für die Angabe der familären Linie zwischen Patient und
 * insert Publisher
 * insert PR_CS_VS_Version
 
-* SCT#72705000 "Mother (person)"
-* SCT#66839005 "Father (person)"
+* $SCT#72705000 "Mother (person)"
+* $SCT#66839005 "Father (person)"
 
 Mapping: MolGen-Familienanamnese
 Id: MII-KDS
@@ -172,13 +172,13 @@ Usage: #example
 * status = #completed
 * patient = Reference(mii-exa-molgen-patient)
 * date = "2022-04-07"
-* relationship.coding[snomed] = SCT#72705000 "Mother (person)"
-* relationship.coding[v3-RoleCode] = v3-RoleCode-cs#MTH "mother"
-* sex.coding[0] = AdminGender#female
-* sex.coding[+] = SCT#248152002 "Female (finding)"
+* relationship.coding[snomed] = $SCT#72705000 "Mother (person)"
+* relationship.coding[v3-RoleCode] = $v3-RoleCode-cs#MTH "mother"
+* sex.coding[0] = $AdminGender#female
+* sex.coding[+] = $SCT#248152002 "Female (finding)"
 * deceasedBoolean = true
-* reasonCode.coding[sct] = SCT#447886005 "Adenocarcinoma of anorectum (disorder)"
-* condition[0].code.coding[sct] = SCT#830150003 "Malignant melanoma with B-Raf proto-oncogene, serine/threonine kinase V600E mutation (disorder)"
+* reasonCode.coding[sct] = $SCT#447886005 "Adenocarcinoma of anorectum (disorder)"
+* condition[0].code.coding[sct] = $SCT#830150003 "Malignant melanoma with B-Raf proto-oncogene, serine/threonine kinase V600E mutation (disorder)"
 * condition[=].contributedToDeath = true
 
 Instance: mii-exa-molgen-family-member-history-2
@@ -187,12 +187,12 @@ Usage: #example
 * status = #completed
 * patient = Reference(mii-exa-molgen-patient)
 * date = "2022-11-08"
-* relationship.coding[snomed] = SCT#394858009 "Paternal grandmother (person)"
-* relationship.coding[snomed].extension[Verwandtschaftsgrad].valueCoding = SCT#699110007 "Second degree blood relative (person)"
-* relationship.coding[snomed].extension[Verwandtschaftsverhaeltnis].valueCoding = SCT#17945006 "Natural grandmother (person)"
-* relationship.coding[snomed].extension[FamiliareLinie].valueCoding = SCT#66839005 "Father (person)"
-* relationship.coding[v3-RoleCode] = v3-RoleCode-cs#PGRMTH "paternal grandmother"
-* sex.coding[0] = AdminGender#female
-* sex.coding[+] = SCT#248152002 "Female (finding)"
+* relationship.coding[snomed] = $SCT#394858009 "Paternal grandmother (person)"
+* relationship.coding[snomed].extension[Verwandtschaftsgrad].valueCoding = $SCT#699110007 "Second degree blood relative (person)"
+* relationship.coding[snomed].extension[Verwandtschaftsverhaeltnis].valueCoding = $SCT#17945006 "Natural grandmother (person)"
+* relationship.coding[snomed].extension[FamiliareLinie].valueCoding = $SCT#66839005 "Father (person)"
+* relationship.coding[v3-RoleCode] = $v3-RoleCode-cs#PGRMTH "paternal grandmother"
+* sex.coding[0] = $AdminGender#female
+* sex.coding[+] = $SCT#248152002 "Female (finding)"
 * deceasedBoolean = true
 

@@ -8,7 +8,7 @@ Canonical: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haploty
 
 ---
 
-Das Profil [Haplotype](http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-haplotype.html.html) stammt aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU2/).
+Das Profil [Haplotype](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html.html) stammt aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
 
 ---
 

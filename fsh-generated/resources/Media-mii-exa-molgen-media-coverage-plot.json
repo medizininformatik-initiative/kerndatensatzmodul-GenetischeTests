@@ -1,0 +1,23 @@
+{
+  "resourceType": "Media",
+  "id": "mii-exa-molgen-media-coverage-plot",
+  "status": "completed",
+  "type": {
+    "coding": [
+      {
+        "code": "image",
+        "system": "http://terminology.hl7.org/CodeSystem/media-type",
+        "display": "Image"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient"
+  },
+  "createdDateTime": "2024-01-20T10:00:00+01:00",
+  "content": {
+    "contentType": "image/png",
+    "title": "Exome Coverage Distribution Plot",
+    "url": "https://example.org/plots/coverage_wes_2024001.png"
+  }
+}

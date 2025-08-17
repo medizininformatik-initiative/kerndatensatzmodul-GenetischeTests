@@ -38,12 +38,12 @@ Title: "BRAF Variante Molekulare Konsequenz"
 Description: "Beispiel für molekulare Konsequenz abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence"
 * status = #final
-* category[labCategory] = ObsCat#laboratory "Laboratory"
-* code = GenTbd#molecular-consequence "Molekulare Konsequenz"
+* category[labCategory] = $ObsCat#laboratory "Laboratory"
+* code = $GenTbd#molecular-consequence "Molekulare Konsequenz"
 * subject = Reference(mii-exa-molgen-patient)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-1)
-* component[conclusion-string].code = GenTbd#conclusion-string
+* component[conclusion-string].code = $GenTbd#conclusion-string
 * component[conclusion-string].valueString = "Nachweis einer aktivierenden Mutation BRAF V600E"
 
 Instance: mii-exa-molgen-molekulare-konsequenz-2
@@ -53,23 +53,23 @@ Title: "NIPBL Variante Molekulare Konsequenz"
 Description: "Beispiel für molekulare Konsequenz abgeleitet von genetischer Variante im NIPBL Gen an Hand von WGS."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence"
 * extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
-* extension[workflow-relatedArtifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
+* extension[workflow-relatedArtifact].valueRelatedArtifact.type = $RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.url = "https://doi.org/10.1038/gim.2015.30"
 * status = #final
-* category[labCategory] = ObsCat#laboratory "Laboratory"
-* code = GenTbd#molecular-consequence "Molekulare Konsequenz"
+* category[labCategory] = $ObsCat#laboratory "Laboratory"
+* code = $GenTbd#molecular-consequence "Molekulare Konsequenz"
 * subject = Reference(mii-exa-molgen-patient-2)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-2)
-* component[conclusion-string].code = GenTbd#conclusion-string
+* component[conclusion-string].code = $GenTbd#conclusion-string
 * component[conclusion-string].valueString = "Nachweis einer pathogenen Variante im NIPBL-Gen in heterozygoter Form."
-* component[clinical-significance].code = LNC#53037-8 "Genetic variation clinical significance [Imp]"
-* component[clinical-significance].valueCodeableConcept = LNC#LA6668-3 "Pathogenic"
-//* component[mode-of-inheritance].code = GenTbd#condition-inheritance //CS updaten, wenn gen-reporting v2.0
-//* component[mode-of-inheritance].valueCodeableConcept = HPO#HP:0000006 "Autosomal dominant inheritance"
-//* component[predicted-phenotype].code = LNC#81259-4 "Associated phenotype"
-//* component[predicted-phenotype].valueCodeableConcept = SCT#40354009 "De Lange syndrome (disorder)"
+* component[clinical-significance].code = $LNC#53037-8 "Genetic variation clinical significance [Imp]"
+* component[clinical-significance].valueCodeableConcept = $LNC#LA6668-3 "Pathogenic"
+//* component[mode-of-inheritance].code = $GenTbd#condition-inheritance //CS updaten, wenn gen-reporting v2.0
+//* component[mode-of-inheritance].valueCodeableConcept = $HPO#HP:0000006 "Autosomal dominant inheritance"
+//* component[predicted-phenotype].code = $LNC#81259-4 "Associated phenotype"
+//* component[predicted-phenotype].valueCodeableConcept = $SCT#40354009 "De Lange syndrome (disorder)"
 
 
 // CNV (17.pdf)
@@ -80,21 +80,21 @@ Title: "CNV SMO Diagnostische Implikation"
 Description: "Beispiel für diagnostische Implikation abgeleitet von Copy Number Variante im SMO Gen."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
 * extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
-* extension[workflow-relatedArtifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
+* extension[workflow-relatedArtifact].valueRelatedArtifact.type = $RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/25741868/"
 * status = #final
-* category[labCategory] = ObsCat#laboratory "Laboratory"
-* code = GenTbd#molecular-consequence "Molekulare Konsequenz"
+* category[labCategory] = $ObsCat#laboratory "Laboratory"
+* code = $GenTbd#molecular-consequence "Molekulare Konsequenz"
 * subject = Reference(mii-exa-molgen-patient-2)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-cnv-4)
-* component[conclusion-string].code = GenTbd#conclusion-string
+* component[conclusion-string].code = $GenTbd#conclusion-string
 * component[conclusion-string].valueString = "onkogene Veränderung mögl. Überexpression"
-* component[clinical-significance].code = LNC#53037-8 "Genetic variation clinical significance [Imp]"
-* component[clinical-significance].valueCodeableConcept = LNC#LA26332-9 "Likely pathogenic"
-* component[functional-effect].valueCodeableConcept.coding[+] = SO#SO:0002315 "increased_gene_product_level"
-* component[functional-effect].valueCodeableConcept.coding[+] = NCIT#C36337 "Messenger RNA Overexpression"
+* component[clinical-significance].code = $LNC#53037-8 "Genetic variation clinical significance [Imp]"
+* component[clinical-significance].valueCodeableConcept = $LNC#LA26332-9 "Likely pathogenic"
+* component[functional-effect].valueCodeableConcept.coding[+] = $SO#SO:0002315 "increased_gene_product_level"
+* component[functional-effect].valueCodeableConcept.coding[+] = $NCIT#C36337 "Messenger RNA Overexpression"
 * component[functional-effect].valueCodeableConcept.text = "mögl. Überexpression" // (13581-fach, Rang 1)???
 
 // 04 docx
@@ -105,19 +105,19 @@ Title: "Diagnostische Implikation BRCA1 Variante"
 Description: "Beispiel für diagnostische Implikation abgeleitet von SNP im BRCA1."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
 * extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
-* extension[workflow-relatedArtifact].valueRelatedArtifact.type = RelArtType#citation "Citation"
+* extension[workflow-relatedArtifact].valueRelatedArtifact.type = $RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/25741868/"
 * status = #final
-* category[labCategory] = ObsCat#laboratory "Laboratory"
-* code = GenTbd#molecular-consequence "Molekulare Konsequenz"
+* category[labCategory] = $ObsCat#laboratory "Laboratory"
+* code = $GenTbd#molecular-consequence "Molekulare Konsequenz"
 * subject = Reference(mii-exa-molgen-patient-brca1)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-brca1)
-* component[conclusion-string].code = GenTbd#conclusion-string
+* component[conclusion-string].code = $GenTbd#conclusion-string
 * component[conclusion-string].valueString = "Nachweis heterozygoter Sequenzveränderung, die zum Funktionsverlust führt"
-* component[clinical-significance].code = LNC#53037-8 "Genetic variation clinical significance [Imp]"
-* component[clinical-significance].valueCodeableConcept = LNC#LA6668-3 "Pathogenic"
-* component[functional-effect].valueCodeableConcept = SO#SO:0002054 "loss_of_function_variant"
+* component[clinical-significance].code = $LNC#53037-8 "Genetic variation clinical significance [Imp]"
+* component[clinical-significance].valueCodeableConcept = $LNC#LA6668-3 "Pathogenic"
+* component[functional-effect].valueCodeableConcept = $SO#SO:0002054 "loss_of_function_variant"
 * component[functional-effect].valueCodeableConcept.text = "Funktionsverlust des Genprodukts"
-* component[evidence-level].valueCodeableConcept = ClinVarEvLv#2-star "2 star"
+* component[evidence-level].valueCodeableConcept = $ClinVarEvLv#2-star "2 star"

@@ -12,6 +12,29 @@ Dieses Profil ermöglicht eine vollständige Beschreibung der gefundenen Variant
 * Die Beschreibung komplexer Varianten, z.B. die Abbildung von 'Compound Heterozygous', erfolgt über zwei Variant Instanzen, wie 
 [hier](http://hl7.org/fhir/uv/genomics-reporting/sequencing.html#representing-compound-heterozygotes) beschrieben
 
+#### Empfehlung zu Referenzsequenzen
+
+Für die eindeutige und interoperable Darstellung von Varianten mittels HGVS-Nomenklatur wird die Verwendung von **MANE (Matched Annotation from NCBI and EMBL-EBI)** Transkripten empfohlen:
+
+* **MANE Select**: Das bevorzugte Transkript für jedes Gen - repräsentiert die biologisch relevanteste Isoform
+* **MANE Plus Clinical**: Zusätzliche klinisch relevante Transkripte, wenn für die Varianteninterpretation erforderlich
+* **Versionierung**: Referenzsequenzen sollten immer mit Versionsnummer angegeben werden (z.B. `NM_007294.4`, nicht `NM_007294`)
+
+Die Verwendung standardisierter MANE-Transkripte bietet folgende Vorteile:
+- Eindeutige Zuordnung von Varianten zwischen verschiedenen Laboren und Systemen
+- Reduzierung von Interpretationsunterschieden durch einheitliche Referenzen
+- Verbesserte Kompatibilität mit internationalen Datenbanken (ClinVar, gnomAD)
+- Unterstützung der standortübergreifenden Datenintegration im MII/NUM-Kontext
+
+Beispiel für die korrekte Angabe in `component[representative-transcript-ref-seq]`:
+```
+* component[representative-transcript-ref-seq].valueCodeableConcept.coding.system = "http://www.ncbi.nlm.nih.gov/refseq"
+* component[representative-transcript-ref-seq].valueCodeableConcept.coding.code = "NM_007294.4"
+* component[representative-transcript-ref-seq].valueCodeableConcept.coding.display = "BRCA1 transcript variant 1, MANE Select"
+```
+
+Weitere Informationen zu MANE: https://www.ncbi.nlm.nih.gov/refseq/MANE/
+
 
 @```
 from StructureDefinition
@@ -21,7 +44,7 @@ select Name: name, Canonical: url
 
 ---
 
-Das Profil ist abgeleitet vom Profil [Variant](http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-variant.html) aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU2/).
+Das Profil ist abgeleitet vom Profil [Variant](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-variant.html) aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
 
 ---
 

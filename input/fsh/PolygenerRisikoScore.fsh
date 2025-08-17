@@ -44,8 +44,8 @@ Description: "Beispiel für Polygenen Risiko Score bei Variante BRCA1"
 * subject = Reference(mii-exa-molgen-patient-2)
 * occurrenceDateTime = "2022-11-01"
 * basis = Reference(mii-exa-molgen-variante-brca1)
-* prediction.outcome = SCT#718220008 "Hereditary breast and ovarian cancer syndrome (disorder)"
+* prediction.outcome = $SCT#718220008 "Hereditary breast and ovarian cancer syndrome (disorder)"
 * prediction.qualitativeRisk = RiskProbability#high "High likelihood"
-* prediction.extension[whenCodeableConcept].valueCodeableConcept = SCT#414152003 "European (ethnic group)"
+* prediction.extension[whenCodeableConcept].valueCodeableConcept = $SCT#414152003 "European (ethnic group)"
 * prediction.extension[whenCodeableConcept].valueCodeableConcept.text = "Der verwendete Polygene Risikoscore wurde bisher nur für die europäische Bevölkerung bei Brustkrebs validiert und kann daher noch nicht auf andere Ethnizitäten und andere Tumor-Erkrankungen übertragen werden."
 

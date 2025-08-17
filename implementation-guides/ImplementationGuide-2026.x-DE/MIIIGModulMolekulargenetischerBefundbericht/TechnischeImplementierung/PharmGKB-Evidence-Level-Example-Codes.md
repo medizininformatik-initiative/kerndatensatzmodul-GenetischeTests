@@ -10,7 +10,7 @@ Canonical: http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/pharmgkb-evidenc
 
 ---
 
-Das CodeSystem [PharmGKB Evidence Level Example Codes](http://hl7.org/fhir/uv/genomics-reporting/STU2/CodeSystem-pharmgkb-evidence-level-custom-cs.html) stammt aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU2/).
+Das CodeSystem [PharmGKB Evidence Level Example Codes](http://hl7.org/fhir/uv/genomics-reporting/STU3/CodeSystem-pharmgkb-evidence-level-custom-cs.html) stammt aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
 
 ---
 

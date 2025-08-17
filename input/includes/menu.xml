@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="BeschreibungModulMolekulargenetischerBefundbericht.html">Module Description</a></li>
+      <li><a href="UML.html">UML Model</a></li>
+      <li><a href="LogicalModel.html">Logical Model</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specifications<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.html">Genetic Report</a></li>
+      <li><a href="StructureDefinition-mii-pr-molgen-variante.html">Genetic Variant</a></li>
+      <li><a href="StructureDefinition-mii-pr-molgen-diagnostische-implikation.html">Diagnostic Implication</a></li>
+      <li><a href="StructureDefinition-mii-pr-molgen-therapeutische-implikation.html">Therapeutic Implication</a></li>
+      <li><a href="StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html">Molecular Consequence</a></li>
+      <li><a href="StructureDefinition-mii-pr-molgen-genomic-study.html">Genomic Study</a></li>
+      <li><a href="StructureDefinition-mii-pr-molgen-genomic-study-analysis.html">Genomic Study Analysis</a></li>
+      <li><a href="StructureDefinition-mii-pr-molgen-anforderung-gentischer-test.html">Test Request</a></li>
+      <li><a href="StructureDefinition-mii-pr-molgen-familienanamnese.html">Family History</a></li>
+      <li><a href="StructureDefinition-mii-pr-molgen-genotyp.html">Genotype</a></li>
+      <li><a href="StructureDefinition-mii-pr-molgen-mutationslast.html">Tumor Mutation Burden</a></li>
+      <li><a href="StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html">Microsatellite Instability</a></li>
+      <li><a href="StructureDefinition-mii-pr-molgen-polygener-risiko-score.html">Polygenic Risk Score</a></li>
+      <li><a href="StructureDefinition-mii-pr-molgen-medikationsempfehlung.html">Medication Recommendation</a></li>
+      <li><a href="StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.html">Follow-up Recommendation</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Terminology<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="ValueSet-mii-vs-molgen-familiaere-linie.html">Family Line</a></li>
+      <li><a href="ValueSet-mii-vs-molgen-family-member-snomed.html">Family Member (SNOMED)</a></li>
+      <li><a href="ValueSet-mii-vs-molgen-verwandtschaftsgrad.html">Relationship Degree</a></li>
+      <li><a href="ValueSet-mii-vs-molgen-verwandtschaftsverhaeltnis.html">Family Relationship</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Examples<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="Bundle-mii-exa-befund-bundle-1-braf.html">BRAF Variant Report</a></li>
+      <li><a href="Bundle-mii-exa-molgen-bundle-fam-his-breast-ovar-can.html">Breast/Ovarian Cancer Family History</a></li>
+      <li><a href="Bundle-mii-exa-molgen-bundle-befund-2-nipbl.html">NIPBL Variant Report</a></li>
+      <li><a href="Bundle-mii-exa-befund-bundle-befund-srcc.html">SRCC Variant Report</a></li>
+      <li><a href="Bundle-mii-exa-befund-bundle-befund-fgfr2-fusion.html">FGFR2 Fusion Report</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technical<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="CapabilityStatement-mii-cps-molgen-capabilitystatement.html">Capability Statement</a></li>
+      <li><a href="artifacts.html">Artifact Index</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+    </ul>
+  </li>
+</ul>

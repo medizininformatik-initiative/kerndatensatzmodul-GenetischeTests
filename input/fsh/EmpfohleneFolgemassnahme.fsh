@@ -33,8 +33,8 @@ Description: "Beispiel für empfohlene Folgemaßnahme abgeleitet von genetischer
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/followup-recommendation"
 * basedOn = Reference(servicerequest/example)
 * status = TaskStatus#requested
-* intent = RequestIntent#proposal
-* code = LNC#LA14020-4 "Genetic counseling recommended"
+* intent = $RequestIntent#proposal
+* code = $LNC#LA14020-4 "Genetic counseling recommended"
 * description = "Genetische Beratung empfohlen mit Dr. Rosalind Franklin"
 * for = Reference(mii-exa-molgen-patient)
 * reasonReference = Reference(mii-exa-molgen-therapeutische-implikation-1)
@@ -47,7 +47,7 @@ Description: "Beispiel für empfohlene Folgemaßnahme abgeleitet von genetischer
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/followup-recommendation"
 * basedOn = Reference(mii-exa-molgen-anforderung-trurisk-panel)
 * status = TaskStatus#requested
-* intent = RequestIntent#proposal
-* code = LNC#LA14020-4 "Genetic counseling recommended"
+* intent = $RequestIntent#proposal
+* code = $LNC#LA14020-4 "Genetic counseling recommended"
 * description = "Eine genetische Beratung hinsichtlich einer gezielten Testung leiblicher Familienmitglieder wird empfohlen."
 * for = Reference(mii-exa-molgen-patient-brca1)

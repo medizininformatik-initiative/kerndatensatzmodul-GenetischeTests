@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:hl7.org)",
+      "WebFetch(domain:hl7.org)",
+      "Bash(for:*)",
+      "Bash(do if [ \"$file\" != \"aliases.fsh\" ])",
+      "Bash(then sed -i 's/\\bDiagRepStatus#/$DiagRepStatus#/g; s/\\bv2-0074#/$v2-0074#/g; s/\\bRequestIntent#/$RequestIntent#/g; s/\\bRelArtType#/$RelArtType#/g' \"$file\")",
+      "Bash(fi)",
+      "Bash(done)"
+    ],
+    "deny": []
+  }
+}
