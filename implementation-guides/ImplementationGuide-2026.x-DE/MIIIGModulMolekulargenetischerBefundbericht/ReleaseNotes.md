@@ -36,7 +36,7 @@
 
 
 
-    - Beispiele entsprechend angepasst (alte Beispiele für Diagnostische Implikation entsprechen eher )
+    - Beispiele entsprechend angepasst (alte Beispiele für Diagnostische Implikation entsprechen eher neuem Profil für Molekulare Konsequenz )
     - Neue Ordnerstruktur im GitHub-Repo
 - Logical Model (LogicalModel.fsh)
     - Elementnamen bereinigt: Bindestriche entfernt und durch CamelCase ersetzt (z.B. Krankengeschichte-Familie → KrankengeschichteFamilie)
@@ -49,9 +49,8 @@
 
 
 ## 2025.0.0
-- not complete
 - updated package id
-- harmonized 
+- harmonized dependencies
 
 ### Impressum
 Dieser Leitfaden ist im Rahmen der Medizininformatik-Initiative erstellt worden und unterliegt per Governance-Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees (TCs) von HL7 Deutschland e. V.  
