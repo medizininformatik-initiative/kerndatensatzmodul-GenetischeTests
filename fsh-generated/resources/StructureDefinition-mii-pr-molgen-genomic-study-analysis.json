@@ -27,8 +27,76 @@
   "differential": {
     "element": [
       {
-        "id": "Procedure",
-        "path": "Procedure"
+        "id": "Procedure.extension:method-type",
+        "path": "Procedure.extension",
+        "sliceName": "method-type",
+        "short": "Analysemethode",
+        "definition": "Art der durchgeführten Analysemethode (z.B. Sequenzierung, PCR, Array-CGH).",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:change-type",
+        "path": "Procedure.extension",
+        "sliceName": "change-type",
+        "short": "Untersuchte Variationstypen",
+        "definition": "Typen genetischer Veränderungen, die mit dieser Analyse untersucht wurden (z.B. SNV, CNV, Strukturvarianten).",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:genome-build",
+        "path": "Procedure.extension",
+        "sliceName": "genome-build",
+        "short": "Referenzgenom-Version",
+        "definition": "Version des verwendeten Referenzgenoms (z.B. GRCh38, hg19).",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:title",
+        "path": "Procedure.extension",
+        "sliceName": "title",
+        "short": "Bezeichnung der Analyse",
+        "definition": "Kurze, prägnante Bezeichnung oder Titel dieser spezifischen Analyse.",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:focus",
+        "path": "Procedure.extension",
+        "sliceName": "focus",
+        "short": "Fokus der Analyse",
+        "definition": "Spezifischer Fokus oder Ziel dieser Analyse (z.B. Referenz auf Krebserkrankung / erbliche Erkrankung).",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:specimen",
+        "path": "Procedure.extension",
+        "sliceName": "specimen",
+        "short": "Untersuchte Probe",
+        "definition": "Referenz zur Specimen-Ressource, die die für diese Analyse verwendete Probe beschreibt.",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:metrics",
+        "path": "Procedure.extension",
+        "sliceName": "metrics",
+        "short": "Qualitätsmetriken",
+        "definition": "Qualitätsmetriken der Analyse (z.B. Coverage, Depth, Call-Rate).",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:regions",
+        "path": "Procedure.extension",
+        "sliceName": "regions",
+        "short": "Untersuchte genomische Regionen",
+        "definition": "Komplexe Extension zur Spezifikation der genomischen Regionen (v.a. Gene, aber theroretischerweiterbar durch z.B Exonangaben)), die in dieser Analyse untersucht wurden. Angabe der untersuchten Regionen, sowie optional Angabe der callable/non-callable Regions",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension:device",
+        "path": "Procedure.extension",
+        "sliceName": "device",
+        "short": "Verwendetes Analysegerät",
+        "definition": "Komplexe Extension mit Art des Gerätes und Referenz zum Device (z.B. Sequenziergerät, Library Preparation Kit, aber auch Software wie bioinformatische Pipelines), das für diese Analyse verwendet wurde.",
+        "mustSupport": true
       }
     ]
   }

@@ -6,8 +6,8 @@ Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatens
 
 |Veröffentlichung|     |
 |---------|--------------|
-|  Datum  | 28.05.2025  |
-|  Version| 2026.0.0-alpha.1        |
+|  Datum  | 01.09.2025  |
+|  Version| 2026.0.0-ballot        |
 |  Status | draft       |
 |  Realm  | DE           |
 

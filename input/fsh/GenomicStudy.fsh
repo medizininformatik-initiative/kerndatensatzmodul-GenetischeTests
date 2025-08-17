@@ -6,6 +6,24 @@ Description: "Genomic Study ist ein Profil, dass die Durchführung von übergeor
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^status = #active
+* reasonReference MS
+* reasonReference ^short = "Anforderung/Indikation für die genetische Untersuchung"
+* reasonReference ^definition = "Referenz zur ServiceRequest-Ressource, die die Anforderung für diese genetische Studie darstellt."
+* performed[x] MS
+* performed[x] ^short = "Zeitpunkt oder Zeitraum der Durchführung"
+* performed[x] ^definition = "Zeitpunkt oder Zeitraum, in dem die genetische Studie durchgeführt wurde."
+* subject MS
+* subject ^short = "Patient/Proband der Untersuchung"
+* subject ^definition = "Referenz zum Patienten oder Probanden, für den die genetische Studie durchgeführt wurde."
+* encounter MS
+* encounter ^short = "Fallbezug der Untersuchung"
+* encounter ^definition = "Referenz zum Behandlungsfall, in dessen Kontext die genetische Studie durchgeführt wurde."
+* status MS
+* status ^short = "Status der genetischen Studie"
+* status ^definition = "Aktueller Status der genetischen Studie (z.B. registered, completed, cancelled)."
+* extension[genomic-study-analysis] MS
+* extension[genomic-study-analysis] ^short = "Durchgeführte Analysen"
+* extension[genomic-study-analysis] ^definition = "Referenzen zu den einzelnen GenomicStudyAnalysis-Ressourcen, die die spezifischen Analysen und Assays dieser Studie beschreiben."
 
 //* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
 
@@ -146,6 +164,34 @@ Description: "Genomic Study Analysis ist ein Profil, das die Durchführung von k
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^status = #active
+* extension[specimen] MS
+* extension[specimen] ^short = "Untersuchte Probe"
+* extension[specimen] ^definition = "Referenz zur Specimen-Ressource, die die für diese Analyse verwendete Probe beschreibt."
+* extension[device] MS
+* extension[device] ^short = "Verwendetes Analysegerät"
+* extension[device] ^definition = "Komplexe Extension mit Art des Gerätes und Referenz zum Device (z.B. Sequenziergerät, Library Preparation Kit, aber auch Software wie bioinformatische Pipelines), das für diese Analyse verwendet wurde."
+* extension[method-type] MS
+* extension[method-type] ^short = "Analysemethode"
+* extension[method-type] ^definition = "Art der durchgeführten Analysemethode (z.B. Sequenzierung, PCR, Array-CGH)."
+* extension[change-type] MS
+* extension[change-type] ^short = "Untersuchte Variationstypen"
+* extension[change-type] ^definition = "Typen genetischer Veränderungen, die mit dieser Analyse untersucht wurden (z.B. SNV, CNV, Strukturvarianten)."
+* extension[regions] MS
+* extension[regions] ^short = "Untersuchte genomische Regionen"
+* extension[regions] ^definition = "Komplexe Extension zur Spezifikation der genomischen Regionen (v.a. Gene, aber theroretischerweiterbar durch z.B Exonangaben)), die in dieser Analyse untersucht wurden. Angabe der untersuchten Regionen, sowie optional Angabe der callable/non-callable Regions"
+* extension[genome-build] MS
+* extension[genome-build] ^short = "Referenzgenom-Version"
+* extension[genome-build] ^definition = "Version des verwendeten Referenzgenoms (z.B. GRCh38, hg19)."
+* extension[focus] MS
+* extension[focus] ^short = "Fokus der Analyse"
+* extension[focus] ^definition = "Spezifischer Fokus oder Ziel dieser Analyse (z.B. Referenz auf Krebserkrankung / erbliche Erkrankung)."
+* extension[title] MS
+* extension[title] ^short = "Bezeichnung der Analyse"
+* extension[title] ^definition = "Kurze, prägnante Bezeichnung oder Titel dieser spezifischen Analyse."
+* extension[metrics] MS
+* extension[metrics] ^short = "Qualitätsmetriken"
+* extension[metrics] ^definition = "Qualitätsmetriken der Analyse (z.B. Coverage, Depth, Call-Rate)."
+
 
 // Fusion
 

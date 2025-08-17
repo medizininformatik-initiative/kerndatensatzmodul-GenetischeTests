@@ -1,42 +1,31 @@
 - name: Technische Implementierung
-  filename: TechnischeImplementierung.md
+  filename: TechnischeImplementierung.page.md
 - name: FHIR Profile
-  filename: FHIRProfile.md
-- name: Anforderung ServiceRequest
-  filename: Anforderung-ServiceRequest.md
-- name: Befundbericht DiagnosticReport
-  filename: Befundbericht-DiagnosticReport.md
-- name: Variante Observation
-  filename: Variante-Observation.md
-- name: Molekulare Konsequenz Observation
-  filename: MolekulareKonsequenz-Observation.md
-- name: Diagnostische Implikation Observation
-  filename: DiagnostischeImplikation-Observation.md
-- name: Therapeutische Implikation Observation
-  filename: TherapeutischeImplikation-Observation.md
-- name: Genomic Study Procedure
-  filename: GenomicStudy-Procedure.md
-- name: Genomic Study Analysis Procedure
-  filename: GenomicStudyAnalysis-Procedure.md
-- name: Familienanamnese FamilyMemberHistory
-  filename: Familienanamnese---FamilyMemberHistory.md
-- name: Genotyp Observation
-  filename: Genotyp---Observation.md
-- name: Mutationslast Observation
-  filename: Mutationslast-Observation.md
-- name: Mikrosatelliteninstabilität Observation
-  filename: Mikrosatelliteninstabilitt-Observation.md
-- name: Polygener Risiko Score RiskAssessment
-  filename: Polygener-Risiko-Score---RiskAssessment.md
-- name: Medikationsempfehlung Task
-  filename: Medikationsempfehlung-Task.md
-- name: Empfohlene Folgemaßnahme Task
-  filename: EmpfohleneFolgemanahme-Task.md
+  filename: FHIRProfile.page.md
+- name: Workflow
+  filename: Workflow
+- name: Genetische Befunde
+  filename: GenetischeBefunde
+- name: Genetische Implikationen
+  filename: GenetischeImplikationen
+- name: Molekulare Biomarker
+  filename: MolekulareBiomarker
+- name: Therapieempfehlungen
+  filename: Therapieempfehlungen
+- name: Methodik
+  filename: Methodik
+- name: Familienanamnese
+  filename: Familienanamnese
 - name: Capability Statement
-  filename: CapabilityStatement.md
-- name: Value Sets
-  filename: ValueSets.md
-- name: Code Systems
-  filename: CodeSystems.md
-- name: Terminologien
-  filename: Terminologien.md
+  filename: CapabilityStatement.page.md
+- name: Terminologie
+  filename: Terminologie
+# Legacy/Deprecated profiles (commented out in STU3 migration)
+#- name: Ergebnis Zusammenfassung Observation
+#  filename: ErgebnisZusammenfassung-Observation.page.md
+#- name: Untersuchte Region Observation
+#  filename: UntersuchteRegion-Observation.page.md
+#- name: Haplotype Observation
+#  filename: Haplotype-Observation.page.md
+#- name: Sequence Phase Relationship Observation
+#  filename: Sequence-Phase-Relationship---Observation.page.md
