@@ -169,39 +169,55 @@ FOL --> DI : focus
 ' Variant Relationships
 VAR --> PAT : subject
 VAR --> SPEC : specimen
-VAR --> MK : hasMember
-GS <-- VAR : derivedFrom
+VAR --> GS : partOf
 
 MK --> PAT : subject
+MK --> SPEC : specimen
 VAR <-- MK : derivedFrom
+GEN <-- MK : derivedFrom
+HAP <-- MK : derivedFrom
+TMB <-- MK : derivedFrom
+MSI <-- MK : derivedFrom
+MK --> GS : partOf
 
 ' Genotype/Haplotype Relationships
 GEN --> PAT : subject
 GEN --> SPEC : specimen
 VAR <-- GEN : derivedFrom
+GEN --> GS : partOf
 
 HAP --> PAT : subject
 HAP --> SPEC : specimen
 VAR <-- HAP : derivedFrom
+HAP --> GS : partOf
 
 ' Implication Relationships
 DI --> PAT : subject
 DI --> SPEC : specimen
 VAR <-- DI : derivedFrom
 GEN <-- DI : derivedFrom
+HAP <-- DI : derivedFrom
+TMB <-- DI : derivedFrom
+MSI <-- DI : derivedFrom
+DI --> GS : partOf
 
 TI --> PAT : subject
 TI --> SPEC : specimen
 VAR <-- TI : derivedFrom
+GEN <-- TI : derivedFrom
+HAP <-- TI : derivedFrom
+TMB <-- TI : derivedFrom
+MSI <-- TI : derivedFrom
+TI --> GS : partOf
 
 ' Biomarker Relationships
 TMB --> PAT : subject
 TMB --> SPEC : specimen
-GS <-- TMB : derivedFrom
+TMB --> GS : partOf
 
 MSI --> PAT : subject
 MSI --> SPEC : specimen
-GS <-- MSI : derivedFrom
+MSI --> GS : partOf
 
 PRS --> PAT : subject
 PRS --> VAR : basis

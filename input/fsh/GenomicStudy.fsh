@@ -6,6 +6,9 @@ Description: "Genomic Study ist ein Profil, dass die Durchführung von übergeor
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^status = #active
+* code MS
+* code ^short = "Art der genomischen Untersuchung"
+* code ^definition = "Art der genomischen oder molekulargenetischen Untersuchung, die durchgeführt wurde."
 * reasonReference MS
 * reasonReference ^short = "Anforderung/Indikation für die genetische Untersuchung"
 * reasonReference ^definition = "Referenz zur ServiceRequest-Ressource, die die Anforderung für diese genetische Studie darstellt."
