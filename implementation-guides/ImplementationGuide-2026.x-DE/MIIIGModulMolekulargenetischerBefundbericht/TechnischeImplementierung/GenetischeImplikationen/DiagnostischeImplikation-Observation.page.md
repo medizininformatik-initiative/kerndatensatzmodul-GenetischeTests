@@ -1,3 +1,7 @@
+---
+topic: DiagnostischeImplikation
+---
+
 ### {{page-title}}
 
 ---

@@ -1,3 +1,7 @@
+---
+topic: GenomicStudy
+---
+
 ### {{page-title}}
 
 ---

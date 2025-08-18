@@ -1,3 +1,7 @@
+---
+topic: FunctionalEffect
+---
+
 ## {{page-title}}
 
 ---

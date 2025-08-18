@@ -1,3 +1,7 @@
+---
+topic: PolygenerRisikoScore
+---
+
 #### {{page-title}}
 
 ---

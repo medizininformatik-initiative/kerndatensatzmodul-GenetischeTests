@@ -1,3 +1,7 @@
+---
+topic: MethodikIndex
+---
+
 #### {{page-title}}
 
 {{index:current}}

@@ -73,83 +73,82 @@ Obwohl diese Publikation mit größter Sorgfalt erstellt wurde, können die Auto
 ## Navigation und Inhaltsverzeichnis
 
 ### 📋 Überblick und Konzepte
-- [Beschreibung des Moduls](BeschreibungModulMolekulargenetischerBefundbericht.page.md) - Einführung in das Modul Molekulargenetischer Befundbericht
-- [Anwendungsfälle und Informationsmodell](AnwendungsflleInformationsmodell.page.md) - Use Cases und Datenmodell
-- [Szenarien für die Anwendung](BeschreibungvonSzenarienfrdieAnwendungderModule.page.md) - Praktische Anwendungsbeispiele
-- [Kontext im Gesamtprojekt](KontextimGesamtprojektBezgezuanderenModulen.page.md) - Bezug zu anderen MII-Modulen
-- [Datensätze inkl. Beschreibungen](Datenstzeinkl.Beschreibungen.page.md) - Detaillierte Datensatzbeschreibungen
-- [UML-Diagramme](UML.page.md) - Strukturdiagramme des Moduls
+- {{pagelink:BeschreibungModul}} - Einführung in das Modul Molekulargenetischer Befundbericht
+- {{pagelink:AnwendungsfaelleUebersicht}} - Use Cases und Datenmodell
+- {{pagelink:Szenarien}} - Praktische Anwendungsbeispiele
+- {{pagelink:KontextGesamtprojekt}} - Bezug zu anderen MII-Modulen
+- {{pagelink:Datensaetze}} - Detaillierte Datensatzbeschreibungen
+- {{pagelink:UMLDiagramme}} - Strukturdiagramme des Moduls
 
 ### 🛠️ Technische Implementierung
-- [Technische Implementierung (Übersicht)](TechnischeImplementierung/Index.page.md) - Hauptseite der technischen Dokumentation
-- [CapabilityStatement](TechnischeImplementierung/CapabilityStatement.page.md) - Server-Fähigkeiten und unterstützte Operationen
+- {{pagelink:TechnischeImplementierungIndex}} - Hauptseite der technischen Dokumentation
+- {{pagelink:CapabilityStatement}} - Server-Fähigkeiten und unterstützte Operationen
 
 #### 🔄 Workflow-Komponenten
-- [Workflow (Übersicht)](TechnischeImplementierung/Workflow/Index.page.md) - Workflow-Dokumentation
-- [Anforderung (ServiceRequest)](TechnischeImplementierung/Workflow/Anforderung-ServiceRequest.page.md) - Testanforderung
-- [Befundbericht (DiagnosticReport)](TechnischeImplementierung/Workflow/Befundbericht-DiagnosticReport.page.md) - Hauptbefund
+- {{pagelink:WorkflowIndex}} - Workflow-Dokumentation
+- {{pagelink:AnforderungServiceRequest}} - Testanforderung
+- {{pagelink:BefundberichtDiagnosticReport}} - Hauptbefund
 
 #### 🧬 Genetische Befunde
-- [Genetische Befunde (Übersicht)](TechnischeImplementierung/GenetischeBefunde/Index.page.md) - Befund-Dokumentation
-- [Variante (Observation)](TechnischeImplementierung/GenetischeBefunde/Variante-Observation.page.md) - Genetische Varianten
-- [Genotyp (Observation)](TechnischeImplementierung/GenetischeBefunde/Genotyp---Observation.page.md) - Genotyp-Information
-- [Haplotyp (Observation)](TechnischeImplementierung/GenetischeBefunde/Haplotype-Observation.page.md) - Haplotyp-Information
+- {{pagelink:GenetischeBefundeIndex}} - Befund-Dokumentation
+- {{pagelink:VarianteObservation}} - Genetische Varianten
+- {{pagelink:GenotypObservation}} - Genotyp-Information
+- {{pagelink:HaplotypeObservation}} - Haplotyp-Information
 
 #### 💡 Genetische Implikationen
-- [Implikationen (Übersicht)](TechnischeImplementierung/GenetischeImplikationen/Index.page.md) - Implikationen-Dokumentation
-- [Diagnostische Implikation](TechnischeImplementierung/GenetischeImplikationen/DiagnostischeImplikation-Observation.page.md) - Diagnostische Bedeutung
-- [Therapeutische Implikation](TechnischeImplementierung/GenetischeImplikationen/TherapeutischeImplikation-Observation.page.md) - Therapeutische Bedeutung
-- [Molekulare Konsequenz](TechnischeImplementierung/GenetischeImplikationen/MolekulareKonsequenz-Observation.page.md) - Molekulare Auswirkungen
+- {{pagelink:GenetischeImplikationenIndex}} - Implikationen-Dokumentation
+- {{pagelink:DiagnostischeImplikation}} - Diagnostische Bedeutung
+- {{pagelink:TherapeutischeImplikation}} - Therapeutische Bedeutung
+- {{pagelink:MolekulareKonsequenz}} - Molekulare Auswirkungen
 
 #### 📊 Molekulare Biomarker
-- [Biomarker (Übersicht)](TechnischeImplementierung/MolekulareBiomarker/Index.page.md) - Biomarker-Dokumentation
-- [Mikrosatelliteninstabilität (MSI)](TechnischeImplementierung/MolekulareBiomarker/Mikrosatelliteninstabilitt-Observation.page.md) - MSI-Status
-- [Mutationslast (TMB)](TechnischeImplementierung/MolekulareBiomarker/Mutationslast-Observation.page.md) - Tumor Mutational Burden
-- [Polygener Risiko-Score](TechnischeImplementierung/MolekulareBiomarker/Polygener-Risiko-Score---RiskAssessment.page.md) - PRS-Berechnung
+- {{pagelink:MolekulareBiomarkerIndex}} - Biomarker-Dokumentation
+- {{pagelink:Mikrosatelliteninstabilitaet}} - MSI-Status
+- {{pagelink:Mutationslast}} - Tumor Mutational Burden
+- {{pagelink:PolygenerRisikoScore}} - PRS-Berechnung
 
 #### 💊 Therapieempfehlungen
-- [Therapieempfehlungen (Übersicht)](TechnischeImplementierung/Therapieempfehlungen/Index.page.md) - Empfehlungen-Dokumentation
-- [Medikationsempfehlung](TechnischeImplementierung/Therapieempfehlungen/Medikationsempfehlung-Task.page.md) - Pharmakogenetische Empfehlungen
-- [Empfohlene Folgemaßnahme](TechnischeImplementierung/Therapieempfehlungen/EmpfohleneFolgemanahme-Task.page.md) - Follow-up Empfehlungen
+- {{pagelink:TherapieempfehlungenIndex}} - Empfehlungen-Dokumentation
+- {{pagelink:Medikationsempfehlung}} - Pharmakogenetische Empfehlungen
+- {{pagelink:EmpfohleneFolgemassnahme}} - Follow-up Empfehlungen
 
 #### 🔬 Methodik und Studien
-- [Methodik (Übersicht)](TechnischeImplementierung/Methodik/Index.page.md) - Methodik-Dokumentation
-- [GenomicStudy (Procedure)](TechnischeImplementierung/Methodik/GenomicStudy-Procedure.page.md) - Genomische Studie
-- [GenomicStudyAnalysis (Procedure)](TechnischeImplementierung/Methodik/GenomicStudyAnalysis-Procedure.page.md) - Studienanalyse
-- [GenomicStudy Comprehensive](TechnischeImplementierung/Methodik/GenomicStudyComprehensive.page.md) - Umfassende Studiendokumentation
+- {{pagelink:MethodikIndex}} - Methodik-Dokumentation
+- {{pagelink:GenomicStudy}} - Genomische Studie
+- {{pagelink:GenomicStudyAnalysis}} - Studienanalyse
 
 #### 👨‍👩‍👧‍👦 Familienanamnese
-- [Familienanamnese (Übersicht)](TechnischeImplementierung/Familienanamnese/Index.page.md) - Familienanamnese-Dokumentation
-- [Familienanamnese (FamilyMemberHistory)](TechnischeImplementierung/Familienanamnese/Familienanamnese---FamilyMemberHistory.page.md) - Familienhistorie
+- {{pagelink:FamilienanamneseIndex}} - Familienanamnese-Dokumentation
+- {{pagelink:FamilienanameseFamilyMemberHistory}} - Familienhistorie
 
 #### 📚 Terminologie
-- [Terminologie (Übersicht)](TechnischeImplementierung/Terminologie/Index.page.md) - Terminologie-Dokumentation
-- [Terminologien](TechnischeImplementierung/Terminologie/Terminologien.page.md) - Verwendete Terminologien
-- [CodeSystems](TechnischeImplementierung/Terminologie/CodeSystems.page.md) - Code-Systeme
-- [ValueSets](TechnischeImplementierung/Terminologie/ValueSets.page.md) - Wertemengen
+- {{pagelink:TerminologieIndex}} - Terminologie-Dokumentation
+- {{pagelink:Terminologien}} - Verwendete Terminologien
+- {{pagelink:CodeSystems}} - Code-Systeme
+- {{pagelink:ValueSets}} - Wertemengen
 
 ##### Spezielle Terminologien
-- [HGNC ValueSet](TechnischeImplementierung/Terminologie/HGNCValueSet.page.md) - Gen-Nomenklatur
-- [HGVS ValueSet](TechnischeImplementierung/Terminologie/HGVSValueSet.page.md) - Varianten-Nomenklatur
-- [DNA Change Type](TechnischeImplementierung/Terminologie/DNAChangeType.page.md) - DNA-Veränderungstypen
-- [Molecular Consequence](TechnischeImplementierung/Terminologie/MolecularConsequence.page.md) - Molekulare Konsequenzen
-- [Functional Effect](TechnischeImplementierung/Terminologie/Functional-Effect.page.md) - Funktionelle Effekte
-- [Variant Inheritance](TechnischeImplementierung/Terminologie/VariantInheritance.page.md) - Vererbungsmuster von Varianten
-- [Condition Inheritance Pattern](TechnischeImplementierung/Terminologie/Condition-Inheritance-Pattern.page.md) - Krankheitsvererbungsmuster
-- [Variant Confidence Status](TechnischeImplementierung/Terminologie/Variant-Confidence-Status.page.md) - Konfidenzstatus
-- [Genetic Therapeutic Implications](TechnischeImplementierung/Terminologie/Genetic-Therapeutic-Implications.page.md) - Therapeutische Implikationen
-- [Evidence Level Examples](TechnischeImplementierung/Terminologie/Evidence-Level-Examples.page.md) - Evidenzlevel
-- [ClinVar Evidence Level](TechnischeImplementierung/Terminologie/ClinVar-Evidence-Level-Example-Codes.page.md) - ClinVar Evidenz
-- [PharmGKB Evidence Level](TechnischeImplementierung/Terminologie/PharmGKB-Evidence-Level-Example-Codes.page.md) - PharmGKB Evidenz
-- [High/Low Codes](TechnischeImplementierung/Terminologie/HighLowcodes.page.md) - Hoch/Niedrig-Codes
-- [TBD Codes](TechnischeImplementierung/Terminologie/TBD-Codes.page.md) - Noch zu definierende Codes
-- [TBD ValueSet](TechnischeImplementierung/Terminologie/TBDValueSet.page.md) - Noch zu definierende ValueSets
+- {{pagelink:HGNCValueSet}} - Gen-Nomenklatur
+- {{pagelink:HGVSValueSet}} - Varianten-Nomenklatur
+- {{pagelink:DNAChangeType}} - DNA-Veränderungstypen
+- {{pagelink:MolecularConsequenceTerminologie}} - Molekulare Konsequenzen
+- {{pagelink:FunctionalEffect}} - Funktionelle Effekte
+- {{pagelink:VariantInheritance}} - Vererbungsmuster von Varianten
+- {{pagelink:ConditionInheritancePattern}} - Krankheitsvererbungsmuster
+- {{pagelink:VariantConfidenceStatus}} - Konfidenzstatus
+- {{pagelink:GeneticTherapeuticImplications}} - Therapeutische Implikationen
+- {{pagelink:EvidenceLevelExamples}} - Evidenzlevel
+- {{pagelink:ClinVarEvidenceLevel}} - ClinVar Evidenz
+- {{pagelink:PharmGKBEvidenceLevel}} - PharmGKB Evidenz
+- {{pagelink:HighLowCodes}} - Hoch/Niedrig-Codes
+- {{pagelink:TBDCodes}} - Noch zu definierende Codes
+- {{pagelink:TBDValueSet}} - Noch zu definierende ValueSets
 
 #### ⚠️ Veraltete/Kommentierte Profile
-- [Ergebnis-Zusammenfassung](TechnischeImplementierung/ErgebnisZusammenfassung-Observation.page.md) - (STU2, veraltet)
-- [Untersuchte Region](TechnischeImplementierung/UntersuchteRegion-Observation.page.md) - (STU2, ersetzt durch GenomicStudy)
+- {{pagelink:ErgebnisZusammenfassung}} - (STU2, veraltet)
+- {{pagelink:UntersuchteRegion}} - (STU2, ersetzt durch GenomicStudy)
 
 ### 📖 Weitere Dokumentation
-- [Release Notes](ReleaseNotes.page.md) - Versionshinweise und Änderungen
-- [Referenzen](Referenzen.page.md) - Literatur und Quellen  
+- {{pagelink:ReleaseNotes}} - Versionshinweise und Änderungen
+- {{pagelink:Referenzen}} - Literatur und Quellen  
 

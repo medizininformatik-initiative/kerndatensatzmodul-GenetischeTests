@@ -1,3 +1,7 @@
+---
+topic: Szenarien
+---
+
 ### Beschreibung von Szenarien für die Anwendung der Module
 
 Rapide Weiterentwicklungen der verfügbaren Sequenzierungstechnologien und genetischen Tests für die Sequenzierung von gesamten Genomen und Exomen ermöglichen es, dass diese hochentwickelten Tests von Leistungsgebern und Patienten für klinische Entscheidungen verwendet werden können. Die Ergebnisse der Tests werden genutzt, um spezifische, genetische Varianten zu identifizieren, die Syndrome beeinflussen, die zu Gesundheitszuständen und/oder dem vorhersehbaren Ansprechen auf eine Behandlung beitragen. Die Implementierung von Präzisionsmedizin ist abhängig von genau diesen Daten, um Diagnosen treffen zu können, Medikamente auszuwählen und den Verlauf der Erkrankung und Behandlung vorhersagen zu können. 

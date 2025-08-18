@@ -1,3 +1,7 @@
+---
+topic: HaplotypeObservation
+---
+
 #### {{page-title}}
 
 ### Observation

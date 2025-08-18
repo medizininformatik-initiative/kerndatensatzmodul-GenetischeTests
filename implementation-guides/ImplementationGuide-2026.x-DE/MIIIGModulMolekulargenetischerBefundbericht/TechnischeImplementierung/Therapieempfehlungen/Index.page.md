@@ -1,3 +1,7 @@
+---
+topic: TherapieempfehlungenIndex
+---
+
 #### {{page-title}}
 
 {{index:current}}

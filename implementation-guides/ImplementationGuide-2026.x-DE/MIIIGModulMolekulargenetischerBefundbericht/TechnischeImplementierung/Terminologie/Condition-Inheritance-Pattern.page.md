@@ -1,3 +1,7 @@
+---
+topic: ConditionInheritancePattern
+---
+
 ## {{page-title}}
 
 ---

@@ -1,3 +1,6 @@
+---
+topic: ReleaseNotes
+---
 
 # Release Notes
 

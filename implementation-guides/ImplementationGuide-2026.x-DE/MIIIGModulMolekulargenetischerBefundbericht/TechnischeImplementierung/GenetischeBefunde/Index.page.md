@@ -1,3 +1,7 @@
+---
+topic: GenetischeBefundeIndex
+---
+
 #### {{page-title}}
 
 {{index:current}}

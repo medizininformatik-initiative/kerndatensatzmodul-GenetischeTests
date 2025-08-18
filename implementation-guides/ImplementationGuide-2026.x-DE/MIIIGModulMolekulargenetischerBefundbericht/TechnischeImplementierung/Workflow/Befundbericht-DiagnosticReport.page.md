@@ -1,3 +1,7 @@
+---
+topic: BefundberichtDiagnosticReport
+---
+
 ### {{page-title}}
 
 ---

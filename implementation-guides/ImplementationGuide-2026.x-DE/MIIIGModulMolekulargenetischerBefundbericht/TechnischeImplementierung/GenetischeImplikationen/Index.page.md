@@ -1,3 +1,7 @@
+---
+topic: GenetischeImplikationenIndex
+---
+
 #### {{page-title}}
 
 {{index:current}}

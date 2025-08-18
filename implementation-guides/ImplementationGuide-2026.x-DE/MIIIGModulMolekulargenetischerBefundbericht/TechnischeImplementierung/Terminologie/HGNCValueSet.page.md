@@ -1,3 +1,7 @@
+---
+topic: HGNCValueSet
+---
+
 ## {{page-title}}
 
 ---

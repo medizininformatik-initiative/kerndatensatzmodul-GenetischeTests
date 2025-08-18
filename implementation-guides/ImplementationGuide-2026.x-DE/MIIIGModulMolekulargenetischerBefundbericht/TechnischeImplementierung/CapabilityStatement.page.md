@@ -1,3 +1,7 @@
+---
+topic: CapabilityStatement
+---
+
 ## {{page-title}}
 
 Um eine dezentrale Datenauswertung mittels des Deutsche Forschungsdatenportal für Gesundheit der Medizininformatik-Intiative zu ermöglichen MUSS die [capabilities-Interaktion](https://www.hl7.org/fhir/http.html#capabilities) unterstützt werden, sodass durch den FHIR-Server unter ```[BASE-URL]/metadata``` ein CapabilityStatement exponiert wird. Innerhalb dieses CapabilityStatement MUSS angegeben werden, welche Profile inkl. Version, sowie welche Suchparameter unterstützt werden.

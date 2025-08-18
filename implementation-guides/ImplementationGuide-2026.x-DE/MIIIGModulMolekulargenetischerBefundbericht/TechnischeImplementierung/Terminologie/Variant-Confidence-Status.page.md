@@ -1,3 +1,7 @@
+---
+topic: VariantConfidenceStatus
+---
+
 ## {{page-title}}
 
 ---

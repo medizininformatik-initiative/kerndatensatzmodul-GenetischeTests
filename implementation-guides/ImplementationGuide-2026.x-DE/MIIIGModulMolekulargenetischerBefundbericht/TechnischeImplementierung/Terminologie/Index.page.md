@@ -1,3 +1,7 @@
+---
+topic: TerminologieIndex
+---
+
 #### {{page-title}}
 
 {{index:current}}
