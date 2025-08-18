@@ -11,17 +11,19 @@ Im Folgenden werden die Use-Cases des Moduls sowie die dazugehörigen FHIR-Profi
 {{render:ig-bilder-KDS-Module}}
 
 ### Scope
+
 #### Out of scope
 Die Spezifikation wird zukünftig die strukturierte Erfassung von: 
-* Prozessierungsschritten (Bioinformatik-Pipeline inkl. verwendeter Datenbanken und Software) und 
 * Ergebnissen von FISH-Analysen 
 * RNA-Fusionen und weiterer komplexer Varianten adressieren.</br>
+Vorläufige Abbildungen in FHIR werden im Molekularne Tumorboard erprobt. 
 
 #### In scope
 In der aktuellen Version ernmöglicht die Spezifikation die strukturierte Darstellung von:</br>
 * Punktvarianten (engl. Single nucleotide variants, SNVs)</br>
 * Kopienzahlvarianten (engl. Copy number variation, CNV)</br>
 * DNA-Fusionen, in eingeschränkter Form</br>
+* Prozessierungsschritten (Bioinformatik-Pipeline inkl. verwendeter Datenbanken und Software) - vormalig out of scope, aber durch Update auf STU3 über GenomicStudy / GenomicStudyAnalysis möglich 
 
 
  

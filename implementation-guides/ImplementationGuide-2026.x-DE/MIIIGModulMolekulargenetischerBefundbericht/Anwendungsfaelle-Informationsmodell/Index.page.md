@@ -1,3 +1,7 @@
+#### {{page-title}}
+
+{{index:current}}
+
 ## Anwendungsfälle / Informationsmodell
 
 Das Erweiterungsmodul **Molekulargenetischer Befundbericht** ermöglicht die Darstellung der Befundung von pathologischen und Wildtyp-Genotypen basierend auf angeforderter sequenz- und nicht sequenzbasierten Tests.

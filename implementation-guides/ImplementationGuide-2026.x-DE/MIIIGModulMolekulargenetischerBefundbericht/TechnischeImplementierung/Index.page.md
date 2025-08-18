@@ -35,7 +35,7 @@ Die folgende Tabelle zeigt die Vererbungsbeziehungen der Profile in diesem Modul
 
 Das folgende Diagramm visualisiert die Beziehungen zwischen den verschiedenen FHIR-Profilen im Modul:
 
-<img src="profile-relationships-final.png" alt="MII Kerndatensatz Modul Molekulargenetik - Profil-Beziehungen" style="width: 100%; max-width: 1200px; margin: 20px 0;" />
+<img src="https://github.com/medizininformatik-initiative/kerndatensatzmodul-GenetischeTests/blob/356423a87f4673eaf951968ac75db60568b22e8e/implementation-guides/ImplementationGuide-2026.x-DE/Images/MII_MolGen_Profile_Relationships_Final.png?raw=true" alt="MII Kerndatensatz Modul Molekulargenetik - Profil-Beziehungen" style="width: 100%; max-width: 1200px; margin: 20px 0;" />
 
 **Legende:**
 - **Blau (Workflow)**: ServiceRequest und DiagnosticReport als zentrale Workflow-Komponenten
@@ -45,4 +45,3 @@ Das folgende Diagramm visualisiert die Beziehungen zwischen den verschiedenen FH
 - **Violett (Implication)**: Klinische Implikationen (Diagnostisch, Therapeutisch, Molekular)
 - **Grau (Task)**: Empfohlene Maßnahmen (Medikation, Folgemaßnahmen)
 
-Die dicken Pfeile zeigen primäre Beziehungen, während normale Pfeile sekundäre Beziehungen darstellen. Der DiagnosticReport fungiert als zentrale Ressource, die alle Analysen und Befunde zusammenführt.

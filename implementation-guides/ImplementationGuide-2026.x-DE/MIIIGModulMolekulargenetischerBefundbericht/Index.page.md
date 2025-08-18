@@ -148,7 +148,6 @@ Obwohl diese Publikation mit größter Sorgfalt erstellt wurde, können die Auto
 #### ⚠️ Veraltete/Kommentierte Profile
 - [Ergebnis-Zusammenfassung](TechnischeImplementierung/ErgebnisZusammenfassung-Observation.page.md) - (STU2, veraltet)
 - [Untersuchte Region](TechnischeImplementierung/UntersuchteRegion-Observation.page.md) - (STU2, ersetzt durch GenomicStudy)
-- [Sequence Phase Relationship](TechnischeImplementierung/Sequence-Phase-Relationship---Observation.page.md) - Phasenbeziehung
 
 ### 📖 Weitere Dokumentation
 - [Release Notes](ReleaseNotes.page.md) - Versionshinweise und Änderungen
