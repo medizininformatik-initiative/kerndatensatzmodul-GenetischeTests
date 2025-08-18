@@ -183,3 +183,36 @@ Usage: #definition
 * type = #reference
 * expression = "Procedure.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device').value"
 * target[+] = #Device
+
+// SearchParameters for DiagnosticReport extensions
+Instance: mii-sp-molgen-diagnostic-report-genomic-study
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/DiagnosticReport-GenomicStudy"
+* name = "SP_MII_MolGen_DiagnosticReport_GenomicStudy"
+* status = #active
+* experimental = false
+* date = "2024-11-08"
+* description = "Suchparameter für GenomicStudy Referenz in DiagnosticReport"
+* code = #genomic-study
+* base = #DiagnosticReport
+* type = #reference
+* expression = "DiagnosticReport.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-reference').value"
+* target[+] = #Procedure
+
+Instance: mii-sp-molgen-diagnostic-report-recommended-action
+InstanceOf: SearchParameter
+Usage: #definition
+* insert SP_Publisher
+* url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/DiagnosticReport-RecommendedAction"
+* name = "SP_MII_MolGen_DiagnosticReport_RecommendedAction"
+* status = #active
+* experimental = false
+* date = "2024-11-08"
+* description = "Suchparameter für empfohlene Maßnahmen in DiagnosticReport"
+* code = #recommended-action
+* base = #DiagnosticReport
+* type = #reference
+* expression = "DiagnosticReport.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/recommended-action').value"
+* target[+] = #Task

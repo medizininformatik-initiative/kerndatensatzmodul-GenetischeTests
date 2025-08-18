@@ -104,6 +104,8 @@
 [mii-exa-molgen-specimen-srcc-2]: Specimen-mii-exa-molgen-specimen-srcc-2.html
 [mii-exa-molgen-therapeutische-implikation-fgfr2-fusion]: Observation-mii-exa-molgen-therapeutische-implikation-fgfr2-fusion.html
 [mii-exa-molgen-variante-srcc-ctnna1]: Observation-mii-exa-molgen-variante-srcc-ctnna1.html
+[mii-sp-molgen-diagnostic-report-genomic-study]: SearchParameter-mii-sp-molgen-diagnostic-report-genomic-study.html
+[mii-sp-molgen-diagnostic-report-recommended-action]: SearchParameter-mii-sp-molgen-diagnostic-report-recommended-action.html
 [mii-sp-molgen-genomic-study-analysis-device]: SearchParameter-mii-sp-molgen-genomic-study-analysis-device.html
 [mii-sp-molgen-genomic-study-analysis-method]: SearchParameter-mii-sp-molgen-genomic-study-analysis-method.html
 [mii-sp-molgen-genomic-study-analysis-regions-studied]: SearchParameter-mii-sp-molgen-genomic-study-analysis-regions-studied.html

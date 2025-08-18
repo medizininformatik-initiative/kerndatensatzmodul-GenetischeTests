@@ -1,0 +1,249 @@
+@startuml MII_MolGen_Profile_Relationships
+!define RECTANGLE class
+skinparam class {
+    BackgroundColor<<Core>> LightBlue
+    BackgroundColor<<Observation>> LightGreen
+    BackgroundColor<<Task>> LightYellow
+    BackgroundColor<<Study>> LightPink
+    BackgroundColor<<Support>> LightGray
+    BackgroundColor<<External>> White
+    BorderColor Black
+    ArrowColor Black
+}
+
+title MII Molekulargenetischer Befundbericht - Profile Relationships
+
+' Core Workflow Profiles
+RECTANGLE "ServiceRequest\nAnforderung" as SR <<Core>> {
+    + subject: Patient
+    + specimen: Specimen
+    + requester: Practitioner
+    + supportingInfo: FamilyMemberHistory
+    + reasonReference: Observation
+}
+
+RECTANGLE "DiagnosticReport\nBefundbericht" as DR <<Core>> {
+    + subject: Patient
+    + specimen: Specimen
+    + performer: Practitioner
+    + basedOn: ServiceRequest
+    + result: Observation[]
+    + media: Media
+    + extension: Task[]
+}
+
+' Genetic Finding Profiles
+RECTANGLE "Variante" as VAR <<Observation>> {
+    + subject: Patient
+    + specimen: Specimen
+    + derivedFrom: Observation[]
+    + hasMember: MolekulareKonsequenz
+    + component: variant-details
+}
+
+RECTANGLE "MolekulareKonsequenz" as MK <<Observation>> {
+    + subject: Patient
+    + derivedFrom: Variante
+    + component: consequence-details
+}
+
+RECTANGLE "Genotyp" as GEN <<Observation>> {
+    + subject: Patient
+    + specimen: Specimen
+    + derivedFrom: Variante[]
+}
+
+RECTANGLE "Haplotype" as HAP <<Observation>> {
+    + subject: Patient
+    + specimen: Specimen
+    + derivedFrom: Variante[]
+}
+
+' Clinical Implication Profiles
+RECTANGLE "DiagnostischeImplikation" as DI <<Observation>> {
+    + subject: Patient
+    + specimen: Specimen
+    + derivedFrom: Variante[]
+    + component: clinical-significance
+}
+
+RECTANGLE "TherapeutischeImplikation" as TI <<Observation>> {
+    + subject: Patient
+    + specimen: Specimen
+    + derivedFrom: Variante[]
+    + component: therapy-details
+}
+
+' Biomarker Profiles
+RECTANGLE "Mutationslast" as TMB <<Observation>> {
+    + subject: Patient
+    + specimen: Specimen
+    + derivedFrom: GenomicStudy
+}
+
+RECTANGLE "Mikrosatelliteninstabilität" as MSI <<Observation>> {
+    + subject: Patient
+    + specimen: Specimen
+    + derivedFrom: GenomicStudy
+}
+
+RECTANGLE "PolygenerRisikoScore" as PRS <<Support>> {
+    + subject: Patient
+    + basis: Variante[]
+    + prediction: risk-assessment
+}
+
+' Study Profiles
+RECTANGLE "GenomicStudy" as GS <<Study>> {
+    + subject: Patient
+    + reasonReference: ServiceRequest
+    + extension[genomic-study-analysis]: GenomicStudyAnalysis[]
+    + usedReference: Specimen[]
+}
+
+RECTANGLE "GenomicStudyAnalysis" as GSA <<Study>> {
+    + subject: Patient
+    + usedReference: Specimen
+    + report: DocumentReference[]
+}
+
+' Task Profiles
+RECTANGLE "Medikationsempfehlung" as MED <<Task>> {
+    + for: Patient
+    + basedOn: DiagnosticReport
+    + focus: TherapeutischeImplikation
+}
+
+RECTANGLE "EmpfohleneFolgemaßnahme" as FOL <<Task>> {
+    + for: Patient
+    + basedOn: DiagnosticReport
+    + focus: DiagnostischeImplikation
+}
+
+' Support Profiles
+RECTANGLE "Familienanamnese" as FAM <<Support>> {
+    + patient: Patient
+    + reasonReference: Condition
+}
+
+' External Resources
+RECTANGLE "Patient" as PAT <<External>>
+RECTANGLE "Practitioner" as PRAC <<External>>
+RECTANGLE "Specimen" as SPEC <<External>>
+RECTANGLE "Media" as MEDIA <<External>>
+RECTANGLE "DocumentReference" as DOC <<External>>
+RECTANGLE "Condition" as COND <<External>>
+
+' Main Workflow Relationships
+SR --> PAT : subject
+SR --> SPEC : specimen
+SR --> PRAC : requester
+SR --> FAM : supportingInfo
+
+DR --> PAT : subject
+DR --> SPEC : specimen
+DR --> PRAC : performer
+DR --> SR : basedOn
+DR --> MEDIA : media
+
+' Result Relationships from DiagnosticReport
+DR --> VAR : result
+DR --> DI : result
+DR --> TI : result
+DR --> GEN : result
+DR --> HAP : result
+DR --> TMB : result
+DR --> MSI : result
+DR --> GS : extension[genomic-study]
+
+' Task Relationships
+DR --> MED : extension[recommended-action]
+DR --> FOL : extension[recommended-action]
+MED --> PAT : for
+MED --> DR : basedOn
+MED --> TI : focus
+FOL --> PAT : for
+FOL --> DR : basedOn
+FOL --> DI : focus
+
+' Variant Relationships
+VAR --> PAT : subject
+VAR --> SPEC : specimen
+VAR --> GS : partOf
+
+MK --> PAT : subject
+MK --> SPEC : specimen
+VAR <-- MK : derivedFrom
+GEN <-- MK : derivedFrom
+HAP <-- MK : derivedFrom
+TMB <-- MK : derivedFrom
+MSI <-- MK : derivedFrom
+MK --> GS : partOf
+
+' Genotype/Haplotype Relationships
+GEN --> PAT : subject
+GEN --> SPEC : specimen
+VAR <-- GEN : derivedFrom
+GEN --> GS : partOf
+
+HAP --> PAT : subject
+HAP --> SPEC : specimen
+VAR <-- HAP : derivedFrom
+HAP --> GS : partOf
+
+' Implication Relationships
+DI --> PAT : subject
+DI --> SPEC : specimen
+VAR <-- DI : derivedFrom
+GEN <-- DI : derivedFrom
+HAP <-- DI : derivedFrom
+TMB <-- DI : derivedFrom
+MSI <-- DI : derivedFrom
+DI --> GS : partOf
+
+TI --> PAT : subject
+TI --> SPEC : specimen
+VAR <-- TI : derivedFrom
+GEN <-- TI : derivedFrom
+HAP <-- TI : derivedFrom
+TMB <-- TI : derivedFrom
+MSI <-- TI : derivedFrom
+TI --> GS : partOf
+
+' Biomarker Relationships
+TMB --> PAT : subject
+TMB --> SPEC : specimen
+TMB --> GS : partOf
+
+MSI --> PAT : subject
+MSI --> SPEC : specimen
+MSI --> GS : partOf
+
+PRS --> PAT : subject
+PRS --> VAR : basis
+
+' Study Relationships
+GS --> PAT : subject
+GS --> SR : reasonReference
+GS --> GSA : extension[genomic-study-analysis]
+GS --> SPEC : usedReference
+
+GSA --> PAT : subject
+GSA --> SPEC : usedReference
+GSA --> DOC : report
+
+' Family History Relationships
+FAM --> PAT : patient
+FAM --> COND : reasonReference
+
+legend right
+  |= Color |= Profile Type |
+  | <#LightBlue> | Core Workflow |
+  | <#LightGreen> | Observations |
+  | <#LightYellow> | Tasks |
+  | <#LightPink> | Studies |
+  | <#LightGray> | Support |
+  | <#White> | External FHIR |
+endlegend
+
+@enduml

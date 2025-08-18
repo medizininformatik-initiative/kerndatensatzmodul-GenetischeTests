@@ -564,32 +564,32 @@
     "fshName": "mii-exa-molgen-genomic-study-1",
     "fshType": "Instance",
     "fshFile": "GenomicStudy.fsh",
-    "startLine": 17,
-    "endLine": 24
+    "startLine": 38,
+    "endLine": 45
   },
   {
     "outputFile": "Procedure-mii-exa-molgen-genomic-study-analysis-braf.json",
     "fshName": "mii-exa-molgen-genomic-study-analysis-braf",
     "fshType": "Instance",
     "fshFile": "GenomicStudy.fsh",
-    "startLine": 26,
-    "endLine": 43
+    "startLine": 47,
+    "endLine": 64
   },
   {
     "outputFile": "Procedure-mii-exa-molgen-genomic-study-analysis-cornelia-de-lange.json",
     "fshName": "mii-exa-molgen-genomic-study-analysis-cornelia-de-lange",
     "fshType": "Instance",
     "fshFile": "GenomicStudy.fsh",
-    "startLine": 112,
-    "endLine": 139
+    "startLine": 133,
+    "endLine": 160
   },
   {
     "outputFile": "Procedure-mii-exa-molgen-genomic-study-analysis-trurisk-panel.json",
     "fshName": "mii-exa-molgen-genomic-study-analysis-trurisk-panel",
     "fshType": "Instance",
     "fshFile": "GenomicStudy.fsh",
-    "startLine": 54,
-    "endLine": 101
+    "startLine": 75,
+    "endLine": 122
   },
   {
     "outputFile": "Procedure-mii-exa-molgen-genomic-study-analysis-wes-bioinformatics.json",
@@ -628,16 +628,16 @@
     "fshName": "mii-exa-molgen-genomic-study-cornelia-de-lange",
     "fshType": "Instance",
     "fshFile": "GenomicStudy.fsh",
-    "startLine": 103,
-    "endLine": 110
+    "startLine": 124,
+    "endLine": 131
   },
   {
     "outputFile": "Procedure-mii-exa-molgen-genomic-study-trurisk-panel.json",
     "fshName": "mii-exa-molgen-genomic-study-trurisk-panel",
     "fshType": "Instance",
     "fshFile": "GenomicStudy.fsh",
-    "startLine": 45,
-    "endLine": 52
+    "startLine": 66,
+    "endLine": 73
   },
   {
     "outputFile": "RiskAssessment-mii-exa-molgen-prs-brca1.json",
@@ -646,6 +646,22 @@
     "fshFile": "PolygenerRisikoScore.fsh",
     "startLine": 38,
     "endLine": 50
+  },
+  {
+    "outputFile": "SearchParameter-mii-sp-molgen-diagnostic-report-genomic-study.json",
+    "fshName": "mii-sp-molgen-diagnostic-report-genomic-study",
+    "fshType": "Instance",
+    "fshFile": "SearchParameter.fsh",
+    "startLine": 188,
+    "endLine": 202
+  },
+  {
+    "outputFile": "SearchParameter-mii-sp-molgen-diagnostic-report-recommended-action.json",
+    "fshName": "mii-sp-molgen-diagnostic-report-recommended-action",
+    "fshType": "Instance",
+    "fshFile": "SearchParameter.fsh",
+    "startLine": 204,
+    "endLine": 218
   },
   {
     "outputFile": "SearchParameter-mii-sp-molgen-genomic-study-analysis-device.json",
@@ -868,8 +884,8 @@
     "fshName": "MII_PR_MolGen_GenomicStudyAnalysis",
     "fshType": "Profile",
     "fshFile": "GenomicStudy.fsh",
-    "startLine": 141,
-    "endLine": 148
+    "startLine": 162,
+    "endLine": 196
   },
   {
     "outputFile": "StructureDefinition-mii-pr-molgen-genomic-study.json",
@@ -877,7 +893,7 @@
     "fshType": "Profile",
     "fshFile": "GenomicStudy.fsh",
     "startLine": 1,
-    "endLine": 8
+    "endLine": 29
   },
   {
     "outputFile": "StructureDefinition-mii-pr-molgen-genotyp.json",
