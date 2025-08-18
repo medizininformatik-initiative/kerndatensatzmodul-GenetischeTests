@@ -22,14 +22,9 @@ Das Profil ist abgeleitet vom Profil [Therapeutic Implication](http://hl7.org/fh
 
 ---
 
-**Diff**
+#### Profil
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation, diff}}
-
----
-**Snapshot**
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation, snapshot}}
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation, buttons}}
 
 ---
 

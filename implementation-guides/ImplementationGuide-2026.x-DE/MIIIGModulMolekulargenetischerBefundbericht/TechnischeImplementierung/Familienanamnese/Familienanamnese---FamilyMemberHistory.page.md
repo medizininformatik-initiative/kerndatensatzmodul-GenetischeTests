@@ -18,15 +18,9 @@ select Name: name, Canonical: url
 
 ---
 
-**Diff**
+#### Profil
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese, diff}}
-
----
-
-**Snapshot**
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese, snapshot}}
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese, buttons}}
 
 ---
 

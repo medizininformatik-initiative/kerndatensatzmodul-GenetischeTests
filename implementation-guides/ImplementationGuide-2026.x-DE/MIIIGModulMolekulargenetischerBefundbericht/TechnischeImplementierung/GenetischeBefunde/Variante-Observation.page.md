@@ -52,14 +52,9 @@ Das Profil ist abgeleitet vom Profil [Variant](http://hl7.org/fhir/uv/genomics-r
 
 ---
 
-**Diff**
+#### Profil
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante, diff}}
-
----
-**Snapshot**
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante, snapshot}}
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante, buttons}}
 
 ---
 | FHIR-Element | Logischer Datensatz |

@@ -22,14 +22,9 @@ Das Profil ist abgeleitet vom Profil [Diagnostic Implication](http://hl7.org/fhi
 
 ---
 
-**Diff**
+#### Profil
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation, diff}}
-
----
-**Snapshot**
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation, snapshot}}
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation, buttons}}
 
 ---
 

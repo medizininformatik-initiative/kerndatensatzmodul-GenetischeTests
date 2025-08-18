@@ -18,15 +18,9 @@ select Name: name, Canonical: url
 
 ---
 
-**Diff**
+#### Profil
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score, diff}}
-
----
-
-**Snapshot**
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score, snapshot}}
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score, buttons}}
 
 ---
 
@@ -40,7 +34,7 @@ select Name: name, Canonical: url
 
 **Snapshot**
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/risk-assessment-einflussfaktor, snapshot}}
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/risk-assessment-einflussfaktor, buttons}}
 
 ---
 

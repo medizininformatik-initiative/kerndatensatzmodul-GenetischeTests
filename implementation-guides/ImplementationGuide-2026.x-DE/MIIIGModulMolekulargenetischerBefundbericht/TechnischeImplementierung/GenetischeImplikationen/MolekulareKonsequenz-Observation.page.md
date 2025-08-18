@@ -24,14 +24,9 @@ Das Profil ist abgeleitet vom Profil [MolecularConsequence](http://hl7.org/fhir/
 
 ---
 
-**Diff**
+#### Profil
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz, diff}}
-
----
-**Snapshot**
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz, snapshot}}
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz, buttons}}
 
 ---
 | FHIR-Element | Logischer Datensatz |

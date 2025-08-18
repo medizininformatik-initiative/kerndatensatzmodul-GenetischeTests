@@ -16,15 +16,9 @@ Das Profil [Haplotype](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureD
 
 ---
 
-**Diff**
+#### Profil
 
-{{tree:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype, diff}}
-
----
-
-**Snapshot**
-
-{{tree:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype, snapshot}}
+{{tree:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype, buttons}}
 
 ---
 | FHIR-Element | Logischer Datensatz |

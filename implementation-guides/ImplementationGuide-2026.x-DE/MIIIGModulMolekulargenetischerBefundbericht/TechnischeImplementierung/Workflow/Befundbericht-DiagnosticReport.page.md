@@ -27,15 +27,9 @@ Ein passendes [Profil für ChargeItem](http://fhir.de/StructureDefinition/charge
 
 ---
 
-**Diff**
+#### Profil
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht, diff}}
-
----
-
-**Snapshot**
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht, snapshot}}
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht, buttons}}
 
 ---
 
@@ -47,9 +41,7 @@ Ein passendes [Profil für ChargeItem](http://fhir.de/StructureDefinition/charge
 * Definition: Erfasst Zitate, Beweise und andere unterstützende Unterlagen für die Beobachtung oder den Bericht.
 * url: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact
 
-**Snapshot**
-
-{{tree:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact, snapshot}}
+{{tree:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact, buttons}}
 
 ---
 
@@ -60,9 +52,7 @@ Ein passendes [Profil für ChargeItem](http://fhir.de/StructureDefinition/charge
 Beispiele sind VCF-, BAM-, CRAM- und andere ähnliche Dateien.
 * url: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-file
 
-**Snapshot**
-
-{{tree:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-file, snapshot}}
+{{tree:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-file, buttons}}
 
 ---
 
@@ -72,9 +62,7 @@ Beispiele sind VCF-, BAM-, CRAM- und andere ähnliche Dateien.
 * Definition: Die Extension verweist auf eine vorgeschlagene Maßnahme, die auf der Grundlage der Ergebnisse des Befundberichts empfohlen wird.
 * url: https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-massnahme
 
-**Snapshot**
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-massnahme, snapshot}}
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-massnahme, buttons}}
 
 ---
 
@@ -84,9 +72,7 @@ Beispiele sind VCF-, BAM-, CRAM- und andere ähnliche Dateien.
 * Definition: RiskAssessment als Teil eines genomischen Berichtes oder einer Beobachtung.
 * url: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-risk-assessment
 
-**Snapshot**
-
-{{tree:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-risk-assessment, snapshot}}
+{{tree:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-risk-assessment, buttons}}
 
 ---
 
@@ -96,9 +82,7 @@ Beispiele sind VCF-, BAM-, CRAM- und andere ähnliche Dateien.
 * Definition: Kommentare zum Bericht, die auch einen kodierten Typ enthalten.
 * url: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report-note
 
-**Snapshot**
-
-{{tree:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report-note, snapshot}}
+{{tree:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report-note, buttons}}
 
 ---
 
@@ -108,9 +92,7 @@ Beispiele sind VCF-, BAM-, CRAM- und andere ähnliche Dateien.
 * Definition: Weitere Informationen, die für diese Beobachtung relevant sein könnten.
 * url: http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
 
-**Snapshot**
-
-{{tree:http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo, snapshot}}
+{{tree:http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo, buttons}}
 
 ---
 

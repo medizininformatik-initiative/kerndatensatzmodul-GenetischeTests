@@ -14,7 +14,7 @@ GenomicStudy dient zur Erfassung der Metadaten über die durchgeführte genomisc
 
 @```
 from StructureDefinition
-where url='https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study'
+where url='https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study'
 select Name: name, Canonical: url
 ```
 
@@ -24,24 +24,23 @@ Das Profil ist abgeleitet vom Profil [GenomicStudy](http://hl7.org/fhir/uv/genom
 
 ---
 
-**Diff**
+#### Profil
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study, diff}}
-
----
-**Snapshot**
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study, snapshot}}
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study, buttons}}
 
 ---
-| FHIR-Element | Logischer Datensatz |
-|---|---|
-| Procedure.status | Weiteres.Berichtstatus |
-| Procedure.code | Methoden.Methode |
-| Procedure.subject | Probeninformation.Patient |
-| Procedure.usedReference | Methoden.Geräte / Software / Kits |
-| Procedure.note | Methoden.Limitierungen/Bemerkungen |
-| Procedure.extension:genomic-study-analysis | GenomicStudyAnalysis |
+
+#### Must Support Elemente
+
+| FHIR-Element | Bedeutung | Logischer Datensatz |
+|---|---|---|
+| Procedure.status | Status der genetischen Studie (z.B. completed, cancelled) | Weiteres.Berichtstatus |
+| Procedure.code | Art der genomischen Untersuchung | Methoden.Untersuchungsart |
+| Procedure.subject | Patient/Proband der Untersuchung | Probeninformation.Patient |
+| Procedure.encounter | Fallbezug der Untersuchung | Probeninformation.Fall |
+| Procedure.performed[x] | Zeitpunkt oder Zeitraum der Durchführung | Methoden.Durchführungsdatum |
+| Procedure.reasonReference | Anforderung/Indikation für die genetische Untersuchung | Anforderung.ServiceRequest |
+| Procedure.extension:genomic-study-analysis | Referenzen zu den einzelnen GenomicStudyAnalysis-Ressourcen | Methoden.Analyseschritte |
 
 ---
 

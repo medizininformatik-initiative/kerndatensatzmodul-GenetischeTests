@@ -14,7 +14,7 @@ GenomicStudyAnalysis erfasst spezifische Analyseparameter wie untersuchte Genomr
 
 @```
 from StructureDefinition
-where url='https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis'
+where url='https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis'
 select Name: name, Canonical: url
 ```
 
@@ -24,25 +24,25 @@ Das Profil ist abgeleitet vom Profil [GenomicStudyAnalysis](http://hl7.org/fhir/
 
 ---
 
-**Diff**
+#### Profil
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis, diff}}
-
----
-**Snapshot**
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis, snapshot}}
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis, buttons}}
 
 ---
-| FHIR-Element | Logischer Datensatz |
-|---|---|
-| Procedure.status | Weiteres.Berichtstatus |
-| Procedure.code | Methoden.Methode |
-| Procedure.subject | Probeninformation.Patient |
-| Procedure.usedReference | Methoden.Geräte / Software / Kits |
-| Procedure.extension:genomic-study-analysis-regions | Methoden.Start- und Endnukleotid |
-| Procedure.extension:genomic-study-analysis-genome-build | Ergebnisse.Veränderungen.Referenzgenom |
-| Procedure.note | Methoden.Limitierungen/Bemerkungen |
+
+#### Must Support Elemente
+
+| FHIR-Element | Bedeutung | Logischer Datensatz |
+|---|---|---|
+| Procedure.extension:specimen | Referenz zur verwendeten Probe | Probeninformation.Probe |
+| Procedure.extension:device | Verwendetes Analysegerät (Sequenzer, Software) | Methoden.Geräte / Software |
+| Procedure.extension:method-type | Art der Analysemethode (z.B. Sequenzierung, PCR) | Methoden.Analysetyp |
+| Procedure.extension:change-type | Untersuchte Variationstypen (SNV, CNV, etc.) | Methoden.Variationstypen |
+| Procedure.extension:regions | Untersuchte genomische Regionen (Gene, Exons) | Methoden.Untersuchte Regionen |
+| Procedure.extension:genome-build | Version des Referenzgenoms (z.B. GRCh38) | Methoden.Referenzgenom |
+| Procedure.extension:focus | Fokus/Ziel der Analyse | Methoden.Analysefokus |
+| Procedure.extension:title | Bezeichnung der Analyse | Methoden.Analysebezeichnung |
+| Procedure.extension:metrics | Qualitätsmetriken (Coverage, Depth) | Methoden.Qualitätsmetriken |
 
 ---
 

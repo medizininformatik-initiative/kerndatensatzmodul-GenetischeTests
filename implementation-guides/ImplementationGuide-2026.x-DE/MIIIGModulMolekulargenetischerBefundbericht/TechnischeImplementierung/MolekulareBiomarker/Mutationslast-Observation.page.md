@@ -22,15 +22,9 @@ Das Profil ist abgeleitet vom Profil [Tumor Mutation Burden](http://hl7.org/fhir
 
 ---
 
-**Diff**
+#### Profil
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast, diff}}
-
----
-
-**Snapshot**
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast, snapshot}}
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast, buttons}}
 
 
 ---

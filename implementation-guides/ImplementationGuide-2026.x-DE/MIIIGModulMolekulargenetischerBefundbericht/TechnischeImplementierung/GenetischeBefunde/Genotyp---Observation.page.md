@@ -24,15 +24,9 @@ Das Profil ist abgeleitet vom Profil [Genotype](http://hl7.org/fhir/uv/genomics-
 
 ---
 
-**Diff**
+#### Profil
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp, diff}}
-
----
-
-**Snapshot**
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp, snapshot}}
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp, buttons}}
 
 ---
 | FHIR-Element | Logischer Datensatz |
