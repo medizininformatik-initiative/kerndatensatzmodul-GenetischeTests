@@ -11,9 +11,12 @@ topic: DiagnostischeImplikation
 Observation Profil, das einen Zusammenhang zwischen einem oder mehreren Genotyp/Haplotyp/Varianten und Beweisen für oder gegen eine bestimmte Krankheit, einen Zustand oder eine Tumordiagnose angibt.
 
 @```
-from StructureDefinition
-where url='https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation'
-select Name: name, Canonical: url
+from 
+    StructureDefinition 
+where 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation' 
+select 
+    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
 ---

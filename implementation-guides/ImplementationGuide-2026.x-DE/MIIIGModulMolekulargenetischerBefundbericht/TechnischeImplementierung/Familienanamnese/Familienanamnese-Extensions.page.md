@@ -20,6 +20,10 @@ Diese Seite dokumentiert die spezifischen Extensions für die Familienanamnese i
 
 **Kardinalität**: 0..1
 
+#### Profil
+
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad, buttons}}
+
 #### ValueSet: Verwandtschaftsgrad
 
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-verwandtschaftsgrad}}
@@ -40,6 +44,10 @@ Diese Seite dokumentiert die spezifischen Extensions für die Familienanamnese i
 
 **Kardinalität**: 0..1
 
+#### Profil
+
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis, buttons}}
+
 #### ValueSet: Verwandtschaftsverhältnis
 
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis}}
@@ -59,6 +67,10 @@ Diese Seite dokumentiert die spezifischen Extensions für die Familienanamnese i
 **Kontext**: `FamilyMemberHistory.relationship.coding`
 
 **Kardinalität**: 0..1
+
+#### Profil
+
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-familiare-linie, buttons}}
 
 #### ValueSet: Familiäre Linie
 

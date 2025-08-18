@@ -11,9 +11,12 @@ topic: Mutationslast
 Dieses Profil beschreibt die Gesamtzahl der in der DNA von Krebszellen gefundenen Mutationen.
 
 @```
-from StructureDefinition
-where url='https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast'
-select Name: name, Canonical: url
+from 
+    StructureDefinition 
+where 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast' 
+select 
+    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
 ---

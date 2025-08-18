@@ -11,9 +11,12 @@ topic: Mikrosatelliteninstabilitaet
 Mikrosatelliteninstabilität (MSI) ist ein Zustand genetischer Hypermutabilität (Neigung zu Mutationen), der aus einer gestörten DNA-Mismatch-Reparatur (MMR) resultiert.
 
 @```
-from StructureDefinition
-where url='https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet'
-select Name: name, Canonical: url
+from 
+    StructureDefinition 
+where 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet' 
+select 
+    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
 ---

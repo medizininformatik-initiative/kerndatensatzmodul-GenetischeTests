@@ -41,9 +41,12 @@ Weitere Informationen zu MANE: https://www.ncbi.nlm.nih.gov/refseq/MANE/
 
 
 @```
-from StructureDefinition
-where url='https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante'
-select Name: name, Canonical: url
+from 
+    StructureDefinition 
+where 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante' 
+select 
+    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
 ---

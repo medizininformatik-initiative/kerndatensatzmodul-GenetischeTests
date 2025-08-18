@@ -11,9 +11,12 @@ topic: FamilienanameseFamilyMemberHistory
 Details zur Krankengeschichte von verwandten Familienmitgliedern.
 
 @```
-from StructureDefinition
-where url='https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese'
-select Name: name, Canonical: url
+from 
+    StructureDefinition 
+where 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese' 
+select 
+    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
 ---
@@ -26,39 +29,13 @@ select Name: name, Canonical: url
 
 #### Extensions
 
-**Verwandtschaftsgrad**
+Dieses Profil verwendet drei spezifische Extensions für detaillierte Verwandtschaftsinformationen:
 
-* Name: Verwandtschaftsgrad
-* Definition: Extension erlaubt die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen.
-* url: https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-mol-gen-verwandtschaftsgrad
+- **Verwandtschaftsgrad**: Grad der Verwandtschaft (erstgradig, zweitgradig)
+- **Verwandtschaftsverhältnis**: Spezifisches Verhältnis (natürliches Kind, adoptiert)
+- **Familiäre Linie**: Mütterliche oder väterliche Linie
 
-**Snapshot**
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad}}
-
----
-
-**Verwandtschaftsverhältnis**
-
-* Name: Verwandtschaftsverhältnis
-* Definition: Extension erlaubt die Angabe eines Verwandtschaftsverhältnisses zwischen Patient und Familienangehörigen.
-* url: https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis
-
-**Snapshot**
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis}}
-
----
-
-**Familiäre Linie**
-
-* Name: Familiäre Linie
-* Definition: Extension erlaubt die Angabe der familiären Linie zwischen Patient und Familienangehörigen.
-* url: https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-familiare-linie
-
-**Snapshot**
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-familiare-linie}}
+Detaillierte Dokumentation und Profile der Extensions finden Sie auf der {{pagelink:FamilienanamneseExtensions}} Seite.
 
 ---
 

@@ -13,9 +13,12 @@ Dieses Profil beschreibt eine Genomic Study als Procedure-Ressource zur Dokument
 GenomicStudy dient zur Erfassung der Metadaten über die durchgeführte genomische Analyse, einschließlich der verwendeten Methoden, untersuchten Regionen und beteiligten Geräte.
 
 @```
-from StructureDefinition
-where url='https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study'
-select Name: name, Canonical: url
+from 
+    StructureDefinition 
+where 
+    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study' 
+select 
+    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
 ---
