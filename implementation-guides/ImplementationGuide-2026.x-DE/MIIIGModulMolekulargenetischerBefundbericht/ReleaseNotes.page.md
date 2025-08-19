@@ -5,6 +5,127 @@ topic: ReleaseNotes
 # Release Notes
 
 ## 2026.0.0-alpha
+
+### Strukturänderungen der Implementation Guide Navigation
+
+#### IG-Struktur Version 2025.x (Flache Struktur)
+```
+MII IG Modul Molekulargenetischer Befundbericht/
+├── IG MII KDS Modul Molekulargenetischer Befundbericht
+├── Beschreibung Modul Molekulargenetischer Befundbericht
+├── Anwendungsfälle Informationsmodell
+├── Beschreibung von Szenarien für die Anwendung der Module
+├── Datensätze inkl. Beschreibungen
+├── Kontext im Gesamtprojekt Bezüge zu anderen Modulen
+├── Technische Implementierung/
+│   ├── Technische Implementierung (leer)
+│   ├── FHIR Profile
+│   ├── Anforderung-ServiceRequest
+│   ├── Befundbericht-DiagnosticReport
+│   ├── DiagnostischeImplikation-Observation
+│   ├── TherapeutischeImplikation-Observation
+│   ├── Variante-Observation
+│   ├── ErgebnisZusammenfassung-Observation
+│   ├── UntersuchteRegion-Observation
+│   ├── Mikrosatelliteninstabilität-Observation
+│   ├── Mutationslast-Observation
+│   ├── Familienanamnese---FamilyMemberHistory
+│   ├── Empfohlene Folgemaßnahme-Task
+│   ├── Medikationsempfehlung-Task
+│   ├── Polygener-Risiko-Score---RiskAssessment
+│   ├── Genotyp---Observation
+│   ├── Haplotype-Observation
+│   ├── Sequence-Phase-Relationship---Observation
+│   ├── CapabilityStatement
+│   ├── Terminologien
+│   ├── CodeSystems
+│   ├── ValueSets
+│   └── [Weitere einzelne Terminologie-Seiten]
+├── UML
+└── Referenzen
+```
+
+#### IG-Struktur Version 2026.x (Hierarchische Themengruppierung)
+```
+MII IG Modul Molekulargenetischer Befundbericht/
+├── Hauptseite
+├── Beschreibung Modul Molekulargenetischer Befundbericht
+├── Anwendungsfälle / Informationsmodell/
+│   ├── Index
+│   ├── Basis des Informationsmodells  
+│   ├── Profile-Relationships
+│   └── Szenarien
+├── Kontext im Gesamtprojekt Bezug zu anderen Modulen
+├── Technische Implementierung/
+│   ├── Index
+│   ├── Workflow/
+│   │   ├── Index
+│   │   ├── Befundbericht-DiagnosticReport
+│   │   ├── Anforderung-ServiceRequest
+│   ├── Genetische Befunde/
+│   │   ├── Index
+│   │   ├── Variante-Observation
+│   │   ├── Genotyp-Observation
+│   │   ├── Haplotyp-Observation
+│   │   └── Sequence-Phase-Relationship-Observation
+│   ├── Genetische Implikationen/
+│   │   ├── Index
+│   │   ├── Molekulare Konsequenz-Observation 🆕
+│   │   ├── Diagnostische Implikation-Observation
+│   │   └── Therapeutische Implikation-Observation
+│   ├── Molekulare Biomarker/
+│   │   ├── Index
+│   │   ├── Mikrosatelliteninstabilität-Observation
+│   │   ├── Mutationslast-Observation
+│   │   └── Polygener Risiko Score-Observation
+│   ├── Therapieempfehlungen/
+│   │   ├── Index
+│   │   ├── EmpfohleneFolgemassnahme-Task
+│   │   └── Medikationsempfehlung-Task
+│   ├── Methodik/
+│   │   ├── Index
+│   │   ├── GenomicStudy-Procedure 🆕
+│   │   └── GenomicStudyAnalysis-Procedure 🆕
+│   ├── Familienanamnese/
+│   │   ├── Index
+│   │   ├── Familienanamnese---FamilyMemberHistory
+│   │   └── Familienanamnese-Extensions 🆕
+│   ├── CapabilityStatement
+│   └── Terminologie/
+│       ├── Index
+│       ├── CodeSystems
+│       └── ValueSets
+│   
+│   
+├── Referenzen
+├── Release Notes
+└── Kommentierung v2026 🆕
+```
+
+**Wichtige Navigationänderungen für Nutzer:**
+
+1. **Von flach zu hierarchisch**: Alle Profile sind jetzt in thematischen Unterordnern organisiert statt in einer langen flachen Liste
+2. **Neue Gruppierungen**: 
+   - "Workflow" - Prozessbezogene Profile
+   - "Genetische Befunde" - Variantenbeschreibungen
+   - "Genetische Implikationen" - Klinische Interpretationen
+   - "Molekulare Biomarker" - Übergeordnete Marker
+   - "Methodik" - Technische Details (ersetzt UntersuchteRegion)
+3. **Entfernte/Ersetzte Seiten**:
+   - ❌ ErgebnisZusammenfassung-Observation → in DiagnosticReport.conclusion
+   - ❌ UntersuchteRegion-Observation → GenomicStudy/GenomicStudyAnalysis
+   - ❌ Genotyp-Observation → nicht mehr unterstützt
+   - ❌ Haplotype-Observation → über Sequence-Phase-Relationship
+4. **Neue Seiten**:
+   - 🆕 Molekulare Konsequenz (aus DiagnostischeImplikation ausgelagert)
+   - 🆕 GenomicStudy/GenomicStudyAnalysis (STU3)
+   - 🆕 Index-Seiten für jede Kategorie
+   - 🆕 Szenarien (konkrete Anwendungsbeispiele)
+   - 🆕 Kommentierung v2026
+
+### Technische Änderungen
+
+#### Migration zu Clinical Genomics STU3
 - Dependency auf den Clinical Genomics Reporting von STU2 auf STU3
     - Neues MolecularBiomarker-Profil 
     - Neues Molekulare-Konsequenz-Profil (downstream-Beschreibung von genetischen Änderungen)
