@@ -11,13 +11,11 @@ Diese Seite sammelt spezifische Punkte, für die gezieltes Feedback in der Komme
 
 #### Profile-Strukturänderungen
 
-* **UntersuchteRegion zu GenomicStudy/GenomicStudyAnalysis**: Die Migration ersetzt das UntersuchteRegion-Profil durch die neuen GenomicStudy-Profile. Ist die gewählte Abbildung der historischen UntersuchteRegion-Daten auf die neue Struktur vollständig?
+* **UntersuchteRegion zu GenomicStudy/GenomicStudyAnalysis**: Die Migration ersetzt das UntersuchteRegion-Profil durch die Kodierung innerhalb der neuen [GenomicStudyAnalysis-Profile](TechnischeImplementierung/Methodik/GenomicStudyAnalysis-Procedure.page.md). Unter GenomicStudyAnalysis-Extension kann zwischen prinzipiell untersuchten ("studied") und aufgrund der Abdeckung geeigneten / ungeeigneten Genomabschnitte ("called"/"uncalled")
+  - Ist die gewählte Abbildung der historischen UntersuchteRegion-Daten auf die neue Struktur vollständig?
   - Sollten Legacy-Beispiele als Kommentare erhalten bleiben für Rückwärtsdokumentation?
   - Ist die Granularität von GenomicStudyAnalysis für alle bisherigen Use Cases ausreichend?
 
-* **Molecular Consequence Auslagerung**: Die funktionellen Effekte wurden aus DiagnostischeImplikation in das neue MolekulareKonsequenz-Profil ausgelagert. 
-  - Ist die Trennung zwischen Implikation und molekularer Konsequenz klar genug definiert?
-  - Sollten beide Profile immer gemeinsam verwendet werden oder sind isolierte Nutzungen sinnvoll?
 
 ### Referenzsequenzen und Transkripte
 
@@ -61,11 +59,6 @@ Diese Seite sammelt spezifische Punkte, für die gezieltes Feedback in der Komme
   - Ist die Trennung zwischen diagnostischer und therapeutischer Evidenz klar genug?
 
 
-### Fusionen und Strukturvarianten
-
-#### Fusion-Darstellung (aktuell eingeschränkt)
-
-
 ### Molekulare Biomarker
 
 #### Mikrosatelliteninstabilität (MSI) und Tumormutationslast (TMB)
@@ -79,7 +72,6 @@ Diese Seite sammelt spezifische Punkte, für die gezieltes Feedback in der Komme
   - Sollte eine Standardnormalisierung (mut/Mb) verpflichtend werden?
   - Wie sollen unterschiedliche Panel-Größen bei der TMB-Berechnung berücksichtigt werden?
   - Benötigen wir Schwellenwerte für high/intermediate/low TMB?
-
 
 
 ### Therapieempfehlungen
@@ -138,22 +130,6 @@ Diese Seite sammelt spezifische Punkte, für die gezieltes Feedback in der Komme
   - Wie sollen die Module bei gemeinsamer Nutzung verlinkt werden?
   - Ist eine Harmonisierung der Therapieempfehlungs-Struktur notwendig?
 
-### Technische Implementierung
-
-#### Bundle-Strategie
-
-* **Transaction-Bundle Vollständigkeit**: Die Transaction-Bundles enthalten teilweise Referenzen auf nicht enthaltene Ressourcen.
-  - Sollten Bundles immer self-contained sein?
-  - Wie sollen externe Referenzen (z.B. auf Patient) gehandhabt werden?
-  - Ist die Hybrid-Bundle-Strategie (Einzel + Bundle-Beispiele) optimal?
-
-#### SearchParameter
-
-* **Component-Search Komplexität**: Die Suche in Observation.component ist komplex.
-  - Sollten häufig gesuchte Components als Top-Level-Extensions modelliert werden?
-  - Ist die aktuelle composite-Search-Strategie performant genug?
-  - Benötigen wir spezielle Indizes für Varianten-Suchen?
-
 ### Ethische und regulatorische Aspekte
 
 #### Zufallsbefunde
@@ -170,10 +146,3 @@ Diese Seite sammelt spezifische Punkte, für die gezieltes Feedback in der Komme
   - Wie sollen Varianten mit Populationsfrequenz <0.01% geschützt werden?
   - Sind zusätzliche Zugriffskontrollen für genetische Daten erforderlich?
 
-### Kernfragen für die Kommentierung
-
-1. **Priorisierung**: Welche der genannten Punkte haben höchste Priorität für die Implementierung?
-2. **Verpflichtungsgrad**: Welche aktuellen SOLL-Anforderungen sollten zu MUSS werden?
-3. **Rückwärtskompatibilität**: Wie wichtig ist die Unterstützung von STU2-Legacy-Daten?
-4. **Harmonisierung**: Wo besteht der größte Bedarf für standortübergreifende Harmonisierung?
-5. **Erweiterungen**: Welche zusätzlichen Profile/Extensions werden dringend benötigt?
