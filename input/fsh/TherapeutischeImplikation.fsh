@@ -41,7 +41,7 @@ Description: "Beispiel für therapeutische Implikation abgeleitet von genetische
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapeutic-implication"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
-* code = $GenTbd#therapeutic-implication "Therapeutische Implikation"
+* code = $GenTbd#therapeutic-implication "Therapeutic Implication"
 * subject = Reference(mii-exa-molgen-patient)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-1)

@@ -38,7 +38,7 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
-* code = $GenTbd#diagnostic-implication "Diagnostische Implikation"
+* code = $GenTbd#diagnostic-implication "Diagnostic Implication"
 * subject = Reference(mii-exa-molgen-patient)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-1)
@@ -57,7 +57,7 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer
 * extension[workflow-relatedArtifact].valueRelatedArtifact.url = "https://doi.org/10.1038/gim.2015.30"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
-* code = $GenTbd#diagnostic-implication "Diagnostische Implikation"
+* code = $GenTbd#diagnostic-implication "Diagnostic Implication"
 * subject = Reference(mii-exa-molgen-patient-2)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-2)
@@ -84,7 +84,7 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von Copy Number
 //* extension[workflow-relatedArtifact].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/25741868/"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
-* code = $GenTbd#diagnostic-implication "Diagnostische Implikation"
+* code = $GenTbd#diagnostic-implication "Diagnostic Implication"
 * subject = Reference(mii-exa-molgen-patient-2)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-cnv-4)
@@ -106,7 +106,7 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von SNP im BRCA
 //* extension[workflow-relatedArtifact].valueRelatedArtifact.url = "https://pubmed.ncbi.nlm.nih.gov/25741868/"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
-* code = $GenTbd#diagnostic-implication "Diagnostische Implikation"
+* code = $GenTbd#diagnostic-implication "Diagnostic Implication"
 * subject = Reference(mii-exa-molgen-patient-brca1)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-brca1)

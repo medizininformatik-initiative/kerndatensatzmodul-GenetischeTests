@@ -565,7 +565,7 @@ Usage: #example
 * component[genomic-ref-seq].valueCodeableConcept = $RefSeq#NC_000005.9
 * component[representative-protein-hgvs].valueCodeableConcept = $HGVS#p.(Leu344CysfsTer25)
 * component[allelic-state].valueCodeableConcept = $LNC#LA6706-1 "Heterozygous"
-* component[coding-change-type].valueCodeableConcept = $SO#SO:0000159 "deletion"
+* component[coding-change-type].valueCodeableConcept = $SO#SO:0000159 "Deletion"
 //* component[amino-acid-change-type].valueCodeableConcept = $LNC#LA6694-9 "Frameshift"
 * component[cytogenetic-location].valueCodeableConcept = $ChromLoc#5q31.2
 
@@ -579,7 +579,7 @@ Usage: #example
 * extension[workflow-relatedArtifact].valueRelatedArtifact.url = "https://search.clinicalgenome.org/kb/gene-dosage/HGNC:2509"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
-* code = $GenTbd#diagnostic-implication "Diagnostische Implikation"
+* code = $GenTbd#diagnostic-implication "Diagnostic Implication"
 * subject = Reference(mii-exa-molgen-patient-srcc)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-srcc-ctnna1)
@@ -804,7 +804,7 @@ Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
-* code = $GenTbd#diagnostic-implication "Diagnostische Implikation"
+* code = $GenTbd#diagnostic-implication "Diagnostic Implication"
 * subject = Reference(mii-exa-molgen-patient-fgfr2-fusion)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-fgfr2-fusion)
@@ -816,7 +816,7 @@ Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapeutic-implication"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
-* code = $GenTbd#therapeutic-implication "Therapeutische Implikation"
+* code = $GenTbd#therapeutic-implication "Therapeutic Implication"
 * subject = Reference(mii-exa-molgen-patient-fgfr2-fusion)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-fgfr2-fusion)

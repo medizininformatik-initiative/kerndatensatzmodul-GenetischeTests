@@ -33,9 +33,9 @@ Description: "Beispiel für Mutationslast in Tumorprobe."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/tmb"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
-* category[mbCategory] = http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs#biomarker-category "biomarker-category"
+* category[mbCategory] = http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs#biomarker-category "A characterization of a given biomarker observation."
 * code = $LNC#94076-7 "Mutations/Megabase [# Ratio] in Tumor"
 * subject = Reference(mii-exa-molgen-patient)
 * performer = Reference(mii-exa-molgen-practitioner-lab)
-* valueQuantity = 12 UCUM#1/1000000{Base} "Mutations/Megabase"
+* valueQuantity = 12 $UCUM#1/1000000{Base} "Mutations/Megabase"
 * specimen = Reference(mii-exa-molgen-specimen-1)

@@ -30,7 +30,7 @@ Description: "Beispiel für Mikrosatelliteninstabilität in Tumorprobe."
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/msi"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
-* category[mbCategory] = http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs#biomarker-category "biomarker-category"
+* category[mbCategory] = http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs#biomarker-category "A characterization of a given biomarker observation."
 * code = $LNC#81695-9 "Microsatellite instability [Interpretation] in Cancer specimen Qualitative"
 * subject = Reference(mii-exa-molgen-patient)
 * valueCodeableConcept = $LNC#LA14122-8 "Stable"
