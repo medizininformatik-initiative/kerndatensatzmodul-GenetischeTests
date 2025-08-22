@@ -211,7 +211,7 @@ Description: "Beispiel für genetische Variante BRCA1"
 * component[cytogenetic-location].valueCodeableConcept = $ChromLoc#17q21.31
 * component[representative-coding-hgvs].valueCodeableConcept = $HGVS#NM_007294.3:c.5266dupC
 * component[representative-transcript-ref-seq].valueCodeableConcept = $RefSeq#NM_007294.3
-* component[coding-change-type].valueCodeableConcept = $SO#SO:1000035 "duplication"
+* component[coding-change-type].valueCodeableConcept = $SO#SO:1000035 "Duplication"
 * component[allelic-read-depth].valueQuantity = 50 $UCUM#1 "Abdeckung der Fragmente"
 * component[variation-code].valueCodeableConcept = $dbSNP#rs80357906
 * component[chromosome-identifier].valueCodeableConcept = $LNC#LA21270-6 "Chromosome 17"

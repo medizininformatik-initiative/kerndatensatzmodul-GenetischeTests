@@ -131,19 +131,19 @@ Usage: #inline
 Instance: mii-exa-molgen-specimen-blood-edta-bundle
 InstanceOf: Specimen
 Usage: #inline
-* identifier.system = "https://example.org/specimen-ids"
+* identifier.system = "https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids"
 * identifier.value = "EDTA-2024-001"
 * type = $SCT#119361006 "Plasma specimen"
 * subject = Reference(Patient/mii-exa-molgen-patient-wes)
 * collection.collectedDateTime = "2024-01-15T09:30:00+01:00"
-* container.type = $SCT#767384004 "Evacuated blood collection tube, K2 EDTA"
+* container.type = $SCT#767384004 "Evacuated blood collection tube with clot activator"
 * container.capacity = 10 'mL' "milliliter"
 * container.specimenQuantity = 10 'mL' "milliliter"
 
 Instance: mii-exa-molgen-specimen-dna-library-bundle
 InstanceOf: Specimen
 Usage: #inline
-* identifier.system = "https://example.org/specimen-ids"
+* identifier.system = "https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids"
 * identifier.value = "LIB-2024-001"
 * type = $SCT#119342007 "Saliva specimen"
 * type.text = "DNA Library"
@@ -285,7 +285,7 @@ Usage: #inline
 Instance: mii-exa-molgen-practitioner-bundle
 InstanceOf: Practitioner
 Usage: #inline
-* identifier.system = "https://example.org/practitioner-ids"
+* identifier.system = "https://www.medizininformatik-initiative.de/fhir/sid/practitioner-ids"
 * identifier.value = "12345"
 * name.family = "Schmidt"
 * name.given = "Anna"
@@ -294,7 +294,7 @@ Usage: #inline
 Instance: mii-exa-molgen-practitioner-lab-bundle
 InstanceOf: Practitioner
 Usage: #inline
-* identifier.system = "https://example.org/practitioner-ids"
+* identifier.system = "https://www.medizininformatik-initiative.de/fhir/sid/practitioner-ids"
 * identifier.value = "67890"
 * name.family = "Weber"
 * name.given = "Thomas"

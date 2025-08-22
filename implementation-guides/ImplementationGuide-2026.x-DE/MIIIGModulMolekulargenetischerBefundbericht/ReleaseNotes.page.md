@@ -102,21 +102,10 @@ MII IG Modul Molekulargenetischer Befundbericht/
 └── Kommentierung v2026 🆕
 ```
 
-**Wichtige Navigationänderungen für Nutzer:**
-
-1. **Von flach zu hierarchisch**: Alle Profile sind jetzt in thematischen Unterordnern organisiert statt in einer langen flachen Liste
-2. **Neue Gruppierungen**: 
-   - "Workflow" - Prozessbezogene Profile
-   - "Genetische Befunde" - Variantenbeschreibungen
-   - "Genetische Implikationen" - Klinische Interpretationen
-   - "Molekulare Biomarker" - Übergeordnete Marker
-   - "Methodik" - Technische Details (ersetzt UntersuchteRegion)
-3. **Entfernte/Ersetzte Seiten**:
+#### Entfernte/Ersetzte Seiten:
    - ❌ ErgebnisZusammenfassung-Observation → in DiagnosticReport.conclusion
    - ❌ UntersuchteRegion-Observation → GenomicStudy/GenomicStudyAnalysis
-   - ❌ Genotyp-Observation → nicht mehr unterstützt
-   - ❌ Haplotype-Observation → über Sequence-Phase-Relationship
-4. **Neue Seiten**:
+#### Neue Seiten:
    - 🆕 Molekulare Konsequenz (aus DiagnostischeImplikation ausgelagert)
    - 🆕 GenomicStudy/GenomicStudyAnalysis (STU3)
    - 🆕 Index-Seiten für jede Kategorie

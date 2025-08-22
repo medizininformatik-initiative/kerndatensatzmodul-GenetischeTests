@@ -1,7 +1,7 @@
 Profile: MII_PR_MolGen_GenomicStudy
 Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study
 Id: mii-pr-molgen-genomic-study
-Title: "MII PR MolGen Genomic Study "
+Title: "MII PR MolGen Genomic Study"
 Description: "Genomic Study ist ein Profil, dass die Durchführung von übergeorndenten molekulargenetischen Untersuchungen (Studies) beschreibt. Einzelne Assays werden dann als GenomicStudyAnalysis abgebildet. Es ist vom GenomicStudy-Profils aus dem Genomics Reporting IG abgeleitet ."
 * insert Publisher
 * insert PR_CS_VS_Version
@@ -97,7 +97,7 @@ Description: "NGS-Analyse des TruRisk Panel v3 für erblichen Brust- und Eiersto
 * extension[regions].extension[studied][+].url = "studied"
 * extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:1101 "BRCA2"
 * extension[regions].extension[studied][+].url = "studied"
-* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:1190 "BRIP1"
+* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:20473 "BRIP1"
 * extension[regions].extension[studied][+].url = "studied"
 * extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:1748 "CDH1"
 * extension[regions].extension[studied][+].url = "studied"
@@ -149,7 +149,7 @@ Description: "NGS-Analyse des Cornelia de Lange-Syndrom Panels"
 * extension[regions].extension[studied][+].url = "studied"
 * extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:28862 "NIPBL"
 * extension[regions].extension[studied][+].url = "studied"
-* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:13608 "HDAC8"
+* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:13315 "HDAC8"
 * extension[regions].extension[studied][+].url = "studied"
 * extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:9811 "RAD21"
 * extension[regions].extension[studied][+].url = "studied"

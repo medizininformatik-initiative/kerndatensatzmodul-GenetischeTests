@@ -586,7 +586,7 @@ Usage: #example
 * component[conclusion-string].valueString = "Diese Variante wird nach den ACMG/AMP-Kriterien zusammenfasssend als pathogen bewertet entsprechend IARC Class 5."
 * component[clinical-significance].valueCodeableConcept = $LNC#LA6668-3 "Pathogenic"
 //* component[functional-effect].valueCodeableConcept = $SO#SO:0002054 "loss_of_function_variant"
-* component[predicted-phenotype].valueCodeableConcept.coding[0] = $HPO#716859000 "Hereditary diffuse carcinoma of stomach (disorder)"
+* component[predicted-phenotype].valueCodeableConcept.coding[0] = $SCT#716859000 "Hereditary diffuse carcinoma of stomach (disorder)"
 /*
 Instance: mii-exa-molgen-untersuchte-region-srcc-apc
 InstanceOf: mii-pr-molgen-untersuchte-region
@@ -681,7 +681,7 @@ Usage: #example
 Instance: mii-exa-molgen-molekulargenetischer-befundbericht-srcc
 InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
 * extension[supportingInfo].valueReference = Reference(mii-exa-molgen-family-member-history-srcc)
 * basedOn = Reference(mii-exa-molgen-anforderung-srcc)
 * status = $DiagRepStatus#final
@@ -843,7 +843,7 @@ Usage: #example
 Instance: mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion
 InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
 * extension[recommended-action].valueReference = Reference(mii-exa-molgen-medikationsempfehlung-fgfr2-fusion)
 * basedOn = Reference(mii-exa-molgen-anforderung-fgfr2-fusion)
 * status = $DiagRepStatus#final

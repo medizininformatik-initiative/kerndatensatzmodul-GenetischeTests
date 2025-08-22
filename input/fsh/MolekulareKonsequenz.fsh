@@ -1,8 +1,8 @@
 Profile: MII_PR_MolGen_MolekulareKonsequenz
 Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence
 Id: mii-pr-molgen-molekulare-konsequenz
-Title: "MII PR MolGen Molekualre Konsequenz"
-Description: "Dieses Profil beschreibt den Zusammenhang von bestimmten Varianten, Haplotypen oder Genotypen und bestimmten Konsequenzen auf Molekularer Ebene."
+Title: "MII PR MolGen Molekulare Konsequenz"
+Description: "Dieses Profil beschreibt den Zusammenhang von bestimmten Varianten, Haplotypen oder Genotypen und bestimmten Konsequenzen auf molekularer Ebene."
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^status = #active

@@ -1,4 +1,4 @@
-# Erweiterungsmodul Molekulargenetischer Befundbericht
+# {{page-title}}
 
 
 
@@ -8,7 +8,7 @@ Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatens
 |---------|--------------|
 |  Datum  | 01.09.2025  |
 |  Version| 2026.0.0-ballot        |
-|  Status | draft       |
+|  Status | ballot       |
 |  Realm  | DE           |
 
 
@@ -29,7 +29,7 @@ die vernetzte medizinische Forschung e.V.
 
 Fragen zu der vorliegenden Publikation können jederzeit unter chat.fhir.org im Stream 'german/mi-initiative' gestellt werden.
 
-Anmerkungen und Kritik wird in Form von 'Issues' im Simplifier-Projekt stets gern entgegengenommen.</br>  
+Anmerkungen und Kritik wird außerhalb der Kommentierungsphasen in Form von 'Issues' im Github-Projekt stets gern entgegengenommen.</br>  
 
 ### Autoren
 * Alexander Zautke (HL7 Deutschland)
