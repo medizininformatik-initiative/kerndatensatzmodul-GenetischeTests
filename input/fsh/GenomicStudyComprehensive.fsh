@@ -5,14 +5,14 @@ InstanceOf: Device
 Usage: #example
 Title: "Illumina NovaSeq 6000 Sequencer"
 Description: "Beispiel für Sequenziergerät"
-* identifier.system = "https://example.org/lab-devices"
+* identifier.system = "https://www.medizininformatik-initiative.de/fhir/sid/lab-devices"
 * identifier.value = "NOVASEQ-6000-SN12345"
 * manufacturer = "Illumina Inc."
 * modelNumber = "NovaSeq 6000"
 * serialNumber = "SN12345"
 * deviceName.name = "NovaSeq 6000 Sequencing System"
 * deviceName.type = #model-name
-* type = $SCT#702659008 "Automated DNA sequencer, device (physical object)"
+* type = $SCT#30234008 "Medical laboratory analyzer"
 * status = #active
 
 Instance: mii-exa-molgen-device-thermofisher-ionchef
@@ -20,7 +20,7 @@ InstanceOf: Device
 Usage: #example
 Title: "Ion Chef System"
 Description: "Library Preparation System"
-* identifier.system = "https://example.org/lab-devices"
+* identifier.system = "https://www.medizininformatik-initiative.de/fhir/sid/lab-devices"
 * identifier.value = "IONCHEF-IC12345"
 * manufacturer = "Thermo Fisher Scientific"
 * modelNumber = "Ion Chef"
@@ -108,12 +108,12 @@ InstanceOf: Specimen
 Usage: #example
 Title: "EDTA Blood Sample"
 Description: "EDTA-Blutprobe für DNA-Extraktion"
-* identifier.system = "https://example.org/specimen-ids"
+* identifier.system = "https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids"
 * identifier.value = "EDTA-2024-001"
 * type = $SCT#119361006 "Plasma specimen"
 * subject = Reference(mii-exa-molgen-patient)
 * collection.collectedDateTime = "2024-01-15T09:30:00+01:00"
-* container.type = $SCT#767384004 "Evacuated blood collection tube, K2 EDTA"
+* container.type = $SCT#767384004 "Evacuated blood collection tube with clot activator"
 * container.capacity = 10 'mL' "milliliter"
 * container.specimenQuantity = 10 'mL' "milliliter"
 
@@ -122,7 +122,7 @@ InstanceOf: Specimen
 Usage: #example
 Title: "DNA Library"
 Description: "Prepared DNA library for sequencing"
-* identifier.system = "https://example.org/specimen-ids"
+* identifier.system = "https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids"
 * identifier.value = "LIB-2024-001"
 * type = $SCT#119342007 "Saliva specimen"
 * type.text = "DNA Library"
@@ -171,7 +171,7 @@ InstanceOf: Practitioner
 Usage: #example
 Title: "Ordering Practitioner"
 Description: "Anfordernder Arzt"
-* identifier.system = "https://example.org/practitioner-ids"
+* identifier.system = "https://www.medizininformatik-initiative.de/fhir/sid/practitioner-ids"
 * identifier.value = "54321"
 * name.family = "Müller"
 * name.given = "Klaus"
@@ -248,13 +248,13 @@ Title: "KMT2A Pathogenic Variant from WES"
 * component[gene-studied].code = $LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = $HGNC#HGNC:7132 "KMT2A"
 * component[representative-coding-hgvs].code = $LNC#48004-6 "DNA change (c.HGVS)"
-* component[representative-coding-hgvs].valueCodeableConcept.text = "NM_001197104.2:c.3463C>T"
+* component[representative-coding-hgvs].valueCodeableConcept = $HGVS#NM_001197104.2:c.3463C>T
 * component[representative-protein-hgvs].code = $LNC#48005-3 "Amino acid change (pHGVS)"
-* component[representative-protein-hgvs].valueCodeableConcept.text = "p.(Arg1155Ter)"
+* component[representative-protein-hgvs].valueCodeableConcept = $HGVS#p.(Arg1155Ter)
 * component[allelic-read-depth].code = $LNC#82121-5 "Allelic read depth"
 * component[allelic-read-depth].valueQuantity = 45 '1' "reads"
 * component[variant-confidence-status].code = $GenTbd#variant-confidence-status "Variant confidence status"
-* component[variant-confidence-status].valueCodeableConcept.text = "High confidence - PASS filter"
+* component[variant-confidence-status].valueCodeableConcept = $GenTbd#high "High confidence"
 
 Instance: mii-exa-molgen-diagnostische-implikation-comprehensive
 InstanceOf: mii-pr-molgen-diagnostische-implikation
