@@ -144,9 +144,9 @@ Obwohl diese Publikation mit größter Sorgfalt erstellt wurde, können die Auto
 - {{pagelink:TBDCodes}} - Noch zu definierende Codes
 - {{pagelink:TBDValueSet}} - Noch zu definierende ValueSets
 
-#### ⚠️ Veraltete/Kommentierte Profile
-- {{pagelink:ErgebnisZusammenfassung}} - (STU2, veraltet)
-- {{pagelink:UntersuchteRegion}} - (STU2, ersetzt durch GenomicStudy)
+#### ⚠️ Veraltete Profile
+- ErgebnisZusammenfassung - (STU2, veraltet)
+- UntersuchteRegion - (STU2, ersetzt durch GenomicStudy)
 
 ### 📖 Weitere Dokumentation
 - {{pagelink:ReleaseNotes}} - Versionshinweise und Änderungen

@@ -3,7 +3,7 @@
   "id": "mii-exa-molgen-device-illumina-novaseq",
   "identifier": [
     {
-      "system": "https://example.org/lab-devices",
+      "system": "https://www.medizininformatik-initiative.de/fhir/sid/lab-devices",
       "value": "NOVASEQ-6000-SN12345"
     }
   ],
@@ -19,9 +19,9 @@
   "type": {
     "coding": [
       {
-        "code": "702659008",
+        "code": "30234008",
         "system": "http://snomed.info/sct",
-        "display": "Automated DNA sequencer, device (physical object)"
+        "display": "Medical laboratory analyzer"
       }
     ]
   },

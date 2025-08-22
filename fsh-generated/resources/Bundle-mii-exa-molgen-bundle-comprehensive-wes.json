@@ -38,7 +38,7 @@
         "id": "mii-exa-molgen-device-illumina-novaseq",
         "identifier": [
           {
-            "system": "https://example.org/lab-devices",
+            "system": "https://www.medizininformatik-initiative.de/fhir/sid/lab-devices",
             "value": "NOVASEQ-6000-SN12345"
           }
         ],
@@ -54,9 +54,9 @@
         "type": {
           "coding": [
             {
-              "code": "702659008",
+              "code": "30234008",
               "system": "http://snomed.info/sct",
-              "display": "Automated DNA sequencer, device (physical object)"
+              "display": "Medical laboratory analyzer"
             }
           ]
         },
@@ -74,7 +74,7 @@
         "id": "mii-exa-molgen-device-thermofisher-ionchef",
         "identifier": [
           {
-            "system": "https://example.org/lab-devices",
+            "system": "https://www.medizininformatik-initiative.de/fhir/sid/lab-devices",
             "value": "IONCHEF-IC12345"
           }
         ],
@@ -110,7 +110,7 @@
         "id": "mii-exa-molgen-specimen-blood-edta-bundle",
         "identifier": [
           {
-            "system": "https://example.org/specimen-ids",
+            "system": "https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids",
             "value": "EDTA-2024-001"
           }
         ],
@@ -136,7 +136,7 @@
                 {
                   "code": "767384004",
                   "system": "http://snomed.info/sct",
-                  "display": "Evacuated blood collection tube, K2 EDTA"
+                  "display": "Evacuated blood collection tube with clot activator"
                 }
               ]
             },
@@ -167,7 +167,7 @@
         "id": "mii-exa-molgen-specimen-dna-library-bundle",
         "identifier": [
           {
-            "system": "https://example.org/specimen-ids",
+            "system": "https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids",
             "value": "LIB-2024-001"
           }
         ],
@@ -891,7 +891,7 @@
         "id": "mii-exa-molgen-practitioner-bundle",
         "identifier": [
           {
-            "system": "https://example.org/practitioner-ids",
+            "system": "https://www.medizininformatik-initiative.de/fhir/sid/practitioner-ids",
             "value": "12345"
           }
         ],
@@ -919,7 +919,7 @@
         "id": "mii-exa-molgen-practitioner-lab-bundle",
         "identifier": [
           {
-            "system": "https://example.org/practitioner-ids",
+            "system": "https://www.medizininformatik-initiative.de/fhir/sid/practitioner-ids",
             "value": "67890"
           }
         ],
