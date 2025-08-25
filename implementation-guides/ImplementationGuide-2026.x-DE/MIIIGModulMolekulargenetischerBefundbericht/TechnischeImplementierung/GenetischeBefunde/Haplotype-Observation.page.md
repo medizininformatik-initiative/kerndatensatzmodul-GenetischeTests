@@ -18,7 +18,35 @@ Das Profil [Haplotype](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureD
 
 #### Profil
 
-{{tree:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype, buttons}}
+<tabs>
+  <tab title="Darstellung">{{tree:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype, buttons}}</tab>
+  <tab title="Beschreibung">
+        @```
+        from
+            StructureDefinition
+        where
+            url = 'http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype'
+        select
+            Beschreibung: description
+        with
+            no header
+        ```
+        @```
+        from
+            StructureDefinition
+        where
+            url = 'http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype'
+        for
+            differential.element
+            where
+                mustSupport = true
+            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+        ```
+  </tab>
+  <tab title="XML">{{xml:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype}}</tab>
+  <tab title="JSON">{{json:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype}}</tab>
+  <tab title="Link">{{link:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype}}</tab>
+</tabs>
 
 ---
 | FHIR-Element | Logischer Datensatz |

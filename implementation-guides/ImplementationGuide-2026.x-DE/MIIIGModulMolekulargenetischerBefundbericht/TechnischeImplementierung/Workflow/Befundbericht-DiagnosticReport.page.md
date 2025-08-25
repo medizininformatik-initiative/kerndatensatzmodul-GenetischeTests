@@ -32,7 +32,35 @@ Ein passendes [Profil für ChargeItem](http://fhir.de/StructureDefinition/charge
 
 #### Profil
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht, buttons}}
+<tabs>
+  <tab title="Darstellung">{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht, buttons}}</tab>
+  <tab title="Beschreibung">
+        @```
+        from
+            StructureDefinition
+        where
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht'
+        select
+            Beschreibung: description
+        with
+            no header
+        ```
+        @```
+        from
+            StructureDefinition
+        where
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht'
+        for
+            differential.element
+            where
+                mustSupport = true
+            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+        ```
+  </tab>
+  <tab title="XML">{{xml:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht}}</tab>
+  <tab title="JSON">{{json:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht}}</tab>
+  <tab title="Link">{{link:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht}}</tab>
+</tabs>
 
 ---
 

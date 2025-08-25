@@ -27,7 +27,35 @@ Das Profil ist abgeleitet vom Profil [Followup Recommendation](http://hl7.org/fh
 
 #### Profil
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme, buttons}}
+<tabs>
+  <tab title="Darstellung">{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme, buttons}}</tab>
+  <tab title="Beschreibung">
+        @```
+        from
+            StructureDefinition
+        where
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme'
+        select
+            Beschreibung: description
+        with
+            no header
+        ```
+        @```
+        from
+            StructureDefinition
+        where
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme'
+        for
+            differential.element
+            where
+                mustSupport = true
+            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+        ```
+  </tab>
+  <tab title="XML">{{xml:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme}}</tab>
+  <tab title="JSON">{{json:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme}}</tab>
+  <tab title="Link">{{link:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme}}</tab>
+</tabs>
 
 ---
 

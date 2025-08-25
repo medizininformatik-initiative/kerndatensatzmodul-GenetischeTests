@@ -29,7 +29,35 @@ Das Profil ist abgeleitet vom Profil [Genotype](http://hl7.org/fhir/uv/genomics-
 
 #### Profil
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp, buttons}}
+<tabs>
+  <tab title="Darstellung">{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp, buttons}}</tab>
+  <tab title="Beschreibung">
+        @```
+        from
+            StructureDefinition
+        where
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp'
+        select
+            Beschreibung: description
+        with
+            no header
+        ```
+        @```
+        from
+            StructureDefinition
+        where
+            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp'
+        for
+            differential.element
+            where
+                mustSupport = true
+            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+        ```
+  </tab>
+  <tab title="XML">{{xml:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp}}</tab>
+  <tab title="JSON">{{json:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp}}</tab>
+  <tab title="Link">{{link:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp}}</tab>
+</tabs>
 
 ---
 | FHIR-Element | Logischer Datensatz |

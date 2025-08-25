@@ -12,7 +12,35 @@ Zeigt an, ob zwei Varianten in Cis- (gleicher Strang) oder Trans- (entgegengeset
 
 ### Profil
 
-{{tree:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship, buttons}}
+<tabs>
+  <tab title="Darstellung">{{tree:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship, buttons}}</tab>
+  <tab title="Beschreibung">
+        @```
+        from
+            StructureDefinition
+        where
+            url = 'http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship'
+        select
+            Beschreibung: description
+        with
+            no header
+        ```
+        @```
+        from
+            StructureDefinition
+        where
+            url = 'http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship'
+        for
+            differential.element
+            where
+                mustSupport = true
+            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+        ```
+  </tab>
+  <tab title="XML">{{xml:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship}}</tab>
+  <tab title="JSON">{{json:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship}}</tab>
+  <tab title="Link">{{link:http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship}}</tab>
+</tabs>
 
 ---
 
