@@ -12,7 +12,6 @@ FHIR-Repräsentation des Kerndatensatz-Erweiterungsmoduls **'Diagnostik | Moleku
 Im Folgenden werden die Use-Cases des Moduls sowie die dazugehörigen FHIR-Profile und Terminologie-Ressourcen in ihrer verbindlichen Form beschrieben.
 
 
-{{render:ig-bilder-KDS-Module}}
 
 ### Scope
 
