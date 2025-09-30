@@ -51,6 +51,7 @@
 [MII_PR_MolGen_Genotyp]: StructureDefinition-mii-pr-molgen-genotyp.html
 [MII_PR_MolGen_Medikationsempfehlung]: StructureDefinition-mii-pr-molgen-medikationsempfehlung.html
 [MII_PR_MolGen_Mikrosatelliteninstabilitaet]: StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html
+[MII_PR_MolGen_MolekularerBiomarker]: StructureDefinition-mii-pr-molgen-molekularer-biomarker.html
 [MII_PR_MolGen_MolekulareKonsequenz]: StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html
 [MII_PR_MolGen_MolekulargenetischerBefundbericht]: StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.html
 [MII_PR_MolGen_Mutationslast]: StructureDefinition-mii-pr-molgen-mutationslast.html

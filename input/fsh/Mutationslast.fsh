@@ -1,5 +1,5 @@
 Profile: MII_PR_MolGen_Mutationslast
-Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-biomarker
+Parent: MII_PR_MolGen_MolekularerBiomarker
 Id: mii-pr-molgen-mutationslast
 Title: "MII PR MolGen Mutationslast"
 Description: "Dieses Profil beschreibt die Gesamtzahl der in der DNA von Krebszellen gefundenen Mutationen."
