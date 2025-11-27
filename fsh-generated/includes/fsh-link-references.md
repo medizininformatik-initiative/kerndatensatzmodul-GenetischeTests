@@ -112,8 +112,8 @@
 [mii-sp-molgen-genomic-study-analysis-regions-studied]: SearchParameter-mii-sp-molgen-genomic-study-analysis-regions-studied.html
 [mii-sp-molgen-genomic-study-analysis-specimen]: SearchParameter-mii-sp-molgen-genomic-study-analysis-specimen.html
 [mii-exa-molgen-mikrosatelliteninstabilitaet-1]: Observation-mii-exa-molgen-mikrosatelliteninstabilitaet-1.html
-[mii-exa-molgen-molekulargenetischer-befundbericht-1]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-1.html
 [mii-exa-molgen-genomic-study-1]: Procedure-mii-exa-molgen-genomic-study-1.html
+[mii-exa-molgen-molekulargenetischer-befundbericht-1]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-1.html
 [mii-exa-molgen-molekulargenetischer-befundbericht-2]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-2.html
 [mii-exa-molgen-molekulargenetischer-befundbericht-tumorboard-3]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-tumorboard-3.html
 [mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel.html
