@@ -197,3 +197,4 @@ Usage: #example
 * deceasedBoolean = true
 
 // Test pre-commit validation workflow
+// Test validation with fixed timeout
