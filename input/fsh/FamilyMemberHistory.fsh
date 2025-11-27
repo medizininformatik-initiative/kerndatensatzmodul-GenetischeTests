@@ -2,7 +2,7 @@ Profile: MII_PR_MolGen_Familienanamnese
 Parent: FamilyMemberHistory
 Id: mii-pr-molgen-familienanamnese
 Title: "MII PR MolGen Familienanamnese"
-Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen. Test validation."
+Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen."
 * insert Publisher
 * insert PR_CS_VS_Version
 
