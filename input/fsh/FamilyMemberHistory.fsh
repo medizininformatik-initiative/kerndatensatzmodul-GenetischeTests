@@ -16,7 +16,7 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
 * relationship.coding ^slicing.discriminator.path = "$this"
 * relationship.coding ^slicing.rules = #open
 * relationship.coding contains snomed 1..1 and v3-RoleCode 0..1
-* relationship.coding[snomed] from MII_VS_MolGen_FamilyMember_SNOMED (required)
+* relationship.coding[snomed] from MII_VS_MolGen_FamilyMember_SNOMED (extensible)
 * relationship.coding[snomed] ^patternCoding.system = "http://snomed.info/sct"
 * relationship.coding[snomed].extension ^slicing.discriminator.type = #value
 * relationship.coding[snomed].extension ^slicing.discriminator.path = "url"
@@ -25,7 +25,7 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
     MII_EX_MolGen_Verwandtschaftsgrad named Verwandtschaftsgrad 0..1 MS and
     MII_EX_MolGen_Verwandtschaftsverhaeltnis named Verwandtschaftsverhaeltnis 0..1 MS and
     MII_EX_MolGen_FamiliareLinie named FamiliareLinie 0..1 MS
-* relationship.coding[v3-RoleCode] from $v3-RoleCode-vs (required)
+* relationship.coding[v3-RoleCode] from $v3-RoleCode-vs (extensible)
 * relationship.coding[v3-RoleCode] ^patternCoding.system = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
 * sex MS
 * reasonCode MS
