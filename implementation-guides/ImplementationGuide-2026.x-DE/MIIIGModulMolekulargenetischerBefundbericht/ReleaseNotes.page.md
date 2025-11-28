@@ -159,6 +159,16 @@ MII IG Modul Molekulargenetischer Befundbericht/
 - Profile Korrektur (Anforderung.fsh)
     - Typo korrigiert: "gentischer" → "genetischer" in Profile ID und InstanceOf Referenzen
     - Korrekte Canonical URL: mii-pr-molgen-anforderung-genetischer-test
+- Familienanamnese (FamilyMemberHistory.fsh)
+    - Terminology-Bindings an Diagnose-Modul 2025.0.1 angeglichen
+    - ValueSet-Migration für ICD-10-GM, Alpha-ID, SNOMED CT und Orphanet Codings:
+        - `reasonCode.coding[icd10-gm]`: `http://fhir.de/ValueSet/bfarm/icd-10-gm` → `https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm`
+        - `reasonCode.coding[alpha-id]`: `http://fhir.de/ValueSet/bfarm/alpha-id` → `https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid`
+        - `reasonCode.coding[sct]`: bereits `https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct`
+        - `reasonCode.coding[orphanet]`: Neues Binding zu `https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet`
+        - Gleiche Änderungen für `condition.code.coding` Slices
+    - Relationship-Bindings aufgeweicht: `required` → `extensible` für SNOMED CT und v3-RoleCode
+        - Erlaubt Flexibilität bei ungewöhnlichen Verwandtschaftsverhältnissen
 
 
 ## 2025.0.0
