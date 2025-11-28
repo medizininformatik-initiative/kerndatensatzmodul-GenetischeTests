@@ -39,20 +39,21 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
     sct 0..1 MS and
     orphanet 0..1 MS
 * reasonCode.coding[icd10-gm] only $ICD10GM-Coding
-* reasonCode.coding[icd10-gm] from $ICD10GM-VS (required)
+* reasonCode.coding[icd10-gm] from $MII-VS-Diagnose-ICD10GM (required)
 * reasonCode.coding[icd10-gm] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
 * reasonCode.coding[icd10-gm].system 1.. MS
 * reasonCode.coding[icd10-gm].version 1.. MS
 * reasonCode.coding[icd10-gm].code 1.. MS
 * reasonCode.coding[alpha-id] only $AlphaID-Coding
-* reasonCode.coding[alpha-id] from $AlphaID-VS (required)
+* reasonCode.coding[alpha-id] from $MII-VS-Diagnose-AlphaID (required)
 * reasonCode.coding[alpha-id] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/alpha-id"
 * reasonCode.coding[alpha-id].system 1.. MS
 * reasonCode.coding[alpha-id].code 1.. MS
-* reasonCode.coding[sct] from $SCT-Diagnoses-VS (required)
+* reasonCode.coding[sct] from $MII-VS-Diagnose-SCT (required)
 * reasonCode.coding[sct] ^patternCoding.system = "http://snomed.info/sct"
 * reasonCode.coding[sct].system 1.. MS
 * reasonCode.coding[sct].code 1.. MS
+* reasonCode.coding[orphanet] from $MII-VS-Diagnose-Orphanet (required)
 * reasonCode.coding[orphanet] ^patternCoding.system = "http://www.orpha.net"
 * reasonCode.coding[orphanet].system 1.. MS
 * reasonCode.coding[orphanet].code 1.. MS
@@ -69,20 +70,21 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
     sct 0..1 MS and
     orphanet 0..1 MS
 * condition.code.coding[icd10-gm] only $ICD10GM-Coding
-* condition.code.coding[icd10-gm] from $ICD10GM-VS (required)
+* condition.code.coding[icd10-gm] from $MII-VS-Diagnose-ICD10GM (required)
 * condition.code.coding[icd10-gm] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
 * condition.code.coding[icd10-gm].system 1.. MS
 * condition.code.coding[icd10-gm].version 1.. MS
 * condition.code.coding[icd10-gm].code 1.. MS
 * condition.code.coding[alpha-id] only $AlphaID-Coding
-* condition.code.coding[alpha-id] from $AlphaID-VS (required)
+* condition.code.coding[alpha-id] from $MII-VS-Diagnose-AlphaID (required)
 * condition.code.coding[alpha-id] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/alpha-id"
 * condition.code.coding[alpha-id].system 1.. MS
 * condition.code.coding[alpha-id].code 1.. MS
-* condition.code.coding[sct] from $SCT-Diagnoses-VS (required)
+* condition.code.coding[sct] from $MII-VS-Diagnose-SCT (required)
 * condition.code.coding[sct] ^patternCoding.system = "http://snomed.info/sct"
 * condition.code.coding[sct].system 1.. MS
 * condition.code.coding[sct].code 1.. MS
+* condition.code.coding[orphanet] from $MII-VS-Diagnose-Orphanet (required)
 * condition.code.coding[orphanet] ^patternCoding.system = "http://www.orpha.net"
 * condition.code.coding[orphanet].system 1.. MS
 * condition.code.coding[orphanet].code 1.. MS

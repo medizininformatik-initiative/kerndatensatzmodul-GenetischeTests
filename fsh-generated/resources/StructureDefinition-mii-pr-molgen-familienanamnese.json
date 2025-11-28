@@ -198,7 +198,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://fhir.de/ValueSet/bfarm/icd-10-gm"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm"
         }
       },
       {
@@ -236,7 +236,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://fhir.de/ValueSet/bfarm/alpha-id"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid"
         }
       },
       {
@@ -285,7 +285,11 @@
         "patternCoding": {
           "system": "http://www.orpha.net"
         },
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet"
+        }
       },
       {
         "id": "FamilyMemberHistory.reasonCode.coding:orphanet.system",
@@ -349,7 +353,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://fhir.de/ValueSet/bfarm/icd-10-gm"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm"
         }
       },
       {
@@ -387,7 +391,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://fhir.de/ValueSet/bfarm/alpha-id"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid"
         }
       },
       {
@@ -436,7 +440,11 @@
         "patternCoding": {
           "system": "http://www.orpha.net"
         },
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet"
+        }
       },
       {
         "id": "FamilyMemberHistory.condition.code.coding:orphanet.system",

@@ -19,9 +19,17 @@ Alias: $UCUM = http://unitsofmeasure.org
 Alias: $DeviceNameType = http://hl7.org/fhir/device-nametype
 Alias: $AdminGender = http://hl7.org/fhir/administrative-gender
 Alias: $ICD10GM = http://fhir.de/CodeSystem/bfarm/icd-10-gm
-Alias: $ICD10GM-VS = http://fhir.de/ValueSet/bfarm/icd-10-gm
 Alias: $ICD10GM-Coding = http://fhir.de/StructureDefinition/CodingICD10GM
 Alias: $AlphaID-Coding = http://fhir.de/StructureDefinition/CodingAlphaID
+
+// MII Diagnose Module ValueSets (use these instead of generic de.basisprofil)
+Alias: $MII-VS-Diagnose-ICD10GM = https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm
+Alias: $MII-VS-Diagnose-AlphaID = https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid
+Alias: $MII-VS-Diagnose-SCT = https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct
+Alias: $MII-VS-Diagnose-Orphanet = https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet
+
+// Deprecated - use MII-specific ValueSets above
+Alias: $ICD10GM-VS = http://fhir.de/ValueSet/bfarm/icd-10-gm
 Alias: $AlphaID-VS = http://fhir.de/ValueSet/bfarm/alpha-id
 Alias: $SCT-Diagnoses-VS = https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct
 Alias: $HPO = http://human-phenotype-ontology.org
