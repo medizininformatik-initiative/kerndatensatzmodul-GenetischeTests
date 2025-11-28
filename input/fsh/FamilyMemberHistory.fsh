@@ -38,13 +38,11 @@ Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im K
     alpha-id 0..1 MS and
     sct 0..1 MS and
     orphanet 0..1 MS
-* reasonCode.coding[icd10-gm] only $ICD10GM-Coding
 * reasonCode.coding[icd10-gm] from $MII-VS-Diagnose-ICD10GM (required)
 * reasonCode.coding[icd10-gm] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
 * reasonCode.coding[icd10-gm].system 1.. MS
 * reasonCode.coding[icd10-gm].version 1.. MS
 * reasonCode.coding[icd10-gm].code 1.. MS
-* reasonCode.coding[alpha-id] only $AlphaID-Coding
 * reasonCode.coding[alpha-id] from $MII-VS-Diagnose-AlphaID (required)
 * reasonCode.coding[alpha-id] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/alpha-id"
 * reasonCode.coding[alpha-id].system 1.. MS
@@ -198,5 +196,100 @@ Usage: #example
 * sex.coding[+] = $SCT#248152002 "Female (finding)"
 * deceasedBoolean = true
 
-// Test pre-commit validation workflow
-// Test validation with fixed timeout
+Instance: mii-exa-molgen-family-member-history-diabetes
+InstanceOf: mii-pr-molgen-familienanamnese
+Usage: #example
+Title: "Family History - Father with Type 2 Diabetes"
+Description: "Example of family member history documenting father's Type 2 diabetes mellitus (ICD-10: E11.9)"
+* status = #completed
+* patient = Reference(mii-exa-molgen-patient)
+* date = "2024-01-15"
+* relationship.coding[snomed] = $SCT#9947008 "Natural father (person)"
+* relationship.coding[snomed].extension[Verwandtschaftsgrad].valueCoding = $SCT#125678001 "First degree blood relative (person)"
+* relationship.coding[snomed].extension[Verwandtschaftsverhaeltnis].valueCoding = $SCT#13646006 "Natural parent (person)"
+* relationship.coding[snomed].extension[FamiliareLinie].valueCoding = $SCT#66839005 "Father (person)"
+* relationship.coding[v3-RoleCode] = $v3-RoleCode-cs#FTH "father"
+* sex.coding[0] = $AdminGender#male
+* sex.coding[+] = $SCT#248153007 "Male (finding)"
+* deceasedBoolean = false
+* ageAge.value = 68
+* ageAge.unit = "years"
+* ageAge.system = $UCUM
+* ageAge.code = #a
+* condition[0].code.coding[icd10-gm].system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+* condition[=].code.coding[icd10-gm].version = "2024"
+* condition[=].code.coding[icd10-gm].code = #E11.9
+* condition[=].code.coding[icd10-gm].display = "Diabetes mellitus, Typ 2: Ohne Komplikationen"
+* condition[=].code.coding[sct] = $SCT#44054006 "Diabetes mellitus type 2 (disorder)"
+* condition[=].onsetAge.value = 55
+* condition[=].onsetAge.unit = "years"
+* condition[=].onsetAge.system = $UCUM
+* condition[=].onsetAge.code = #a
+
+Instance: mii-exa-molgen-family-member-history-retinal
+InstanceOf: mii-pr-molgen-familienanamnese
+Usage: #example
+Title: "Family History - Sister with Retinal Disorder"
+Description: "Example of family member history documenting sister's retinal disorder (ICD-10: H35.8)"
+* status = #completed
+* patient = Reference(mii-exa-molgen-patient)
+* date = "2024-02-20"
+* relationship.coding[snomed] = $SCT#73678001 "Natural sister (person)"
+* relationship.coding[snomed].extension[Verwandtschaftsgrad].valueCoding = $SCT#125678001 "First degree blood relative (person)"
+* relationship.coding[snomed].extension[Verwandtschaftsverhaeltnis].valueCoding = $SCT#73678001 "Natural sister (person)"
+* relationship.coding[v3-RoleCode] = $v3-RoleCode-cs#SIS "sister"
+* sex.coding[0] = $AdminGender#female
+* sex.coding[+] = $SCT#248152002 "Female (finding)"
+* deceasedBoolean = false
+* ageAge.value = 42
+* ageAge.unit = "years"
+* ageAge.system = $UCUM
+* ageAge.code = #a
+* condition[0].code.coding[icd10-gm].system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+* condition[=].code.coding[icd10-gm].version = "2024"
+* condition[=].code.coding[icd10-gm].code = #H35.8
+* condition[=].code.coding[icd10-gm].display = "Sonstige näher bezeichnete Affektionen der Netzhaut"
+* condition[=].code.coding[sct] = $SCT#95695004 "Disorder of retina (disorder)"
+* condition[=].onsetAge.value = 38
+* condition[=].onsetAge.unit = "years"
+* condition[=].onsetAge.system = $UCUM
+* condition[=].onsetAge.code = #a
+* condition[=].note.text = "Entwicklung einer Makuladegeneration mit progressivem Verlauf"
+
+Instance: mii-exa-molgen-family-member-history-mi
+InstanceOf: mii-pr-molgen-familienanamnese
+Usage: #example
+Title: "Family History - Mother with Myocardial Infarction"
+Description: "Example of family member history documenting mother's ST-elevation myocardial infarction (ICD-10: I21.2)"
+* status = #completed
+* patient = Reference(mii-exa-molgen-patient)
+* date = "2024-03-10"
+* relationship.coding[snomed] = $SCT#72705000 "Mother (person)"
+* relationship.coding[snomed].extension[Verwandtschaftsgrad].valueCoding = $SCT#125678001 "First degree blood relative (person)"
+* relationship.coding[snomed].extension[Verwandtschaftsverhaeltnis].valueCoding = $SCT#13646006 "Natural parent (person)"
+* relationship.coding[snomed].extension[FamiliareLinie].valueCoding = $SCT#72705000 "Mother (person)"
+* relationship.coding[v3-RoleCode] = $v3-RoleCode-cs#MTH "mother"
+* sex.coding[0] = $AdminGender#female
+* sex.coding[+] = $SCT#248152002 "Female (finding)"
+* deceasedAge.value = 71
+* deceasedAge.unit = "years"
+* deceasedAge.system = $UCUM
+* deceasedAge.code = #a
+* reasonCode.coding[icd10-gm].system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+* reasonCode.coding[icd10-gm].version = "2024"
+* reasonCode.coding[icd10-gm].code = #I21.2
+* reasonCode.coding[icd10-gm].display = "Akuter transmuraler Myokardinfarkt an sonstigen Lokalisationen"
+* reasonCode.coding[sct] = $SCT#401303003 "Acute ST segment elevation myocardial infarction (disorder)"
+* condition[0].code.coding[icd10-gm].system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+* condition[=].code.coding[icd10-gm].version = "2024"
+* condition[=].code.coding[icd10-gm].code = #I21.2
+* condition[=].code.coding[icd10-gm].display = "Akuter transmuraler Myokardinfarkt an sonstigen Lokalisationen"
+* condition[=].code.coding[sct] = $SCT#401303003 "Acute ST segment elevation myocardial infarction (disorder)"
+* condition[=].contributedToDeath = true
+* condition[=].onsetAge.value = 70
+* condition[=].onsetAge.unit = "years"
+* condition[=].onsetAge.system = $UCUM
+* condition[=].onsetAge.code = #a
+* condition[=].note.text = "STEMI mit fatalen Komplikationen trotz Akutintervention"
+
+

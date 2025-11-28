@@ -23,6 +23,9 @@
 [mii-exa-molgen-specimen-dna-library]: Specimen-mii-exa-molgen-specimen-dna-library.html
 [mii-exa-molgen-specimen-blood-edta]: Specimen-mii-exa-molgen-specimen-blood-edta.html
 [mii-exa-molgen-folgemassnahme-brca1]: Task-mii-exa-molgen-folgemassnahme-brca1.html
+[mii-exa-molgen-family-member-history-diabetes]: FamilyMemberHistory-mii-exa-molgen-family-member-history-diabetes.html
+[mii-exa-molgen-family-member-history-mi]: FamilyMemberHistory-mii-exa-molgen-family-member-history-mi.html
+[mii-exa-molgen-family-member-history-retinal]: FamilyMemberHistory-mii-exa-molgen-family-member-history-retinal.html
 [mii-exa-molgen-documentreference-fastq]: DocumentReference-mii-exa-molgen-documentreference-fastq.html
 [mii-exa-molgen-genomic-study-analysis-braf]: Procedure-mii-exa-molgen-genomic-study-analysis-braf.html
 [mii-exa-molgen-genomic-study-analysis-cornelia-de-lange]: Procedure-mii-exa-molgen-genomic-study-analysis-cornelia-de-lange.html

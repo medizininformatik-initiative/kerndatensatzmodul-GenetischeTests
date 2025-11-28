@@ -1,0 +1,99 @@
+{
+  "resourceType": "FamilyMemberHistory",
+  "id": "mii-exa-molgen-family-member-history-diabetes",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
+    ]
+  },
+  "relationship": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "extension": [
+          {
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad",
+            "valueCoding": {
+              "code": "125678001",
+              "system": "http://snomed.info/sct",
+              "display": "First degree blood relative (person)"
+            }
+          },
+          {
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis",
+            "valueCoding": {
+              "code": "13646006",
+              "system": "http://snomed.info/sct",
+              "display": "Natural parent (person)"
+            }
+          },
+          {
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-familiare-linie",
+            "valueCoding": {
+              "code": "66839005",
+              "system": "http://snomed.info/sct",
+              "display": "Father (person)"
+            }
+          }
+        ],
+        "code": "9947008",
+        "display": "Natural father (person)"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+        "code": "FTH",
+        "display": "father"
+      }
+    ]
+  },
+  "condition": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+            "version": "2024",
+            "code": "E11.9",
+            "display": "Diabetes mellitus, Typ 2: Ohne Komplikationen"
+          },
+          {
+            "system": "http://snomed.info/sct",
+            "code": "44054006",
+            "display": "Diabetes mellitus type 2 (disorder)"
+          }
+        ]
+      },
+      "onsetAge": {
+        "value": 55,
+        "unit": "years",
+        "system": "http://unitsofmeasure.org",
+        "code": "a"
+      }
+    }
+  ],
+  "status": "completed",
+  "patient": {
+    "reference": "Patient/mii-exa-molgen-patient"
+  },
+  "date": "2024-01-15",
+  "sex": {
+    "coding": [
+      {
+        "code": "male",
+        "system": "http://hl7.org/fhir/administrative-gender"
+      },
+      {
+        "code": "248153007",
+        "system": "http://snomed.info/sct",
+        "display": "Male (finding)"
+      }
+    ]
+  },
+  "deceasedBoolean": false,
+  "ageAge": {
+    "value": 68,
+    "unit": "years",
+    "system": "http://unitsofmeasure.org",
+    "code": "a"
+  }
+}

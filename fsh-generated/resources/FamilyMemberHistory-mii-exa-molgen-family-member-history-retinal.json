@@ -1,0 +1,96 @@
+{
+  "resourceType": "FamilyMemberHistory",
+  "id": "mii-exa-molgen-family-member-history-retinal",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
+    ]
+  },
+  "relationship": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "extension": [
+          {
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad",
+            "valueCoding": {
+              "code": "125678001",
+              "system": "http://snomed.info/sct",
+              "display": "First degree blood relative (person)"
+            }
+          },
+          {
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis",
+            "valueCoding": {
+              "code": "73678001",
+              "system": "http://snomed.info/sct",
+              "display": "Natural sister (person)"
+            }
+          }
+        ],
+        "code": "73678001",
+        "display": "Natural sister (person)"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+        "code": "SIS",
+        "display": "sister"
+      }
+    ]
+  },
+  "condition": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+            "version": "2024",
+            "code": "H35.8",
+            "display": "Sonstige näher bezeichnete Affektionen der Netzhaut"
+          },
+          {
+            "system": "http://snomed.info/sct",
+            "code": "95695004",
+            "display": "Disorder of retina (disorder)"
+          }
+        ]
+      },
+      "onsetAge": {
+        "value": 38,
+        "unit": "years",
+        "system": "http://unitsofmeasure.org",
+        "code": "a"
+      },
+      "note": [
+        {
+          "text": "Entwicklung einer Makuladegeneration mit progressivem Verlauf"
+        }
+      ]
+    }
+  ],
+  "status": "completed",
+  "patient": {
+    "reference": "Patient/mii-exa-molgen-patient"
+  },
+  "date": "2024-02-20",
+  "sex": {
+    "coding": [
+      {
+        "code": "female",
+        "system": "http://hl7.org/fhir/administrative-gender"
+      },
+      {
+        "code": "248152002",
+        "system": "http://snomed.info/sct",
+        "display": "Female (finding)"
+      }
+    ]
+  },
+  "deceasedBoolean": false,
+  "ageAge": {
+    "value": 42,
+    "unit": "years",
+    "system": "http://unitsofmeasure.org",
+    "code": "a"
+  }
+}
