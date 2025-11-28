@@ -29,9 +29,6 @@ Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen B
 * resultsInterpreter ^alias[+] = "Labor / Institution/ Ansprechpartner"
 * specimen MS
 * result MS
-* result contains 
-    tumor-mutation-burden 0..* and
-    microsatellite-instability 0..*
 //* result[gen-grouper] only Reference(SD_MII_MolGen_GruppierungBeobachtungen)
 * result[diagnostic-implication] MS
 * result[diagnostic-implication] only Reference(MII_PR_MolGen_DiagnostischeImplikation)
@@ -41,12 +38,9 @@ Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen B
 * result[variant] only Reference(MII_PR_MolGen_Variante)
 //* result[region-studied] MS
 //* result[region-studied] only Reference(MII_PR_MolGen_UntersuchteRegion)
-* result[tumor-mutation-burden] MS
-* result[tumor-mutation-burden] only Reference(MII_PR_MolGen_Mutationslast)
+* result[biomarker] MS
 * result[genotype] MS
 * result[genotype] only Reference(MII_PR_MolGen_Genotyp)
-* result[microsatellite-instability] MS
-* result[microsatellite-instability] only Reference(MII_PR_MolGen_Mikrosatelliteninstabilitaet)
 * result[sequence-phase-relation] MS
 * result[haplotype] MS
 * media MS
@@ -95,8 +89,8 @@ Description: "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorek
 * result[variant] = Reference(mii-exa-molgen-variante-1)
 //* result[region-studied] = Reference(mii-exa-molgen-untersuchte-region-1)
 * result[genotype] = Reference(mii-exa-molgen-genotyp-1)
-* result[tumor-mutation-burden] = Reference(mii-exa-molgen-mutationslast-1)
-* result[microsatellite-instability] = Reference(mii-exa-molgen-mikrosatelliteninstabilitaet-1)
+* result[biomarker][+] = Reference(mii-exa-molgen-mutationslast-1)
+* result[biomarker][+] = Reference(mii-exa-molgen-mikrosatelliteninstabilitaet-1)
 * conclusion = "BRAF p.V600E Mutation liegt vor. Bitte Therapieoption mit einem BRAF-Inhibitor prüfen."
 
 Instance: mii-exa-molgen-molekulargenetischer-befundbericht-2
@@ -179,7 +173,7 @@ Description: "Beispiel für molekulargenetischen Befund Tumorboard Genfusion."
 * result[variant] = Reference(mii-exa-molgen-variante-1)
 // result[region-studied] removed - use genomic-study extension instead
 * result[genotype] = Reference(mii-exa-molgen-genotyp-1)
-* result[tumor-mutation-burden] = Reference(mii-exa-molgen-mutationslast-1)
+* result[biomarker] = Reference(mii-exa-molgen-mutationslast-1)
 * conclusion = "Nachweis der bekannten treibenden FGFR2-Fusion"
 
 // 04 docx

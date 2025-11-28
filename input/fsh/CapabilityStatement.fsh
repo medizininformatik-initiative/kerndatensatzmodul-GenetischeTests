@@ -5,10 +5,8 @@ RuleSet: SupportResource (resource, expectation)
 * rest.resource[=].extension[0].url = $exp
 * rest.resource[=].extension[0].valueCode = {expectation}
 
-RuleSet: Profile (profile, expectation)
+RuleSet: Profile (profile)
 * rest.resource[=].profile[+] = "{profile}"
-* rest.resource[=].profile[=].extension[0].url = $exp
-* rest.resource[=].profile[=].extension[0].valueCode = {expectation}
 
 RuleSet: SupportProfile (profile, expectation)
 // This rule set must follow a SupportResource rule set, and applies to that resource.
@@ -54,7 +52,7 @@ Usage: #definition
 
 // ServiceRequest requirements
 * insert SupportResource(ServiceRequest, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/ServiceRequest, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/ServiceRequest)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test|2026.0.0-alpha, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
@@ -72,7 +70,7 @@ Usage: #definition
 
 // DiagnosticReport requirements
 * insert SupportResource(DiagnosticReport, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/DiagnosticReport, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/DiagnosticReport)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht|2026.0.0-alpha, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
@@ -95,7 +93,7 @@ Usage: #definition
 
 // Observation requirements
 * insert SupportResource(Observation, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/Observation, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Observation)
 // Removed: ergebnis-zusammenfassung (replaced by GenomicReport.conclusion)
 // Removed: untersuchte-region (replaced by GenomicStudy/Analysis)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation|2026.0.0-alpha, #SHALL)
@@ -146,7 +144,7 @@ Usage: #definition
 
 // Procedure requirements (for GenomicStudy)
 * insert SupportResource(Procedure, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/Procedure, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Procedure)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study|2026.0.0-alpha, #SHALL)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.0-alpha, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
@@ -162,7 +160,7 @@ Usage: #definition
 
 // RiskAssessment requirements (for PolygenerRisikoScore)
 * insert SupportResource(RiskAssessment, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/RiskAssessment, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/RiskAssessment)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score|2026.0.0-alpha, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
@@ -175,7 +173,7 @@ Usage: #definition
 
 // Task requirements
 * insert SupportResource(Task, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/Task, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Task)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung|2026.0.0-alpha, #SHALL)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme|2026.0.0-alpha, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
@@ -199,7 +197,7 @@ Usage: #definition
  
 // FamilyMemberHistory requirements
 * insert SupportResource(FamilyMemberHistory, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese|2026.0.0-alpha, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)

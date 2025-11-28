@@ -8,7 +8,9 @@
       "Bash(do if [ \"$file\" != \"aliases.fsh\" ])",
       "Bash(then sed -i 's/\\bDiagRepStatus#/$DiagRepStatus#/g; s/\\bv2-0074#/$v2-0074#/g; s/\\bRequestIntent#/$RequestIntent#/g; s/\\bRelArtType#/$RelArtType#/g' \"$file\")",
       "Bash(fi)",
-      "Bash(done)"
+      "Bash(done)",
+      "Read(//private/tmp/validation-output/validation-output/**)",
+      "Bash(curl:*)"
     ],
     "deny": []
   }

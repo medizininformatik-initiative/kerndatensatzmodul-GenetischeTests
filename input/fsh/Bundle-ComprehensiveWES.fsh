@@ -234,7 +234,8 @@ Usage: #inline
 * subject = Reference(Patient/mii-exa-molgen-patient-wes)
 * authoredOn = "2024-01-10"
 * requester = Reference(Practitioner/mii-exa-molgen-practitioner)
-* reasonCode = $SCT#234123001 "Intellectual disability syndrome"
+* reasonCode = $SCT#110359009 "Intellectual disability (disorder)"
+
 
 Instance: mii-exa-molgen-variante-comprehensive-pathogenic-bundle
 InstanceOf: mii-pr-molgen-variante

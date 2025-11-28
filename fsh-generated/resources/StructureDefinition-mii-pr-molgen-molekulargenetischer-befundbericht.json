@@ -255,35 +255,9 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:tumor-mutation-burden",
+        "id": "DiagnosticReport.result:biomarker",
         "path": "DiagnosticReport.result",
-        "sliceName": "tumor-mutation-burden",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.result:microsatellite-instability",
-        "path": "DiagnosticReport.result",
-        "sliceName": "microsatellite-instability",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet"
-            ]
-          }
-        ],
+        "sliceName": "biomarker",
         "mustSupport": true
       },
       {

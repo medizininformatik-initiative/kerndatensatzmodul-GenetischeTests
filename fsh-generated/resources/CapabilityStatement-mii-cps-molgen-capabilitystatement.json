@@ -50,14 +50,6 @@
             }
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-          "_profile": {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                "valueCode": "SHALL"
-              }
-            ]
-          },
           "supportedProfile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test|2026.0.0-alpha"
           ],
@@ -213,14 +205,6 @@
             }
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
-          "_profile": {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                "valueCode": "SHALL"
-              }
-            ]
-          },
           "supportedProfile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht|2026.0.0-alpha"
           ],
@@ -442,14 +426,6 @@
             }
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/Observation",
-          "_profile": {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                "valueCode": "SHALL"
-              }
-            ]
-          },
           "supportedProfile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation|2026.0.0-alpha",
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation|2026.0.0-alpha",
@@ -943,14 +919,6 @@
             }
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/Procedure",
-          "_profile": {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                "valueCode": "SHALL"
-              }
-            ]
-          },
           "supportedProfile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study|2026.0.0-alpha",
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.0-alpha"
@@ -1093,14 +1061,6 @@
             }
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/RiskAssessment",
-          "_profile": {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                "valueCode": "SHALL"
-              }
-            ]
-          },
           "supportedProfile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score|2026.0.0-alpha"
           ],
@@ -1212,14 +1172,6 @@
             }
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/Task",
-          "_profile": {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                "valueCode": "SHALL"
-              }
-            ]
-          },
           "supportedProfile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung|2026.0.0-alpha",
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme|2026.0.0-alpha"
@@ -1450,14 +1402,6 @@
             }
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",
-          "_profile": {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                "valueCode": "SHALL"
-              }
-            ]
-          },
           "supportedProfile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese|2026.0.0-alpha"
           ],
