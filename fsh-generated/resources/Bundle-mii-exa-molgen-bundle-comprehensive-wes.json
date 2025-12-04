@@ -88,13 +88,7 @@
           }
         ],
         "type": {
-          "coding": [
-            {
-              "code": "706689003",
-              "system": "http://snomed.info/sct",
-              "display": "Nucleic acid extraction system (physical object)"
-            }
-          ]
+          "text": "Template preparation system (Ion Chef)"
         },
         "status": "active"
       },
@@ -412,9 +406,9 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "code": "LA26811-2",
+                  "code": "LA26810-4",
                   "system": "http://loinc.org",
-                  "display": "Hybridization-based capture"
+                  "display": "DNA hybridization"
                 }
               ]
             }
@@ -519,7 +513,7 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "code": "LA26806-2",
+                  "code": "LA26811-2",
                   "system": "http://loinc.org",
                   "display": "Computational analysis"
                 }
@@ -551,7 +545,7 @@
         "code": {
           "coding": [
             {
-              "code": "94077-5",
+              "code": "86205-2",
               "system": "http://loinc.org",
               "display": "Whole exome sequence analysis in Blood or Tissue by Molecular genetics method"
             }

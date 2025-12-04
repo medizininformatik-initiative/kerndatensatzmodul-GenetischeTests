@@ -60,12 +60,18 @@
           {
             "system": "http://loinc.org",
             "code": "93044-6",
-            "display": "Variant confidence status"
+            "display": "Level of evidence"
           }
         ]
       },
       "valueCodeableConcept": {
-        "text": "Strong evidence - de novo variant, loss-of-function"
+        "coding": [
+          {
+            "code": "LA30201-0",
+            "system": "http://loinc.org",
+            "display": "Strong evidence pathogenic"
+          }
+        ]
       }
     },
     {

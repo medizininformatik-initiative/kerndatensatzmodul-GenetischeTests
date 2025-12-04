@@ -27,7 +27,7 @@ Description: "Library Preparation System"
 * serialNumber = "IC12345"
 * deviceName.name = "Ion Chef System"
 * deviceName.type = #model-name
-* type = $SCT#706689003 "Nucleic acid extraction system (physical object)"
+* type.text = "Template preparation system (Ion Chef)"
 * status = #active
 
 Instance: mii-exa-molgen-genomic-study-comprehensive-wes
@@ -55,7 +55,7 @@ Description: "Library Preparation für Whole Exome Sequencing"
 * extension[device].extension[device].url = "device"
 * extension[device].extension[device].valueReference = Reference(mii-exa-molgen-device-thermofisher-ionchef)
 * extension[method-type].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type"
-* extension[method-type].valueCodeableConcept = $LNC#LA26811-2 "Hybridization-based capture"
+* extension[method-type].valueCodeableConcept = $LNC#LA26810-4 "DNA hybridization"
 // Protocol reference removed - not supported as PlanDefinition in STU3
 
 Instance: mii-exa-molgen-genomic-study-analysis-wes-sequencing
@@ -94,7 +94,7 @@ Description: "Bioinformatische Auswertung für Whole Exome Sequencing"
 * extension[input].extension[type].valueCodeableConcept.text = "FASTQ files"
 // Input value reference simplified - pipeline details not fully supported in STU3
 * extension[method-type].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type"
-* extension[method-type].valueCodeableConcept = $LNC#LA26806-2 "Computational analysis"
+* extension[method-type].valueCodeableConcept = $LNC#LA26811-2 "Computational analysis"
 // Pipeline details removed - not supported in STU3 structure
 * extension[regions].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-regions"
 * extension[regions].extension[description].url = "description"
@@ -229,7 +229,7 @@ Usage: #example
 Title: "Anforderung Whole Exome Sequencing"
 * status = #completed
 * intent = #order
-* code = $LNC#94077-5 "Whole exome sequence analysis in Blood or Tissue by Molecular genetics method"
+* code = $LNC#86205-2 "Whole exome sequence analysis in Blood or Tissue by Molecular genetics method"
 * subject = Reference(mii-exa-molgen-patient)
 * authoredOn = "2024-01-10"
 * requester = Reference(mii-exa-molgen-practitioner-ordering)
@@ -267,8 +267,8 @@ Title: "Diagnostic Implication for KMT2A Variant"
 * derivedFrom = Reference(mii-exa-molgen-variante-comprehensive-pathogenic)
 * component[clinical-significance].code = $LNC#53037-8
 * component[clinical-significance].valueCodeableConcept = $LNC#LA6668-3 "Pathogenic"
-* component[evidence-level].code = $LNC#93044-6 "Variant confidence status"
-* component[evidence-level].valueCodeableConcept.text = "Strong evidence - de novo variant, loss-of-function"
+* component[evidence-level].code = $LNC#93044-6 "Level of evidence"
+* component[evidence-level].valueCodeableConcept = $LNC#LA30201-0 "Strong evidence pathogenic"
 * component[predicted-phenotype].code = $LNC#81259-4 "Associated phenotype"
 * component[predicted-phenotype].valueCodeableConcept = $SCT#268627008 "Wiedemann-Steiner syndrome"
 

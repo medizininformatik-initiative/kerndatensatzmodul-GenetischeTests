@@ -200,7 +200,7 @@ Usage: #inline
 * extension[device].extension[device].url = "device"
 * extension[device].extension[device].valueReference = Reference(Device/mii-exa-molgen-device-thermofisher-ionchef)
 * extension[method-type].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type"
-* extension[method-type].valueCodeableConcept = $LNC#LA26811-2 "Hybridization-based capture"
+* extension[method-type].valueCodeableConcept = $LNC#LA26810-4 "DNA hybridization"
 * extension[protocol-performed].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-protocol-performed"
 * extension[protocol-performed].valueReference = Reference(PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect)
 
@@ -223,14 +223,14 @@ Usage: #inline
 * status = #completed
 * subject = Reference(Patient/mii-exa-molgen-patient-wes)
 * extension[method-type].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type"
-* extension[method-type].valueCodeableConcept = $LNC#LA26806-2 "Computational analysis"
+* extension[method-type].valueCodeableConcept = $LNC#LA26811-2 "Computational analysis"
 
 Instance: mii-exa-molgen-anforderung-wes-bundle
 InstanceOf: mii-pr-molgen-anforderung-genetischer-test
 Usage: #inline
 * status = #completed
 * intent = #order
-* code = $LNC#94077-5 "Whole exome sequence analysis in Blood or Tissue by Molecular genetics method"
+* code = $LNC#86205-2 "Whole exome sequence analysis in Blood or Tissue by Molecular genetics method"
 * subject = Reference(Patient/mii-exa-molgen-patient-wes)
 * authoredOn = "2024-01-10"
 * requester = Reference(Practitioner/mii-exa-molgen-practitioner)
