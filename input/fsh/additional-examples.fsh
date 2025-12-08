@@ -557,6 +557,7 @@ Usage: #example
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(mii-exa-molgen-patient-srcc)
+* effectiveDateTime = "2022-11-30"
 * valueCodeableConcept = $LNC#LA9633-4 "Present"
 * method.coding[0] = $LNC#LA26398-0 "Sequencing"
 * specimen = Reference(mii-exa-molgen-specimen-srcc)
@@ -584,6 +585,7 @@ Usage: #example
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $GenTbd#diagnostic-implication "Diagnostic Implication"
 * subject = Reference(mii-exa-molgen-patient-srcc)
+* effectiveDateTime = "2022-11-30"
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-srcc-ctnna1)
 * component[conclusion-string].valueString = "Diese Variante wird nach den ACMG/AMP-Kriterien zusammenfasssend als pathogen bewertet entsprechend IARC Class 5."
@@ -797,6 +799,7 @@ Description: "Beispiel für genetische Variante FGFR2-DBP Fusion."
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(mii-exa-molgen-patient-fgfr2-fusion)
+* effectiveDateTime = "2022-11-30"
 * valueCodeableConcept = $LNC#LA9633-4 "Present"
 * method.coding[0] = $LNC#LA26398-0 "Sequencing"
 * method.coding[1] = $LNC#86206-0 "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
@@ -812,6 +815,7 @@ Usage: #example
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $GenTbd#diagnostic-implication "Diagnostic Implication"
 * subject = Reference(mii-exa-molgen-patient-fgfr2-fusion)
+* effectiveDateTime = "2022-11-30"
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-fgfr2-fusion)
 * component[conclusion-string].valueString = "starke Überexpression (25-fach)"
@@ -824,6 +828,7 @@ Usage: #example
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $GenTbd#therapeutic-implication "Therapeutic Implication"
 * subject = Reference(mii-exa-molgen-patient-fgfr2-fusion)
+* effectiveDateTime = "2022-11-30"
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-fgfr2-fusion)
 * component[conclusion-string].valueString = "Hochselektiver FGFR2-Inhibitor RLY-4008 bei Patienten mit Cholangiokarzinomen und anderen soliden Tumoren, mit oder ohne FGFR- gerichtete Vortherapie."

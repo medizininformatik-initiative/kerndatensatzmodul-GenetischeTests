@@ -10,8 +10,10 @@ Description: "Dieses Profil beschreibt molekulare Biomarker, z.B. genübergreife
 
 * category MS
 * code MS
-* subject MS 
+* subject MS
 * subject only Reference(Patient or Group)
+* effective[x] MS
+* issued MS
 * encounter MS
 * derivedFrom MS
 * derivedFrom[variant] only Reference(MII_PR_MolGen_Variante)

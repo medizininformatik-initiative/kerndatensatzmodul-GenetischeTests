@@ -11,8 +11,10 @@ Description: "Dieses Profil beschreibt den möglichen Einfluss genetischer Merkm
 * status MS
 * category MS
 * code MS
-* subject 1.. MS 
+* subject 1.. MS
 * subject only Reference(Patient or Group)
+* effective[x] MS
+* issued MS
 * encounter MS
 * derivedFrom MS
 * derivedFrom[variant] MS
@@ -43,6 +45,7 @@ Description: "Beispiel für therapeutische Implikation abgeleitet von genetische
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $GenTbd#therapeutic-implication "Therapeutic Implication"
 * subject = Reference(mii-exa-molgen-patient)
+* effectiveDateTime = "2022-04-07"
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-1)
 * component[conclusion-string].code = $GenTbd#conclusion-string

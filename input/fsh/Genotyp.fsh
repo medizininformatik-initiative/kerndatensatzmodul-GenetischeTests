@@ -13,6 +13,8 @@ Description: "Dieses Profil beschreibt die Feststellung eines bestimmten Genotyp
 * code MS
 * subject 1.. MS
 * subject only Reference(Patient or Group)
+* effective[x] MS
+* issued MS
 * encounter MS
 * value[x] MS
 * derivedFrom MS
@@ -40,6 +42,7 @@ Description: "Beispiel für Genotyp BRAF Gen."
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $LNC#84413-4 "Genotype display name"
 * subject = Reference(mii-exa-molgen-patient)
+* effectiveDateTime = "2022-04-07"
 * valueCodeableConcept.text = "BRAF rs113488022 T>A"
 * method = $LNC#LA26398-0 "Sequencing"
 * specimen = Reference(mii-exa-molgen-specimen-1)
@@ -60,6 +63,7 @@ Description: "Beispiel für Genotyp NIPBL Gen."
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $LNC#84413-4 "Genotype display name"
 * subject = Reference(mii-exa-molgen-patient-2)
+* effectiveDateTime = "2022-03-16"
 * valueCodeableConcept.text = "NIPBL Variante c.2207del p.(Pro736Glnfs*58) (heterozygot)"
 * method = $LNC#LA26398-0 "Sequencing"
 * specimen = Reference(mii-exa-molgen-specimen-2)
@@ -80,6 +84,7 @@ Description: "Beispiel für Genotyp BRCA1 Gen."
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $LNC#84413-4 "Genotype display name"
 * subject = Reference(mii-exa-molgen-patient-brca1)
+* effectiveDateTime = "2022-11-01"
 * valueCodeableConcept.text = "BRCA1, c.5266dup, p.(Gln1756Profs*74)"
 * method = $LNC#LA26398-0 "Sequencing"
 * specimen = Reference(mii-exa-molgen-specimen-brca1)

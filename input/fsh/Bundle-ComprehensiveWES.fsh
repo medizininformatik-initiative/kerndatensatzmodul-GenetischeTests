@@ -241,6 +241,7 @@ Usage: #inline
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(Patient/mii-exa-molgen-patient-wes)
+* effectiveDateTime = "2024-01-10"
 * valueCodeableConcept = $LNC#LA9633-4 "Present"
 * component[gene-studied].code = $LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = $HGNC#HGNC:7132 "KMT2A"
@@ -256,6 +257,7 @@ Usage: #inline
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $GenTbd#diagnostic-implication "Diagnostic Implication"
 * subject = Reference(Patient/mii-exa-molgen-patient-wes)
+* effectiveDateTime = "2024-01-10"
 * derivedFrom = Reference(Observation/mii-exa-molgen-variante-comprehensive-pathogenic)
 * component[clinical-significance].code = $LNC#53037-8
 * component[clinical-significance].valueCodeableConcept = $LNC#LA6668-3 "Pathogenic"

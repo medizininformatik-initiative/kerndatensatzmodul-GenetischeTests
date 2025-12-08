@@ -12,6 +12,8 @@ Description: "Dieses Profil ermöglicht eine vollständige Beschreibung der gefu
 * code MS
 * subject 1.. MS
 * subject only Reference(Patient or Group)
+* effective[x] MS
+* issued MS
 * value[x] MS
 * method MS
 * specimen MS
@@ -87,6 +89,7 @@ Description: "Beispiel für genetische Variante im BRAF Gen an Hand von NGS."
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(mii-exa-molgen-patient)
+* effectiveDateTime = "2022-04-07"
 * valueCodeableConcept = $LNC#LA9633-4 "Present"
 * method = $LNC#LA26398-0 "Sequencing"
 * specimen = Reference(mii-exa-molgen-specimen-1)
@@ -126,6 +129,7 @@ Description: "Beispiel für genetische Variante im NIPBL Gen an Hand von WGS."
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(mii-exa-molgen-patient-2)
+* effectiveDateTime = "2022-03-16"
 * valueCodeableConcept = $LNC#LA9633-4 "Present"
 * method.coding[0] = $LNC#LA26398-0 "Sequencing"
 * method.coding[1] = $LNC#86206-0 "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
@@ -165,6 +169,7 @@ Description: "Beispiel für genetische Copy Number Variante SMO Gen."
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(mii-exa-molgen-patient-2)
+* effectiveDateTime = "2022-03-16"
 * valueCodeableConcept = $LNC#LA9633-4 "Present"
 * method.coding[0] = $LNC#LA26398-0 "Sequencing"
 * method.text = "Analysepipeline XXX, Auswertungssoftware XXX, Prozessierungssystem XXX"
@@ -201,6 +206,7 @@ Description: "Beispiel für genetische Variante BRCA1"
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(mii-exa-molgen-patient-brca1)
+* effectiveDateTime = "2022-11-01"
 * valueCodeableConcept = $LNC#LA9633-4 "Present"
 * method.coding[0] = $LNC#LA26398-0 "Sequencing"
 * specimen = Reference(mii-exa-molgen-specimen-brca1)

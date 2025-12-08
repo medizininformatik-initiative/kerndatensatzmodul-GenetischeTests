@@ -11,8 +11,10 @@ Description: "Dieses Profil beschreibt den Zusammenhang zwischen einem oder mehr
 * extension[workflow-relatedArtifact] MS
 * category MS
 * code MS
-* subject MS 
+* subject MS
 * subject only Reference(Patient or Group)
+* effective[x] MS
+* issued MS
 * encounter MS
 * derivedFrom MS
 * derivedFrom[variant] only Reference(MII_PR_MolGen_Variante)
@@ -40,6 +42,7 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $GenTbd#diagnostic-implication "Diagnostic Implication"
 * subject = Reference(mii-exa-molgen-patient)
+* effectiveDateTime = "2022-04-07"
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-1)
 * component[conclusion-string].code = $GenTbd#conclusion-string
@@ -59,6 +62,7 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von genetischer
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $GenTbd#diagnostic-implication "Diagnostic Implication"
 * subject = Reference(mii-exa-molgen-patient-2)
+* effectiveDateTime = "2022-03-16"
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-2)
 * component[conclusion-string].code = $GenTbd#conclusion-string
@@ -86,6 +90,7 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von Copy Number
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $GenTbd#diagnostic-implication "Diagnostic Implication"
 * subject = Reference(mii-exa-molgen-patient-2)
+* effectiveDateTime = "2022-03-16"
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-cnv-4)
 * component[conclusion-string].code = $GenTbd#conclusion-string
@@ -108,6 +113,7 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von SNP im BRCA
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $GenTbd#diagnostic-implication "Diagnostic Implication"
 * subject = Reference(mii-exa-molgen-patient-brca1)
+* effectiveDateTime = "2022-11-01"
 * performer = Reference(mii-exa-molgen-practitioner-lab)
 * derivedFrom[variant] = Reference(mii-exa-molgen-variante-brca1)
 * component[conclusion-string].code = $GenTbd#conclusion-string

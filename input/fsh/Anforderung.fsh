@@ -17,6 +17,7 @@ Description: "Der Laborauftrag oder die Anfrage, die die Durchführung des genet
 * authoredOn MS
 * authoredOn ^alias[+] = "Datum der Anforderung"
 * requester MS
+* requester only Reference(Practitioner or PractitionerRole or Organization)
 * requester ^alias[+] = "Anforderer"
 * reasonCode MS
 * reasonCode ^alias[+] = "Indikation"
