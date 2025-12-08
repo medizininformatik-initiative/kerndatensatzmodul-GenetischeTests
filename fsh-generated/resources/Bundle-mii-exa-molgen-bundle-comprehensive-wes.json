@@ -98,7 +98,7 @@
       }
     },
     {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Specimen/mii-exa-molgen-specimen-blood-edta",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Specimen/mii-exa-molgen-specimen-blood-edta-bundle",
       "resource": {
         "resourceType": "Specimen",
         "id": "mii-exa-molgen-specimen-blood-edta-bundle",
@@ -155,7 +155,7 @@
       }
     },
     {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Specimen/mii-exa-molgen-specimen-dna-library",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Specimen/mii-exa-molgen-specimen-dna-library-bundle",
       "resource": {
         "resourceType": "Specimen",
         "id": "mii-exa-molgen-specimen-dna-library-bundle",
@@ -242,7 +242,7 @@
       }
     },
     {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/DocumentReference/mii-exa-molgen-documentreference-bed-file",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/DocumentReference/mii-exa-molgen-documentreference-bed-file-bundle",
       "resource": {
         "resourceType": "DocumentReference",
         "id": "mii-exa-molgen-documentreference-bed-file-bundle",
@@ -269,7 +269,7 @@
       }
     },
     {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/DocumentReference/mii-exa-molgen-documentreference-fastq",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/DocumentReference/mii-exa-molgen-documentreference-fastq-bundle",
       "resource": {
         "resourceType": "DocumentReference",
         "id": "mii-exa-molgen-documentreference-fastq-bundle",
@@ -303,7 +303,7 @@
       }
     },
     {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-comprehensive-wes",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-comprehensive-wes-bundle",
       "resource": {
         "resourceType": "Procedure",
         "id": "mii-exa-molgen-genomic-study-comprehensive-wes-bundle",
@@ -351,7 +351,7 @@
       }
     },
     {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-library-prep",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-library-prep-bundle",
       "resource": {
         "resourceType": "Procedure",
         "id": "mii-exa-molgen-genomic-study-analysis-wes-library-prep-bundle",
@@ -410,7 +410,7 @@
       }
     },
     {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-sequencing",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-sequencing-bundle",
       "resource": {
         "resourceType": "Procedure",
         "id": "mii-exa-molgen-genomic-study-analysis-wes-sequencing-bundle",
@@ -469,7 +469,7 @@
       }
     },
     {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-bioinformatics",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-bioinformatics-bundle",
       "resource": {
         "resourceType": "Procedure",
         "id": "mii-exa-molgen-genomic-study-analysis-wes-bioinformatics-bundle",
@@ -511,7 +511,7 @@
       }
     },
     {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ServiceRequest/mii-exa-molgen-anforderung-wes",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/ServiceRequest/mii-exa-molgen-anforderung-wes-bundle",
       "resource": {
         "resourceType": "ServiceRequest",
         "id": "mii-exa-molgen-anforderung-wes-bundle",
@@ -556,7 +556,7 @@
       }
     },
     {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Observation/mii-exa-molgen-variante-comprehensive-pathogenic",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Observation/mii-exa-molgen-variante-comprehensive-pathogenic-bundle",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-molgen-variante-comprehensive-pathogenic-bundle",
@@ -625,7 +625,13 @@
               ]
             },
             "valueCodeableConcept": {
-              "text": "NM_005933.3:c.3463C>T"
+              "coding": [
+                {
+                  "code": "NM_005933.3:c.3463C>T",
+                  "system": "http://varnomen.hgvs.org",
+                  "display": "NM_005933.3:c.3463C>T"
+                }
+              ]
             }
           },
           {
@@ -639,7 +645,13 @@
               ]
             },
             "valueCodeableConcept": {
-              "text": "p.(Arg1155Ter)"
+              "coding": [
+                {
+                  "code": "p.(Arg1155Ter)",
+                  "system": "http://varnomen.hgvs.org",
+                  "display": "p.(Arg1155Ter)"
+                }
+              ]
             }
           }
         ],
@@ -664,7 +676,7 @@
       }
     },
     {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Observation/mii-exa-molgen-diagnostische-implikation-comprehensive",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Observation/mii-exa-molgen-diagnostische-implikation-comprehensive-bundle",
       "resource": {
         "resourceType": "Observation",
         "id": "mii-exa-molgen-diagnostische-implikation-comprehensive-bundle",
@@ -769,7 +781,7 @@
       }
     },
     {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-comprehensive-wes",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/DiagnosticReport/mii-exa-molgen-befundbericht-comprehensive-wes-bundle",
       "resource": {
         "resourceType": "DiagnosticReport",
         "id": "mii-exa-molgen-befundbericht-comprehensive-wes-bundle",
@@ -861,7 +873,7 @@
       }
     },
     {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Practitioner/mii-exa-molgen-practitioner",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Practitioner/mii-exa-molgen-practitioner-bundle",
       "resource": {
         "resourceType": "Practitioner",
         "id": "mii-exa-molgen-practitioner-bundle",
@@ -889,7 +901,7 @@
       }
     },
     {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Practitioner/mii-exa-molgen-practitioner-lab",
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/Practitioner/mii-exa-molgen-practitioner-lab-bundle",
       "resource": {
         "resourceType": "Practitioner",
         "id": "mii-exa-molgen-practitioner-lab-bundle",

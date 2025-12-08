@@ -19,7 +19,6 @@
 [mii-exa-molgen-media-coverage-plot]: Media-mii-exa-molgen-media-coverage-plot.html
 [mii-exa-molgen-diagnostische-implikation-comprehensive]: Observation-mii-exa-molgen-diagnostische-implikation-comprehensive.html
 [mii-exa-molgen-diagnostische-implikation-brca1]: Observation-mii-exa-molgen-diagnostische-implikation-brca1.html
-[mii-exa-molgen-molekulare-konsequenz-brca1]: Observation-mii-exa-molgen-molekulare-konsequenz-brca1.html
 [mii-exa-molgen-specimen-dna-library]: Specimen-mii-exa-molgen-specimen-dna-library.html
 [mii-exa-molgen-specimen-blood-edta]: Specimen-mii-exa-molgen-specimen-blood-edta.html
 [mii-exa-molgen-folgemassnahme-brca1]: Task-mii-exa-molgen-folgemassnahme-brca1.html
@@ -115,6 +114,7 @@
 [mii-sp-molgen-genomic-study-analysis-regions-studied]: SearchParameter-mii-sp-molgen-genomic-study-analysis-regions-studied.html
 [mii-sp-molgen-genomic-study-analysis-specimen]: SearchParameter-mii-sp-molgen-genomic-study-analysis-specimen.html
 [mii-exa-molgen-mikrosatelliteninstabilitaet-1]: Observation-mii-exa-molgen-mikrosatelliteninstabilitaet-1.html
+[mii-exa-molgen-molekulare-konsequenz-brca1]: Observation-mii-exa-molgen-molekulare-konsequenz-brca1.html
 [mii-exa-molgen-genomic-study-1]: Procedure-mii-exa-molgen-genomic-study-1.html
 [mii-exa-molgen-molekulargenetischer-befundbericht-1]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-1.html
 [mii-exa-molgen-molekulargenetischer-befundbericht-2]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-2.html

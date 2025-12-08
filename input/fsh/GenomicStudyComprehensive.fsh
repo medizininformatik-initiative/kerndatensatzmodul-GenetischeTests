@@ -253,7 +253,7 @@ Title: "KMT2A Pathogenic Variant from WES"
 * component[allelic-read-depth].code = $LNC#82121-5 "Allelic read depth"
 * component[allelic-read-depth].valueQuantity = 45 '1' "reads"
 * component[variant-confidence-status].code = $GenTbd#variant-confidence-status "Variant confidence status"
-* component[variant-confidence-status].valueCodeableConcept = $GenTbd#high "High confidence"
+* component[variant-confidence-status].valueCodeableConcept = $VariantConfidenceStatus#high "High confidence true positive variant call. Suitable for clinical reporting."
 
 Instance: mii-exa-molgen-diagnostische-implikation-comprehensive
 InstanceOf: mii-pr-molgen-diagnostische-implikation

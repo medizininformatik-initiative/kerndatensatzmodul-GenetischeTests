@@ -544,7 +544,7 @@ Usage: #example
 * sex.coding[0] = $AdminGender#female
 * sex.coding[+] = $SCT#248152002 "Female (finding)"
 * deceasedBoolean = true
-* reasonCode.coding[sct] = $SCT#87737001 "Signet ring cell carcinoma"
+* reasonCode.coding[sct] = $SCT#363349007 "Malignant tumor of stomach"
 * condition[0].code.coding[sct] = $SCT#254837009 "Malignant neoplasm of breast (disorder)"
 * condition[=].contributedToDeath = true
 

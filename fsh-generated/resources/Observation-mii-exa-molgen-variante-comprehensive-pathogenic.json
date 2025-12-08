@@ -124,8 +124,8 @@
         "coding": [
           {
             "code": "high",
-            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-            "display": "High confidence"
+            "system": "http://terminology.hl7.org/CodeSystem/variant-confidence-status-cs",
+            "display": "High confidence true positive variant call. Suitable for clinical reporting."
           }
         ]
       }

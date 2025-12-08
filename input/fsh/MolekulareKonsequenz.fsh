@@ -80,9 +80,9 @@ Description: "Beispiel für molekulare Konsequenz abgeleitet von genetischer Var
 Instance: mii-exa-molgen-molekulare-konsequenz-cnv-4
 InstanceOf: mii-pr-molgen-molekulare-konsequenz
 Usage: #example
-Title: "CNV SMO Diagnostische Implikation"
-Description: "Beispiel für diagnostische Implikation abgeleitet von Copy Number Variante im SMO Gen."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
+Title: "CNV SMO Molekulare Konsequenz"
+Description: "Beispiel für molekulare Konsequenz abgeleitet von Copy Number Variante im SMO Gen."
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence"
 * extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.type = $RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
@@ -106,9 +106,9 @@ Description: "Beispiel für diagnostische Implikation abgeleitet von Copy Number
 Instance: mii-exa-molgen-molekulare-konsequenz-brca1
 InstanceOf: mii-pr-molgen-molekulare-konsequenz
 Usage: #example
-Title: "Diagnostische Implikation BRCA1 Variante"
-Description: "Beispiel für diagnostische Implikation abgeleitet von SNP im BRCA1."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
+Title: "Molekulare Konsequenz BRCA1 Variante"
+Description: "Beispiel für molekulare Konsequenz abgeleitet von SNP im BRCA1."
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence"
 * extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.type = $RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"

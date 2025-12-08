@@ -121,5 +121,5 @@ Description: "Beispiel für Anforderung für genetische Testung bei Familiärer 
 * specimen = Reference(mii-exa-molgen-specimen-brca1)
 * reasonCode[0] = $SCT#429740004 "Family history of malignant neoplasm of breast (situation)"
 * reasonCode[1] = $SCT#430705002 "Family history of malignant neoplasm of ovary (situation)"
-* reasonCode[2] = $ORPHA#145 "Hereditary breast and ovarian cancer syndrome"
+* reasonCode[2] = $ORPHA#145 "Hereditary breast and/or ovarian cancer syndrome"
 * reasonCode[3] = $OMIM#604370 "BREAST-OVARIAN CANCER, FAMILIAL, SUSCEPTIBILITY TO, 1; BROVCA1"

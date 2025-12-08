@@ -28,12 +28,12 @@ Description: "Transaktions-Bundle für eine vollständige Whole Exome Sequencing
 * entry[=].request.url = "Device"
 
 // Specimens
-* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Specimen/mii-exa-molgen-specimen-blood-edta"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Specimen/mii-exa-molgen-specimen-blood-edta-bundle"
 * entry[=].resource = mii-exa-molgen-specimen-blood-edta-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Specimen"
 
-* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Specimen/mii-exa-molgen-specimen-dna-library"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Specimen/mii-exa-molgen-specimen-dna-library-bundle"
 * entry[=].resource = mii-exa-molgen-specimen-dna-library-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Specimen"
@@ -45,50 +45,50 @@ Description: "Transaktions-Bundle für eine vollständige Whole Exome Sequencing
 * entry[=].request.url = "PlanDefinition"
 
 // DocumentReferences for data files
-* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/DocumentReference/mii-exa-molgen-documentreference-bed-file"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/DocumentReference/mii-exa-molgen-documentreference-bed-file-bundle"
 * entry[=].resource = mii-exa-molgen-documentreference-bed-file-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "DocumentReference"
 
-* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/DocumentReference/mii-exa-molgen-documentreference-fastq"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/DocumentReference/mii-exa-molgen-documentreference-fastq-bundle"
 * entry[=].resource = mii-exa-molgen-documentreference-fastq-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "DocumentReference"
 
 // GenomicStudy and Analyses
-* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-comprehensive-wes"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-comprehensive-wes-bundle"
 * entry[=].resource = mii-exa-molgen-genomic-study-comprehensive-wes-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Procedure"
 
-* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-library-prep"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-library-prep-bundle"
 * entry[=].resource = mii-exa-molgen-genomic-study-analysis-wes-library-prep-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Procedure"
 
-* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-sequencing"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-sequencing-bundle"
 * entry[=].resource = mii-exa-molgen-genomic-study-analysis-wes-sequencing-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Procedure"
 
-* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-bioinformatics"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-bioinformatics-bundle"
 * entry[=].resource = mii-exa-molgen-genomic-study-analysis-wes-bioinformatics-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Procedure"
 
 // ServiceRequest
-* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ServiceRequest/mii-exa-molgen-anforderung-wes"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ServiceRequest/mii-exa-molgen-anforderung-wes-bundle"
 * entry[=].resource = mii-exa-molgen-anforderung-wes-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "ServiceRequest"
 
 // Observations (Variant and Diagnostic Implication)
-* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Observation/mii-exa-molgen-variante-comprehensive-pathogenic"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Observation/mii-exa-molgen-variante-comprehensive-pathogenic-bundle"
 * entry[=].resource = mii-exa-molgen-variante-comprehensive-pathogenic-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Observation/mii-exa-molgen-diagnostische-implikation-comprehensive"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Observation/mii-exa-molgen-diagnostische-implikation-comprehensive-bundle"
 * entry[=].resource = mii-exa-molgen-diagnostische-implikation-comprehensive-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
@@ -100,18 +100,18 @@ Description: "Transaktions-Bundle für eine vollständige Whole Exome Sequencing
 * entry[=].request.url = "Media"
 
 // DiagnosticReport
-* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-comprehensive-wes"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/DiagnosticReport/mii-exa-molgen-befundbericht-comprehensive-wes-bundle"
 * entry[=].resource = mii-exa-molgen-befundbericht-comprehensive-wes-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "DiagnosticReport"
 
 // Practitioners
-* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Practitioner/mii-exa-molgen-practitioner"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Practitioner/mii-exa-molgen-practitioner-bundle"
 * entry[=].resource = mii-exa-molgen-practitioner-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Practitioner"
 
-* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Practitioner/mii-exa-molgen-practitioner-lab"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Practitioner/mii-exa-molgen-practitioner-lab-bundle"
 * entry[=].resource = mii-exa-molgen-practitioner-lab-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Practitioner"
@@ -246,9 +246,9 @@ Usage: #inline
 * component[gene-studied].code = $LNC#48018-6 "Gene studied [ID]"
 * component[gene-studied].valueCodeableConcept = $HGNC#HGNC:7132 "KMT2A"
 * component[representative-coding-hgvs].code = $LNC#48004-6 "DNA change (c.HGVS)"
-* component[representative-coding-hgvs].valueCodeableConcept.text = "NM_005933.3:c.3463C>T"  // MANE Select transcript
+* component[representative-coding-hgvs].valueCodeableConcept = $HGVS#NM_005933.3:c.3463C>T "NM_005933.3:c.3463C>T"
 * component[representative-protein-hgvs].code = $LNC#48005-3 "Amino acid change (pHGVS)"
-* component[representative-protein-hgvs].valueCodeableConcept.text = "p.(Arg1155Ter)"
+* component[representative-protein-hgvs].valueCodeableConcept = $HGVS#p.(Arg1155Ter) "p.(Arg1155Ter)"
 
 Instance: mii-exa-molgen-diagnostische-implikation-comprehensive-bundle
 InstanceOf: mii-pr-molgen-diagnostische-implikation
