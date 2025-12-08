@@ -233,7 +233,7 @@ Title: "Anforderung Whole Exome Sequencing"
 * subject = Reference(mii-exa-molgen-patient)
 * authoredOn = "2024-01-10"
 * requester = Reference(mii-exa-molgen-practitioner-ordering)
-* reasonCode = $SCT#234123001 "Intellectual disability syndrome"
+* reasonCode = $SCT#224958001 "Global developmental delay"
 * reasonCode.text = "Unklare Entwicklungsverzögerung mit Dysmorphiezeichen, V.a. genetisches Syndrom nach unauffälliger Chromosomenanalyse und Array-CGH"
 
 Instance: mii-exa-molgen-variante-comprehensive-pathogenic
@@ -270,7 +270,7 @@ Title: "Diagnostic Implication for KMT2A Variant"
 * component[evidence-level].code = $LNC#93044-6 "Level of evidence"
 * component[evidence-level].valueCodeableConcept = $LNC#LA30201-0 "Strong evidence pathogenic"
 * component[predicted-phenotype].code = $LNC#81259-4 "Associated phenotype"
-* component[predicted-phenotype].valueCodeableConcept = $SCT#268627008 "Wiedemann-Steiner syndrome"
+* component[predicted-phenotype].valueCodeableConcept = $SCT#763618001 "Wiedemann Steiner syndrome"
 
 Instance: mii-exa-molgen-media-coverage-plot
 InstanceOf: Media

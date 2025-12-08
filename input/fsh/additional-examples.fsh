@@ -524,7 +524,7 @@ Usage: #example
 * authoredOn = "2022-11-30"
 * requester = Reference(mii-exa-molgen-practitioner-physician)
 * specimen = Reference(mii-exa-molgen-specimen-srcc)
-* reasonCode[0].coding[0] = $SCT#87737001 "Signet ring cell carcinoma (morphologic abnormality)"
+* reasonCode[0].coding[0] = $SCT#87737001 "Signet ring cell carcinoma"
 * reasonCode[0].coding[1].system = $ICD10GM
 * reasonCode[0].coding[1].version = "2024"
 * reasonCode[0].coding[1].code = #C16.9
@@ -544,7 +544,7 @@ Usage: #example
 * sex.coding[0] = $AdminGender#female
 * sex.coding[+] = $SCT#248152002 "Female (finding)"
 * deceasedBoolean = true
-* reasonCode.coding[sct] = $SCT#87737001 "Signet ring cell carcinoma (morphologic abnormality)"
+* reasonCode.coding[sct] = $SCT#87737001 "Signet ring cell carcinoma"
 * condition[0].code.coding[sct] = $SCT#254837009 "Malignant neoplasm of breast (disorder)"
 * condition[=].contributedToDeath = true
 
