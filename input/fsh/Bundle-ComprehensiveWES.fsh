@@ -11,107 +11,107 @@ Description: "Transaktions-Bundle für eine vollständige Whole Exome Sequencing
 * timestamp = "2024-01-20T10:00:00+01:00"
 
 // Patient
-* entry[+].fullUrl = "https://example.org/Patient/mii-exa-molgen-patient-wes"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Patient/mii-exa-molgen-patient-wes"
 * entry[=].resource = mii-exa-molgen-patient-wes
 * entry[=].request.method = #POST
 * entry[=].request.url = "Patient"
 
 // Devices
-* entry[+].fullUrl = "https://example.org/Device/mii-exa-molgen-device-illumina-novaseq"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Device/mii-exa-molgen-device-illumina-novaseq"
 * entry[=].resource = mii-exa-molgen-device-illumina-novaseq
 * entry[=].request.method = #POST
 * entry[=].request.url = "Device"
 
-* entry[+].fullUrl = "https://example.org/Device/mii-exa-molgen-device-thermofisher-ionchef"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Device/mii-exa-molgen-device-thermofisher-ionchef"
 * entry[=].resource = mii-exa-molgen-device-thermofisher-ionchef
 * entry[=].request.method = #POST
 * entry[=].request.url = "Device"
 
 // Specimens
-* entry[+].fullUrl = "https://example.org/Specimen/mii-exa-molgen-specimen-blood-edta"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Specimen/mii-exa-molgen-specimen-blood-edta"
 * entry[=].resource = mii-exa-molgen-specimen-blood-edta-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Specimen"
 
-* entry[+].fullUrl = "https://example.org/Specimen/mii-exa-molgen-specimen-dna-library"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Specimen/mii-exa-molgen-specimen-dna-library"
 * entry[=].resource = mii-exa-molgen-specimen-dna-library-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Specimen"
 
 // Protocol/PlanDefinition
-* entry[+].fullUrl = "https://example.org/PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect"
 * entry[=].resource = mii-exa-molgen-protocol-agilent-sureselect
 * entry[=].request.method = #POST
 * entry[=].request.url = "PlanDefinition"
 
 // DocumentReferences for data files
-* entry[+].fullUrl = "https://example.org/DocumentReference/mii-exa-molgen-documentreference-bed-file"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/DocumentReference/mii-exa-molgen-documentreference-bed-file"
 * entry[=].resource = mii-exa-molgen-documentreference-bed-file-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "DocumentReference"
 
-* entry[+].fullUrl = "https://example.org/DocumentReference/mii-exa-molgen-documentreference-fastq"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/DocumentReference/mii-exa-molgen-documentreference-fastq"
 * entry[=].resource = mii-exa-molgen-documentreference-fastq-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "DocumentReference"
 
 // GenomicStudy and Analyses
-* entry[+].fullUrl = "https://example.org/Procedure/mii-exa-molgen-genomic-study-comprehensive-wes"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-comprehensive-wes"
 * entry[=].resource = mii-exa-molgen-genomic-study-comprehensive-wes-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Procedure"
 
-* entry[+].fullUrl = "https://example.org/Procedure/mii-exa-molgen-genomic-study-analysis-wes-library-prep"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-library-prep"
 * entry[=].resource = mii-exa-molgen-genomic-study-analysis-wes-library-prep-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Procedure"
 
-* entry[+].fullUrl = "https://example.org/Procedure/mii-exa-molgen-genomic-study-analysis-wes-sequencing"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-sequencing"
 * entry[=].resource = mii-exa-molgen-genomic-study-analysis-wes-sequencing-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Procedure"
 
-* entry[+].fullUrl = "https://example.org/Procedure/mii-exa-molgen-genomic-study-analysis-wes-bioinformatics"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-bioinformatics"
 * entry[=].resource = mii-exa-molgen-genomic-study-analysis-wes-bioinformatics-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Procedure"
 
 // ServiceRequest
-* entry[+].fullUrl = "https://example.org/ServiceRequest/mii-exa-molgen-anforderung-wes"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/ServiceRequest/mii-exa-molgen-anforderung-wes"
 * entry[=].resource = mii-exa-molgen-anforderung-wes-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "ServiceRequest"
 
 // Observations (Variant and Diagnostic Implication)
-* entry[+].fullUrl = "https://example.org/Observation/mii-exa-molgen-variante-comprehensive-pathogenic"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Observation/mii-exa-molgen-variante-comprehensive-pathogenic"
 * entry[=].resource = mii-exa-molgen-variante-comprehensive-pathogenic-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
-* entry[+].fullUrl = "https://example.org/Observation/mii-exa-molgen-diagnostische-implikation-comprehensive"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Observation/mii-exa-molgen-diagnostische-implikation-comprehensive"
 * entry[=].resource = mii-exa-molgen-diagnostische-implikation-comprehensive-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 
 // Media (Coverage Plot)
-* entry[+].fullUrl = "https://example.org/Media/mii-exa-molgen-media-coverage-plot"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Media/mii-exa-molgen-media-coverage-plot"
 * entry[=].resource = mii-exa-molgen-media-coverage-plot
 * entry[=].request.method = #POST
 * entry[=].request.url = "Media"
 
 // DiagnosticReport
-* entry[+].fullUrl = "https://example.org/DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-comprehensive-wes"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-comprehensive-wes"
 * entry[=].resource = mii-exa-molgen-befundbericht-comprehensive-wes-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "DiagnosticReport"
 
 // Practitioners
-* entry[+].fullUrl = "https://example.org/Practitioner/mii-exa-molgen-practitioner"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Practitioner/mii-exa-molgen-practitioner"
 * entry[=].resource = mii-exa-molgen-practitioner-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Practitioner"
 
-* entry[+].fullUrl = "https://example.org/Practitioner/mii-exa-molgen-practitioner-lab"
+* entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/Practitioner/mii-exa-molgen-practitioner-lab"
 * entry[=].resource = mii-exa-molgen-practitioner-lab-bundle
 * entry[=].request.method = #POST
 * entry[=].request.url = "Practitioner"
@@ -121,7 +121,7 @@ Description: "Transaktions-Bundle für eine vollständige Whole Exome Sequencing
 Instance: mii-exa-molgen-patient-wes
 InstanceOf: Patient
 Usage: #inline
-* identifier.system = "https://example.org/patient-ids"
+* identifier.system = "https://www.medizininformatik-initiative.de/fhir/patient-ids"
 * identifier.value = "WES2024001"
 * name.family = "Mustermann"
 * name.given = "Max"
@@ -158,7 +158,7 @@ Usage: #inline
 * status = #current
 * type.text = "BED file - Agilent SureSelect V7 target regions"
 * subject = Reference(Patient/mii-exa-molgen-patient-wes)
-* content.attachment.url = "https://example.org/files/agilent_v7_targets.bed"
+* content.attachment.url = "https://www.medizininformatik-initiative.de/fhir/files/agilent_v7_targets.bed"
 * content.attachment.title = "Agilent SureSelect Human All Exon V7 Target Regions"
 * content.attachment.contentType = #text/plain
 
@@ -168,10 +168,10 @@ Usage: #inline
 * status = #current
 * type.text = "FASTQ files - paired-end sequencing data"
 * subject = Reference(Patient/mii-exa-molgen-patient-wes)
-* content[+].attachment.url = "https://example.org/files/sample_R1.fastq.gz"
+* content[+].attachment.url = "https://www.medizininformatik-initiative.de/fhir/files/sample_R1.fastq.gz"
 * content[=].attachment.title = "Forward reads"
 * content[=].attachment.contentType = #application/gzip
-* content[+].attachment.url = "https://example.org/files/sample_R2.fastq.gz"
+* content[+].attachment.url = "https://www.medizininformatik-initiative.de/fhir/files/sample_R2.fastq.gz"
 * content[=].attachment.title = "Reverse reads"
 * content[=].attachment.contentType = #application/gzip
 

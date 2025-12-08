@@ -160,7 +160,7 @@ Description: "BED-Datei mit den Zielregionen des Exom-Kits"
 * status = #current
 * type.text = "BED file - Agilent SureSelect V7 target regions"
 * subject = Reference(mii-exa-molgen-patient)
-* content.attachment.url = "https://example.org/files/agilent_v7_targets.bed"
+* content.attachment.url = "https://www.medizininformatik-initiative.de/fhir/files/agilent_v7_targets.bed"
 * content.attachment.title = "Agilent SureSelect Human All Exon V7 Target Regions"
 * content.attachment.contentType = #text/plain
 // content.format removed - BED is not a valid code in v3-ObservationValue
@@ -184,10 +184,10 @@ Description: "Raw sequencing data files"
 * status = #current
 * type.text = "FASTQ files - paired-end sequencing data"
 * subject = Reference(mii-exa-molgen-patient)
-* content[+].attachment.url = "https://example.org/files/sample_R1.fastq.gz"
+* content[+].attachment.url = "https://www.medizininformatik-initiative.de/fhir/files/sample_R1.fastq.gz"
 * content[=].attachment.title = "Forward reads"
 * content[=].attachment.contentType = #application/gzip
-* content[+].attachment.url = "https://example.org/files/sample_R2.fastq.gz"
+* content[+].attachment.url = "https://www.medizininformatik-initiative.de/fhir/files/sample_R2.fastq.gz"
 * content[=].attachment.title = "Reverse reads"
 * content[=].attachment.contentType = #application/gzip
 
@@ -281,4 +281,4 @@ Description: "Graphical representation of sequencing coverage"
 * createdDateTime = "2024-01-20T10:00:00+01:00"
 * content.contentType = #image/png
 * content.title = "Exome Coverage Distribution Plot"
-* content.url = "https://example.org/plots/coverage_wes_2024001.png"
+* content.url = "https://www.medizininformatik-initiative.de/fhir/plots/coverage_wes_2024001.png"
