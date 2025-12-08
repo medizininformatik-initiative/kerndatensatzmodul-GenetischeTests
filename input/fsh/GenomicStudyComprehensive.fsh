@@ -158,13 +158,12 @@ Usage: #example
 Title: "BED File for Target Regions"
 Description: "BED-Datei mit den Zielregionen des Exom-Kits"
 * status = #current
-* type = http://terminology.hl7.org/CodeSystem/v3-ObservationValue#GENOMIC "Genomic"
 * type.text = "BED file - Agilent SureSelect V7 target regions"
 * subject = Reference(mii-exa-molgen-patient)
 * content.attachment.url = "https://example.org/files/agilent_v7_targets.bed"
 * content.attachment.title = "Agilent SureSelect Human All Exon V7 Target Regions"
 * content.attachment.contentType = #text/plain
-* content.format = http://terminology.hl7.org/CodeSystem/v3-ObservationValue#BED "BED file format"
+// content.format removed - BED is not a valid code in v3-ObservationValue
 
 Instance: mii-exa-molgen-practitioner-ordering
 InstanceOf: Practitioner
@@ -183,7 +182,6 @@ Usage: #example
 Title: "FASTQ Sequencing Files"
 Description: "Raw sequencing data files"
 * status = #current
-* type = http://terminology.hl7.org/CodeSystem/v3-ObservationValue#GENOMIC "Genomic"
 * type.text = "FASTQ files - paired-end sequencing data"
 * subject = Reference(mii-exa-molgen-patient)
 * content[+].attachment.url = "https://example.org/files/sample_R1.fastq.gz"

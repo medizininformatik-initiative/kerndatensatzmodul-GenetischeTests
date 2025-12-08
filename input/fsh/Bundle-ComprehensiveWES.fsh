@@ -156,7 +156,6 @@ Instance: mii-exa-molgen-documentreference-bed-file-bundle
 InstanceOf: DocumentReference
 Usage: #inline
 * status = #current
-* type = http://terminology.hl7.org/CodeSystem/v3-ObservationValue#GENOMIC "Genomic"
 * type.text = "BED file - Agilent SureSelect V7 target regions"
 * subject = Reference(Patient/mii-exa-molgen-patient-wes)
 * content.attachment.url = "https://example.org/files/agilent_v7_targets.bed"
@@ -167,7 +166,6 @@ Instance: mii-exa-molgen-documentreference-fastq-bundle
 InstanceOf: DocumentReference
 Usage: #inline
 * status = #current
-* type = http://terminology.hl7.org/CodeSystem/v3-ObservationValue#GENOMIC "Genomic"
 * type.text = "FASTQ files - paired-end sequencing data"
 * subject = Reference(Patient/mii-exa-molgen-patient-wes)
 * content[+].attachment.url = "https://example.org/files/sample_R1.fastq.gz"
