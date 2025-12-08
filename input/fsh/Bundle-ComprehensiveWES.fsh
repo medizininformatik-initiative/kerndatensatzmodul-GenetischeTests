@@ -201,8 +201,7 @@ Usage: #inline
 * extension[device].extension[device].valueReference = Reference(Device/mii-exa-molgen-device-thermofisher-ionchef)
 * extension[method-type].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type"
 * extension[method-type].valueCodeableConcept = $LNC#LA26810-4 "DNA hybridization"
-* extension[protocol-performed].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-protocol-performed"
-* extension[protocol-performed].valueReference = Reference(PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect)
+// Protocol reference removed - genomic-study-analysis-protocol-performed only accepts Task/Procedure in STU3, not PlanDefinition
 
 Instance: mii-exa-molgen-genomic-study-analysis-wes-sequencing-bundle
 InstanceOf: mii-pr-molgen-genomic-study-analysis

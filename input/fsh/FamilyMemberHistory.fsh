@@ -247,7 +247,7 @@ Description: "Example of family member history documenting sister's retinal diso
 * condition[=].code.coding[icd10-gm].version = "2024"
 * condition[=].code.coding[icd10-gm].code = #H35.8
 * condition[=].code.coding[icd10-gm].display = "Sonstige näher bezeichnete Affektionen der Netzhaut"
-* condition[=].code.coding[sct] = $SCT#95695004 "Disorder of retina (disorder)"
+* condition[=].code.coding[sct] = $SCT#95695004 "Degeneration of retina"
 * condition[=].onsetAge.value = 38
 * condition[=].onsetAge.unit = "years"
 * condition[=].onsetAge.system = $UCUM

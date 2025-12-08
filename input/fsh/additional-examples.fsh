@@ -525,7 +525,10 @@ Usage: #example
 * requester = Reference(mii-exa-molgen-practitioner-physician)
 * specimen = Reference(mii-exa-molgen-specimen-srcc)
 * reasonCode[0].coding[0] = $SCT#87737001 "Signet ring cell carcinoma (morphologic abnormality)"
-* reasonCode[0].coding[1] = $ICD10GM#C16.9 "Bösartige Neubildung des Magens, nicht näher bezeichnet"
+* reasonCode[0].coding[1].system = $ICD10GM
+* reasonCode[0].coding[1].version = "2024"
+* reasonCode[0].coding[1].code = #C16.9
+* reasonCode[0].coding[1].display = "Bösartige Neubildung: Magen, nicht näher bezeichnet"
 * reasonCode[0].text = "Eigenanamnese: Siegelringkarzinom des Magens, diffus wachsend"
 * reasonCode[1].coding[0] = $SCT#429740004 "Family history of malignant neoplasm of breast (situation)"
 * reasonCode[1].text = "Mutter an Brustkrebs verstorben"
@@ -778,7 +781,10 @@ Usage: #example
 * authoredOn = "2022-11-30"
 * requester = Reference(mii-exa-molgen-practitioner-physician)
 * reasonCode[0].coding[0] = $SCT#109842005 "Intrahepatic bile duct carcinoma (disorder)"
-* reasonCode[0].coding[1] = $ICD10GM#C22.1 "Intrahepatisches Gallengangskarzinom"
+* reasonCode[0].coding[1].system = $ICD10GM
+* reasonCode[0].coding[1].version = "2024"
+* reasonCode[0].coding[1].code = #C22.1
+* reasonCode[0].coding[1].display = "Intrahepatisches Gallengangskarzinom"
 
 Instance: mii-exa-molgen-variante-fgfr2-fusion
 InstanceOf: mii-pr-molgen-variante
@@ -826,7 +832,10 @@ Usage: #example
 * component[medication-assessed][=].valueCodeableConcept.coding[1] = $SCT#1162485005 "Substance with fibroblast growth factor receptor inhibitor mechanism of action (substance)"
 * component[evidence-level].valueCodeableConcept.text = "m1c"
 * component[phenotypic-treatment-context].valueCodeableConcept.coding[0] = $SCT#109842005 "Intrahepatic bile duct carcinoma (disorder)"
-* component[phenotypic-treatment-context].valueCodeableConcept.coding[1] = $ICD10GM#C22.1 "Intrahepatisches Gallengangskarzinom"
+* component[phenotypic-treatment-context].valueCodeableConcept.coding[1].system = $ICD10GM
+* component[phenotypic-treatment-context].valueCodeableConcept.coding[1].version = "2024"
+* component[phenotypic-treatment-context].valueCodeableConcept.coding[1].code = #C22.1
+* component[phenotypic-treatment-context].valueCodeableConcept.coding[1].display = "Intrahepatisches Gallengangskarzinom"
 
 Instance: mii-exa-molgen-medikationsempfehlung-fgfr2-fusion
 InstanceOf: mii-pr-molgen-medikationsempfehlung
