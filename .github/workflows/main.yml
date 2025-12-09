@@ -1,4 +1,5 @@
 ### copied from Procedure module 2025/05/05
+### Modified to test FHIR package caching
 
 name: CI (FHIR Validation)
 
@@ -17,13 +18,152 @@ jobs:
       SUSHI_VERSION: ${{ vars.SUSHI_VERSION }}
     secrets: inherit
 
+  # Inlined Java validation with FHIR package caching + timing instrumentation
   JAVA_FHIR_VALIDATION:
-    uses: medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_java_validation.yml@master
-    with:
-      ref: ${{ github.event.pull_request.head.ref }}
-      PATH_TO_CONFORMANCE_RESOURCES: fsh-generated/resources
-      PATH_TO_EXAMPLES: fsh-generated/resources
-      JAVA_VALIDATION_ENABLED: true
-      JAVA_VALIDATION_OPTIONS: ${{ vars.JAVA_VALIDATION_OPTIONS }}
-      JAVA_VALIDATOR_VERSION: ${{ vars.JAVA_VALIDATOR_VERSION }}
-    secrets: inherit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start timing
+        run: |
+          echo "WORKFLOW_START=$(date +%s)" >> $GITHUB_ENV
+          echo "=== TIMING TEST RUN ==="
+          echo "Start time: $(date)"
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Cache FHIR packages
+        id: cache-fhir
+        uses: actions/cache@v4
+        with:
+          path: ~/.fhir/packages
+          key: fhir-packages-${{ hashFiles('package.json') }}
+          restore-keys: |
+            fhir-packages-
+
+      - name: Report cache status
+        run: |
+          echo "=== CACHE STATUS ==="
+          echo "FHIR cache hit: ${{ steps.cache-fhir.outputs.cache-hit }}"
+          if [ -d ~/.fhir/packages ]; then
+            echo "Cached packages:"
+            ls -la ~/.fhir/packages/ 2>/dev/null | head -20 || echo "No packages cached"
+            echo "Total cache size:"
+            du -sh ~/.fhir/packages/ 2>/dev/null || echo "N/A"
+          else
+            echo "No cache directory exists"
+          fi
+
+      - name: Cache Java Validator
+        id: cache-validator
+        uses: actions/cache@v4
+        with:
+          path: validator_cli.jar
+          key: validator-${{ vars.JAVA_VALIDATOR_VERSION || '6.5.7' }}
+
+      - name: Create NGINX config and certificates
+        shell: bash
+        env:
+          CDS_DEV_CLIENT_CERT: ${{ secrets.CDS_DEV_CLIENT_CERT }}
+          CDS_DEV_CLIENT_KEY: ${{ secrets.CDS_DEV_CLIENT_KEY }}
+          CDS_DEV_CLIENT_CERT_PASSWORD: ${{ secrets.CDS_DEV_CLIENT_CERT_PASSWORD }}
+        run: |
+          echo "=== NGINX SETUP START: $(date) ==="
+          mkdir -p nginx/certs
+          curl -sSL -o nginx/nginx.conf https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatz-meta/refs/heads/master/.github/workflows/nginx.conf
+          echo "$CDS_DEV_CLIENT_CERT" | base64 -d > nginx/certs/client-cert.pem
+          echo "$CDS_DEV_CLIENT_KEY" | base64 -d > nginx/certs/client-key-encrypted.key
+          openssl rsa -in nginx/certs/client-key-encrypted.key -out nginx/certs/client-key.key -passin env:CDS_DEV_CLIENT_CERT_PASSWORD
+          echo "=== NGINX SETUP END: $(date) ==="
+
+      - name: Start NGINX Proxy
+        run: |
+          docker run -d --name nginx-proxy \
+            -v $PWD/nginx/nginx.conf:/etc/nginx/nginx.conf:ro \
+            -v $PWD/nginx/certs:/etc/nginx/certs:ro \
+            -p 8090:80 nginx:alpine
+          sleep 5
+          for i in {1..5}; do
+            if curl --head --silent --fail http://localhost:8090; then
+              echo "NGINX is responding."
+              break
+            else
+              echo "NGINX not responding. Attempt $i"
+              sleep 2
+              if [ $i -eq 5 ]; then
+                echo "NGINX is still not responding after $i attempts."
+                exit 1
+              fi
+            fi
+          done
+
+      - name: Download Java Validator
+        run: |
+          echo "=== VALIDATOR DOWNLOAD START: $(date) ==="
+          echo "Validator cache hit: ${{ steps.cache-validator.outputs.cache-hit }}"
+          if [ ! -f validator_cli.jar ]; then
+            JAVA_VALIDATOR_VERSION="${{ vars.JAVA_VALIDATOR_VERSION || '6.5.7' }}"
+            echo "Downloading validator version $JAVA_VALIDATOR_VERSION"
+            wget -q "https://github.com/hapifhir/org.hl7.fhir.core/releases/download/$JAVA_VALIDATOR_VERSION/validator_cli.jar" -O validator_cli.jar
+          else
+            echo "Using cached validator_cli.jar"
+            ls -la validator_cli.jar
+          fi
+          echo "=== VALIDATOR DOWNLOAD END: $(date) ==="
+
+      - name: Install jq
+        run: |
+          sudo apt-get update > /dev/null
+          sudo apt-get install --no-install-recommends -y jq > /dev/null
+
+      - name: Validate all resources
+        run: |
+          echo "=== VALIDATION START: $(date) ==="
+          VALIDATION_START=$(date +%s)
+
+          echo "Starting validation using Java validator..."
+          IG_DEPENDENCIES=$(jq -r '(.dependencies) | to_entries | map("-ig " + .key + "#" + .value) | join(" ")' package.json)
+          echo "IG_DEPENDENCIES: $IG_DEPENDENCIES"
+
+          UNESCAPED_IG_DEPENDENCIES=$(echo $IG_DEPENDENCIES | tr -d '"')
+
+          # Count resources to validate
+          RESOURCE_COUNT=$(ls -1 fsh-generated/resources/*.json 2>/dev/null | wc -l)
+          echo "Resources to validate: $RESOURCE_COUNT"
+
+          java -jar validator_cli.jar \
+            fsh-generated/resources/*.json \
+            -version 4.0 \
+            ${{ vars.JAVA_VALIDATION_OPTIONS || '-output-style compact' }} \
+            $UNESCAPED_IG_DEPENDENCIES \
+            -ig fsh-generated/resources \
+            -tx http://127.0.0.1:8090/fhir
+
+          VALIDATION_END=$(date +%s)
+          VALIDATION_DURATION=$((VALIDATION_END - VALIDATION_START))
+          echo "=== VALIDATION END: $(date) ==="
+          echo "=== VALIDATION DURATION: ${VALIDATION_DURATION}s ==="
+
+      - name: Print timing summary
+        if: always()
+        run: |
+          WORKFLOW_END=$(date +%s)
+          TOTAL_DURATION=$((WORKFLOW_END - WORKFLOW_START))
+          echo ""
+          echo "==========================================="
+          echo "           TIMING SUMMARY"
+          echo "==========================================="
+          echo "FHIR package cache hit: ${{ steps.cache-fhir.outputs.cache-hit }}"
+          echo "Validator cache hit: ${{ steps.cache-validator.outputs.cache-hit }}"
+          echo "Total workflow duration: ${TOTAL_DURATION}s ($(($TOTAL_DURATION / 60))m $(($TOTAL_DURATION % 60))s)"
+          echo "==========================================="
+
+      - name: Upload validation output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-output
+          path: |
+            txlog.html
+            validation.html
+            validation.json
+          retention-days: 7

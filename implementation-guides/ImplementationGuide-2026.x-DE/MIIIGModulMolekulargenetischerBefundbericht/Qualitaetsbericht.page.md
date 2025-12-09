@@ -14,6 +14,9 @@ Dieses Modul wird kontinuierlich mittels automatisierter FHIR-Validierung geprü
 | **Validierungsversion** | FHIR Validator 6.7.x |
 | **FHIR Version**        | R4 (4.0.1)           |
 | **Terminologie-Server** | MII TX Server        |
+| **Fehler gesamt**       | 57                   |
+| **Unterdrückt**         | 48                   |
+| **Aktionierbar**        | 9                    |
 
 ## Bekannte Validierungsfehler (Suppressed)
 
@@ -21,11 +24,10 @@ Die folgenden Validierungsfehler sind bekannt und werden bewusst unterdrückt:
 
 ### Terminologie-Server Limitierungen
 
-| Fehler                    | Beschreibung                                                                       | Status                                                                 |
-| ------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| LOINC LIST Filter         | `Error: There is no declared filter called LIST on code system http://loinc.org` | TX-Server Konfiguration                                                |
-| HGNC Fusion Notation      | `Unknown code 'HGNC:3689::HGNC:2697'`                                            | Offizielle Notation für Fusionsgene, nicht vom TX-Server unterstützt |
-| Variant Confidence Status | `None of the codings provided are in the value set 'Variant Confidence Status'`  | CodeSystem muss auf TX-Server importiert werden                        |
+| Fehler                          | Beschreibung                                                                       | Status                                                                 |
+| ------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| HGNC Fusion Notation            | `Unknown code 'HGNC:3689::HGNC:2697'`                                            | Offizielle Notation für Fusionsgene, nicht vom TX-Server unterstützt |
+| StructureDefinition Sprach-Code | `UNABLE_TO_INFER_CODESYSTEM` / `Terminology_TX_NoValid_16` für `de-DE`        | Sprach-Codes in Profil-Definitionen werden nicht erkannt               |
 
 ### MIME-Type Validierung
 
@@ -53,6 +55,18 @@ CI (FHIR Validation)
 └── DOTNET_FHIR_VALIDATION (~2 min)
     └── Firely.Terminal
 ```
+
+### Pipeline-Optimierung (experimentell)
+
+Die Java-Validierung ist derzeit der Flaschenhals der CI/CD-Pipeline. Die Hauptursachen für die lange Laufzeit:
+
+| Phase | Beschreibung | Optimierungspotential |
+|-------|--------------|----------------------|
+| **Package-Download** | ~150 MB FHIR-Pakete (hl7.terminology.r4, genomics-reporting, etc.) | Caching |
+| **Snapshot-Generierung** | Aufbau der Snapshot-Elemente für alle Abhängigkeiten entlang der Vererbungskette | Bereits vorberechnet in publizierten Paketen |
+| **Validierung** | Eigentliche Prüfung der ~130 Ressourcen | Inkrementelle Validierung |
+
+**Aktueller Test:** Die Pipeline wurde um FHIR-Package-Caching erweitert, um die Download- und Parsing-Zeit bei wiederholten Läufen zu reduzieren. Ergebnisse werden nach mehreren Durchläufen evaluiert.
 
 ## Offene Themen
 
