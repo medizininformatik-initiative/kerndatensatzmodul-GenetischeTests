@@ -8,44 +8,165 @@ Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen B
 * ^status = #active
 
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
+
+// MS elements with German translations
 * extension[recommended-action] MS
 * extension[recommended-action] only MII_EX_MolGen_EmpfohleneMassnahme
+* extension[recommended-action] ^short = "Empfohlene Maßnahme"
+* extension[recommended-action] ^definition = "Referenz zu empfohlenen Folgemaßnahmen oder Medikationsempfehlungen"
+* insert Translation(extension[recommended-action] ^short, de-DE, Empfohlene Maßnahme)
+* insert Translation(extension[recommended-action] ^definition, de-DE, Referenz zu empfohlenen Folgemaßnahmen oder Medikationsempfehlungen)
+
 * extension[supporting-info] MS
+* extension[supporting-info] ^short = "Unterstützende Informationen"
+* extension[supporting-info] ^definition = "Zusätzliche unterstützende Informationen wie Familienanamnese oder Abrechnungsdaten"
+* insert Translation(extension[supporting-info] ^short, de-DE, Unterstützende Informationen)
+* insert Translation(extension[supporting-info] ^definition, de-DE, Zusätzliche unterstützende Informationen wie Familienanamnese oder Abrechnungsdaten)
+
 * extension[coded-note] MS
+* extension[coded-note] ^short = "Kodierte Anmerkung"
+* extension[coded-note] ^definition = "Kodierte Anmerkungen zum genetischen Bericht"
+* insert Translation(extension[coded-note] ^short, de-DE, Kodierte Anmerkung)
+* insert Translation(extension[coded-note] ^definition, de-DE, Kodierte Anmerkungen zum genetischen Bericht)
+
 * extension[genomic-risk-assessment] MS
+* extension[genomic-risk-assessment] ^short = "Genomische Risikobewertung"
+* extension[genomic-risk-assessment] ^definition = "Referenz zu einer genomischen Risikobewertung"
+* insert Translation(extension[genomic-risk-assessment] ^short, de-DE, Genomische Risikobewertung)
+* insert Translation(extension[genomic-risk-assessment] ^definition, de-DE, Referenz zu einer genomischen Risikobewertung)
+
 * extension[workflow-relatedArtifact] MS
+* extension[workflow-relatedArtifact] ^short = "Verknüpfte Artefakte"
+* extension[workflow-relatedArtifact] ^definition = "Verknüpfte Literatur oder andere Artefakte wie Zitationen"
+* insert Translation(extension[workflow-relatedArtifact] ^short, de-DE, Verknüpfte Artefakte)
+* insert Translation(extension[workflow-relatedArtifact] ^definition, de-DE, Verknüpfte Literatur oder andere Artefakte wie Zitationen)
+
 * extension[genomic-study] MS
+* extension[genomic-study] ^short = "Genomische Studie"
+* extension[genomic-study] ^definition = "Referenz zur zugehörigen genomischen Studie"
+* insert Translation(extension[genomic-study] ^short, de-DE, Genomische Studie)
+* insert Translation(extension[genomic-study] ^definition, de-DE, Referenz zur zugehörigen genomischen Studie)
+
 //* extension[genomics-file] MS
 * status ^alias[+] = "Berichtstatus"
 * status MS
-* subject 1.. MS 
+* status ^short = "Status"
+* status ^definition = "Status des Befundberichts"
+* insert Translation(status ^short, de-DE, Status)
+* insert Translation(status ^definition, de-DE, Status des Befundberichts)
+
+* subject 1.. MS
 * subject only Reference(Patient or Group)
+* subject ^short = "Patient"
+* subject ^definition = "Der Patient auf den sich der Befundbericht bezieht"
+* insert Translation(subject ^short, de-DE, Patient)
+* insert Translation(subject ^definition, de-DE, Der Patient auf den sich der Befundbericht bezieht)
+
 * encounter MS
+* encounter ^short = "Kontakt"
+* encounter ^definition = "Der Kontakt in dessen Rahmen der Bericht erstellt wurde"
+* insert Translation(encounter ^short, de-DE, Kontakt)
+* insert Translation(encounter ^definition, de-DE, Der Kontakt in dessen Rahmen der Bericht erstellt wurde)
+
 * issued MS
 * issued ^alias[+] = "Datum des Berichtes"
+* issued ^short = "Freigabedatum"
+* issued ^definition = "Datum und Uhrzeit der Freigabe des Berichts"
+* insert Translation(issued ^short, de-DE, Freigabedatum)
+* insert Translation(issued ^definition, de-DE, Datum und Uhrzeit der Freigabe des Berichts)
+
 * performer MS
 * performer ^alias[+] = "Labor / Institution/ Ansprechpartner"
+* performer ^short = "Durchführende Stelle"
+* performer ^definition = "Das Labor oder die Institution die den Bericht erstellt hat"
+* insert Translation(performer ^short, de-DE, Durchführende Stelle)
+* insert Translation(performer ^definition, de-DE, Das Labor oder die Institution die den Bericht erstellt hat)
+
 * resultsInterpreter MS
 * resultsInterpreter ^alias[+] = "Labor / Institution/ Ansprechpartner"
+* resultsInterpreter ^short = "Befundinterpreter"
+* resultsInterpreter ^definition = "Die Person oder Organisation die die Ergebnisse interpretiert hat"
+* insert Translation(resultsInterpreter ^short, de-DE, Befundinterpreter)
+* insert Translation(resultsInterpreter ^definition, de-DE, Die Person oder Organisation die die Ergebnisse interpretiert hat)
+
 * specimen MS
+* specimen ^short = "Probe"
+* specimen ^definition = "Die untersuchte Probe"
+* insert Translation(specimen ^short, de-DE, Probe)
+* insert Translation(specimen ^definition, de-DE, Die untersuchte Probe)
+
 * result MS
+* result ^short = "Ergebnis"
+* result ^definition = "Referenzen zu den einzelnen Beobachtungsergebnissen"
+* insert Translation(result ^short, de-DE, Ergebnis)
+* insert Translation(result ^definition, de-DE, Referenzen zu den einzelnen Beobachtungsergebnissen)
+
 //* result[gen-grouper] only Reference(SD_MII_MolGen_GruppierungBeobachtungen)
 * result[diagnostic-implication] MS
 * result[diagnostic-implication] only Reference(MII_PR_MolGen_DiagnostischeImplikation)
+* result[diagnostic-implication] ^short = "Diagnostische Implikation"
+* result[diagnostic-implication] ^definition = "Referenz zu diagnostischen Implikationen der genetischen Befunde"
+* insert Translation(result[diagnostic-implication] ^short, de-DE, Diagnostische Implikation)
+* insert Translation(result[diagnostic-implication] ^definition, de-DE, Referenz zu diagnostischen Implikationen der genetischen Befunde)
+
 * result[therapeutic-implication] MS
 * result[therapeutic-implication] only Reference(MII_PR_MolGen_TherapeutischeImplikation)
+* result[therapeutic-implication] ^short = "Therapeutische Implikation"
+* result[therapeutic-implication] ^definition = "Referenz zu therapeutischen Implikationen der genetischen Befunde"
+* insert Translation(result[therapeutic-implication] ^short, de-DE, Therapeutische Implikation)
+* insert Translation(result[therapeutic-implication] ^definition, de-DE, Referenz zu therapeutischen Implikationen der genetischen Befunde)
+
 * result[variant] MS
 * result[variant] only Reference(MII_PR_MolGen_Variante)
+* result[variant] ^short = "Variante"
+* result[variant] ^definition = "Referenz zu gefundenen genetischen Varianten"
+* insert Translation(result[variant] ^short, de-DE, Variante)
+* insert Translation(result[variant] ^definition, de-DE, Referenz zu gefundenen genetischen Varianten)
+
 //* result[region-studied] MS
 //* result[region-studied] only Reference(MII_PR_MolGen_UntersuchteRegion)
 * result[biomarker] MS
+* result[biomarker] ^short = "Biomarker"
+* result[biomarker] ^definition = "Referenz zu molekularen Biomarkern wie TMB oder MSI"
+* insert Translation(result[biomarker] ^short, de-DE, Biomarker)
+* insert Translation(result[biomarker] ^definition, de-DE, Referenz zu molekularen Biomarkern wie TMB oder MSI)
+
 * result[genotype] MS
 * result[genotype] only Reference(MII_PR_MolGen_Genotyp)
+* result[genotype] ^short = "Genotyp"
+* result[genotype] ^definition = "Referenz zu Genotyp-Ergebnissen"
+* insert Translation(result[genotype] ^short, de-DE, Genotyp)
+* insert Translation(result[genotype] ^definition, de-DE, Referenz zu Genotyp-Ergebnissen)
+
 * result[sequence-phase-relation] MS
+* result[sequence-phase-relation] ^short = "Sequenz-Phasen-Beziehung"
+* result[sequence-phase-relation] ^definition = "Referenz zu Sequenz-Phasen-Beziehungen"
+* insert Translation(result[sequence-phase-relation] ^short, de-DE, Sequenz-Phasen-Beziehung)
+* insert Translation(result[sequence-phase-relation] ^definition, de-DE, Referenz zu Sequenz-Phasen-Beziehungen)
+
 * result[haplotype] MS
+* result[haplotype] ^short = "Haplotyp"
+* result[haplotype] ^definition = "Referenz zu Haplotyp-Ergebnissen"
+* insert Translation(result[haplotype] ^short, de-DE, Haplotyp)
+* insert Translation(result[haplotype] ^definition, de-DE, Referenz zu Haplotyp-Ergebnissen)
+
 * media MS
+* media ^short = "Medien"
+* media ^definition = "Bilder oder andere Medien die zum Bericht gehören"
+* insert Translation(media ^short, de-DE, Medien)
+* insert Translation(media ^definition, de-DE, Bilder oder andere Medien die zum Bericht gehören)
+
 * conclusion MS
+* conclusion ^short = "Schlussfolgerung"
+* conclusion ^definition = "Textuelle Zusammenfassung der Befundergebnisse"
+* insert Translation(conclusion ^short, de-DE, Schlussfolgerung)
+* insert Translation(conclusion ^definition, de-DE, Textuelle Zusammenfassung der Befundergebnisse)
+
 * conclusionCode MS
+* conclusionCode ^short = "Schlussfolgerungscode"
+* conclusionCode ^definition = "Kodierte Schlussfolgerung des Befundes"
+* insert Translation(conclusionCode ^short, de-DE, Schlussfolgerungscode)
+* insert Translation(conclusionCode ^definition, de-DE, Kodierte Schlussfolgerung des Befundes)
 // OPEN QUESTION for commenting phase: What are the expected conclusionCode values for different test types?
 // - Single gene tests: Positive/Negative/Inconclusive based on pathogenic variant found?
 // - Panel tests: How to code when some genes positive, others negative?

@@ -46,22 +46,166 @@
       {
         "id": "Task.status",
         "path": "Task.status",
+        "short": "Status",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Status der Medikationsempfehlung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status der Medikationsempfehlung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Task.intent",
         "path": "Task.intent",
+        "short": "Absicht",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Absicht"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Absicht der Aufgabe wie z.B. Vorschlag",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Absicht der Aufgabe wie z.B. Vorschlag"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Task.code",
         "path": "Task.code",
+        "short": "Code",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Code der Medikationsempfehlung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code der Medikationsempfehlung"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true
       },
       {
         "id": "Task.for",
         "path": "Task.for",
+        "short": "Patient",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Patient"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Patient für den die Medikation empfohlen wird",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Patient für den die Medikation empfohlen wird"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "type": [
           {
@@ -76,16 +220,124 @@
       {
         "id": "Task.encounter",
         "path": "Task.encounter",
+        "short": "Kontakt",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kontakt"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Kontakt in dessen Rahmen die Empfehlung ausgesprochen wurde",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Kontakt in dessen Rahmen die Empfehlung ausgesprochen wurde"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Task.reasonCode",
         "path": "Task.reasonCode",
+        "short": "Begründung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Begründung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Kodierte Begründung für die Medikationsempfehlung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kodierte Begründung für die Medikationsempfehlung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Task.reasonReference",
         "path": "Task.reasonReference",
+        "short": "Referenz zur Begründung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Referenz zur Begründung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Referenz zur therapeutischen Implikation die diese Empfehlung begründet",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Referenz zur therapeutischen Implikation die diese Empfehlung begründet"
+                }
+              ]
+            }
+          ]
+        },
         "type": [
           {
             "code": "Reference",

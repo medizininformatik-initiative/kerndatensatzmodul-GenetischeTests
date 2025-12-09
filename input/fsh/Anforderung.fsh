@@ -8,28 +8,79 @@ Description: "Der Laborauftrag oder die Anfrage, die die Durchführung des genet
 * ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
 //* ^status = #draft
+
+// MS elements with German translations
 * basedOn MS
+* basedOn ^short = "Basiert auf"
+* basedOn ^definition = "Referenz zu vorherigen Anforderungen oder Plänen auf denen diese basiert"
+* insert Translation(basedOn ^short, de-DE, Basiert auf)
+* insert Translation(basedOn ^definition, de-DE, Referenz zu vorherigen Anforderungen oder Plänen auf denen diese basiert)
+
 * code MS
+* code ^short = "Code"
+* code ^definition = "Code der angeforderten Untersuchung"
+* insert Translation(code ^short, de-DE, Code)
+* insert Translation(code ^definition, de-DE, Code der angeforderten Untersuchung)
 * code.text ^alias[+] = "Anforderungstext"
+
 * subject MS
 * subject only Reference(Patient or Group)
+* subject ^short = "Patient"
+* subject ^definition = "Der Patient für den der Test angefordert wird"
+* insert Translation(subject ^short, de-DE, Patient)
+* insert Translation(subject ^definition, de-DE, Der Patient für den der Test angefordert wird)
+
 * encounter MS
+* encounter ^short = "Kontakt"
+* encounter ^definition = "Der Kontakt in dessen Rahmen die Anforderung gestellt wurde"
+* insert Translation(encounter ^short, de-DE, Kontakt)
+* insert Translation(encounter ^definition, de-DE, Der Kontakt in dessen Rahmen die Anforderung gestellt wurde)
+
 * authoredOn MS
 * authoredOn ^alias[+] = "Datum der Anforderung"
+* authoredOn ^short = "Anforderungsdatum"
+* authoredOn ^definition = "Datum der Anforderung"
+* insert Translation(authoredOn ^short, de-DE, Anforderungsdatum)
+* insert Translation(authoredOn ^definition, de-DE, Datum der Anforderung)
+
 * requester MS
 * requester only Reference(Practitioner or PractitionerRole or Organization)
 * requester ^alias[+] = "Anforderer"
+* requester ^short = "Anforderer"
+* requester ^definition = "Die Person oder Organisation die den Test anfordert"
+* insert Translation(requester ^short, de-DE, Anforderer)
+* insert Translation(requester ^definition, de-DE, Die Person oder Organisation die den Test anfordert)
+
 * reasonCode MS
 * reasonCode ^alias[+] = "Indikation"
-* reasonReference MS 
+* reasonCode ^short = "Indikation"
+* reasonCode ^definition = "Die Indikation oder der Grund für die Testanforderung"
+* insert Translation(reasonCode ^short, de-DE, Indikation)
+* insert Translation(reasonCode ^definition, de-DE, Die Indikation oder der Grund für die Testanforderung)
+
+* reasonReference MS
+* reasonReference ^short = "Referenz zur Indikation"
+* reasonReference ^definition = "Referenz zu Diagnosen oder Beobachtungen die die Anforderung begründen"
+* insert Translation(reasonReference ^short, de-DE, Referenz zur Indikation)
+* insert Translation(reasonReference ^definition, de-DE, Referenz zu Diagnosen oder Beobachtungen die die Anforderung begründen)
+
 * supportingInfo MS
+* supportingInfo ^short = "Unterstützende Informationen"
+* supportingInfo ^definition = "Zusätzliche Informationen die die Anforderung unterstützen"
+* insert Translation(supportingInfo ^short, de-DE, Unterstützende Informationen)
+* insert Translation(supportingInfo ^definition, de-DE, Zusätzliche Informationen die die Anforderung unterstützen)
 * supportingInfo ^slicing.discriminator.type = #profile
 * supportingInfo ^slicing.discriminator.path = "resolve()"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo contains familienanamnese 0..*
 * supportingInfo[familienanamnese] only Reference(mii-pr-molgen-familienanamnese)
+
 * note MS
 * note ^alias[+] = "Anforderungstext"
+* note ^short = "Anmerkung"
+* note ^definition = "Zusätzliche Anmerkungen oder Anforderungstext"
+* insert Translation(note ^short, de-DE, Anmerkung)
+* insert Translation(note ^definition, de-DE, Zusätzliche Anmerkungen oder Anforderungstext)
 
 Mapping: MolGen-Anforderung
 Id: MII-KDS

@@ -46,21 +46,165 @@
       {
         "id": "FamilyMemberHistory.status",
         "path": "FamilyMemberHistory.status",
+        "short": "Status",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Status der Familienanamnese",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status der Familienanamnese"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.patient",
         "path": "FamilyMemberHistory.patient",
+        "short": "Patient",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Patient"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Patient zu dem die Familienanamnese gehört",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Patient zu dem die Familienanamnese gehört"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.date",
         "path": "FamilyMemberHistory.date",
+        "short": "Datum",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Datum der Erfassung der Familienanamnese",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum der Erfassung der Familienanamnese"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.relationship",
         "path": "FamilyMemberHistory.relationship",
+        "short": "Verwandtschaftsbeziehung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Verwandtschaftsbeziehung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Art der Verwandtschaft zum Patienten",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Art der Verwandtschaft zum Patienten"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
@@ -95,6 +239,42 @@
         "id": "FamilyMemberHistory.relationship.coding:snomed.extension:Verwandtschaftsgrad",
         "path": "FamilyMemberHistory.relationship.coding.extension",
         "sliceName": "Verwandtschaftsgrad",
+        "short": "Verwandtschaftsgrad",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Verwandtschaftsgrad"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Grad der Blutsverwandtschaft wie z.B. ersten oder zweiten Grades",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Grad der Blutsverwandtschaft wie z.B. ersten oder zweiten Grades"
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "type": [
@@ -111,6 +291,42 @@
         "id": "FamilyMemberHistory.relationship.coding:snomed.extension:Verwandtschaftsverhaeltnis",
         "path": "FamilyMemberHistory.relationship.coding.extension",
         "sliceName": "Verwandtschaftsverhaeltnis",
+        "short": "Verwandtschaftsverhältnis",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Verwandtschaftsverhältnis"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das spezifische Verwandtschaftsverhältnis wie z.B. Elternteil oder Geschwister",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das spezifische Verwandtschaftsverhältnis wie z.B. Elternteil oder Geschwister"
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "type": [
@@ -127,6 +343,42 @@
         "id": "FamilyMemberHistory.relationship.coding:snomed.extension:FamiliareLinie",
         "path": "FamilyMemberHistory.relationship.coding.extension",
         "sliceName": "FamiliareLinie",
+        "short": "Familiäre Linie",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Familiäre Linie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die familiäre Linie - mütterlich oder väterlich",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die familiäre Linie - mütterlich oder väterlich"
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "type": [
@@ -156,11 +408,83 @@
       {
         "id": "FamilyMemberHistory.sex",
         "path": "FamilyMemberHistory.sex",
+        "short": "Geschlecht",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Geschlecht"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das Geschlecht des Familienangehörigen",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das Geschlecht des Familienangehörigen"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.reasonCode",
         "path": "FamilyMemberHistory.reasonCode",
+        "short": "Grund der Erhebung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Grund der Erhebung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Grund für die Erhebung dieser Familienanamnese",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Grund für die Erhebung dieser Familienanamnese"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
@@ -175,6 +499,42 @@
           ],
           "rules": "open"
         },
+        "short": "Kodierung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kodierung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Kodierung des Grundes",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kodierung des Grundes"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true
       },
@@ -182,6 +542,42 @@
         "id": "FamilyMemberHistory.reasonCode.coding:icd10-gm",
         "path": "FamilyMemberHistory.reasonCode.coding",
         "sliceName": "icd10-gm",
+        "short": "ICD-10-GM Kodierung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "ICD-10-GM Kodierung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Kodierung nach ICD-10-GM",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kodierung nach ICD-10-GM"
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "patternCoding": {
@@ -196,18 +592,126 @@
       {
         "id": "FamilyMemberHistory.reasonCode.coding:icd10-gm.system",
         "path": "FamilyMemberHistory.reasonCode.coding.system",
+        "short": "System",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "System"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das Kodesystem ICD-10-GM",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das Kodesystem ICD-10-GM"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.reasonCode.coding:icd10-gm.version",
         "path": "FamilyMemberHistory.reasonCode.coding.version",
+        "short": "Version",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Version"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Version des ICD-10-GM Katalogs",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Version des ICD-10-GM Katalogs"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.reasonCode.coding:icd10-gm.code",
         "path": "FamilyMemberHistory.reasonCode.coding.code",
+        "short": "Code",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der ICD-10-GM Code",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der ICD-10-GM Code"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true
       },
@@ -215,6 +719,42 @@
         "id": "FamilyMemberHistory.reasonCode.coding:alpha-id",
         "path": "FamilyMemberHistory.reasonCode.coding",
         "sliceName": "alpha-id",
+        "short": "Alpha-ID Kodierung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Alpha-ID Kodierung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Kodierung nach Alpha-ID",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kodierung nach Alpha-ID"
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "patternCoding": {
@@ -229,12 +769,84 @@
       {
         "id": "FamilyMemberHistory.reasonCode.coding:alpha-id.system",
         "path": "FamilyMemberHistory.reasonCode.coding.system",
+        "short": "System",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "System"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das Kodesystem Alpha-ID",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das Kodesystem Alpha-ID"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.reasonCode.coding:alpha-id.code",
         "path": "FamilyMemberHistory.reasonCode.coding.code",
+        "short": "Code",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Alpha-ID Code",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Alpha-ID Code"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true
       },
@@ -242,6 +854,42 @@
         "id": "FamilyMemberHistory.reasonCode.coding:sct",
         "path": "FamilyMemberHistory.reasonCode.coding",
         "sliceName": "sct",
+        "short": "SNOMED CT Kodierung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "SNOMED CT Kodierung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Kodierung nach SNOMED CT",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kodierung nach SNOMED CT"
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "patternCoding": {
@@ -256,12 +904,84 @@
       {
         "id": "FamilyMemberHistory.reasonCode.coding:sct.system",
         "path": "FamilyMemberHistory.reasonCode.coding.system",
+        "short": "System",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "System"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das Kodesystem SNOMED CT",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das Kodesystem SNOMED CT"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.reasonCode.coding:sct.code",
         "path": "FamilyMemberHistory.reasonCode.coding.code",
+        "short": "Code",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der SNOMED CT Code",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der SNOMED CT Code"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true
       },
@@ -269,6 +989,42 @@
         "id": "FamilyMemberHistory.reasonCode.coding:orphanet",
         "path": "FamilyMemberHistory.reasonCode.coding",
         "sliceName": "orphanet",
+        "short": "Orphanet Kodierung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Orphanet Kodierung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Kodierung nach Orphanet für seltene Erkrankungen",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kodierung nach Orphanet für seltene Erkrankungen"
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "patternCoding": {
@@ -283,28 +1039,208 @@
       {
         "id": "FamilyMemberHistory.reasonCode.coding:orphanet.system",
         "path": "FamilyMemberHistory.reasonCode.coding.system",
+        "short": "System",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "System"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das Kodesystem Orphanet",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das Kodesystem Orphanet"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.reasonCode.coding:orphanet.code",
         "path": "FamilyMemberHistory.reasonCode.coding.code",
+        "short": "Code",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Orphanet Code",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Orphanet Code"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.reasonReference",
         "path": "FamilyMemberHistory.reasonReference",
+        "short": "Referenz zum Grund",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Referenz zum Grund"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Referenz zu einer Condition die den Grund der Familienanamnese beschreibt",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Referenz zu einer Condition die den Grund der Familienanamnese beschreibt"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.condition",
         "path": "FamilyMemberHistory.condition",
+        "short": "Erkrankung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Erkrankung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Erkrankung des Familienangehörigen",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Erkrankung des Familienangehörigen"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.condition.code",
         "path": "FamilyMemberHistory.condition.code",
+        "short": "Erkrankungscode",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Erkrankungscode"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Kodierte Darstellung der Erkrankung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kodierte Darstellung der Erkrankung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
@@ -319,6 +1255,42 @@
           ],
           "rules": "open"
         },
+        "short": "Kodierung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kodierung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Kodierung der Erkrankung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kodierung der Erkrankung"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true
       },
@@ -326,6 +1298,42 @@
         "id": "FamilyMemberHistory.condition.code.coding:icd10-gm",
         "path": "FamilyMemberHistory.condition.code.coding",
         "sliceName": "icd10-gm",
+        "short": "ICD-10-GM Kodierung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "ICD-10-GM Kodierung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Kodierung nach ICD-10-GM",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kodierung nach ICD-10-GM"
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "type": [
@@ -348,22 +1356,166 @@
       {
         "id": "FamilyMemberHistory.condition.code.coding:icd10-gm.system",
         "path": "FamilyMemberHistory.condition.code.coding.system",
+        "short": "System",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "System"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das Kodesystem ICD-10-GM",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das Kodesystem ICD-10-GM"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.condition.code.coding:icd10-gm.version",
         "path": "FamilyMemberHistory.condition.code.coding.version",
+        "short": "Version",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Version"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Version des ICD-10-GM Katalogs",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Version des ICD-10-GM Katalogs"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.condition.code.coding:icd10-gm.code",
         "path": "FamilyMemberHistory.condition.code.coding.code",
+        "short": "Code",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der ICD-10-GM Code",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der ICD-10-GM Code"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.condition.code.coding:alpha-id",
         "path": "FamilyMemberHistory.condition.code.coding",
         "sliceName": "alpha-id",
+        "short": "Alpha-ID Kodierung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Alpha-ID Kodierung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Kodierung nach Alpha-ID",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kodierung nach Alpha-ID"
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "type": [
@@ -386,17 +1538,125 @@
       {
         "id": "FamilyMemberHistory.condition.code.coding:alpha-id.system",
         "path": "FamilyMemberHistory.condition.code.coding.system",
+        "short": "System",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "System"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das Kodesystem Alpha-ID",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das Kodesystem Alpha-ID"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.condition.code.coding:alpha-id.code",
         "path": "FamilyMemberHistory.condition.code.coding.code",
+        "short": "Code",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Alpha-ID Code",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Alpha-ID Code"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.condition.code.coding:sct",
         "path": "FamilyMemberHistory.condition.code.coding",
         "sliceName": "sct",
+        "short": "SNOMED CT Kodierung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "SNOMED CT Kodierung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Kodierung nach SNOMED CT",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kodierung nach SNOMED CT"
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "patternCoding": {
@@ -411,12 +1671,84 @@
       {
         "id": "FamilyMemberHistory.condition.code.coding:sct.system",
         "path": "FamilyMemberHistory.condition.code.coding.system",
+        "short": "System",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "System"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das Kodesystem SNOMED CT",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das Kodesystem SNOMED CT"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.condition.code.coding:sct.code",
         "path": "FamilyMemberHistory.condition.code.coding.code",
+        "short": "Code",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der SNOMED CT Code",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der SNOMED CT Code"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true
       },
@@ -424,6 +1756,42 @@
         "id": "FamilyMemberHistory.condition.code.coding:orphanet",
         "path": "FamilyMemberHistory.condition.code.coding",
         "sliceName": "orphanet",
+        "short": "Orphanet Kodierung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Orphanet Kodierung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Kodierung nach Orphanet für seltene Erkrankungen",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kodierung nach Orphanet für seltene Erkrankungen"
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "patternCoding": {
@@ -438,12 +1806,84 @@
       {
         "id": "FamilyMemberHistory.condition.code.coding:orphanet.system",
         "path": "FamilyMemberHistory.condition.code.coding.system",
+        "short": "System",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "System"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das Kodesystem Orphanet",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das Kodesystem Orphanet"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true
       },
       {
         "id": "FamilyMemberHistory.condition.code.coding:orphanet.code",
         "path": "FamilyMemberHistory.condition.code.coding.code",
+        "short": "Code",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Orphanet Code",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Orphanet Code"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true
       }

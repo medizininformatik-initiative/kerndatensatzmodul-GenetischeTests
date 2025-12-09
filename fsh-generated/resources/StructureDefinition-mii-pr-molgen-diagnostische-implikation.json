@@ -36,21 +36,165 @@
         "id": "Observation.extension:workflow-relatedArtifact",
         "path": "Observation.extension",
         "sliceName": "workflow-relatedArtifact",
+        "short": "Verknüpfte Artefakte",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Verknüpfte Artefakte"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Verknüpfte Literatur oder andere Artefakte wie Zitationen",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Verknüpfte Literatur oder andere Artefakte wie Zitationen"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.category",
         "path": "Observation.category",
+        "short": "Kategorie",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kategorie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Klassifizierung der Beobachtungsart",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Klassifizierung der Beobachtungsart"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.code",
         "path": "Observation.code",
+        "short": "Code",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Code zur Identifizierung der diagnostischen Implikation",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code zur Identifizierung der diagnostischen Implikation"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.subject",
         "path": "Observation.subject",
+        "short": "Patient",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Patient"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Patient auf den sich die diagnostische Implikation bezieht",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Patient auf den sich die diagnostische Implikation bezieht"
+                }
+              ]
+            }
+          ]
+        },
         "type": [
           {
             "code": "Reference",
@@ -65,21 +209,165 @@
       {
         "id": "Observation.encounter",
         "path": "Observation.encounter",
+        "short": "Kontakt",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kontakt"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Kontakt in dessen Rahmen die Beobachtung gemacht wurde",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Kontakt in dessen Rahmen die Beobachtung gemacht wurde"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
+        "short": "Zeitpunkt der Beobachtung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Zeitpunkt der Beobachtung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Klinisch relevanter Zeitpunkt der Beobachtung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Klinisch relevanter Zeitpunkt der Beobachtung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.issued",
         "path": "Observation.issued",
+        "short": "Freigabedatum",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Freigabedatum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Datum und Uhrzeit der Freigabe",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum und Uhrzeit der Freigabe"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
+        "short": "Abgeleitet von",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Abgeleitet von"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Referenzen zu anderen Beobachtungen von denen diese abgeleitet ist",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Referenzen zu anderen Beobachtungen von denen diese abgeleitet ist"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
@@ -98,18 +386,126 @@
       {
         "id": "Observation.component",
         "path": "Observation.component",
+        "short": "Komponenten",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Komponenten"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Einzelne Komponenten der diagnostischen Implikation",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Einzelne Komponenten der diagnostischen Implikation"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:conclusion-string",
         "path": "Observation.component",
         "sliceName": "conclusion-string",
+        "short": "Schlussfolgerung - Text",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Schlussfolgerung - Text"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Textuelle Zusammenfassung der diagnostischen Implikation",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Textuelle Zusammenfassung der diagnostischen Implikation"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:evidence-level",
         "path": "Observation.component",
         "sliceName": "evidence-level",
+        "short": "Evidenzlevel",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Evidenzlevel"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das Evidenzlevel für die klinische Signifikanz",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das Evidenzlevel für die klinische Signifikanz"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true,
         "mapping": [
           {
@@ -123,6 +519,42 @@
         "id": "Observation.component:clinical-significance",
         "path": "Observation.component",
         "sliceName": "clinical-significance",
+        "short": "Klinische Signifikanz",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Klinische Signifikanz"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die klinische Signifikanz der Variante wie z.B. pathogen oder benigne",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die klinische Signifikanz der Variante wie z.B. pathogen oder benigne"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true,
         "mapping": [
           {
@@ -136,12 +568,84 @@
         "id": "Observation.component:predicted-phenotype",
         "path": "Observation.component",
         "sliceName": "predicted-phenotype",
+        "short": "Vorhergesagter Phänotyp",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Vorhergesagter Phänotyp"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der mit der Variante assoziierte vorhergesagte Phänotyp oder Erkrankung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der mit der Variante assoziierte vorhergesagte Phänotyp oder Erkrankung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:mode-of-inheritance",
         "path": "Observation.component",
         "sliceName": "mode-of-inheritance",
+        "short": "Vererbungsmodus",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Vererbungsmodus"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Vererbungsmodus der assoziierten Erkrankung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Vererbungsmodus der assoziierten Erkrankung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       }
     ]

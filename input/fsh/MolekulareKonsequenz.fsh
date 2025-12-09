@@ -8,22 +8,88 @@ Description: "Dieses Profil beschreibt den Zusammenhang von bestimmten Varianten
 * ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz"
 
+// MS elements with German translations
 * extension[workflow-relatedArtifact] MS
+* extension[workflow-relatedArtifact] ^short = "Verknüpfte Artefakte"
+* extension[workflow-relatedArtifact] ^definition = "Verknüpfte Literatur oder andere Artefakte wie Zitationen"
+* insert Translation(extension[workflow-relatedArtifact] ^short, de-DE, Verknüpfte Artefakte)
+* insert Translation(extension[workflow-relatedArtifact] ^definition, de-DE, Verknüpfte Literatur oder andere Artefakte wie Zitationen)
+
 * category MS
+* category ^short = "Kategorie"
+* category ^definition = "Klassifizierung der Beobachtungsart"
+* insert Translation(category ^short, de-DE, Kategorie)
+* insert Translation(category ^definition, de-DE, Klassifizierung der Beobachtungsart)
+
 * code MS
+* code ^short = "Code"
+* code ^definition = "Code zur Identifizierung der molekularen Konsequenz"
+* insert Translation(code ^short, de-DE, Code)
+* insert Translation(code ^definition, de-DE, Code zur Identifizierung der molekularen Konsequenz)
+
 * subject MS
 * subject only Reference(Patient or Group)
+* subject ^short = "Patient"
+* subject ^definition = "Der Patient auf den sich die Beobachtung bezieht"
+* insert Translation(subject ^short, de-DE, Patient)
+* insert Translation(subject ^definition, de-DE, Der Patient auf den sich die Beobachtung bezieht)
+
 * effective[x] MS
+* effective[x] ^short = "Zeitpunkt der Beobachtung"
+* effective[x] ^definition = "Klinisch relevanter Zeitpunkt der Beobachtung"
+* insert Translation(effective[x] ^short, de-DE, Zeitpunkt der Beobachtung)
+* insert Translation(effective[x] ^definition, de-DE, Klinisch relevanter Zeitpunkt der Beobachtung)
+
 * issued MS
+* issued ^short = "Freigabedatum"
+* issued ^definition = "Datum und Uhrzeit der Freigabe"
+* insert Translation(issued ^short, de-DE, Freigabedatum)
+* insert Translation(issued ^definition, de-DE, Datum und Uhrzeit der Freigabe)
+
 * encounter MS
+* encounter ^short = "Kontakt"
+* encounter ^definition = "Der Kontakt in dessen Rahmen die Beobachtung gemacht wurde"
+* insert Translation(encounter ^short, de-DE, Kontakt)
+* insert Translation(encounter ^definition, de-DE, Der Kontakt in dessen Rahmen die Beobachtung gemacht wurde)
+
 * derivedFrom MS
+* derivedFrom ^short = "Abgeleitet von"
+* derivedFrom ^definition = "Referenzen zu den Varianten von denen diese Konsequenz abgeleitet ist"
+* insert Translation(derivedFrom ^short, de-DE, Abgeleitet von)
+* insert Translation(derivedFrom ^definition, de-DE, Referenzen zu den Varianten von denen diese Konsequenz abgeleitet ist)
+
 * derivedFrom[variant] only Reference(MII_PR_MolGen_Variante)
+
 * component MS
+* component ^short = "Komponenten"
+* component ^definition = "Einzelne Komponenten der molekularen Konsequenz"
+* insert Translation(component ^short, de-DE, Komponenten)
+* insert Translation(component ^definition, de-DE, Einzelne Komponenten der molekularen Konsequenz)
+
 //* component[predicted-phenotype] MS
 * component[conclusion-string] MS
+* component[conclusion-string] ^short = "Schlussfolgerung - Text"
+* component[conclusion-string] ^definition = "Textuelle Zusammenfassung der molekularen Konsequenz"
+* insert Translation(component[conclusion-string] ^short, de-DE, Schlussfolgerung - Text)
+* insert Translation(component[conclusion-string] ^definition, de-DE, Textuelle Zusammenfassung der molekularen Konsequenz)
+
 * component[evidence-level] MS
+* component[evidence-level] ^short = "Evidenzlevel"
+* component[evidence-level] ^definition = "Das Evidenzlevel für die molekulare Konsequenz"
+* insert Translation(component[evidence-level] ^short, de-DE, Evidenzlevel)
+* insert Translation(component[evidence-level] ^definition, de-DE, Das Evidenzlevel für die molekulare Konsequenz)
+
 * component[clinical-significance] MS
+* component[clinical-significance] ^short = "Klinische Signifikanz"
+* component[clinical-significance] ^definition = "Die klinische Signifikanz der Variante"
+* insert Translation(component[clinical-significance] ^short, de-DE, Klinische Signifikanz)
+* insert Translation(component[clinical-significance] ^definition, de-DE, Die klinische Signifikanz der Variante)
+
 * component[functional-effect] MS
+* component[functional-effect] ^short = "Funktioneller Effekt"
+* component[functional-effect] ^definition = "Der funktionelle Effekt der Variante auf das Genprodukt"
+* insert Translation(component[functional-effect] ^short, de-DE, Funktioneller Effekt)
+* insert Translation(component[functional-effect] ^definition, de-DE, Der funktionelle Effekt der Variante auf das Genprodukt)
 // * component[mode-of-inheritance] MS
 
 /*Mapping: MolGen-MolekulareKonsequenz

@@ -6,27 +6,49 @@ Description: "Genomic Study ist ein Profil, dass die Durchführung von übergeor
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^status = #active
+
+// MS elements with German translations
 * code MS
 * code ^short = "Art der genomischen Untersuchung"
-* code ^definition = "Art der genomischen oder molekulargenetischen Untersuchung, die durchgeführt wurde."
+* code ^definition = "Art der genomischen oder molekulargenetischen Untersuchung die durchgeführt wurde"
+* insert Translation(code ^short, de-DE, Art der genomischen Untersuchung)
+* insert Translation(code ^definition, de-DE, Art der genomischen oder molekulargenetischen Untersuchung die durchgeführt wurde)
+
 * reasonReference MS
 * reasonReference ^short = "Anforderung/Indikation für die genetische Untersuchung"
-* reasonReference ^definition = "Referenz zur ServiceRequest-Ressource, die die Anforderung für diese genetische Studie darstellt."
+* reasonReference ^definition = "Referenz zur ServiceRequest-Ressource die die Anforderung für diese genetische Studie darstellt"
+* insert Translation(reasonReference ^short, de-DE, Anforderung/Indikation für die genetische Untersuchung)
+* insert Translation(reasonReference ^definition, de-DE, Referenz zur ServiceRequest-Ressource die die Anforderung für diese genetische Studie darstellt)
+
 * performed[x] MS
 * performed[x] ^short = "Zeitpunkt oder Zeitraum der Durchführung"
-* performed[x] ^definition = "Zeitpunkt oder Zeitraum, in dem die genetische Studie durchgeführt wurde."
+* performed[x] ^definition = "Zeitpunkt oder Zeitraum in dem die genetische Studie durchgeführt wurde"
+* insert Translation(performed[x] ^short, de-DE, Zeitpunkt oder Zeitraum der Durchführung)
+* insert Translation(performed[x] ^definition, de-DE, Zeitpunkt oder Zeitraum in dem die genetische Studie durchgeführt wurde)
+
 * subject MS
 * subject ^short = "Patient/Proband der Untersuchung"
-* subject ^definition = "Referenz zum Patienten oder Probanden, für den die genetische Studie durchgeführt wurde."
+* subject ^definition = "Referenz zum Patienten oder Probanden für den die genetische Studie durchgeführt wurde"
+* insert Translation(subject ^short, de-DE, Patient/Proband der Untersuchung)
+* insert Translation(subject ^definition, de-DE, Referenz zum Patienten oder Probanden für den die genetische Studie durchgeführt wurde)
+
 * encounter MS
 * encounter ^short = "Fallbezug der Untersuchung"
-* encounter ^definition = "Referenz zum Behandlungsfall, in dessen Kontext die genetische Studie durchgeführt wurde."
+* encounter ^definition = "Referenz zum Behandlungsfall in dessen Kontext die genetische Studie durchgeführt wurde"
+* insert Translation(encounter ^short, de-DE, Fallbezug der Untersuchung)
+* insert Translation(encounter ^definition, de-DE, Referenz zum Behandlungsfall in dessen Kontext die genetische Studie durchgeführt wurde)
+
 * status MS
 * status ^short = "Status der genetischen Studie"
-* status ^definition = "Aktueller Status der genetischen Studie (z.B. registered, completed, cancelled)."
+* status ^definition = "Aktueller Status der genetischen Studie wie z.B. registered oder completed oder cancelled"
+* insert Translation(status ^short, de-DE, Status der genetischen Studie)
+* insert Translation(status ^definition, de-DE, Aktueller Status der genetischen Studie wie z.B. registered oder completed oder cancelled)
+
 * extension[genomic-study-analysis] MS
 * extension[genomic-study-analysis] ^short = "Durchgeführte Analysen"
-* extension[genomic-study-analysis] ^definition = "Referenzen zu den einzelnen GenomicStudyAnalysis-Ressourcen, die die spezifischen Analysen und Assays dieser Studie beschreiben."
+* extension[genomic-study-analysis] ^definition = "Referenzen zu den einzelnen GenomicStudyAnalysis-Ressourcen die die spezifischen Analysen und Assays dieser Studie beschreiben"
+* insert Translation(extension[genomic-study-analysis] ^short, de-DE, Durchgeführte Analysen)
+* insert Translation(extension[genomic-study-analysis] ^definition, de-DE, Referenzen zu den einzelnen GenomicStudyAnalysis-Ressourcen die die spezifischen Analysen und Assays dieser Studie beschreiben)
 
 //* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
 
@@ -167,33 +189,61 @@ Description: "Genomic Study Analysis ist ein Profil, das die Durchführung von k
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^status = #active
+
+// MS elements with German translations
 * extension[specimen] MS
 * extension[specimen] ^short = "Untersuchte Probe"
-* extension[specimen] ^definition = "Referenz zur Specimen-Ressource, die die für diese Analyse verwendete Probe beschreibt."
+* extension[specimen] ^definition = "Referenz zur Specimen-Ressource die die für diese Analyse verwendete Probe beschreibt"
+* insert Translation(extension[specimen] ^short, de-DE, Untersuchte Probe)
+* insert Translation(extension[specimen] ^definition, de-DE, Referenz zur Specimen-Ressource die die für diese Analyse verwendete Probe beschreibt)
+
 * extension[device] MS
 * extension[device] ^short = "Verwendetes Analysegerät"
-* extension[device] ^definition = "Komplexe Extension mit Art des Gerätes und Referenz zum Device (z.B. Sequenziergerät, Library Preparation Kit, aber auch Software wie bioinformatische Pipelines), das für diese Analyse verwendet wurde."
+* extension[device] ^definition = "Komplexe Extension mit Art des Gerätes und Referenz zum Device wie z.B. Sequenziergerät oder Library Preparation Kit oder bioinformatische Pipelines das für diese Analyse verwendet wurde"
+* insert Translation(extension[device] ^short, de-DE, Verwendetes Analysegerät)
+* insert Translation(extension[device] ^definition, de-DE, Komplexe Extension mit Art des Gerätes und Referenz zum Device wie z.B. Sequenziergerät oder Library Preparation Kit oder bioinformatische Pipelines das für diese Analyse verwendet wurde)
+
 * extension[method-type] MS
 * extension[method-type] ^short = "Analysemethode"
-* extension[method-type] ^definition = "Art der durchgeführten Analysemethode (z.B. Sequenzierung, PCR, Array-CGH)."
+* extension[method-type] ^definition = "Art der durchgeführten Analysemethode wie z.B. Sequenzierung oder PCR oder Array-CGH"
+* insert Translation(extension[method-type] ^short, de-DE, Analysemethode)
+* insert Translation(extension[method-type] ^definition, de-DE, Art der durchgeführten Analysemethode wie z.B. Sequenzierung oder PCR oder Array-CGH)
+
 * extension[change-type] MS
 * extension[change-type] ^short = "Untersuchte Variationstypen"
-* extension[change-type] ^definition = "Typen genetischer Veränderungen, die mit dieser Analyse untersucht wurden (z.B. SNV, CNV, Strukturvarianten)."
+* extension[change-type] ^definition = "Typen genetischer Veränderungen die mit dieser Analyse untersucht wurden wie z.B. SNV oder CNV oder Strukturvarianten"
+* insert Translation(extension[change-type] ^short, de-DE, Untersuchte Variationstypen)
+* insert Translation(extension[change-type] ^definition, de-DE, Typen genetischer Veränderungen die mit dieser Analyse untersucht wurden wie z.B. SNV oder CNV oder Strukturvarianten)
+
 * extension[regions] MS
 * extension[regions] ^short = "Untersuchte genomische Regionen"
-* extension[regions] ^definition = "Komplexe Extension zur Spezifikation der genomischen Regionen (v.a. Gene, aber theroretischerweiterbar durch z.B Exonangaben)), die in dieser Analyse untersucht wurden. Angabe der untersuchten Regionen, sowie optional Angabe der callable/non-callable Regions"
+* extension[regions] ^definition = "Komplexe Extension zur Spezifikation der genomischen Regionen - v.a. Gene aber theoretisch erweiterbar durch z.B. Exonangaben - die in dieser Analyse untersucht wurden. Angabe der untersuchten Regionen sowie optional Angabe der callable/non-callable Regions"
+* insert Translation(extension[regions] ^short, de-DE, Untersuchte genomische Regionen)
+* insert Translation(extension[regions] ^definition, de-DE, Komplexe Extension zur Spezifikation der genomischen Regionen - v.a. Gene aber theoretisch erweiterbar durch z.B. Exonangaben - die in dieser Analyse untersucht wurden. Angabe der untersuchten Regionen sowie optional Angabe der callable/non-callable Regions)
+
 * extension[genome-build] MS
 * extension[genome-build] ^short = "Referenzgenom-Version"
-* extension[genome-build] ^definition = "Version des verwendeten Referenzgenoms (z.B. GRCh38, hg19)."
+* extension[genome-build] ^definition = "Version des verwendeten Referenzgenoms wie z.B. GRCh38 oder hg19"
+* insert Translation(extension[genome-build] ^short, de-DE, Referenzgenom-Version)
+* insert Translation(extension[genome-build] ^definition, de-DE, Version des verwendeten Referenzgenoms wie z.B. GRCh38 oder hg19)
+
 * extension[focus] MS
 * extension[focus] ^short = "Fokus der Analyse"
-* extension[focus] ^definition = "Spezifischer Fokus oder Ziel dieser Analyse (z.B. Referenz auf Krebserkrankung / erbliche Erkrankung)."
+* extension[focus] ^definition = "Spezifischer Fokus oder Ziel dieser Analyse wie z.B. Referenz auf Krebserkrankung oder erbliche Erkrankung"
+* insert Translation(extension[focus] ^short, de-DE, Fokus der Analyse)
+* insert Translation(extension[focus] ^definition, de-DE, Spezifischer Fokus oder Ziel dieser Analyse wie z.B. Referenz auf Krebserkrankung oder erbliche Erkrankung)
+
 * extension[title] MS
 * extension[title] ^short = "Bezeichnung der Analyse"
-* extension[title] ^definition = "Kurze, prägnante Bezeichnung oder Titel dieser spezifischen Analyse."
+* extension[title] ^definition = "Kurze prägnante Bezeichnung oder Titel dieser spezifischen Analyse"
+* insert Translation(extension[title] ^short, de-DE, Bezeichnung der Analyse)
+* insert Translation(extension[title] ^definition, de-DE, Kurze prägnante Bezeichnung oder Titel dieser spezifischen Analyse)
+
 * extension[metrics] MS
 * extension[metrics] ^short = "Qualitätsmetriken"
-* extension[metrics] ^definition = "Qualitätsmetriken der Analyse (z.B. Coverage, Depth, Call-Rate)."
+* extension[metrics] ^definition = "Qualitätsmetriken der Analyse wie z.B. Coverage oder Depth oder Call-Rate"
+* insert Translation(extension[metrics] ^short, de-DE, Qualitätsmetriken)
+* insert Translation(extension[metrics] ^definition, de-DE, Qualitätsmetriken der Analyse wie z.B. Coverage oder Depth oder Call-Rate)
 
 
 // Fusion

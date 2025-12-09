@@ -46,6 +46,42 @@
       {
         "id": "ServiceRequest.basedOn",
         "path": "ServiceRequest.basedOn",
+        "short": "Basiert auf",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Basiert auf"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Referenz zu vorherigen Anforderungen oder Plänen auf denen diese basiert",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Referenz zu vorherigen Anforderungen oder Plänen auf denen diese basiert"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true,
         "mapping": [
           {
@@ -63,6 +99,42 @@
       {
         "id": "ServiceRequest.code",
         "path": "ServiceRequest.code",
+        "short": "Code",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Code der angeforderten Untersuchung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code der angeforderten Untersuchung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true,
         "mapping": [
           {
@@ -94,6 +166,42 @@
       {
         "id": "ServiceRequest.subject",
         "path": "ServiceRequest.subject",
+        "short": "Patient",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Patient"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Patient für den der Test angefordert wird",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Patient für den der Test angefordert wird"
+                }
+              ]
+            }
+          ]
+        },
         "type": [
           {
             "code": "Reference",
@@ -108,11 +216,83 @@
       {
         "id": "ServiceRequest.encounter",
         "path": "ServiceRequest.encounter",
+        "short": "Kontakt",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kontakt"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Kontakt in dessen Rahmen die Anforderung gestellt wurde",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Kontakt in dessen Rahmen die Anforderung gestellt wurde"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "ServiceRequest.authoredOn",
         "path": "ServiceRequest.authoredOn",
+        "short": "Anforderungsdatum",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Anforderungsdatum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Datum der Anforderung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum der Anforderung"
+                }
+              ]
+            }
+          ]
+        },
         "alias": [
           "Datum der Anforderung"
         ],
@@ -128,6 +308,42 @@
       {
         "id": "ServiceRequest.requester",
         "path": "ServiceRequest.requester",
+        "short": "Anforderer",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Anforderer"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Person oder Organisation die den Test anfordert",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Person oder Organisation die den Test anfordert"
+                }
+              ]
+            }
+          ]
+        },
         "alias": [
           "Anforderer",
           "orderer"
@@ -154,6 +370,42 @@
       {
         "id": "ServiceRequest.reasonCode",
         "path": "ServiceRequest.reasonCode",
+        "short": "Indikation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Indikation"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Indikation oder der Grund für die Testanforderung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Indikation oder der Grund für die Testanforderung"
+                }
+              ]
+            }
+          ]
+        },
         "alias": [
           "Indikation"
         ],
@@ -169,6 +421,42 @@
       {
         "id": "ServiceRequest.reasonReference",
         "path": "ServiceRequest.reasonReference",
+        "short": "Referenz zur Indikation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Referenz zur Indikation"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Referenz zu Diagnosen oder Beobachtungen die die Anforderung begründen",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Referenz zu Diagnosen oder Beobachtungen die die Anforderung begründen"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true,
         "mapping": [
           {
@@ -194,6 +482,42 @@
             }
           ],
           "rules": "open"
+        },
+        "short": "Unterstützende Informationen",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Unterstützende Informationen"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Zusätzliche Informationen die die Anforderung unterstützen",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Zusätzliche Informationen die die Anforderung unterstützen"
+                }
+              ]
+            }
+          ]
         },
         "mustSupport": true,
         "mapping": [
@@ -237,6 +561,42 @@
       {
         "id": "ServiceRequest.note",
         "path": "ServiceRequest.note",
+        "short": "Anmerkung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Anmerkung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Zusätzliche Anmerkungen oder Anforderungstext",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Zusätzliche Anmerkungen oder Anforderungstext"
+                }
+              ]
+            }
+          ]
+        },
         "alias": [
           "Anforderungstext"
         ],

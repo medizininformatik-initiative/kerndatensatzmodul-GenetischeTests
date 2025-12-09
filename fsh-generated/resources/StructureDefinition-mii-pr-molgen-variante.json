@@ -35,21 +35,165 @@
       {
         "id": "Observation.status",
         "path": "Observation.status",
+        "short": "Status",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Status der Beobachtung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status der Beobachtung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.category",
         "path": "Observation.category",
+        "short": "Kategorie",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kategorie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Klassifizierung der Beobachtungsart",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Klassifizierung der Beobachtungsart"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.code",
         "path": "Observation.code",
+        "short": "Code",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Code zur Identifizierung der Varianten-Beobachtung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code zur Identifizierung der Varianten-Beobachtung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.subject",
         "path": "Observation.subject",
+        "short": "Patient oder Proband",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Patient oder Proband"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Patient oder die Gruppe auf die sich die Variante bezieht",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Patient oder die Gruppe auf die sich die Variante bezieht"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "type": [
           {
@@ -65,43 +209,331 @@
       {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
+        "short": "Zeitpunkt der Beobachtung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Zeitpunkt der Beobachtung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Klinisch relevanter Zeitpunkt oder Zeitraum der Beobachtung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Klinisch relevanter Zeitpunkt oder Zeitraum der Beobachtung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.issued",
         "path": "Observation.issued",
+        "short": "Freigabedatum",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Freigabedatum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Datum und Uhrzeit der Freigabe der Beobachtung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Datum und Uhrzeit der Freigabe der Beobachtung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
+        "short": "Ergebniswert",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Ergebniswert"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das Ergebnis der Variantenanalyse - vorhanden oder abwesend",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das Ergebnis der Variantenanalyse - vorhanden oder abwesend"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.method",
         "path": "Observation.method",
+        "short": "Methode",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Methode"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die verwendete Untersuchungsmethode",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die verwendete Untersuchungsmethode"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.specimen",
         "path": "Observation.specimen",
+        "short": "Probe",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Probe"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die untersuchte Probe",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die untersuchte Probe"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.device",
         "path": "Observation.device",
+        "short": "Gerät",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Gerät"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das verwendete Analysegerät",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das verwendete Analysegerät"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:conclusion-string",
         "path": "Observation.component",
         "sliceName": "conclusion-string",
+        "short": "Schlussfolgerung - Text",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Schlussfolgerung - Text"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Textuelle Zusammenfassung oder Schlussfolgerung zur Variante",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Textuelle Zusammenfassung oder Schlussfolgerung zur Variante"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:gene-studied",
         "path": "Observation.component",
         "sliceName": "gene-studied",
+        "short": "Untersuchtes Gen",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Untersuchtes Gen"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das untersuchte Gen identifiziert durch HGNC-ID",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das untersuchte Gen identifiziert durch HGNC-ID"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true,
         "mapping": [
           {
@@ -115,140 +547,966 @@
         "id": "Observation.component:cytogenetic-location",
         "path": "Observation.component",
         "sliceName": "cytogenetic-location",
+        "short": "Zytogenetische Lokalisation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Zytogenetische Lokalisation"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Chromosomale Position der Variante in Bandennomenklatur",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Chromosomale Position der Variante in Bandennomenklatur"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:reference-sequence-assembly",
         "path": "Observation.component",
         "sliceName": "reference-sequence-assembly",
+        "short": "Referenzgenom-Assembly",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Referenzgenom-Assembly"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die verwendete Referenzgenom-Version wie z.B. GRCh37 oder GRCh38",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die verwendete Referenzgenom-Version wie z.B. GRCh37 oder GRCh38"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:chromosome-identifier",
         "path": "Observation.component",
         "sliceName": "chromosome-identifier",
+        "short": "Chromosom",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Chromosom"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das betroffene Chromosom",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das betroffene Chromosom"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:representative-coding-hgvs",
         "path": "Observation.component",
         "sliceName": "representative-coding-hgvs",
+        "short": "DNA-Änderung c.HGVS",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "DNA-Änderung c.HGVS"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die cDNA-Änderung in HGVS-Nomenklatur auf Transkriptebene",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die cDNA-Änderung in HGVS-Nomenklatur auf Transkriptebene"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:genomic-hgvs",
         "path": "Observation.component",
         "sliceName": "genomic-hgvs",
+        "short": "Genomische DNA-Änderung g.HGVS",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Genomische DNA-Änderung g.HGVS"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die genomische DNA-Änderung in HGVS-Nomenklatur",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die genomische DNA-Änderung in HGVS-Nomenklatur"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:genomic-ref-seq",
         "path": "Observation.component",
         "sliceName": "genomic-ref-seq",
+        "short": "Genomische Referenzsequenz",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Genomische Referenzsequenz"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die genomische Referenzsequenz-ID wie z.B. NC_000007.14",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die genomische Referenzsequenz-ID wie z.B. NC_000007.14"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:representative-transcript-ref-seq",
         "path": "Observation.component",
         "sliceName": "representative-transcript-ref-seq",
+        "short": "Transkript-Referenzsequenz",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Transkript-Referenzsequenz"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Transkript-Referenzsequenz-ID wie z.B. NM_004333.4",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Transkript-Referenzsequenz-ID wie z.B. NM_004333.4"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:exact-start-end",
         "path": "Observation.component",
         "sliceName": "exact-start-end",
+        "short": "Exakte Start-End-Position",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Exakte Start-End-Position"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die exakten genomischen Koordinaten der Variante - Start und Ende",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die exakten genomischen Koordinaten der Variante - Start und Ende"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:inner-start-end",
         "path": "Observation.component",
         "sliceName": "inner-start-end",
+        "short": "Innere Start-End-Position",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Innere Start-End-Position"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der innere Bereich bei strukturellen Varianten",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der innere Bereich bei strukturellen Varianten"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:outer-start-end",
         "path": "Observation.component",
         "sliceName": "outer-start-end",
+        "short": "Äußere Start-End-Position",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Äußere Start-End-Position"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der äußere Bereich bei strukturellen Varianten",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der äußere Bereich bei strukturellen Varianten"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:ref-allele",
         "path": "Observation.component",
         "sliceName": "ref-allele",
+        "short": "Referenz-Allel",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Referenz-Allel"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Nukleotidsequenz des Referenz-Allels",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Nukleotidsequenz des Referenz-Allels"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:alt-allele",
         "path": "Observation.component",
         "sliceName": "alt-allele",
+        "short": "Alternatives Allel",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Alternatives Allel"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Nukleotidsequenz des alternativen - mutierten - Allels",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Nukleotidsequenz des alternativen - mutierten - Allels"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:coding-change-type",
         "path": "Observation.component",
         "sliceName": "coding-change-type",
+        "short": "DNA-Änderungstyp",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "DNA-Änderungstyp"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Typ der DNA-Änderung wie z.B. Substitution oder Deletion",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Typ der DNA-Änderung wie z.B. Substitution oder Deletion"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:genomic-source-class",
         "path": "Observation.component",
         "sliceName": "genomic-source-class",
+        "short": "Genomische Herkunftsklasse",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Genomische Herkunftsklasse"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Herkunft der Variante wie z.B. somatisch oder Keimbahn",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Herkunft der Variante wie z.B. somatisch oder Keimbahn"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:sample-allelic-frequency",
         "path": "Observation.component",
         "sliceName": "sample-allelic-frequency",
+        "short": "Allelfrequenz in der Probe",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Allelfrequenz in der Probe"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Häufigkeit des varianten Allels in der untersuchten Probe",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Häufigkeit des varianten Allels in der untersuchten Probe"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:allelic-read-depth",
         "path": "Observation.component",
         "sliceName": "allelic-read-depth",
+        "short": "Allelische Lesetiefe",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Allelische Lesetiefe"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Anzahl der Reads die das Allel unterstützen",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Anzahl der Reads die das Allel unterstützen"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:allelic-state",
         "path": "Observation.component",
         "sliceName": "allelic-state",
+        "short": "Allelstatus",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Allelstatus"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Allelstatus wie z.B. heterozygot oder homozygot",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Allelstatus wie z.B. heterozygot oder homozygot"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:variant-inheritance",
         "path": "Observation.component",
         "sliceName": "variant-inheritance",
+        "short": "Varianten-Vererbung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Varianten-Vererbung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Vererbungsart der Variante wie z.B. maternal oder paternal",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Vererbungsart der Variante wie z.B. maternal oder paternal"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:variation-code",
         "path": "Observation.component",
         "sliceName": "variation-code",
+        "short": "Varianten-Code",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Varianten-Code"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Eindeutiger Identifikator der Variante aus externen Datenbanken wie z.B. ClinVar oder dbSNP",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Eindeutiger Identifikator der Variante aus externen Datenbanken wie z.B. ClinVar oder dbSNP"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:representative-protein-hgvs",
         "path": "Observation.component",
         "sliceName": "representative-protein-hgvs",
+        "short": "Aminosäure-Änderung p.HGVS",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Aminosäure-Änderung p.HGVS"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Aminosäure-Änderung in HGVS-Nomenklatur auf Proteinebene",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Aminosäure-Änderung in HGVS-Nomenklatur auf Proteinebene"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:copy-number",
         "path": "Observation.component",
         "sliceName": "copy-number",
+        "short": "Kopienzahl",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kopienzahl"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Anzahl der Kopien eines genomischen Abschnitts",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Anzahl der Kopien eines genomischen Abschnitts"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:variant-confidence-status",
         "path": "Observation.component",
         "sliceName": "variant-confidence-status",
+        "short": "Konfidenzstatus der Variante",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Konfidenzstatus der Variante"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Vertrauensstatus der Variantendetektion",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Vertrauensstatus der Variantendetektion"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.component:dna-region",
         "path": "Observation.component",
         "sliceName": "dna-region",
-        "short": "DNA region name [Identifier]",
-        "definition": "A human readable name for the region of interest. Typically Exon #, Intron # or other.",
+        "short": "DNA-Regionsname",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "DNA-Regionsname"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Ein lesbarer Name für die untersuchte Region. Typischerweise Exon # oder Intron # oder andere.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Ein lesbarer Name für die untersuchte Region. Typischerweise Exon # oder Intron # oder andere."
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "*",
         "mustSupport": true
@@ -280,7 +1538,42 @@
         "id": "Observation.component:gene-fusion",
         "path": "Observation.component",
         "sliceName": "gene-fusion",
-        "short": "Gene fusion transcript details in Blood or Tissue by Molecular genetics method Narrative",
+        "short": "Genfusion",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Genfusion"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Details zur Genfusion in Blut oder Gewebe mittels molekulargenetischer Methode",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Details zur Genfusion in Blut oder Gewebe mittels molekulargenetischer Methode"
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "mustSupport": true
@@ -300,7 +1593,24 @@
       {
         "id": "Observation.component:gene-fusion.value[x]",
         "path": "Observation.component.value[x]",
-        "short": "HGNC recommends for products of gene translocations or fusions (format GENESYMBOL1::GENESYMBOL2) and readthrough transcripts (format GENESYMBOL1-GENESYMBOL2)",
+        "short": "HGNC-Format für Genfusionen GENESYMBOL1::GENESYMBOL2 und Readthrough-Transkripte GENESYMBOL1-GENESYMBOL2",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "HGNC-Format für Genfusionen GENESYMBOL1::GENESYMBOL2 und Readthrough-Transkripte GENESYMBOL1-GENESYMBOL2"
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "type": [
           {
@@ -316,7 +1626,42 @@
         "id": "Observation.component:detection-limit",
         "path": "Observation.component",
         "sliceName": "detection-limit",
-        "short": "Laboratory device Detection limit",
+        "short": "Nachweisgrenze",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Nachweisgrenze"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Nachweisgrenze des Laborgeräts",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Nachweisgrenze des Laborgeräts"
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "mustSupport": true
@@ -336,7 +1681,24 @@
       {
         "id": "Observation.component:detection-limit.value[x]",
         "path": "Observation.component.value[x]",
-        "short": "Usually reported as percentage.",
+        "short": "Wird üblicherweise als Prozentsatz angegeben",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Wird üblicherweise als Prozentsatz angegeben"
+                }
+              ]
+            }
+          ]
+        },
         "type": [
           {
             "code": "Quantity"

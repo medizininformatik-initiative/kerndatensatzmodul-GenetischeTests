@@ -35,7 +35,65 @@
       {
         "id": "Observation.status",
         "path": "Observation.status",
+        "short": "Status",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Status der Beobachtung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status der Beobachtung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "definition": "Code zur Identifizierung der Mikrosatelliteninstabilität",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code zur Identifizierung der Mikrosatelliteninstabilität"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "id": "Observation.subject",
@@ -54,6 +112,42 @@
           ],
           "ordered": false,
           "rules": "open"
+        },
+        "short": "Ergebniswert",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Ergebniswert"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das Ergebnis der MSI-Bestimmung wie z.B. stabil oder instabil",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das Ergebnis der MSI-Bestimmung wie z.B. stabil oder instabil"
+                }
+              ]
+            }
+          ]
         },
         "mustSupport": true
       },

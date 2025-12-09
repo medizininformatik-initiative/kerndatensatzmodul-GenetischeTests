@@ -29,46 +29,370 @@
       {
         "id": "RiskAssessment.identifier",
         "path": "RiskAssessment.identifier",
+        "short": "Identifikator",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Identifikator"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Eindeutiger Identifikator für die Risikobewertung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Eindeutiger Identifikator für die Risikobewertung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "RiskAssessment.status",
         "path": "RiskAssessment.status",
+        "short": "Status",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Status der Risikobewertung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status der Risikobewertung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "RiskAssessment.code",
         "path": "RiskAssessment.code",
+        "short": "Code",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Art der Risikobewertung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Art der Risikobewertung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "RiskAssessment.subject",
         "path": "RiskAssessment.subject",
+        "short": "Patient",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Patient"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Patient für den die Risikobewertung erstellt wurde",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Patient für den die Risikobewertung erstellt wurde"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "RiskAssessment.encounter",
         "path": "RiskAssessment.encounter",
+        "short": "Kontakt",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kontakt"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Kontakt in dessen Rahmen die Risikobewertung erstellt wurde",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Kontakt in dessen Rahmen die Risikobewertung erstellt wurde"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "RiskAssessment.occurrence[x]",
         "path": "RiskAssessment.occurrence[x]",
+        "short": "Zeitpunkt",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Zeitpunkt"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Zeitpunkt oder Zeitraum der Risikobewertung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Zeitpunkt oder Zeitraum der Risikobewertung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "RiskAssessment.condition",
         "path": "RiskAssessment.condition",
+        "short": "Erkrankung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Erkrankung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Erkrankung für die das Risiko bewertet wird",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Erkrankung für die das Risiko bewertet wird"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "RiskAssessment.basis",
         "path": "RiskAssessment.basis",
+        "short": "Grundlage",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Grundlage"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die Grundlagen auf denen die Risikobewertung basiert wie z.B. genetische Varianten",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die Grundlagen auf denen die Risikobewertung basiert wie z.B. genetische Varianten"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "RiskAssessment.prediction",
         "path": "RiskAssessment.prediction",
+        "short": "Vorhersage",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Vorhersage"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die vorhergesagten Risiken",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die vorhergesagten Risiken"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
@@ -89,6 +413,42 @@
         "id": "RiskAssessment.prediction.extension:whenCodeableConcept",
         "path": "RiskAssessment.prediction.extension",
         "sliceName": "whenCodeableConcept",
+        "short": "Einflussfaktor",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Einflussfaktor"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Zusätzlicher Einflussfaktor für die Risikoberechnung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Zusätzlicher Einflussfaktor für die Risikoberechnung"
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "type": [
@@ -104,26 +464,206 @@
       {
         "id": "RiskAssessment.prediction.outcome",
         "path": "RiskAssessment.prediction.outcome",
+        "short": "Ergebnis",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Ergebnis"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das vorhergesagte Ergebnis oder die Erkrankung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das vorhergesagte Ergebnis oder die Erkrankung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "RiskAssessment.prediction.probability[x]",
         "path": "RiskAssessment.prediction.probability[x]",
+        "short": "Wahrscheinlichkeit",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Wahrscheinlichkeit"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die quantitative Wahrscheinlichkeit des Risikos",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die quantitative Wahrscheinlichkeit des Risikos"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "RiskAssessment.prediction.qualitativeRisk",
         "path": "RiskAssessment.prediction.qualitativeRisk",
+        "short": "Qualitatives Risiko",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Qualitatives Risiko"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Die qualitative Einschätzung des Risikos wie z.B. hoch oder niedrig",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Die qualitative Einschätzung des Risikos wie z.B. hoch oder niedrig"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "RiskAssessment.prediction.relativeRisk",
         "path": "RiskAssessment.prediction.relativeRisk",
+        "short": "Relatives Risiko",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Relatives Risiko"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Das relative Risiko im Vergleich zur Normalbevölkerung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Das relative Risiko im Vergleich zur Normalbevölkerung"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "RiskAssessment.prediction.when[x]",
         "path": "RiskAssessment.prediction.when[x]",
+        "short": "Zeitrahmen",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Zeitrahmen"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Der Zeitrahmen für den die Vorhersage gilt",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Der Zeitrahmen für den die Vorhersage gilt"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       }
     ]

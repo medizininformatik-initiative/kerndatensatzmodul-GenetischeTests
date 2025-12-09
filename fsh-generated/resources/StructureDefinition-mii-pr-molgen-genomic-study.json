@@ -37,49 +37,287 @@
         "path": "Procedure.extension",
         "sliceName": "genomic-study-analysis",
         "short": "Durchgeführte Analysen",
-        "definition": "Referenzen zu den einzelnen GenomicStudyAnalysis-Ressourcen, die die spezifischen Analysen und Assays dieser Studie beschreiben.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Durchgeführte Analysen"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Referenzen zu den einzelnen GenomicStudyAnalysis-Ressourcen die die spezifischen Analysen und Assays dieser Studie beschreiben",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Referenzen zu den einzelnen GenomicStudyAnalysis-Ressourcen die die spezifischen Analysen und Assays dieser Studie beschreiben"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Procedure.status",
         "path": "Procedure.status",
         "short": "Status der genetischen Studie",
-        "definition": "Aktueller Status der genetischen Studie (z.B. registered, completed, cancelled).",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status der genetischen Studie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Aktueller Status der genetischen Studie wie z.B. registered oder completed oder cancelled",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Aktueller Status der genetischen Studie wie z.B. registered oder completed oder cancelled"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Procedure.code",
         "path": "Procedure.code",
         "short": "Art der genomischen Untersuchung",
-        "definition": "Art der genomischen oder molekulargenetischen Untersuchung, die durchgeführt wurde.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Art der genomischen Untersuchung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Art der genomischen oder molekulargenetischen Untersuchung die durchgeführt wurde",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Art der genomischen oder molekulargenetischen Untersuchung die durchgeführt wurde"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Procedure.subject",
         "path": "Procedure.subject",
         "short": "Patient/Proband der Untersuchung",
-        "definition": "Referenz zum Patienten oder Probanden, für den die genetische Studie durchgeführt wurde.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Patient/Proband der Untersuchung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Referenz zum Patienten oder Probanden für den die genetische Studie durchgeführt wurde",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Referenz zum Patienten oder Probanden für den die genetische Studie durchgeführt wurde"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Procedure.encounter",
         "path": "Procedure.encounter",
         "short": "Fallbezug der Untersuchung",
-        "definition": "Referenz zum Behandlungsfall, in dessen Kontext die genetische Studie durchgeführt wurde.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Fallbezug der Untersuchung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Referenz zum Behandlungsfall in dessen Kontext die genetische Studie durchgeführt wurde",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Referenz zum Behandlungsfall in dessen Kontext die genetische Studie durchgeführt wurde"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Procedure.performed[x]",
         "path": "Procedure.performed[x]",
         "short": "Zeitpunkt oder Zeitraum der Durchführung",
-        "definition": "Zeitpunkt oder Zeitraum, in dem die genetische Studie durchgeführt wurde.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Zeitpunkt oder Zeitraum der Durchführung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Zeitpunkt oder Zeitraum in dem die genetische Studie durchgeführt wurde",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Zeitpunkt oder Zeitraum in dem die genetische Studie durchgeführt wurde"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Procedure.reasonReference",
         "path": "Procedure.reasonReference",
         "short": "Anforderung/Indikation für die genetische Untersuchung",
-        "definition": "Referenz zur ServiceRequest-Ressource, die die Anforderung für diese genetische Studie darstellt.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Anforderung/Indikation für die genetische Untersuchung"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Referenz zur ServiceRequest-Ressource die die Anforderung für diese genetische Studie darstellt",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Referenz zur ServiceRequest-Ressource die die Anforderung für diese genetische Studie darstellt"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       }
     ]
