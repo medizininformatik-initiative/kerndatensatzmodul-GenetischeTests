@@ -1,20 +1,20 @@
 # Release Finalization
 
-Help finalize the release after PR has been merged (Phase 5 of MII Module Release Workflow).
+Help finalize the release after PR has been merged (Phase 5-6 of MII Module Release Workflow).
 
 ## Your Task
 
-Execute Phase 5: Merge and Tag Release
+Execute Phase 5-6: Tag Release and Attach Package
 
 ### Prerequisites Check
 1. Verify PR has been merged to main branch
 2. Ensure all CI checks passed
-3. Confirm you're ready to create the release tag
+3. Confirm FHIR package has been built locally (`.tgz` file exists)
 
 ### Steps
 
 1. **Switch to main branch and pull latest**
-   ```
+   ```bash
    git checkout main
    git pull origin main
    ```
@@ -24,27 +24,62 @@ Execute Phase 5: Merge and Tag Release
    - Confirm with user: "Ready to tag release v{VERSION}?"
 
 3. **Create and push the tag**
-   ```
-   git tag -a v{VERSION} -m "Release v{VERSION}"
+   ```bash
+   git tag v{VERSION}
    git push origin v{VERSION}
    ```
 
-4. **Inform about next steps**
-   - GitHub Actions will automatically create a draft release
-   - User needs to:
-     - Phase 6: Publish package on Simplifier and download .tgz
-     - Phase 7: Edit GitHub draft release, upload .tgz, and publish
-     - Phase 8: Export IG and upload to TMF SharePoint
+4. **Wait for GitHub Actions**
+   - CI validation runs on the tag
+   - RELEASE job creates draft release automatically
+   - Check status: `gh run list --branch v{VERSION}`
+
+5. **Attach FHIR package to release**
+   ```bash
+   gh release upload v{VERSION} de.medizininformatikinitiative.kerndatensatz.molgen-{VERSION}.tgz
+   ```
+
+   Or if the package is in `.bake/`:
+   ```bash
+   gh release upload v{VERSION} .bake/de.medizininformatikinitiative.kerndatensatz.molgen-{VERSION}.tgz
+   ```
+
+6. **Publish the release**
+   - Edit release notes if needed: `gh release edit v{VERSION} --draft=false`
+   - Or use GitHub UI to review and publish
+   - Publishing triggers Zulip notification automatically
 
 ### Safety
 
 - Only proceed if user explicitly confirms
 - Show the tag that will be created before pushing
-- Remind about the automatic GitHub release creation
+- Verify package file exists before attempting upload
 
 ### Post-Tag Actions
 
-After successfully creating the tag:
-1. Switch back to dev branch: `git checkout dev`
-2. Optionally clean up the release branch if user wants
-3. Display the GitHub release URL: `https://github.com/medizininformatik-initiative/kerndatensatzmodul-GenetischeTests/releases`
+After successfully publishing the release:
+1. Display the GitHub release URL:
+   ```bash
+   gh release view v{VERSION} --web
+   ```
+2. Remind about Simplifier publication (Phase 7)
+3. Remind about TMF SharePoint IG export (Phase 8)
+
+### Quick Commands Reference
+
+```bash
+# Check release status
+gh release list
+
+# View draft release
+gh release view v{VERSION}
+
+# Upload package to release
+gh release upload v{VERSION} *.tgz
+
+# Publish draft release
+gh release edit v{VERSION} --draft=false
+
+# Open release in browser
+gh release view v{VERSION} --web
+```
