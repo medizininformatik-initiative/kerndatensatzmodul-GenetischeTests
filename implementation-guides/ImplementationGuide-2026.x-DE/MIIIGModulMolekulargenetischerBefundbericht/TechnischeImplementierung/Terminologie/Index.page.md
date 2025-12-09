@@ -2,67 +2,40 @@
 topic: TerminologieIndex
 ---
 
-#### {{page-title}}
+## Terminologie
 
 {{index:current}}
 
 ### Überblick
 
-Die Terminologie-Komponenten definieren die standardisierten Vokabulare für die semantische Interoperabilität genetischer Daten. Diese umfassen internationale Standards und projektspezifische Erweiterungen.
+Die Terminologie-Komponenten definieren die standardisierten Vokabulare für die semantische Interoperabilität genetischer Daten. Die Terminologien sind nach ihrer Herkunft organisiert:
 
-### Kern-Terminologien
+| Seite | Inhalt |
+|-------|--------|
+| **MII ValueSets** | Eigene ValueSets dieses Moduls (Verwandtschaft, Familienanamnese) |
+| **Clinical Genomics** | ValueSets und CodeSystems aus dem HL7 Genomics Reporting IG |
+| **Externe Terminologien** | Internationale Standards (LOINC, SNOMED CT, HGNC, etc.) mit Lizenzinformationen |
 
-#### Genetische Nomenklatur
-- **HGNC**: Standardisierte Gen-Symbole und -Namen
-- **HGVS**: Notation für Sequenzvarianten
-- **ISCN**: Zytogenetische Nomenklatur
+### Entscheidungskriterien
 
-#### Klinische Klassifikation
-- **LOINC**: Laboruntersuchungen und genetische Tests
-- **SNOMED CT**: Klinische Befunde und Prozeduren
-- **ICD-10-GM**: Diagnosen (deutsche Modifikation)
-- **Orphanet**: Seltene Erkrankungen
-- **OMIM**: Mendel'sche Erkrankungen
-
-#### Sequenz-Datenbanken
-- **RefSeq**: Referenzsequenzen (bevorzugt MANE)
-- **Ensembl**: Alternative Transkript-Referenzen
-- **dbSNP**: Varianten-Identifikatoren (rs-Nummern)
-- **ClinVar**: Klinische Variantenbewertung
-
-### Projektspezifische ValueSets
-
-#### Pathogenität
-- ACMG-Klassifikation (5-stufig)
-- ClinVar Clinical Significance
-- Evidenzlevel-Codes
-
-#### Vererbung
-- Vererbungsmuster (autosomal, X-linked, etc.)
-- Verwandtschaftsgrade
-- Familiäre Linien
-
-#### Molekulare Effekte
-- Funktionelle Konsequenzen (LoF, GoF)
-- DNA-Veränderungstypen
-- Protein-Effekte
+| Quelle | Verwendung | Beispiel |
+|--------|------------|----------|
+| **MII-definiert** | Eigene Anforderungen, keine passende externe Terminologie | Verwandtschaftsgrad, Familiäre Linie |
+| **Clinical Genomics** | Genetik-spezifische Konzepte aus dem STU3 Standard | DNA Change Type, Functional Effect |
+| **Externe Terminologie** | Etablierte internationale Standards | LOINC, SNOMED CT, HGNC |
 
 ### Binding-Stärken
 
-- **Required**: Exakte Übereinstimmung erforderlich (z.B. HGVS)
-- **Extensible**: Erweiterbar bei Bedarf (z.B. Diagnosen)
-- **Preferred**: Empfohlen aber nicht verpflichtend
-
-### Versionierung
-
-- Terminologie-Versionen sollten dokumentiert werden
-- ICD-10-GM: Jahresversion angeben
-- LOINC: Version bei Implementierung fixieren
-- SNOMED CT: International Edition + deutsche Erweiterung
+| Stärke | Bedeutung | Beispiel |
+|--------|-----------|----------|
+| **Required** | Exakte Übereinstimmung erforderlich | HGVS-Notation |
+| **Extensible** | ValueSet erweiterbar bei Bedarf | Diagnose-Codes |
+| **Preferred** | Empfohlen aber nicht verpflichtend | - |
+| **Example** | Nur als Beispiel, keine Einschränkung | - |
 
 ### Implementierungshinweise
 
-- Mehrfach-Kodierung unterstützen (ICD-10 + Orphanet)
-- Display-Werte für Benutzerfreundlichkeit
-- Mapping-Tabellen für Legacy-Systeme
-- Validierung gegen offizielle ValueSets
+- **Mehrfach-Kodierung**: ICD-10-GM + Orphanet für seltene Erkrankungen
+- **Display-Werte**: Immer angeben für Benutzerfreundlichkeit
+- **Versionierung**: Terminologie-Versionen dokumentieren (besonders ICD-10-GM Jahresversion)
+- **MANE-Transkripte**: Bevorzugt für HGVS-Notationen verwenden
