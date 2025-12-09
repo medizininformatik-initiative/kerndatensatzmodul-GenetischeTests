@@ -1,14 +1,65 @@
 ---
 topic: ReleaseNotes
 ---
-
 # Release Notes
 
-## 2026.0.0-alpha
+## 2026.0.0
+
+### Änderungen nach Ballotierung
+
+#### Vervollständigung und Korrektur der Beispiele
+
+#### Datumsstempel für Observations (HDB-762, HDB-763)
+
+- `effective[x]` und `issued` MS zu allen Observation-Profilen hinzugefügt
+
+#### ServiceRequest.requester (HDB-768)
+
+- Referenztypen eingeschränkt auf: Practitioner | PractitionerRole | Organization
+
+#### Terminologie-Dokumentation (HDB-749)
+
+- ValueSets.page.md mit MII-definierten und externen ValueSets aktualisiert
+- CodeSystems.page.md mit externen CodeSystems-Tabellen ergänzt
+
+#### URL-Namensraum-Migration
+
+- `example.org` URLs durch MII FHIR Namensraum ersetzt (`https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/`)
+
+#### Molekularer Biomarker Profil
+
+- **Neues Profil**: `MII_PR_MolGen_MolekularerBiomarker` als gemeinsames Elternprofil für:
+  - Mikrosatelliteninstabilität (erbt jetzt von MolekularerBiomarker)
+  - Mutationslast (erbt jetzt von MolekularerBiomarker)
+- Basiert auf Clinical Genomics STU3 MolecularBiomarker-Profil
+
+#### Deutsche Übersetzungen (de-DE)
+
+- **Must Support Elemente**: Alle MS-Elemente in allen Profilen mit deutschen Übersetzungen versehen
+
+#### Konfiguration
+
+- `language: de` in sushi-config.yaml hinzugefügt (Issue #34)
+
+#### Familienanamnese Terminology-Bindings
+
+- Relationship-Bindings aufgeweicht: `required` → `extensible` für SNOMED CT und v3-RoleCode
+- Ermöglicht Verwendung im Seltene Erkrankungen (SE) Modul mit spezifischen Verwandtschaftsverhältnissen
+
+#### Terminologie-Server Anforderungen
+
+Das folgende CodeSystem muss auf dem Terminologie-Server importiert werden:
+
+- **URL:** `http://terminology.hl7.org/CodeSystem/variant-confidence-status-cs`
+- **Quelle:** https://hl7.org/fhir/uv/genomics-reporting/STU3/CodeSystem-variant-confidence-status-cs.json
+- **Hinweis:** Kanonische URL hat sich von STU2 (`http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/variant-confidence-status-cs`) zu STU3 geändert
+
+
 
 ### Strukturänderungen der Implementation Guide Navigation
 
 #### IG-Struktur Version 2025.x (Flache Struktur)
+
 ```
 MII IG Modul Molekulargenetischer Befundbericht/
 ├── IG MII KDS Modul Molekulargenetischer Befundbericht
@@ -46,6 +97,7 @@ MII IG Modul Molekulargenetischer Befundbericht/
 ```
 
 #### IG-Struktur Version 2026.x (Hierarchische Themengruppierung)
+
 ```
 MII IG Modul Molekulargenetischer Befundbericht/
 ├── Hauptseite
@@ -103,95 +155,107 @@ MII IG Modul Molekulargenetischer Befundbericht/
 ```
 
 #### Entfernte/Ersetzte Seiten:
-   - ❌ ErgebnisZusammenfassung-Observation → in DiagnosticReport.conclusion
-   - ❌ UntersuchteRegion-Observation → GenomicStudy/GenomicStudyAnalysis
+
+- ❌ ErgebnisZusammenfassung-Observation → in DiagnosticReport.conclusion
+- ❌ UntersuchteRegion-Observation → GenomicStudy/GenomicStudyAnalysis
+
 #### Neue Seiten:
-   - 🆕 Molekulare Konsequenz (aus DiagnostischeImplikation ausgelagert)
-   - 🆕 GenomicStudy/GenomicStudyAnalysis (STU3)
-   - 🆕 Index-Seiten für jede Kategorie
-   - 🆕 Szenarien (konkrete Anwendungsbeispiele)
-   - 🆕 Kommentierung v2026
+
+- 🆕 Molekulare Konsequenz (aus DiagnostischeImplikation ausgelagert)
+- 🆕 GenomicStudy/GenomicStudyAnalysis (STU3)
+- 🆕 Index-Seiten für jede Kategorie
+- 🆕 Szenarien (konkrete Anwendungsbeispiele)
+- 🆕 Kommentierung v2026
 
 ### Technische Änderungen
 
 #### Migration zu Clinical Genomics STU3
+
 - Dependency auf den Clinical Genomics Reporting von STU2 auf STU3
-    - Neues MolecularBiomarker-Profil 
-    - Neues Molekulare-Konsequenz-Profil (downstream-Beschreibung von genetischen Änderungen)
-    - DiagnosticImplication 
-        - Schärfung der Profilierung mit Fokus auf Erkrankungsrisiko, Auslagerung der reinen Beschreibung der Änderung ins Molekulare-Konsequenz-Profil
-        - replaced `extension[genomic-artifact]` with `extension[workflow-relatedArtifact]`
-        - component[functional-effect] in MolecularConsequence übertragen
-    - Ergebnis-Zusammenfassung 
-        - Löschen des Profils (Grund: Redundanzen, Ergebnis kann über GenomicReport.conclusion/conclusionCode abgebildet werden)
-    - Mikrosatelliteninstabilität
-        - erbt jetzt vom STU3 Molecular Biomarker Profile
-        - `component[conclusion-string]` entfällt
-    - Molekulargenetischer Befundbericht erbt jetzt von genomic-report und nicht mehr genomics-report
-        - wegfallen des [overall]-Slices
-        - Zusammenlegen der extensions für [genomics-artifact] und [genomics-file] in [workflow-relatedArtifact]
-        - extension[genomics-risk-assessment] ist jetzt extension[genomic-risk-assessment]
-        - extension[region-studied] entfällt; Metadaten über die Untersuchte Region werden jetzt über GenomicStudy/GenomicStudyAnalysis abgebildet
-    - Mutationslast
-        - erbt jetzt vom neuen Molekularer Biomarker Modul
-        - damit entfällt `component[conclusion-string]`
-    - Therapeutische Implikation
-        - component[prognosis] fällt weg, weil in den (Gründe?)
-        - `component[predicted-therapeutic-implication]` zu `component[therapeutic-implication]` geändert
-    - Untersuchte Regiion
-        - Profil fällt weg, Information über Lokalisation und Geräte wird stattdessen über GenomicStudy/GenomicStudyAnalysis kodiert
-    - Variante
-        - component[coding-hgvs] umbenannt in component[representative-coding-hgvs]
-        - component[transcript-ref-seq] umbenannt in component[representative-transcript-ref-seq]
-        - component[protein-hgvs] umbenannt in component[representative-protein-hgvs]
-        - component[amino-acid-change-type] gelöscht 
-        - component[molecular-consequence] aus Variante gelöst und in MolecularConsequence überführt
+  - Neues MolecularBiomarker-Profil
+  - Neues Molekulare-Konsequenz-Profil (downstream-Beschreibung von genetischen Änderungen)
+  - DiagnosticImplication
 
+    - Schärfung der Profilierung mit Fokus auf Erkrankungsrisiko, Auslagerung der reinen Beschreibung der Änderung ins Molekulare-Konsequenz-Profil
+    - replaced `extension[genomic-artifact]` with `extension[workflow-relatedArtifact]`
+    - component[functional-effect] in MolecularConsequence übertragen
+  - Ergebnis-Zusammenfassung
 
+    - Löschen des Profils (Grund: Redundanzen, Ergebnis kann über GenomicReport.conclusion/conclusionCode abgebildet werden)
+  - Mikrosatelliteninstabilität
 
-    - Beispiele entsprechend angepasst (alte Beispiele für Diagnostische Implikation entsprechen eher neuem Profil für Molekulare Konsequenz )
-    - Neue Ordnerstruktur im GitHub-Repo
+    - erbt jetzt vom STU3 Molecular Biomarker Profile
+    - `component[conclusion-string]` entfällt
+  - Molekulargenetischer Befundbericht erbt jetzt von genomic-report und nicht mehr genomics-report
+
+    - wegfallen des [overall]-Slices
+    - Zusammenlegen der extensions für [genomics-artifact] und [genomics-file] in [workflow-relatedArtifact]
+    - extension[genomics-risk-assessment] ist jetzt extension[genomic-risk-assessment]
+    - extension[region-studied] entfällt; Metadaten über die Untersuchte Region werden jetzt über GenomicStudy/GenomicStudyAnalysis abgebildet
+  - Mutationslast
+
+    - erbt jetzt vom neuen Molekularer Biomarker Modul
+    - damit entfällt `component[conclusion-string]`
+  - Therapeutische Implikation
+
+    - component[prognosis] fällt weg, weil in den (Gründe?)
+    - `component[predicted-therapeutic-implication]` zu `component[therapeutic-implication]` geändert
+  - Untersuchte Regiion
+
+    - Profil fällt weg, Information über Lokalisation und Geräte wird stattdessen über GenomicStudy/GenomicStudyAnalysis kodiert
+  - Variante
+
+    - component[coding-hgvs] umbenannt in component[representative-coding-hgvs]
+    - component[transcript-ref-seq] umbenannt in component[representative-transcript-ref-seq]
+    - component[protein-hgvs] umbenannt in component[representative-protein-hgvs]
+    - component[amino-acid-change-type] gelöscht
+    - component[molecular-consequence] aus Variante gelöst und in MolecularConsequence überführt
+  - Beispiele entsprechend angepasst (alte Beispiele für Diagnostische Implikation entsprechen eher neuem Profil für Molekulare Konsequenz )
+  - Neue Ordnerstruktur im GitHub-Repo
 - Logical Model (LogicalModel.fsh)
-    - Elementnamen bereinigt: Bindestriche entfernt und durch CamelCase ersetzt (z.B. Krankengeschichte-Familie → KrankengeschichteFamilie)
-    - Sonderzeichen entfernt: Mikrosatelliteninstabilität → Mikrosatelliteninstabilitaet  
-    - FHIR-Mappings entsprechend aktualisiert für Konsistenz
-    - Alle Elementnamen folgen jetzt FHIR-Namenskonventionen (nur alphanumerische Zeichen)
+  - Elementnamen bereinigt: Bindestriche entfernt und durch CamelCase ersetzt (z.B. Krankengeschichte-Familie → KrankengeschichteFamilie)
+  - Sonderzeichen entfernt: Mikrosatelliteninstabilität → Mikrosatelliteninstabilitaet
+  - FHIR-Mappings entsprechend aktualisiert für Konsistenz
+  - Alle Elementnamen folgen jetzt FHIR-Namenskonventionen (nur alphanumerische Zeichen)
 - Profile Korrektur (Anforderung.fsh)
-    - Typo korrigiert: "gentischer" → "genetischer" in Profile ID und InstanceOf Referenzen
-    - Korrekte Canonical URL: mii-pr-molgen-anforderung-genetischer-test
+  - Typo korrigiert: "gentischer" → "genetischer" in Profile ID und InstanceOf Referenzen
+  - Korrekte Canonical URL: mii-pr-molgen-anforderung-genetischer-test
 - Familienanamnese (FamilyMemberHistory.fsh)
-    - Terminology-Bindings an Diagnose-Modul 2025.0.1 angeglichen
-    - ValueSet-Migration für ICD-10-GM, Alpha-ID, SNOMED CT und Orphanet Codings:
-        - `reasonCode.coding[icd10-gm]`: `http://fhir.de/ValueSet/bfarm/icd-10-gm` → `https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm`
-        - `reasonCode.coding[alpha-id]`: `http://fhir.de/ValueSet/bfarm/alpha-id` → `https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid`
-        - `reasonCode.coding[sct]`: bereits `https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct`
-        - `reasonCode.coding[orphanet]`: Neues Binding zu `https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet`
-        - Gleiche Änderungen für `condition.code.coding` Slices
-    - Relationship-Bindings aufgeweicht: `required` → `extensible` für SNOMED CT und v3-RoleCode
-        - Erlaubt Flexibilität bei ungewöhnlichen Verwandtschaftsverhältnissen
-
+  - Terminology-Bindings an Diagnose-Modul 2025.0.1 angeglichen
+  - ValueSet-Migration für ICD-10-GM, Alpha-ID, SNOMED CT und Orphanet Codings:
+    - `reasonCode.coding[icd10-gm]`: `http://fhir.de/ValueSet/bfarm/icd-10-gm` → `https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm`
+    - `reasonCode.coding[alpha-id]`: `http://fhir.de/ValueSet/bfarm/alpha-id` → `https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid`
+    - `reasonCode.coding[sct]`: bereits `https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct`
+    - `reasonCode.coding[orphanet]`: Neues Binding zu `https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet`
+    - Gleiche Änderungen für `condition.code.coding` Slices
+  - Relationship-Bindings aufgeweicht: `required` → `extensible` für SNOMED CT und v3-RoleCode
+    - Erlaubt Flexibilität bei ungewöhnlichen Verwandtschaftsverhältnissen
 
 ## 2025.0.0
+
 - updated package id
 - harmonized dependencies
 
 ### Impressum
-Dieser Leitfaden ist im Rahmen der Medizininformatik-Initiative erstellt worden und unterliegt per Governance-Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees (TCs) von HL7 Deutschland e. V.  
+
+Dieser Leitfaden ist im Rahmen der Medizininformatik-Initiative erstellt worden und unterliegt per Governance-Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees (TCs) von HL7 Deutschland e. V.
 
 ### Ansprechpartner
+
 * Sylvia Thun, Berlin Institute of Health at Charité (BIH)
 * Thomas Debertshäuser, Berlin Institute of Health at Charité (BIH)
 * Julian Saß, Berlin Institute of Health at Charité (BIH)
-* Karoline Buckow, TMF – Technologie- und Methodenplattform für 
-die vernetzte medizinische Forschung e.V.
-* Franziska Klepka, TMF – Technologie- und Methodenplattform für 
-die vernetzte medizinische Forschung e.V.
+* Karoline Buckow, TMF – Technologie- und Methodenplattform für
+  die vernetzte medizinische Forschung e.V.
+* Franziska Klepka, TMF – Technologie- und Methodenplattform für
+  die vernetzte medizinische Forschung e.V.
 
 Fragen zu der vorliegenden Publikation können jederzeit unter chat.fhir.org im Stream 'german/mi-initiative' gestellt werden.
 
-Anmerkungen und Kritik wird in Form von 'Issues' im Simplifier-Projekt stets gern entgegengenommen.</br>  
+Anmerkungen und Kritik wird in Form von 'Issues' im Simplifier-Projekt stets gern entgegengenommen.`</br>`
 
 ### Autoren
+
 * Alexander Zautke (HL7 Deutschland)
 * Andrew Heidel (SMITH)
 * Anna Trelinska-Finger (HiGHmed)
@@ -204,7 +268,7 @@ Anmerkungen und Kritik wird in Form von 'Issues' im Simplifier-Projekt stets ger
 * Julian Saß (BIH at Charité)
 * Karoline Buckow (MII-Koordinationsstelle)
 * Kirsten Toralf (SMITH)
-* Manuela Benary (Charité)	
+* Manuela Benary (Charité)
 * Martin Boeker (DIFUTURE)
 * Michael Krawczak (HiGHmed)
 * Oliver Kohlbacher (DIFUTURE)
@@ -218,13 +282,14 @@ Anmerkungen und Kritik wird in Form von 'Issues' im Simplifier-Projekt stets ger
 * Yvonne Möller (GenomDE)
 
 ### Copyright-Hinweis, Nutzungshinweise
+
 Copyright © 2022+: TMF e. V., Charlottenstraße 42, 10117 Berlin
 Der Inhalt dieser Spezifikation ist öffentlich. Die Nachnutzungs- bzw. Veröffentlichungsansprüche sind nicht beschränkt.
 Zu den Nutzungsrechten der zugrunde liegenden FHIR-Technologie siehe die FHIR-Basis-Spezifikation.
-Einige verwendete Codesysteme werden von anderen Organisationen herausgegeben und gepflegt. Es gilt das Copyright der dort jeweils aufgeführten Herausgeber (Publisher).</br> 
+Einige verwendete Codesysteme werden von anderen Organisationen herausgegeben und gepflegt. Es gilt das Copyright der dort jeweils aufgeführten Herausgeber (Publisher).`</br>`
 
 ### Disclaimer
+
 Der Inhalt dieses Dokuments ist öffentlich. Zu beachten ist, dass Teile dieses Dokuments auf FHIR Version R4 beruhen, für die das Copyright von HL7 International gilt.
 
-Obwohl diese Publikation mit größter Sorgfalt erstellt wurde, können die Autoren keinerlei Haftung für direkten oder indirekten Schaden übernehmen, der durch den Inhalt dieser Spezifikation entstehen könnte.  
-
+Obwohl diese Publikation mit größter Sorgfalt erstellt wurde, können die Autoren keinerlei Haftung für direkten oder indirekten Schaden übernehmen, der durch den Inhalt dieser Spezifikation entstehen könnte.
