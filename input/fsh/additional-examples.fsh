@@ -3,7 +3,6 @@
 Instance: mii-exa-molgen-patient
 InstanceOf: Patient
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient"
 * identifier[0].use = #usual
 * identifier[=].type = http://terminology.hl7.org/CodeSystem/v2-0203#MR
 * identifier[=].system = "https://www.medizininformatik-initiative.de/fhir/sid/patienten"
@@ -96,7 +95,6 @@ Usage: #example
 Instance: mii-exa-molgen-patient-2
 InstanceOf: Patient
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient"
 * identifier[0].use = #usual
 * identifier[=].type = http://terminology.hl7.org/CodeSystem/v2-0203#MR
 * identifier[=].system = "https://www.charite.de/fhir/sid/patienten"
@@ -254,7 +252,6 @@ Usage: #example
 Instance: mii-exa-molgen-patient-brca1
 InstanceOf: Patient
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient"
 * identifier[0].use = #usual
 * identifier[=].type = http://terminology.hl7.org/CodeSystem/v2-0203#MR
 * identifier[=].system = "https://www.charite.de/fhir/sid/patienten"
