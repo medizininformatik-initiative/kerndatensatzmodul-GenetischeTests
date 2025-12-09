@@ -19,8 +19,14 @@ topic: ReleaseNotes
 
 #### Terminologie-Dokumentation (HDB-749)
 
-- ValueSets.page.md mit MII-definierten und externen ValueSets aktualisiert
-- CodeSystems.page.md mit externen CodeSystems-Tabellen ergänzt
+Konsolidierung von 18 Terminologie-Seiten in 4 übersichtliche Seiten, organisiert nach Herkunft:
+
+- **MII-ValueSets**: Unsere 4 eigenen ValueSets (Familiäre Linie, Family Member SNOMED, Verwandtschaftsgrad, Verwandtschaftsverhältnis)
+- **ClinicalGenomics**: Alle Clinical Genomics STU3 ValueSets + CodeSystems
+- **Terminologien**: Externe Standards (LOINC, SNOMED CT, HGNC, HGVS, etc.) mit Lizenzinformationen
+- **Index**: Übersicht mit Entscheidungskriterien zur ValueSet-Auswahl
+
+Entfernte Einzelseiten: ClinVar-Evidence-Level, Condition-Inheritance-Pattern, DNAChangeType, Evidence-Level-Examples, Functional-Effect, HGNC, HGVS, HighLowcodes, MolecularConsequence, PharmGKB-Evidence-Level, TBD-Codes, Variant-Confidence-Status, VariantInheritance
 
 #### URL-Namensraum-Migration
 
@@ -40,6 +46,12 @@ topic: ReleaseNotes
 #### Konfiguration
 
 - `language: de` in sushi-config.yaml hinzugefügt (Issue #34)
+
+#### CI/CD Verbesserungen
+
+- **Automatische Releases**: GitHub Actions erstellt automatisch Draft-Releases beim Tag-Push
+- **Zulip-Benachrichtigung**: Automatische Benachrichtigung im MII-Kerndatensatz Stream bei Release-Veröffentlichung
+- **FHIR Package Caching**: Beschleunigte CI-Pipeline durch Caching von FHIR-Paketen
 
 #### Familienanamnese Terminology-Bindings
 
