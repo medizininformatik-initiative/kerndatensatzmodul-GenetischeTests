@@ -1,14 +1,18 @@
 ### copied from Procedure module 2025/05/05
-### Modified to test FHIR package caching
+### Modified to add automatic release creation and Zulip notification
 
-name: CI (FHIR Validation)
+name: CI (FHIR Validation & Release)
 
 on:
   push:
     branches: [ master, main, dev ]
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+*'
   pull_request:
     branches: [ master, main, dev ]
   workflow_dispatch:
+  release:
+    types: [published]
 
 jobs:
   DOTNET_FHIR_VALIDATION:
@@ -167,3 +171,67 @@ jobs:
             validation.html
             validation.json
           retention-days: 7
+
+  RELEASE:
+    if: startsWith(github.ref, 'refs/tags/v') && github.event_name != 'release'
+    needs: [DOTNET_FHIR_VALIDATION, JAVA_FHIR_VALIDATION]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Prepare version
+        id: prep-version
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/}
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "${{ steps.prep-version.outputs.version }}"
+          draft: true
+          prerelease: ${{ contains(steps.prep-version.outputs.version, '-') }}
+          generate_release_notes: true
+          body: |
+            ## MII Molekulargenetischer Befundbericht Release ${{ steps.prep-version.outputs.version }}
+
+            <!-- DELETE START -->
+            Download the FHIR package from Simplifier and manually attach it to this release.
+            <!-- DELETE END -->
+
+            ### Installation
+
+            ```bash
+            fhir install de.medizininformatikinitiative.kerndatensatz.molgen@${{ steps.prep-version.outputs.version }}
+            ```
+
+            ### Changes
+
+            <!-- DELETE START -->
+            Add your own release notes here.
+            <!-- DELETE END -->
+
+            See the auto-generated release notes below.
+
+  NOTIFY_ZULIP:
+    if: github.event_name == 'release' && github.event.action == 'published'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post release to Zulip
+        uses: zulip/github-actions-zulip/send-message@v1
+        with:
+          api-key: ${{ secrets.ZULIP_API_KEY }}
+          email: "kds-github-bot@mii.zulipchat.com"
+          organization-url: "https://mii.zulipchat.com/"
+          to: "MII-Kerndatensatz"
+          type: "stream"
+          topic: "Releases"
+          content: |
+            **New Release:** `${{ github.event.release.tag_name }}`
+            **Repository:** `${{ github.repository }}`
+            **Module:** Molekulargenetischer Befundbericht (MolGen)
+
+            ${{ github.event.release.body }}
+
+            🔗 [View on GitHub](${{ github.event.release.html_url }})
