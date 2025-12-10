@@ -3,6 +3,21 @@ topic: ReleaseNotes
 ---
 # Release Notes
 
+## 2026.0.1
+
+### Hotfix: Familienanamnese Canonical URL
+
+**Breaking Change Fix**
+
+- **Familienanamnese Profile**: Canonical URL wiederhergestellt zur ursprünglichen Version:
+  - Canonical URL: `https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese`
+  - Die URL wurde in v2026.0.0 versehentlich geändert, was ein breaking change war
+  - Wiederherstellung der ursprünglichen URL zur Gewährleistung der Rückwärtskompatibilität
+  - Betroffene abhängige Module: Seltene Erkrankungen (SE)
+  - Commit: 065fabf
+
+**Hinweis**: Die URL `familienanamnese` entspricht zwar nicht formal den aktuellen Namenskonventionen (erwartbar wäre `mii-pr-molgen-familienanamnese`), wird aber beibehalten um breaking changes zu vermeiden.
+
 ## 2026.0.0
 
 ### Änderungen nach Ballotierung
