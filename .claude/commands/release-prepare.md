@@ -66,13 +66,17 @@ Add all regenerated `fsh-generated/` files to the commit.
    - CI/CD improvements
    - Breaking changes
 
-### Phase 5: Create Commit and Push
+### Phase 5: Create Commit, Push, and Create PR
 
 After all changes:
 1. Stage all modified files including `fsh-generated/`
 2. Create commit with message: `chore: Prepare release v{VERSION}`
 3. Push release branch: `git push -u origin release/v{VERSION}`
-4. Provide PR creation link
+4. Create pull request using gh CLI:
+   ```bash
+   gh pr create --base main --head release/v{VERSION} --title "Release v{VERSION}" --body "Release preparation for v{VERSION}. See ReleaseNotes.page.md for details."
+   ```
+5. Provide the PR URL to the user
 
 ### Safety Checks
 
