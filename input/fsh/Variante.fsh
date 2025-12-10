@@ -268,7 +268,8 @@ InstanceOf: mii-pr-molgen-variante
 Usage: #example
 Title: "BRAF Variante"
 Description: "Beispiel für genetische Variante im BRAF Gen an Hand von NGS."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant|3.0.0"
 * basedOn = Reference(mii-exa-molgen-anforderung-1)
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
@@ -308,7 +309,8 @@ InstanceOf: mii-pr-molgen-variante
 Usage: #example
 Title: "NIPBL Variante"
 Description: "Beispiel für genetische Variante im NIPBL Gen an Hand von WGS."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant|3.0.0"
 * basedOn = Reference(mii-exa-molgen-anforderung-2)
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
@@ -348,7 +350,8 @@ InstanceOf: mii-pr-molgen-variante
 Usage: #example
 Title: "Variante SMO CNV"
 Description: "Beispiel für genetische Copy Number Variante SMO Gen."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant|3.0.0"
 //* basedOn = Reference(mii-exa-molgen-anforderung-2)
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
@@ -385,7 +388,8 @@ InstanceOf: mii-pr-molgen-variante
 Usage: #example
 Title: "Variante BRCA1"
 Description: "Beispiel für genetische Variante BRCA1"
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant|3.0.0"
 * basedOn = Reference(mii-exa-molgen-anforderung-trurisk-panel)
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"

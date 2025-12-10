@@ -309,7 +309,8 @@
         "id": "mii-exa-molgen-genomic-study-comprehensive-wes-bundle",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study|2026.0.1"
           ]
         },
         "category": {
@@ -357,7 +358,8 @@
         "id": "mii-exa-molgen-genomic-study-analysis-wes-library-prep-bundle",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.1"
           ]
         },
         "status": "completed",
@@ -416,7 +418,8 @@
         "id": "mii-exa-molgen-genomic-study-analysis-wes-sequencing-bundle",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.1"
           ]
         },
         "status": "completed",
@@ -475,7 +478,8 @@
         "id": "mii-exa-molgen-genomic-study-analysis-wes-bioinformatics-bundle",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.1"
           ]
         },
         "status": "completed",
@@ -517,7 +521,7 @@
         "id": "mii-exa-molgen-anforderung-wes-bundle",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test|2026.0.1"
           ]
         },
         "status": "completed",
@@ -562,7 +566,7 @@
         "id": "mii-exa-molgen-variante-comprehensive-pathogenic-bundle",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2026.0.1"
           ]
         },
         "code": {
@@ -682,7 +686,7 @@
         "id": "mii-exa-molgen-diagnostische-implikation-comprehensive-bundle",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation|2026.0.1"
           ]
         },
         "code": {
@@ -787,8 +791,8 @@
         "id": "mii-exa-molgen-befundbericht-comprehensive-wes-bundle",
         "meta": {
           "profile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht",
-            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht|2026.0.1",
+            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report|3.0.0"
           ]
         },
         "code": {

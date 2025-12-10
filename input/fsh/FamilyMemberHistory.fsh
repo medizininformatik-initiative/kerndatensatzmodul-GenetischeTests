@@ -373,6 +373,7 @@ Source: MII_PR_MolGen_Familienanamnese
 Instance: mii-exa-molgen-family-member-history-1
 InstanceOf: mii-pr-molgen-familienanamnese
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese)
 * status = #completed
 * patient = Reference(mii-exa-molgen-patient)
 * date = "2022-04-07"
@@ -388,6 +389,7 @@ Usage: #example
 Instance: mii-exa-molgen-family-member-history-2
 InstanceOf: mii-pr-molgen-familienanamnese
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese)
 * status = #completed
 * patient = Reference(mii-exa-molgen-patient)
 * date = "2022-11-08"
@@ -405,6 +407,7 @@ InstanceOf: mii-pr-molgen-familienanamnese
 Usage: #example
 Title: "Family History - Father with Type 2 Diabetes"
 Description: "Example of family member history documenting father's Type 2 diabetes mellitus (ICD-10: E11.9)"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese)
 * status = #completed
 * patient = Reference(mii-exa-molgen-patient)
 * date = "2024-01-15"
@@ -435,6 +438,7 @@ InstanceOf: mii-pr-molgen-familienanamnese
 Usage: #example
 Title: "Family History - Sister with Retinal Disorder"
 Description: "Example of family member history documenting sister's retinal disorder (ICD-10: H35.8)"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese)
 * status = #completed
 * patient = Reference(mii-exa-molgen-patient)
 * date = "2024-02-20"
@@ -465,6 +469,7 @@ InstanceOf: mii-pr-molgen-familienanamnese
 Usage: #example
 Title: "Family History - Mother with Myocardial Infarction"
 Description: "Example of family member history documenting mother's ST-elevation myocardial infarction (ICD-10: I21.2)"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese)
 * status = #completed
 * patient = Reference(mii-exa-molgen-patient)
 * date = "2024-03-10"

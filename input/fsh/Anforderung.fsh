@@ -108,6 +108,7 @@ InstanceOf: mii-pr-molgen-anforderung-genetischer-test
 Usage: #example
 Title: "Anforderung BRAF Genetische Testung"
 Description: "Beispiel für Anforderung für genetische Testung auf genetische Variante im BRAF Gen an Hand von NGS."
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test)
 //* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/servicerequest"
 * status = #active
 * intent = #order
@@ -128,6 +129,7 @@ InstanceOf: mii-pr-molgen-anforderung-genetischer-test
 Usage: #example
 Title: "Anforderung Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom"
 Description: "Beispiel für Anforderung für genetische Testung auf pathogene Variante im NIPBL Gen."
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test)
 * identifier.system = "https://www.charite.de/fhir/auftragsnummern"
 * identifier.value = "gen_test_02"
 * status = #active
@@ -159,6 +161,7 @@ InstanceOf: mii-pr-molgen-anforderung-genetischer-test
 Usage: #example
 Title: "Anforderung Molekulargenetische Diagnose Familiäre Belastung für Brust- und Eierstockkrebs"
 Description: "Beispiel für Anforderung für genetische Testung bei Familiärer Belastung für Brust- und Eierstockkrebs."
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test)
 * identifier.system = "https://www.charite.de/fhir/auftragsnummern"
 * identifier.value = "gen_test_03"
 * status = #active

@@ -190,7 +190,8 @@ InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
 Title: "Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom"
 Description: "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorektalem Adenokarzniom."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report|3.0.0"
 * extension[genomic-study].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-reference"
 * extension[genomic-study].valueReference = Reference(mii-exa-molgen-genomic-study-1)
 * extension[recommended-action][+].valueReference = Reference(mii-exa-molgen-medikationsempfehlung-1)
@@ -219,7 +220,8 @@ InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
 Title: "Molekulargentischer Befund 2: Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang"
 Description: "Beispiel für molekulargenetischen Befund Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report|3.0.0"
 * extension[workflow-relatedArtifact][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.type = $RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.citation = "Gillis LA, McCallum J, Kaur M, DeScipio C, Yaeger D, Mariani A, Kline AD, Li HH, Devoto M, Jackson LG, Krantz ID. NIPBL mutational analysis in 120 individuals with Cornelia de Lange syndrome and evaluation of genotype-phenotype correlations. Am J Hum Genet. 2004 Oct;75(4):610-23. doi: 10.1086/424698. Epub 2004 Aug 18. PMID: 15318302; PMCID: PMC1182048."
@@ -275,7 +277,8 @@ InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
 Title: "Molekulargentischer Befund 3: Tumorboard Genfusion"
 Description: "Beispiel für molekulargenetischen Befund Tumorboard Genfusion."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report|3.0.0"
 * extension[genomic-study].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-reference"
 * extension[genomic-study].valueReference = Reference(mii-exa-molgen-genomic-study-1)
 * extension[recommended-action][+].valueReference = Reference(mii-exa-molgen-medikationsempfehlung-1)
@@ -303,7 +306,8 @@ InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
 Title: "Molekulargentischer Befund Familiäre Belastung für Brust- und Eierstockkrebs"
 Description: "Beispiel für molekulargenetischen Befund einer BRCA1 Variante bei Familiärer Belastung für Brust- und Eierstockkrebs."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report|3.0.0"
 * extension[workflow-relatedArtifact][+].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.type = $RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact][=].valueRelatedArtifact.citation = "Plon SE, Eccles DM, Easton D, Foulkes WD, Genuardi M, Greenblatt MS, Hogervorst FB, Hoogerbrugge N, Spurdle AB, Tavtigian SV; IARC Unclassified Genetic Variants Working Group. Sequence variant classification and reporting: recommendations for improving the interpretation of cancer susceptibility genetic test results. Hum Mutat. 2008 Nov;29(11):1282-91. doi: 10.1002/humu.20880. PMID: 18951446; PMCID: PMC3075918."

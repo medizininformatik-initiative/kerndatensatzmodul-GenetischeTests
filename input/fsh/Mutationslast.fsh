@@ -70,7 +70,8 @@ InstanceOf: mii-pr-molgen-mutationslast
 Usage: #example
 Title: "Beispiel Mutationslast in Tumorprobe"
 Description: "Beispiel für Mutationslast in Tumorprobe."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/tmb"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/tmb|3.0.0"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * category[mbCategory] = http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs#biomarker-category "A characterization of a given biomarker observation."

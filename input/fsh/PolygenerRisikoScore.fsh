@@ -115,6 +115,7 @@ InstanceOf: mii-pr-molgen-polygener-risiko-score
 Usage: #example
 Title: "Polygener Risiko Score BRCA1 Variante"
 Description: "Beispiel für Polygenen Risiko Score bei Variante BRCA1"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score)
 * status = #final
 * subject = Reference(mii-exa-molgen-patient-2)
 * occurrenceDateTime = "2022-11-01"
