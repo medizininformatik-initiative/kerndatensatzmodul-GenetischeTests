@@ -178,6 +178,7 @@ Usage: #inline
 Instance: mii-exa-molgen-genomic-study-comprehensive-wes-bundle
 InstanceOf: mii-pr-molgen-genomic-study
 Usage: #inline
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study)
 * status = #completed
 * subject = Reference(Patient/mii-exa-molgen-patient-wes)
 * extension[+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-ext"
@@ -190,6 +191,7 @@ Usage: #inline
 Instance: mii-exa-molgen-genomic-study-analysis-wes-library-prep-bundle
 InstanceOf: mii-pr-molgen-genomic-study-analysis
 Usage: #inline
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis)
 * status = #completed
 * subject = Reference(Patient/mii-exa-molgen-patient-wes)
 * extension[specimen].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen"
@@ -204,6 +206,7 @@ Usage: #inline
 Instance: mii-exa-molgen-genomic-study-analysis-wes-sequencing-bundle
 InstanceOf: mii-pr-molgen-genomic-study-analysis
 Usage: #inline
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis)
 * status = #completed
 * subject = Reference(Patient/mii-exa-molgen-patient-wes)
 * extension[specimen].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen"
@@ -217,6 +220,7 @@ Usage: #inline
 Instance: mii-exa-molgen-genomic-study-analysis-wes-bioinformatics-bundle
 InstanceOf: mii-pr-molgen-genomic-study-analysis
 Usage: #inline
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis)
 * status = #completed
 * subject = Reference(Patient/mii-exa-molgen-patient-wes)
 * extension[method-type].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type"
@@ -225,6 +229,7 @@ Usage: #inline
 Instance: mii-exa-molgen-anforderung-wes-bundle
 InstanceOf: mii-pr-molgen-anforderung-genetischer-test
 Usage: #inline
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test)
 * status = #completed
 * intent = #order
 * code = $LNC#86205-2 "Whole exome sequence analysis in Blood or Tissue by Molecular genetics method"
@@ -237,6 +242,7 @@ Usage: #inline
 Instance: mii-exa-molgen-variante-comprehensive-pathogenic-bundle
 InstanceOf: mii-pr-molgen-variante
 Usage: #inline
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante)
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $LNC#69548-6 "Genetic variant assessment"
@@ -253,6 +259,7 @@ Usage: #inline
 Instance: mii-exa-molgen-diagnostische-implikation-comprehensive-bundle
 InstanceOf: mii-pr-molgen-diagnostische-implikation
 Usage: #inline
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation)
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $GenTbd#diagnostic-implication "Diagnostic Implication"
@@ -265,7 +272,8 @@ Usage: #inline
 Instance: mii-exa-molgen-befundbericht-comprehensive-wes-bundle
 InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #inline
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report|3.0.0"
 * extension[genomic-study].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-reference"
 * extension[genomic-study].valueReference = Reference(Procedure/mii-exa-molgen-genomic-study-comprehensive-wes)
 * basedOn = Reference(ServiceRequest/mii-exa-molgen-anforderung-wes)

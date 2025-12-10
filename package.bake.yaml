@@ -1,0 +1,51 @@
+to-json:
+  - source: input
+  - category: Resource
+  - transform: json
+  - target: staging
+
+generate-snapshots:
+  - source: staging
+  - category: StructureDefinition
+  - action: snapshot
+  - target: staging
+
+move-conformance-resources:
+  - source: staging
+  - category: Conformance
+  - filter: status='active'
+  - delete: /**/*implementationguide*.json
+  - delete: /**/*implementationguide-1.x-en.json
+  - delete: /**/*MII_IG_*.json
+  - move: /package/
+  - target: output
+
+move-concept-maps:
+  - source: staging
+  - category: ConceptMap
+  - filter: status='active'
+  - move: /package/
+  - target: output
+
+move-examples:
+  - source: staging
+  - category: Instance
+  - delete: /**/*ConceptMap*.json
+  - delete: /**/*validation*.json
+  - delete: /**/*qa*.json
+  - delete: /**/*expansions*.json
+  - delete: /**/*.terminologyCapabilities*.json
+  - delete: /**/*onGenerate*.json
+  - delete: /**/*onCheck*.json
+  - move: /package/examples
+  - target: output
+
+manifest:
+  - files: package.json
+  - move: /package
+
+index-file:
+  - source: output
+  - files: /package/**/*.json
+  - action: create-package-index
+  - move: /package

@@ -61,6 +61,7 @@ Instance: mii-exa-molgen-genomic-study-1
 InstanceOf: mii-pr-molgen-genomic-study
 Title: "Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom"
 Description: "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorektalem Adenokarzniom."
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study)
 * status = #completed
 * subject = Reference(mii-exa-molgen-patient)
 * extension[+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-ext"
@@ -70,6 +71,7 @@ Instance: mii-exa-molgen-genomic-study-analysis-braf
 InstanceOf: mii-pr-molgen-genomic-study-analysis
 Title: "Genomic Study Analysis BRAF"
 Description: "Analyse der BRAF Region mittels NGS"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis)
 * status = #completed
 * subject = Reference(mii-exa-molgen-patient)
 * extension[specimen].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen"
@@ -89,6 +91,7 @@ Instance: mii-exa-molgen-genomic-study-trurisk-panel
 InstanceOf: mii-pr-molgen-genomic-study
 Title: "Genomic Study TruRisk Panel v3"
 Description: "Genomische Studie für TruRisk Panel v3"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study)
 * status = #completed
 * subject = Reference(mii-exa-molgen-patient-brca1)
 * extension[+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-ext"
@@ -98,6 +101,7 @@ Instance: mii-exa-molgen-genomic-study-analysis-trurisk-panel
 InstanceOf: mii-pr-molgen-genomic-study-analysis
 Title: "Genomic Study Analysis TruRisk Panel v3"
 Description: "NGS-Analyse des TruRisk Panel v3 für erblichen Brust- und Eierstockkrebs"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis)
 * status = #completed
 * subject = Reference(mii-exa-molgen-patient-brca1)
 * extension[specimen].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen"
@@ -147,6 +151,7 @@ Instance: mii-exa-molgen-genomic-study-cornelia-de-lange
 InstanceOf: mii-pr-molgen-genomic-study
 Title: "Genomic Study Cornelia de Lange Panel"
 Description: "Genomische Studie für Cornelia de Lange-Syndrom Panel"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study)
 * status = #completed
 * subject = Reference(mii-exa-molgen-patient-2)
 * extension[+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-ext"
@@ -156,6 +161,7 @@ Instance: mii-exa-molgen-genomic-study-analysis-cornelia-de-lange
 InstanceOf: mii-pr-molgen-genomic-study-analysis
 Title: "Genomic Study Analysis Cornelia de Lange Panel"
 Description: "NGS-Analyse des Cornelia de Lange-Syndrom Panels"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis)
 * status = #completed
 * subject = Reference(mii-exa-molgen-patient-2)
 * extension[specimen].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen"

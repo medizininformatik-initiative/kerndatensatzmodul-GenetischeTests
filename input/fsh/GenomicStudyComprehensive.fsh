@@ -34,6 +34,7 @@ Instance: mii-exa-molgen-genomic-study-comprehensive-wes
 InstanceOf: mii-pr-molgen-genomic-study
 Title: "Comprehensive Whole Exome Sequencing Study"
 Description: "Vollständiges Exom-Sequenzierung Beispiel mit detaillierten technischen Angaben"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study)
 * status = #completed
 * subject = Reference(mii-exa-molgen-patient)
 * extension[+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-ext"
@@ -47,6 +48,7 @@ Instance: mii-exa-molgen-genomic-study-analysis-wes-library-prep
 InstanceOf: mii-pr-molgen-genomic-study-analysis
 Title: "WES Library Preparation Analysis"
 Description: "Library Preparation für Whole Exome Sequencing"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis)
 * status = #completed
 * subject = Reference(mii-exa-molgen-patient)
 * extension[specimen].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen"
@@ -62,6 +64,7 @@ Instance: mii-exa-molgen-genomic-study-analysis-wes-sequencing
 InstanceOf: mii-pr-molgen-genomic-study-analysis
 Title: "WES Sequencing Analysis"
 Description: "Sequenzierung für Whole Exome Sequencing mit detaillierten Metriken"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis)
 * status = #completed
 * subject = Reference(mii-exa-molgen-patient)
 * extension[specimen].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen"
@@ -87,6 +90,7 @@ Instance: mii-exa-molgen-genomic-study-analysis-wes-bioinformatics
 InstanceOf: mii-pr-molgen-genomic-study-analysis
 Title: "WES Bioinformatics Analysis"
 Description: "Bioinformatische Auswertung für Whole Exome Sequencing"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis)
 * status = #completed
 * subject = Reference(mii-exa-molgen-patient)
 * extension[input].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-input"
@@ -196,7 +200,8 @@ InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
 Title: "Comprehensive WES Report with Full Technical Documentation"
 Description: "Beispiel für einen vollständigen WES-Bericht mit detaillierten technischen Angaben"
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report|3.0.0"
 * extension[genomic-study].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-reference"
 * extension[genomic-study].valueReference = Reference(mii-exa-molgen-genomic-study-comprehensive-wes)
 * extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
@@ -225,6 +230,7 @@ Instance: mii-exa-molgen-anforderung-wes
 InstanceOf: mii-pr-molgen-anforderung-genetischer-test
 Usage: #example
 Title: "Anforderung Whole Exome Sequencing"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test)
 * status = #completed
 * intent = #order
 * code = $LNC#86205-2 "Whole exome sequence analysis in Blood or Tissue by Molecular genetics method"
@@ -238,6 +244,7 @@ Instance: mii-exa-molgen-variante-comprehensive-pathogenic
 InstanceOf: mii-pr-molgen-variante
 Usage: #example
 Title: "KMT2A Pathogenic Variant from WES"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante)
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $LNC#69548-6 "Genetic variant assessment"
@@ -259,6 +266,7 @@ Instance: mii-exa-molgen-diagnostische-implikation-comprehensive
 InstanceOf: mii-pr-molgen-diagnostische-implikation
 Usage: #example
 Title: "Diagnostic Implication for KMT2A Variant"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation)
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $GenTbd#diagnostic-implication "Diagnostic Implication"

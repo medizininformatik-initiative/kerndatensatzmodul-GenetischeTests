@@ -510,6 +510,7 @@ Usage: #example
 Instance: mii-exa-molgen-anforderung-srcc
 InstanceOf: mii-pr-molgen-anforderung-genetischer-test
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test)
 * identifier.system = "https://www.charite.de/fhir/auftragsnummern"
 * identifier.value = "7B369EB0"
 * status = #active
@@ -533,6 +534,7 @@ Usage: #example
 Instance: mii-exa-molgen-family-member-history-srcc
 InstanceOf: mii-pr-molgen-familienanamnese
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese)
 * status = #completed
 * patient = Reference(mii-exa-molgen-patient-srcc)
 * date = "2022-11-30"
@@ -548,7 +550,8 @@ Usage: #example
 Instance: mii-exa-molgen-variante-srcc-ctnna1
 InstanceOf: mii-pr-molgen-variante
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant|3.0.0"
 * basedOn = Reference(mii-exa-molgen-anforderung-srcc)
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
@@ -573,7 +576,8 @@ Usage: #example
 Instance: mii-exa-molgen-diagnostische-implikation-srcc-ctnna1
 InstanceOf: mii-pr-molgen-diagnostische-implikation
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|3.0.0"
 * extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.type = $RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.citation = "ClinGen"
@@ -683,7 +687,8 @@ Usage: #example
 Instance: mii-exa-molgen-molekulargenetischer-befundbericht-srcc
 InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report|3.0.0"
 * extension[supportingInfo].valueReference = Reference(mii-exa-molgen-family-member-history-srcc)
 * basedOn = Reference(mii-exa-molgen-anforderung-srcc)
 * status = $DiagRepStatus#final
@@ -769,6 +774,7 @@ Usage: #example
 Instance: mii-exa-molgen-anforderung-fgfr2-fusion
 InstanceOf: mii-pr-molgen-anforderung-genetischer-test
 Usage: #example
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test)
 * identifier.system = "https://www.charite.de/fhir/auftragsnummern"
 * identifier.value = "PRK4QE59A"
 * status = #active
@@ -790,7 +796,8 @@ InstanceOf: mii-pr-molgen-variante
 Usage: #example
 Title: "Variante FGFR2-DBP Fusion"
 Description: "Beispiel für genetische Variante FGFR2-DBP Fusion."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant|3.0.0"
 * basedOn = Reference(mii-exa-molgen-anforderung-fgfr2-fusion)
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
@@ -807,7 +814,8 @@ Description: "Beispiel für genetische Variante FGFR2-DBP Fusion."
 Instance: mii-exa-molgen-diagnostische-implikation-fgfr2-fusion
 InstanceOf: mii-pr-molgen-diagnostische-implikation
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|3.0.0"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $GenTbd#diagnostic-implication "Diagnostic Implication"
@@ -820,7 +828,8 @@ Usage: #example
 Instance: mii-exa-molgen-therapeutische-implikation-fgfr2-fusion
 InstanceOf: mii-pr-molgen-therapeutische-implikation
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapeutic-implication"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapeutic-implication|3.0.0"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $GenTbd#therapeutic-implication "Therapeutic Implication"
@@ -842,7 +851,8 @@ Usage: #example
 Instance: mii-exa-molgen-medikationsempfehlung-fgfr2-fusion
 InstanceOf: mii-pr-molgen-medikationsempfehlung
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation|3.0.0"
 * basedOn = Reference(mii-exa-molgen-anforderung-fgfr2-fusion)
 * status = TaskStatus#requested
 * intent = $RequestIntent#proposal
@@ -854,7 +864,8 @@ Usage: #example
 Instance: mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion
 InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report|3.0.0"
 * extension[recommended-action].valueReference = Reference(mii-exa-molgen-medikationsempfehlung-fgfr2-fusion)
 * basedOn = Reference(mii-exa-molgen-anforderung-fgfr2-fusion)
 * status = $DiagRepStatus#final

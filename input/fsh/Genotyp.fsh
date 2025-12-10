@@ -107,7 +107,8 @@ InstanceOf: mii-pr-molgen-genotyp
 Usage: #example
 Title: "Genotyp BRAF"
 Description: "Beispiel für Genotyp BRAF Gen."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype|3.0.0"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $LNC#84413-4 "Genotype display name"
@@ -128,7 +129,8 @@ InstanceOf: mii-pr-molgen-genotyp
 Usage: #example
 Title: "Genotyp NIPBL"
 Description: "Beispiel für Genotyp NIPBL Gen."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype|3.0.0"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $LNC#84413-4 "Genotype display name"
@@ -149,7 +151,8 @@ InstanceOf: mii-pr-molgen-genotyp
 Usage: #example
 Title: "Genotyp BRCA1"
 Description: "Beispiel für Genotyp BRCA1 Gen."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype|3.0.0"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $LNC#84413-4 "Genotype display name"

@@ -120,7 +120,8 @@ InstanceOf: mii-pr-molgen-therapeutische-implikation
 Usage: #example
 Title: "BRAF Variante Therapeutische Implikation"
 Description: "Beispiel für therapeutische Implikation abgeleitet von genetische Variante im BRAF Gen an Hand von NGS."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapeutic-implication"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapeutic-implication|3.0.0"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $GenTbd#therapeutic-implication "Therapeutic Implication"

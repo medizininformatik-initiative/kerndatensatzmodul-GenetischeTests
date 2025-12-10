@@ -104,7 +104,8 @@ InstanceOf: mii-pr-molgen-molekulare-konsequenz
 Usage: #example
 Title: "BRAF Variante Molekulare Konsequenz"
 Description: "Beispiel für molekulare Konsequenz abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence|3.0.0"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * code = $GenTbd#molecular-consequence "Molecular Consequence"
@@ -120,7 +121,8 @@ InstanceOf: mii-pr-molgen-molekulare-konsequenz
 Usage: #example
 Title: "NIPBL Variante Molekulare Konsequenz"
 Description: "Beispiel für molekulare Konsequenz abgeleitet von genetischer Variante im NIPBL Gen an Hand von WGS."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence|3.0.0"
 * extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.type = $RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
@@ -148,7 +150,8 @@ InstanceOf: mii-pr-molgen-molekulare-konsequenz
 Usage: #example
 Title: "CNV SMO Molekulare Konsequenz"
 Description: "Beispiel für molekulare Konsequenz abgeleitet von Copy Number Variante im SMO Gen."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence|3.0.0"
 * extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.type = $RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"
@@ -174,7 +177,8 @@ InstanceOf: mii-pr-molgen-molekulare-konsequenz
 Usage: #example
 Title: "Molekulare Konsequenz BRCA1 Variante"
 Description: "Beispiel für molekulare Konsequenz abgeleitet von SNP im BRCA1."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence|3.0.0"
 * extension[workflow-relatedArtifact].url = "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.type = $RelArtType#citation "Citation"
 * extension[workflow-relatedArtifact].valueRelatedArtifact.citation = "Richards et al., Genet Med. 2015; 17:405-24"

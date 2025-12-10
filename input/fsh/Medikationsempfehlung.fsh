@@ -64,7 +64,8 @@ InstanceOf: mii-pr-molgen-medikationsempfehlung
 Usage: #example
 Title: "BRAF Variante Medikationsempfehlung"
 Description: "Beispiel für Medikationsempfehlung abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS."
-* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung)
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation|3.0.0"
 * basedOn = Reference(servicerequest/example)
 * status = TaskStatus#requested
 * intent = $RequestIntent#proposal
