@@ -3,6 +3,25 @@ topic: ReleaseNotes
 ---
 # Release Notes
 
+## 2026.0.2
+
+### Hotfix: Package Build Error
+
+**Technical Fix**
+
+- **Package Build**: v2026.0.1 wurde mit fehlerhaftem Package-Build publiziert
+  - Problem: Package enthielt gesamtes Repository (377 Dateien, 2.1 MB) statt nur FHIR-Ressourcen
+  - Ursache: Verwendung von `npm pack` anstatt `fhir bake` für Package-Erstellung
+  - Auswirkung: SUSHI konnte keine Ressourcen aus dem Package laden (0 resources statt 36)
+  - Behebung: Korrekter Build-Prozess mit `fhir bake package.bake.yaml`
+  - Ergebnis: Package nun korrekt strukturiert (140 Dateien, 381 KB)
+
+- **Dokumentation**: build-package.md aktualisiert mit korrektem `fhir bake` Workflow
+  - Explizite Verifikationsschritte für Package-Struktur
+  - Warnungen vor falschen Build-Methoden
+
+**Hinweis**: v2026.0.1 bleibt auf Simplifier verfügbar, sollte aber nicht verwendet werden. Alle abhängigen Module sollten auf v2026.0.2 aktualisieren.
+
 ## 2026.0.1
 
 ### Hotfix: Familienanamnese Canonical URL
