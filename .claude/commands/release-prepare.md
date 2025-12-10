@@ -35,7 +35,10 @@ Update version numbers in these files:
      "description": "Medizininformatik Initiative - Modul Molekulargenetischer Befundbericht. Version X.X.X: [key changes]. Release Notes: https://simplifier.net/guide/MII-Modul-MolekulargenetischerBefundbericht-v2026-DE/MIIIGModulMolekulargenetischerBefundbericht/ReleaseNotes"
      ```
 2. **sushi-config.yaml**: Update the `version` parameter
-3. **input/fsh/rulesets/version.fsh**: Update version in both RuleSets
+3. **input/fsh/rulesets/version.fsh**: Update version in all three RuleSets:
+   - `Version` ruleset
+   - `PR_CS_VS_Version` ruleset
+   - `MetaProfile` ruleset
 
 IMPORTANT: Read each file first to verify current state before making changes.
 
