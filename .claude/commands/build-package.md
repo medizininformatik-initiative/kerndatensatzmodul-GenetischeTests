@@ -5,6 +5,13 @@
 /build-package [OPTIONS]
 ```
 
+## Execution Mode
+**IMPORTANT**: This is a build command. Execute all steps directly without asking for confirmation:
+- Do NOT ask "should I check if X exists?" - just check it
+- Do NOT ask "should I run sushi?" - just run it
+- Do NOT ask "should I read the config?" - just read it
+- Proceed through all steps automatically, only stop on actual errors
+
 ## Your Task
 Build a FHIR package from the current IG project using SUSHI and optionally publish to Simplifier.
 
