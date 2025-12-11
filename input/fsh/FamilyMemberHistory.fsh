@@ -296,6 +296,7 @@ Id: mii-ex-molgen-verwandtschaftsgrad
 Title: "MII EX Mol Gen Verwandtschaftsgrad"
 Description: "Extension erlaubt die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen."
 * insert Publisher
+* insert PR_CS_VS_Version
 * ^context.type = #element
 * ^context.expression = "FamilyMemberHistory.relationship.coding"
 * value[x] 1..
