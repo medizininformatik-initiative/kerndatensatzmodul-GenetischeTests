@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-molgen-polygener-risiko-score",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score",
-  "version": "2026.0.2",
+  "version": "2026.0.3",
   "name": "MII_PR_MolGen_PolygenerRisikoScore",
   "title": "MII PR MolGen Polygener Risiko Score",
   "status": "active",
@@ -394,20 +394,6 @@
           ]
         },
         "mustSupport": true
-      },
-      {
-        "id": "RiskAssessment.prediction.extension",
-        "path": "RiskAssessment.prediction.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
       },
       {
         "id": "RiskAssessment.prediction.extension:whenCodeableConcept",
