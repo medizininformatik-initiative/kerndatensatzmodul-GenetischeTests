@@ -6,16 +6,16 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore"
     ]
   },
-  "status": "available",
   "type": {
     "coding": [
       {
-        "code": "445295009",
         "system": "http://snomed.info/sct",
+        "code": "445295009",
         "display": "Blood specimen with edetic acid (specimen)"
       }
     ]
   },
+  "status": "available",
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient-2"
   },

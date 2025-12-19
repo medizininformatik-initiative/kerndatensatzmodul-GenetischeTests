@@ -1,0 +1,182 @@
+# Claude Code Configuration for MII Molekulargenetik Module
+# This file contains repository-specific configuration values used by slash commands
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Config Metadata
+# ═══════════════════════════════════════════════════════════════════════════════
+_meta:
+  version: "1.0.0"
+  last_updated: "2025-12-18"
+  min_command_version: "1.0.0"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Repository Identification
+# ═══════════════════════════════════════════════════════════════════════════════
+repository:
+  name: "kerndatensatzmodul-GenetischeTests"
+  owner: "medizininformatik-initiative"
+  module: "Molekulargenetik"
+  module_long: "Modul Molekulargenetischer Befundbericht"
+  package_id: "de.medizininformatikinitiative.kerndatensatz.molgen"
+  canonical: "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen"
+  ig_id: "mii-ig-molgen-de-v2026"
+  prefix: "molgen"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Git Branch Configuration
+# ═══════════════════════════════════════════════════════════════════════════════
+branches:
+  main: "main"
+  development: "dev"
+  release_prefix: "release/v"
+  feature_prefix: "feature/"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Build System Configuration
+# ═══════════════════════════════════════════════════════════════════════════════
+build:
+  system: "firely-bake"
+  sushi_command: "sushi ."
+  ig_publisher_command: "./_genonce.sh"
+  bake_config: "package.bake.yaml"
+  expected_file_count:
+    min: 120
+    max: 160
+  expected_size_kb:
+    min: 300
+    max: 500
+  exclude_from_package:
+    - ".claude/"
+    - ".bake/"
+    - "input/fsh/"
+    - "implementation-guides/"
+    - ".git/"
+    - "node_modules/"
+    - "output/"
+    - "staging/"
+    - "package.bake.yaml"
+    - "*.pdf"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Version Management
+# ═══════════════════════════════════════════════════════════════════════════════
+versioning:
+  pattern: "YYYY.0.0"
+  version_files:
+    - path: "package.json"
+      field: "version"
+      format: "json"
+    - path: "sushi-config.yaml"
+      field: "version"
+      format: "yaml"
+  release_labels:
+    development: "ci-build"
+    ballot: "ballot"
+    release_candidate: "trial-use"
+    production: "release"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CI/CD Configuration
+# ═══════════════════════════════════════════════════════════════════════════════
+ci:
+  workflow_name: "CI (FHIR Validation)"
+  artifact_name: "validation-output"
+  timeout_minutes: 10
+  poll_interval_seconds: 30
+  validation_history_dir: ".validation-history"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# File Paths
+# ═══════════════════════════════════════════════════════════════════════════════
+paths:
+  fsh_source: "input/fsh"
+  fsh_generated: "fsh-generated"
+  output: "output"
+  staging: "staging"
+  bake_output: ".bake"
+  ig_pages: "implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolGen"
+  plantuml_source: "input/images-source"
+  examples: "examples"
+  qa_rules: "qc/custom.rules.yaml"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Simplifier Publishing
+# ═══════════════════════════════════════════════════════════════════════════════
+simplifier:
+  project_url: "https://simplifier.net/medizininformatikinitiative-modulmolekulargenetischerbefundbericht"
+  guide_base_url: "https://simplifier.net/guide/MII-IG-Modul-MolGen-v2026-DE"
+  guide_url: "https://simplifier.net/guide/medizininformatikinitiative-modulmolekulargenetischerbefundbericht"
+  package_registry: "https://packages.simplifier.net/de.medizininformatikinitiative.kerndatensatz.molgen"
+  organization: "Medizininformatik Initiative"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Terminology Services
+# ═══════════════════════════════════════════════════════════════════════════════
+terminology:
+  server: "https://termserv.mii.medizininformatik-initiative.de/fhir"
+  fhir_version: "4.0.1"
+  code_systems:
+    - "http://snomed.info/sct"
+    - "http://loinc.org"
+    - "http://www.genenames.org/geneId"
+    - "http://varnomen.hgvs.org"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Module-Specific Configuration
+# ═══════════════════════════════════════════════════════════════════════════════
+module:
+  base_specification: "HL7 Clinical Genomics Reporting STU3"
+  key_dependencies:
+    - "de.basisprofil.r4"
+    - "de.medizininformatikinitiative.kerndatensatz.meta"
+    - "de.medizininformatikinitiative.kerndatensatz.base"
+    - "de.medizininformatikinitiative.kerndatensatz.biobank"
+    - "hl7.fhir.uv.genomics-reporting"
+  language: "de-DE"
+  maintainer:
+    name: "Medizininformatik Initiative"
+    url: "https://www.medizininformatik-initiative.de/"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Naming Conventions
+# ═══════════════════════════════════════════════════════════════════════════════
+naming:
+  profile_pattern: "MII_PR_MolGen_{ConceptName}"
+  profile_id_pattern: "mii-pr-molgen-{concept-name}"
+  profile_title_pattern: "MII PR MolGen {Human Name}"
+  extension_pattern: "MII_EX_MolGen_{ConceptName}"
+  extension_id_pattern: "mii-ex-molgen-{concept-name}"
+  valueset_pattern: "mii-vs-molgen-{concept-name}"
+  valueset_title_pattern: "MII VS MolGen {Human Name}"
+  codesystem_pattern: "mii-cs-molgen-{concept-name}"
+  codesystem_title_pattern: "MII CS MolGen {Human Name}"
+  example_pattern: "mii-exa-molgen-{concept-name}"
+  example_title_pattern: "MII EXA MolGen {Human Name}"
+  file_pattern: "mii-{type}-molgen-{concept-name}.fsh"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Validation Configuration
+# ═══════════════════════════════════════════════════════════════════════════════
+validation:
+  advisor_config: "input/data/advisor.json"
+  commands:
+    sushi: "sushi ."
+    ig_publisher: "./_genonce.sh"
+    firely_terminal: "fhir validate output/ --version 4.0.1 --tx https://termserv.mii.medizininformatik-initiative.de/fhir"
+  acceptable_errors:
+    - "Terminology_TX_Display"
+    - "Wrong_Display_Name"
+  error_thresholds:
+    critical: 0
+    high: 10
+    medium: 50
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# External Resources
+# ═══════════════════════════════════════════════════════════════════════════════
+resources:
+  mii_url: "https://www.medizininformatik-initiative.de/"
+  github_url: "https://github.com/medizininformatik-initiative/kerndatensatzmodul-GenetischeTests"
+  fhir_spec: "http://hl7.org/fhir/R4/"
+  genomics_reporting: "http://hl7.org/fhir/uv/genomics-reporting/"
+  release_workflow: "https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow"
