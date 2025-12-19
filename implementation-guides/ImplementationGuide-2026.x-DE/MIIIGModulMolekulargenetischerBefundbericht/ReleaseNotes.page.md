@@ -3,6 +3,22 @@ topic: ReleaseNotes
 ---
 # Release Notes
 
+## 2026.0.4
+
+### Package Build & Version Consistency Fix
+
+**Problem**: v2026.0.3 Package auf Simplifier enthielt unerwünschte Text-Dateien (FSH-Quelldateien, Markdown, etc.)
+
+**Behebung**:
+- **Versionskonsistenz**: CapabilityStatement und alle SearchParameters verwenden jetzt das zentrale `Version`-Ruleset
+- **CapabilityStatement**: Hardcodierte Version `2026.0.0-alpha` durch `* insert Version` ersetzt
+- **SearchParameters**: `* insert Version` zu allen 6 aktiven SearchParameter-Instanzen hinzugefügt
+- **SupportProfile URLs**: Alle kanonischen URLs im CapabilityStatement auf `|2026.0.4` aktualisiert
+
+**Technische Details**:
+- Lokaler Package-Build enthält ausschließlich JSON-Ressourcen (korrekt)
+- Simplifier-Pipeline muss korrekten Bake-Workflow verwenden
+
 ## 2026.0.3
 
 ### Maintenance Release

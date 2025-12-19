@@ -18,7 +18,7 @@
   "status": "active",
   "experimental": false,
   "date": "2024-11-08",
-  "version": "2026.0.0-alpha",
+  "version": "2026.0.4",
   "description": "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul MolGen der Medizininformatik Initiative zu implementieren.",
   "jurisdiction": [
     {
@@ -51,7 +51,7 @@
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test|2026.0.0-alpha"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test|2026.0.4"
           ],
           "_supportedProfile": [
             {
@@ -206,7 +206,7 @@
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht|2026.0.0-alpha"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht|2026.0.4"
           ],
           "_supportedProfile": [
             {
@@ -427,14 +427,14 @@
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/Observation",
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation|2026.0.0-alpha",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation|2026.0.0-alpha",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2026.0.0-alpha",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz|2026.0.0-alpha",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation|2026.0.4",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation|2026.0.4",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2026.0.4",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz|2026.0.4",
             "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp|2026.0.0-alpha",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast|2026.0.0-alpha",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet|2026.0.0-alpha"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp|2026.0.4",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast|2026.0.4",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet|2026.0.4"
           ],
           "_supportedProfile": [
             {
@@ -920,8 +920,8 @@
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/Procedure",
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study|2026.0.0-alpha",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.0-alpha"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study|2026.0.4",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.4"
           ],
           "_supportedProfile": [
             {
@@ -1062,7 +1062,7 @@
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/RiskAssessment",
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score|2026.0.0-alpha"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score|2026.0.4"
           ],
           "_supportedProfile": [
             {
@@ -1173,8 +1173,8 @@
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/Task",
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung|2026.0.0-alpha",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme|2026.0.0-alpha"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung|2026.0.4",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme|2026.0.4"
           ],
           "_supportedProfile": [
             {
@@ -1403,7 +1403,7 @@
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese|2026.0.0-alpha"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese|2026.0.4"
           ],
           "_supportedProfile": [
             {

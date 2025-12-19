@@ -126,6 +126,7 @@ Instance: mii-sp-molgen-genomic-study-analysis-specimen
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
+* insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-Specimen"
 * name = "SP_MII_MolGen_GenomicStudyAnalysis_Specimen"
 * status = #active
@@ -142,6 +143,7 @@ Instance: mii-sp-molgen-genomic-study-analysis-method
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
+* insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-MethodType"
 * name = "SP_MII_MolGen_GenomicStudyAnalysis_MethodType"
 * status = #active
@@ -157,6 +159,7 @@ Instance: mii-sp-molgen-genomic-study-analysis-regions-studied
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
+* insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-RegionsStudied"
 * name = "SP_MII_MolGen_GenomicStudyAnalysis_RegionsStudied"
 * status = #active
@@ -172,6 +175,7 @@ Instance: mii-sp-molgen-genomic-study-analysis-device
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
+* insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-Device"
 * name = "SP_MII_MolGen_GenomicStudyAnalysis_Device"
 * status = #active
@@ -189,6 +193,7 @@ Instance: mii-sp-molgen-diagnostic-report-genomic-study
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
+* insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/DiagnosticReport-GenomicStudy"
 * name = "SP_MII_MolGen_DiagnosticReport_GenomicStudy"
 * status = #active
@@ -205,6 +210,7 @@ Instance: mii-sp-molgen-diagnostic-report-recommended-action
 InstanceOf: SearchParameter
 Usage: #definition
 * insert SP_Publisher
+* insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/DiagnosticReport-RecommendedAction"
 * name = "SP_MII_MolGen_DiagnosticReport_RecommendedAction"
 * status = #active
