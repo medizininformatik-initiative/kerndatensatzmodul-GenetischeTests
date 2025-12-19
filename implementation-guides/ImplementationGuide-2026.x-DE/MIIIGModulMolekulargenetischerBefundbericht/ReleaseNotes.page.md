@@ -9,9 +9,18 @@ topic: ReleaseNotes
 
 **Dependency Updates**
 
-- **kerndatensatz.diagnose**: Added dependency `de.medizininformatikinitiative.kerndatensatz.diagnose#2025.0.x`
-- **kerndatensatz.biobank**: Updated to `2026.0.0-ballot`
-- **kerndatensatz.base**: Removed from sushi-config (transitive dependency via meta)
+- **kerndatensatz.biobank**: Updated to `2026.0.x` (flexible versioning)
+
+**Current Dependencies**
+
+| Package | Version |
+|---------|---------|
+| `hl7.fhir.uv.genomics-reporting` | 3.0.x |
+| `de.medizininformatikinitiative.kerndatensatz.meta` | 2026.0.x |
+| `de.medizininformatikinitiative.kerndatensatz.base` | 2026.0.x |
+| `de.medizininformatikinitiative.kerndatensatz.biobank` | 2026.0.x |
+| `de.basisprofil.r4` | 1.5.x |
+| `hl7.terminology.r4` | 6.1.x |
 
 **Package Build**
 
