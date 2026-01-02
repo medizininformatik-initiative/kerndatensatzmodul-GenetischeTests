@@ -22,7 +22,16 @@
       "Bash(gh:*)",
       "Bash(test:*)",
       "Bash(ls:*)",
-      "Bash(wc:*)"
+      "Bash(wc:*)",
+      "Bash(while read link)",
+      "Bash(do if [ -n \"$link\" ])",
+      "Bash([ ! -e \"$link\" ])",
+      "Bash(then echo \"MISSING: $link\")",
+      "Bash(do)",
+      "Bash(if [ ! -e \"$link\" ])",
+      "Bash(then)",
+      "Bash(echo:*)",
+      "Bash(else)"
     ],
     "deny": []
   },
