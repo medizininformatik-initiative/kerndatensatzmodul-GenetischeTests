@@ -7,7 +7,7 @@ Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatens
 |Veröffentlichung|     |
 |---------|--------------|
 |  Datum  | 19.12.2025  |
-|  Version| 2026.0.4        |
+|  Version| 2026.0.4      |
 |  Status | active       |
 |  Realm  | DE           |
 
