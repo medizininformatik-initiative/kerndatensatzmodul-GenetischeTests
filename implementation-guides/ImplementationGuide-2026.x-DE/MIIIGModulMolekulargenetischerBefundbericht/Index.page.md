@@ -123,26 +123,9 @@ Obwohl diese Publikation mit größter Sorgfalt erstellt wurde, können die Auto
 
 #### 📚 Terminologie
 - {{pagelink:TerminologieIndex}} - Terminologie-Dokumentation
-- {{pagelink:Terminologien}} - Verwendete Terminologien
-- {{pagelink:CodeSystems}} - Code-Systeme
-- {{pagelink:ValueSets}} - Wertemengen
-
-##### Spezielle Terminologien
-- {{pagelink:HGNCValueSet}} - Gen-Nomenklatur
-- {{pagelink:HGVSValueSet}} - Varianten-Nomenklatur
-- {{pagelink:DNAChangeType}} - DNA-Veränderungstypen
-- {{pagelink:MolecularConsequenceTerminologie}} - Molekulare Konsequenzen
-- {{pagelink:FunctionalEffect}} - Funktionelle Effekte
-- {{pagelink:VariantInheritance}} - Vererbungsmuster von Varianten
-- {{pagelink:ConditionInheritancePattern}} - Krankheitsvererbungsmuster
-- {{pagelink:VariantConfidenceStatus}} - Konfidenzstatus
-- {{pagelink:GeneticTherapeuticImplications}} - Therapeutische Implikationen
-- {{pagelink:EvidenceLevelExamples}} - Evidenzlevel
-- {{pagelink:ClinVarEvidenceLevel}} - ClinVar Evidenz
-- {{pagelink:PharmGKBEvidenceLevel}} - PharmGKB Evidenz
-- {{pagelink:HighLowCodes}} - Hoch/Niedrig-Codes
-- {{pagelink:TBDCodes}} - Noch zu definierende Codes
-- {{pagelink:TBDValueSet}} - Noch zu definierende ValueSets
+- {{pagelink:Terminologien}} - Externe Terminologien
+- {{pagelink:MII-ValueSets}} - MII ValueSets
+- {{pagelink:ClinicalGenomics}} - Clinical Genomics Terminologien
 
 #### ⚠️ Veraltete Profile
 - ErgebnisZusammenfassung - (STU2, veraltet)
