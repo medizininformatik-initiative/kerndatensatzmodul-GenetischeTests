@@ -8,24 +8,42 @@
 ## Your Task
 Build a FHIR package tarball from the current IG project using Firely Bake and optionally publish to package registry.
 
+**Module Configuration**: This command reads module-specific configuration from `.claude/config.json` (`ig_export` section).
+
 **CRITICAL**: Use `fhir bake` to create package structure, NOT `npm pack`. The npm pack approach packages the entire repository instead of just FHIR resources.
 
-### Step 1: Pre-build Checks
+### Step 1: Load Module Configuration
+
+Read configuration from `.claude/config.json`:
+
+```bash
+# Extract required values from config
+PACKAGE_NAME=$(jq -r '.ig_export.package_name' .claude/config.json)
+VERSION=$(jq -r '.ig_export.version' .claude/config.json)
+RESOURCE_PREFIX=$(jq -r '.ig_export.resource_prefix' .claude/config.json)
+MODULE_ID=$(jq -r '.ig_export.module_id' .claude/config.json)
+
+echo "Building package: $PACKAGE_NAME version $VERSION"
+```
+
+**Fallback if jq not available**: Read from `sushi-config.yaml` directly.
+
+### Step 2: Pre-build Checks
 1. Verify current directory is project root
 2. Check for required files:
    - `sushi-config.yaml`
    - `package.bake.yaml`
    - `input/fsh/` directory
 3. Check git status to ensure clean state or warn about uncommitted changes
-4. Get current version from `sushi-config.yaml`
+4. Verify version matches between `.claude/config.json` and `sushi-config.yaml`
 
-### Step 2: Clean Previous Build Artifacts
+### Step 3: Clean Previous Build Artifacts
 Clean output directories to ensure fresh build:
 ```bash
 rm -rf output/ staging/ .bake/
 ```
 
-### Step 3: Run Firely Bake to Build Package Structure
+### Step 4: Run Firely Bake to Build Package Structure
 Execute Firely Bake to:
 - Compile FSH to FHIR resources (if not already compiled)
 - Transform resources to JSON
@@ -39,7 +57,7 @@ fhir bake package.bake.yaml
 
 **Expected Output**:
 - `.bake/package/` directory created
-- 130-140 JSON files organized:
+- JSON files organized:
   - Conformance resources (StructureDefinition, ValueSet, SearchParameter, etc.) at package root
   - Example instances in `examples/` subdirectory
   - package.json at root
@@ -55,55 +73,60 @@ info: Processing move-examples action...
 info: Package structure created in .bake/package/
 ```
 
-### Step 4: Create Package Tarball
-Create a tarball from the built package structure:
+### Step 5: Create Package Tarball
+Create a tarball from the built package structure using config values:
 
 ```bash
 # Navigate to .bake directory
 cd .bake
 
-# Create tarball with proper naming
-tar -czf ../de.medizininformatikinitiative.kerndatensatz.molgen-[VERSION].tgz package/
+# Create tarball with proper naming (using config values)
+tar -czf ../${PACKAGE_NAME}-${VERSION}.tgz package/
 
 # Return to project root
 cd ..
 ```
 
-**Replace [VERSION]** with the actual version from sushi-config.yaml (e.g., `2026.0.1`)
-
-**Example command for version 2026.0.1**:
+**Example output for molgen 2026.0.4**:
 ```bash
-cd .bake && tar -czf ../de.medizininformatikinitiative.kerndatensatz.molgen-2026.0.1.tgz package/ && cd ..
+cd .bake && tar -czf ../de.medizininformatikinitiative.kerndatensatz.molgen-2026.0.4.tgz package/ && cd ..
 ```
 
-### Step 5: Verify Package Contents
+### Step 6: Verify Package Contents
 Verify the package tarball contains the correct structure and resources:
 
 ```bash
+# Set tarball name from config
+TARBALL="${PACKAGE_NAME}-${VERSION}.tgz"
+
 # List tarball contents
-tar -tzf de.medizininformatikinitiative.kerndatensatz.molgen-[VERSION].tgz | head -20
+tar -tzf $TARBALL | head -20
 
 # Check file count
-tar -tzf de.medizininformatikinitiative.kerndatensatz.molgen-[VERSION].tgz | wc -l
+FILE_COUNT=$(tar -tzf $TARBALL | wc -l)
+echo "Total files: $FILE_COUNT"
 
 # Check package size
-ls -lh de.medizininformatikinitiative.kerndatensatz.molgen-[VERSION].tgz
+ls -lh $TARBALL
 ```
 
-**Expected Results**:
-- File count: 130-140 files (NOT 300+)
-- Package size: 350-400 KB (NOT 2+ MB)
-- Structure:
-  ```
-  package/package.json
-  package/StructureDefinition-mii-pr-molgen-variante.json
-  package/StructureDefinition-mii-pr-molgen-diagnostische-implikation.json
-  package/ValueSet-*.json
-  package/SearchParameter-*.json
-  package/examples/Patient-*.json
-  package/examples/Observation-*.json
-  ...
-  ```
+**Module-specific expected counts** (approximate):
+| Module | Files | Size (KB) |
+|--------|-------|-----------|
+| molgen | 130-140 | 350-400 |
+| seltene | 150-170 | 400-500 |
+| onkologie | 280-320 | 800-1000 |
+| proms | 120-140 | 300-400 |
+| mtb | 300-350 | 900-1200 |
+
+**Expected Structure**:
+```
+package/package.json
+package/StructureDefinition-${RESOURCE_PREFIX}-*.json
+package/ValueSet-*.json
+package/SearchParameter-*.json
+package/examples/*.json
+```
 
 **NO unwanted files**:
 - No `.claude/` directory
@@ -113,74 +136,77 @@ ls -lh de.medizininformatikinitiative.kerndatensatz.molgen-[VERSION].tgz
 
 ```bash
 # Verify no source code in package
-tar -tzf de.medizininformatikinitiative.kerndatensatz.molgen-[VERSION].tgz | grep -E '\.fsh$|\.claude|input/fsh'
+tar -tzf $TARBALL | grep -E '\.fsh$|\.claude|input/fsh'
 
 # Should return nothing (exit code 1)
 ```
 
-### Step 6: Extract and Verify Key Resources
+### Step 7: Extract and Verify Key Resources
 Verify critical resources are present with correct URLs and versions:
 
 ```bash
 # Extract package to temp location for verification
 mkdir -p /tmp/package-verify
-tar -xzf de.medizininformatikinitiative.kerndatensatz.molgen-[VERSION].tgz -C /tmp/package-verify
+tar -xzf $TARBALL -C /tmp/package-verify
 
-# Check Variante profile
-cat /tmp/package-verify/package/StructureDefinition-mii-pr-molgen-variante.json | grep -E '"url"|"version"'
-
-# Expected output:
-#   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante",
-#   "version": "[VERSION]",
+# Check package.json
+cat /tmp/package-verify/package/package.json | jq -r '.name, .version'
+# Expected: $PACKAGE_NAME and $VERSION
 
 # Count resource types
-ls /tmp/package-verify/package/StructureDefinition-*.json | wc -l  # Should be ~16-22
-ls /tmp/package-verify/package/ValueSet-*.json | wc -l             # Should be ~4
-ls /tmp/package-verify/package/examples/*.json | wc -l             # Should be ~100-110
+SD_COUNT=$(ls /tmp/package-verify/package/StructureDefinition-*.json 2>/dev/null | wc -l)
+VS_COUNT=$(ls /tmp/package-verify/package/ValueSet-*.json 2>/dev/null | wc -l)
+EX_COUNT=$(ls /tmp/package-verify/package/examples/*.json 2>/dev/null | wc -l)
+
+echo "StructureDefinitions: $SD_COUNT"
+echo "ValueSets: $VS_COUNT"
+echo "Examples: $EX_COUNT"
 
 # Cleanup
 rm -rf /tmp/package-verify
 ```
 
-### Step 7: Package Information Summary
-Display package build summary:
+### Step 8: Package Information Summary
+Display package build summary using config values:
+
 ```
 ## Package Build Summary
-**Package**: de.medizininformatikinitiative.kerndatensatz.molgen
-**Version**: [version]
-**Tarball**: de.medizininformatikinitiative.kerndatensatz.molgen-[version].tgz
-**Size**: [actual size, should be ~350-400 KB]
-**Total Files**: [count, should be 130-140]
+**Package**: $PACKAGE_NAME
+**Version**: $VERSION
+**Module**: $MODULE_ID
+**Tarball**: ${PACKAGE_NAME}-${VERSION}.tgz
+**Size**: [actual size from ls -lh]
+**Total Files**: $FILE_COUNT
 **Resources**:
-  - StructureDefinitions: [count]
-  - ValueSets: [count]
-  - SearchParameters: [count]
-  - Examples: [count]
+  - StructureDefinitions: $SD_COUNT
+  - ValueSets: $VS_COUNT
+  - Examples: $EX_COUNT
 **Location**: .bake/package/
-**Tarball Location**: ./de.medizininformatikinitiative.kerndatensatz.molgen-[version].tgz
+**Tarball Location**: ./${PACKAGE_NAME}-${VERSION}.tgz
 
 ✓ Package structure verified
-✓ Critical resources present (Variante, DiagnostischeImplikation, etc.)
 ✓ No source code in package
-✓ Size within expected range
+✓ Size within expected range for $MODULE_ID module
 ```
 
-### Step 8: Next Steps Suggestions
+### Step 9: Next Steps Suggestions
 Ask user if they want to:
 - Publish to FHIR package registry (`fhir publish-package [tarball]`)
 - Create GitHub release with package attached
 - Test package installation locally
-- Verify package in dependent projects (e.g., Onkologie module)
+- Verify package in dependent projects
 
 ## Options (Parse from command)
 - `--skip-verification`: Skip package verification steps
 - `--publish`: Automatically publish to package registry after build
-- `--version X.Y.Z`: Override version from config
+- `--version X.Y.Z`: Override version from config (also updates sushi-config.yaml)
+- `--dry-run`: Show what would be built without actually building
 
 ## Error Handling
+- If `.claude/config.json` missing or invalid, fall back to reading `sushi-config.yaml` directly
 - If `fhir bake` fails, show detailed error messages
-- If package size is >500 KB, warn about possible inclusion of unwanted files
-- If file count >200, warn about possible source code inclusion
+- Warn if package size significantly exceeds module's expected range
+- Warn if file count significantly exceeds module's expected range
 - Suggest fixes for common errors:
   - Missing `package.bake.yaml`: Check file exists
   - Bake action fails: Check source paths in bake file
@@ -191,8 +217,20 @@ Ask user if they want to:
 ❌ **DO NOT** use `npm pack` - packages entire repository
 ❌ **DO NOT** create tarball from project root
 ❌ **DO NOT** skip verification steps
+❌ **DO NOT** hardcode package names - read from config
 
 ✅ **DO** use `fhir bake package.bake.yaml`
 ✅ **DO** create tarball from `.bake/package/` directory
 ✅ **DO** verify package size and file count
 ✅ **DO** check for unwanted source files
+✅ **DO** read module config from `.claude/config.json`
+
+## Module-Specific Notes
+
+Each module's `.claude/config.json` provides:
+- `package_name`: Full package identifier
+- `version`: Current version
+- `resource_prefix`: Naming prefix for resources (e.g., `mii-pr-molgen`)
+- `module_id`: Short module identifier (e.g., `molgen`, `onko`, `pro`)
+
+This command adapts automatically to any MII module with proper config.
