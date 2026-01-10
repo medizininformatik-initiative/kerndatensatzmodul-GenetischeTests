@@ -1,0 +1,23 @@
+{
+  "ig_export": {
+    "module_id": "molgen",
+    "package_name": "de.medizininformatikinitiative.kerndatensatz.molgen",
+    "canonical_base": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen",
+    "guide_name": "mii-ig-molgen-de-v2026",
+    "version": "2026.0.4",
+    "resource_prefix": "mii-pr-molgen",
+    "dependencies": {
+      "hl7.fhir.r4.core": "4.0.1",
+      "hl7.terminology.r4": "7.0.0",
+      "de.basisprofil.r4": "1.5.4",
+      "de.medizininformatikinitiative.kerndatensatz.base": "2026.0.0"
+    },
+    "special_dependencies": {
+      "genomics_reporting": {
+        "package": "hl7.fhir.uv.genomics-reporting",
+        "version": "3.0.0",
+        "url_base": "https://hl7.org/fhir/uv/genomics-reporting/STU3/"
+      }
+    }
+  }
+}
