@@ -66,4 +66,4 @@ Diese Szenarien demonstrieren die Vielseitigkeit des Moduls:
 4. **Familienuntersuchung**: Kaskadenscreening bei hereditären Erkrankungen
 5. **Forschung**: Detaillierte Dokumentation für wissenschaftliche Auswertungen
 
-Aufgrund des breiten Einsatzes des Erweiterungsmoduls MOLEKULARGENETISCHER BEFUNDBERICHT sind diese Beispiele repräsentativ für die Anwendungen in den verschiedenen Konsortien.
+Aufgrund des breiten Einsatzes des KDS-Moduls Molekulargenetischer Befundbericht sind diese Beispiele repräsentativ für die Anwendungen in den verschiedenen Konsortien.

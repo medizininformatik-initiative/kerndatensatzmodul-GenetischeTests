@@ -8,7 +8,7 @@ topic: AnwendungsfaelleUebersicht
 
 ## Anwendungsfälle / Informationsmodell
 
-Das Erweiterungsmodul **Molekulargenetischer Befundbericht** ermöglicht die Darstellung der Befundung von pathologischen und Wildtyp-Genotypen basierend auf angeforderter sequenz- und nicht sequenzbasierten Tests.
+Das KDS-Modul **Molekulargenetischer Befundbericht** ermöglicht die Darstellung der Befundung von pathologischen und Wildtyp-Genotypen basierend auf angeforderter sequenz- und nicht sequenzbasierten Tests.
 
 Ein molekulargenetischer Befund enthält Informationen zu genetischen Charakteristika einer humanen Probe. Diese Probe kann aus „normalem“, transplantiertem oder reproduktivem Gewebe (Spermien, Eizellen) stammen oder aus „abnormalem“ Gewebe, wie beispielweise Tumorgewebe. Außerdem kann die Probe auch in Form von Körperflüssigkeiten wie Blut, Cerebrospinalflüssigkeit oder Urin vorliegen. 
 
@@ -20,4 +20,4 @@ Die genomische Interpretation ist eine Gesamtbeurteilung der Ergebnisse der geno
 Während einige oder alle dieser Informationen in dem Befund kommuniziert werden können, ist es wichtig anzumerken, dass der behandelnde Mediziner das Gesamtbild zum Patientenbefinden kennt, welches über Pathologie- und Laborbefunde, radiologische Befunde und Kenntnisse der PatientInnenhistorie sowie die Auswertung des molekulargenetischen Befundberichtes gebildet wird.
 
 
-Dieses Modul kann immer dann eingesetzt werden, wenn es keine spezifischen Repräsentationen in bereits vorhandenen dedizierten Modulen wie z. B. Labor gibt oder wenn diese aus verschiedensten Gründen nicht anwendbar sind. Es ist jeweils im Kontext einer spezifischen Anwendung zu prüfen, ob dieses Erweiterungsmodul eingesetzt werden kann und soll. 
+Dieses Modul kann immer dann eingesetzt werden, wenn es keine spezifischen Repräsentationen in bereits vorhandenen dedizierten Modulen wie z. B. Labor gibt oder wenn diese aus verschiedensten Gründen nicht anwendbar sind. Es ist jeweils im Kontext einer spezifischen Anwendung zu prüfen, ob dieses KDS-Modul eingesetzt werden kann und soll. 
