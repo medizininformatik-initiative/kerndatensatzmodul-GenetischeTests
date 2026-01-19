@@ -7,7 +7,7 @@ topic: BeschreibungModul
 Ausführliche Begründung der Modellierung und Intention der FHIR-Profile
 
 Die vorliegende Spezifikation beschreibt die
-FHIR-Repräsentation des Kerndatensatz-Erweiterungsmoduls **'Diagnostik | Molekulargenetischer Befundbericht'** der Medizininformatik-Initiative. 
+FHIR-Repräsentation des KDS-Moduls **'Molekulargenetischer Befundbericht'** der Medizininformatik-Initiative. 
 
 Im Folgenden werden die Use-Cases des Moduls sowie die dazugehörigen FHIR-Profile und Terminologie-Ressourcen in ihrer verbindlichen Form beschrieben.
 
