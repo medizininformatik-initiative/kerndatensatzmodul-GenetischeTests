@@ -1,0 +1,125 @@
+// TSO500 Panel Example - DeviceDefinition + Device Pattern for Panel Metadata
+//
+// Demonstrates how the Illumina TruSight Oncology 500 v2 (TSO500 v2) panel
+// is represented as a catalog entry (DeviceDefinition) plus a concrete
+// lab kit instance (Device) referenced from GenomicStudyAnalysis.
+//
+// Product reference: Illumina TSO500 v2 (RUO), product family includes
+// TSO500 v2 (FFPE tissue), TSO500 HT, and TSO500 ctDNA v2.
+// Specs source: illumina.com/products/by-type/clinical-research-products/trusight-oncology-500
+
+// === Catalog entry: TSO500 v2 Panel as DeviceDefinition ===
+Instance: mii-exa-molgen-devicedef-tso500
+InstanceOf: DeviceDefinition
+Usage: #example
+Title: "TruSight Oncology 500 v2 Panel (DeviceDefinition)"
+Description: "Katalogeintrag des TSO500 v2 Capture Panels: 523 Gene für SNV/Indel, 59 Gene für CNV, 23 Gene für DNA-Rearrangements, 55 Gene für RNA-Fusionen und Splice-Varianten; integrierte Biomarker TMB, MSI und HRD; Panelgröße 1,94 Mb"
+* identifier.system = "https://www.medizininformatik-initiative.de/fhir/sid/panel-catalog"
+* identifier.value = "TSO500-v2"
+* manufacturerString = "Illumina Inc."
+* deviceName[+].name = "TruSight Oncology 500 v2"
+* deviceName[=].type = #model-name
+* modelNumber = "20130527"
+* version.value = "2"
+* specialization.systemType = "Hybrid capture-based comprehensive genomic profiling panel for solid tumors (RUO)"
+* specialization.version = "523 SNV/Indel genes; 59 CNV genes; 23 DNA rearrangement genes; 55 RNA fusion/splice genes; TMB; MSI; HRD; 1.94 Mb panel size"
+* type.text = "Comprehensive genomic profiling capture panel"
+
+// === Concrete lot/inventory instance ===
+Instance: mii-exa-molgen-device-tso500-lot
+InstanceOf: Device
+Usage: #example
+Title: "TSO500 v2 Kit Lot 20240518"
+Description: "Konkrete Kit-Charge des TSO500 v2 Panels im Labor, verweist auf den Katalog-Eintrag in der DeviceDefinition"
+* identifier.system = "https://www.medizininformatik-initiative.de/fhir/sid/lab-devices"
+* identifier.value = "TSO500v2-LOT-20240518-A"
+* definition = Reference(mii-exa-molgen-devicedef-tso500)
+* manufacturer = "Illumina Inc."
+* modelNumber = "20130527"
+* lotNumber = "20240518-A"
+* expirationDate = "2026-12-31"
+* type.text = "Comprehensive genomic profiling capture panel (TSO500 v2)"
+* status = #active
+
+// === GenomicStudy: TSO500 NSCLC Profiling ===
+Instance: mii-exa-molgen-genomic-study-tso500
+InstanceOf: mii-pr-molgen-genomic-study
+Title: "Genomic Study TSO500 NSCLC"
+Description: "Komprehensives Tumor-Profiling mit TSO500 bei nicht-kleinzelligem Lungenkarzinom (NSCLC)"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study)
+* status = #completed
+* subject = Reference(mii-exa-molgen-patient)
+* extension[+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-ext"
+* extension[=].valueReference = Reference(mii-exa-molgen-genomic-study-analysis-tso500-libprep)
+* extension[+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-ext"
+* extension[=].valueReference = Reference(mii-exa-molgen-genomic-study-analysis-tso500-sequencing)
+
+// === Analysis 1: Library Preparation / Target Enrichment mit TSO500 ===
+Instance: mii-exa-molgen-genomic-study-analysis-tso500-libprep
+InstanceOf: mii-pr-molgen-genomic-study-analysis
+Title: "TSO500 Library Preparation"
+Description: "Library Preparation und Hybrid-Capture-Target-Enrichment mit dem TSO500 Panel"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis)
+* status = #completed
+* subject = Reference(mii-exa-molgen-patient)
+* extension[specimen].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen"
+* extension[specimen].valueReference = Reference(mii-exa-molgen-specimen-ffpe-tumor)
+* extension[device].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device"
+* extension[device].extension[device].url = "device"
+* extension[device].extension[device].valueReference = Reference(mii-exa-molgen-device-tso500-lot)
+* extension[device].extension[function].url = "function"
+* extension[device].extension[function].valueCodeableConcept = $LNC#LA26810-4 "DNA hybridization"
+* extension[method-type].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type"
+* extension[method-type].valueCodeableConcept = $LNC#LA26810-4 "DNA hybridization"
+* extension[regions].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-regions"
+* extension[regions].extension[description].url = "description"
+* extension[regions].extension[description].valueString = "TSO500 v2 Panel: 523 Gene für SNV/Indel, 59 für CNV, 23 für DNA-Rearrangements, 55 Gene für RNA-Fusionen/Splice-Varianten; integrierte Biomarker TMB/MSI/HRD. Unten repräsentatives, NSCLC-relevantes Subset; vollständige Genliste siehe DeviceDefinition mii-exa-molgen-devicedef-tso500"
+* extension[regions].extension[studied][+].url = "studied"
+* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:3236 "EGFR"
+* extension[regions].extension[studied][+].url = "studied"
+* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:6407 "KRAS"
+* extension[regions].extension[studied][+].url = "studied"
+* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:1097 "BRAF"
+* extension[regions].extension[studied][+].url = "studied"
+* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:7989 "NRAS"
+* extension[regions].extension[studied][+].url = "studied"
+* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:427 "ALK"
+* extension[regions].extension[studied][+].url = "studied"
+* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:10261 "ROS1"
+* extension[regions].extension[studied][+].url = "studied"
+* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:7029 "MET"
+* extension[regions].extension[studied][+].url = "studied"
+* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:9967 "RET"
+* extension[regions].extension[studied][+].url = "studied"
+* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:11998 "TP53"
+* extension[regions].extension[studied][+].url = "studied"
+* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:8975 "PIK3CA"
+* extension[regions].extension[studied][+].url = "studied"
+* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:3430 "ERBB2"
+* extension[regions].extension[studied][+].url = "studied"
+* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:3942 "FGFR2"
+* extension[regions].extension[studied][+].url = "studied"
+* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:3943 "FGFR3"
+
+// === Analysis 2: Sequenzierung auf NovaSeq 6000 ===
+Instance: mii-exa-molgen-genomic-study-analysis-tso500-sequencing
+InstanceOf: mii-pr-molgen-genomic-study-analysis
+Title: "TSO500 Sequencing on NovaSeq 6000"
+Description: "Paired-end Sequenzierung der TSO500-Library auf Illumina NovaSeq 6000"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis)
+* status = #completed
+* subject = Reference(mii-exa-molgen-patient)
+* extension[specimen].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen"
+* extension[specimen].valueReference = Reference(mii-exa-molgen-specimen-ffpe-tumor)
+* extension[device].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device"
+* extension[device].extension[device].url = "device"
+* extension[device].extension[device].valueReference = Reference(mii-exa-molgen-device-illumina-novaseq)
+* extension[method-type].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type"
+* extension[method-type].valueCodeableConcept = $LNC#LA26398-0 "Sequencing"
+* extension[metrics].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-metrics"
+* extension[metrics].extension[read-depth].url = "read-depth"
+* extension[metrics].extension[read-depth].valueQuantity = 1000 '1' "reads"
+* extension[metrics].extension[sequencing-coverage].url = "sequencing-coverage"
+* extension[metrics].extension[sequencing-coverage].valueQuantity = 95.0 '%' "percent"
+* extension[metrics].extension[metrics-description].url = "metrics-description"
+* extension[metrics].extension[metrics-description].valueString = "Mean target coverage 1000X; 95% der Zielregionen >250X; Q30 >90%; FFPE-bedingte Qualitätsfilter angewandt"

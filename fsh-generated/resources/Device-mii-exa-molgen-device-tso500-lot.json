@@ -1,0 +1,21 @@
+{
+  "resourceType": "Device",
+  "id": "mii-exa-molgen-device-tso500-lot",
+  "identifier": [
+    {
+      "system": "https://www.medizininformatik-initiative.de/fhir/sid/lab-devices",
+      "value": "TSO500v2-LOT-20240518-A"
+    }
+  ],
+  "definition": {
+    "reference": "DeviceDefinition/mii-exa-molgen-devicedef-tso500"
+  },
+  "manufacturer": "Illumina Inc.",
+  "modelNumber": "20130527",
+  "lotNumber": "20240518-A",
+  "expirationDate": "2026-12-31",
+  "type": {
+    "text": "Comprehensive genomic profiling capture panel (TSO500 v2)"
+  },
+  "status": "active"
+}

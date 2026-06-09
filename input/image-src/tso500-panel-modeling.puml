@@ -1,0 +1,87 @@
+@startuml MII_MolGen_TSO500_Panel_Modeling
+!theme plain
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam padding 4
+skinparam ranksep 70
+skinparam nodesep 55
+skinparam defaultFontName "Helvetica"
+
+' === MII Color Scheme (aligned with profile-relationships) ===
+skinparam rectangle {
+    BackgroundColor<<Catalog>> #B87333
+    BackgroundColor<<Device>> #6D8B95
+    BackgroundColor<<Study>> #3A5F7D
+    BackgroundColor<<Analysis>> #2C5282
+    BackgroundColor<<Clinical>> #5A8A8C
+    FontColor white
+    BorderColor #34495E
+    BorderThickness 2
+    RoundCorner 8
+    FontSize 12
+}
+
+skinparam arrow {
+    Color #34495E
+    Thickness 1.5
+    FontSize 10
+}
+
+skinparam note {
+    BackgroundColor #FAFAFA
+    BorderColor #34495E
+    FontSize 10
+}
+
+title <size:16><b>Panel-Metadaten als DeviceDefinition + Device</b></size>\n<size:12>Beispiel: Illumina TruSight Oncology 500 v2 (TSO500 v2)</size>\n
+
+' === Catalog layer ===
+rectangle "**DeviceDefinition**\n<size:11>TSO500 v2 Katalog-Eintrag</size>\n----\n<size:10>manufacturer: Illumina Inc.\nmodelNumber: 20130527\nversion: 2\n523 SNV/Indel · 59 CNV\n23 DNA-Rearrangements\n55 RNA-Fusionen\nTMB · MSI · HRD\n1,94 Mb Panelgröße</size>" as DD <<Catalog>>
+
+' === Physical instance layer ===
+rectangle "**Device**\n<size:11>TSO500 v2 Kit Lot</size>\n----\n<size:10>lotNumber: 20240518-A\nexpirationDate: 2026-12-31\nstatus: active</size>" as DEV_KIT <<Device>>
+
+rectangle "**Device**\n<size:11>Illumina NovaSeq 6000</size>\n----\n<size:10>serialNumber: SN12345\ntype: Sequenzer</size>" as DEV_SEQ <<Device>>
+
+' === FHIR workflow layer ===
+rectangle "**GenomicStudy**\n<size:11>TSO500 NSCLC Profiling</size>\n----\n<size:10>status: completed</size>" as GS <<Study>>
+
+rectangle "**GenomicStudyAnalysis**\n<size:11>Library Prep + Target Enrichment</size>\n----\n<size:10>method-type: DNA hybridization\nregions.studied: EGFR, KRAS,\nBRAF, ALK, ROS1, MET, RET,\nTP53, PIK3CA, ERBB2, ...</size>" as GSA_LIB <<Analysis>>
+
+rectangle "**GenomicStudyAnalysis**\n<size:11>Sequencing Run</size>\n----\n<size:10>method-type: Sequencing\nmetrics.read-depth: 1000x\ncoverage: 95% >250x</size>" as GSA_SEQ <<Analysis>>
+
+' === Clinical context ===
+rectangle "**Patient**" as PAT <<Clinical>>
+rectangle "**Specimen**\n<size:10>FFPE Tumorgewebe</size>" as SPEC <<Clinical>>
+
+' === Relationships ===
+DD <-- DEV_KIT : <size:10>Device.definition</size>
+
+GS --> GSA_LIB : <size:10>analysis-ext</size>
+GS --> GSA_SEQ : <size:10>analysis-ext</size>
+
+GSA_LIB --> DEV_KIT : <size:10>device-ext\nfunction: DNA hybridization</size>
+GSA_SEQ --> DEV_SEQ : <size:10>device-ext\nfunction: Sequencing</size>
+
+GSA_LIB --> SPEC : <size:10>specimen-ext</size>
+GSA_SEQ --> SPEC : <size:10>specimen-ext</size>
+
+GS --> PAT : <size:10>subject</size>
+
+' === Layout hints ===
+DD -[hidden]down- DEV_KIT
+DEV_KIT -[hidden]right- DEV_SEQ
+PAT -[hidden]right- SPEC
+
+' === Legend / Key concept ===
+note bottom of DD
+  <b>Trennung Katalog ↔ Instanz</b>
+  • <b>DeviceDefinition</b> = Produkt/Panel-Katalogeintrag
+    (wiederverwendbar, herstellerseitig)
+  • <b>Device</b> = konkrete Kit-Charge im Labor
+    (Lot, Ablaufdatum, Inventar-ID)
+  • <b>regions.studied</b> in der Analysis listet die
+    tatsächlich befundete Auswertung (Subset des Panels)
+end note
+
+@enduml
