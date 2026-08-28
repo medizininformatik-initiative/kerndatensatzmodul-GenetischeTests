@@ -5,7 +5,7 @@
 **Decision requested:** approve with the listed conditions — the ① decisions below must be answered first.
 **State:** complete through build and verification.
 **Published?** No package was released to the FHIR package registry. The rendered preview is private (local build at `output/`); pushing the branch publishes it to `gh-pages` under `branches/migration-2026.0.4-template-v0.13.0/`.
-**Recommendation:** merge after Gate A answers the licence question (DEC-1) and confirms the example-id rename (DEC-2) — everything else is either already correct or a pre-existing finding this migration only made visible.
+**Recommendation:** merge after Gate A answers the licence question (DEC-1), confirms the example-id rename (DEC-2) and reconciles the two CI systems (DEC-4) — everything else is either already correct or a pre-existing finding this migration only made visible.
 
 ## How to use this report
 
@@ -27,7 +27,7 @@ The module is the MII core-dataset module for molecular genetic findings: 16 pro
 - **Build:** SUSHI (the compiler that turns FSH into FHIR resources) reports **0 errors, 0 warnings**. The IG Publisher's separate QA report lists **68 errors / 961 warnings / 0 broken links**. Two tools, two counts — QA errors do not fail the build.
 - **QA acceptance bar:** no worse than the unmigrated source. The source's own last CI run reported **113 errors**; this build reports **68**. The two are not the same measurement (③ QA-1 explains), but nothing got worse and no error sits in a page this migration wrote.
 - **Verification:** **128 IDENTISCH · 70 DIVERGIERT · 50 NICHT PRÜFBAR** — the check ran and matched · ran and found a named difference · could not run. The third is **not** a pass. **42 of the 70 divergences are one systematic false positive** (③ QA-2), re-measured three ways; the rest are named individually below.
-- **Open for humans:** **3 decisions (①)**, **4 reviews (②)**, **8 QA items (③)**; **2 of them block publication** and are listed under *Sign-off*.
+- **Open for humans:** **4 decisions (①)**, **4 reviews (②)**, **8 QA items (③)**; **3 of them block publication** and are listed under *Sign-off*.
 - **Not checked by this migration:** clinical correctness of any prose, the genetics domain content itself, and whether the terminology bindings are the right ones. Unchanged from the source, and out of scope here.
 
 ## Where the evidence lives
@@ -154,6 +154,20 @@ Accepting these needs no action — merging accepts all of them. To reject one, 
 - **Effort · impact:** minutes · cosmetic.
 - **Reversible:** yes, config-only.
 - **Evidence:** `run.log 2.1 identity-read` (three `identity-contradiction:` lines) · `migration-log/identity-claims.tsv` · verification `F1-5451f2`.
+
+**DEC-4 — Two CI systems now run side by side, and the older one fails** · severity **high** · Gate A, executed at Gate D
+
+- **What it is:** The template brings ten workflows (build and preview, validation, convention check, release, dependency and security scans). The source's own `.github/workflows/main.yml` is still there and now **fails on every push**. It fails for a specific reason: it validates from the **committed** `fsh-generated/` — it never runs SUSHI itself — and then auto-commits `fsh-generated/` back to the branch. The template gitignores `fsh-generated/` as a build artefact (`.gitignore:42`), so that commit step errors with *"The following paths are ignored by one of your .gitignore files: fsh-generated"*.
+- **The side effect is the dangerous part.** Git keeps tracking files it already tracked, so `fsh-generated/` is now **half-tracked: 127 files tracked, 134 on disk**. The six examples FIX-3 renamed are **not** among the tracked ones — they were created after the `.gitignore` merge — and the six they replaced are gone. The committed copy no longer matches `input/fsh`, and `main.yml` validates exactly that copy.
+- **Where:** `.github/workflows/main.yml` · `.gitignore:42` · the 127 tracked files under `fsh-generated/`.
+- **If nobody acts:** every push to this branch and to `main` shows a red check; the committed `fsh-generated/` drifts further from the FSH with each change, and anything reading it — including that workflow's validation result — reports on stale resources.
+- **Options:** (a) **retire `main.yml`** and untrack `fsh-generated/` (`git rm -r --cached fsh-generated`) → the template's `validation.yml` and `module-release.yml` already cover validation and release; the Zulip notification and the release-tagging behaviour of `main.yml` must be checked against `module-release.yml` first · (b) keep `main.yml` and remove `fsh-generated/` from `.gitignore` → two systems keep running, and generated output stays in git · (c) leave both as they are → the red check and the drift stay.
+  **Default applied now:** (c) — nothing was removed. The skill's rule for a repository carrying both old and new scaffolding is *list, do not remove*: retiring the previous release automation is a governance decision, not a technical one.
+- **Next action:** compare `main.yml` against the template's `validation.yml`, `module-release.yml` and `go-publish.yml` feature by feature — especially release tagging and the Zulip notification — then take option (a) or (b).
+- **Who decides:** the module maintainer, with TF-KDS for the release-automation part.
+- **Effort · impact:** an hour to compare · blocks a clean release, because two release paths can both fire.
+- **Reversible:** yes — the workflow file and the tracked files are both restorable from git history.
+- **Evidence:** `run.log 9 ci-model-conflict` · the failing run on this branch, workflow "FHIR validation".
 
 ## ② Review queue (Gate B / C — someone must read)
 
@@ -291,6 +305,7 @@ Paste of `migration-log/qa-checklist.md` (GENERATED — regenerate, do not retyp
 - [ ] **DEC-1** licence decided, and `sushi-config.yaml`, a `LICENSE` file and `index.md` made to agree — **blocks publication**
 - [ ] **DEC-2** the six renamed example ids confirmed, and the mapping added to the changelog — **blocks publication**
 - [ ] **DEC-3** publisher spelling and copyright year decided
+- [ ] **DEC-4** the two CI systems reconciled and `fsh-generated/` un-half-tracked — **blocks a clean release**
 - [ ] `releaseLabel: ci-build` confirmed or changed to `Release`
 - [ ] the artefact set confirmed complete: 134 resources, canonical-URL and id diffs against the source empty apart from the six of DEC-2
 
