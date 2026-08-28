@@ -161,7 +161,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "name" : "MII_PR_MolGen_Mikrosatelliteninstabilitaet",
   "title" : "MII PR MolGen Mikrosatelliteninstabilität",
   "status" : "active",
-  "date" : "2026-08-28T15:28:23+00:00",
+  "date" : "2026-08-28T15:36:04+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

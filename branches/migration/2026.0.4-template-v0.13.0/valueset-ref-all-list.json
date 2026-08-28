@@ -25,17 +25,17 @@
     "sources" : ["2.16.840.1.113883.4.642.3.141"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-anforderung-genetischer-test.html" : "MII PR MolGen Anforderung genetischer Test",
-    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
-    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
-    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz",
     "StructureDefinition-mii-pr-molgen-mutationslast.html" : "MII PR MolGen Mutationslast",
-    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis",
+    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
     "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation",
-    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study",
     "StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html" : "MII PR MolGen Mikrosatelliteninstabilität",
     "StructureDefinition-mii-pr-molgen-variante.html" : "MII PR MolGen Variante",
-    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker"
+    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker",
+    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
+    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study",
+    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz",
+    "StructureDefinition-mii-pr-molgen-anforderung-genetischer-test.html" : "MII PR MolGen Anforderung genetischer Test",
+    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
@@ -65,8 +65,8 @@
     "uses" : {
     },
     "StructureDefinition-mii-pr-molgen-familienanamnese.html" : "MII PR MolGen Familienanamnese",
-    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis",
-    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study"
+    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study",
+    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-outcome",
@@ -94,14 +94,14 @@
     "sources" : ["2.16.840.1.113883.4.642.3.5"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
-    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
-    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz",
     "StructureDefinition-mii-pr-molgen-mutationslast.html" : "MII PR MolGen Mutationslast",
+    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
     "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation",
     "StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html" : "MII PR MolGen Mikrosatelliteninstabilität",
     "StructureDefinition-mii-pr-molgen-variante.html" : "MII PR MolGen Variante",
-    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker"
+    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker",
+    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
+    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/device-action",
@@ -115,8 +115,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.425"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis",
-    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study"
+    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study",
+    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/device-kind",
@@ -130,8 +130,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.208"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis",
-    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study"
+    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study",
+    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/diagnostic-report-status",
@@ -174,8 +174,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.109"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis",
-    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study"
+    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study",
+    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/history-absent-reason",
@@ -217,22 +217,22 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-anforderung-genetischer-test.html" : "MII PR MolGen Anforderung genetischer Test",
-    "StructureDefinition-mii-pr-molgen-familienanamnese.html" : "MII PR MolGen Familienanamnese",
-    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
-    "StructureDefinition-mii-pr-molgen-mutationslast.html" : "MII PR MolGen Mutationslast",
-    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis",
-    "StructureDefinition-mii-pr-molgen-polygener-risiko-score.html" : "MII PR MolGen Polygener Risiko Score",
-    "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation",
-    "StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.html" : "MII PR MolGen Empfohlene Folgemaßnahme",
-    "StructureDefinition-mii-pr-molgen-variante.html" : "MII PR MolGen Variante",
-    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker",
-    "StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.html" : "MII PR MolGen Molekulargenetischer Befundbericht",
-    "StructureDefinition-mii-pr-molgen-medikationsempfehlung.html" : "MII PR MolGen Medikationsempfehlung",
     "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
-    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz",
+    "StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html" : "MII PR MolGen Mikrosatelliteninstabilität",
+    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker",
+    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
+    "StructureDefinition-mii-pr-molgen-anforderung-genetischer-test.html" : "MII PR MolGen Anforderung genetischer Test",
+    "StructureDefinition-mii-pr-molgen-polygener-risiko-score.html" : "MII PR MolGen Polygener Risiko Score",
+    "StructureDefinition-mii-pr-molgen-familienanamnese.html" : "MII PR MolGen Familienanamnese",
+    "StructureDefinition-mii-pr-molgen-mutationslast.html" : "MII PR MolGen Mutationslast",
+    "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation",
+    "StructureDefinition-mii-pr-molgen-variante.html" : "MII PR MolGen Variante",
     "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study",
-    "StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html" : "MII PR MolGen Mikrosatelliteninstabilität"
+    "StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.html" : "MII PR MolGen Empfohlene Folgemaßnahme",
+    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz",
+    "StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.html" : "MII PR MolGen Molekulargenetischer Befundbericht",
+    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis",
+    "StructureDefinition-mii-pr-molgen-medikationsempfehlung.html" : "MII PR MolGen Medikationsempfehlung"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/medication-as-needed-reason",
@@ -260,14 +260,14 @@
     "sources" : ["2.16.840.1.113883.4.642.3.403"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
-    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
-    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz",
     "StructureDefinition-mii-pr-molgen-mutationslast.html" : "MII PR MolGen Mutationslast",
+    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
     "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation",
     "StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html" : "MII PR MolGen Mikrosatelliteninstabilität",
     "StructureDefinition-mii-pr-molgen-variante.html" : "MII PR MolGen Variante",
-    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker"
+    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker",
+    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
+    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
@@ -281,14 +281,14 @@
     "sources" : ["2.16.840.1.113883.4.642.3.396"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
-    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
-    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz",
     "StructureDefinition-mii-pr-molgen-mutationslast.html" : "MII PR MolGen Mutationslast",
+    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
     "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation",
     "StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html" : "MII PR MolGen Mikrosatelliteninstabilität",
     "StructureDefinition-mii-pr-molgen-variante.html" : "MII PR MolGen Variante",
-    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker"
+    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker",
+    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
+    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
@@ -302,14 +302,14 @@
     "sources" : ["2.16.840.1.113883.4.642.3.399"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
-    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
-    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz",
     "StructureDefinition-mii-pr-molgen-mutationslast.html" : "MII PR MolGen Mutationslast",
+    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
     "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation",
     "StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html" : "MII PR MolGen Mikrosatelliteninstabilität",
     "StructureDefinition-mii-pr-molgen-variante.html" : "MII PR MolGen Variante",
-    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker"
+    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker",
+    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
+    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
@@ -323,13 +323,13 @@
     "sources" : ["2.16.840.1.113883.4.642.3.395"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
-    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
-    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz",
     "StructureDefinition-mii-pr-molgen-mutationslast.html" : "MII PR MolGen Mutationslast",
+    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
     "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation",
     "StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html" : "MII PR MolGen Mikrosatelliteninstabilität",
-    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker"
+    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker",
+    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
+    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/observation-status",
@@ -343,15 +343,15 @@
     "sources" : ["2.16.840.1.113883.4.642.3.400"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
-    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
-    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz",
     "StructureDefinition-mii-pr-molgen-mutationslast.html" : "MII PR MolGen Mutationslast",
-    "StructureDefinition-mii-pr-molgen-polygener-risiko-score.html" : "MII PR MolGen Polygener Risiko Score",
+    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
     "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation",
     "StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html" : "MII PR MolGen Mikrosatelliteninstabilität",
     "StructureDefinition-mii-pr-molgen-variante.html" : "MII PR MolGen Variante",
-    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker"
+    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker",
+    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
+    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz",
+    "StructureDefinition-mii-pr-molgen-polygener-risiko-score.html" : "MII PR MolGen Polygener Risiko Score"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/participant-role",
@@ -379,10 +379,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.433"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-medikationsempfehlung.html" : "MII PR MolGen Medikationsempfehlung",
-    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis",
     "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study",
-    "StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.html" : "MII PR MolGen Empfohlene Folgemaßnahme"
+    "StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.html" : "MII PR MolGen Empfohlene Folgemaßnahme",
+    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis",
+    "StructureDefinition-mii-pr-molgen-medikationsempfehlung.html" : "MII PR MolGen Medikationsempfehlung"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/procedure-category",
@@ -396,8 +396,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.430"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis",
-    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study"
+    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study",
+    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/procedure-code",
@@ -426,8 +426,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.429"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis",
-    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study"
+    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study",
+    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/procedure-not-performed-reason",
@@ -441,8 +441,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.431"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis",
-    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study"
+    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study",
+    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/procedure-outcome",
@@ -456,8 +456,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.428"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis",
-    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study"
+    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study",
+    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/procedure-reason",
@@ -471,9 +471,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.432"],
     "uses" : {
     },
+    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study",
     "StructureDefinition-mii-pr-molgen-anforderung-genetischer-test.html" : "MII PR MolGen Anforderung genetischer Test",
-    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis",
-    "StructureDefinition-mii-pr-molgen-genomic-study.html" : "MII PR MolGen Genomic Study"
+    "StructureDefinition-mii-pr-molgen-genomic-study-analysis.html" : "MII PR MolGen Genomic Study Analysis"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/quantity-comparator",
@@ -502,14 +502,14 @@
     "sources" : ["2.16.840.1.113883.4.642.3.407"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
-    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
-    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz",
     "StructureDefinition-mii-pr-molgen-mutationslast.html" : "MII PR MolGen Mutationslast",
+    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
     "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation",
     "StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html" : "MII PR MolGen Mikrosatelliteninstabilität",
     "StructureDefinition-mii-pr-molgen-variante.html" : "MII PR MolGen Variante",
-    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker"
+    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker",
+    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
+    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
@@ -523,14 +523,14 @@
     "sources" : ["2.16.840.1.113883.4.642.3.397"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
-    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
-    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz",
     "StructureDefinition-mii-pr-molgen-mutationslast.html" : "MII PR MolGen Mutationslast",
+    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
     "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation",
     "StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html" : "MII PR MolGen Mikrosatelliteninstabilität",
     "StructureDefinition-mii-pr-molgen-variante.html" : "MII PR MolGen Variante",
-    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker"
+    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker",
+    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
+    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/report-codes",
@@ -572,9 +572,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.115"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-medikationsempfehlung.html" : "MII PR MolGen Medikationsempfehlung",
+    "StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.html" : "MII PR MolGen Empfohlene Folgemaßnahme",
     "StructureDefinition-mii-pr-molgen-anforderung-genetischer-test.html" : "MII PR MolGen Anforderung genetischer Test",
-    "StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.html" : "MII PR MolGen Empfohlene Folgemaßnahme"
+    "StructureDefinition-mii-pr-molgen-medikationsempfehlung.html" : "MII PR MolGen Medikationsempfehlung"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/request-status",
@@ -659,8 +659,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.1240"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-medikationsempfehlung.html" : "MII PR MolGen Medikationsempfehlung",
-    "StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.html" : "MII PR MolGen Empfohlene Folgemaßnahme"
+    "StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.html" : "MII PR MolGen Empfohlene Folgemaßnahme",
+    "StructureDefinition-mii-pr-molgen-medikationsempfehlung.html" : "MII PR MolGen Medikationsempfehlung"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/task-status",
@@ -674,8 +674,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.790"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-medikationsempfehlung.html" : "MII PR MolGen Medikationsempfehlung",
-    "StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.html" : "MII PR MolGen Empfohlene Folgemaßnahme"
+    "StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.html" : "MII PR MolGen Empfohlene Folgemaßnahme",
+    "StructureDefinition-mii-pr-molgen-medikationsempfehlung.html" : "MII PR MolGen Medikationsempfehlung"
   },
   {
     "url" : "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/condition-inheritance-mode-vs",
@@ -714,9 +714,9 @@
     "uses" : {
     },
     "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel",
+    "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation",
     "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
-    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz",
-    "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation"
+    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz"
   },
   {
     "url" : "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/functional-effect-vs",
@@ -765,10 +765,10 @@
     "http://www.genenames.org"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
     "StructureDefinition-mii-pr-molgen-mutationslast.html" : "MII PR MolGen Mutationslast",
-    "StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html" : "MII PR MolGen Mikrosatelliteninstabilität",
+    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
     "StructureDefinition-mii-pr-molgen-variante.html" : "MII PR MolGen Variante",
+    "StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html" : "MII PR MolGen Mikrosatelliteninstabilität",
     "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekulare Biomarker"
   },
   {
@@ -781,8 +781,8 @@
     "systems" : ["http://varnomen.hgvs.org"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz",
-    "StructureDefinition-mii-pr-molgen-variante.html" : "MII PR MolGen Variante"
+    "StructureDefinition-mii-pr-molgen-variante.html" : "MII PR MolGen Variante",
+    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz"
   },
   {
     "url" : "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/molecular-biomarker-category-vs",
