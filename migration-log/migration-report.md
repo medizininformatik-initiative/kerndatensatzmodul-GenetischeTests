@@ -27,7 +27,7 @@ The module is the MII core-dataset module for molecular genetic findings: 16 pro
 - **Build:** SUSHI (the compiler that turns FSH into FHIR resources) reports **0 errors, 0 warnings**. The IG Publisher's separate QA report lists **68 errors / 961 warnings / 0 broken links**. Two tools, two counts — QA errors do not fail the build.
 - **QA acceptance bar:** no worse than the unmigrated source. The source's own last CI run reported **113 errors**; this build reports **68**. The two are not the same measurement (③ QA-1 explains), but nothing got worse and no error sits in a page this migration wrote.
 - **Verification:** **128 IDENTISCH · 70 DIVERGIERT · 50 NICHT PRÜFBAR** — the check ran and matched · ran and found a named difference · could not run. The third is **not** a pass. **42 of the 70 divergences are one systematic false positive** (③ QA-2), re-measured three ways; the rest are named individually below.
-- **Open for humans:** **4 decisions (①)**, **4 reviews (②)**, **8 QA items (③)**; **3 of them block publication** and are listed under *Sign-off*.
+- **Open for humans:** **4 decisions (①)**, **4 reviews (②)**, **9 QA items (③)**; **3 of them block publication** and are listed under *Sign-off*.
 - **Not checked by this migration:** clinical correctness of any prose, the genetics domain content itself, and whether the terminology bindings are the right ones. Unchanged from the source, and out of scope here.
 
 ## Where the evidence lives
@@ -97,7 +97,7 @@ The module is the MII core-dataset module for molecular genetic findings: 16 pro
 
 ## Applied fixes (already changed — a human confirms or reverts)
 
-Accepting these needs no action — merging accepts all of them. To reject one, revert it on branch `migration/2026.0.4-template-v0.13.0`. **Revert newest first:** FIX-5, FIX-4, FIX-3, FIX-2, FIX-1.
+Accepting these needs no action — merging accepts all of them. To reject one, revert it on branch `migration/2026.0.4-template-v0.13.0`. **Revert newest first:** FIX-6, FIX-5, FIX-4, FIX-3, FIX-2, FIX-1.
 
 | # | Fix, in plain words | Commit | Also touches (beyond the headline) | If reverted | Independent? |
 |---|---|---|---|---|---|
@@ -106,6 +106,7 @@ Accepting these needs no action — merging accepts all of them. To reject one, 
 | FIX-3 | Shortened six DiagnosticReport **example** ids so the package can be built at all | `e0f0dcd` | `input/fsh/{MolekulargenetischerBefundbericht,additional-examples,GenomicStudy,ARCHIVED-STU2-Examples}.fsh` and 3 references in `guidance.md` (both languages) | **the IG Publisher hard-fails** — see DEC-2 | yes |
 | FIX-4 | Cleared every build, link and rendering finding the publisher raised | `86d6f39` | the 21-entry `special-url` list in `sushi-config.yaml`; 20 link repairs across 8 pages; 30 FQL blocks removed from the intro notes; `implementation-guides/README.md`; the licence wording on `index.md` and `metadata.md` in both languages | 42 URL-mismatch errors and 20 broken links return | yes |
 
+| FIX-6 | Anchored the `index.md` ignore pattern and restored ten template READMEs | `4ca54b5` | `.gitignore` line 8; 10 README files; the two `index.md` files become tracked for the first time | the guide ships with no home page and CI fails on a fresh checkout | yes |
 | FIX-5 | Restored the 27 example references the transform had dropped, and cleared the two CI checks | `78a9ae0` | 26 intro notes (13 profiles × 2 languages) gain a marked *Examples* section; the phrase "the German source" reworded to "the German page" across 12 English files; 3 reviewed ALLOW entries added to `scripts/language-model-check.sh` | eight intro notes keep captions that point at nothing, and the language-model CI check fails | yes |
 
 **Required, not optional:** FIX-3 — reverting it only reproduces a hard build failure. It is listed for completeness, not as a choice, but the id change itself **is** a decision (DEC-2).
@@ -213,6 +214,16 @@ The one surviving pre/post regression: `narrative_sources.dual_source` went `fal
 **QA-5 — 44 example declarations sit inside block comments** · owner: the module's technical authors
 
 The FSH declares 166 `Instance:` but SUSHI imports 122. The 44 difference sits inside `/* … */` blocks in six files (`UntersuchteRegion.fsh` 23, `ErgebnisZusammenfassung.fsh`, `MolekulareKonsequenz.fsh`, `MolekularerBiomarker.fsh`, `additional-examples.fsh`, `ARCHIVED-STU2-Examples.fsh`). This is pre-existing state from the module's documented STU2→STU3 migration, untouched here. Artefact conservation was therefore measured against the **134 generated** resources, not the 166 declarations. **Evidence:** `run.log 1 source-inventory-findings`.
+
+**QA-9 — Two unanchored ignore patterns, one of which would have shipped a guide with no home page** · owner: nobody (fixed), but worth reading
+
+The most consequential finding of the whole migration, and it was invisible to every local check.
+
+The module's own `.gitignore` carried **`index.md`** at line 8, unanchored. Git applies such a pattern **at every depth**. Before the migration the repository had no `input/pagecontent/`, so it matched nothing. Afterwards it silently swallowed `input/pagecontent/index.md` **and** its German mirror — the guide's home page in both languages. Both files were written, rendered correctly in three local builds, and **never committed**. CI, which checks out from git, failed with *"Template based HTML file index.html is missing source file index.md"*. A build that is green locally and red on a fresh checkout is exactly what this class of defect looks like. The pattern is now anchored to `/index.md`.
+
+The same class, on the migration's own side: the vendoring used `rsync --exclude=README.md` to protect the module's root README, and rsync also applies that at every depth — so **ten** of the template's nested READMEs were never copied, including `input/fsh/rulesets/README.md`, which documents the ruleset library. All ten are restored.
+
+Both were found by comparing the **committed** tree against what the build needs, not by building. After the fixes, re-verified from a fresh clone of the branch: all 19 declared pages present in both languages, every menu entry has a page, 15 + 15 intro notes present, and no file under `input/` is ignored.
 
 **QA-7 — Twelve pages of this guide talk about the *Pathologie-Befund* module** · owner: the module's technical authors
 

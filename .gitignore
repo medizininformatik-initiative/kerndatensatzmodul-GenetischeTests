@@ -5,7 +5,13 @@ Thumbs.db
 
 temp.xml
 temp.json
-index.md 
+# ANCHORED to the repository root during the 2026-08-28 template migration.
+# This line used to read "index.md", unanchored, which git applies at EVERY depth.
+# Before the migration the repository had no input/pagecontent/, so it never mattered;
+# afterwards it silently swallowed the guide's home page in BOTH languages, and the
+# IG Publisher failed in CI with "Template based HTML file index.html is missing
+# source file index.md" while building green locally, where the untracked file exists.
+/index.md
 /input-cache
 /output
 /temp
