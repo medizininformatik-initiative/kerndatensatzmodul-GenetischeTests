@@ -126,7 +126,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-dia
   "name" : "MII_PR_MolGen_DiagnostischeImplikation",
   "title" : "MII PR MolGen Diagnostische Implikation",
   "status" : "active",
-  "date" : "2026-08-28T15:16:36+00:00",
+  "date" : "2026-08-28T15:28:23+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

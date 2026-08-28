@@ -76,7 +76,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-pol
   "name" : "MII_PR_MolGen_PolygenerRisikoScore",
   "title" : "MII PR MolGen Polygener Risiko Score",
   "status" : "active",
-  "date" : "2026-08-28T15:16:36+00:00",
+  "date" : "2026-08-28T15:28:23+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
