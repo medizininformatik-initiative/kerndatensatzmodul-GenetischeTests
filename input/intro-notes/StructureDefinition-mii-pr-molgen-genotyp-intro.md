@@ -35,7 +35,7 @@ The profile is derived from the profile [Genotype](http://hl7.org/fhir/uv/genomi
 
 **Search parameters**
 
-<!-- TODO:REVIEW the German source names the "Modul Pathologie-Befund" (pathology report module) here, although this is the molecular genetics module - this looks like a copy-paste error in the source. Translated literally. -->
+<!-- TODO:REVIEW the German page names the "Modul Pathologie-Befund" (pathology report module) here, although this is the molecular genetics module - this looks like a copy-paste error in the source. Translated literally. -->
 The following search parameters are relevant for the Pathologie-Befund (pathology report) module, also in combination:
 
 1. The search parameter ```_id``` MUST be supported:
@@ -215,10 +215,21 @@ The following search parameters are relevant for the Pathologie-Befund (patholog
     Usage notes: Further information on searching by "status" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#token).
 
 ---
-<!-- TODO:REVIEW the German source carries an example caption with no example rendered beneath it - the Simplifier example directive was dropped during migration. The caption is translated as it stands; nothing was added. -->
+<!-- The Simplifier example directive that used to render beneath this caption was dropped: the IG Publisher renders each example on its own page. The examples this page referenced are linked in the "Examples" section at the end. -->
 **Examples**
 
 Example 1: BRAF
  
 
 ---
+
+<!-- DERIVED:bridge source=the same profile page gate=B -->
+### Examples
+
+> **Written by the migration, not carried from the source.** The Simplifier guide
+> rendered these examples inline on this page; the IG Publisher renders each one on
+> its own page instead, so they are listed here as links, in the order the source had
+> them and with the captions it gave them. Nothing was added or dropped.
+{: .ig-highlight .ig-highlight-grey}
+
+- [`mii-exa-molgen-genotyp-1`](Observation-mii-exa-molgen-genotyp-1.html) — Example 1: BRAF

@@ -88,3 +88,14 @@ The following search parameters are relevant for the GenomicStudy profile, also 
 Example 1: GenomicStudy for panel sequencing
 
 ---
+
+<!-- DERIVED:bridge source=the same profile page gate=B -->
+### Examples
+
+> **Written by the migration, not carried from the source.** The Simplifier guide
+> rendered these examples inline on this page; the IG Publisher renders each one on
+> its own page instead, so they are listed here as links, in the order the source had
+> them and with the captions it gave them. Nothing was added or dropped.
+{: .ig-highlight .ig-highlight-grey}
+
+- [`mii-exa-molgen-genomic-study-1`](Procedure-mii-exa-molgen-genomic-study-1.html) — Example 1: GenomicStudy für Panel-Sequenzierung

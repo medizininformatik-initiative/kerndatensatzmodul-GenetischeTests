@@ -132,3 +132,18 @@ Beispiel des in der Anforderung 2 referenzierten Specimens (Probe) basierend auf
 ---
 
 Beispiel der Anforderung für das Risk-Panel
+
+<!-- DERIVED:bridge source=the same profile page gate=B -->
+### Beispiele
+
+> **Von der Migration geschrieben, nicht aus der Quelle übernommen.** Der
+> Simplifier-Leitfaden hat diese Beispiele auf dieser Seite eingebettet; der IG
+> Publisher rendert jedes auf einer eigenen Seite. Sie stehen deshalb hier als
+> Links, in der Reihenfolge der Quelle und mit deren Bildunterschriften. Es wurde
+> nichts ergänzt und nichts weggelassen.
+{: .ig-highlight .ig-highlight-grey}
+
+- [`mii-exa-molgen-anforderung-1`](ServiceRequest-mii-exa-molgen-anforderung-1.html) — Anforderung 1 - BRAF
+- [`mii-exa-molgen-specimen-1`](Specimen-mii-exa-molgen-specimen-1.html) — Beispiel des in der Anforderung 1 referenzierten Specimens (Probe) basierend auf dem Profil des MII Moduls Biobank.
+- [`mii-exa-molgen-anforderung-2`](ServiceRequest-mii-exa-molgen-anforderung-2.html) — Anforderung 2 - NIPBL
+- [`mii-exa-molgen-specimen-2`](Specimen-mii-exa-molgen-specimen-2.html) — Beispiel des in der Anforderung 2 referenzierten Specimens (Probe) basierend auf dem Profil des MII Moduls Biobank.

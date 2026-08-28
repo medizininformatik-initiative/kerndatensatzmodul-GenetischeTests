@@ -25,7 +25,7 @@ This profile uses three specific extensions for detailed information about kinsh
 - **Verwandtschaftsverhältnis** (relationship type): specific relationship (natural child, adopted)
 - **Familiäre Linie** (family line): maternal or paternal line
 
-<!-- TODO:REVIEW the German source names the target extensions.html#extensions-der-familienanamnese as bare text rather than as a markdown link; reproduced unchanged. -->
+<!-- TODO:REVIEW the German page names the target extensions.html#extensions-der-familienanamnese as bare text rather than as a markdown link; reproduced unchanged. -->
 Detailed documentation and profiles of the extensions can be found on the extensions.html#extensions-der-familienanamnese page.
 
 ---
@@ -38,7 +38,7 @@ Detailed documentation and profiles of the extensions can be found on the extens
 
 **Search parameters**
 
-<!-- TODO:REVIEW the German source names the "Modul Pathologie-Befund" (pathology report module) here, although this is the genetic testing module; translated literally, presumed copy/paste error in the source. -->
+<!-- TODO:REVIEW the German page names the "Modul Pathologie-Befund" (pathology report module) here, although this is the genetic testing module; translated literally, presumed copy/paste error in the source. -->
 The following search parameters are relevant for the Pathologie-Befund (pathology report) module, also in combination:
 
 1. The search parameter ```_id``` MUST be supported:
@@ -73,7 +73,7 @@ The following search parameters are relevant for the Pathologie-Befund (patholog
 
     Usage notes: Further information on searching by "date" can be found in the [FHIR base specification - section "date"](http://hl7.org/fhir/R4/search.html#date).
 
-<!-- TODO:REVIEW the German source numbers this item "4" a second time, so the list runs 1,2,3,4,4,5,...; the numbering is reproduced verbatim. -->
+<!-- TODO:REVIEW the German page numbers this item "4" a second time, so the list runs 1,2,3,4,4,5,...; the numbering is reproduced verbatim. -->
 4. The search parameter "patient" MUST be supported:
 
     Examples:
@@ -133,3 +133,15 @@ The following search parameters are relevant for the Pathologie-Befund (patholog
   
 
 ---
+
+<!-- DERIVED:bridge source=the same profile page gate=B -->
+### Examples
+
+> **Written by the migration, not carried from the source.** The Simplifier guide
+> rendered these examples inline on this page; the IG Publisher renders each one on
+> its own page instead, so they are listed here as links, in the order the source had
+> them and with the captions it gave them. Nothing was added or dropped.
+{: .ig-highlight .ig-highlight-grey}
+
+- [`mii-exa-molgen-family-member-history-1`](FamilyMemberHistory-mii-exa-molgen-family-member-history-1.html) — **Examples**
+- [`mii-exa-molgen-family-member-history-2`](FamilyMemberHistory-mii-exa-molgen-family-member-history-2.html)

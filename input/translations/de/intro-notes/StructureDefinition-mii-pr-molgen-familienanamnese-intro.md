@@ -127,3 +127,16 @@ Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in K
   
 
 ---
+
+<!-- DERIVED:bridge source=the same profile page gate=B -->
+### Beispiele
+
+> **Von der Migration geschrieben, nicht aus der Quelle übernommen.** Der
+> Simplifier-Leitfaden hat diese Beispiele auf dieser Seite eingebettet; der IG
+> Publisher rendert jedes auf einer eigenen Seite. Sie stehen deshalb hier als
+> Links, in der Reihenfolge der Quelle und mit deren Bildunterschriften. Es wurde
+> nichts ergänzt und nichts weggelassen.
+{: .ig-highlight .ig-highlight-grey}
+
+- [`mii-exa-molgen-family-member-history-1`](FamilyMemberHistory-mii-exa-molgen-family-member-history-1.html) — **Examples**
+- [`mii-exa-molgen-family-member-history-2`](FamilyMemberHistory-mii-exa-molgen-family-member-history-2.html)

@@ -95,7 +95,7 @@ The following search parameters are relevant for the MolekulareKonsequenz profil
 
 --- 
 
-<!-- TODO:REVIEW the German source carries example captions with no example rendered beneath them - the Simplifier example directives were dropped during migration. The captions are translated as they stand; nothing was added. -->
+<!-- The Simplifier example directive that used to render beneath this caption was dropped: the IG Publisher renders each example on its own page. The examples this page referenced are linked in the "Examples" section at the end. -->
 **Examples**
 
 Example 1: MolekulareKonsequenz for the BRAF variant
@@ -105,3 +105,15 @@ Example 1: MolekulareKonsequenz for the BRAF variant
 Example 2: MolekulareKonsequenz for the NIPBL variant
 
 ---
+
+<!-- DERIVED:bridge source=the same profile page gate=B -->
+### Examples
+
+> **Written by the migration, not carried from the source.** The Simplifier guide
+> rendered these examples inline on this page; the IG Publisher renders each one on
+> its own page instead, so they are listed here as links, in the order the source had
+> them and with the captions it gave them. Nothing was added or dropped.
+{: .ig-highlight .ig-highlight-grey}
+
+- [`mii-exa-molgen-molekulare-konsequenz-1`](Observation-mii-exa-molgen-molekulare-konsequenz-1.html) — Example 1: MolekulareKonsequenz für BRAF-Variant
+- [`mii-exa-molgen-molekulare-konsequenz-2`](Observation-mii-exa-molgen-molekulare-konsequenz-2.html) — Example 2: MolekulareKonsequenz für NIPBL-Variant

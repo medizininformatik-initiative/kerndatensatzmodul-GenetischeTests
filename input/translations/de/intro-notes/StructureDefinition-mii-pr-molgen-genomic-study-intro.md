@@ -85,3 +85,15 @@ Folgende Suchparameter sind für das GenomicStudy-Profil relevant, auch in Kombi
 Beispiel 1: GenomicStudy für Panel-Sequenzierung
 
 ---
+
+<!-- DERIVED:bridge source=the same profile page gate=B -->
+### Beispiele
+
+> **Von der Migration geschrieben, nicht aus der Quelle übernommen.** Der
+> Simplifier-Leitfaden hat diese Beispiele auf dieser Seite eingebettet; der IG
+> Publisher rendert jedes auf einer eigenen Seite. Sie stehen deshalb hier als
+> Links, in der Reihenfolge der Quelle und mit deren Bildunterschriften. Es wurde
+> nichts ergänzt und nichts weggelassen.
+{: .ig-highlight .ig-highlight-grey}
+
+- [`mii-exa-molgen-genomic-study-1`](Procedure-mii-exa-molgen-genomic-study-1.html) — Beispiel 1: GenomicStudy für Panel-Sequenzierung

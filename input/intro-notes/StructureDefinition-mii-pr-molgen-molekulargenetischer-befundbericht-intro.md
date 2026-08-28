@@ -95,7 +95,7 @@ Examples are VCF, BAM, CRAM and other similar files.
 
 **Search parameters**
 
-<!-- TODO:REVIEW the German source names the "Modul Pathologie-Befund" (pathology report module) here, although this is the molecular genetics module - this looks like a copy-paste error in the source. Translated literally. -->
+<!-- TODO:REVIEW the German page names the "Modul Pathologie-Befund" (pathology report module) here, although this is the molecular genetics module - this looks like a copy-paste error in the source. Translated literally. -->
 The following search parameters are relevant for the Pathologie-Befund (pathology report) module, also in combination:
 
 1. The search parameter ```_id``` MUST be supported:
@@ -220,7 +220,7 @@ The following search parameters are relevant for the Pathologie-Befund (patholog
 
 ---
 
-<!-- TODO:REVIEW the German source carries example captions with no example rendered beneath them - the Simplifier example directives were dropped during migration. The captions are translated as they stand; nothing was added. -->
+<!-- The Simplifier example directive that used to render beneath this caption was dropped: the IG Publisher renders each example on its own page. The examples this page referenced are linked in the "Examples" section at the end. -->
 **Examples**
 
 Report 1 BRAF

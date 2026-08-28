@@ -284,3 +284,20 @@ Beispiel 3: Copy Number Variant im SMO Gen
 Beispiel 4: Variante BRCA1
 
 ---
+
+<!-- DERIVED:bridge source=the same profile page gate=B -->
+### Beispiele
+
+> **Von der Migration geschrieben, nicht aus der Quelle übernommen.** Der
+> Simplifier-Leitfaden hat diese Beispiele auf dieser Seite eingebettet; der IG
+> Publisher rendert jedes auf einer eigenen Seite. Sie stehen deshalb hier als
+> Links, in der Reihenfolge der Quelle und mit deren Bildunterschriften. Es wurde
+> nichts ergänzt und nichts weggelassen.
+{: .ig-highlight .ig-highlight-grey}
+
+- [`mii-exa-molgen-variante-1`](Observation-mii-exa-molgen-variante-1.html) — Beispiel 1: Variante BRAF
+- [`mii-exa-molgen-device-sequencer`](Device-mii-exa-molgen-device-sequencer.html) — Beispiel für das im vorherigen Beispiel referenzierte Device
+- [`mii-exa-molgen-variante-2`](Observation-mii-exa-molgen-variante-2.html) — Beispiel 2: Variante NIPBL
+- [`mii-exa-molgen-device-sequencer-2`](Device-mii-exa-molgen-device-sequencer-2.html) — Beispiel für das im vorherigen Beispiel 2 referenzierte Device
+- [`mii-exa-molgen-variante-cnv-4`](Observation-mii-exa-molgen-variante-cnv-4.html) — Beispiel 3: Copy Number Variant im SMO Gen
+- [`mii-exa-molgen-variante-brca1`](Observation-mii-exa-molgen-variante-brca1.html) — Beispiel 4: Variante BRCA1

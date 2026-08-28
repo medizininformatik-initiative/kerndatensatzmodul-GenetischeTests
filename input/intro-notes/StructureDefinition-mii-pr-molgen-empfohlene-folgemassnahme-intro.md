@@ -31,7 +31,7 @@ The profile is derived from the profile [Followup Recommendation](http://hl7.org
 
 **Search parameters**
 
-<!-- TODO:REVIEW the German source names the "Modul Pathologie-Befund" (pathology report module) here, although this is the genetic testing module; translated literally, presumed copy/paste error in the source. -->
+<!-- TODO:REVIEW the German page names the "Modul Pathologie-Befund" (pathology report module) here, although this is the genetic testing module; translated literally, presumed copy/paste error in the source. -->
 The following search parameters are relevant for the Pathologie-Befund (pathology report) module, also in combination:
 
 1. The search parameter ```_id``` MUST be supported:
@@ -42,7 +42,7 @@ The following search parameters are relevant for the Pathologie-Befund (patholog
 
     Usage notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-<!-- TODO:REVIEW the _profile example in the German source points at the canonical of the Medikationsempfehlung profile, not at empfohlene-folgemassnahme; the URL is reproduced unchanged as an identifier. -->
+<!-- TODO:REVIEW the _profile example in the German page points at the canonical of the Medikationsempfehlung profile, not at empfohlene-folgemassnahme; the URL is reproduced unchanged as an identifier. -->
 2. The search parameter "_profile" MUST be supported:
 
     Examples:
@@ -91,7 +91,7 @@ The following search parameters are relevant for the Pathologie-Befund (patholog
 
     Usage notes: Further information on searching by "reason-code" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#token).
 
-<!-- TODO:REVIEW the German source skips number 8: the list jumps from 7 to 9. The numbering is reproduced verbatim. -->
+<!-- TODO:REVIEW the German page skips number 8: the list jumps from 7 to 9. The numbering is reproduced verbatim. -->
 9. The search parameter "reason-reference" MUST be supported:
 
     Examples:
@@ -119,3 +119,15 @@ Example of a recommended follow-up measure from a BRAF finding
 Example of a recommended follow-up measure from a risk panel finding
 
 ---
+
+<!-- DERIVED:bridge source=the same profile page gate=B -->
+### Examples
+
+> **Written by the migration, not carried from the source.** The Simplifier guide
+> rendered these examples inline on this page; the IG Publisher renders each one on
+> its own page instead, so they are listed here as links, in the order the source had
+> them and with the captions it gave them. Nothing was added or dropped.
+{: .ig-highlight .ig-highlight-grey}
+
+- [`mii-exa-molgen-folgemassnahme-1`](Task-mii-exa-molgen-folgemassnahme-1.html) — Example empfohlene Folgemaßnahme aus BRAF Befund
+- [`mii-exa-molgen-folgemassnahme-brca1`](Task-mii-exa-molgen-folgemassnahme-brca1.html) — Example empfohlene Folgemaßnahme aus Risk-Panel Befund

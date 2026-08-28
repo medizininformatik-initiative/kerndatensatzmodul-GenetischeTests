@@ -36,7 +36,7 @@ The request can also state one or more known symptoms via the reasonReference el
 
 **Search parameters**
 
-<!-- TODO:REVIEW the German source names the "Modul Pathologie-Befund" (pathology report module) here, although this is the molecular genetics module - this looks like a copy-paste error in the source. Translated literally. -->
+<!-- TODO:REVIEW the German page names the "Modul Pathologie-Befund" (pathology report module) here, although this is the molecular genetics module - this looks like a copy-paste error in the source. Translated literally. -->
 The following search parameters are relevant for the Pathologie-Befund (pathology report) module, also in combination:
 
 1. The search parameter ```_id``` MUST be supported:
@@ -113,7 +113,7 @@ The following search parameters are relevant for the Pathologie-Befund (patholog
 
 ---
 
-<!-- TODO:REVIEW the German source carries example captions with no example rendered beneath them - the Simplifier example directives were dropped during migration. The captions are translated as they stand; nothing was added. -->
+<!-- The Simplifier example directive that used to render beneath this caption was dropped: the IG Publisher renders each example on its own page. The examples this page referenced are linked in the "Examples" section at the end. -->
 **Examples**
 
 Request 1 - BRAF
@@ -137,3 +137,17 @@ Example of the Specimen (sample) referenced in Request 2, based on the profile o
 ---
 
 Example of the request for the Risk-Panel
+
+<!-- DERIVED:bridge source=the same profile page gate=B -->
+### Examples
+
+> **Written by the migration, not carried from the source.** The Simplifier guide
+> rendered these examples inline on this page; the IG Publisher renders each one on
+> its own page instead, so they are listed here as links, in the order the source had
+> them and with the captions it gave them. Nothing was added or dropped.
+{: .ig-highlight .ig-highlight-grey}
+
+- [`mii-exa-molgen-anforderung-1`](ServiceRequest-mii-exa-molgen-anforderung-1.html) — Request 1 - BRAF
+- [`mii-exa-molgen-specimen-1`](Specimen-mii-exa-molgen-specimen-1.html) — Example des in der Request 1 referenzierten Specimens (Probe) basierend auf dem Profil des MII Moduls Biobank.
+- [`mii-exa-molgen-anforderung-2`](ServiceRequest-mii-exa-molgen-anforderung-2.html) — Request 2 - NIPBL
+- [`mii-exa-molgen-specimen-2`](Specimen-mii-exa-molgen-specimen-2.html) — Example des in der Request 2 referenzierten Specimens (Probe) basierend auf dem Profil des MII Moduls Biobank.

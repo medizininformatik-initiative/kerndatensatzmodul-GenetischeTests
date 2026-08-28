@@ -234,3 +234,18 @@ Beispiel 3: Diagnostische Implikation CNV SMO
 Beispiel 4: Diagnostische Implikation aus Risk-Panel Befund
 
 ---
+
+<!-- DERIVED:bridge source=the same profile page gate=B -->
+### Beispiele
+
+> **Von der Migration geschrieben, nicht aus der Quelle übernommen.** Der
+> Simplifier-Leitfaden hat diese Beispiele auf dieser Seite eingebettet; der IG
+> Publisher rendert jedes auf einer eigenen Seite. Sie stehen deshalb hier als
+> Links, in der Reihenfolge der Quelle und mit deren Bildunterschriften. Es wurde
+> nichts ergänzt und nichts weggelassen.
+{: .ig-highlight .ig-highlight-grey}
+
+- [`mii-exa-molgen-diagnostische-implikation-1`](Observation-mii-exa-molgen-diagnostische-implikation-1.html) — Beispiel 1: Diagnostische Implikation BRAF
+- [`mii-exa-molgen-diagnostische-implikation-2`](Observation-mii-exa-molgen-diagnostische-implikation-2.html) — Beispiel 2: Diagnostische Implikation NIPBL
+- [`mii-exa-molgen-diagnostische-implikation-cnv-4`](Observation-mii-exa-molgen-diagnostische-implikation-cnv-4.html) — Beispiel 3: Diagnostische Implikation CNV SMO
+- [`mii-exa-molgen-diagnostische-implikation-brca1`](Observation-mii-exa-molgen-diagnostische-implikation-brca1.html) — Beispiel 4: Diagnostische Implikation aus Risk-Panel Befund

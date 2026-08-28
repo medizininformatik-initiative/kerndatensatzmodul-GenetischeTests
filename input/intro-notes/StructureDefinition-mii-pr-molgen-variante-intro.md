@@ -82,7 +82,7 @@ The profile is derived from the profile [Variant](http://hl7.org/fhir/uv/genomic
 
 **Search parameters**
 
-<!-- TODO:REVIEW the German source names the "Modul Pathologie-Befund" (pathology report module) here, although this is the molecular genetics module - this looks like a copy-paste error in the source. Translated literally. -->
+<!-- TODO:REVIEW the German page names the "Modul Pathologie-Befund" (pathology report module) here, although this is the molecular genetics module - this looks like a copy-paste error in the source. Translated literally. -->
 The following search parameters are relevant for the Pathologie-Befund (pathology report) module, also in combination:
 
 1. The search parameter ```_id``` MUST be supported:
@@ -263,7 +263,7 @@ The following search parameters are relevant for the Pathologie-Befund (patholog
 
 --- 
 
-<!-- TODO:REVIEW the German source carries example captions with no example rendered beneath them - the Simplifier example directives were dropped during migration. The captions are translated as they stand; nothing was added. -->
+<!-- The Simplifier example directive that used to render beneath this caption was dropped: the IG Publisher renders each example on its own page. The examples this page referenced are linked in the "Examples" section at the end. -->
 **Examples**
 
 Example 1: Variant BRAF
@@ -289,3 +289,19 @@ Example 3: Copy number variant in the SMO gene
 Example 4: Variant BRCA1
 
 ---
+
+<!-- DERIVED:bridge source=the same profile page gate=B -->
+### Examples
+
+> **Written by the migration, not carried from the source.** The Simplifier guide
+> rendered these examples inline on this page; the IG Publisher renders each one on
+> its own page instead, so they are listed here as links, in the order the source had
+> them and with the captions it gave them. Nothing was added or dropped.
+{: .ig-highlight .ig-highlight-grey}
+
+- [`mii-exa-molgen-variante-1`](Observation-mii-exa-molgen-variante-1.html) — Example 1: Variant BRAF
+- [`mii-exa-molgen-device-sequencer`](Device-mii-exa-molgen-device-sequencer.html) — Example of the Device referenced in the example above
+- [`mii-exa-molgen-variante-2`](Observation-mii-exa-molgen-variante-2.html) — Example 2: Variant NIPBL
+- [`mii-exa-molgen-device-sequencer-2`](Device-mii-exa-molgen-device-sequencer-2.html) — Example of the Device referenced in example 2 above
+- [`mii-exa-molgen-variante-cnv-4`](Observation-mii-exa-molgen-variante-cnv-4.html) — Example 3: Copy number variant in the SMO gene
+- [`mii-exa-molgen-variante-brca1`](Observation-mii-exa-molgen-variante-brca1.html) — Example 4: Variant BRCA1

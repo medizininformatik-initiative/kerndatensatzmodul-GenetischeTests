@@ -7,7 +7,7 @@
 
 #### Description
 
-<!-- TODO:REVIEW the German source has a typo here ("medikamanetöse" instead of "medikamentöse"); translated as intended, i.e. "medication-based". -->
+<!-- TODO:REVIEW the German page has a typo here ("medikamanetöse" instead of "medikamentöse"); translated as intended, i.e. "medication-based". -->
 The profile of this Task resource serves to propose medication-based measures on the basis of the genetic results.
 
 <!-- TODO:REVIEW the column alias "Basis" in the following query block is still German; it is left unchanged because the rule is not to modify code blocks. Decide at Gate C whether query blocks should be localised. -->
@@ -30,7 +30,7 @@ The profile is derived from the profile [Medication Recommendation](http://hl7.o
 
 **Search parameters**
 
-<!-- TODO:REVIEW the German source names the "Modul Pathologie-Befund" (pathology report module) here, although this is the genetic testing module; translated literally, presumed copy/paste error in the source. -->
+<!-- TODO:REVIEW the German page names the "Modul Pathologie-Befund" (pathology report module) here, although this is the genetic testing module; translated literally, presumed copy/paste error in the source. -->
 The following search parameters are relevant for the Pathologie-Befund (pathology report) module, also in combination:
 
 1. The search parameter ```_id``` MUST be supported:
@@ -89,7 +89,7 @@ The following search parameters are relevant for the Pathologie-Befund (patholog
 
     Usage notes: Further information on searching by "reason-code" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#token).
 
-<!-- TODO:REVIEW the German source skips number 8: the list jumps from 7 to 9. The numbering is reproduced verbatim. -->
+<!-- TODO:REVIEW the German page skips number 8: the list jumps from 7 to 9. The numbering is reproduced verbatim. -->
 9. The search parameter "reason-reference" MUST be supported:
 
     Examples:
@@ -113,3 +113,14 @@ The following search parameters are relevant for the Pathologie-Befund (patholog
 Example 1: Medication recommendation based on a detected BRAF variant
 
 ---
+
+<!-- DERIVED:bridge source=the same profile page gate=B -->
+### Examples
+
+> **Written by the migration, not carried from the source.** The Simplifier guide
+> rendered these examples inline on this page; the IG Publisher renders each one on
+> its own page instead, so they are listed here as links, in the order the source had
+> them and with the captions it gave them. Nothing was added or dropped.
+{: .ig-highlight .ig-highlight-grey}
+
+- [`mii-exa-molgen-medikationsempfehlung-1`](Task-mii-exa-molgen-medikationsempfehlung-1.html) — Example 1: Medikationsempfehlung basierend auf detektierter BRAF Variant

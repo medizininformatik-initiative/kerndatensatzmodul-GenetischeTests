@@ -30,7 +30,7 @@ The profile is derived from the profile [Microsatellite Instability](http://hl7.
 
 **Search parameters**
 
-<!-- TODO:REVIEW the German source names the "Modul Pathologie-Befund" (pathology report module) here, although this is the genetic testing module; translated literally, presumed copy/paste error in the source. -->
+<!-- TODO:REVIEW the German page names the "Modul Pathologie-Befund" (pathology report module) here, although this is the genetic testing module; translated literally, presumed copy/paste error in the source. -->
 The following search parameters are relevant for the Pathologie-Befund (pathology report) module, also in combination:
 
 1. The search parameter ```_id``` MUST be supported:
@@ -127,7 +127,7 @@ The following search parameters are relevant for the Pathologie-Befund (patholog
 
     ```GET [base]/Observation?component-value-concept=http://sequenceontology.org|SO:SO:1000008```
     
-    <!-- TODO:REVIEW the German source names "component-code-value-concept" in this usage note although the item is "component-value-concept"; mismatch reproduced verbatim. -->
+    <!-- TODO:REVIEW the German page names "component-code-value-concept" in this usage note although the item is "component-value-concept"; mismatch reproduced verbatim. -->
     Usage notes: Further information on searching by "component-code-value-concept" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#token).
 
 13. The search parameter "component-value-quantity" MUST be supported:
@@ -170,7 +170,7 @@ The following search parameters are relevant for the Pathologie-Befund (patholog
     
     Usage notes: Further information on searching by "specimen" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-<!-- TODO:REVIEW "encounter" appears twice in the German source (items 6 and 18); the duplicate is reproduced verbatim. -->
+<!-- TODO:REVIEW "encounter" appears twice in the German page (items 6 and 18); the duplicate is reproduced verbatim. -->
 18. The search parameter "encounter" MUST be supported:
 
     Examples:
@@ -218,3 +218,14 @@ The following search parameters are relevant for the Pathologie-Befund (patholog
  
 
 ---
+
+<!-- DERIVED:bridge source=the same profile page gate=B -->
+### Examples
+
+> **Written by the migration, not carried from the source.** The Simplifier guide
+> rendered these examples inline on this page; the IG Publisher renders each one on
+> its own page instead, so they are listed here as links, in the order the source had
+> them and with the captions it gave them. Nothing was added or dropped.
+{: .ig-highlight .ig-highlight-grey}
+
+- [`mii-exa-molgen-mikrosatelliteninstabilitaet-1`](Observation-mii-exa-molgen-mikrosatelliteninstabilitaet-1.html) — **Examples**

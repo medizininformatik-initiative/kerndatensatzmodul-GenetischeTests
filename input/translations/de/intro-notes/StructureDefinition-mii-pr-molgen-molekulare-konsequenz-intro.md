@@ -101,3 +101,16 @@ Beispiel 1: MolekulareKonsequenz für BRAF-Variante
 Beispiel 2: MolekulareKonsequenz für NIPBL-Variante
 
 ---
+
+<!-- DERIVED:bridge source=the same profile page gate=B -->
+### Beispiele
+
+> **Von der Migration geschrieben, nicht aus der Quelle übernommen.** Der
+> Simplifier-Leitfaden hat diese Beispiele auf dieser Seite eingebettet; der IG
+> Publisher rendert jedes auf einer eigenen Seite. Sie stehen deshalb hier als
+> Links, in der Reihenfolge der Quelle und mit deren Bildunterschriften. Es wurde
+> nichts ergänzt und nichts weggelassen.
+{: .ig-highlight .ig-highlight-grey}
+
+- [`mii-exa-molgen-molekulare-konsequenz-1`](Observation-mii-exa-molgen-molekulare-konsequenz-1.html) — Beispiel 1: MolekulareKonsequenz für BRAF-Variante
+- [`mii-exa-molgen-molekulare-konsequenz-2`](Observation-mii-exa-molgen-molekulare-konsequenz-2.html) — Beispiel 2: MolekulareKonsequenz für NIPBL-Variante

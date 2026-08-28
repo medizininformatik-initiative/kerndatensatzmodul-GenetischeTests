@@ -27,7 +27,7 @@ The module is the MII core-dataset module for molecular genetic findings: 16 pro
 - **Build:** SUSHI (the compiler that turns FSH into FHIR resources) reports **0 errors, 0 warnings**. The IG Publisher's separate QA report lists **68 errors / 961 warnings / 0 broken links**. Two tools, two counts — QA errors do not fail the build.
 - **QA acceptance bar:** no worse than the unmigrated source. The source's own last CI run reported **113 errors**; this build reports **68**. The two are not the same measurement (③ QA-1 explains), but nothing got worse and no error sits in a page this migration wrote.
 - **Verification:** **128 IDENTISCH · 70 DIVERGIERT · 50 NICHT PRÜFBAR** — the check ran and matched · ran and found a named difference · could not run. The third is **not** a pass. **42 of the 70 divergences are one systematic false positive** (③ QA-2), re-measured three ways; the rest are named individually below.
-- **Open for humans:** **3 decisions (①)**, **4 reviews (②)**, **6 QA items (③)**; **2 of them block publication** and are listed under *Sign-off*.
+- **Open for humans:** **3 decisions (①)**, **4 reviews (②)**, **8 QA items (③)**; **2 of them block publication** and are listed under *Sign-off*.
 - **Not checked by this migration:** clinical correctness of any prose, the genetics domain content itself, and whether the terminology bindings are the right ones. Unchanged from the source, and out of scope here.
 
 ## Where the evidence lives
@@ -64,7 +64,7 @@ The module is the MII core-dataset module for molecular genetic findings: 16 pro
 | render and validate the guide | `java -Xmx6g -jar publisher.jar -ig ig.ini` | `output/qa.txt` with 68 errors, 0 broken links |
 | the template's release checks (M1–M11) | `node scripts/convention-check.mjs` | `PASS — no hard violation` |
 | the migration verifier (C/F/P/R/L) | `python3 .claude/skills/mii-ig-migration/scripts/verify-migration.py --target . --source <unmigrated checkout> --rendered output --source-lang de --template-latest v0.13.0` | exit 1 (findings are the output) |
-| the derived-content scan | `python3 .claude/skills/mii-ig-migration/scripts/derived-scan.py --target .` | 2 markers, 0 findings, exit 0 |
+| the derived-content scan | `python3 .claude/skills/mii-ig-migration/scripts/derived-scan.py --target .` | 28 markers, 0 findings, exit 0 |
 | the page-routing map generator | `python3 .claude/skills/mii-ig-migration/scripts/page-structure-advice.py --source <src> --target . --guide-tree ImplementationGuide-2026.x-DE --out migration-log/page-structure-advice.md --map migration-log/page-map.tsv` | exit 0. **Re-running overwrites the reviewed map** — re-apply the 21 reviewer edits from `page-map.generated.tsv` afterwards |
 | the pre/post delta | `python3 .claude/skills/mii-ig-migration/scripts/prepost-delta.py --pre migration-log/preflight-analysis.json --post migration-log/postflight-analysis.json --out migration-log/prepost-delta.md --tsv migration-log/prepost-delta.tsv` | exit 1, 1 regression (QA-3) |
 | the sign-off checklist | `python3 .claude/skills/mii-ig-migration/scripts/qa-checklist.py --log-dir migration-log --out migration-log/qa-checklist.md` | 40 checkboxes across 4 gates |
@@ -97,7 +97,7 @@ The module is the MII core-dataset module for molecular genetic findings: 16 pro
 
 ## Applied fixes (already changed — a human confirms or reverts)
 
-Accepting these needs no action — merging accepts all of them. To reject one, revert it on branch `migration/2026.0.4-template-v0.13.0`. **Revert newest first:** FIX-4, FIX-3, FIX-2, FIX-1.
+Accepting these needs no action — merging accepts all of them. To reject one, revert it on branch `migration/2026.0.4-template-v0.13.0`. **Revert newest first:** FIX-5, FIX-4, FIX-3, FIX-2, FIX-1.
 
 | # | Fix, in plain words | Commit | Also touches (beyond the headline) | If reverted | Independent? |
 |---|---|---|---|---|---|
@@ -105,6 +105,8 @@ Accepting these needs no action — merging accepts all of them. To reject one, 
 | FIX-2 | Migrated all 41 narrative pages onto the template page set, in both languages | `6ee0d4b` | 15 intro notes + their German mirrors, 12 page pairs, `input/images/` (5 files), `input/images-source/` (3), `menu.xml` in both languages, the `pages:` tree, the page-title `.po`; removed 4 pages (M8/M9) | the guide renders the template's starter pages under this module's name | conflicts with FIX-1 |
 | FIX-3 | Shortened six DiagnosticReport **example** ids so the package can be built at all | `e0f0dcd` | `input/fsh/{MolekulargenetischerBefundbericht,additional-examples,GenomicStudy,ARCHIVED-STU2-Examples}.fsh` and 3 references in `guidance.md` (both languages) | **the IG Publisher hard-fails** — see DEC-2 | yes |
 | FIX-4 | Cleared every build, link and rendering finding the publisher raised | `86d6f39` | the 21-entry `special-url` list in `sushi-config.yaml`; 20 link repairs across 8 pages; 30 FQL blocks removed from the intro notes; `implementation-guides/README.md`; the licence wording on `index.md` and `metadata.md` in both languages | 42 URL-mismatch errors and 20 broken links return | yes |
+
+| FIX-5 | Restored the 27 example references the transform had dropped, and cleared the two CI checks | `78a9ae0` | 26 intro notes (13 profiles × 2 languages) gain a marked *Examples* section; the phrase "the German source" reworded to "the German page" across 12 English files; 3 reviewed ALLOW entries added to `scripts/language-model-check.sh` | eight intro notes keep captions that point at nothing, and the language-model CI check fails | yes |
 
 **Required, not optional:** FIX-3 — reverting it only reproduces a hard build failure. It is listed for completeness, not as a choice, but the id change itself **is** a decision (DEC-2).
 
@@ -198,6 +200,15 @@ The one surviving pre/post regression: `narrative_sources.dual_source` went `fal
 
 The FSH declares 166 `Instance:` but SUSHI imports 122. The 44 difference sits inside `/* … */` blocks in six files (`UntersuchteRegion.fsh` 23, `ErgebnisZusammenfassung.fsh`, `MolekulareKonsequenz.fsh`, `MolekularerBiomarker.fsh`, `additional-examples.fsh`, `ARCHIVED-STU2-Examples.fsh`). This is pre-existing state from the module's documented STU2→STU3 migration, untouched here. Artefact conservation was therefore measured against the **134 generated** resources, not the 166 declarations. **Evidence:** `run.log 1 source-inventory-findings`.
 
+**QA-7 — Twelve pages of this guide talk about the *Pathologie-Befund* module** · owner: the module's technical authors
+
+Verified in the source, not relayed: `grep 'Modul Pathologie'` over the authoritative guide tree returns **12 occurrences of "Modul Pathologie-Befund"** plus one "Modul Pathologiebefund", every one of them in the sentence *"Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in Kombination"* — in the **molecular genetics** module's guide. It is a systematic copy-paste from a sibling module's guide. The text was migrated verbatim (migration does not rewrite content) and each occurrence carries a `TODO:REVIEW` naming the problem, in the English intro notes and their German mirrors.
+**Next action:** correct the module name in all 13 places, or confirm the cross-reference is intended. **Evidence:** `grep -rn 'Modul Pathologie' input/intro-notes input/translations/de/intro-notes`.
+
+**QA-8 — Smaller source defects the translation surfaced** · owner: the module's technical authors
+
+Carried over verbatim with a `TODO:REVIEW` each, because correcting them is content work, not migration work: two numbered lists **skip item 8** (7 → 9); one list numbers an item **"4" twice**; one `_profile` example points at the canonical of the *Medikationsempfehlung* profile on the *EmpfohleneFolgemassnahme* page; one usage note names `component-code-value-concept` where the item is `component-value-concept`; `encounter` appears twice in one search-parameter list; and one page has the typo *"medikamanetöse"*. **Evidence:** `grep -rn 'TODO:REVIEW' input/intro-notes/` — 27 files carry at least one marker.
+
 **QA-6 — Two rendering findings and one provenance finding are artefacts of the checks themselves** · owner: nobody (recorded)
 
 **R2 ×4:** two flag the marker string `Unknown code` on `qualitaetsbericht.html` in both languages — but that page *is* the module's quality report, and the string sits in a table cell quoting a known validation finding. Two flag `{{title}}` on `searchform.html`, a page the IG Publisher generates itself; it exists in neither `input/` nor the template. **P1 ×1:** the rendered site reports IG template package `1.3.3` while the tree carries `1.3.2` — `ig.ini` references the template **by URL**, which follows the template's `main` branch, so it moved between the vendoring and the final build. That is inherent to the URL-reference mode the template recommends today; pinning returns when the package is published to a registry. **Evidence:** `run.log 11 r2-recheck`, `verification-findings.tsv` rows `R2-*`, `P1-*`.
@@ -250,7 +261,7 @@ The full page-by-page mapping is `migration-log/page-map.tsv` (43 rows: 41 pages
 | `qualitaetsbericht.md` | 1 | **the only page created beyond the template's fixed set** |
 | RETIRED | 2 trees | `ImplementationGuide-2025.x-DE`, `ImplementationGuide-1.x` — retained as history |
 
-**Directives:** 731 Simplifier/FQL directives were resolved, **0 unresolved**. 38 `pagelink`, 15 artefact links, 2 external links, 8 render-to-artefact, 12 render-to-external, 1 image, 1 branch-pinned GitHub hotlink copied into `input/images/`; 17 `<tabs>`, 11 `{{tree}}`, 34 `{{json}}` and 30 FQL metadata blocks **dropped**, because the generated artifact page renders exactly those views itself — the artifact-page-with-intro pattern. One source typo was resolved with a recorded reason and marked in the rendered page (`mii-vs-molgen-verwandtsverhaeltnis` → `…verwandtschaftsverhaeltnis`, exactly one candidate).
+**Directives:** 731 Simplifier/FQL directives were resolved, **0 unresolved**. 38 `pagelink`, 15 artefact links, 2 external links, 8 render-to-artefact, 12 render-to-external, 1 image, 1 branch-pinned GitHub hotlink copied into `input/images/`; 17 `<tabs>`, 11 `{{tree}}` and 30 FQL metadata blocks **dropped**, because the generated artifact page renders exactly those views itself — the artifact-page-with-intro pattern. Of the 51 `{{json}}` directives, 24 rendered the profile's own JSON and were dropped for the same reason; the other **27 pointed at example instances**, and dropping those left captions pointing at nothing, so each affected intro note now carries a marked *Examples* section listing them as links, in source order, identically in both languages (FIX-5). One source typo was resolved with a recorded reason and marked in the rendered page (`mii-vs-molgen-verwandtsverhaeltnis` → `…verwandtschaftsverhaeltnis`, exactly one candidate).
 
 **Pages the template contributes** that have no source page: `security-and-privacy`, `metadata`, `version-history`, `translationinfo`, `downloads`, `examples`, `search-parameters`, `ImplementationGuide-mii-ig-molgen-de-v2026`, and the generated `artifacts`/`toc`. **Pages removed:** `code-systems` and `operations` (M9: 0 built artefacts of that type), `researcher-guidance` (no source content routes to it), `rendering-artifacts` (M8: the scaffold's demonstration page, with all six of its wiring points).
 

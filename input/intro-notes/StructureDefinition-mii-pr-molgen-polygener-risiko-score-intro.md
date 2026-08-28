@@ -34,3 +34,14 @@ A polygenic risk score (PRS), sometimes also referred to as a polygenic score (P
  
 
 ---
+
+<!-- DERIVED:bridge source=the same profile page gate=B -->
+### Examples
+
+> **Written by the migration, not carried from the source.** The Simplifier guide
+> rendered these examples inline on this page; the IG Publisher renders each one on
+> its own page instead, so they are listed here as links, in the order the source had
+> them and with the captions it gave them. Nothing was added or dropped.
+{: .ig-highlight .ig-highlight-grey}
+
+- [`mii-exa-molgen-prs-brca1`](RiskAssessment-mii-exa-molgen-prs-brca1.html) — **Examples**
