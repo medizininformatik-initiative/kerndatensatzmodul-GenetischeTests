@@ -1,0 +1,64 @@
+# Narrative pages the MII KDS module template OWNS.
+#
+# Read by verify-migration.py check C5 to answer the reverse page question: a
+# target page with no source counterpart is a FINDING unless the template put it
+# there. Without this list every one of the template's pages would be reported
+# as content that appeared from nowhere, and the check would be unusable.
+#
+# Measured, not assumed: `input/pagecontent/` of
+# forschungsgruppe-digital-health/mii-kds-module-template at tag v0.11.1, read
+# from the tag's tree on 2026-08-20 -- the page set is identical to v0.10.3
+# plus the slug-bearing IG-resource intro page (matched by prefix in code, see
+# the footer note). The third column is the measurement tag; verify-migration
+# compares it against the tag the module vendors (run-log `skeleton-vendored
+# ref=`) and downgrades C5c to NICHT PRUEFBAR on mismatch instead of producing
+# confident wrong findings. (Earlier measurements: v0.10.3 on 2026-08-15;
+# v0.6.0 on 2026-08-07.) (The previous measurement, tag v0.6.0 on
+# 2026-08-07, predates the TF-KDS restructure that split the combined pages —
+# profiles-and-extensions, search-parameters-and-operations, terminology — into
+# per-artifact-type pages, retired the Conformance-cluster pages and
+# datasets-and-descriptions in favour of link-only menu entries, and introduced
+# the optional (0..1) page decisions.)
+#
+# `role` is what a reviewer needs to know when the page turns up empty — or
+# absent — in a migrated module:
+#   scaffold  the template ships it and every module is expected to keep it
+#   optional  the template ships it marked OPTIONAL (0..1) with a decision
+#             banner; a migration must DECIDE it — keep it (delete the banner
+#             and OPTIONAL-PAGE marker in BOTH languages) or remove it per the
+#             template's docs/optional-pages.md. Convention check M9 fails a
+#             module release while undecided, so an ABSENT optional page is
+#             legitimate and never a finding by itself.
+#   demo      the template ships it to be DELETED during migration (spec step 3);
+#             its presence in a migrated module is itself the finding
+#             (convention check M8 also gates it at module release).
+#
+# Update this file when the template's page set changes, and record the tag you
+# read it from. A stale list produces confident, wrong findings in both
+# directions.
+#
+# page	role	template_tag
+capability-statements	scaffold	v0.11.1
+changes	scaffold	v0.11.1
+code-systems	optional	v0.11.1
+downloads	scaffold	v0.11.1
+examples	scaffold	v0.11.1
+extensions	optional	v0.11.1
+guidance	scaffold	v0.11.1
+implementer-guidance	scaffold	v0.11.1
+index	scaffold	v0.11.1
+logical-models	scaffold	v0.11.1
+metadata	optional	v0.11.1
+operations	optional	v0.11.1
+profiles	scaffold	v0.11.1
+rendering-artifacts	demo	v0.11.1
+researcher-guidance	optional	v0.11.1
+search-parameters	optional	v0.11.1
+security-and-privacy	scaffold	v0.11.1
+translationinfo	scaffold	v0.11.1
+uml-diagrams	scaffold	v0.11.1
+value-sets	optional	v0.11.1
+version-history	scaffold	v0.11.1
+# ImplementationGuide-mii-ig-<slug>: template-owned intro of the generated
+# IG-resource page from module-template v0.11.0; slug-bearing name, so the
+# verifier matches it by prefix in code rather than by a row here.

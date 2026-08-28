@@ -27,6 +27,11 @@
       ]
     }
   ],
+  "performer": [
+    {
+      "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
+    }
+  ],
   "status": "final",
   "code": {
     "coding": [
@@ -40,11 +45,6 @@
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient"
   },
-  "performer": [
-    {
-      "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
-    }
-  ],
   "valueQuantity": {
     "value": 12,
     "code": "1/1000000{Base}",

@@ -7,15 +7,11 @@
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant|3.0.0"
     ]
   },
-  "code": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "69548-6",
-        "display": "Genetic variant assessment"
-      }
-    ]
-  },
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/mii-exa-molgen-anforderung-fgfr2-fusion"
+    }
+  ],
   "category": [
     {
       "coding": [
@@ -35,6 +31,20 @@
       ]
     }
   ],
+  "method": {
+    "coding": [
+      {
+        "code": "LA26398-0",
+        "system": "http://loinc.org",
+        "display": "Sequencing"
+      },
+      {
+        "code": "86206-0",
+        "system": "http://loinc.org",
+        "display": "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
+      }
+    ]
+  },
   "component": [
     {
       "code": {
@@ -94,11 +104,15 @@
       }
     }
   ],
-  "basedOn": [
-    {
-      "reference": "ServiceRequest/mii-exa-molgen-anforderung-fgfr2-fusion"
-    }
-  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "69548-6",
+        "display": "Genetic variant assessment"
+      }
+    ]
+  },
   "status": "final",
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient-fgfr2-fusion"
@@ -110,20 +124,6 @@
         "code": "LA9633-4",
         "system": "http://loinc.org",
         "display": "Present"
-      }
-    ]
-  },
-  "method": {
-    "coding": [
-      {
-        "code": "LA26398-0",
-        "system": "http://loinc.org",
-        "display": "Sequencing"
-      },
-      {
-        "code": "86206-0",
-        "system": "http://loinc.org",
-        "display": "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
       }
     ]
   }

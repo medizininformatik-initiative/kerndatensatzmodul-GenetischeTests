@@ -1,12 +1,8 @@
 {
   "resourceType": "DocumentReference",
   "id": "mii-exa-molgen-documentreference-bed-file",
-  "status": "current",
   "type": {
     "text": "BED file - Agilent SureSelect V7 target regions"
-  },
-  "subject": {
-    "reference": "Patient/mii-exa-molgen-patient"
   },
   "content": [
     {
@@ -16,5 +12,9 @@
         "contentType": "text/plain"
       }
     }
-  ]
+  ],
+  "status": "current",
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient"
+  }
 }

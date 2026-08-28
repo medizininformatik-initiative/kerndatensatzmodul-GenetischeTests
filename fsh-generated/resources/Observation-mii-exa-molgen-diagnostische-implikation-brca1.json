@@ -7,15 +7,6 @@
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|3.0.0"
     ]
   },
-  "code": {
-    "coding": [
-      {
-        "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-        "code": "diagnostic-implication",
-        "display": "Diagnostic Implication"
-      }
-    ]
-  },
   "category": [
     {
       "coding": [
@@ -33,6 +24,16 @@
           "code": "GE"
         }
       ]
+    }
+  ],
+  "performer": [
+    {
+      "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
+    }
+  ],
+  "derivedFrom": [
+    {
+      "reference": "Observation/mii-exa-molgen-variante-brca1"
     }
   ],
   "component": [
@@ -68,14 +69,6 @@
       }
     },
     {
-      "code": {
-        "coding": [
-          {
-            "system": "http://loinc.org",
-            "code": "81259-4"
-          }
-        ]
-      },
       "valueCodeableConcept": {
         "coding": [
           {
@@ -87,6 +80,14 @@
             "code": "HP:0100615",
             "system": "http://human-phenotype-ontology.org",
             "display": "Ovarian neoplasm"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "81259-4"
           }
         ]
       }
@@ -111,19 +112,18 @@
       }
     }
   ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+        "code": "diagnostic-implication",
+        "display": "Diagnostic Implication"
+      }
+    ]
+  },
   "status": "final",
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient-brca1"
   },
-  "effectiveDateTime": "2022-11-01",
-  "performer": [
-    {
-      "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
-    }
-  ],
-  "derivedFrom": [
-    {
-      "reference": "Observation/mii-exa-molgen-variante-brca1"
-    }
-  ]
+  "effectiveDateTime": "2022-11-01"
 }

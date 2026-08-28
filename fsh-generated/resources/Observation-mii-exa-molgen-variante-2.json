@@ -7,15 +7,11 @@
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant|3.0.0"
     ]
   },
-  "code": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "69548-6",
-        "display": "Genetic variant assessment"
-      }
-    ]
-  },
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/mii-exa-molgen-anforderung-2"
+    }
+  ],
   "category": [
     {
       "coding": [
@@ -35,6 +31,20 @@
       ]
     }
   ],
+  "method": {
+    "coding": [
+      {
+        "code": "LA26398-0",
+        "system": "http://loinc.org",
+        "display": "Sequencing"
+      },
+      {
+        "code": "86206-0",
+        "system": "http://loinc.org",
+        "display": "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
+      }
+    ]
+  },
   "component": [
     {
       "code": {
@@ -184,15 +194,6 @@
       }
     },
     {
-      "code": {
-        "coding": [
-          {
-            "system": "http://loinc.org",
-            "code": "81252-9",
-            "display": "Discrete genetic variant"
-          }
-        ]
-      },
       "valueCodeableConcept": {
         "coding": [
           {
@@ -204,14 +205,27 @@
             "system": "http://www.ncbi.nlm.nih.gov/clinvar"
           }
         ]
+      },
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "81252-9",
+            "display": "Discrete genetic variant"
+          }
+        ]
       }
     }
   ],
-  "basedOn": [
-    {
-      "reference": "ServiceRequest/mii-exa-molgen-anforderung-2"
-    }
-  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "69548-6",
+        "display": "Genetic variant assessment"
+      }
+    ]
+  },
   "status": "final",
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient-2"
@@ -223,20 +237,6 @@
         "code": "LA9633-4",
         "system": "http://loinc.org",
         "display": "Present"
-      }
-    ]
-  },
-  "method": {
-    "coding": [
-      {
-        "code": "LA26398-0",
-        "system": "http://loinc.org",
-        "display": "Sequencing"
-      },
-      {
-        "code": "86206-0",
-        "system": "http://loinc.org",
-        "display": "Whole genome sequence analysis in Blood or Tissue by Molecular genetics method"
       }
     ]
   },

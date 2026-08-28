@@ -1,6 +1,11 @@
 {
   "resourceType": "Media",
   "id": "mii-exa-molgen-media-coverage-plot",
+  "content": {
+    "contentType": "image/png",
+    "title": "Exome Coverage Distribution Plot",
+    "url": "https://www.medizininformatik-initiative.de/fhir/plots/coverage_wes_2024001.png"
+  },
   "status": "completed",
   "type": {
     "coding": [
@@ -14,10 +19,5 @@
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient"
   },
-  "createdDateTime": "2024-01-20T10:00:00+01:00",
-  "content": {
-    "contentType": "image/png",
-    "title": "Exome Coverage Distribution Plot",
-    "url": "https://www.medizininformatik-initiative.de/fhir/plots/coverage_wes_2024001.png"
-  }
+  "createdDateTime": "2024-01-20T10:00:00+01:00"
 }

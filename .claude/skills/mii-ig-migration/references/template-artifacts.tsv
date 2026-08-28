@@ -1,0 +1,33 @@
+# Example ARTEFACTS the MII KDS module template ships and step 3 DELETES.
+#
+# ONE definition, read by two programs. `verify-migration.py` check R4 uses these
+# tokens to find links into template scaffolding that no longer exists;
+# `autofix-fix.py` class `template-example-link` uses the SAME tokens to remove
+# those links. They were previously a bare inline literal (`example-patient`)
+# duplicated in both files, so a template that renamed its example would have
+# left the check and the fixer silently disagreeing about what a template example
+# is -- the fixer stripping links the check no longer raises, or the check
+# raising findings the fixer cannot see.
+#
+# WHY A LINK TO ONE OF THESE IS SAFE TO REMOVE MECHANICALLY: the module's own
+# narrative predates the template, so it cannot have referenced the template's
+# examples. A link that names one can only have come from the template's
+# scaffolding, which step 3 deletes. That provenance argument -- not the string
+# itself -- is what makes the class auto-fixable, and it holds only for artefacts
+# the TEMPLATE owns. Anything a module ships is out of scope here.
+#
+# Columns:
+#   token             substring identifying a link target as a template example.
+#   template_version  the ig-template PACKAGE version this was verified against
+#                     (`ig-template/package/package.json` .version), NOT the
+#                     module-template REPO tag -- repo v0.6.0 vendors package
+#                     0.5.1, and confusing the two produces a confident, wrong
+#                     finding (spec 11.4).
+#   verified_on       the date the token was measured in that template.
+#   why               what it names.
+#
+# WHEN THE TEMPLATE CHANGES: re-measure against the vendored package and add or
+# replace a row here. Nothing else needs editing.
+# template_tag: v0.11.1
+token	template_version	verified_on	why
+example-patient	1.3.2	2026-08-20	the template's example Patient profile + instance and their pages, deleted by step 3 (re-verified at module-template v0.11.1, which vendors ig-template package 1.3.2: input/fsh/profiles/example-patient.fsh + instances/example-patient-instance.fsh)

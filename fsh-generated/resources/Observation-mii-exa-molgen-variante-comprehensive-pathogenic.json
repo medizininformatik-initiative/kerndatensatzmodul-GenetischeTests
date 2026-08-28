@@ -6,15 +6,6 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2026.0.4"
     ]
   },
-  "code": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "69548-6",
-        "display": "Genetic variant assessment"
-      }
-    ]
-  },
   "category": [
     {
       "coding": [
@@ -131,6 +122,15 @@
       }
     }
   ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "69548-6",
+        "display": "Genetic variant assessment"
+      }
+    ]
+  },
   "status": "final",
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient"

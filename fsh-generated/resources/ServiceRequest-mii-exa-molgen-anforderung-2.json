@@ -12,8 +12,6 @@
       "value": "gen_test_02"
     }
   ],
-  "status": "active",
-  "intent": "order",
   "category": [
     {
       "coding": [
@@ -44,13 +42,6 @@
       }
     ],
     "text": "Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom (MIM122470),autosomal dominanter Erbgang"
-  },
-  "subject": {
-    "reference": "Patient/mii-exa-molgen-patient-2"
-  },
-  "authoredOn": "2022-03-16",
-  "requester": {
-    "reference": "Practitioner/mii-exa-molgen-practitioner-physician"
   },
   "specimen": [
     {
@@ -132,5 +123,14 @@
     {
       "reference": "Observation/mii-exa-molgen-phenotypic-feature-4"
     }
-  ]
+  ],
+  "status": "active",
+  "intent": "order",
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient-2"
+  },
+  "authoredOn": "2022-03-16",
+  "requester": {
+    "reference": "Practitioner/mii-exa-molgen-practitioner-physician"
+  }
 }

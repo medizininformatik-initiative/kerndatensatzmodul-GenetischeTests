@@ -7,8 +7,6 @@
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation|3.0.0"
     ]
   },
-  "status": "requested",
-  "intent": "proposal",
   "basedOn": [
     {
       "reference": "ServiceRequest/mii-exa-molgen-anforderung-fgfr2-fusion"
@@ -24,6 +22,8 @@
     ],
     "text": "Hochselektive FGFR-Inhibitor-Therapie"
   },
+  "status": "requested",
+  "intent": "proposal",
   "for": {
     "reference": "Patient/mii-exa-molgen-patient-fgfr2-fusion"
   },

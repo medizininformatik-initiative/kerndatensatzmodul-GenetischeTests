@@ -1,0 +1,136 @@
+# Simplifier Quality Control rule set — MII naming conventions.
+#
+# WHO READS THIS FILE: the MII reusable workflow `ci_dotnet_validation.yml`
+# (called from .github/workflows/validation.yml). It passes the fixed path
+# `qc/custom` to the Firely Terminal quality-control engine, so this file MUST
+# stay at `qc/custom.rules.yaml`. Without it the "Simplifier Quality Control
+# (MII naming conventions)" step has no rule set and checks nothing.
+# Source: MII meta wiki, "GitHub Reusable Validation Workflows".
+#
+# NOTE: the .NET validation job is configured upstream to ALWAYS pass. A rule
+# violation therefore shows up in the job log, not as a red check — read the log.
+#
+# Rule syntax:  https://simplifier.net/docs/qualitycontrol/
+# Naming rules: MII meta wiki, "Namenskonventionen für FHIR-Ressourcen in der
+# MII" — prefixes PR, EX, LM, VS, CS, CM, SM, NS, SP, CPS, OD, IG, QST, OBSDEF,
+# MSR, EXA, PARAM.
+#
+# PLACEHOLDERS: molgen, MolGen and 2026.0.4 are
+# replaced when you create your module — see the header of sushi-config.yaml.
+#
+# STARTER: the shipped example profile and its example instance deliberately
+# use neutral names (`example-patient`, `ExamplePatientInstance`), so they
+# cannot satisfy the naming rules below. Every rule that checks a name
+# therefore excludes them. Delete those exclusion lines once you have replaced
+# the starters with your own profiles and examples.
+
+- action: parse
+  name: parse-fhir-resources
+  status: "Checking if all FHIR resource files can be parsed"
+  files:
+    - /**/*.xml
+    - /**/*.json
+    - "!package.json"
+    - "!fsh-index.json"
+    - "!menu.xml"
+
+- action: validate
+  name: resource-validation
+  status: "Validating resources against the FHIR standard and their profiles"
+  category: Resource
+  suppress:
+    - 6005
+    - eld-16
+
+- action: unique
+  name: unique-canonicals
+  status: "Checking if all StructureDefinitions have a unique canonical"
+  category: StructureDefinition
+  unique: url
+
+- name: no-snapshot
+  status: "Checking that StructureDefinitions carry no pre-generated snapshot"
+  category: StructureDefinition
+  predicate: snapshot.element.count() = 0
+  error-message: Do not generate a snapshot in your source; let consuming tools generate it.
+
+- name: valid-ids
+  status: "Checking for valid resource ids"
+  predicate: id.matches('^[A-Za-z0-9\\-\\.]{1,64}$')
+  error-message: The resource must have a valid id (max 64 characters, no underscores).
+
+- name: valid-names
+  status: "Checking that StructureDefinition names contain no spaces"
+  category: StructureDefinition
+  predicate: name.contains(' ').not()
+  error-message: The name of a StructureDefinition must not contain spaces.
+
+- name: unique-names
+  category: Conformance
+  unique: name
+
+- name: version-filled
+  status: "Checking that every conformance resource carries the release version"
+  filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
+  predicate: version.exists() and (version in ('2026.0.4'))
+  error-message: "version missing, or not equal to the module's CalVer version"
+  files:
+    - /**/*.xml
+    - /**/*.json
+    - "!package.json"
+    - "!fsh-index.json"
+    - "!menu.xml"
+
+- name: naming-convention-id
+  status: "Checking the id naming convention (mii-<prefix>-<module>-…)"
+  predicate: id.matches('^mii-(pr|ex|lm|vs|cs|cm|sm|ns|sp|cps|od|ig|qst|obsdef|msr|exa|param)-molgen')
+  error-message: "resource id naming convention mismatch"
+  # This rule has no `filter:`, so unlike the three below it also sees example
+  # INSTANCES — hence the second exclusion.
+  files:
+    - /**/*.xml
+    - /**/*.json
+    - "!package.json"
+    - "!fsh-index.json"
+    - "!menu.xml"
+    - "!/**/StructureDefinition-example-patient.json"
+    - "!/**/Patient-ExamplePatientInstance.json"
+
+- name: naming-convention-name
+  status: "Checking the name naming convention (MII_<PREFIX>_<Module>_…)"
+  filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
+  predicate: name.exists() implies name.matches('^MII_(PR|EX|LM|VS|CS|CM|SM|NS|SP|CPS|OD|IG|QST|OBSDEF|MSR|EXA|PARAM)_MolGen')
+  error-message: "resource name naming convention mismatch"
+  files:
+    - /**/*.xml
+    - /**/*.json
+    - "!package.json"
+    - "!fsh-index.json"
+    - "!menu.xml"
+    - "!/**/StructureDefinition-example-patient.json"
+
+- name: naming-convention-title
+  status: "Checking the title naming convention (MII <PREFIX> <Module> …)"
+  filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
+  predicate: title.exists() implies title.matches('^MII (PR|EX|LM|VS|CS|CM|SM|NS|SP|CPS|OD|IG|QST|OBSDEF|MSR|EXA|PARAM) MolGen')
+  error-message: "resource title naming convention mismatch"
+  files:
+    - /**/*.xml
+    - /**/*.json
+    - "!package.json"
+    - "!fsh-index.json"
+    - "!menu.xml"
+    - "!/**/StructureDefinition-example-patient.json"
+
+- name: naming-convention-url
+  status: "Checking the canonical-URL naming convention"
+  filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
+  predicate: url.exists() implies url.matches('^https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen')
+  error-message: "resource canonical URL naming convention mismatch"
+  files:
+    - /**/*.xml
+    - /**/*.json
+    - "!package.json"
+    - "!fsh-index.json"
+    - "!menu.xml"
+    - "!/**/StructureDefinition-example-patient.json"

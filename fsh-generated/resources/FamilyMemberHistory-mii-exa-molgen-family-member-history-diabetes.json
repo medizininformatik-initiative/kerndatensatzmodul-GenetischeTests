@@ -9,7 +9,6 @@
   "relationship": {
     "coding": [
       {
-        "system": "http://snomed.info/sct",
         "extension": [
           {
             "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad",
@@ -36,6 +35,7 @@
             }
           }
         ],
+        "system": "http://snomed.info/sct",
         "code": "9947008",
         "display": "Natural father (person)"
       },
@@ -45,6 +45,25 @@
         "display": "father"
       }
     ]
+  },
+  "sex": {
+    "coding": [
+      {
+        "code": "male",
+        "system": "http://hl7.org/fhir/administrative-gender"
+      },
+      {
+        "code": "248153007",
+        "system": "http://snomed.info/sct",
+        "display": "Male (finding)"
+      }
+    ]
+  },
+  "ageAge": {
+    "value": 68,
+    "unit": "years",
+    "system": "http://unitsofmeasure.org",
+    "code": "a"
   },
   "condition": [
     {
@@ -76,24 +95,5 @@
     "reference": "Patient/mii-exa-molgen-patient"
   },
   "date": "2024-01-15",
-  "sex": {
-    "coding": [
-      {
-        "code": "male",
-        "system": "http://hl7.org/fhir/administrative-gender"
-      },
-      {
-        "code": "248153007",
-        "system": "http://snomed.info/sct",
-        "display": "Male (finding)"
-      }
-    ]
-  },
-  "deceasedBoolean": false,
-  "ageAge": {
-    "value": 68,
-    "unit": "years",
-    "system": "http://unitsofmeasure.org",
-    "code": "a"
-  }
+  "deceasedBoolean": false
 }

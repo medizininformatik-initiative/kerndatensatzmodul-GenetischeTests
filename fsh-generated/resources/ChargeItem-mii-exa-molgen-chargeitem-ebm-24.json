@@ -6,6 +6,9 @@
       "http://fhir.de/StructureDefinition/chargeitem-de-ebm"
     ]
   },
+  "quantity": {
+    "value": 1
+  },
   "code": {
     "coding": [
       {
@@ -18,8 +21,5 @@
   "status": "billable",
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient-2"
-  },
-  "quantity": {
-    "value": 1
   }
 }

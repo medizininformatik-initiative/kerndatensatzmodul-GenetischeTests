@@ -8,15 +8,16 @@
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-consequence|3.0.0"
     ]
   },
-  "code": {
-    "coding": [
-      {
-        "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-        "code": "molecular-consequence",
-        "display": "Molecular Consequence"
-      }
-    ]
-  },
+  "extension": [
+    {
+      "valueRelatedArtifact": {
+        "type": "citation",
+        "citation": "Richards et al., Genet Med. 2015; 17:405-24",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25741868/"
+      },
+      "url": "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
+    }
+  ],
   "category": [
     {
       "coding": [
@@ -36,14 +37,14 @@
       ]
     }
   ],
-  "extension": [
+  "performer": [
     {
-      "url": "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact",
-      "valueRelatedArtifact": {
-        "type": "citation",
-        "citation": "Richards et al., Genet Med. 2015; 17:405-24",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/25741868/"
-      }
+      "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
+    }
+  ],
+  "derivedFrom": [
+    {
+      "reference": "Observation/mii-exa-molgen-variante-brca1"
     }
   ],
   "component": [
@@ -79,14 +80,6 @@
       }
     },
     {
-      "code": {
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-            "code": "functional-effect"
-          }
-        ]
-      },
       "valueCodeableConcept": {
         "coding": [
           {
@@ -96,6 +89,14 @@
           }
         ],
         "text": "Funktionsverlust des Genprodukts"
+      },
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+            "code": "functional-effect"
+          }
+        ]
       }
     },
     {
@@ -118,19 +119,18 @@
       }
     }
   ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+        "code": "molecular-consequence",
+        "display": "Molecular Consequence"
+      }
+    ]
+  },
   "status": "final",
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient-brca1"
   },
-  "effectiveDateTime": "2022-11-01",
-  "performer": [
-    {
-      "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
-    }
-  ],
-  "derivedFrom": [
-    {
-      "reference": "Observation/mii-exa-molgen-variante-brca1"
-    }
-  ]
+  "effectiveDateTime": "2022-11-01"
 }

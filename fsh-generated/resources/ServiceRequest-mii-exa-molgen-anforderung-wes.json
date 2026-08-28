@@ -6,6 +6,18 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test|2026.0.4"
     ]
   },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "code": "224958001",
+          "system": "http://snomed.info/sct",
+          "display": "Global developmental delay"
+        }
+      ],
+      "text": "Unklare Entwicklungsverzögerung mit Dysmorphiezeichen, V.a. genetisches Syndrom nach unauffälliger Chromosomenanalyse und Array-CGH"
+    }
+  ],
   "status": "completed",
   "intent": "order",
   "code": {
@@ -23,17 +35,5 @@
   "authoredOn": "2024-01-10",
   "requester": {
     "reference": "Practitioner/mii-exa-molgen-practitioner-ordering"
-  },
-  "reasonCode": [
-    {
-      "coding": [
-        {
-          "code": "224958001",
-          "system": "http://snomed.info/sct",
-          "display": "Global developmental delay"
-        }
-      ],
-      "text": "Unklare Entwicklungsverzögerung mit Dysmorphiezeichen, V.a. genetisches Syndrom nach unauffälliger Chromosomenanalyse und Array-CGH"
-    }
-  ]
+  }
 }

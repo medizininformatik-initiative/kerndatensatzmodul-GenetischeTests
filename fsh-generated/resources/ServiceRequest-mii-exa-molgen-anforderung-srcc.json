@@ -12,8 +12,6 @@
       "value": "7B369EB0"
     }
   ],
-  "status": "active",
-  "intent": "order",
   "category": [
     {
       "coding": [
@@ -34,13 +32,6 @@
       }
     ],
     "text": "Molekulargenetische Untersuchung (Stufendiagnostik) der relevanten Gene"
-  },
-  "subject": {
-    "reference": "Patient/mii-exa-molgen-patient-srcc"
-  },
-  "authoredOn": "2022-11-30",
-  "requester": {
-    "reference": "Practitioner/mii-exa-molgen-practitioner-physician"
   },
   "specimen": [
     {
@@ -74,5 +65,14 @@
       ],
       "text": "Mutter an Brustkrebs verstorben"
     }
-  ]
+  ],
+  "status": "active",
+  "intent": "order",
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient-srcc"
+  },
+  "authoredOn": "2022-11-30",
+  "requester": {
+    "reference": "Practitioner/mii-exa-molgen-practitioner-physician"
+  }
 }

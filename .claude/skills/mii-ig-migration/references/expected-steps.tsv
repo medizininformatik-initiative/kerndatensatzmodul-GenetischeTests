@@ -1,0 +1,53 @@
+step	action	shape	condition	why_it_matters
+# The steps a migration must be able to PROVE it ran, by the run-log lines they
+# emit (spec §10.2, §11.5). `verify-migration.py --layers log` reads this file
+# and reports, per row: present (IDENTISCH), absent-and-required (DIVERGIERT),
+# or absent-and-conditional (NICHT PRÜFBAR — the condition is a human call).
+#
+# WHY A MANIFEST AT ALL. A step that did not run leaves NO trace anywhere: the
+# target tree looks the same as if the step had run and found nothing to do, the
+# build is green either way, and the report — written from the log — simply has
+# no paragraph about it. Nothing else in this skill can distinguish "ran, found
+# nothing" from "never ran". This file is the list of things whose ABSENCE is
+# supposed to be loud.
+#
+# COLUMNS
+#   step        the spec section, exactly as the run-log STEP field carries it
+#   action      the stable kebab-case ACTION slug (this is what is matched)
+#   shape       both | A | B — the source shape the step applies to
+#   condition   always | a named precondition, in which case a missing line is
+#               reported NICHT PRÜFBAR: only a human knows whether it held
+#   why_it_matters  what goes undetected when this step silently does not run
+#
+# Hand-editable on purpose, like `fhir-ig-analysis`' mandatory_pages list. A
+# migration that legitimately adds or renames a step edits this file in the same
+# change — and says so in its report.
+1	preflight-analysis	any	always	The Gate-0 measurement of the unmigrated source (spec §9c); every downstream count reconciles against it.
+pre.2	classify-source-shape	both	always	Every shape-B-only row below is skipped when the shape is unknown, so an unrecorded shape silently disables half of this manifest.
+pre.5	toolchain	both	always	The pinned SUSHI/goFSH versions are the run's only record of what produced its output.
+5.1	source-inventory	both	always	The inventory is what goFSH's and the harvest's counts are reconciled against; without it every count is self-reported.
+2.1	read-identity	both	always	Identity carried over unread is identity invented.
+2.1	package-identity	both	no sushi-config.yaml in the source	The published package is the only machine source for the dependency PINS (spec §2.1.1).
+2.1	repo-identity	both	no sushi-config.yaml in the source	The repository's LICENSE text is the only machine source for `license` — the field that must never default (spec §2.2).
+5.1c	simplifier-discover	both	no rendered-IG URL was supplied	Without the discovery chain the guide is not found, and a migration then ships the template's starter pages.
+5.1d	guide-harvest	both	the narrative is not in the repository	This is the step whose absence shipped the template's starter pages under a module's name.
+5.1b.2	gofsh-input	B	always	The input count, taken BY CONTENT, is the number goFSH's own counts are reconciled against.
+5.1b.2	gofsh-convert	B	always	goFSH exits 0 having converted 1 of 20 inputs when `-t json-and-xml` is missing; only this line's counts show it.
+5.1b.3	sushi-before	B	always	The "41" of 41 → 5: without the baseline the repair's effect is unmeasurable.
+5.1b.3	postprocess-gofsh	B	always	The two mechanical repairs; a parse error otherwise TRUNCATES a file while SUSHI still exports the instance.
+5.1b.3	sushi-after	B	always	The "5": the residual, which must be named unresolvable parents and nothing else.
+5.1b.5	parent-snapshots	B	a parent package ships no snapshots	A hand-rolled snapshot fabricates a parent; the detect run is what proves none was needed.
+5.2	skeleton-vendored	both	always	Records the template ref and commit the skeleton came from — the provenance check (P2) reads it from here.
+5.2	sushi-skeleton	both	always	The skeleton must compile before any artefact is transferred, or the first error is unattributable.
+5.3	transfer-artefacts	both	always	The step that moves the module's own content; silence here is a migration that moved nothing.
+5.4	fql-scan	both	always	An unconverted Simplifier/FQL directive renders as nothing at all.
+5.4a	optional-page-decisions	both	target template >= v0.8	The seven OPTIONAL (0..1) pages must each be decided — keep (banner + marker deleted, both languages) or remove per the template's procedure (spec §9a); the template's M9 fails a module release while undecided, and a migration with no line here silently shipped seven "decide me" banners.
+5.4b	security-privacy-decision	both	target template >= v0.8	Stage 3 of security-and-privacy: module aspects written or the default text adopted, and the scaffold's Person example + ILLUSTRATIVE-EXAMPLE marker deleted in both languages (spec §9a); the template's M11 fails a release branch while it is present.
+5.4c	page-routing	both	always	The advice run that WRITES migration-log/page-map.tsv (page-structure-advice.py --map, spec §9e/§9f) — one generated line per SOURCE PAGE naming the branch taken and the measurement that forced it, plus the coverage summary. Its absence means the routing never ran: the map that step 5 consumes and C3/C6 check against was then either never generated or written by hand, and hand-routing by judgement is exactly what §9e exists to prevent — a page invented to hold one artefact's text, a menu grown past two levels and a 4000-word merged host page all look like deliberate design without this line.
+5.4d	derived-scan	both	always	Writes migration-log/derived-content.tsv, the ledger the verifier's C7 reads. With no line here the text the migration WROTE is indistinguishable from the text it carried: C4 finds no loss, C6 finds no misplacement, the build is green, and a Gate-B reviewer reads invented prose as if the module's authors had signed it. C7 can then only report NICHT PRÜFBAR.
+5.5	gen-page-title-po	both	bilingual target	Page titles fall back to the default language with no error anywhere.
+5.6	sushi-build	both	always	One of the two numbers this migration exists to produce.
+5.6	ig-publisher	both	always	The other one — and the rendered output every provenance and rendering check reads.
+5.6a	sibling-skill-check	both	always	Its absence is how the same-module verification gets quietly skipped rather than escalated.
+7	prepost-delta	both	always	The pre→post diff of the two ig-stats measurements (spec §5.6). Silence here hides a REGRESSION behind a green build — an artefact count that dropped, a licence that turned contradictory, an injected dependency, an identity field that changed: nothing else compares the migrated tree against the Gate-0 measurement, so a migration that lost content would otherwise report only its successes.
+11	verify-migration	both	always	The verification phase itself. A migration reported as verified with no line here was not.

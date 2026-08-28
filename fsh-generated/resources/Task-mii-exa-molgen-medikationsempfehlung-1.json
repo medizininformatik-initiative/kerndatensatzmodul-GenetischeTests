@@ -7,8 +7,6 @@
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation|3.0.0"
     ]
   },
-  "status": "requested",
-  "intent": "proposal",
   "basedOn": [
     {
       "reference": "servicerequest/example"
@@ -24,6 +22,8 @@
     ],
     "text": "Alternative Medikation in Erwägung ziehen"
   },
+  "status": "requested",
+  "intent": "proposal",
   "for": {
     "reference": "Patient/mii-exa-molgen-patient"
   },

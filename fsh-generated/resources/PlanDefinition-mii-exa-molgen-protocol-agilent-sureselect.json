@@ -1,19 +1,6 @@
 {
   "resourceType": "PlanDefinition",
   "id": "mii-exa-molgen-protocol-agilent-sureselect",
-  "status": "active",
-  "type": {
-    "coding": [
-      {
-        "code": "protocol",
-        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
-        "display": "Protocol"
-      }
-    ]
-  },
-  "name": "AgilentSureSelectV7",
-  "title": "Agilent SureSelect Human All Exon V7 Kit Protocol",
-  "description": "Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the human exome",
   "action": [
     {
       "title": "DNA Fragmentation",
@@ -35,5 +22,18 @@
       "title": "Amplification",
       "description": "PCR amplification of captured library"
     }
-  ]
+  ],
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "code": "protocol",
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "display": "Protocol"
+      }
+    ]
+  },
+  "name": "AgilentSureSelectV7",
+  "title": "Agilent SureSelect Human All Exon V7 Kit Protocol",
+  "description": "Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the human exome"
 }

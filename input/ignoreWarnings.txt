@@ -5,3 +5,18 @@
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
 32 warnings concerning Inadviseable path -> can be ignored for now, are caused by current naming of Logical Model, can be cleaned in the future
+
+# ---- appended from mii-kds-module-template v0.13.0 (IG-template migration) ----
+The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
+The System URI could not be determined for the code 'de-DE' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
+The System URI could not be determined for the code 'en' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
+The System URI could not be determined for the code 'en-US' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
+The value provided ('de') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#de' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
+The value provided ('de-DE') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'de-DE' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#de-DE' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
+The value provided ('en') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'en' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#en' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
+The value provided ('en-US') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'en-US' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#en-US' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
+
+# Migration: the module FSH sets ^language = #de-DE on conformance resources while the
+# guide default language is now en -- the resulting mismatch warning is cosmetic
+# (skill Language section / spec 4.1) and the FSH stays untouched.
+%(de-DE)%
