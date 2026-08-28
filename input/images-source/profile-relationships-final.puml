@@ -1,0 +1,101 @@
+@startuml MII_MolGen_Profile_Relationships_Final
+!theme plain
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam padding 3
+skinparam ranksep 80
+skinparam nodesep 50
+
+' MII Color Scheme - even more subtle
+skinparam rectangle {
+    BackgroundColor<<Workflow>> #2C5282
+    BackgroundColor<<Finding>> #5A8A8C
+    BackgroundColor<<Implication>> #8B6F9F
+    BackgroundColor<<Biomarker>> #B87333
+    BackgroundColor<<Study>> #3A5F7D
+    BackgroundColor<<Task>> #6D8B95
+    FontColor white
+    BorderColor #34495E
+    BorderThickness 2
+    RoundCorner 8
+    FontSize 12
+}
+
+skinparam arrow {
+    Color #34495E
+    Thickness 1.5
+    FontSize 11
+}
+
+skinparam note {
+    BackgroundColor #FAFAFA
+    BorderColor #34495E
+    FontSize 11
+}
+
+title <size:16><b>MII Kerndatensatz Modul Molekulargenetik</b></size>\n<size:12>Struktur der FHIR-Profile</size>\n
+
+' === LAYOUT STRUCTURE ===
+' Using hidden arrows to control positioning better
+
+' Top row: Workflow
+rectangle "**ServiceRequest**\n(Anforderung)" as SR <<Workflow>>
+rectangle "**DiagnosticReport**\n(Befundbericht)" as DR <<Workflow>>
+SR -[hidden]right-> DR
+
+' Second row: Study components
+rectangle "**GenomicStudy**" as GS <<Study>>
+rectangle "**GenomicStudyAnalysis**" as GSA <<Study>>
+GS -[hidden]right-> GSA
+
+' Middle row: Observations
+rectangle "**Genetische Befunde**\n──────\nVariante\nGenotyp\nHaplotype" as FINDINGS <<Finding>>
+rectangle "**Molekulare Biomarker**\n──────\nMutationslast\nMSI\nPRS" as BIOMARKERS <<Biomarker>>
+rectangle "**Implikationen**\n──────\nMolekulare Konsequenz\nDiagnostische Impl.\nTherapeutische Impl." as IMPLICATIONS <<Implication>>
+
+' Bottom row: Tasks
+rectangle "**Empfehlungen**\n──────\nMedikationsempfehlung\nFolgemaßnahme" as TASKS <<Task>>
+
+' === POSITIONING ===
+DR -[hidden]down-> GS
+GS -[hidden]down-> FINDINGS
+FINDINGS -[hidden]right-> BIOMARKERS
+BIOMARKERS -[hidden]right-> IMPLICATIONS
+IMPLICATIONS -[hidden]down-> TASKS
+
+' Important note about standard references
+'note "Hinweis: Alle Ressourcen sollten Referenzen zu Patient und Encounter haben." as N0 
+'note bottom of N0:  "Alle Observations sollten 'focus' verwenden, um die untersuchte Erkrankung zu referenzieren." as N1
+
+
+
+' === ACTUAL RELATIONSHIPS ===
+
+' Core workflow
+DR -[thickness=3]left-> SR : "basedOn"
+
+' From DiagnosticReport
+DR -down-> FINDINGS : "result"
+DR -down-> BIOMARKERS : "result"
+DR -down-> IMPLICATIONS : "result"
+DR -[thickness=2]down-> GS : "**extension**\n[genomic-study]"
+DR -down-> TASKS : "extension\n[recommended-action]"
+
+' Study relationships
+GS -[thickness=2]right-> GSA : "**extension**\n[analysis]"
+GS -up-> SR : "reasonReference"
+
+' PartOf relationships (upward to GenomicStudy)
+FINDINGS -[thickness=2]up-> GS : "partOf"
+BIOMARKERS -[thickness=2]up-> GS : "partOf"
+IMPLICATIONS -[thickness=2]up-> GS : "partOf"
+
+' Task relationships
+IMPLICATIONS <-- TASKS : "reasonReference"
+
+' Implications can be derived from Findings and Biomarkers
+FINDINGS <-- IMPLICATIONS : "derivedFrom"
+BIOMARKERS <-- IMPLICATIONS : "derivedFrom"
+
+
+@enduml

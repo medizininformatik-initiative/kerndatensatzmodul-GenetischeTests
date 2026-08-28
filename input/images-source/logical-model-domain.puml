@@ -1,0 +1,285 @@
+@startuml MII_MolGen_LogicalModel_Domain
+!theme plain
+
+' A4 Landscape optimization
+skinparam dpi 150
+skinparam maxMessageSize 150
+
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam padding 3
+skinparam roundcorner 5
+skinparam nodesep 70
+skinparam ranksep 100
+left to right direction
+
+' Color scheme for different sections
+skinparam class {
+    BackgroundColor<<Core>> #E8F4F8
+    BackgroundColor<<Request>> #FFF4E6
+    BackgroundColor<<Methods>> #E8F5E9
+    BackgroundColor<<Results>> #F3E5F5
+    BackgroundColor<<Interpretation>> #E1F5FE
+    BackgroundColor<<Metadata>> #F5F5F5
+    BorderColor #424242
+    BorderThickness 2
+    FontSize 10
+}
+
+skinparam packageStyle rectangle
+
+skinparam arrow {
+    Color #424242
+    Thickness 1.5
+}
+
+skinparam note {
+    BackgroundColor #FAFAFA
+    BorderColor #424242
+    FontSize 9
+}
+
+skinparam linetype ortho
+
+title <size:16><b>MII Kerndatensatz Modul Molekulargenetik - Logisches Modell</b></size>\n<size:11>Domänenmodell (implementierungsagnostisch)</size>\n
+
+' ===== EXTERNAL DEPENDENCIES =====
+
+package "Externe MII-KDS Module" <<Metadata>> {
+    class "Patient" as Patient <<Core>> {
+        **KDS Modul Person**
+    }
+
+    class "Probe" as Probe <<Core>> {
+        **KDS Modul Biobank**
+    }
+
+    note right of Patient
+        **Externe Abhängigkeiten:**
+        --
+        • **Person**: Patient, Practitioner,
+          PractitionerRole, Organization
+        • **Biobank**: Specimen
+        • **Diagnose**: Condition,
+          FamilyMemberHistory
+        • **Fall**: Encounter
+    end note
+}
+
+' ===== CORE ENTITY =====
+
+class "Molekulargenetischer\nBefundbericht" as Befundbericht <<Core>> {
+    +Bericht-ID: Identifier
+    +Berichtstatus: code
+    +Datum des Berichts: instant
+    +Anhänge: Reference[]
+}
+
+' ===== ANFORDERUNG =====
+
+class "Anforderung" as Anforderung <<Request>> {
+    +Anforderer: Reference
+    +Zu testende Gene: CodeableConcept[]
+    +EBM-Ziffern: ChargeItem
+    +Datum der Anforderung: dateTime
+    +Anforderungstext: string
+    +Bemerkungen: Annotation
+}
+
+class "Indikation" as Indikation <<Request>> {
+    +Indikation: CodeableConcept
+    +Gesundheitszustand: Reference(Condition)
+    +Krankengeschichte Familie: Reference
+    +Anlageträger: Reference[]
+    +Relevante Vorergebnisse: Reference[]
+}
+
+' ===== METHODEN =====
+
+class "Methoden" as Methoden <<Methods>> {
+    +Methode: CodeableConcept
+    +Geräte/Software/Kits: Reference(Device)
+    +Relevante Parameter: Reference[]
+    --
+    **Untersuchte Bereiche:**
+    +Getestete Gene: CodeableConcept[]
+    +Referenzsequenz: CodeableConcept
+    +Intron spanning/IVS: string
+    +Start- und Endnukleotid: Range
+    --
+    **Qualitätsparameter:**
+    +Read depth/Coverage: CodeableConcept
+    +Sensitivität/Detektionslimit: Quantity
+    +Limitierungen/Bemerkungen: Annotation
+}
+
+' ===== ERGEBNISSE =====
+
+class "Ergebnisse" as Ergebnisse <<Results>> {
+    +Zusammenfassung: CodeableConcept
+    +Rohdaten: Reference(DocumentReference)[]
+}
+
+class "Veränderungen\n(Varianten)" as Veraenderungen <<Results>> {
+    **Genomische Angaben:**
+    +Gen: CodeableConcept
+    +Chromosom: CodeableConcept
+    +Zytogenetische Lokalisierung: CodeableConcept
+    +Exon: string
+    --
+    **HGVS-Notation:**
+    +Veränderung Proteinebene (pHGVS): CodeableConcept
+    +DNA-Veränderung (cHGVS): CodeableConcept
+    +Genomische DNA-Veränderung (gHGVS): CodeableConcept
+    +Transkript-ID: CodeableConcept
+    --
+    **Variantendetails:**
+    +Referenzallel: string
+    +Alternatives Allel: string
+    +DNA-Mutationstyp: CodeableConcept
+    +Kopienzahlvariationen: Quantity
+    --
+    **Metadaten:**
+    +Referenzgenom: CodeableConcept
+    +Proben-Allelfrequenz: Quantity
+    +Ursprung der Variante: CodeableConcept
+    +Varianten-ID: CodeableConcept
+}
+
+class "Molekulare Biomarker" as MolBiomarker <<Results>> {
+    <<abstract>>
+    +Gen-übergreifende Marker
+}
+
+class "Mutationslast\n(TMB)" as TMB <<Results>> {
+    +Wert: Quantity
+    +(somatische Mutationen)
+}
+
+class "Mikrosatelliten-\ninstabilität (MSI)" as MSI <<Results>> {
+    +Wert: CodeableConcept
+}
+
+MolBiomarker <|-- TMB
+MolBiomarker <|-- MSI
+
+' ===== INTERPRETATION =====
+
+class "Interpretation" as Interpretation <<Interpretation>> {
+    **Molekulare Konsequenz:**
+    +Mutationskonsequenz (funktionell): CodeableConcept
+    --
+    **Klinische Bewertung:**
+    +Klinische Signifikanz: CodeableConcept
+    +Clinical Annotation Level of Evidence: CodeableConcept
+    +Assoziierter Phänotyp: CodeableConcept
+    +Vererbungsmodus: CodeableConcept
+    --
+    **Therapeutische Bewertung:**
+    +Medikamentenbewertung: CodeableConcept[]
+    +Medikationsempfehlung: CodeableConcept
+    --
+    **Zusammenfassung & Empfehlungen:**
+    +Zusammenfassung: string
+    +Empfehlungen: CodeableConcept
+    +Referenzen: RelatedArtifact[]
+}
+
+' ===== METADATA =====
+
+class "Labor/Ansprechpartner" as Labor <<Metadata>> {
+    +Name: HumanName
+    +Adresse: Address
+    +Kontakt: ContactPoint
+    +Akkreditierungen: CodeableConcept[]
+}
+
+' ===== LAYOUT HINTS (enforce left-to-right workflow) =====
+
+Patient -[hidden]right-> Anforderung
+Anforderung -[hidden]right-> Methoden
+Methoden -[hidden]right-> Ergebnisse
+Ergebnisse -[hidden]right-> Interpretation
+
+' ===== RELATIONSHIPS =====
+
+' Core structure
+Befundbericht "1" -- "1" Patient : subject
+Befundbericht "1" -- "0..*" Probe : specimen
+Befundbericht "1" *-- "0..*" Anforderung : basedOn
+Befundbericht "1" -- "1" Labor : performer
+
+' Anforderung
+Anforderung "1" *-down- "0..*" Indikation : contains
+Patient "1" -- "0..*" Anforderung : für
+
+' Methoden
+Anforderung "1" -right-> "0..*" Methoden : initiiert
+Methoden "1" -- "0..*" Probe : untersucht
+
+' Ergebnisse
+Methoden "1" -right-> "1" Ergebnisse : liefert
+Ergebnisse "1" *-down- "0..*" Veraenderungen : Veränderungen
+Ergebnisse "1" *-down- "0..*" MolBiomarker : Biomarker
+
+' Interpretation
+Ergebnisse "1" -right-> "0..*" Interpretation : wird interpretiert
+Veraenderungen "0..*" -- "0..*" Interpretation : betrifft
+MolBiomarker "0..*" -- "0..*" Interpretation : informiert
+
+' Befundbericht aggregates
+Befundbericht "1" o-down- "0..*" Methoden : dokumentiert
+Befundbericht "1" o-down- "0..*" Ergebnisse : enthält
+Befundbericht "1" o-down- "0..*" MolBiomarker : enthält
+Befundbericht "1" o-down- "0..*" Interpretation : beinhaltet
+
+' Notes
+note bottom of Befundbericht
+  **Zentrale Ressource**
+  Dokumentiert den gesamten
+  molekulargenetischen Befund
+end note
+
+note right of Methoden
+  **Domänenkonzept**
+  Wird in FHIR abgebildet als:
+  • GenomicStudy
+  • GenomicStudyAnalysis (STU3)
+  • Device, Observation
+end note
+
+note right of Veraenderungen
+  **Domänenkonzept: Veränderungen**
+  Wird in FHIR abgebildet als:
+  • Variante (Observation Profile)
+  • Genotyp
+  • Haplotyp
+
+  Component-Struktur detailliert
+  in FHIR-Profilen definiert
+end note
+
+note right of Interpretation
+  **Domänenkonzept**
+  Wird in FHIR abgebildet als:
+  • MolekulareKonsequenz (STU3)
+  • DiagnostischeImplikation
+  • TherapeutischeImplikation
+  • Medikationsempfehlung (Task)
+  • EmpfohleneFolgemaßnahme (Task)
+end note
+
+note right of MolBiomarker
+  **Molekulare Biomarker**
+  Gen-übergreifende Marker
+  (z.B. TMB, MSI, PRS)
+
+  Wird in FHIR abgebildet als:
+  • MolekularerBiomarker (abstract)
+  • Mutationslast
+  • Mikrosatelliteninstabilität
+  • PolygenerRisikoScore
+end note
+
+@enduml

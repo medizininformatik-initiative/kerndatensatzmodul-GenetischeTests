@@ -1,18 +1,9 @@
 <!-- markdownlint-disable MD041 -->
+<!-- Migriert aus dem Simplifier-Leitfaden TechnischeImplementierung/Familienanamnese/Familienanamnese-Extensions.page.md
+     (Quellbaum implementation-guides/ImplementationGuide-2026.x-DE, Commit 79eaf41, Migration 2026-08-28).
+     Simplifier-Direktiven sind nach references/fql-crosswalk.md aufgeloest. -->
 <!-- Deutsche Übersetzung von input/pagecontent/extensions.md (aufgeteilt aus
      der früheren Kombi-Seite profiles-and-extensions.md). -->
-<!-- OPTIONAL-PAGE (0..1) — Marker entfernen, wenn die Seite BLEIBT; andernfalls
-     die Seite gemäß docs/optional-pages.md entfernen. Der Konventions-Check
-     (M9) lässt ein Release mit diesem Marker fehlschlagen. -->
-
-> **Optionale Seite (0..1).** Das KDS-Modulmenü führt diese Seite als
-> *optional*. Entscheiden Sie für Ihr Modul: Seite **behalten** — Inhalte
-> ausfüllen und dieses Banner samt `OPTIONAL-PAGE`-Marker-Kommentar löschen (in
-> dieser Datei UND in der englischen Quellseite) — oder Seite **entfernen**,
-> nach der Schritt-für-Schritt-Anleitung in [`docs/optional-pages.md`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-GenetischeTests/blob/main/docs/optional-pages.md) dieses
-> Repositories. Ein Release darf dieses Banner nicht enthalten
-> (Konventions-Check M9).
-{: .ig-highlight .ig-highlight-grey}
 
 ### Extensions
 
@@ -21,6 +12,132 @@ definiert (Namenskonvention `MII_EX_<Modul>_<Name>`). Extensions transportieren
 Informationen, die die Basis-Ressourcen und Profile nicht ausdrücken können; die
 Profile, die sie verwenden, stehen auf der Seite [Profile](profiles.html).
 
-> [TODO: Listen und beschreiben Sie die Extensions Ihres Moduls — oder
-> entfernen Sie diese Seite, wenn Ihr Modul keine definiert.]
-{: .ig-highlight .ig-highlight-grey}
+#### Übersicht: Familienanamnese-Extensions
+
+Dieser Abschnitt dokumentiert die spezifischen Extensions für die Familienanamnese im Kontext genetischer Analysen. Diese Extensions erweitern die FHIR-Ressource FamilyMemberHistory um detaillierte Verwandtschaftsinformationen.
+
+---
+
+#### Extension: Verwandtschaftsgrad
+
+**Beschreibung**: Gibt den Verwandtschaftsgrad zwischen Patient und Familienangehörigen an (z.B. erstgradig, zweitgradig).
+
+**URL**: `https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad`
+
+**Kontext**: `FamilyMemberHistory.relationship.coding`
+
+**Kardinalität**: 0..1
+
+##### Profil: Verwandtschaftsgrad
+
+[mii-ex-molgen-verwandtschaftsgrad](StructureDefinition-mii-ex-molgen-verwandtschaftsgrad.html)
+
+##### ValueSet: Verwandtschaftsgrad
+
+[mii-vs-molgen-verwandtschaftsgrad](ValueSet-mii-vs-molgen-verwandtschaftsgrad.html)
+
+**Enthält Konzepte**:
+- `SCT#125678001` - First degree blood relative (person)
+- `SCT#699110007` - Second degree blood relative (person)
+
+---
+
+#### Extension: Verwandtschaftsverhältnis
+
+**Beschreibung**: Spezifiziert das genaue Verwandtschaftsverhältnis zwischen Patient und Familienangehörigen (z.B. natürliches Kind, adoptiert).
+
+**URL**: `https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis`
+
+**Kontext**: `FamilyMemberHistory.relationship.coding`
+
+**Kardinalität**: 0..1
+
+##### Profil: Verwandtschaftsverhältnis
+
+[mii-ex-molgen-verwandtschaftsverhaeltnis](StructureDefinition-mii-ex-molgen-verwandtschaftsverhaeltnis.html)
+
+##### ValueSet: Verwandtschaftsverhältnis
+
+[mii-vs-molgen-verwandtschaftsverhaeltnis](ValueSet-mii-vs-molgen-verwandtschaftsverhaeltnis.html)
+
+**Beispiel-Konzepte**:
+- `SCT#75226009` - Natural child (person)
+- `SCT#441869007` - Adopted child (person)
+
+---
+
+#### Extension: Familiäre Linie
+
+**Beschreibung**: Gibt die familiäre Linie an (mütterlich oder väterlich), aus der die Verwandtschaft stammt.
+
+**URL**: `https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-familiare-linie`
+
+**Kontext**: `FamilyMemberHistory.relationship.coding`
+
+**Kardinalität**: 0..1
+
+##### Profil: Familiäre Linie
+
+[mii-ex-molgen-familiare-linie](StructureDefinition-mii-ex-molgen-familiare-linie.html)
+
+##### ValueSet: Familiäre Linie
+
+[mii-vs-molgen-familiaere-linie](ValueSet-mii-vs-molgen-familiaere-linie.html)
+
+**Enthält Konzepte**:
+- `SCT#72705000` - Mother (person)
+- `SCT#66839005` - Father (person)
+
+---
+
+#### Verwendungsbeispiel
+
+```json
+{
+  "resourceType": "FamilyMemberHistory",
+  "relationship": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "72705000",
+        "display": "Mother",
+        "extension": [
+          {
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad",
+            "valueCoding": {
+              "system": "http://snomed.info/sct",
+              "code": "125678001",
+              "display": "First degree blood relative"
+            }
+          },
+          {
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis",
+            "valueCoding": {
+              "system": "http://snomed.info/sct",
+              "code": "75226009",
+              "display": "Natural child"
+            }
+          },
+          {
+            "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-familiare-linie",
+            "valueCoding": {
+              "system": "http://snomed.info/sct",
+              "code": "72705000",
+              "display": "Mother"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+---
+
+#### Hinweise zur Implementierung
+
+- Alle drei Extensions sind optional und können unabhängig voneinander verwendet werden
+- Die Extensions werden als Teil des `relationship.coding` Elements angehängt
+- Die ValueSets verwenden primär SNOMED CT Konzepte
+- Bei der Angabe der familiären Linie ist besonders bei genetischen Erbgängen die Unterscheidung zwischen mütterlicher und väterlicher Linie relevant

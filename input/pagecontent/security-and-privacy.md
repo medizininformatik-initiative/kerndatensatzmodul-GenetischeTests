@@ -3,11 +3,11 @@
      Structured in the TF-KDS-agreed THREE stages: (1) the overarching data
      protection concept, (2) DIMP in the data portal, (3) the
      module-specific aspects. Stages 1 and 2 are static overarching content —
-     keep them; stage 3 is where your module writes. Stage 3's CONTENT is
-     optional: a module with no aspects of its own adopts the default text in
-     the section. The Person example box is illustrative only and MUST be
-     removed before the first release (ILLUSTRATIVE-EXAMPLE marker, convention
-     check M11).
+     keep them; stage 3 is where your module writes.
+     Stage 3 was decided during the 2026-08-28 template migration: the template's
+     default text ("no aspects of its own") was NOT adopted, because it would be
+     untrue for genetic data; the illustrative example box was removed then
+     (convention check M11). The section body states the open obligation.
      German mirror: input/translations/de/pagecontent/security-and-privacy.md —
      both files must say the same thing. -->
 
@@ -45,31 +45,27 @@ by the DIMP configuration, not by this guide.
 
 #### 3. Module-specific aspects
 
-This is the module's own contribution: the security and privacy properties
-that follow from the *kind of data this module carries*. **Its content is
-optional** — not every module has aspects of its own. If yours does not, the
-whole section body becomes the following default text (delete the example and
-TODO boxes below and adopt it verbatim):
+This is the module's own contribution: the security and privacy properties that
+follow from the *kind of data this module carries*.
 
-> Beyond the overarching framework above — the overarching data protection
-> concept, the Broad Consent it rests on, and DIMP — this module carries no
-> data category that raises security or privacy aspects of its own, and it
-> places no module-specific security or privacy requirements on implementers.
-
-<!-- ILLUSTRATIVE-EXAMPLE — decide this section and remove the example box
-     below (in this file AND the German mirror) before the first release;
-     the convention check (M11) fails a release branch while it is present. -->
-> **Illustrative example — remove before the first release.** How another KDS
-> module fills this section (*Person*): the patient identifiers are pseudonyms
-> from the trusted third party; systems must not let record linkage
-> re-identify a person, and the pseudonym's scope (site-wide vs
-> project-specific) must be respected when data is combined.
-{: .ig-highlight .ig-highlight-orange}
-
-> [TODO: State your module's specific aspects — the data categories it carries
-> and their sensitivity, risks that profile-level pseudonymisation does not
-> cover, and any security- or privacy-related SHALL/SHOULD/MAY requirements
-> this module places on implementers, each with the risk it addresses. Name
-> residual risks that must be handled in system design, deployment or policy —
-> or adopt the default text above if there are none.]
+<!-- DERIVED:no-source source=none gate=B -->
+> **This section is not yet written — decision taken, content outstanding.**
+> The Simplifier guide this module was migrated from carries no security or
+> privacy narrative at all, so there was nothing to migrate here.
+>
+> The template offers a default text for modules with no aspects of their own
+> ("this module carries no data category that raises security or privacy
+> aspects of its own"). **That default was deliberately NOT adopted**, because
+> for a molecular genetics module it would be untrue: the module carries
+> genetic sequence data, which is special-category data, is inherently
+> re-identifying even after pseudonymisation, and carries information about
+> blood relatives who are not the data subject and have not consented.
+>
+> Writing the real analysis is a domain-author task, not a migration task, so
+> it is left open here rather than guessed at. It must be completed before the
+> first release: at minimum the data categories and their sensitivity, the
+> re-identification risk that profile-level pseudonymisation does not remove,
+> the familial implications, and any security- or privacy-related
+> SHALL/SHOULD/MAY requirements this module places on implementers, each with
+> the risk it addresses.
 {: .ig-highlight .ig-highlight-grey}

@@ -21,7 +21,7 @@
 # │                           placeholder that appears in FILE NAMES — three:          │
 # │                           input/translations/de/ImplementationGuide-mii-ig-        │
 # │                           molgen.po and the IG intro page                 │
-# │                           ImplementationGuide-mii-ig-molgen.md in         │
+# │                           ImplementationGuide-mii-ig-molgen-de-v2026.md in         │
 # │                           input/pagecontent/ + its German mirror. All three        │
 # │                           must be RENAMED as well as substituted                   │
 # │                           (docs/recipes/create-a-new-module.md step 4; .po         │
@@ -275,8 +275,6 @@ pages:
 
   guidance.md:
     title: Guidance
-    researcher-guidance.md: # OPTIONAL (0..1) — see docs/optional-pages.md
-      title: Guidance for Researchers
     implementer-guidance.md:
       title: Guidance for Implementers
     uml-diagrams.md:
@@ -287,6 +285,12 @@ pages:
   security-and-privacy.md:
     title: Security and Privacy
 
+  # The ONE page this migration adds beyond the template's fixed set: the source
+  # guide's Qualitaetsbericht (validation status and known findings). Cross-cutting,
+  # no agreed page owns it, no artefact anchors it (migration spec 9e branch 4).
+  qualitaetsbericht.md:
+    title: Quality Report
+
   profiles.md:
     title: Profiles
   extensions.md: # OPTIONAL (0..1) — see docs/optional-pages.md
@@ -295,14 +299,10 @@ pages:
     title: Capability Statements
   search-parameters.md: # OPTIONAL (0..1) — see docs/optional-pages.md
     title: Search Parameters
-  operations.md: # OPTIONAL (0..1) — see docs/optional-pages.md
-    title: Operations
   logical-models.md:
     title: Logical Models
   value-sets.md: # OPTIONAL (0..1) — see docs/optional-pages.md
     title: Value Sets
-  code-systems.md: # OPTIONAL (0..1) — see docs/optional-pages.md
-    title: Code Systems
   examples.md:
     title: Examples
 
@@ -323,20 +323,18 @@ pages:
   # the kerndatensatz-basis idiom (ImplementationGuide-mii-ig-base.md there).
   # BOTH this entry's key and the two source files carry molgen in
   # their NAME: like the IG-level .po catalogue, rename
-  # input/pagecontent/ImplementationGuide-mii-ig-molgen.md and its
+  # input/pagecontent/ImplementationGuide-mii-ig-molgen-de-v2026.md and its
   # German mirror under input/translations/de/pagecontent/ when you set your
   # slug (docs/recipes/create-a-new-module.md step 4). The CI self-check
   # substitutes and renames all of them for the template repo's own preview.
-  ImplementationGuide-mii-ig-molgen.md:
+  # NOTE: derived from the module ID (mii-ig-molgen-de-v2026), NOT from the slug --
+  # SUSHI writes ImplementationGuide-<id>.json from the id and nothing else (check P5).
+  ImplementationGuide-mii-ig-molgen-de-v2026.md:
     title: MII ImplementationGuide Resource
 
   translationinfo.md:
     title: Translation Information
 
-  # DEMONSTRATION page shipped with the scaffold — delete this entry, the page
-  # and its German mirror once you have taken what you need from it.
-  rendering-artifacts.md:
-    title: Rendering Artifacts (demo)
 
 #
 #

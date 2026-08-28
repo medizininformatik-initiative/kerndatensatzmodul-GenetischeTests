@@ -44,34 +44,28 @@ nicht dieser Leitfaden.
 
 Dies ist der eigene Beitrag des Moduls: die Sicherheits- und
 Datenschutz-Eigenschaften, die aus der *Art der Daten dieses Moduls* folgen.
-**Der Inhalt dieses Abschnitts ist optional** — nicht jedes Modul hat eigene
-Aspekte. Hat Ihres keine, besteht der gesamte Abschnitt aus dem folgenden
-Standardtext (löschen Sie die Beispiel- und TODO-Boxen unten und übernehmen
-Sie ihn wörtlich):
 
-> Über den oben verlinkten übergreifenden Rahmen hinaus — das übergreifende
-> Datenschutzkonzept, den ihm zugrunde liegenden Broad Consent und DIMP —
-> führt dieses Modul keine Datenkategorie, die eigene Sicherheits- oder
-> Datenschutzaspekte aufwirft, und stellt keine modulspezifischen Sicherheits-
-> oder Datenschutzanforderungen an Implementierende.
-
-<!-- ILLUSTRATIVE-EXAMPLE — Abschnitt entscheiden und die Beispiel-Box unten
-     (in dieser Datei UND der englischen Quellseite) vor dem ersten Release
-     entfernen; der Konventions-Check (M11) lässt einen Release-Branch damit
-     fehlschlagen. -->
-> **Illustratives Beispiel — vor dem ersten Release entfernen.** So füllt ein
-> anderes KDS-Modul diesen Abschnitt (*Person*): die Patienten-Identifikatoren
-> sind Pseudonyme der Treuhandstelle; Systeme dürfen ein Record Linkage nicht
-> zur Re-Identifizierung führen lassen, und der Geltungsbereich eines
-> Pseudonyms (standortweit vs. projektspezifisch) ist beim Zusammenführen von
-> Daten zu respektieren.
-{: .ig-highlight .ig-highlight-orange}
-
-> [TODO: Nennen Sie die spezifischen Aspekte Ihres Moduls — die geführten
-> Datenkategorien und ihre Sensibilität, Risiken, die eine Pseudonymisierung
-> auf Profilebene nicht abdeckt, sowie sicherheits- oder datenschutzbezogene
+<!-- DERIVED:no-source source=none gate=B -->
+> **Dieser Abschnitt ist noch nicht geschrieben — Entscheidung getroffen, Inhalt offen.**
+> Der Simplifier-Leitfaden, aus dem dieses Modul migriert wurde, enthält
+> überhaupt keine Sicherheits- oder Datenschutz-Darstellung; es gab hier also
+> nichts zu migrieren.
+>
+> Das Template bietet einen Standardtext für Module ohne eigene Aspekte
+> ("führt dieses Modul keine Datenkategorie, die eigene Sicherheits- oder
+> Datenschutzaspekte aufwirft"). **Dieser Standardtext wurde bewusst NICHT
+> übernommen**, weil er für ein molekulargenetisches Modul unzutreffend wäre:
+> Das Modul führt genetische Sequenzdaten. Diese sind besondere Kategorien
+> personenbezogener Daten, sind auch nach Pseudonymisierung inhärent
+> re-identifizierend und enthalten Informationen über Blutsverwandte, die nicht
+> die betroffene Person sind und nicht eingewilligt haben.
+>
+> Die eigentliche Analyse zu schreiben ist Aufgabe der Fach-Autorinnen und
+> -Autoren, nicht der Migration; sie bleibt deshalb offen statt geraten. Sie
+> muss vor dem ersten Release erfolgen: mindestens die geführten
+> Datenkategorien und ihre Sensibilität, das Re-Identifikationsrisiko, das eine
+> Pseudonymisierung auf Profilebene nicht beseitigt, die familiären
+> Implikationen sowie sicherheits- oder datenschutzbezogene
 > SHALL/SHOULD/MAY-Anforderungen dieses Moduls an Implementierende, jeweils mit
-> dem adressierten Risiko. Benennen Sie verbleibende Risiken, die im
-> Systemdesign, im Betrieb oder per Policy behandelt werden müssen — oder
-> übernehmen Sie den Standardtext oben, wenn es keine gibt.]
+> dem adressierten Risiko.
 {: .ig-highlight .ig-highlight-grey}
