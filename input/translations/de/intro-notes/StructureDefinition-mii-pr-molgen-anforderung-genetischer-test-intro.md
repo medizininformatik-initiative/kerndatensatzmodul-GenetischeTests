@@ -10,15 +10,6 @@ Der Laborauftrag oder die Anfrage, die die Durchführung des genetischen Tests a
 
 In der Anforderung können auch ein oder mehrere bekannte Symptome über das reasonReference Element als ['Phenotypic Features'](https://build.fhir.org/ig/HL7/phenomics-exchange-ig/branches/v0.1.0/StructureDefinition-PhenotypicFeature.html), die in GA4GH's Phenopackets IG profiliert sind, angegeben werden.
 
-@```
-from 
-    StructureDefinition 
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test' 
-select 
-    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
-```
-
 #### Profil
 
 ---

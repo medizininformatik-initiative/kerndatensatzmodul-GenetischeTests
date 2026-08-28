@@ -12,14 +12,6 @@ This profile describes the determination of a particular genotype on the basis o
 As the nomenclature for Observation.component:cytogenetic-location.valueCodeableConcept, the CodeSystem Cytogenetic (chromosome) location (NCBI/NLM) can be used, for which no canonical URL exists so far, but an OID `urn:oid:2.16.840.1.113883.6.335` from the HL7 Version 2.5.1 Implementation Guide: Laboratory Results Interface.
 
 <!-- TODO:REVIEW unresolved FQL metadata block below (url/status/version). references/fql-crosswalk.md says to drop such a block, because the publisher generates that header itself. Carried over verbatim because this task translates only; the same block stands in the German file. The select labels stay German ("Basis") since they sit inside a code block. -->
-@```
-from 
-    StructureDefinition 
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp' 
-select 
-    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
-```
 
 ---
 

@@ -36,15 +36,6 @@ Beispiel für die korrekte Angabe in `component[representative-transcript-ref-se
 
 Weitere Informationen zu MANE: https://www.ncbi.nlm.nih.gov/refseq/MANE/
 
-@```
-from 
-    StructureDefinition 
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante' 
-select 
-    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
-```
-
 ---
 
 Das Profil ist abgeleitet vom Profil [Variant](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-variant.html) aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).

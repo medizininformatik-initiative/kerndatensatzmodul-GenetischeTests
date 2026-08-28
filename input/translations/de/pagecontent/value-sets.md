@@ -179,7 +179,7 @@ Vererbungsmuster für genetische Erkrankungen (autosomal dominant, rezessiv, X-l
 
 **Canonical:** `http://hl7.org/fhir/uv/genomics-reporting/ValueSet/condition-inheritance-vs`
 
-[condition-inheritance-vs](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-condition-inheritance-vs.html)
+[condition-inheritance-vs](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-condition-inheritance-mode-vs.html)
 
 ---
 
@@ -199,7 +199,8 @@ Therapeutische Implikationen genetischer Varianten.
 
 **Canonical:** `http://hl7.org/fhir/uv/genomics-reporting/ValueSet/therapeutic-implication-vs`
 
-[therapeutic-implication-vs](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-therapeutic-implication-vs.html)
+[therapeutic-implication-vs](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-genetic-therapeutic-implications-vs.html)
+<!-- TODO:REVIEW STU2 canonical .../ValueSet/therapeutic-implication-vs has no STU3 page; genetic-therapeutic-implications-vs is the nearest STU3 ValueSet but carries a DIFFERENT canonical, so the equivalence is UNCONFIRMED -->
 
 ---
 

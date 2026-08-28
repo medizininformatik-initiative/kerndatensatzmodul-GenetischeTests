@@ -8,18 +8,10 @@
 
 Dieses Profil beschreibt die Gesamtzahl der in der DNA von Krebszellen gefundenen Mutationen.
 
-@```
-from 
-    StructureDefinition 
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast' 
-select 
-    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
-```
-
 ---
 
-Das Profil ist abgeleitet vom Profil [Tumor Mutation Burden](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-tmb.html) aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
+Das Profil ist abgeleitet vom Profil [Tumor Mutation Burden](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-molecular-biomarker.html) aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
+<!-- STU2 tmb -> STU3 molecular-biomarker, per this module's own profile-inheritance table -->
 
 ---
 

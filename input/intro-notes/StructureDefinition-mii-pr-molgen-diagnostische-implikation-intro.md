@@ -10,14 +10,6 @@
 Observation profile that states a relationship between one or more genotypes/haplotypes/variants and evidence for or against a particular disease, condition or tumour diagnosis.
 
 <!-- TODO:REVIEW unresolved FQL metadata block below (url/status/version). references/fql-crosswalk.md says to drop such a block, because the publisher generates that header itself. Carried over verbatim because this task translates only; the same block stands in the German file. The select labels stay German ("Basis") since they sit inside a code block. -->
-@```
-from 
-    StructureDefinition 
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation' 
-select 
-    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
-```
 
 ---
 

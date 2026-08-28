@@ -10,15 +10,6 @@ Dieses Profil beschreibt eine Genomic Study Analysis als Procedure-Ressource zur
 
 GenomicStudyAnalysis erfasst spezifische Analyseparameter wie untersuchte Genomregionen, verwendete Referenzassemblies und Analysetools.
 
-@```
-from 
-    StructureDefinition 
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis' 
-select 
-    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
-```
-
 ---
 
 Das Profil ist abgeleitet vom Profil [GenomicStudyAnalysis](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-genomic-study-analysis.html) aus [HL7 Genomics Reporting Implementation Guide STU3](http://hl7.org/fhir/uv/genomics-reporting/STU3/).

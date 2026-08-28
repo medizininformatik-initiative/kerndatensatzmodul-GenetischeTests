@@ -8,15 +8,6 @@
 
 Details zur Krankengeschichte von verwandten Familienmitgliedern.
 
-@```
-from 
-    StructureDefinition 
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese' 
-select 
-    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
-```
-
 ---
 
 #### Profil

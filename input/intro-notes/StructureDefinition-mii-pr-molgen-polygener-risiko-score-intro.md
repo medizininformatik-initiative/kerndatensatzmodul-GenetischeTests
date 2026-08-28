@@ -10,14 +10,6 @@
 A polygenic risk score (PRS), sometimes also referred to as a polygenic score (PGS) or genetic risk score (GRS), is an estimate of an individual's genetic risk for a particular trait, obtained by aggregating and quantifying the effects of many commonly occurring variants (usually defined as a minor allele frequency of ≥1%) across the genome.
 
 <!-- TODO:REVIEW the column alias "Basis" in the following query block is still German; it is left unchanged because the rule is not to modify code blocks. Decide at Gate C whether query blocks should be localised. -->
-@```
-from 
-    StructureDefinition 
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score' 
-select 
-    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
-```
 
 ---
 

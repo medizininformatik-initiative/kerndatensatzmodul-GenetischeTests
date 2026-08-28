@@ -97,7 +97,7 @@ Canonical: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haploty
      unchanged, because link targets must not be altered in this migration. -->
 
 The profile
-[Haplotype](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html.html)
+[Haplotype](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html)
 comes from the
 [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
 
@@ -318,13 +318,13 @@ from the
 
 **Sequence Phase Relationship CodeSystem**
 
-[SequencePhaseRelationshipCS](http://hl7.org/fhir/uv/genomics-reporting/STU3/CodeSystem-SequencePhaseRelationshipCS.html)
+[SequencePhaseRelationshipCS](http://hl7.org/fhir/uv/genomics-reporting/STU3/CodeSystem-sequence-phase-relationship-cs.html)
 
 ###### ValueSet
 
 **Sequence Phase Relationship ValueSet**
 
-[seq-phase-relationship](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-seq-phase-relationship.html)
+[seq-phase-relationship](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-sequence-phase-relationship-vs.html)
 
 ### References
 

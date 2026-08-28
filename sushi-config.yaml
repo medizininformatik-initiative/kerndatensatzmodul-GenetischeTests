@@ -422,8 +422,40 @@ parameters:
   # kerndatensatz-basis, for example, is specific to that module and must NOT be
   # copied. Regenerate the list for
   # your module per docs/recipes/regenerate-special-url.md, then uncomment:
-  # special-url:
-  #   - {{SPECIAL_URL_1}}
+  # REGENERATED FOR THIS MODULE 2026-08-28 (docs/recipes/regenerate-special-url.md),
+  # during the migration onto the module template. All 21 canonicals below DO sit under
+  # the module canonical; what differs is that their LAST SEGMENT is not the resource id
+  # (e.g. .../StructureDefinition/variante has id mii-pr-molgen-variante). The IG Publisher
+  # rejects that as a probable typo -- "Use the special-url parameter if you really mean
+  # for it not to match" -- so this IS the sanctioned allow-list, and it is the reason
+  # NO canonical was rewritten: these URLs are published by release 2026.0.4 and every
+  # consumer resolves against them (migration guardrail 1).
+  # The Gate-0 preflight predicted exactly this count (special_url_prediction = 21).
+  # Regenerate with:  python3 -c "import json,os,glob; [print(r['url']) for f in
+  #   sorted(glob.glob('fsh-generated/resources/*.json')) for r in [json.load(open(f))]
+  #   if r.get('url') and r.get('id') and r['url'].rsplit('/',1)[-1] != r['id']]"
+  special-url:
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/CapabilityStatement/metadata
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/DiagnosticReport-GenomicStudy
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/DiagnosticReport-RecommendedAction
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-Device
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-MethodType
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-RegionsStudied
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-Specimen
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-massnahme
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/risk-assessment-einflussfaktor
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation
+    - https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante
   # FHIR validation test cases (for example, kerndatensatz-basis does the same).
   # A minimal working harness ships in
   # tests/profiles/ — see tests/README.md. It stays COMMENTED OUT in the template

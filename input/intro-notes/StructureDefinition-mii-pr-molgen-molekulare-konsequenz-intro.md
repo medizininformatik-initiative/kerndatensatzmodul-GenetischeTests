@@ -12,14 +12,6 @@ This profile describes the molecular consequences of genetic variants. It is a n
 The MolekulareKonsequenz profile focuses on the functional effects of variants, whereas the Variante profile concentrates on the description of the variant itself.
 
 <!-- TODO:REVIEW unresolved FQL metadata block below (url/status/version). references/fql-crosswalk.md says to drop such a block, because the publisher generates that header itself. Carried over verbatim because this task translates only; the same block stands in the German file. The select labels stay German ("Basis") since they sit inside a code block. -->
-@```
-from 
-    StructureDefinition 
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz' 
-select 
-    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
-```
 
 ---
 

@@ -1,6 +1,6 @@
-# IG-Statistik — molgen-source
+# IG-Statistik — molgen-target
 
-_Modus: `static` · Stand: 2026-08-28T13:14:46Z · Commit: `79eaf41`_
+_Modus: `static` · Stand: 2026-08-28T14:27:42Z · Commit: `e0f0dcd`_
 
 ## Kennzahlen-Überblick
 
@@ -40,7 +40,7 @@ pie showData title Artefakte
 
 **⚠ Gegenprobe generiert-vs-deklariert** (`fsh-generated/resources`): `examples` deklariert 159 / generiert 99; `other:PlanDefinition` deklariert 0 / generiert 1 — für Seiten-/Menü-Entscheidungen ist die generierte resourceType-Zählung maßgeblich; die FSH-Deklarationstypisierung kennt nur InstanceOf-Namen.
 
-_Interne FSH-Konstrukte (nicht in Σ): 14 rulesets, 16 mappings._
+_Interne FSH-Konstrukte (nicht in Σ): 58 rulesets, 16 mappings._
 
 ### Plattform-Direktiven — Σ 388 (unbekannt: 9)
 
@@ -90,14 +90,14 @@ _Linguistische Kennzahlen zum Textumfang (Wörter je Seite, Durchschnitt) sowie 
 
 | Kennzahl | Wert |
 |---|---|
-| Inhalts-Seiten | 41 |
-| Wörter gesamt | 17365 |
-| Ø Wörter / Seite | 423,5 |
-| Median Wörter / Seite | 357 |
-| kürzeste / längste Seite | 65 / 1686 Wörter |
-| doppelte Inhaltsblöcke | 30 |
+| Inhalts-Seiten | 60 |
+| Wörter gesamt | 34103 |
+| Ø Wörter / Seite | 568,4 |
+| Median Wörter / Seite | 394 |
+| kürzeste / längste Seite | 58 / 2625 Wörter |
+| doppelte Inhaltsblöcke | 39 |
 | identische Seiten (Gruppen) | 0 |
-| Bilder nicht referenziert | 3 von 4 |
+| Bilder nicht referenziert | 7 von 12 |
 | Beispiele nicht in Narrativen | 149 von 159 |
 
 </div>
@@ -115,7 +115,7 @@ _Gezählte Reife-Komponenten nebeneinander: Status, Vollständigkeit der Dokumen
 | Status | active |
 | Doku-Vollständigkeit (Inhalt vs. Stubs) | 100 % |
 | Beispiel-Abdeckung Profile | 0 % (0/16) |
-| Governance (CI · ig.ini · publication · devcontainer) | 50/100 |
+| Governance (CI · ig.ini · publication · devcontainer) | 100/100 |
 
 </div>
 
@@ -129,12 +129,12 @@ _Strategische Kennzahlen: Bindung an die Quellplattform (Lock-in), Anteil standa
 
 | Kennzahl | Wert |
 |---|---|
-| Hersteller-Lock-in | 100/100 (hoch) · 9,5 Direktiven/Seite |
+| Hersteller-Lock-in | 78/100 (hoch) · 6,5 Direktiven/Seite |
 | Standard-Terminologie-Anteil | 100 % (SNOMED CT, LOINC, ICD-10, UCUM, ATC) |
 | Wiederverwendung externer Profile (Parents) | 89 % (17 von 19 Profil-Parents extern; abstrakte LM-Basistypen ausgeschlossen) |
 | FHIR-Version | R4 — aktuell verbreitet |
 | Dependency-Veraltung | 0 veraltet (Heuristik) |
-| Pflege-Kadenz | 61.4 Commits/Jahr · letzter Commit vor 198 Tagen |
+| Pflege-Kadenz | 55.8 Commits/Jahr · letzter Commit vor 0 Tagen |
 
 </div>
 
@@ -149,10 +149,10 @@ _Entscheidungsrelevante Risiken für die Freigabe: Terminologie-Lizenzen, unterd
 | Risiko | Bewertung |
 |---|---|
 | Terminologie-Lizenz | Lizenzbedarf möglich — SNOMED CT: lizenzpflichtig (Affiliate/Land), LOINC: frei (Registrierung), ICD-10: frei, UCUM: frei, ATC: eingeschränkt |
-| Unterdrückte QA-Warnungen | 1 (davon 0 breit) → gering |
+| Unterdrückte QA-Warnungen | 10 (davon 1 breit) → erhöht |
 | Datenschutz-Seite (Substanz) | fehlt/nur Stub (0 Wörter) |
 | PII-artige Beispieldaten | ja – prüfen |
-| Bus-Faktor (Wissenskonzentration) | 46 % Top-Autor → gering |
+| Bus-Faktor (Wissenskonzentration) | 47 % Top-Autor → gering |
 | Breaking-Change-Risiko ggü. Vorversion | — (nur per Build/Vorversions-Diff) |
 
 </div>
@@ -166,12 +166,12 @@ _Je Themenbereich der gemessene Befund und eine neutrale Einordnung, was er übe
 | Bereich | Befund | Einordnung |
 |---|---|---|
 | Artefakte (FSH) | 192 publiziert, FSH vorhanden | Zählt die publizierten Konformitätsressourcen und ob FSH-Quelltext vorliegt. FSH-Quellen machen den Bestand direkt les-, diff- und weiterverarbeitbar; ohne sie ist nur das generierte JSON/XML die Quelle. |
-| Narrative | 41 Inhalts-Seiten, Format source | Anzahl und Format der Erklärseiten (source = Plattformformat, target = IG-Publisher-Format). Das Format bestimmt, welche Werkzeuge die Seiten unverändert verarbeiten können. |
+| Narrative | 60 Inhalts-Seiten, Format target | Anzahl und Format der Erklärseiten (source = Plattformformat, target = IG-Publisher-Format). Das Format bestimmt, welche Werkzeuge die Seiten unverändert verarbeiten können. |
 | Direktiven | 388 (9 unbekannt) | Vorkommen plattformspezifischer Platzhalter/Tags, die nur die Quellplattform interpretiert. Je mehr davon, desto stärker ist die Darstellung an die Plattform gebunden (vgl. Lock-in-Kennzahl). |
-| Dependencies | 6 (6 floating) | Deklarierte Paket-Abhängigkeiten und ihr Pinning. Floating-Einträge folgen automatisch neuen Versionen und machen Builds weniger reproduzierbar — der Wert zeigt, wie reproduzierbar der aktuelle Stand ist. |
+| Dependencies | 8 (0 floating) | Deklarierte Paket-Abhängigkeiten und ihr Pinning. Floating-Einträge folgen automatisch neuen Versionen und machen Builds weniger reproduzierbar — der Wert zeigt, wie reproduzierbar der aktuelle Stand ist. |
 | Mehrsprachigkeit | FSH-Übersetzung ja, Supplements 0 | Ob Übersetzungen in den FSH-Quellen (translation-Extensions) und/oder als Publisher-Supplements vorliegen. Die beiden Mechanismen decken unterschiedliche Textarten ab; der Wert zeigt den vorhandenen Stand, nicht den Bedarf. |
-| Pflichtseiten | 0/13 im Zielformat | Wie viele Seiten des hinterlegten Pflicht-Rasters (mandatory_pages in dieser Datei) im Zielformat existieren. Die Aussagekraft hängt vom Raster ab: Nutzt ein Guide legitim ein anderes Seitenraster, wird das Raster korrigiert — nicht die Seiten als fehlend gewertet. |
-| QC-Regeln | — definiert | Anzahl der im Projekt definierten Qualitätsregeln (qc/custom.rules.yaml). Statisch wird nur die Definition gezählt; Verletzungen zeigt erst der Qualitätslauf eines Builds. |
+| Pflichtseiten | 13/13 im Zielformat | Wie viele Seiten des hinterlegten Pflicht-Rasters (mandatory_pages in dieser Datei) im Zielformat existieren. Die Aussagekraft hängt vom Raster ab: Nutzt ein Guide legitim ein anderes Seitenraster, wird das Raster korrigiert — nicht die Seiten als fehlend gewertet. |
+| QC-Regeln | 12 definiert | Anzahl der im Projekt definierten Qualitätsregeln (qc/custom.rules.yaml). Statisch wird nur die Definition gezählt; Verletzungen zeigt erst der Qualitätslauf eines Builds. |
 | Metadaten/Config | id mii-ig-molgen-de-v2026, v2026.0.4 | Kern-Identität (id, Version) wie in sushi-config.yaml/package.json deklariert; die vollständigen Identitätsfelder stehen im Anhang. |
 
 </div>
@@ -218,7 +218,7 @@ _Im Anhang steht jeder Einzelwert mit seiner Quelle, damit man die Kennzahlen na
 | status | active | sushi-config.yaml / package.json |
 | fhirVersion | 4.0.1 | sushi-config.yaml / package.json |
 | license |  | sushi-config.yaml / package.json |
-| publisher | Medizininformatik-Initiative | sushi-config.yaml / package.json |
+| publisher | Medizininformatik Initiative | sushi-config.yaml / package.json |
 | calver | True | version-Regex |
 
 </div>
@@ -231,24 +231,28 @@ _Die FHIR-Pakete, auf denen der IG aufbaut, samt Version und ob diese fest oder 
 
 | Package | Version | Pin |
 |---|---|---|
-| hl7.fhir.uv.genomics-reporting | 3.0.x | floating ⚠ |
-| de.medizininformatikinitiative.kerndatensatz.meta | 2026.0.x | floating ⚠ |
-| de.basisprofil.r4 | 1.5.x | floating ⚠ |
-| de.medizininformatikinitiative.kerndatensatz.base | 2026.0.x | floating ⚠ |
-| de.medizininformatikinitiative.kerndatensatz.biobank | 2026.0.x | floating ⚠ |
-| hl7.terminology.r4 | 6.1.x | floating ⚠ |
+| hl7.fhir.uv.genomics-reporting | 3.0.0 | gepinnt |
+| de.medizininformatikinitiative.kerndatensatz.meta | 2026.0.0 | gepinnt |
+| de.basisprofil.r4 | 1.5.4 | gepinnt |
+| de.medizininformatikinitiative.kerndatensatz.base | 2026.0.1 | gepinnt |
+| de.medizininformatikinitiative.kerndatensatz.biobank | 2026.0.1 | gepinnt |
+| hl7.terminology.r4 | 6.1.0 | gepinnt |
+| hl7.fhir.uv.crmi | 2.0.0 | gepinnt |
+| hl7.fhir.uv.extensions.r4 | 5.3.0 | gepinnt |
 
 </div>
 
 ## Pre-flight (Migration Gate 0)
 
-- Lizenz-Evidenz: **KEINE — in keiner Quelle deklariert**
+- Lizenz-Evidenz: input/pagecontent/value-sets.md → CC0
 
 - Canonical-Raum: 0 außerhalb + 10 id/url-abweichend → special-url-Prognose: 21
 
-- Dependency-Gesundheit: old-style=keine; THO direkt gepinnt=True, Extensions-Pack=False — **Injektionsrisiko: der Publisher lädt zur Buildzeit das JEWEILS NEUESTE Release**; externe Parents: 12
+- Dependency-Gesundheit: old-style=keine; THO direkt gepinnt=True, Extensions-Pack=True; externe Parents: 12
 
-- QA-Baseline: **keine im Baum** — für Vorher/Nachher-Beweise die unmigrierte Quelle bauen oder deren gerendertes qa beziehen
+- Narrative-Quellen: **DUAL** — implementation-guides/ (letzter Commit 2026-02-11T09:58:03+01:00) UND pagecontent+intro-notes (letzter Commit 2026-08-28T16:05:52+02:00); vor der Migration entscheiden, welche Kopie maßgeblich ist (Frische, nicht Rang)
+
+- QA-Baseline: output/qa.json → err=68 warn=961 (Fri, 28 Aug, 2026 16:17:19 +0200)
 
 ## Artefakte (Quelle: input/fsh (FSH-Deklarationen))
 
@@ -258,7 +262,7 @@ _Jedes definierte Artefakt mit Typ, Name und Fundort in den Quelldateien._
 
 | Typ | Name | InstanceOf | Quelle |
 |---|---|---|---|
-| Instance | mii-exa-molgen-molekulargenetischer-befundbericht-2 | mii-pr-molgen-molekulargenetischer-befundbericht | input/fsh/ARCHIVED-STU2-Examples.fsh:42 |
+| Instance | mii-exa-molgen-befundbericht-2 | mii-pr-molgen-molekulargenetischer-befundbericht | input/fsh/ARCHIVED-STU2-Examples.fsh:42 |
 | Profile | MII_PR_MolGen_AnforderungGenetischerTest |  | input/fsh/Anforderung.fsh:1 |
 | Mapping | MolGen-Anforderung |  | input/fsh/Anforderung.fsh:85 |
 | Instance | mii-exa-molgen-anforderung-1 | mii-pr-molgen-anforderung-genetischer-test | input/fsh/Anforderung.fsh:106 |
@@ -359,10 +363,10 @@ _Jedes definierte Artefakt mit Typ, Name und Fundort in den Quelldateien._
 | Profile | MII_PR_MolGen_MolekularerBiomarker |  | input/fsh/MolekularerBiomarker.fsh:1 |
 | Profile | MII_PR_MolGen_MolekulargenetischerBefundbericht |  | input/fsh/MolekulargenetischerBefundbericht.fsh:1 |
 | Mapping | MolGen-Befundbericht |  | input/fsh/MolekulargenetischerBefundbericht.fsh:176 |
-| Instance | mii-exa-molgen-molekulargenetischer-befundbericht-1 | mii-pr-molgen-molekulargenetischer-befundbericht | input/fsh/MolekulargenetischerBefundbericht.fsh:188 |
-| Instance | mii-exa-molgen-molekulargenetischer-befundbericht-2 | mii-pr-molgen-molekulargenetischer-befundbericht | input/fsh/MolekulargenetischerBefundbericht.fsh:218 |
-| Instance | mii-exa-molgen-molekulargenetischer-befundbericht-tumorboard-3 | mii-pr-molgen-molekulargenetischer-befundbericht | input/fsh/MolekulargenetischerBefundbericht.fsh:275 |
-| Instance | mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel | mii-pr-molgen-molekulargenetischer-befundbericht | input/fsh/MolekulargenetischerBefundbericht.fsh:304 |
+| Instance | mii-exa-molgen-befundbericht-1 | mii-pr-molgen-molekulargenetischer-befundbericht | input/fsh/MolekulargenetischerBefundbericht.fsh:188 |
+| Instance | mii-exa-molgen-befundbericht-2 | mii-pr-molgen-molekulargenetischer-befundbericht | input/fsh/MolekulargenetischerBefundbericht.fsh:218 |
+| Instance | mii-exa-molgen-befundbericht-tumorboard-3 | mii-pr-molgen-molekulargenetischer-befundbericht | input/fsh/MolekulargenetischerBefundbericht.fsh:275 |
+| Instance | mii-exa-molgen-befundbericht-trurisk-panel | mii-pr-molgen-molekulargenetischer-befundbericht | input/fsh/MolekulargenetischerBefundbericht.fsh:304 |
 | Profile | MII_PR_MolGen_Mutationslast |  | input/fsh/Mutationslast.fsh:1 |
 | Mapping | MolGen-Mutationslast |  | input/fsh/Mutationslast.fsh:62 |
 | Instance | mii-exa-molgen-mutationslast-1 | mii-pr-molgen-mutationslast | input/fsh/Mutationslast.fsh:68 |
@@ -459,7 +463,7 @@ _Jedes definierte Artefakt mit Typ, Name und Fundort in den Quelldateien._
 | Instance | mii-exa-molgen-untersuchte-region-srcc-smad4 | mii-pr-molgen-untersuchte-region | input/fsh/additional-examples.fsh:672 |
 | Instance | mii-exa-molgen-untersuchte-region-srcc-tp53 | mii-pr-molgen-untersuchte-region | input/fsh/additional-examples.fsh:677 |
 | Instance | mii-exa-molgen-untersuchte-region-srcc-ctnna1 | mii-pr-molgen-untersuchte-region | input/fsh/additional-examples.fsh:682 |
-| Instance | mii-exa-molgen-molekulargenetischer-befundbericht-srcc | mii-pr-molgen-molekulargenetischer-befundbericht | input/fsh/additional-examples.fsh:687 |
+| Instance | mii-exa-molgen-befundbericht-srcc | mii-pr-molgen-molekulargenetischer-befundbericht | input/fsh/additional-examples.fsh:687 |
 | Instance | mii-exa-befund-bundle-befund-srcc | Bundle | input/fsh/additional-examples.fsh:724 |
 | Instance | mii-exa-molgen-patient-fgfr2-fusion | Patient | input/fsh/additional-examples.fsh:759 |
 | Instance | mii-exa-molgen-anforderung-fgfr2-fusion | mii-pr-molgen-anforderung-genetischer-test | input/fsh/additional-examples.fsh:774 |
@@ -467,23 +471,67 @@ _Jedes definierte Artefakt mit Typ, Name und Fundort in den Quelldateien._
 | Instance | mii-exa-molgen-diagnostische-implikation-fgfr2-fusion | mii-pr-molgen-diagnostische-implikation | input/fsh/additional-examples.fsh:814 |
 | Instance | mii-exa-molgen-therapeutische-implikation-fgfr2-fusion | mii-pr-molgen-therapeutische-implikation | input/fsh/additional-examples.fsh:828 |
 | Instance | mii-exa-molgen-medikationsempfehlung-fgfr2-fusion | mii-pr-molgen-medikationsempfehlung | input/fsh/additional-examples.fsh:851 |
-| Instance | mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion | mii-pr-molgen-molekulargenetischer-befundbericht | input/fsh/additional-examples.fsh:864 |
+| Instance | mii-exa-molgen-befundbericht-fgfr2-fusion | mii-pr-molgen-molekulargenetischer-befundbericht | input/fsh/additional-examples.fsh:864 |
 | Instance | mii-exa-befund-bundle-befund-fgfr2-fusion | Bundle | input/fsh/additional-examples.fsh:881 |
 | Extension | MII_EX_MolGen_EmpfohleneMassnahme |  | input/fsh/extensions.fsh:1 |
 | Mapping | MolGen-EmpfohleneMassnahme |  | input/fsh/extensions.fsh:14 |
 | RuleSet | Bundle |  | input/fsh/rulesets/Bundle.fsh:1 |
 | RuleSet | SearchParam |  | input/fsh/rulesets/SearchParam.fsh:1 |
 | RuleSet | Region |  | input/fsh/rulesets/UntersuchteRegionRule.fsh:1 |
+| RuleSet | SupportSpecialSearchParam |  | input/fsh/rulesets/cps-rules.fsh:19 |
+| RuleSet | CRMIVersionPolicyStrict |  | input/fsh/rulesets/crmi.fsh:25 |
+| RuleSet | CRMIVersionPolicyStrictInstance |  | input/fsh/rulesets/crmi.fsh:29 |
+| RuleSet | CRMICopyrightLabel |  | input/fsh/rulesets/crmi.fsh:39 |
+| RuleSet | CRMICopyrightLabelInstance |  | input/fsh/rulesets/crmi.fsh:43 |
+| RuleSet | CRMIApprovalDate |  | input/fsh/rulesets/crmi.fsh:50 |
+| RuleSet | CRMIApprovalDateInstance |  | input/fsh/rulesets/crmi.fsh:54 |
+| RuleSet | CRMIArtifactTopic |  | input/fsh/rulesets/crmi.fsh:64 |
+| RuleSet | CRMIArtifactTopicInstance |  | input/fsh/rulesets/crmi.fsh:68 |
+| RuleSet | CRMIArtifactContributors |  | input/fsh/rulesets/crmi.fsh:78 |
+| RuleSet | CRMIArtifactContributorsInstance |  | input/fsh/rulesets/crmi.fsh:101 |
+| RuleSet | CRMIShareableStructureDefinition |  | input/fsh/rulesets/crmi.fsh:126 |
+| RuleSet | CRMIPublishableStructureDefinition |  | input/fsh/rulesets/crmi.fsh:129 |
+| RuleSet | CRMIKnowledgeCapabilitiesStructureDefinition |  | input/fsh/rulesets/crmi.fsh:132 |
+| RuleSet | CRMIArtifactUsageLogicalModel |  | input/fsh/rulesets/crmi.fsh:138 |
+| RuleSet | CRMIArtifactUsageProfile |  | input/fsh/rulesets/crmi.fsh:142 |
+| RuleSet | CRMIArtifactUsageExtension |  | input/fsh/rulesets/crmi.fsh:146 |
+| RuleSet | CRMIShareableCapabilityStatement |  | input/fsh/rulesets/crmi.fsh:152 |
+| RuleSet | CRMIPublishableCapabilityStatement |  | input/fsh/rulesets/crmi.fsh:155 |
+| RuleSet | CRMIKnowledgeCapabilitiesCapabilityStatement |  | input/fsh/rulesets/crmi.fsh:158 |
+| RuleSet | CRMIArtifactUsageCapabilityStatement |  | input/fsh/rulesets/crmi.fsh:164 |
+| RuleSet | CRMIShareableCodeSystem |  | input/fsh/rulesets/crmi.fsh:170 |
+| RuleSet | CRMIPublishableCodeSystem |  | input/fsh/rulesets/crmi.fsh:173 |
+| RuleSet | CRMIKnowledgeCapabilitiesCodeSystem |  | input/fsh/rulesets/crmi.fsh:176 |
+| RuleSet | CRMIKnowledgeCapabilitiesCodeSystemPublishable |  | input/fsh/rulesets/crmi.fsh:182 |
+| RuleSet | CRMIShareableValueSet |  | input/fsh/rulesets/crmi.fsh:188 |
+| RuleSet | CRMIPublishableValueSet |  | input/fsh/rulesets/crmi.fsh:191 |
+| RuleSet | CRMIComputableValueSet |  | input/fsh/rulesets/crmi.fsh:194 |
+| RuleSet | CRMIKnowledgeCapabilitiesValueSet |  | input/fsh/rulesets/crmi.fsh:197 |
+| RuleSet | ExtensionContext |  | input/fsh/rulesets/extension-context.fsh:10 |
+| RuleSet | LicenseCodeableCCBY40 |  | input/fsh/rulesets/license-terms.fsh:14 |
+| RuleSet | LicenseCodeableCCBY40Instance |  | input/fsh/rulesets/license-terms.fsh:18 |
+| RuleSet | LicenseCodeableCC0 |  | input/fsh/rulesets/license-terms.fsh:22 |
+| RuleSet | SnomedLicense |  | input/fsh/rulesets/license.fsh:12 |
 | RuleSet | Publisher |  | input/fsh/rulesets/publisher.fsh:1 |
 | RuleSet | SP_Publisher |  | input/fsh/rulesets/publisher.fsh:6 |
+| RuleSet | TestDataLabel |  | input/fsh/rulesets/test-data-label.fsh:14 |
 | RuleSet | Translation |  | input/fsh/rulesets/translation.fsh:1 |
+| RuleSet | AddSnomedCodingTranslation |  | input/fsh/rulesets/translation.fsh:9 |
+| RuleSet | AddIcd10CodingTranslation |  | input/fsh/rulesets/translation.fsh:17 |
+| RuleSet | AddAlphaIdCodingTranslation |  | input/fsh/rulesets/translation.fsh:25 |
+| RuleSet | AddOrphaCodingTranslation |  | input/fsh/rulesets/translation.fsh:33 |
+| RuleSet | AddOpsCodingTranslation |  | input/fsh/rulesets/translation.fsh:41 |
 | RuleSet | Version |  | input/fsh/rulesets/version.fsh:2 |
 | RuleSet | PR_CS_VS_Version |  | input/fsh/rulesets/version.fsh:5 |
 | RuleSet | MetaProfile |  | input/fsh/rulesets/version.fsh:8 |
+| RuleSet | CRMIPackageSource |  | input/fsh/rulesets/version.fsh:17 |
+| RuleSet | CRMIPackageSourceDefinitionalResource |  | input/fsh/rulesets/version.fsh:26 |
+| RuleSet | CRMIResourceEffectivePeriod |  | input/fsh/rulesets/version.fsh:39 |
+| RuleSet | CRMIResourceEffectivePeriodInstance |  | input/fsh/rulesets/version.fsh:43 |
 
 </div>
 
-## Narrative-Seiten (41 Inhalt / 41 gesamt)
+## Narrative-Seiten (60 Inhalt / 60 gesamt)
 
 _Die Erklärseiten des IG mit Umfang und der Angabe, ob es sich um Inhalts- oder reine Platzhalterseiten handelt._
 
@@ -491,9 +539,30 @@ _Die Erklärseiten des IG mit Umfang und der Angabe, ob es sich um Inhalts- oder
 
 | Datei | Wörter | Format | Stub? |
 |---|---|---|---|
+| input/pagecontent/metadata.md | 2625 | target |  |
+| input/pagecontent/guidance.md | 2386 | target |  |
+| input/translations/de/pagecontent/metadata.md | 2334 | translation |  |
+| input/pagecontent/changes.md | 2226 | target |  |
+| input/translations/de/pagecontent/guidance.md | 2106 | translation |  |
+| input/translations/de/pagecontent/changes.md | 2019 | translation |  |
+| input/pagecontent/profiles.md | 1834 | target |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/ReleaseNotes.page.md | 1686 | source |  |
+| input/pagecontent/implementer-guidance.md | 1578 | target |  |
+| input/translations/de/pagecontent/profiles.md | 1543 | translation |  |
+| input/translations/de/pagecontent/implementer-guidance.md | 1354 | translation |  |
+| input/intro-notes/StructureDefinition-mii-pr-molgen-variante-intro.md | 1301 | intro |  |
+| input/pagecontent/value-sets.md | 1267 | target |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/BeschreibungModulMolekulargenetischerBefundbericht.page.md | 1191 | source |  |
+| input/translations/de/pagecontent/value-sets.md | 1149 | translation |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/GenetischeBefunde/Variante-Observation.page.md | 1086 | source |  |
+| input/intro-notes/StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht-intro.md | 977 | intro |  |
+| input/pagecontent/index.md | 972 | target |  |
+| input/intro-notes/StructureDefinition-mii-pr-molgen-genotyp-intro.md | 970 | intro |  |
+| input/intro-notes/StructureDefinition-mii-pr-molgen-diagnostische-implikation-intro.md | 959 | intro |  |
+| input/intro-notes/StructureDefinition-mii-pr-molgen-therapeutische-implikation-intro.md | 934 | intro |  |
+| input/intro-notes/StructureDefinition-mii-pr-molgen-mutationslast-intro.md | 911 | intro |  |
+| input/intro-notes/StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet-intro.md | 894 | intro |  |
+| input/translations/de/pagecontent/index.md | 861 | translation |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/Workflow/Befundbericht-DiagnosticReport.page.md | 811 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/GenetischeBefunde/Genotyp---Observation.page.md | 767 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/GenetischeImplikationen/DiagnostischeImplikation-Observation.page.md | 765 | source |  |
@@ -502,40 +571,70 @@ _Die Erklärseiten des IG mit Umfang und der Angabe, ob es sich um Inhalts- oder
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/MolekulareBiomarker/Mutationslast-Observation.page.md | 695 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/GenetischeBefunde/Haplotype-Observation.page.md | 681 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/Index.page.md | 641 | source |  |
+| input/intro-notes/StructureDefinition-mii-pr-molgen-anforderung-genetischer-test-intro.md | 615 | intro |  |
+| input/pagecontent/version-history.md | 597 | target |  |
+| input/intro-notes/StructureDefinition-mii-pr-molgen-familienanamnese-intro.md | 556 | intro |  |
+| input/pagecontent/security-and-privacy.md | 555 | target |  |
+| input/translations/de/pagecontent/version-history.md | 547 | translation |  |
+| input/intro-notes/StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme-intro.md | 525 | intro |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/Anwendungsfaelle-Informationsmodell/BeschreibungvonSzenarienfrdieAnwendungderModule.page.md | 517 | source |  |
+| input/intro-notes/StructureDefinition-mii-pr-molgen-medikationsempfehlung-intro.md | 500 | intro |  |
+| input/intro-notes/StructureDefinition-mii-pr-molgen-molekulare-konsequenz-intro.md | 495 | intro |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/Workflow/Anforderung-ServiceRequest.page.md | 486 | source |  |
+| input/pagecontent/qualitaetsbericht.md | 469 | target |  |
+| input/intro-notes/StructureDefinition-mii-pr-molgen-genomic-study-analysis-intro.md | 452 | intro |  |
+| input/translations/de/pagecontent/security-and-privacy.md | 443 | translation |  |
+| input/pagecontent/downloads.md | 441 | target |  |
+| input/intro-notes/StructureDefinition-mii-pr-molgen-genomic-study-intro.md | 427 | intro |  |
+| input/pagecontent/ImplementationGuide-mii-ig-molgen-de-v2026.md | 423 | target |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/Familienanamnese/Familienanamnese---FamilyMemberHistory.page.md | 420 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/Terminologie/Terminologien.page.md | 418 | source |  |
+| input/pagecontent/extensions.md | 415 | target |  |
+| input/translations/de/pagecontent/qualitaetsbericht.md | 413 | translation |  |
+| input/translations/de/pagecontent/downloads.md | 409 | translation |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/Methodik/GenomicStudyAnalysis-Procedure.page.md | 401 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/GenetischeImplikationen/MolekulareKonsequenz-Observation.page.md | 398 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/Therapieempfehlungen/EmpfohleneFolgemanahme-Task.page.md | 389 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/Methodik/GenomicStudy-Procedure.page.md | 383 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/Therapieempfehlungen/Medikationsempfehlung-Task.page.md | 380 | source |  |
+| input/translations/de/pagecontent/extensions.md | 358 | translation |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/Qualitaetsbericht.page.md | 357 | source |  |
+| input/translations/de/pagecontent/ImplementationGuide-mii-ig-molgen-de-v2026.md | 344 | translation |  |
+| input/pagecontent/logical-models.md | 304 | target |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/Familienanamnese/Familienanamnese-Extensions.page.md | 294 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/KontextimGesamtprojektBezgezuanderenModulen.page.md | 293 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/Index.page.md | 275 | source |  |
+| input/translations/de/pagecontent/logical-models.md | 272 | translation |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/Anwendungsfaelle-Informationsmodell/Index.page.md | 251 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/Terminologie/ClinicalGenomics.page.md | 249 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/Terminologie/Index.page.md | 206 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/GenetischeBefunde/Index.page.md | 201 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/Methodik/Index.page.md | 183 | source |  |
+| input/pagecontent/search-parameters.md | 179 | target |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/GenetischeImplikationen/Index.page.md | 178 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/MolekulareBiomarker/Index.page.md | 175 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/MolekulareBiomarker/Polygener-Risiko-Score---RiskAssessment.page.md | 165 | source |  |
+| input/intro-notes/StructureDefinition-mii-pr-molgen-polygener-risiko-score-intro.md | 164 | intro |  |
+| input/pagecontent/uml-diagrams.md | 163 | target |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/Familienanamnese/Index.page.md | 156 | source |  |
+| input/translations/de/pagecontent/search-parameters.md | 150 | translation |  |
+| input/pagecontent/capability-statements.md | 147 | target |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/Workflow/Index.page.md | 137 | source |  |
+| input/translations/de/pagecontent/uml-diagrams.md | 131 | translation |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/Anwendungsfaelle-Informationsmodell/Datenstzeinkl.Beschreibungen.page.md | 125 | source |  |
+| input/translations/de/pagecontent/capability-statements.md | 125 | translation |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/Referenzen.page.md | 120 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/Therapieempfehlungen/Index.page.md | 115 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/GenetischeBefunde/Sequence-Phase-Relationship---Observation.page.md | 109 | source |  |
+| input/pagecontent/translationinfo.md | 99 | target |  |
+| input/translations/de/pagecontent/translationinfo.md | 92 | translation |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/CapabilityStatement.page.md | 86 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/Anwendungsfaelle-Informationsmodell/UML.page.md | 77 | source |  |
 | implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulMolekulargenetischerBefundbericht/TechnischeImplementierung/Terminologie/MII-ValueSets.page.md | 65 | source |  |
+| input/pagecontent/examples.md | 58 | target |  |
+| input/translations/de/pagecontent/examples.md | 48 | translation |  |
 
 </div>
-
-> Format = **source**: die Pflichtseiten existieren im Quell-Guide; „fehlende Zielseiten" wird hier daher nicht als Lücke gewertet.
 
 ## Direktiven-Fundstellen
 
@@ -945,20 +1044,39 @@ _Jede gefundene Direktive mit genauer Fundstelle und Originaltext zur weiteren B
 
 </div>
 
-## QC-Regeln (definiert; Quelle: —)
+## QC-Regeln (definiert; Quelle: qc/custom.rules.yaml)
 
 _Die im Projekt hinterlegten Qualitätsregeln; ihre Einhaltung wird erst beim Qualitätslauf des Builds geprüft._
 
-_keine QC-Regeldatei gefunden_
+<div align="center">
+
+| Name | Aktion | Prüfzweck (status) |
+|---|---|---|
+| parse-fhir-resources | parse | Checking if all FHIR resource files can be parsed |
+| resource-validation | validate | Validating resources against the FHIR standard and their profiles |
+| unique-canonicals | unique | Checking if all StructureDefinitions have a unique canonical |
+| no-snapshot |  | Checking that StructureDefinitions carry no pre-generated snapshot |
+| valid-ids |  | Checking for valid resource ids |
+| valid-names |  | Checking that StructureDefinition names contain no spaces |
+| unique-names |  |  |
+| version-filled |  | Checking that every conformance resource carries the release version |
+| naming-convention-id |  | Checking the id naming convention (mii-<prefix>-<module>-…) |
+| naming-convention-name |  | Checking the name naming convention (MII_<PREFIX>_<Module>_…) |
+| naming-convention-title |  | Checking the title naming convention (MII <PREFIX> <Module> …) |
+| naming-convention-url |  | Checking the canonical-URL naming convention |
+
+</div>
+
+> QC-Verletzungen werden erst beim Qualitätslauf des Builds erhoben (statisch nicht erfasst).
 
 ## Mehrsprachigkeit
 
 _Sprachkonfiguration und welche Übersetzungsmittel bereits vorhanden sind._
 
-- Default-Sprache: `de` (Quelle: language) · konfigurierte Sprachen: —
+- Default-Sprache: `None` (Quelle: None) · konfigurierte Sprachen: ['init', 'progress', 'context', 'html', 'tx']
 - Übersetzungs-Supplements: 0
 - FSH-Translation-Extensions: ja
-- Unterdrückte QA-Meldungen (`ignoreWarnings.txt`): 1
+- Unterdrückte QA-Meldungen (`ignoreWarnings.txt`): 10
 
 ## Dopplungen & ungenutzte Dateien
 
@@ -986,9 +1104,9 @@ _Konkrete Fundstellen doppelter Inhaltsblöcke sowie Listen nicht referenzierter
 
 </div>
 
-**Nicht referenzierte Bilder (3):** `implementation-guides/ImplementationGuide-2026.x-DE/images/MII_MolGen_LogicalModel_Domain.png`, `implementation-guides/ImplementationGuide-2026.x-DE/images/MII_MolGen_LogicalModel_Domain.svg`, `implementation-guides/ImplementationGuide-2026.x-DE/images/MII_MolGen_Profile_Relationships_Final.svg`
+**Nicht referenzierte Bilder (7):** `implementation-guides/ImplementationGuide-2026.x-DE/images/MII_MolGen_LogicalModel_Domain.svg`, `implementation-guides/ImplementationGuide-2026.x-DE/images/MII_MolGen_Profile_Relationships_Final.svg`, `input/images-source/logical-model-domain.puml`, `input/images-source/profile-relationships-final.puml`, `input/images-source/profile-relationships.puml`, `input/images/MII_MolGen_LogicalModel_Domain.svg`, `input/images/MII_MolGen_Profile_Relationships_Final.svg`
 
-**Beispiele nicht in Narrativen eingebunden (149):** `mii-exa-molgen-anforderung-1`, `mii-exa-molgen-anforderung-2`, `mii-exa-molgen-anforderung-trurisk-panel`, `mii-exa-molgen-patient-wes`, `mii-exa-molgen-specimen-blood-edta-bundle`, `mii-exa-molgen-specimen-dna-library-bundle`, `mii-exa-molgen-documentreference-bed-file-bundle`, `mii-exa-molgen-documentreference-fastq-bundle`, `mii-exa-molgen-genomic-study-comprehensive-wes-bundle`, `mii-exa-molgen-genomic-study-analysis-wes-library-prep-bundle`, `mii-exa-molgen-genomic-study-analysis-wes-sequencing-bundle`, `mii-exa-molgen-genomic-study-analysis-wes-bioinformatics-bundle`, `mii-exa-molgen-anforderung-wes-bundle`, `mii-exa-molgen-variante-comprehensive-pathogenic-bundle`, `mii-exa-molgen-diagnostische-implikation-comprehensive-bundle`, `mii-exa-molgen-befundbericht-comprehensive-wes-bundle`, `mii-exa-molgen-practitioner-bundle`, `mii-exa-molgen-practitioner-lab-bundle`, `mii-exa-molgen-diagnostische-implikation-1`, `mii-exa-molgen-diagnostische-implikation-2`, `mii-exa-molgen-diagnostische-implikation-cnv-4`, `mii-exa-molgen-folgemassnahme-1`, `mii-exa-molgen-ergebnis-zusammenfassung-1`, `mii-exa-molgen-ergebnis-zusammenfassung-trurisk-panel`, `mii-exa-molgen-family-member-history-1`, `mii-exa-molgen-family-member-history-diabetes`, `mii-exa-molgen-family-member-history-retinal`, `mii-exa-molgen-family-member-history-mi`, `mii-exa-molgen-genomic-study-1`, `mii-exa-molgen-genomic-study-analysis-braf`, `mii-exa-molgen-genomic-study-trurisk-panel`, `mii-exa-molgen-genomic-study-analysis-trurisk-panel`, `mii-exa-molgen-genomic-study-cornelia-de-lange`, `mii-exa-molgen-genomic-study-analysis-cornelia-de-lange`, `mii-exa-molgen-device-illumina-novaseq`, `mii-exa-molgen-device-thermofisher-ionchef`, `mii-exa-molgen-genomic-study-comprehensive-wes`, `mii-exa-molgen-genomic-study-analysis-wes-library-prep`, `mii-exa-molgen-genomic-study-analysis-wes-sequencing`, `mii-exa-molgen-genomic-study-analysis-wes-bioinformatics`, `mii-exa-molgen-specimen-blood-edta`, `mii-exa-molgen-specimen-dna-library`, `mii-exa-molgen-protocol-agilent-sureselect`, `mii-exa-molgen-documentreference-bed-file`, `mii-exa-molgen-practitioner-ordering`, `mii-exa-molgen-documentreference-fastq`, `mii-exa-molgen-befundbericht-comprehensive-wes`, `mii-exa-molgen-anforderung-wes`, `mii-exa-molgen-variante-comprehensive-pathogenic`, `mii-exa-molgen-diagnostische-implikation-comprehensive`, `mii-exa-molgen-media-coverage-plot`, `mii-exa-molgen-genotyp-1`, `mii-exa-molgen-genotyp-2`, `mii-exa-molgen-genotyp-brca1`, `mii-exa-molgen-medikationsempfehlung-1`, `mii-exa-molgen-mikrosatelliteninstabilitaet-1`, `mii-exa-molgen-molekulare-konsequenz-1`, `mii-exa-molgen-molekulare-konsequenz-2`, `mii-exa-molgen-molekulare-konsequenz-cnv-4`, `mii-exa-molgen-molekulare-konsequenz-brca1`, `mii-exa-molgen-molekulargenetischer-befundbericht-tumorboard-3`, `mii-exa-molgen-mutationslast-1`, `mii-exa-molgen-therapeutische-implikation-1`, `mii-exa-molgen-untersuchte-region-1`, `mii-exa-molgen-untersuchte-region-2-nipbl`, `mii-exa-molgen-untersuchte-region-2-hdac8`, `mii-exa-molgen-untersuchte-region-2-rad21`, `mii-exa-molgen-untersuchte-region-2-smc1a`, `mii-exa-molgen-untersuchte-region-2-smc3`, `mii-exa-molgen-untersuchte-region-2-tp63`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-ATM`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA1`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BARD1`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA2`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRIP1`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CDH1`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CHECK2`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MLH1`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH2`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH6`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PALB2`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PMS2`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PTEN`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51C`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51D`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-TP53`, `mii-exa-molgen-variante-1`, `mii-exa-molgen-variante-2`, `mii-exa-molgen-variante-cnv-4`, `mii-exa-molgen-patient`, `mii-exa-molgen-practitioner-lab`, `mii-exa-molgen-practitioner-physician`, `mii-exa-molgen-specimen-1`, `mii-exa-molgen-device-sequencer`, `mii-exa-molgen-specimen-2`, `mii-exa-molgen-patient-2`, `mii-exa-molgen-device-sequencer-2`, `mii-exa-molgen-chargeitem-ebm-21`, `mii-exa-molgen-chargeitem-ebm-22`, `mii-exa-molgen-chargeitem-ebm-23`, `mii-exa-molgen-chargeitem-ebm-24`, `mii-exa-befund-bundle-1-braf`, `mii-exa-molgen-specimen-brca1`, `mii-exa-molgen-patient-brca1`, `mii-exa-molgen-device-sequencer-nextseq`, `mii-exa-molgen-bundle-fam-his-breast-ovar-can`, `mii-exa-molgen-bundle-befund-2-nipbl`, `mii-exa-molgen-bundle-befund-2-nipbl-condition-lab`, `mii-exa-molgen-condition-nipbl-clinical`, `mii-exa-molgen-phenotypic-feature-1`, `mii-exa-molgen-phenotypic-feature-2`, `mii-exa-molgen-phenotypic-feature-3`, `mii-exa-molgen-phenotypic-feature-4`, `mii-exa-befund-bundle-befund-2-nipbl-clinical`, `mii-exa-molgen-patient-srcc`, `mii-exa-molgen-specimen-srcc`, `mii-exa-molgen-specimen-srcc-2`, `mii-exa-molgen-anforderung-srcc`, `mii-exa-molgen-family-member-history-srcc`, `mii-exa-molgen-variante-srcc-ctnna1`, `mii-exa-molgen-diagnostische-implikation-srcc-ctnna1`, `mii-exa-molgen-untersuchte-region-srcc-apc`, `mii-exa-molgen-untersuchte-region-srcc-atm`, `mii-exa-molgen-untersuchte-region-srcc-brca1`, `mii-exa-molgen-untersuchte-region-srcc-brca2`, `mii-exa-molgen-untersuchte-region-srcc-cdh1`, `mii-exa-molgen-untersuchte-region-srcc-mlh1`, `mii-exa-molgen-untersuchte-region-srcc-msh2`, `mii-exa-molgen-untersuchte-region-srcc-msh3`, `mii-exa-molgen-untersuchte-region-srcc-msh6`, `mii-exa-molgen-untersuchte-region-srcc-mutyh`, `mii-exa-molgen-untersuchte-region-srcc-nthl1`, `mii-exa-molgen-untersuchte-region-srcc-pms2`, `mii-exa-molgen-untersuchte-region-srcc-pold1`, `mii-exa-molgen-untersuchte-region-srcc-pole`, `mii-exa-molgen-untersuchte-region-srcc-stk11`, `mii-exa-molgen-untersuchte-region-srcc-smad4`, `mii-exa-molgen-untersuchte-region-srcc-tp53`, `mii-exa-molgen-untersuchte-region-srcc-ctnna1`, `mii-exa-molgen-molekulargenetischer-befundbericht-srcc`, `mii-exa-befund-bundle-befund-srcc`, `mii-exa-molgen-patient-fgfr2-fusion`, `mii-exa-molgen-anforderung-fgfr2-fusion`, `mii-exa-molgen-variante-fgfr2-fusion`, `mii-exa-molgen-diagnostische-implikation-fgfr2-fusion`, `mii-exa-molgen-therapeutische-implikation-fgfr2-fusion`, `mii-exa-molgen-medikationsempfehlung-fgfr2-fusion`, `mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion`, `mii-exa-befund-bundle-befund-fgfr2-fusion`
+**Beispiele nicht in Narrativen eingebunden (149):** `mii-exa-molgen-anforderung-1`, `mii-exa-molgen-anforderung-2`, `mii-exa-molgen-anforderung-trurisk-panel`, `mii-exa-molgen-patient-wes`, `mii-exa-molgen-specimen-blood-edta-bundle`, `mii-exa-molgen-specimen-dna-library-bundle`, `mii-exa-molgen-documentreference-bed-file-bundle`, `mii-exa-molgen-documentreference-fastq-bundle`, `mii-exa-molgen-genomic-study-comprehensive-wes-bundle`, `mii-exa-molgen-genomic-study-analysis-wes-library-prep-bundle`, `mii-exa-molgen-genomic-study-analysis-wes-sequencing-bundle`, `mii-exa-molgen-genomic-study-analysis-wes-bioinformatics-bundle`, `mii-exa-molgen-anforderung-wes-bundle`, `mii-exa-molgen-variante-comprehensive-pathogenic-bundle`, `mii-exa-molgen-diagnostische-implikation-comprehensive-bundle`, `mii-exa-molgen-befundbericht-comprehensive-wes-bundle`, `mii-exa-molgen-practitioner-bundle`, `mii-exa-molgen-practitioner-lab-bundle`, `mii-exa-molgen-diagnostische-implikation-1`, `mii-exa-molgen-diagnostische-implikation-2`, `mii-exa-molgen-diagnostische-implikation-cnv-4`, `mii-exa-molgen-folgemassnahme-1`, `mii-exa-molgen-ergebnis-zusammenfassung-1`, `mii-exa-molgen-ergebnis-zusammenfassung-trurisk-panel`, `mii-exa-molgen-family-member-history-1`, `mii-exa-molgen-family-member-history-diabetes`, `mii-exa-molgen-family-member-history-retinal`, `mii-exa-molgen-family-member-history-mi`, `mii-exa-molgen-genomic-study-1`, `mii-exa-molgen-genomic-study-analysis-braf`, `mii-exa-molgen-genomic-study-trurisk-panel`, `mii-exa-molgen-genomic-study-analysis-trurisk-panel`, `mii-exa-molgen-genomic-study-cornelia-de-lange`, `mii-exa-molgen-genomic-study-analysis-cornelia-de-lange`, `mii-exa-molgen-device-illumina-novaseq`, `mii-exa-molgen-device-thermofisher-ionchef`, `mii-exa-molgen-genomic-study-comprehensive-wes`, `mii-exa-molgen-genomic-study-analysis-wes-library-prep`, `mii-exa-molgen-genomic-study-analysis-wes-sequencing`, `mii-exa-molgen-genomic-study-analysis-wes-bioinformatics`, `mii-exa-molgen-specimen-blood-edta`, `mii-exa-molgen-specimen-dna-library`, `mii-exa-molgen-protocol-agilent-sureselect`, `mii-exa-molgen-documentreference-bed-file`, `mii-exa-molgen-practitioner-ordering`, `mii-exa-molgen-documentreference-fastq`, `mii-exa-molgen-befundbericht-comprehensive-wes`, `mii-exa-molgen-anforderung-wes`, `mii-exa-molgen-variante-comprehensive-pathogenic`, `mii-exa-molgen-diagnostische-implikation-comprehensive`, `mii-exa-molgen-media-coverage-plot`, `mii-exa-molgen-genotyp-1`, `mii-exa-molgen-genotyp-2`, `mii-exa-molgen-genotyp-brca1`, `mii-exa-molgen-medikationsempfehlung-1`, `mii-exa-molgen-mikrosatelliteninstabilitaet-1`, `mii-exa-molgen-molekulare-konsequenz-1`, `mii-exa-molgen-molekulare-konsequenz-2`, `mii-exa-molgen-molekulare-konsequenz-cnv-4`, `mii-exa-molgen-molekulare-konsequenz-brca1`, `mii-exa-molgen-befundbericht-tumorboard-3`, `mii-exa-molgen-mutationslast-1`, `mii-exa-molgen-therapeutische-implikation-1`, `mii-exa-molgen-untersuchte-region-1`, `mii-exa-molgen-untersuchte-region-2-nipbl`, `mii-exa-molgen-untersuchte-region-2-hdac8`, `mii-exa-molgen-untersuchte-region-2-rad21`, `mii-exa-molgen-untersuchte-region-2-smc1a`, `mii-exa-molgen-untersuchte-region-2-smc3`, `mii-exa-molgen-untersuchte-region-2-tp63`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-ATM`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA1`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BARD1`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRCA2`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-BRIP1`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CDH1`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-CHECK2`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MLH1`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH2`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-MSH6`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PALB2`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PMS2`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-PTEN`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51C`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-RAD51D`, `mii-exa-molgen-untersuchte-region-true-risk-panel-v3-TP53`, `mii-exa-molgen-variante-1`, `mii-exa-molgen-variante-2`, `mii-exa-molgen-variante-cnv-4`, `mii-exa-molgen-patient`, `mii-exa-molgen-practitioner-lab`, `mii-exa-molgen-practitioner-physician`, `mii-exa-molgen-specimen-1`, `mii-exa-molgen-device-sequencer`, `mii-exa-molgen-specimen-2`, `mii-exa-molgen-patient-2`, `mii-exa-molgen-device-sequencer-2`, `mii-exa-molgen-chargeitem-ebm-21`, `mii-exa-molgen-chargeitem-ebm-22`, `mii-exa-molgen-chargeitem-ebm-23`, `mii-exa-molgen-chargeitem-ebm-24`, `mii-exa-befund-bundle-1-braf`, `mii-exa-molgen-specimen-brca1`, `mii-exa-molgen-patient-brca1`, `mii-exa-molgen-device-sequencer-nextseq`, `mii-exa-molgen-bundle-fam-his-breast-ovar-can`, `mii-exa-molgen-bundle-befund-2-nipbl`, `mii-exa-molgen-bundle-befund-2-nipbl-condition-lab`, `mii-exa-molgen-condition-nipbl-clinical`, `mii-exa-molgen-phenotypic-feature-1`, `mii-exa-molgen-phenotypic-feature-2`, `mii-exa-molgen-phenotypic-feature-3`, `mii-exa-molgen-phenotypic-feature-4`, `mii-exa-befund-bundle-befund-2-nipbl-clinical`, `mii-exa-molgen-patient-srcc`, `mii-exa-molgen-specimen-srcc`, `mii-exa-molgen-specimen-srcc-2`, `mii-exa-molgen-anforderung-srcc`, `mii-exa-molgen-family-member-history-srcc`, `mii-exa-molgen-variante-srcc-ctnna1`, `mii-exa-molgen-diagnostische-implikation-srcc-ctnna1`, `mii-exa-molgen-untersuchte-region-srcc-apc`, `mii-exa-molgen-untersuchte-region-srcc-atm`, `mii-exa-molgen-untersuchte-region-srcc-brca1`, `mii-exa-molgen-untersuchte-region-srcc-brca2`, `mii-exa-molgen-untersuchte-region-srcc-cdh1`, `mii-exa-molgen-untersuchte-region-srcc-mlh1`, `mii-exa-molgen-untersuchte-region-srcc-msh2`, `mii-exa-molgen-untersuchte-region-srcc-msh3`, `mii-exa-molgen-untersuchte-region-srcc-msh6`, `mii-exa-molgen-untersuchte-region-srcc-mutyh`, `mii-exa-molgen-untersuchte-region-srcc-nthl1`, `mii-exa-molgen-untersuchte-region-srcc-pms2`, `mii-exa-molgen-untersuchte-region-srcc-pold1`, `mii-exa-molgen-untersuchte-region-srcc-pole`, `mii-exa-molgen-untersuchte-region-srcc-stk11`, `mii-exa-molgen-untersuchte-region-srcc-smad4`, `mii-exa-molgen-untersuchte-region-srcc-tp53`, `mii-exa-molgen-untersuchte-region-srcc-ctnna1`, `mii-exa-molgen-befundbericht-srcc`, `mii-exa-befund-bundle-befund-srcc`, `mii-exa-molgen-patient-fgfr2-fusion`, `mii-exa-molgen-anforderung-fgfr2-fusion`, `mii-exa-molgen-variante-fgfr2-fusion`, `mii-exa-molgen-diagnostische-implikation-fgfr2-fusion`, `mii-exa-molgen-therapeutische-implikation-fgfr2-fusion`, `mii-exa-molgen-medikationsempfehlung-fgfr2-fusion`, `mii-exa-molgen-befundbericht-fgfr2-fusion`, `mii-exa-befund-bundle-befund-fgfr2-fusion`
 
 # Anhang: Methodik & Metrik-Erklärung
 

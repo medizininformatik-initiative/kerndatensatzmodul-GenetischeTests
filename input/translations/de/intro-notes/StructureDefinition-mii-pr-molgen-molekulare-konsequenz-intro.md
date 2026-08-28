@@ -10,15 +10,6 @@ Dieses Profil beschreibt die molekularen Konsequenzen von genetischen Varianten.
 
 Das MolekulareKonsequenz-Profil fokussiert auf die funktionellen Auswirkungen von Varianten, während das Variante-Profil sich auf die Beschreibung der Variante selbst konzentriert.
 
-@```
-from 
-    StructureDefinition 
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz' 
-select 
-    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
-```
-
 ---
 
 Das Profil ist abgeleitet vom Profil [MolecularConsequence](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-molecular-consequence.html) aus [HL7 Genomics Reporting Implementation Guide STU3](http://hl7.org/fhir/uv/genomics-reporting/STU3/).

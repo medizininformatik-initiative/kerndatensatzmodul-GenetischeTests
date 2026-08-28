@@ -12,14 +12,6 @@ This profile describes a Genomic Study as a Procedure resource for documenting t
 GenomicStudy is used to record the metadata about the genomic analysis carried out, including the methods used, the regions investigated and the devices involved.
 
 <!-- TODO:REVIEW the column alias "Basis" in the following query block is still German; it is left unchanged because the rule is not to modify code blocks. Decide at Gate C whether query blocks should be localised. -->
-@```
-from 
-    StructureDefinition 
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study' 
-select 
-    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
-```
 
 ---
 

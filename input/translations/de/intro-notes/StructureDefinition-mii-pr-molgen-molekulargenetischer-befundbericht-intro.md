@@ -8,18 +8,9 @@
 
 Dieses Profil beschreibt molekulargenetischen Befundbericht der Medizininformatik-Initiative.
 
-@```
-from 
-    StructureDefinition 
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht' 
-select 
-    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
-```
-
 ---
 
-Das Profil ist abgeleitet vom Profil [Genomics Report](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-genomics-report.html) aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
+Das Profil ist abgeleitet vom Profil [Genomics Report](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-genomic-report.html) aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
 
 Für den Use Case, dass die EBM Abrechnungsziffern in einem Befund angegeben werden, <br/>
 wird die [Supporting Information Extension](http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo) in DiagnosticReport.extension mit Reference auf ChargeItem Ressource verwendet. 

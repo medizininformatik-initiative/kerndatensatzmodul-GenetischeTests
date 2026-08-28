@@ -176,7 +176,7 @@ Modes of inheritance for genetic diseases (autosomal dominant, recessive, X-link
 
 **Canonical:** `http://hl7.org/fhir/uv/genomics-reporting/ValueSet/condition-inheritance-vs`
 
-[condition-inheritance-vs](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-condition-inheritance-vs.html)
+[condition-inheritance-vs](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-condition-inheritance-mode-vs.html)
 
 ---
 
@@ -196,7 +196,8 @@ Therapeutic implications of genetic variants.
 
 **Canonical:** `http://hl7.org/fhir/uv/genomics-reporting/ValueSet/therapeutic-implication-vs`
 
-[therapeutic-implication-vs](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-therapeutic-implication-vs.html)
+[therapeutic-implication-vs](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-genetic-therapeutic-implications-vs.html)
+<!-- TODO:REVIEW STU2 canonical .../ValueSet/therapeutic-implication-vs has no STU3 page; genetic-therapeutic-implications-vs is the nearest STU3 ValueSet but carries a DIFFERENT canonical, so the equivalence is UNCONFIRMED -->
 
 ---
 

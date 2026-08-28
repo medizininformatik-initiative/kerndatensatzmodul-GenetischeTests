@@ -20,7 +20,7 @@ conventions). The module's extensions are listed on the
 
 #### FHIR profiles
 
-Guidance on using the elements when reporting variants can be found in the [Genomics Report](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-genomics-report.html) profile from the [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
+Guidance on using the elements when reporting variants can be found in the [Genomics Report](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-genomic-report.html) profile from the [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
 
 The following table shows the inheritance relationships of the profiles in this module:
 

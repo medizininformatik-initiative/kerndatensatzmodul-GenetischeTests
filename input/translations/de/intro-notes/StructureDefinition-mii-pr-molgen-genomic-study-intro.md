@@ -10,15 +10,6 @@ Dieses Profil beschreibt eine Genomic Study als Procedure-Ressource zur Dokument
 
 GenomicStudy dient zur Erfassung der Metadaten über die durchgeführte genomische Analyse, einschließlich der verwendeten Methoden, untersuchten Regionen und beteiligten Geräte.
 
-@```
-from 
-    StructureDefinition 
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study' 
-select 
-    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
-```
-
 ---
 
 Das Profil ist abgeleitet vom Profil [GenomicStudy](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-genomic-study.html) aus [HL7 Genomics Reporting Implementation Guide STU3](http://hl7.org/fhir/uv/genomics-reporting/STU3/).

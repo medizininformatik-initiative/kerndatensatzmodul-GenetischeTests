@@ -12,14 +12,6 @@ This profile describes a Genomic Study Analysis as a Procedure resource for the 
 GenomicStudyAnalysis records specific analysis parameters such as the genome regions investigated, the reference assemblies used and the analysis tools.
 
 <!-- TODO:REVIEW the column alias "Basis" in the following query block is still German; it is left unchanged because the rule is not to modify code blocks. Decide at Gate C whether query blocks should be localised. -->
-@```
-from 
-    StructureDefinition 
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis' 
-select 
-    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
-```
 
 ---
 

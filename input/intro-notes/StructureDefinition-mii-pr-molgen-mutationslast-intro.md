@@ -10,18 +10,11 @@
 This profile describes the total number of mutations found in the DNA of cancer cells.
 
 <!-- TODO:REVIEW unresolved FQL metadata block below (url/status/version). references/fql-crosswalk.md says to drop such a block, because the publisher generates that header itself. Carried over verbatim because this task translates only; the same block stands in the German file. The select labels stay German ("Basis") since they sit inside a code block. -->
-@```
-from 
-    StructureDefinition 
-where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast' 
-select 
-    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
-```
 
 ---
 
-The profile is derived from the profile [Tumor Mutation Burden](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-tmb.html) of the [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
+The profile is derived from the profile [Tumor Mutation Burden](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-molecular-biomarker.html) of the [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
+<!-- STU2 tmb -> STU3 molecular-biomarker, per this module's own profile-inheritance table -->
 
 ---
 
