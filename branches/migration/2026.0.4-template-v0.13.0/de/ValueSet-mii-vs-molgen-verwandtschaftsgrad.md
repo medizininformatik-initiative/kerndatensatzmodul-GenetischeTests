@@ -43,7 +43,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "name" : "MII_VS_MolGen_Verwandtschaftsgrad",
   "title" : "MII VS Mol Gen Verwandtschaftsgrad",
   "status" : "active",
-  "date" : "2026-08-28T15:36:04+00:00",
+  "date" : "2026-08-28T15:49:28+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
