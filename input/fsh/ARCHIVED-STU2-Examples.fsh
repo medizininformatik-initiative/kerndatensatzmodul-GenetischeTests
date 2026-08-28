@@ -9,7 +9,7 @@
 // From MolekulargenetischerBefundbericht.fsh
 // ============================================
 
-//Instance: mii-exa-molgen-molekulargenetischer-befundbericht-tumorboard-3
+//Instance: mii-exa-molgen-befundbericht-tumorboard-3
 //InstanceOf: sd-mii-modul-molgen-molekulargenetischer-befundbericht
 //Usage: #example
 //Title: "Molekulargentischer Befund 3: Tumorboard Genfusion"
@@ -39,7 +39,7 @@
 // ============================================
 
 /*
-Instance: mii-exa-molgen-molekulargenetischer-befundbericht-2
+Instance: mii-exa-molgen-befundbericht-2
 InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
 Title: "Molekulargentischer Befund 2: Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang"
@@ -98,7 +98,7 @@ Description: "Beispiel für molekulargenetischen Befund Molekulargenetische Diag
 // From GenomicStudy.fsh - Another fusion example
 // ============================================
 
-//Instance: mii-exa-molgen-molekulargenetischer-befundbericht-tumorboard-3
+//Instance: mii-exa-molgen-befundbericht-tumorboard-3
 //InstanceOf: sd-mii-modul-molgen-molekulargenetischer-befundbericht
 //Usage: #example
 //Title: "Molekulargentischer Befund 3: Tumorboard Genfusion"

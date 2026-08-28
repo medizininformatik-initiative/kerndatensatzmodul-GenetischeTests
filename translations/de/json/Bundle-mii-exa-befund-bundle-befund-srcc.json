@@ -1,0 +1,211 @@
+{
+  "id" : "Bundle-mii-exa-befund-bundle-befund-srcc",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "Address.postalCode",
+      "context" : "Address.postalCode",
+      "source" : "10",
+      "target" : null
+    },
+    {
+      "id" : "Address.country",
+      "context" : "Address.country",
+      "source" : "DE",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.text",
+      "context" : "HumanName.text",
+      "source" : "Dr. Daniel Schmidt",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.family",
+      "context" : "HumanName.family",
+      "source" : "Schmidt",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.given",
+      "context" : "HumanName.given",
+      "source" : "Daniel",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.prefix",
+      "context" : "HumanName.prefix",
+      "source" : "Dr.",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.text",
+      "context" : "HumanName.text",
+      "source" : "Dr. Linda Rubens",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.family",
+      "context" : "HumanName.family",
+      "source" : "Rubens",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.given",
+      "context" : "HumanName.given",
+      "source" : "Linda",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Blood specimen with edetic acid (specimen)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Genetics",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Genetic analysis report",
+      "target" : null
+    },
+    {
+      "id" : "DiagnosticReport.conclusion",
+      "context" : "DiagnosticReport.conclusion",
+      "source" : "Nachweis der pathogenen Variante im CTNNA1-Gen.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Laboratory procedure (procedure)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Molecular genetic test (procedure)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Molekulargenetische Untersuchung (Stufendiagnostik) der relevanten Gene",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Signet ring cell carcinoma",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Bösartige Neubildung: Magen, nicht näher bezeichnet",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Eigenanamnese: Siegelringkarzinom des Magens, diffus wachsend",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Family history of malignant neoplasm of breast (situation)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Mutter an Brustkrebs verstorben",
+      "target" : null
+    },
+    {
+      "id" : "Device.manufacturer",
+      "context" : "Device.manufacturer",
+      "source" : "Illumina",
+      "target" : null
+    },
+    {
+      "id" : "Device.deviceName.name",
+      "context" : "Device.deviceName.name",
+      "source" : "MiSeq",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Laboratory",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Genetic variant assessment",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Present",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Sequencing",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "CTNNA1",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Heterozygous",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Deletion",
+      "target" : null
+    },
+    {
+      "id" : "RelatedArtifact.citation",
+      "context" : "RelatedArtifact.citation",
+      "source" : "ClinGen",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Diagnostic Implication",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Pathogenic",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Hereditary diffuse carcinoma of stomach (disorder)",
+      "target" : null
+    }]
+  }]
+}

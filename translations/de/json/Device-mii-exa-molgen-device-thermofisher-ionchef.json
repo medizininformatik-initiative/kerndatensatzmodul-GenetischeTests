@@ -1,0 +1,37 @@
+{
+  "id" : "Device-mii-exa-molgen-device-thermofisher-ionchef",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "Device.manufacturer",
+      "context" : "Device.manufacturer",
+      "source" : "Thermo Fisher Scientific",
+      "target" : null
+    },
+    {
+      "id" : "Device.serialNumber",
+      "context" : "Device.serialNumber",
+      "source" : "IC12345",
+      "target" : null
+    },
+    {
+      "id" : "Device.deviceName.name",
+      "context" : "Device.deviceName.name",
+      "source" : "Ion Chef System",
+      "target" : null
+    },
+    {
+      "id" : "Device.modelNumber",
+      "context" : "Device.modelNumber",
+      "source" : "Ion Chef",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Template preparation system (Ion Chef)",
+      "target" : null
+    }]
+  }]
+}

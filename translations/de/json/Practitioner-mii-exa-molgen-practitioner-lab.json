@@ -1,0 +1,31 @@
+{
+  "id" : "Practitioner-mii-exa-molgen-practitioner-lab",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "HumanName.text",
+      "context" : "HumanName.text",
+      "source" : "Dr. Daniel Schmidt",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.family",
+      "context" : "HumanName.family",
+      "source" : "Schmidt",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.given",
+      "context" : "HumanName.given",
+      "source" : "Daniel",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.prefix",
+      "context" : "HumanName.prefix",
+      "source" : "Dr.",
+      "target" : null
+    }]
+  }]
+}

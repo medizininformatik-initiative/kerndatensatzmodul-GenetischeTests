@@ -171,10 +171,10 @@ InstanceOf: Bundle
 Usage: #example
 * type = #transaction
 * timestamp = "2022-07-14T12:11:00+01:00"
-* entry[0].fullUrl = "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-molekulargenetischer-befundbericht-1"
-* entry[=].resource = mii-exa-molgen-molekulargenetischer-befundbericht-1
+* entry[0].fullUrl = "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-befundbericht-1"
+* entry[=].resource = mii-exa-molgen-befundbericht-1
 * entry[=].request.method = #PUT
-* entry[=].request.url = "DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-1"
+* entry[=].request.url = "DiagnosticReport/mii-exa-molgen-befundbericht-1"
 * entry[+].fullUrl = "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-medikationsempfehlung-1"
 * entry[=].resource = mii-exa-molgen-medikationsempfehlung-1
 * entry[=].request.method = #PUT
@@ -295,7 +295,7 @@ Usage: #example
 * type = #transaction
 * timestamp = "2022-11-04T13:47:00+01:00"
 * insert Bundle(mii-exa-molgen-patient-brca1, Patient)
-* insert Bundle(mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel, DiagnosticReport)
+* insert Bundle(mii-exa-molgen-befundbericht-trurisk-panel, DiagnosticReport)
 * insert Bundle(mii-exa-molgen-folgemassnahme-brca1, Task)
 * insert Bundle(mii-exa-molgen-prs-brca1, RiskAssessment)
 * insert Bundle(mii-exa-molgen-anforderung-trurisk-panel, ServiceRequest)
@@ -330,7 +330,7 @@ Usage: #example
 * type = #transaction
 * timestamp = "2022-11-21T14:44:00+01:00"
 * insert Bundle(mii-exa-molgen-patient-2, Patient)
-* insert Bundle(mii-exa-molgen-molekulargenetischer-befundbericht-2, DiagnosticReport)
+* insert Bundle(mii-exa-molgen-befundbericht-2, DiagnosticReport)
 * insert Bundle(mii-exa-molgen-anforderung-2, ServiceRequest)
 * insert Bundle(mii-exa-molgen-chargeitem-ebm-21, ChargeItem)
 * insert Bundle(mii-exa-molgen-chargeitem-ebm-22, ChargeItem)
@@ -387,7 +387,7 @@ Usage: #example
 * onsetPeriod.start.extension.url = "http://fhir.de/StructureDefinition/lebensphase"
 * onsetPeriod.start.extension.valueCodeableConcept = $SCT#255407002 "Neonatal (qualifier value)"
 * recordedDate = "2022-03-06T07:36:00+01:00"
-* evidence.detail = Reference(mii-exa-molgen-molekulargenetischer-befundbericht-2)
+* evidence.detail = Reference(mii-exa-molgen-befundbericht-2)
 
 Instance: mii-exa-molgen-phenotypic-feature-1
 InstanceOf: Observation
@@ -450,7 +450,7 @@ Usage: #example
 * insert Bundle(mii-exa-molgen-phenotypic-feature-2, Observation)
 * insert Bundle(mii-exa-molgen-phenotypic-feature-3, Observation)
 * insert Bundle(mii-exa-molgen-phenotypic-feature-4, Observation)
-* insert Bundle(mii-exa-molgen-molekulargenetischer-befundbericht-2, DiagnosticReport)
+* insert Bundle(mii-exa-molgen-befundbericht-2, DiagnosticReport)
 * insert Bundle(mii-exa-molgen-anforderung-2, ServiceRequest)
 * insert Bundle(mii-exa-molgen-chargeitem-ebm-21, ChargeItem)
 * insert Bundle(mii-exa-molgen-chargeitem-ebm-22, ChargeItem)
@@ -684,7 +684,7 @@ InstanceOf: mii-pr-molgen-untersuchte-region
 Usage: #example
 * insert Region(mii-exa-molgen-patient-srcc, mii-exa-molgen-specimen-srcc, mii-exa-molgen-device-sequencer, HGNC:2509, CTNNA1, NM_001903.5)
 */
-Instance: mii-exa-molgen-molekulargenetischer-befundbericht-srcc
+Instance: mii-exa-molgen-befundbericht-srcc
 InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht)
@@ -731,7 +731,7 @@ Usage: #example
 * insert Bundle(mii-exa-molgen-practitioner-physician, Practitioner)
 * insert Bundle(mii-exa-molgen-specimen-srcc, Specimen)
 * insert Bundle(mii-exa-molgen-specimen-srcc-2, Specimen)
-* insert Bundle(mii-exa-molgen-molekulargenetischer-befundbericht-srcc, DiagnosticReport)
+* insert Bundle(mii-exa-molgen-befundbericht-srcc, DiagnosticReport)
 * insert Bundle(mii-exa-molgen-anforderung-srcc, ServiceRequest)
 * insert Bundle(mii-exa-molgen-device-sequencer, Device)
 * insert Bundle(mii-exa-molgen-variante-srcc-ctnna1, Observation)
@@ -861,7 +861,7 @@ Usage: #example
 * for = Reference(mii-exa-molgen-patient-fgfr2-fusion)
 * reasonReference = Reference(mii-exa-molgen-therapeutische-implikation-fgfr2-fusion)
 
-Instance: mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion
+Instance: mii-exa-molgen-befundbericht-fgfr2-fusion
 InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht)
@@ -886,7 +886,7 @@ Usage: #example
 * insert Bundle(mii-exa-molgen-patient-fgfr2-fusion, Patient)
 * insert Bundle(mii-exa-molgen-practitioner-lab, Practitioner)
 * insert Bundle(mii-exa-molgen-practitioner-physician, Practitioner)
-* insert Bundle(mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion, DiagnosticReport)
+* insert Bundle(mii-exa-molgen-befundbericht-fgfr2-fusion, DiagnosticReport)
 * insert Bundle(mii-exa-molgen-anforderung-fgfr2-fusion, ServiceRequest)
 * insert Bundle(mii-exa-molgen-variante-fgfr2-fusion, Observation)
 * insert Bundle(mii-exa-molgen-diagnostische-implikation-fgfr2-fusion, Observation)

@@ -277,7 +277,7 @@ typische Anwendungsfälle des Moduls:
 - **Methode**: Targeted Panel-Sequenzierung
 - **Ergebnis**: BRAF p.Val600Glu Mutation nachgewiesen
 - **Implikation**: Kontraindikation für Anti-EGFR-Therapie, Alternative Therapieoptionen erforderlich
-- **Beispiel**: `mii-exa-molgen-molekulargenetischer-befundbericht-1`
+- **Beispiel**: `mii-exa-molgen-befundbericht-1`
 
 ##### 2. Hereditäre Erkrankung – Cornelia de Lange-Syndrom
 
@@ -287,7 +287,7 @@ typische Anwendungsfälle des Moduls:
 - **Methode**: Einzelgen-Sequenzierung NIPBL
 - **Ergebnis**: Pathogene NIPBL-Variante identifiziert
 - **Implikation**: Diagnosebestätigung, autosomal-dominanter Erbgang, genetische Beratung der Familie
-- **Beispiel**: `mii-exa-molgen-molekulargenetischer-befundbericht-2`
+- **Beispiel**: `mii-exa-molgen-befundbericht-2`
 
 ##### 3. Hereditäre Tumorprädisposition – BRCA1 bei familiärer Belastung
 
@@ -297,7 +297,7 @@ typische Anwendungsfälle des Moduls:
 - **Methode**: TruRisk Panel (BRCA1, BRCA2, weitere Gene)
 - **Ergebnis**: Pathogene BRCA1-Variante c.5266dupC
 - **Implikation**: Erhöhtes Krebsrisiko, intensivierte Vorsorge, prophylaktische Optionen, Kaskadenscreening
-- **Beispiel**: `mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel`
+- **Beispiel**: `mii-exa-molgen-befundbericht-trurisk-panel`
 
 ##### 4. Whole Exome Sequencing – Forschungskontext
 

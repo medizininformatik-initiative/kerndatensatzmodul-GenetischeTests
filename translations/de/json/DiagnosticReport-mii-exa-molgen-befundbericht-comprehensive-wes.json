@@ -1,0 +1,55 @@
+{
+  "id" : "DiagnosticReport-mii-exa-molgen-befundbericht-comprehensive-wes",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "RelatedArtifact.label",
+      "context" : "RelatedArtifact.label",
+      "source" : "GATK Best Practices for Germline SNP & Indel Discovery",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Quality Metrics",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Mean coverage: 120X, 98.5% of bases >20X, 95.2% of target regions callable. Q30 bases: 92%. Contamination estimate: <1%. Sample identity confirmed by SNP fingerprinting.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Genetics",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Genetic analysis report",
+      "target" : null
+    },
+    {
+      "id" : "DiagnosticReport.media.comment",
+      "context" : "DiagnosticReport.media.comment",
+      "source" : "Coverage plot showing uniform coverage across all exons",
+      "target" : null
+    },
+    {
+      "id" : "DiagnosticReport.conclusion",
+      "context" : "DiagnosticReport.conclusion",
+      "source" : "Whole exome sequencing identified a pathogenic de novo variant in the KMT2A gene, consistent with Wiedemann-Steiner syndrome. This explains the patient's developmental delay and dysmorphic features. Technical quality metrics met all acceptance criteria.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Positive",
+      "target" : null
+    }]
+  }]
+}

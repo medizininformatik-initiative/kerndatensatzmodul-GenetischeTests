@@ -1,0 +1,25 @@
+{
+  "id" : "DocumentReference-mii-exa-molgen-documentreference-fastq",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "FASTQ files - paired-end sequencing data",
+      "target" : null
+    },
+    {
+      "id" : "Attachment.title",
+      "context" : "Attachment.title",
+      "source" : "Forward reads",
+      "target" : null
+    },
+    {
+      "id" : "Attachment.title",
+      "context" : "Attachment.title",
+      "source" : "Reverse reads",
+      "target" : null
+    }]
+  }]
+}
