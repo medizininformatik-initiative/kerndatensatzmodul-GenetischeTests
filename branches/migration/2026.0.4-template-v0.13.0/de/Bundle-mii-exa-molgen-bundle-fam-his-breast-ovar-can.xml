@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-bundle-fam-his-breast-ovar-can"/>
+  <language value="de"/>
+  <type value="transaction"/>
+  <timestamp value="2022-11-04T13:47:00+01:00"/>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-patient-brca1"/>
+    <resource>
+      <Patient>
+        <id value="mii-exa-molgen-patient-brca1"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <identifier>
+          <use value="usual"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="MR"/>
+            </coding>
+          </type>
+          <system value="https://www.charite.de/fhir/sid/patienten"/>
+          <value value="9166147031"/>
+          <assigner>
+            <identifier>
+              <system value="https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier"/>
+              <value value="Charité"/>
+            </identifier>
+            <display value="Charité - Universitätsmedizin Berlin"/>
+          </assigner>
+        </identifier>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://fhir.de/CodeSystem/identifier-type-de-basis"/>
+              <code value="GKV"/>
+            </coding>
+          </type>
+          <system value="http://fhir.de/sid/gkv/kvid-10"/>
+          <value value="Z977188448"/>
+          <assigner>
+            <identifier>
+              <use value="official"/>
+              <system value="http://fhir.de/sid/arge-ik/iknr"/>
+              <value value="109519005"/>
+            </identifier>
+          </assigner>
+        </identifier>
+        <name>
+          <use value="official"/>
+          <family value="Schmidt-Huber">
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+              <valueString value="Schmidt"/>
+            </extension>
+          </family>
+          <given value="Elisa"/>
+        </name>
+        <gender value="female"/>
+        <birthDate value="1973-03-12"/>
+        <deceasedBoolean value="false"/>
+        <address>
+          <type value="both"/>
+          <line value="Anna-Louisa-Karsch Str. 2"/>
+          <city value="Berlin"/>
+          <state value="DE-BE"/>
+          <postalCode value="10178"/>
+          <country value="DE"/>
+        </address>
+      </Patient>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Patient/mii-exa-molgen-patient-brca1"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-befundbericht-trurisk-panel"/>
+    <resource>
+      <DiagnosticReport>
+        <id value="mii-exa-molgen-befundbericht-trurisk-panel"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht|2026.0.4"/>
+          <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report|3.0.0"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact">
+          <valueRelatedArtifact>
+            <type value="citation"/>
+            <citation value="Plon SE, Eccles DM, Easton D, Foulkes WD, Genuardi M, Greenblatt MS, Hogervorst FB, Hoogerbrugge N, Spurdle AB, Tavtigian SV; IARC Unclassified Genetic Variants Working Group. Sequence variant classification and reporting: recommendations for improving the interpretation of cancer susceptibility genetic test results. Hum Mutat. 2008 Nov;29(11):1282-91. doi: 10.1002/humu.20880. PMID: 18951446; PMCID: PMC3075918."/>
+            <url value="https://doi.org/10.1002/humu.20880"/>
+          </valueRelatedArtifact>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact">
+          <valueRelatedArtifact>
+            <type value="citation"/>
+            <citation value="Rhiem K, Auber B, Briest S, Dikow N, Ditsch N, Dragicevic N, Grill S, Hahnen E, Horvath J, Jaeger B, Kast K, Kiechle M, Leinert E, Morlot S, Püsken M, Schäfer D, Schott S, Schroeder C, Siebers-Renelt U, Solbach C, Weber-Lassalle N, Witzel I, Zeder-Göß C, Schmutzler RK. Consensus Recommendations of the German Consortium for Hereditary Breast and Ovarian Cancer. Breast Care (Basel). 2022 Apr;17(2):199-207. doi: 10.1159/000516376. Epub 2021 Jul 19. PMID: 35702495; PMCID: PMC9149395."/>
+            <url value="https://doi.org/10.1159%2F000516376"/>
+          </valueRelatedArtifact>
+        </extension>
+        <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-reference">
+          <valueReference>
+            <reference value="Procedure/mii-exa-molgen-genomic-study-trurisk-panel"/>
+          </valueReference>
+        </extension>
+        <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/recommended-action">
+          <valueReference>
+            <reference value="Task/mii-exa-molgen-folgemassnahme-brca1"/>
+          </valueReference>
+        </extension>
+        <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-risk-assessment">
+          <valueReference>
+            <reference value="RiskAssessment/mii-exa-molgen-prs-brca1"/>
+          </valueReference>
+        </extension>
+        <basedOn>
+          <reference value="ServiceRequest/mii-exa-molgen-anforderung-trurisk-panel"/>
+        </basedOn>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+            <code value="GE"/>
+            <display value="Genetics"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="51969-4"/>
+            <display value="Genetic analysis report"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-brca1"/>
+        </subject>
+        <performer>
+          <reference value="Practitioner/mii-exa-molgen-practitioner-lab"/>
+        </performer>
+        <specimen>
+          <reference value="Specimen/mii-exa-molgen-specimen-brca1"/>
+        </specimen>
+        <result>
+          <reference value="Observation/mii-exa-molgen-variante-brca1"/>
+        </result>
+        <result>
+          <reference value="Observation/mii-exa-molgen-diagnostische-implikation-brca1"/>
+        </result>
+        <conclusion value="Nachweis heterozygoter Sequenzveränderung, die zum Funktionsverlust führt."/>
+      </DiagnosticReport>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="DiagnosticReport/mii-exa-molgen-befundbericht-trurisk-panel"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-folgemassnahme-brca1"/>
+    <resource>
+      <Task>
+        <id value="mii-exa-molgen-folgemassnahme-brca1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme|2026.0.4"/>
+          <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/followup-recommendation|3.0.0"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <basedOn>
+          <reference value="ServiceRequest/mii-exa-molgen-anforderung-trurisk-panel"/>
+        </basedOn>
+        <status value="requested"/>
+        <intent value="proposal"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA14020-4"/>
+            <display value="Genetic counseling recommended"/>
+          </coding>
+        </code>
+        <description value="Eine genetische Beratung hinsichtlich einer gezielten Testung leiblicher Familienmitglieder wird empfohlen."/>
+        <for>
+          <reference value="Patient/mii-exa-molgen-patient-brca1"/>
+        </for>
+      </Task>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Task/mii-exa-molgen-folgemassnahme-brca1"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-prs-brca1"/>
+    <resource>
+      <RiskAssessment>
+        <id value="mii-exa-molgen-prs-brca1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score|2026.0.4"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-2"/>
+        </subject>
+        <occurrenceDateTime value="2022-11-01"/>
+        <basis>
+          <reference value="Observation/mii-exa-molgen-variante-brca1"/>
+        </basis>
+        <prediction>
+          <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/risk-assessment-einflussfaktor">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="414152003"/>
+                <display value="European (ethnic group)"/>
+              </coding>
+              <text value="Der verwendete Polygene Risikoscore wurde bisher nur für die europäische Bevölkerung bei Brustkrebs validiert."/>
+            </valueCodeableConcept>
+          </extension>
+          <outcome>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="718220008"/>
+              <display value="Hereditary breast and ovarian cancer syndrome (disorder)"/>
+            </coding>
+          </outcome>
+          <qualitativeRisk>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/risk-probability"/>
+              <code value="high"/>
+              <display value="High likelihood"/>
+            </coding>
+          </qualitativeRisk>
+        </prediction>
+      </RiskAssessment>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="RiskAssessment/mii-exa-molgen-prs-brca1"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-anforderung-trurisk-panel"/>
+    <resource>
+      <ServiceRequest>
+        <id value="mii-exa-molgen-anforderung-trurisk-panel"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test|2026.0.4"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <identifier>
+          <system value="https://www.charite.de/fhir/auftragsnummern"/>
+          <value value="gen_test_03"/>
+        </identifier>
+        <status value="active"/>
+        <intent value="order"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="108252007"/>
+            <display value="Laboratory procedure (procedure)"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="405825005"/>
+            <display value="Molecular genetic test (procedure)"/>
+          </coding>
+          <text value="Panelanalyse TruRisk®-V3 mit NGS basierter CNV-Analyse Bestimmung des Polygenen Risikoscores (PRS) für Brustkrebs"/>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-brca1"/>
+        </subject>
+        <authoredOn value="2022-11-01"/>
+        <requester>
+          <reference value="Practitioner/mii-exa-molgen-practitioner-physician"/>
+        </requester>
+        <reasonCode>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="429740004"/>
+            <display value="Family history of malignant neoplasm of breast (situation)"/>
+          </coding>
+        </reasonCode>
+        <reasonCode>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="430705002"/>
+            <display value="Family history of malignant neoplasm of ovary (situation)"/>
+          </coding>
+        </reasonCode>
+        <reasonCode>
+          <coding>
+            <system value="http://www.orpha.net"/>
+            <code value="145"/>
+            <display value="Hereditary breast and/or ovarian cancer syndrome"/>
+          </coding>
+        </reasonCode>
+        <reasonCode>
+          <coding>
+            <system value="http://www.omim.org"/>
+            <code value="604370"/>
+            <display value="BREAST-OVARIAN CANCER, FAMILIAL, SUSCEPTIBILITY TO, 1; BROVCA1"/>
+          </coding>
+        </reasonCode>
+        <specimen>
+          <reference value="Specimen/mii-exa-molgen-specimen-brca1"/>
+        </specimen>
+      </ServiceRequest>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="ServiceRequest/mii-exa-molgen-anforderung-trurisk-panel"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-practitioner-lab"/>
+    <resource>
+      <Practitioner>
+        <id value="mii-exa-molgen-practitioner-lab"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <active value="true"/>
+        <name>
+          <use value="official"/>
+          <text value="Dr. Daniel Schmidt"/>
+          <family value="Schmidt"/>
+          <given value="Daniel"/>
+          <prefix value="Dr."/>
+        </name>
+      </Practitioner>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Practitioner/mii-exa-molgen-practitioner-lab"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-practitioner-physician"/>
+    <resource>
+      <Practitioner>
+        <id value="mii-exa-molgen-practitioner-physician"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <active value="true"/>
+        <name>
+          <use value="official"/>
+          <text value="Dr. Linda Rubens"/>
+          <family value="Rubens"/>
+          <given value="Linda"/>
+          <prefix value="Dr."/>
+        </name>
+      </Practitioner>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Practitioner/mii-exa-molgen-practitioner-physician"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-specimen-brca1"/>
+    <resource>
+      <Specimen>
+        <id value="mii-exa-molgen-specimen-brca1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <identifier>
+          <system value="https://www.charite.de/fhir/sid/bioproben"/>
+          <value value="specimen_03"/>
+        </identifier>
+        <status value="available"/>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="127457009"/>
+            <display value="Tissue specimen from breast (specimen)"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-brca1"/>
+        </subject>
+        <receivedTime value="2022-11-01"/>
+        <collection>
+          <collectedDateTime value="2022-11-01"/>
+        </collection>
+      </Specimen>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Specimen/mii-exa-molgen-specimen-brca1"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-device-sequencer-nextseq"/>
+    <resource>
+      <Device>
+        <id value="mii-exa-molgen-device-sequencer-nextseq"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="active"/>
+        <manufacturer value="Illumina"/>
+        <deviceName>
+          <name value="NextSeq"/>
+          <type value="manufacturer-name"/>
+        </deviceName>
+      </Device>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Device/mii-exa-molgen-device-sequencer-nextseq"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-variante-brca1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-molgen-variante-brca1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2026.0.4"/>
+          <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant|3.0.0"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <basedOn>
+          <reference value="ServiceRequest/mii-exa-molgen-anforderung-trurisk-panel"/>
+        </basedOn>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+            <code value="GE"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="69548-6"/>
+            <display value="Genetic variant assessment"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-brca1"/>
+        </subject>
+        <effectiveDateTime value="2022-11-01"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA9633-4"/>
+            <display value="Present"/>
+          </coding>
+        </valueCodeableConcept>
+        <method>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA26398-0"/>
+            <display value="Sequencing"/>
+          </coding>
+        </method>
+        <specimen>
+          <reference value="Specimen/mii-exa-molgen-specimen-brca1"/>
+        </specimen>
+        <device>
+          <reference value="Device/mii-exa-molgen-device-sequencer-nextseq"/>
+        </device>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48018-6"/>
+              <display value="Gene studied [ID]"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://www.genenames.org/geneId"/>
+              <code value="HGNC:1100"/>
+              <display value="BRCA1"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48001-2"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="urn:oid:2.16.840.1.113883.6.335"/>
+              <code value="17q21.31"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48004-6"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://varnomen.hgvs.org"/>
+              <code value="NM_007294.3:c.5266dupC"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="51958-7"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://www.ncbi.nlm.nih.gov/refseq"/>
+              <code value="NM_007294.3"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48019-4"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://sequenceontology.org"/>
+              <code value="SO:1000035"/>
+              <display value="Duplication"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="82121-5"/>
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="50"/>
+            <unit value="Abdeckung der Fragmente"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="1"/>
+          </valueQuantity>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="81252-9"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://www.ncbi.nlm.nih.gov/projects/SNP"/>
+              <code value="rs80357906"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48000-4"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="LA21270-6"/>
+              <display value="Chromosome 17"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48005-3"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://varnomen.hgvs.org"/>
+              <code value="p.Gln1756Profs"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="87706-8"/>
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="95"/>
+            <comparator value="&gt;"/>
+            <unit value="%"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="%"/>
+          </valueQuantity>
+        </component>
+      </Observation>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Observation/mii-exa-molgen-variante-brca1"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-diagnostische-implikation-brca1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-molgen-diagnostische-implikation-brca1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation|2026.0.4"/>
+          <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|3.0.0"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+            <code value="GE"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs"/>
+            <code value="diagnostic-implication"/>
+            <display value="Diagnostic Implication"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-brca1"/>
+        </subject>
+        <effectiveDateTime value="2022-11-01"/>
+        <performer>
+          <reference value="Practitioner/mii-exa-molgen-practitioner-lab"/>
+        </performer>
+        <derivedFrom>
+          <reference value="Observation/mii-exa-molgen-variante-brca1"/>
+        </derivedFrom>
+        <component>
+          <code>
+            <coding>
+              <system value="http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs"/>
+              <code value="conclusion-string"/>
+            </coding>
+          </code>
+          <valueString value="Nachweis heterozygoter Sequenzveränderung, die zum Funktionsverlust führt"/>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="53037-8"/>
+              <display value="Genetic variation clinical significance [Imp]"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="LA6668-3"/>
+              <display value="Pathogenic"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="81259-4"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://human-phenotype-ontology.org"/>
+              <code value="HP:0003002"/>
+              <display value="Breast carcinoma"/>
+            </coding>
+            <coding>
+              <system value="http://human-phenotype-ontology.org"/>
+              <code value="HP:0100615"/>
+              <display value="Ovarian neoplasm"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="93044-6"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/clinvar-evidence-level-custom-cs"/>
+              <code value="2-star"/>
+              <display value="2 star"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+      </Observation>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Observation/mii-exa-molgen-diagnostische-implikation-brca1"/>
+    </request>
+  </entry>
+</Bundle>

@@ -1,0 +1,30 @@
+{
+  "resourceType" : "DocumentReference",
+  "id" : "mii-exa-molgen-documentreference-fastq",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: DocumentReference mii-exa-molgen-documentreference-fastq</b></p><a name=\"de-mii-exa-molgen-documentreference-fastq\"> </a><a name=\"de-hcmii-exa-molgen-documentreference-fastq\"> </a><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes:\">FASTQ files - paired-end sequencing data</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-molgen-patient.html\">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Krankenaktennummer\u00a0(use:\u00a0usual,\u00a0))</a></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Title</b></td></tr><tr><td style=\"display: none\">*</td><td>application/gzip</td><td><a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/files/sample_R1.fastq.gz\">https://www.medizininformatik-initiative.de/fhir/files/sample_R1.fastq.gz</a></td><td>Forward reads</td></tr></table></blockquote><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Title</b></td></tr><tr><td style=\"display: none\">*</td><td>application/gzip</td><td><a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/files/sample_R2.fastq.gz\">https://www.medizininformatik-initiative.de/fhir/files/sample_R2.fastq.gz</a></td><td>Reverse reads</td></tr></table></blockquote></div>"
+  },
+  "status" : "current",
+  "type" : {
+    "text" : "FASTQ files - paired-end sequencing data"
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-molgen-patient"
+  },
+  "content" : [{
+    "attachment" : {
+      "contentType" : "application/gzip",
+      "url" : "https://www.medizininformatik-initiative.de/fhir/files/sample_R1.fastq.gz",
+      "title" : "Forward reads"
+    }
+  },
+  {
+    "attachment" : {
+      "contentType" : "application/gzip",
+      "url" : "https://www.medizininformatik-initiative.de/fhir/files/sample_R2.fastq.gz",
+      "title" : "Reverse reads"
+    }
+  }]
+}

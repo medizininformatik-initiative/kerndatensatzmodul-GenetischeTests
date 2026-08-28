@@ -1,0 +1,32 @@
+{
+  "resourceType" : "Task",
+  "id" : "mii-exa-molgen-medikationsempfehlung-fgfr2-fusion",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung|2026.0.4",
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation|3.0.0"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Task mii-exa-molgen-medikationsempfehlung-fgfr2-fusion</b></p><a name=\"mii-exa-molgen-medikationsempfehlung-fgfr2-fusion\"> </a><a name=\"hcmii-exa-molgen-medikationsempfehlung-fgfr2-fusion\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-mii-pr-molgen-medikationsempfehlung.html\">MII PR MolGen Medikationsempfehlung</a> version: 2026.0.4, <a href=\"http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-medication-recommendation.html\">Medication Recommendation</a> version: 3.0.0</p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-mii-exa-molgen-anforderung-fgfr2-fusion.html\">ServiceRequest Molecular genetic test (procedure)</a></p><p><b>status</b>: Requested</p><p><b>intent</b>: proposal</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org LA26421-0}\">Hochselektive FGFR-Inhibitor-Therapie</span></p><p><b>for</b>: <a href=\"Patient-mii-exa-molgen-patient-fgfr2-fusion.html\">Anonymous Patient Female, DoB: 1964-05 ( pseudonymized\u00a0(use:\u00a0usual,\u00a0))</a></p><p><b>reasonReference</b>: <a href=\"Observation-mii-exa-molgen-therapeutische-implikation-fgfr2-fusion.html\">Observation Therapeutic Implication</a></p></div>"
+  },
+  "basedOn" : [{
+    "reference" : "ServiceRequest/mii-exa-molgen-anforderung-fgfr2-fusion"
+  }],
+  "status" : "requested",
+  "intent" : "proposal",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "LA26421-0",
+      "display" : "Consider alternative medication"
+    }],
+    "text" : "Hochselektive FGFR-Inhibitor-Therapie"
+  },
+  "for" : {
+    "reference" : "Patient/mii-exa-molgen-patient-fgfr2-fusion"
+  },
+  "reasonReference" : {
+    "reference" : "Observation/mii-exa-molgen-therapeutische-implikation-fgfr2-fusion"
+  }
+}

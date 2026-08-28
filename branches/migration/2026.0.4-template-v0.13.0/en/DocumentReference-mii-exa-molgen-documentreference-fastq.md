@@ -1,0 +1,72 @@
+# FASTQ Sequencing Files - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2026.0.4
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **FASTQ Sequencing Files**
+
+## Example DocumentReference: FASTQ Sequencing Files
+
+-------
+
+**English**
+
+-------
+
+**status**: Current
+
+**type**: FASTQ files - paired-end sequencing data
+
+**subject**: [Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Medical record number (use: usual, ))](Patient-mii-exa-molgen-patient.md)
+
+> **content**
+
+### Attachments
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| - | **ContentType** | **Url** | **Title** |
+| * | application/gzip | [https://www.medizininformatik-initiative.de/fhir/files/sample_R1.fastq.gz](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/files/sample_R1.fastq.gz) | Forward reads |
+
+
+> **content**
+
+### Attachments
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| - | **ContentType** | **Url** | **Title** |
+| * | application/gzip | [https://www.medizininformatik-initiative.de/fhir/files/sample_R2.fastq.gz](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/files/sample_R2.fastq.gz) | Reverse reads |
+
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "DocumentReference",
+  "id" : "mii-exa-molgen-documentreference-fastq",
+  "status" : "current",
+  "type" : {
+    "text" : "FASTQ files - paired-end sequencing data"
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-molgen-patient"
+  },
+  "content" : [{
+    "attachment" : {
+      "contentType" : "application/gzip",
+      "url" : "https://www.medizininformatik-initiative.de/fhir/files/sample_R1.fastq.gz",
+      "title" : "Forward reads"
+    }
+  },
+  {
+    "attachment" : {
+      "contentType" : "application/gzip",
+      "url" : "https://www.medizininformatik-initiative.de/fhir/files/sample_R2.fastq.gz",
+      "title" : "Reverse reads"
+    }
+  }]
+}
+
+```
