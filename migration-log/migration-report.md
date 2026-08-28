@@ -215,15 +215,17 @@ The one surviving pre/post regression: `narrative_sources.dual_source` went `fal
 
 The FSH declares 166 `Instance:` but SUSHI imports 122. The 44 difference sits inside `/* … */` blocks in six files (`UntersuchteRegion.fsh` 23, `ErgebnisZusammenfassung.fsh`, `MolekulareKonsequenz.fsh`, `MolekularerBiomarker.fsh`, `additional-examples.fsh`, `ARCHIVED-STU2-Examples.fsh`). This is pre-existing state from the module's documented STU2→STU3 migration, untouched here. Artefact conservation was therefore measured against the **134 generated** resources, not the 166 declarations. **Evidence:** `run.log 1 source-inventory-findings`.
 
-**QA-9 — Two unanchored ignore patterns, one of which would have shipped a guide with no home page** · owner: nobody (fixed), but worth reading
+**QA-9 — Three unanchored ignore patterns, one of which would have shipped a guide with no home page** · owner: nobody (fixed), but worth reading
 
 The most consequential finding of the whole migration, and it was invisible to every local check.
 
 The module's own `.gitignore` carried **`index.md`** at line 8, unanchored. Git applies such a pattern **at every depth**. Before the migration the repository had no `input/pagecontent/`, so it matched nothing. Afterwards it silently swallowed `input/pagecontent/index.md` **and** its German mirror — the guide's home page in both languages. Both files were written, rendered correctly in three local builds, and **never committed**. CI, which checks out from git, failed with *"Template based HTML file index.html is missing source file index.md"*. A build that is green locally and red on a fresh checkout is exactly what this class of defect looks like. The pattern is now anchored to `/index.md`.
 
+A **third** instance, and the one that would have gutted this report: the `*.log` line copied from the template's `.gitignore` matched `migration-log/run.log` **and 38 other evidence files** — the raw output of every step behind every number cited here. The run log is required to be committed with the branch; it never was. A `!migration-log/**` negation fixes it.
+
 The same class, on the migration's own side: the vendoring used `rsync --exclude=README.md` to protect the module's root README, and rsync also applies that at every depth — so **ten** of the template's nested READMEs were never copied, including `input/fsh/rulesets/README.md`, which documents the ruleset library. All ten are restored.
 
-Both were found by comparing the **committed** tree against what the build needs, not by building. After the fixes, re-verified from a fresh clone of the branch: all 19 declared pages present in both languages, every menu entry has a page, 15 + 15 intro notes present, and no file under `input/` is ignored.
+All three were found by comparing the **committed** tree against what a consumer needs — never by building, because a local build reads the working directory and cannot see them. After the fixes, re-verified from a fresh clone of the branch: all 19 declared pages present in both languages, every menu entry has a page, 15 + 15 intro notes present, and no file under `input/` is ignored.
 
 **QA-7 — Twelve pages of this guide talk about the *Pathologie-Befund* module** · owner: the module's technical authors
 

@@ -49,3 +49,9 @@ fsh-generated/
 publisher.jar
 node_modules/
 *.log
+# ...but NOT the migration audit trail. migration-log/ IS the evidence the
+# migration report cites: the run log, and the raw output of every step behind
+# every number in it. The bare *.log above (from the module template) would
+# have dropped all of it from git, which is the same unanchored-pattern class
+# as the /index.md line above.
+!migration-log/**
