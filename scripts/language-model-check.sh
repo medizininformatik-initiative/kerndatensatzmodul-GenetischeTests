@@ -53,7 +53,7 @@ PATTERNS=(
 # The entries below were reviewed on 2026-08-28, during the migration onto the
 # module template. All of them are prose ABOUT the language model, in files that
 # are not guide content: the migration report explaining why the German narrative
-# became the translation, and the vendored copy of the mii-ig-migration skill,
+# became the translation, its append-only run log, and the vendored mii-ig-migration skill,
 # whose own specification documents this exact reversal. None of them asserts that
 # German is this guide's default. The guide's own pages carry no hit: the phrase
 # "the German source" was reworded to "the German page" throughout
@@ -61,6 +61,7 @@ PATTERNS=(
 # "source" reads as "source language" rather than "the page this was translated
 # from" — the ambiguity the check exists to catch.
 ALLOW='migration-log/migration-report.md|German
+migration-log/run.log|German
 .claude/skills/mii-ig-migration/SKILL.md|German
 .claude/skills/mii-ig-migration/references/migration-spec.md|German'
 
