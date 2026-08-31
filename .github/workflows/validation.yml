@@ -118,9 +118,9 @@ jobs:
       - name: Probe
         id: probe
         env:
-          C: ${{ secrets.SU_TERMSERV_CLIENT_CERT }}
-          K: ${{ secrets.SU_TERMSERV_CLIENT_KEY }}
-          P: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD }}
+          C: ${{ secrets.SU_TERMSERV_CLIENT_CERT || secrets.CDS_DEV_CLIENT_CERT }}
+          K: ${{ secrets.SU_TERMSERV_CLIENT_KEY || secrets.CDS_DEV_CLIENT_KEY }}
+          P: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD || secrets.CDS_DEV_CLIENT_CERT_PASSWORD }}
         run: |
           if [ -n "${C}" ] && [ -n "${K}" ] && [ -n "${P}" ]; then
             echo "has_cert=true" >> "${GITHUB_OUTPUT}"
@@ -160,9 +160,9 @@ jobs:
     # If your organisation already provisions CDS_DEV_CLIENT_* centrally, replace
     # this block with `secrets: inherit`.
     secrets:
-      CDS_DEV_CLIENT_CERT: ${{ secrets.SU_TERMSERV_CLIENT_CERT }}
-      CDS_DEV_CLIENT_KEY: ${{ secrets.SU_TERMSERV_CLIENT_KEY }}
-      CDS_DEV_CLIENT_CERT_PASSWORD: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD }}
+      CDS_DEV_CLIENT_CERT: ${{ secrets.SU_TERMSERV_CLIENT_CERT || secrets.CDS_DEV_CLIENT_CERT }}
+      CDS_DEV_CLIENT_KEY: ${{ secrets.SU_TERMSERV_CLIENT_KEY || secrets.CDS_DEV_CLIENT_KEY }}
+      CDS_DEV_CLIENT_CERT_PASSWORD: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD || secrets.CDS_DEV_CLIENT_CERT_PASSWORD }}
 
   template-repo-notice:
     name: Validation skipped on the template repo
