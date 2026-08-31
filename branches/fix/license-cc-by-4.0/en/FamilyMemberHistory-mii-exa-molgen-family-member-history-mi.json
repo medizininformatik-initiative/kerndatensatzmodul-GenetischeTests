@@ -1,0 +1,108 @@
+{
+  "resourceType" : "FamilyMemberHistory",
+  "id" : "mii-exa-molgen-family-member-history-mi",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese|2026.0.4"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: FamilyMemberHistory mii-exa-molgen-family-member-history-mi</b></p><a name=\"mii-exa-molgen-family-member-history-mi\"> </a><a name=\"hcmii-exa-molgen-family-member-history-mi\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-molgen-familienanamnese.html\">MII PR MolGen Familienanamnese</a> version: 2026.0.4</p></div><p><b>status</b>: Completed</p><p><b>patient</b>: <a href=\"Patient-mii-exa-molgen-patient.html\">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Medical record number\u00a0(use:\u00a0usual,\u00a0))</a></p><p><b>date</b>: 2024-03-10</p><p><b>relationship</b>: <span title=\"Codes:{http://snomed.info/sct 72705000}, {http://terminology.hl7.org/CodeSystem/v3-RoleCode MTH}\">Mother (person)</span></p><p><b>sex</b>: <span title=\"Codes:{http://hl7.org/fhir/administrative-gender female}, {http://snomed.info/sct 248152002}\">Female (finding)</span></p><p><b>deceased</b>: 71 years<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codea = 'a')</span></p><p><b>reasonCode</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm I21.2}, {http://snomed.info/sct 401303003}\">Akuter transmuraler Myokardinfarkt an sonstigen Lokalisationen</span></p><h3>Conditions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>ContributedToDeath</b></td><td><b>Onset[x]</b></td><td><b>Note</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm I21.2}, {http://snomed.info/sct 401303003}\">Akuter transmuraler Myokardinfarkt an sonstigen Lokalisationen</span></td><td>true</td><td>70 years<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codea = 'a')</span></td><td><blockquote><div><p>STEMI mit fatalen Komplikationen trotz Akutintervention</p>\n</div></blockquote></td></tr></table></div>"
+  },
+  "status" : "completed",
+  "patient" : {
+    "reference" : "Patient/mii-exa-molgen-patient"
+  },
+  "date" : "2024-03-10",
+  "relationship" : {
+    "coding" : [{
+      "extension" : [{
+        "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad",
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "125678001",
+          "display" : "First degree blood relative (person)"
+        }
+      },
+      {
+        "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis",
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "13646006",
+          "display" : "Natural parent (person)"
+        }
+      },
+      {
+        "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-familiare-linie",
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "72705000",
+          "display" : "Mother (person)"
+        }
+      }],
+      "system" : "http://snomed.info/sct",
+      "code" : "72705000",
+      "display" : "Mother (person)"
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+      "code" : "MTH",
+      "display" : "mother"
+    }]
+  },
+  "sex" : {
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/administrative-gender",
+      "code" : "female"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "248152002",
+      "display" : "Female (finding)"
+    }]
+  },
+  "deceasedAge" : {
+    "value" : 71,
+    "unit" : "years",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "a"
+  },
+  "reasonCode" : [{
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+      "version" : "2024",
+      "code" : "I21.2",
+      "display" : "Akuter transmuraler Myokardinfarkt an sonstigen Lokalisationen"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "401303003",
+      "display" : "Acute ST segment elevation myocardial infarction (disorder)"
+    }]
+  }],
+  "condition" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "version" : "2024",
+        "code" : "I21.2",
+        "display" : "Akuter transmuraler Myokardinfarkt an sonstigen Lokalisationen"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "401303003",
+        "display" : "Acute ST segment elevation myocardial infarction (disorder)"
+      }]
+    },
+    "contributedToDeath" : true,
+    "onsetAge" : {
+      "value" : 70,
+      "unit" : "years",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "a"
+    },
+    "note" : [{
+      "text" : "STEMI mit fatalen Komplikationen trotz Akutintervention"
+    }]
+  }]
+}

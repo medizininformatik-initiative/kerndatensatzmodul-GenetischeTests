@@ -1,0 +1,607 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "mii-exa-befund-bundle-befund-srcc",
+  "type" : "transaction",
+  "timestamp" : "2022-12-16T10:09:00+01:00",
+  "entry" : [{
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-patient-srcc",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "mii-exa-molgen-patient-srcc",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Patient_mii-exa-molgen-patient-srcc\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient mii-exa-molgen-patient-srcc</b></p><a name=\"mii-exa-molgen-patient-srcc\"> </a><a name=\"hcmii-exa-molgen-patient-srcc\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient Male, DoB: 1986-01 ( pseudonymized\u00a0(use:\u00a0usual,\u00a0))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">false</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">10 DE </td></tr></table></div></div>"
+      },
+      "identifier" : [{
+        "use" : "usual",
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+            "code" : "PSEUDED"
+          }]
+        },
+        "system" : "https://www.charite.de/fhir/sid/pseudonym",
+        "value" : "66036015"
+      }],
+      "gender" : "male",
+      "birthDate" : "1986-01",
+      "deceasedBoolean" : false,
+      "address" : [{
+        "type" : "both",
+        "postalCode" : "10",
+        "country" : "DE"
+      }]
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "Patient/mii-exa-molgen-patient-srcc"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-practitioner-lab",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "mii-exa-molgen-practitioner-lab",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Practitioner_mii-exa-molgen-practitioner-lab\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner mii-exa-molgen-practitioner-lab</b></p><a name=\"mii-exa-molgen-practitioner-lab\"> </a><a name=\"hcmii-exa-molgen-practitioner-lab\"> </a><p><b>active</b>: true</p><p><b>name</b>: Dr. Daniel Schmidt(Official)</p></div></div>"
+      },
+      "active" : true,
+      "name" : [{
+        "use" : "official",
+        "text" : "Dr. Daniel Schmidt",
+        "family" : "Schmidt",
+        "given" : ["Daniel"],
+        "prefix" : ["Dr."]
+      }]
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "Practitioner/mii-exa-molgen-practitioner-lab"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-practitioner-physician",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "mii-exa-molgen-practitioner-physician",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Practitioner_mii-exa-molgen-practitioner-physician\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner mii-exa-molgen-practitioner-physician</b></p><a name=\"mii-exa-molgen-practitioner-physician\"> </a><a name=\"hcmii-exa-molgen-practitioner-physician\"> </a><p><b>active</b>: true</p><p><b>name</b>: Dr. Linda Rubens(Official)</p></div></div>"
+      },
+      "active" : true,
+      "name" : [{
+        "use" : "official",
+        "text" : "Dr. Linda Rubens",
+        "family" : "Rubens",
+        "given" : ["Linda"],
+        "prefix" : ["Dr."]
+      }]
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "Practitioner/mii-exa-molgen-practitioner-physician"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-specimen-srcc",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "mii-exa-molgen-specimen-srcc",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Specimen_mii-exa-molgen-specimen-srcc\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen mii-exa-molgen-specimen-srcc</b></p><a name=\"mii-exa-molgen-specimen-srcc\"> </a><a name=\"hcmii-exa-molgen-specimen-srcc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2026.0.1&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Core</a></p></div><p><b>identifier</b>: <code>https://www.charite.de/fhir/sid/bioproben</code>/00070024</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 445295009}\">Blood specimen with edetic acid (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-molgen-patient-srcc.html\">Anonymous Patient Male, DoB: 1986-01 ( pseudonymized\u00a0(use:\u00a0usual,\u00a0))</a></p><p><b>receivedTime</b>: 2022-11-30</p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2022-11-30</td></tr></table></div></div>"
+      },
+      "identifier" : [{
+        "system" : "https://www.charite.de/fhir/sid/bioproben",
+        "value" : "00070024"
+      }],
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "445295009",
+          "display" : "Blood specimen with edetic acid (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-molgen-patient-srcc"
+      },
+      "receivedTime" : "2022-11-30",
+      "collection" : {
+        "collectedDateTime" : "2022-11-30"
+      }
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "Specimen/mii-exa-molgen-specimen-srcc"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-specimen-srcc-2",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "mii-exa-molgen-specimen-srcc-2",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Specimen_mii-exa-molgen-specimen-srcc-2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen mii-exa-molgen-specimen-srcc-2</b></p><a name=\"mii-exa-molgen-specimen-srcc-2\"> </a><a name=\"hcmii-exa-molgen-specimen-srcc-2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2026.0.1&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Core</a></p></div><p><b>identifier</b>: <code>https://www.charite.de/fhir/sid/bioproben</code>/00070025</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 445295009}\">Blood specimen with edetic acid (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-molgen-patient-srcc.html\">Anonymous Patient Male, DoB: 1986-01 ( pseudonymized\u00a0(use:\u00a0usual,\u00a0))</a></p><p><b>receivedTime</b>: 2022-11-30</p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2022-11-30</td></tr></table></div></div>"
+      },
+      "identifier" : [{
+        "system" : "https://www.charite.de/fhir/sid/bioproben",
+        "value" : "00070025"
+      }],
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "445295009",
+          "display" : "Blood specimen with edetic acid (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-molgen-patient-srcc"
+      },
+      "receivedTime" : "2022-11-30",
+      "collection" : {
+        "collectedDateTime" : "2022-11-30"
+      }
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "Specimen/mii-exa-molgen-specimen-srcc-2"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-befundbericht-srcc",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "mii-exa-molgen-befundbericht-srcc",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht|2026.0.4",
+        "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report|3.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"DiagnosticReport_mii-exa-molgen-befundbericht-srcc\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport mii-exa-molgen-befundbericht-srcc</b></p><a name=\"mii-exa-molgen-befundbericht-srcc\"> </a><a name=\"hcmii-exa-molgen-befundbericht-srcc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.html\">MII PR MolGen Molekulargenetischer Befundbericht</a> version: 2026.0.4, <a href=\"http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-genomic-report.html\">Genomic Report</a> version: 3.0.0</p></div><h2><span title=\"Codes:{http://loinc.org 51969-4}\">Genetic analysis report</span> (<span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 GE}\">Genetics</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Anonymous Patient Male, DoB: 1986-01 ( pseudonymized\u00a0(use:\u00a0usual,\u00a0))</td></tr><tr><td>Performer</td><td> <a href=\"Practitioner-mii-exa-molgen-practitioner-lab.html\">Practitioner Dr. Daniel Schmidt(official)</a></td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>Relevant Time</b></td></tr><tr><td><a href=\"Observation-mii-exa-molgen-diagnostische-implikation-srcc-ctnna1.html\"><span title=\"Codes:{http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs diagnostic-implication}\">Diagnostic Implication</span></a></td><td/><td>Final</td><td>2022-11-30</td></tr><tr><td><a href=\"Observation-mii-exa-molgen-variante-srcc-ctnna1.html\"><span title=\"Codes:{http://loinc.org 69548-6}\">Genetic variant assessment</span></a></td><td><span title=\"Codes:{http://loinc.org LA9633-4}\">Present</span></td><td>Final</td><td>2022-11-30</td></tr></table><p>Nachweis der pathogenen Variante im CTNNA1-Gen.</p></div></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo",
+        "valueReference" : {
+          "reference" : "FamilyMemberHistory/mii-exa-molgen-family-member-history-srcc"
+        }
+      }],
+      "basedOn" : [{
+        "reference" : "ServiceRequest/mii-exa-molgen-anforderung-srcc"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code" : "GE",
+          "display" : "Genetics"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "51969-4",
+          "display" : "Genetic analysis report"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-molgen-patient-srcc"
+      },
+      "performer" : [{
+        "reference" : "Practitioner/mii-exa-molgen-practitioner-lab"
+      }],
+      "specimen" : [{
+        "reference" : "Specimen/mii-exa-molgen-specimen-srcc"
+      },
+      {
+        "reference" : "Specimen/mii-exa-molgen-specimen-srcc-2"
+      }],
+      "result" : [{
+        "reference" : "Observation/mii-exa-molgen-diagnostische-implikation-srcc-ctnna1"
+      },
+      {
+        "reference" : "Observation/mii-exa-molgen-variante-srcc-ctnna1"
+      }],
+      "conclusion" : "Nachweis der pathogenen Variante im CTNNA1-Gen."
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "DiagnosticReport/mii-exa-molgen-befundbericht-srcc"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-anforderung-srcc",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "mii-exa-molgen-anforderung-srcc",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test|2026.0.4"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"ServiceRequest_mii-exa-molgen-anforderung-srcc\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest mii-exa-molgen-anforderung-srcc</b></p><a name=\"mii-exa-molgen-anforderung-srcc\"> </a><a name=\"hcmii-exa-molgen-anforderung-srcc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-molgen-anforderung-genetischer-test.html\">MII PR MolGen Anforderung genetischer Test</a> version: 2026.0.4</p></div><p><b>identifier</b>: <code>https://www.charite.de/fhir/auftragsnummern</code>/7B369EB0</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 108252007}\">Laboratory procedure (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 405825005}\">Molekulargenetische Untersuchung (Stufendiagnostik) der relevanten Gene</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-molgen-patient-srcc.html\">Anonymous Patient Male, DoB: 1986-01 ( pseudonymized\u00a0(use:\u00a0usual,\u00a0))</a></p><p><b>authoredOn</b>: 2022-11-30</p><p><b>requester</b>: <a href=\"Practitioner-mii-exa-molgen-practitioner-physician.html\">Practitioner Dr. Linda Rubens(official)</a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 87737001}, {http://fhir.de/CodeSystem/bfarm/icd-10-gm C16.9}\">Eigenanamnese: Siegelringkarzinom des Magens, diffus wachsend</span>, <span title=\"Codes:{http://snomed.info/sct 429740004}\">Mutter an Brustkrebs verstorben</span></p><p><b>specimen</b>: <a href=\"Specimen-mii-exa-molgen-specimen-srcc.html\">Specimen: identifier = https://www.charite.de/fhir/sid/bioproben#00070024; status = available; type = Blood specimen with edetic acid (specimen); receivedTime = 2022-11-30</a></p></div></div>"
+      },
+      "identifier" : [{
+        "system" : "https://www.charite.de/fhir/auftragsnummern",
+        "value" : "7B369EB0"
+      }],
+      "status" : "active",
+      "intent" : "order",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "108252007",
+          "display" : "Laboratory procedure (procedure)"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "405825005",
+          "display" : "Molecular genetic test (procedure)"
+        }],
+        "text" : "Molekulargenetische Untersuchung (Stufendiagnostik) der relevanten Gene"
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-molgen-patient-srcc"
+      },
+      "authoredOn" : "2022-11-30",
+      "requester" : {
+        "reference" : "Practitioner/mii-exa-molgen-practitioner-physician"
+      },
+      "reasonCode" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "87737001",
+          "display" : "Signet ring cell carcinoma"
+        },
+        {
+          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "version" : "2024",
+          "code" : "C16.9",
+          "display" : "Bösartige Neubildung: Magen, nicht näher bezeichnet"
+        }],
+        "text" : "Eigenanamnese: Siegelringkarzinom des Magens, diffus wachsend"
+      },
+      {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "429740004",
+          "display" : "Family history of malignant neoplasm of breast (situation)"
+        }],
+        "text" : "Mutter an Brustkrebs verstorben"
+      }],
+      "specimen" : [{
+        "reference" : "Specimen/mii-exa-molgen-specimen-srcc"
+      }]
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "ServiceRequest/mii-exa-molgen-anforderung-srcc"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-device-sequencer",
+    "resource" : {
+      "resourceType" : "Device",
+      "id" : "mii-exa-molgen-device-sequencer",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Device_mii-exa-molgen-device-sequencer\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Device mii-exa-molgen-device-sequencer</b></p><a name=\"mii-exa-molgen-device-sequencer\"> </a><a name=\"hcmii-exa-molgen-device-sequencer\"> </a><p><b>status</b>: Active</p><p><b>manufacturer</b>: Illumina</p><h3>DeviceNames</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style=\"display: none\">*</td><td>MiSeq</td><td>Manufacturer name</td></tr></table></div></div>"
+      },
+      "status" : "active",
+      "manufacturer" : "Illumina",
+      "deviceName" : [{
+        "name" : "MiSeq",
+        "type" : "manufacturer-name"
+      }]
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "Device/mii-exa-molgen-device-sequencer"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-variante-srcc-ctnna1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-molgen-variante-srcc-ctnna1",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2026.0.4",
+        "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant|3.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Observation_mii-exa-molgen-variante-srcc-ctnna1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-molgen-variante-srcc-ctnna1</b></p><a name=\"mii-exa-molgen-variante-srcc-ctnna1\"> </a><a name=\"hcmii-exa-molgen-variante-srcc-ctnna1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-mii-pr-molgen-variante.html\">MII PR MolGen Variante</a> version: 2026.0.4, <a href=\"http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-variant.html\">Variant</a> version: 3.0.0</p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-mii-exa-molgen-anforderung-srcc.html\">ServiceRequest Molecular genetic test (procedure)</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 GE}\">Genetics</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 69548-6}\">Genetic variant assessment</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-molgen-patient-srcc.html\">Anonymous Patient Male, DoB: 1986-01 ( pseudonymized\u00a0(use:\u00a0usual,\u00a0))</a></p><p><b>effective</b>: 2022-11-30</p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA9633-4}\">Present</span></p><p><b>method</b>: <span title=\"Codes:{http://loinc.org LA26398-0}\">Sequencing</span></p><p><b>specimen</b>: <a href=\"Specimen-mii-exa-molgen-specimen-srcc.html\">Specimen: identifier = https://www.charite.de/fhir/sid/bioproben#00070024; status = available; type = Blood specimen with edetic acid (specimen); receivedTime = 2022-11-30</a></p><p><b>device</b>: <a href=\"Device-mii-exa-molgen-device-sequencer.html\">Device: status = active; manufacturer = Illumina</a></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 48018-6}\">Gene studied [ID]</span></p><p><b>value</b>: <span title=\"Codes:{http://www.genenames.org/geneId HGNC:2509}\">CTNNA1</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 51958-7}\">Transcript reference sequence [ID]</span></p><p><b>value</b>: <span title=\"Codes:{http://www.ncbi.nlm.nih.gov/refseq NM_001903.5}\">NM_001903.5</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 48004-6}\">DNA change (c.HGVS)</span></p><p><b>value</b>: <span title=\"Codes:{http://varnomen.hgvs.org NM_001903.5:c.1030del}\">NM_001903.5:c.1030del</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 81290-9}\">Genomic DNA change (gHGVS)</span></p><p><b>value</b>: <span title=\"Codes:{http://varnomen.hgvs.org NC_000005.9:g.138163372del}\">NC_000005.9:g.138163372del</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 48013-7}\">Genomic reference sequence [ID]</span></p><p><b>value</b>: <span title=\"Codes:{http://www.ncbi.nlm.nih.gov/refseq NC_000005.9}\">NC_000005.9</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 48005-3}\">Amino acid change (pHGVS)</span></p><p><b>value</b>: <span title=\"Codes:{http://varnomen.hgvs.org p.(Leu344CysfsTer25)}\">p.(Leu344CysfsTer25)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 53034-5}\">Allelic state</span></p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA6706-1}\">Heterozygous</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 48019-4}\">DNA change type</span></p><p><b>value</b>: <span title=\"Codes:{http://sequenceontology.org SO:0000159}\">Deletion</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 48001-2}\">Cytogenetic (chromosome) location</span></p><p><b>value</b>: <span title=\"Codes:{urn:oid:2.16.840.1.113883.6.335 5q31.2}\">5q31.2</span></p></blockquote></div></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/mii-exa-molgen-anforderung-srcc"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory",
+          "display" : "Laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code" : "GE"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "69548-6",
+          "display" : "Genetic variant assessment"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-molgen-patient-srcc"
+      },
+      "effectiveDateTime" : "2022-11-30",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "LA9633-4",
+          "display" : "Present"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "LA26398-0",
+          "display" : "Sequencing"
+        }]
+      },
+      "specimen" : {
+        "reference" : "Specimen/mii-exa-molgen-specimen-srcc"
+      },
+      "device" : {
+        "reference" : "Device/mii-exa-molgen-device-sequencer"
+      },
+      "component" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "48018-6"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://www.genenames.org/geneId",
+            "code" : "HGNC:2509",
+            "display" : "CTNNA1"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "51958-7"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://www.ncbi.nlm.nih.gov/refseq",
+            "code" : "NM_001903.5"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "48004-6"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://varnomen.hgvs.org",
+            "code" : "NM_001903.5:c.1030del"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "81290-9"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://varnomen.hgvs.org",
+            "code" : "NC_000005.9:g.138163372del"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "48013-7"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://www.ncbi.nlm.nih.gov/refseq",
+            "code" : "NC_000005.9"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "48005-3"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://varnomen.hgvs.org",
+            "code" : "p.(Leu344CysfsTer25)"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "53034-5"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "LA6706-1",
+            "display" : "Heterozygous"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "48019-4"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://sequenceontology.org",
+            "code" : "SO:0000159",
+            "display" : "Deletion"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "48001-2"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "urn:oid:2.16.840.1.113883.6.335",
+            "code" : "5q31.2"
+          }]
+        }
+      }]
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "Observation/mii-exa-molgen-variante-srcc-ctnna1"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-diagnostische-implikation-srcc-ctnna1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-molgen-diagnostische-implikation-srcc-ctnna1",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation|2026.0.4",
+        "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|3.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><a name=\"Observation_mii-exa-molgen-diagnostische-implikation-srcc-ctnna1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-molgen-diagnostische-implikation-srcc-ctnna1</b></p><a name=\"mii-exa-molgen-diagnostische-implikation-srcc-ctnna1\"> </a><a name=\"hcmii-exa-molgen-diagnostische-implikation-srcc-ctnna1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-mii-pr-molgen-diagnostische-implikation.html\">MII PR MolGen Diagnostische Implikation</a> version: 2026.0.4, <a href=\"http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-diagnostic-implication.html\">Diagnostic Implication</a> version: 3.0.0</p></div><p><b>Related artifact</b>: No display for RelatedArtifact  (type: citation; citation: ClinGen; url: https://search.clinicalgenome.org/kb/gene-dosage/HGNC:2509)</p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 GE}\">Genetics</span></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs diagnostic-implication}\">Diagnostic Implication</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-molgen-patient-srcc.html\">Anonymous Patient Male, DoB: 1986-01 ( pseudonymized\u00a0(use:\u00a0usual,\u00a0))</a></p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: <a href=\"Practitioner-mii-exa-molgen-practitioner-lab.html\">Practitioner Dr. Daniel Schmidt(official)</a></p><p><b>derivedFrom</b>: <a href=\"Observation-mii-exa-molgen-variante-srcc-ctnna1.html\">Observation Genetic variant assessment</a></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs conclusion-string}\">Conclusion Text</span></p><p><b>value</b>: Diese Variante wird nach den ACMG/AMP-Kriterien zusammenfasssend als pathogen bewertet entsprechend IARC Class 5.</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 53037-8}\">Genetic variation clinical significance [Imp]</span></p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA6668-3}\">Pathogenic</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 81259-4}\">Associated phenotype</span></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 716859000}\">Hereditary diffuse carcinoma of stomach (disorder)</span></p></blockquote></div></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact",
+        "valueRelatedArtifact" : {
+          "type" : "citation",
+          "citation" : "ClinGen",
+          "url" : "https://search.clinicalgenome.org/kb/gene-dosage/HGNC:2509"
+        }
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory",
+          "display" : "Laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code" : "GE"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+          "code" : "diagnostic-implication",
+          "display" : "Diagnostic Implication"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-molgen-patient-srcc"
+      },
+      "effectiveDateTime" : "2022-11-30",
+      "performer" : [{
+        "reference" : "Practitioner/mii-exa-molgen-practitioner-lab"
+      }],
+      "derivedFrom" : [{
+        "reference" : "Observation/mii-exa-molgen-variante-srcc-ctnna1"
+      }],
+      "component" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+            "code" : "conclusion-string"
+          }]
+        },
+        "valueString" : "Diese Variante wird nach den ACMG/AMP-Kriterien zusammenfasssend als pathogen bewertet entsprechend IARC Class 5."
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "53037-8"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "LA6668-3",
+            "display" : "Pathogenic"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "81259-4"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "716859000",
+            "display" : "Hereditary diffuse carcinoma of stomach (disorder)"
+          }]
+        }
+      }]
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "Observation/mii-exa-molgen-diagnostische-implikation-srcc-ctnna1"
+    }
+  }]
+}

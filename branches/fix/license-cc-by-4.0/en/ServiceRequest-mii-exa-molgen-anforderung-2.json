@@ -1,0 +1,115 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "mii-exa-molgen-anforderung-2",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test|2026.0.4"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest mii-exa-molgen-anforderung-2</b></p><a name=\"mii-exa-molgen-anforderung-2\"> </a><a name=\"hcmii-exa-molgen-anforderung-2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-molgen-anforderung-genetischer-test.html\">MII PR MolGen Anforderung genetischer Test</a> version: 2026.0.4</p></div><p><b>identifier</b>: <code>https://www.charite.de/fhir/auftragsnummern</code>/gen_test_02</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 108252007}\">Laboratory procedure (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 405825005}, {http://loinc.org 40428-5}, {http://www.genenames.org/geneId HGNC:28862}\">Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom (MIM122470),autosomal dominanter Erbgang</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-molgen-patient-2.html\">Melanie Marie Müller (official) Female, DoB: 2021-09-19 ( Medical record number\u00a0(use:\u00a0usual,\u00a0))</a></p><p><b>authoredOn</b>: 2022-03-16</p><p><b>requester</b>: <a href=\"Practitioner-mii-exa-molgen-practitioner-physician.html\">Practitioner Dr. Linda Rubens(official)</a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 395507008}\">Premature infant (finding)</span>, <span title=\"Codes:{http://snomed.info/sct 276610007}, {http://human-phenotype-ontology.org HP:0001518}\">Low birth weight infant (disorder)</span>, <span title=\"Codes:{http://snomed.info/sct 431265009}, {http://human-phenotype-ontology.org HP:0000252}\">Fetal microcephaly (disorder)</span>, <span title=\"Codes:{http://snomed.info/sct 137511000119103}, {http://human-phenotype-ontology.org HP:0003560}\">Carrier of muscular dystrophy (finding)</span>, <span title=\"Codes:{http://human-phenotype-ontology.org HP:0000527}\">Long eyelashes</span></p><p><b>reasonReference</b>: </p><ul><li><a href=\"Observation-mii-exa-molgen-phenotypic-feature-1.html\">Observation Long eyelashes</a></li><li><a href=\"Observation-mii-exa-molgen-phenotypic-feature-2.html\">Observation Small for gestational age</a></li><li><a href=\"Observation-mii-exa-molgen-phenotypic-feature-3.html\">Observation Microcephaly</a></li><li><a href=\"Observation-mii-exa-molgen-phenotypic-feature-4.html\">Observation Muscular dystrophy</a></li></ul><p><b>specimen</b>: <a href=\"Specimen-mii-exa-molgen-specimen-2.html\">Specimen: identifier = https://www.charite.de/fhir/sid/bioproben#specimen_02; status = available; type = Blood specimen with edetic acid (specimen); receivedTime = 2021-11-24</a></p></div>"
+  },
+  "identifier" : [{
+    "system" : "https://www.charite.de/fhir/auftragsnummern",
+    "value" : "gen_test_02"
+  }],
+  "status" : "active",
+  "intent" : "order",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "108252007",
+      "display" : "Laboratory procedure (procedure)"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "405825005",
+      "display" : "Molecular genetic test (procedure)"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "40428-5",
+      "display" : "NIPBL gene targeted mutation analysis in Blood or Tissue by Molecular genetics method"
+    },
+    {
+      "system" : "http://www.genenames.org/geneId",
+      "code" : "HGNC:28862",
+      "display" : "NIPBL"
+    }],
+    "text" : "Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom (MIM122470),autosomal dominanter Erbgang"
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-molgen-patient-2"
+  },
+  "authoredOn" : "2022-03-16",
+  "requester" : {
+    "reference" : "Practitioner/mii-exa-molgen-practitioner-physician"
+  },
+  "reasonCode" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "395507008",
+      "display" : "Premature infant (finding)"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "276610007",
+      "display" : "Low birth weight infant (disorder)"
+    },
+    {
+      "system" : "http://human-phenotype-ontology.org",
+      "code" : "HP:0001518",
+      "display" : "Small for gestational age"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "431265009",
+      "display" : "Fetal microcephaly (disorder)"
+    },
+    {
+      "system" : "http://human-phenotype-ontology.org",
+      "code" : "HP:0000252",
+      "display" : "Microcephaly"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "137511000119103",
+      "display" : "Carrier of muscular dystrophy (finding)"
+    },
+    {
+      "system" : "http://human-phenotype-ontology.org",
+      "code" : "HP:0003560",
+      "display" : "Muscular dystrophy"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://human-phenotype-ontology.org",
+      "code" : "HP:0000527",
+      "display" : "Long eyelashes"
+    }]
+  }],
+  "reasonReference" : [{
+    "reference" : "Observation/mii-exa-molgen-phenotypic-feature-1"
+  },
+  {
+    "reference" : "Observation/mii-exa-molgen-phenotypic-feature-2"
+  },
+  {
+    "reference" : "Observation/mii-exa-molgen-phenotypic-feature-3"
+  },
+  {
+    "reference" : "Observation/mii-exa-molgen-phenotypic-feature-4"
+  }],
+  "specimen" : [{
+    "reference" : "Specimen/mii-exa-molgen-specimen-2"
+  }]
+}
