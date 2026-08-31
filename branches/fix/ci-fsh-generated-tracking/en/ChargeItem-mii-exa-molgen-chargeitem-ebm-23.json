@@ -1,0 +1,26 @@
+{
+  "resourceType" : "ChargeItem",
+  "id" : "mii-exa-molgen-chargeitem-ebm-23",
+  "meta" : {
+    "profile" : ["http://fhir.de/StructureDefinition/chargeitem-de-ebm"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem mii-exa-molgen-chargeitem-ebm-23</b></p><a name=\"mii-exa-molgen-chargeitem-ebm-23\"> </a><a name=\"hcmii-exa-molgen-chargeitem-ebm-23\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/StructureDefinition/chargeitem-de-ebm\">ChargeItem für EBM-Ziffer als Abrechnungsposition</a></p></div><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:{https://fhir.kbv.de/NamingSystem/KBV_NS_Base_EBM 11302}\">Zuschlag für Gemeinkosten und die wissenschaftliche ärztliche Beurteilung und Befundung komplexer genetischer Analysen im individuellen klinischen Kontext bei seltenen Erkrankungen</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-molgen-patient-2.html\">Melanie Marie Müller (official) Female, DoB: 2021-09-19 ( Medical record number\u00a0(use:\u00a0usual,\u00a0))</a></p><p><b>quantity</b>: 1</p></div>"
+  },
+  "status" : "billable",
+  "code" : {
+    "coding" : [{
+      "system" : "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_EBM",
+      "code" : "11302",
+      "display" : "Zuschlag für Gemeinkosten und die wissenschaftliche ärztliche Beurteilung und Befundung komplexer genetischer Analysen im individuellen klinischen Kontext bei seltenen Erkrankungen"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-molgen-patient-2"
+  },
+  "quantity" : {
+    "value" : 1
+  }
+}

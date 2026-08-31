@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DocumentReference xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-documentreference-bed-file"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: DocumentReference mii-exa-molgen-documentreference-bed-file</b></p><a name="de-mii-exa-molgen-documentreference-bed-file"> </a><a name="de-hcmii-exa-molgen-documentreference-bed-file"> </a><p><b>status</b>: Current</p><p><b>type</b>: <span title="Codes:">BED file - Agilent SureSelect V7 target regions</span></p><p><b>subject</b>: <a href="Patient-mii-exa-molgen-patient.html">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Krankenaktennummer (use: usual, ))</a></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Title</b></td></tr><tr><td style="display: none">*</td><td>text/plain</td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/files/agilent_v7_targets.bed">https://www.medizininformatik-initiative.de/fhir/files/agilent_v7_targets.bed</a></td><td>Agilent SureSelect Human All Exon V7 Target Regions</td></tr></table></blockquote></div>
+  </text>
+  <status value="current"/>
+  <type>
+    <text value="BED file - Agilent SureSelect V7 target regions"/>
+  </type>
+  <subject>
+    <reference value="Patient/mii-exa-molgen-patient"/>
+  </subject>
+  <content>
+    <attachment>
+      <contentType value="text/plain"/>
+      <url value="https://www.medizininformatik-initiative.de/fhir/files/agilent_v7_targets.bed"/>
+      <title value="Agilent SureSelect Human All Exon V7 Target Regions"/>
+    </attachment>
+  </content>
+</DocumentReference>
