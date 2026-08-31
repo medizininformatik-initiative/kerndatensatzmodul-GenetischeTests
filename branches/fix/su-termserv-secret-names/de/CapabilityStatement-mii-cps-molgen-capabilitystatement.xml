@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="mii-cps-molgen-capabilitystatement"/>
+  <language value="de"/>
+  <text>
+    <status value="extensions"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CapabilityStatement mii-cps-molgen-capabilitystatement</b></p><a name="de-mii-cps-molgen-capabilitystatement"> </a><a name="de-hcmii-cps-molgen-capabilitystatement"> </a><h2 id="de-title">MII CPS MolGen CapabilityStatement</h2><ul><li>Implementation Guide Version: 2026.0.4 </li><li>FHIR Version: 4.0.1 </li><li>Supported Formats: <code>xml</code>, <code>json</code></li><li>Published on: 2024-11-08 </li><li>Published by: Medizininformatik Initiative </li></ul><blockquote class="impl-note"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h2 id="de-rest">FHIR RESTful Capabilities</h2><div class="panel panel-default"><div class="panel-heading"><h3 id="de-mode1" class="panel-title">Mode: <code>server</code></h3></div><div class="panel-body"/></div><h3 id="de-resourcesCap1">Capabilities by Resource/Profile</h3><h4 id="de-resourcesSummary1">Summary</h4><p>The summary table lists the resources that are part of this configuration, and for each resource it lists:</p><ul><li>The relevant profiles (if any)</li><li>The interactions supported by each resource (<b><span class="bg-info">R</span></b>ead, <b><span class="bg-info">S</span></b>earch, <b><span class="bg-info">U</span></b>pdate, and <b><span class="bg-info">C</span></b>reate, are always shown, while <b><span class="bg-info">VR</span></b>ead, <b><span class="bg-info">P</span></b>atch, <b><span class="bg-info">D</span></b>elete, <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">I</span></b>nstance, or <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">T</span></b>ype are only present if at least one of the resources has support for them.</li><li><span>The required, recommended, and some optional search parameters (if any). </span></li><li>The linked resources enabled for <code>_include</code></li><li>The other resources enabled for <code>_revinclude</code></li><li>The operations on the resource (if any)</li></ul><div class="table-responsive"><table class="table table-condensed table-hover"><thead><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th class="text-center"><b title="GET a resource (read interaction)">R</b></th><th class="text-center"><b title="GET all set of resources of the type (search interaction)">S</b></th><th class="text-center"><b title="PUT a new resource version (update interaction)">U</b></th><th class="text-center"><b title="POST a new resource (create interaction)">C</b></th><th><b title="Required and recommended search parameters">Searches</b></th><th><code><b>_include</b></code></th><th><code><b>_revinclude</b></code></th><th><b>Operations</b></th></tr></thead><tbody><tr><td><a href="#de-ServiceRequest1-1">ServiceRequest</a></td><td><a href="http://hl7.org/fhir/R4/servicerequest.html">http://hl7.org/fhir/StructureDefinition/ServiceRequest</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-mii-pr-molgen-anforderung-genetischer-test.html">MII PR MolGen Anforderung genetischer Testversion: 2026.0.4)</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"/><td class="text-center"/><td>_id, _lastUpdated, _profile, code, based-on, subject, authored, requester, reason-code, reason-reference</td><td/><td/><td/></tr><tr><td><a href="#de-DiagnosticReport1-2">DiagnosticReport</a></td><td><a href="http://hl7.org/fhir/R4/diagnosticreport.html">http://hl7.org/fhir/StructureDefinition/DiagnosticReport</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.html">MII PR MolGen Molekulargenetischer Befundberichtversion: 2026.0.4)</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"/><td class="text-center"/><td>_id, _lastUpdated, _profile, status, category, code, subject, encounter, date, issued, performer, results-interpreter, specimen, result, conclusion, media</td><td/><td/><td/></tr><tr><td><a href="#de-Observation1-3">Observation</a></td><td><a href="http://hl7.org/fhir/R4/observation.html">http://hl7.org/fhir/StructureDefinition/Observation</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-mii-pr-molgen-therapeutische-implikation.html">MII PR MolGen Therapeutische Implikationversion: 2026.0.4)</a><br/>  <a href="StructureDefinition-mii-pr-molgen-diagnostische-implikation.html">MII PR MolGen Diagnostische Implikationversion: 2026.0.4)</a><br/>  <a href="StructureDefinition-mii-pr-molgen-variante.html">MII PR MolGen Varianteversion: 2026.0.4)</a><br/>  <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz|2026.0.4</code><br/>  <a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html">Haplotype</a><br/>  <a href="StructureDefinition-mii-pr-molgen-genotyp.html">MII PR MolGen Genotypversion: 2026.0.4)</a><br/>  <a href="StructureDefinition-mii-pr-molgen-mutationslast.html">MII PR MolGen Mutationslastversion: 2026.0.4)</a><br/>  <a href="StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html">MII PR MolGen Mikrosatelliteninstabilitätversion: 2026.0.4)</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"/><td class="text-center"/><td>_id, _lastUpdated, _profile, based-on, category, code, code-value-concept, code-value-date, code-value-quantity, code-value-string, component-code, component-code-value-concept, component-code-value-quantity, component-data-absent-reason, component-value-concept, component-value-quantity, data-absent-reason, date, derived-from, device, encounter, focus, has-member, identifier, method, part-of, patient, performer, specimen, status, subject, value-concept, value-date, value-quantity, value-string</td><td/><td/><td/></tr><tr><td><a href="#de-Procedure1-4">Procedure</a></td><td><a href="http://hl7.org/fhir/R4/procedure.html">http://hl7.org/fhir/StructureDefinition/Procedure</a><br/><em>Additional supported profiles:</em><br/>  <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study|2026.0.4</code><br/>  <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.4</code></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"/><td class="text-center"/><td>_id, _lastUpdated, _profile, status, subject, encounter, performer, date</td><td/><td/><td/></tr><tr><td><a href="#de-RiskAssessment1-5">RiskAssessment</a></td><td><a href="http://hl7.org/fhir/R4/riskassessment.html">http://hl7.org/fhir/StructureDefinition/RiskAssessment</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-mii-pr-molgen-polygener-risiko-score.html">MII PR MolGen Polygener Risiko Scoreversion: 2026.0.4)</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"/><td class="text-center"/><td>_id, _lastUpdated, _profile, subject, performer, date</td><td/><td/><td/></tr><tr><td><a href="#de-Task1-6">Task</a></td><td><a href="http://hl7.org/fhir/R4/task.html">http://hl7.org/fhir/StructureDefinition/Task</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-mii-pr-molgen-medikationsempfehlung.html">MII PR MolGen Medikationsempfehlungversion: 2026.0.4)</a><br/>  <a href="StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.html">MII PR MolGen Empfohlene Folgemaßnahmeversion: 2026.0.4)</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"/><td class="text-center"/><td>_id, _lastUpdated, _profile, based-on, code, encounter, focus, intent, patient, performer, requester, status, subject, reason-code, reason-reference, for</td><td/><td/><td/></tr><tr><td><a href="#de-FamilyMemberHistory1-7">FamilyMemberHistory</a></td><td><a href="http://hl7.org/fhir/R4/familymemberhistory.html">http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory</a><br/><em>Additional supported profiles:</em><br/>  <a href="StructureDefinition-mii-pr-molgen-familienanamnese.html">MII PR MolGen Familienanamneseversion: 2026.0.4)</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"/><td class="text-center"/><td>_id, _lastUpdated, _profile, code, date, identifier, patient, relationship, sex, status, reason-code, reason-reference</td><td/><td/><td/></tr></tbody></table></div><hr/><div class="panel panel-default"><div class="panel-heading"><h4 id="de-ServiceRequest1-1" class="panel-title"><span style="float: right;">Resource Conformance: SHALL </span>ServiceRequest</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-mii-pr-molgen-anforderung-genetischer-test.html">MII PR MolGen Anforderung genetischer Testversion: 2026.0.4)</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_profile</a></td><td><code>uri</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/servicerequest.html#search">code</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/servicerequest.html#search">based-on</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/servicerequest.html#search">subject</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/servicerequest.html#search">authored</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/servicerequest.html#search">requester</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-servicerequest-reasoncode">reason-code</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-servicerequest-reasonreference">reason-reference</a></td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="de-DiagnosticReport1-2" class="panel-title"><span style="float: right;">Resource Conformance: SHALL </span>DiagnosticReport</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.html">MII PR MolGen Molekulargenetischer Befundberichtversion: 2026.0.4)</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_profile</a></td><td><code>uri</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">status</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">category</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">code</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">subject</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">encounter</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">date</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">issued</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">performer</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">results-interpreter</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">specimen</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">result</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">conclusion</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/diagnosticreport.html#search">media</a></td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="de-Observation1-3" class="panel-title"><span style="float: right;">Resource Conformance: SHALL </span>Observation</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-mii-pr-molgen-therapeutische-implikation.html">MII PR MolGen Therapeutische Implikationversion: 2026.0.4)</a><br/><a href="StructureDefinition-mii-pr-molgen-diagnostische-implikation.html">MII PR MolGen Diagnostische Implikationversion: 2026.0.4)</a><br/><a href="StructureDefinition-mii-pr-molgen-variante.html">MII PR MolGen Varianteversion: 2026.0.4)</a><br/><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz|2026.0.4</code><br/><a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html">Haplotype</a><br/><a href="StructureDefinition-mii-pr-molgen-genotyp.html">MII PR MolGen Genotypversion: 2026.0.4)</a><br/><a href="StructureDefinition-mii-pr-molgen-mutationslast.html">MII PR MolGen Mutationslastversion: 2026.0.4)</a><br/><a href="StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html">MII PR MolGen Mikrosatelliteninstabilitätversion: 2026.0.4)</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_profile</a></td><td><code>uri</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">based-on</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">category</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">code</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">code-value-concept</a></td><td><code>composite</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">code-value-date</a></td><td><code>composite</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">code-value-quantity</a></td><td><code>composite</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">code-value-string</a></td><td><code>composite</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">component-code</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">component-code-value-concept</a></td><td><code>composite</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">component-code-value-quantity</a></td><td><code>composite</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">component-data-absent-reason</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">component-value-concept</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">component-value-quantity</a></td><td><code>quantity</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">data-absent-reason</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">date</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">derived-from</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">device</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">encounter</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">focus</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">has-member</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">identifier</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">method</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">part-of</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">patient</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">performer</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">specimen</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">status</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">subject</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">value-concept</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">value-date</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">value-quantity</a></td><td><code>quantity</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/observation.html#search">value-string</a></td><td><code>string</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="de-Procedure1-4" class="panel-title"><span style="float: right;">Resource Conformance: SHALL </span>Procedure</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study|2026.0.4</code><br/><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.4</code></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_profile</a></td><td><code>uri</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/procedure.html#search">status</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/procedure.html#search">subject</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/procedure.html#search">encounter</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/procedure.html#search">performer</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/procedure.html#search">date</a></td><td><code>date</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="de-RiskAssessment1-5" class="panel-title"><span style="float: right;">Resource Conformance: SHALL </span>RiskAssessment</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/riskassessment.html">RiskAssessment</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-mii-pr-molgen-polygener-risiko-score.html">MII PR MolGen Polygener Risiko Scoreversion: 2026.0.4)</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_profile</a></td><td><code>uri</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/riskassessment.html#search">subject</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/riskassessment.html#search">performer</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/riskassessment.html#search">date</a></td><td><code>date</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="de-Task1-6" class="panel-title"><span style="float: right;">Resource Conformance: SHALL </span>Task</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/task.html">Task</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-mii-pr-molgen-medikationsempfehlung.html">MII PR MolGen Medikationsempfehlungversion: 2026.0.4)</a><br/><a href="StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.html">MII PR MolGen Empfohlene Folgemaßnahmeversion: 2026.0.4)</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_profile</a></td><td><code>uri</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/task.html#search">based-on</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/task.html#search">code</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/task.html#search">encounter</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/task.html#search">focus</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/task.html#search">intent</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/task.html#search">patient</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/task.html#search">performer</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/task.html#search">requester</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/task.html#search">status</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/task.html#search">subject</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-task-reasoncode">reason-code</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-task-reasonreference">reason-reference</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-task-for">for</a></td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="de-FamilyMemberHistory1-7" class="panel-title"><span style="float: right;">Resource Conformance: SHALL </span>FamilyMemberHistory</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/familymemberhistory.html">FamilyMemberHistory</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-mii-pr-molgen-familienanamnese.html">MII PR MolGen Familienanamneseversion: 2026.0.4)</a></p></div><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_profile</a></td><td><code>uri</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/familymemberhistory.html#search">code</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/familymemberhistory.html#search">date</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/familymemberhistory.html#search">identifier</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/familymemberhistory.html#search">patient</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/familymemberhistory.html#search">relationship</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/familymemberhistory.html#search">sex</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/familymemberhistory.html#search">status</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>reason-code</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-familymemberhistory-reasonreference">reason-reference</a></td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/CapabilityStatement/metadata"/>
+  <version value="2026.0.4"/>
+  <name value="MII_CPS_MolGen_CapabilityStatement"/>
+  <title value="MII CPS MolGen CapabilityStatement"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-11-08"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@medizininformatik-initiative.de"/>
+    </telecom>
+  </contact>
+  <description value="Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul MolGen der Medizininformatik Initiative zu implementieren."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <kind value="requirements"/>
+  <fhirVersion value="4.0.1"/>
+  <format value="xml"/>
+  <format value="json"/>
+  <rest>
+    <mode value="server"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <type value="ServiceRequest"/>
+      <profile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+      <supportedProfile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test|2026.0.4">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </supportedProfile>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_profile"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-profile"/>
+        <type value="uri"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="based-on"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ServiceRequest-based-on"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="subject"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ServiceRequest-subject"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="authored"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ServiceRequest-authored"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="requester"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ServiceRequest-requester"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="reason-code"/>
+        <definition value="https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-servicerequest-reasoncode"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="reason-reference"/>
+        <definition value="https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-servicerequest-reasonreference"/>
+        <type value="reference"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <type value="DiagnosticReport"/>
+      <profile value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport"/>
+      <supportedProfile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht|2026.0.4">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </supportedProfile>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_profile"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-profile"/>
+        <type value="uri"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-status"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="category"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-category"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="subject"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-subject"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="encounter"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-encounter"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="issued"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-issued"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="performer"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-performer"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="results-interpreter"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-results-interpreter"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="specimen"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-specimen"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="result"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-result"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="conclusion"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-conclusion"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="media"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-media"/>
+        <type value="reference"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <type value="Observation"/>
+      <profile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+      <supportedProfile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation|2026.0.4">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </supportedProfile>
+      <supportedProfile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation|2026.0.4">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </supportedProfile>
+      <supportedProfile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2026.0.4">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </supportedProfile>
+      <supportedProfile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz|2026.0.4">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </supportedProfile>
+      <supportedProfile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </supportedProfile>
+      <supportedProfile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp|2026.0.4">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </supportedProfile>
+      <supportedProfile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast|2026.0.4">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </supportedProfile>
+      <supportedProfile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet|2026.0.4">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </supportedProfile>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_profile"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-profile"/>
+        <type value="uri"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="based-on"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-based-on"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="category"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-category"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="code-value-concept"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-code-value-concept"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="code-value-date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-code-value-date"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="code-value-quantity"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-code-value-quantity"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="code-value-string"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-code-value-string"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="component-code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-component-code"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="component-code-value-concept"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-component-code-value-concept"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="component-code-value-quantity"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-component-code-value-quantity"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="component-data-absent-reason"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-component-data-absent-reason"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="component-value-concept"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-component-value-concept"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="component-value-quantity"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-component-value-quantity"/>
+        <type value="quantity"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="data-absent-reason"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-data-absent-reason"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="derived-from"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-derived-from"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="device"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-device"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="encounter"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-encounter"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="focus"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-focus"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="has-member"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-has-member"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="identifier"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-identifier"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="method"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-method"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="part-of"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-part-of"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="performer"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-performer"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="specimen"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-specimen"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-status"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="subject"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-subject"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="value-concept"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-value-concept"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="value-date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-value-date"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="value-quantity"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-value-quantity"/>
+        <type value="quantity"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="value-string"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-value-string"/>
+        <type value="string"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <type value="Procedure"/>
+      <profile value="http://hl7.org/fhir/StructureDefinition/Procedure"/>
+      <supportedProfile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study|2026.0.4">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </supportedProfile>
+      <supportedProfile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.4">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </supportedProfile>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_profile"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-profile"/>
+        <type value="uri"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Procedure-status"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="subject"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="encounter"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-encounter"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="performer"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Procedure-performer"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
+        <type value="date"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <type value="RiskAssessment"/>
+      <profile value="http://hl7.org/fhir/StructureDefinition/RiskAssessment"/>
+      <supportedProfile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score|2026.0.4">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </supportedProfile>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_profile"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-profile"/>
+        <type value="uri"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="subject"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/RiskAssessment-subject"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="performer"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/RiskAssessment-performer"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
+        <type value="date"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <type value="Task"/>
+      <profile value="http://hl7.org/fhir/StructureDefinition/Task"/>
+      <supportedProfile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung|2026.0.4">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </supportedProfile>
+      <supportedProfile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme|2026.0.4">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </supportedProfile>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_profile"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-profile"/>
+        <type value="uri"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="based-on"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Task-based-on"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Task-code"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="encounter"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Task-encounter"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="focus"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Task-focus"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="intent"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Task-intent"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Task-patient"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="performer"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Task-performer"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="requester"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Task-requester"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Task-status"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="subject"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Task-subject"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="reason-code"/>
+        <definition value="https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-task-reasoncode"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="reason-reference"/>
+        <definition value="https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-task-reasonreference"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="for"/>
+        <definition value="https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-task-for"/>
+        <type value="reference"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <type value="FamilyMemberHistory"/>
+      <profile value="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory"/>
+      <supportedProfile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese|2026.0.4">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </supportedProfile>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_profile"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-profile"/>
+        <type value="uri"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="identifier"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-identifier"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="relationship"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-relationship"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="sex"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-sex"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-status"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="reason-code"/>
+        <definition value="https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-familymemberhistory-Reasoncode"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="reason-reference"/>
+        <definition value="https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-familymemberhistory-reasonreference"/>
+        <type value="reference"/>
+      </searchParam>
+    </resource>
+  </rest>
+</CapabilityStatement>

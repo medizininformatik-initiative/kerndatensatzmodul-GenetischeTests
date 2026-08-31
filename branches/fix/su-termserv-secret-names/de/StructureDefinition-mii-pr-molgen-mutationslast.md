@@ -1,0 +1,384 @@
+# MII PR MolGen Mutationslast - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2026.0.4
+
+* [**Inhaltsverzeichnis**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **MII PR MolGen Mutationslast**
+
+## Ressourcenprofil: MII PR MolGen Mutationslast 
+
+| | |
+| :--- | :--- |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast | *Version*:2026.0.4 |
+| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:MII_PR_MolGen_Mutationslast |
+
+ 
+Dieses Profil beschreibt die Gesamtzahl der in der DNA von Krebszellen gefundenen Mutationen. 
+
+-------
+
+#### Beschreibung
+
+Dieses Profil beschreibt die Gesamtzahl der in der DNA von Krebszellen gefundenen Mutationen.
+
+-------
+
+Das Profil ist abgeleitet vom Profil [Tumor Mutation Burden](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-molecular-biomarker.html) aus [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/). 
+
+-------
+
+#### Profil
+
+-------
+
+| FHIR-Element | Logischer Datensatz | |—|—| | Observation.valueQuantity | Ergebnisse.Mutationslast |
+
+-------
+
+**Suchparameter**
+
+Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in Kombination:
+
+1. Der Suchparameter `_id` MUSS unterstützt werden:Beispiele:`GET [base]/Observation?_id=example-mii-molgen-variante-1`Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+1. Der Suchparameter "_profile" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante`Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+1. Der Suchparameter "code" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?code=http://loinc.org|69548-6`Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+1. Der Suchparameter "subject" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?subject=Patient/example-mii-molgen-patient`Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+1. Der Suchparameter "category" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory`Anwendungshinweise: Weitere Informationen zur Suche nach "category" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+1. Der Suchparameter "encounter" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?encounter=Encounter/12345`Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+1. Der Suchparameter "code-value-concept" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?code-value-concept=http://loinc.org|69548-6$http://loinc.org|LA9633-4`Anwendungshinweise: Weitere Informationen zur Suche nach "code-value-concept" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+1. Der Suchparameter "code-value-quantity" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?code-value-quantity=http://loinc.org|82155-3$6http://unitsofmeasure.org|1`Anwendungshinweise: Weitere Informationen zur Suche nach "code-value-quantity" finden sich in der [FHIR-Basisspezifikation - Abschnitt "quantity"](http://hl7.org/fhir/search.html#quantity).
+1. Der Suchparameter "component-code" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?component-code=http://loinc.org|48018-6`Anwendungshinweise: Weitere Informationen zur Suche nach "component-code" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+1. Der Suchparameter "component-code-value-concept" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?component-code-value-concept=http://loinc.org|48018-6$http://www.genenames.org/geneId|HGNC:1097`Anwendungshinweise: Weitere Informationen zur Suche nach "component-code-value-concept" finden sich in der [FHIR-Basisspezifikation - Abschnitt "composite"](http://hl7.org/fhir/search.html#composite).
+1. Der Suchparameter "component-code-value-quantity" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?component-code-value-quantity=http://loinc.org|81258-6$ap30%|http://unitsofmeasure.org|%25`Anwendungshinweise: Weitere Informationen zur Suche nach "component-code-value-quantity" finden sich in der [FHIR-Basisspezifikation - Abschnitt "composite"](http://hl7.org/fhir/search.html#composite).
+1. Der Suchparameter "component-value-concept" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?component-value-concept=http://sequenceontology.org|SO:SO:1000008`Anwendungshinweise: Weitere Informationen zur Suche nach "component-code-value-concept" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+1. Der Suchparameter "component-value-quantity" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?component-value-quantity=ap30%|http://unitsofmeasure.org|%25`Anwendungshinweise: Weitere Informationen zur Suche nach "component-value-quantity" finden sich in der [FHIR-Basisspezifikation - Abschnitt "composite"](http://hl7.org/fhir/search.html#composite).
+1. Der Suchparameter "date" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?date=2022-07-13`Anwendungshinweise: Weitere Informationen zur Suche nach "date" finden sich in der [FHIR-Basisspezifikation - Abschnitt "date"](http://hl7.org/fhir/R4/search.html#date).
+1. Der Suchparameter "derived-from" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?derived-from=Observation/example-mii-molgen-variante-1`Anwendungshinweise: Weitere Informationen zur Suche nach "derived-from" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+1. Der Suchparameter "device" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?device=Device/example-mii-molgen-device-sequencer`Anwendungshinweise: Weitere Informationen zur Suche nach "device" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+1. Der Suchparameter "specimen" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?specimen=Specimen/example-mii-molgen-specimen`Anwendungshinweise: Weitere Informationen zur Suche nach "specimen" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+1. Der Suchparameter "encounter" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?encounter=Encounter/12345`Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+1. Der Suchparameter "method" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?method=http://loinc.org|LA26398-0`Anwendungshinweise: Weitere Informationen zur Suche nach "method" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+1. Der Suchparameter "patient" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?patient=Patient/example-mii-molgen-patient-2`Anwendungshinweise: Weitere Informationen zur Suche nach "patient" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+1. Der Suchparameter "performer" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?performer=Practioner/example-mii-molgen-practitioner-laboratory`Anwendungshinweise: Weitere Informationen zur Suche nach "performer" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+1. Der Suchparameter "status" MUSS unterstützt werden:Beispiele:`GET [base]/Observation?status=final`Anwendungshinweise: Weitere Informationen zur Suche nach "status" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+
+-------
+
+**Examples**
+
+-------
+
+### Beispiele
+
+> **Von der Migration geschrieben, nicht aus der Quelle übernommen.** Der Simplifier-Leitfaden hat diese Beispiele auf dieser Seite eingebettet; der IG Publisher rendert jedes auf einer eigenen Seite. Sie stehen deshalb hier als Links, in der Reihenfolge der Quelle und mit deren Bildunterschriften. Es wurde nichts ergänzt und nichts weggelassen.
+
+* [`mii-exa-molgen-mutationslast-1`](Observation-mii-exa-molgen-mutationslast-1.md) — **Examples**
+
+**Usages:**
+
+* Examples for this Profile: [Observation/mii-exa-molgen-mutationslast-1](Observation-mii-exa-molgen-mutationslast-1.md)
+* CapabilityStatements using this Profile: [MII CPS MolGen CapabilityStatement](CapabilityStatement-mii-cps-molgen-capabilitystatement.md)
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.molgen|current/StructureDefinition/StructureDefinition-mii-pr-molgen-mutationslast.json)
+
+### Formale Ansichten des Profilinhalts
+
+ [Beschreibung von Profilen, Differentials, Snapshots und deren Repräsentationen](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+*  [Schlüsselelemente-Tabelle](#tabs-key) 
+*  [Differential-Tabelle](#tabs-diff) 
+*  [Snapshot-Tabelle](#tabs-snap) 
+*  [Statistiken/Referenzen](#tabs-summ) 
+*  [Alle](#tabs-all) 
+
+#### Terminology Bindings
+
+#### Constraints
+
+Diese Struktur ist abgeleitet von [MII_PR_MolGen_MolekularerBiomarker](StructureDefinition-mii-pr-molgen-molekularer-biomarker.md) 
+
+#### Terminology Bindings
+
+#### Constraints
+
+Diese Struktur ist abgeleitet von [MII_PR_MolGen_MolekularerBiomarker](StructureDefinition-mii-pr-molgen-molekularer-biomarker.md) 
+
+** Summary **
+
+Mandatory: 1 element
+ Must-Support: 3 elements
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Observation.value[x]
+
+ **Schlüsselelemente-Ansicht** 
+
+#### Terminology Bindings
+
+#### Constraints
+
+ **Differential-Ansicht** 
+
+Diese Struktur ist abgeleitet von [MII_PR_MolGen_MolekularerBiomarker](StructureDefinition-mii-pr-molgen-molekularer-biomarker.md) 
+
+ **Snapshot-AnsichtView** 
+
+#### Terminology Bindings
+
+#### Constraints
+
+Diese Struktur ist abgeleitet von [MII_PR_MolGen_MolekularerBiomarker](StructureDefinition-mii-pr-molgen-molekularer-biomarker.md) 
+
+** Summary **
+
+Mandatory: 1 element
+ Must-Support: 3 elements
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Observation.value[x]
+
+ 
+
+Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molgen-mutationslast.csv), [Excel](../StructureDefinition-mii-pr-molgen-mutationslast.xlsx), [Schematron](../StructureDefinition-mii-pr-molgen-mutationslast.sch) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "mii-pr-molgen-mutationslast",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast",
+  "version" : "2026.0.4",
+  "name" : "MII_PR_MolGen_Mutationslast",
+  "title" : "MII PR MolGen Mutationslast",
+  "status" : "active",
+  "date" : "2026-08-31T14:45:20+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    },
+    {
+      "system" : "email",
+      "value" : "info@medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Dieses Profil beschreibt die Gesamtzahl der in der DNA von Krebszellen gefundenen Mutationen.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "MII-KDS",
+    "name" : "MII KDS Mapping"
+  },
+  {
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "sct-concept",
+    "uri" : "http://snomed.info/conceptdomain",
+    "name" : "SNOMED CT Concept Domain Binding"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "sct-attr",
+    "uri" : "http://snomed.org/attributebinding",
+    "name" : "SNOMED CT Attribute Binding"
+  }],
+  "kind" : "resource",
+  "abstract" : false,
+  "type" : "Observation",
+  "baseDefinition" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekularer-biomarker",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [{
+      "id" : "Observation",
+      "path" : "Observation"
+    },
+    {
+      "id" : "Observation.status",
+      "path" : "Observation.status",
+      "short" : "Status",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Status"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Status der Beobachtung",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Status der Beobachtung"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code",
+      "path" : "Observation.code",
+      "definition" : "Code zur Identifizierung der Mutationslast",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Code zur Identifizierung der Mutationslast"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
+    },
+    {
+      "id" : "Observation.subject",
+      "path" : "Observation.subject",
+      "min" : 1
+    },
+    {
+      "id" : "Observation.value[x]",
+      "path" : "Observation.value[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      },
+      "short" : "Ergebniswert",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Ergebniswert"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Der numerische Wert der Mutationslast in Mutationen pro Megabase",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Der numerische Wert der Mutationslast in Mutationen pro Megabase"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.value[x]:valueQuantity",
+      "path" : "Observation.value[x]",
+      "sliceName" : "valueQuantity",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }],
+      "mapping" : [{
+        "identity" : "MII-KDS",
+        "map" : "mide-dataelement-2012",
+        "comment" : "Mutationslast"
+      }]
+    },
+    {
+      "id" : "Observation.specimen",
+      "path" : "Observation.specimen",
+      "short" : "Probe",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Probe"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Die untersuchte Tumorprobe",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Die untersuchte Tumorprobe"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "mustSupport" : true
+    }]
+  }
+}
+
+```
