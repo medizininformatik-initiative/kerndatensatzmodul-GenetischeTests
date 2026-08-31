@@ -7,15 +7,11 @@
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant|3.0.0"
     ]
   },
-  "code": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "69548-6",
-        "display": "Genetic variant assessment"
-      }
-    ]
-  },
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/mii-exa-molgen-anforderung-1"
+    }
+  ],
   "category": [
     {
       "coding": [
@@ -212,11 +208,15 @@
       }
     }
   ],
-  "basedOn": [
-    {
-      "reference": "ServiceRequest/mii-exa-molgen-anforderung-1"
-    }
-  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "69548-6",
+        "display": "Genetic variant assessment"
+      }
+    ]
+  },
   "status": "final",
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient"

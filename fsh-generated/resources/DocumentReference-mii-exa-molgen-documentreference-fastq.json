@@ -1,12 +1,8 @@
 {
   "resourceType": "DocumentReference",
   "id": "mii-exa-molgen-documentreference-fastq",
-  "status": "current",
   "type": {
     "text": "FASTQ files - paired-end sequencing data"
-  },
-  "subject": {
-    "reference": "Patient/mii-exa-molgen-patient"
   },
   "content": [
     {
@@ -23,5 +19,9 @@
         "contentType": "application/gzip"
       }
     }
-  ]
+  ],
+  "status": "current",
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient"
+  }
 }

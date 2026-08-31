@@ -7,15 +7,6 @@
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|3.0.0"
     ]
   },
-  "code": {
-    "coding": [
-      {
-        "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-        "code": "diagnostic-implication",
-        "display": "Diagnostic Implication"
-      }
-    ]
-  },
   "category": [
     {
       "coding": [
@@ -35,6 +26,16 @@
       ]
     }
   ],
+  "performer": [
+    {
+      "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
+    }
+  ],
+  "derivedFrom": [
+    {
+      "reference": "Observation/mii-exa-molgen-variante-fgfr2-fusion"
+    }
+  ],
   "component": [
     {
       "code": {
@@ -48,19 +49,18 @@
       "valueString": "starke Überexpression (25-fach)"
     }
   ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+        "code": "diagnostic-implication",
+        "display": "Diagnostic Implication"
+      }
+    ]
+  },
   "status": "final",
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient-fgfr2-fusion"
   },
-  "effectiveDateTime": "2022-11-30",
-  "performer": [
-    {
-      "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
-    }
-  ],
-  "derivedFrom": [
-    {
-      "reference": "Observation/mii-exa-molgen-variante-fgfr2-fusion"
-    }
-  ]
+  "effectiveDateTime": "2022-11-30"
 }

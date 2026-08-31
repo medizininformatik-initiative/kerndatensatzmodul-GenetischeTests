@@ -9,7 +9,6 @@
   "relationship": {
     "coding": [
       {
-        "system": "http://snomed.info/sct",
         "extension": [
           {
             "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad",
@@ -28,6 +27,7 @@
             }
           }
         ],
+        "system": "http://snomed.info/sct",
         "code": "73678001",
         "display": "Natural sister (person)"
       },
@@ -37,6 +37,25 @@
         "display": "sister"
       }
     ]
+  },
+  "sex": {
+    "coding": [
+      {
+        "code": "female",
+        "system": "http://hl7.org/fhir/administrative-gender"
+      },
+      {
+        "code": "248152002",
+        "system": "http://snomed.info/sct",
+        "display": "Female (finding)"
+      }
+    ]
+  },
+  "ageAge": {
+    "value": 42,
+    "unit": "years",
+    "system": "http://unitsofmeasure.org",
+    "code": "a"
   },
   "condition": [
     {
@@ -73,24 +92,5 @@
     "reference": "Patient/mii-exa-molgen-patient"
   },
   "date": "2024-02-20",
-  "sex": {
-    "coding": [
-      {
-        "code": "female",
-        "system": "http://hl7.org/fhir/administrative-gender"
-      },
-      {
-        "code": "248152002",
-        "system": "http://snomed.info/sct",
-        "display": "Female (finding)"
-      }
-    ]
-  },
-  "deceasedBoolean": false,
-  "ageAge": {
-    "value": 42,
-    "unit": "years",
-    "system": "http://unitsofmeasure.org",
-    "code": "a"
-  }
+  "deceasedBoolean": false
 }

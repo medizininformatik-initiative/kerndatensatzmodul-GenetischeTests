@@ -1,0 +1,397 @@
+{
+  "id" : "Bundle-mii-exa-molgen-bundle-comprehensive-wes",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "HumanName.family",
+      "context" : "HumanName.family",
+      "source" : "Mustermann",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.given",
+      "context" : "HumanName.given",
+      "source" : "Max",
+      "target" : null
+    },
+    {
+      "id" : "Device.manufacturer",
+      "context" : "Device.manufacturer",
+      "source" : "Illumina Inc.",
+      "target" : null
+    },
+    {
+      "id" : "Device.serialNumber",
+      "context" : "Device.serialNumber",
+      "source" : "SN12345",
+      "target" : null
+    },
+    {
+      "id" : "Device.deviceName.name",
+      "context" : "Device.deviceName.name",
+      "source" : "NovaSeq 6000 Sequencing System",
+      "target" : null
+    },
+    {
+      "id" : "Device.modelNumber",
+      "context" : "Device.modelNumber",
+      "source" : "NovaSeq 6000",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Medical laboratory analyzer",
+      "target" : null
+    },
+    {
+      "id" : "Device.manufacturer",
+      "context" : "Device.manufacturer",
+      "source" : "Thermo Fisher Scientific",
+      "target" : null
+    },
+    {
+      "id" : "Device.serialNumber",
+      "context" : "Device.serialNumber",
+      "source" : "IC12345",
+      "target" : null
+    },
+    {
+      "id" : "Device.deviceName.name",
+      "context" : "Device.deviceName.name",
+      "source" : "Ion Chef System",
+      "target" : null
+    },
+    {
+      "id" : "Device.modelNumber",
+      "context" : "Device.modelNumber",
+      "source" : "Ion Chef",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Template preparation system (Ion Chef)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Plasma specimen",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Evacuated blood collection tube with clot activator",
+      "target" : null
+    },
+    {
+      "id" : "Quantity.unit",
+      "context" : "Quantity.unit",
+      "source" : "milliliter",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Saliva specimen",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "DNA Library",
+      "target" : null
+    },
+    {
+      "id" : "Specimen.processing.description",
+      "context" : "Specimen.processing.description",
+      "source" : "DNA extraction and library preparation using Agilent SureSelect",
+      "target" : null
+    },
+    {
+      "id" : "PlanDefinition.name",
+      "context" : "PlanDefinition.name",
+      "source" : "AgilentSureSelectV7",
+      "target" : null
+    },
+    {
+      "id" : "PlanDefinition.title",
+      "context" : "PlanDefinition.title",
+      "source" : "Agilent SureSelect Human All Exon V7 Kit Protocol",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Protocol",
+      "target" : null
+    },
+    {
+      "id" : "PlanDefinition.description",
+      "context" : "PlanDefinition.description",
+      "source" : "Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the human exome",
+      "target" : null
+    },
+    {
+      "id" : "PlanDefinition.action.title",
+      "context" : "PlanDefinition.action.title",
+      "source" : "DNA Fragmentation",
+      "target" : null
+    },
+    {
+      "id" : "PlanDefinition.action.description",
+      "context" : "PlanDefinition.action.description",
+      "source" : "Fragment genomic DNA to 150-200bp using Covaris",
+      "target" : null
+    },
+    {
+      "id" : "PlanDefinition.action.title",
+      "context" : "PlanDefinition.action.title",
+      "source" : "Library Preparation",
+      "target" : null
+    },
+    {
+      "id" : "PlanDefinition.action.description",
+      "context" : "PlanDefinition.action.description",
+      "source" : "End repair, A-tailing, adapter ligation",
+      "target" : null
+    },
+    {
+      "id" : "PlanDefinition.action.title",
+      "context" : "PlanDefinition.action.title",
+      "source" : "Hybridization",
+      "target" : null
+    },
+    {
+      "id" : "PlanDefinition.action.description",
+      "context" : "PlanDefinition.action.description",
+      "source" : "Hybridize with SureSelect baits for 24 hours at 65°C",
+      "target" : null
+    },
+    {
+      "id" : "PlanDefinition.action.title",
+      "context" : "PlanDefinition.action.title",
+      "source" : "Capture",
+      "target" : null
+    },
+    {
+      "id" : "PlanDefinition.action.description",
+      "context" : "PlanDefinition.action.description",
+      "source" : "Streptavidin bead capture and washing",
+      "target" : null
+    },
+    {
+      "id" : "PlanDefinition.action.title",
+      "context" : "PlanDefinition.action.title",
+      "source" : "Amplification",
+      "target" : null
+    },
+    {
+      "id" : "PlanDefinition.action.description",
+      "context" : "PlanDefinition.action.description",
+      "source" : "PCR amplification of captured library",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "BED file - Agilent SureSelect V7 target regions",
+      "target" : null
+    },
+    {
+      "id" : "Attachment.title",
+      "context" : "Attachment.title",
+      "source" : "Agilent SureSelect Human All Exon V7 Target Regions",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "FASTQ files - paired-end sequencing data",
+      "target" : null
+    },
+    {
+      "id" : "Attachment.title",
+      "context" : "Attachment.title",
+      "source" : "Forward reads",
+      "target" : null
+    },
+    {
+      "id" : "Attachment.title",
+      "context" : "Attachment.title",
+      "source" : "Reverse reads",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "DNA hybridization",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Sequencing",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Computational analysis",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Whole exome sequence analysis in Blood or Tissue by Molecular genetics method",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Intellectual disability (disorder)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Laboratory",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Genetic variant assessment",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Present",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Gene studied [ID]",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "KMT2A",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "DNA change (c.HGVS)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "NM_005933.3:c.3463C>T",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Amino acid change (pHGVS)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "p.(Arg1155Ter)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Diagnostic Implication",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Pathogenic",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Image",
+      "target" : null
+    },
+    {
+      "id" : "Attachment.title",
+      "context" : "Attachment.title",
+      "source" : "Exome Coverage Distribution Plot",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Genetics",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Genetic analysis report",
+      "target" : null
+    },
+    {
+      "id" : "DiagnosticReport.media.comment",
+      "context" : "DiagnosticReport.media.comment",
+      "source" : "Coverage plot showing uniform coverage across all exons",
+      "target" : null
+    },
+    {
+      "id" : "DiagnosticReport.conclusion",
+      "context" : "DiagnosticReport.conclusion",
+      "source" : "Whole exome sequencing identified a pathogenic de novo variant in the KMT2A gene, consistent with Wiedemann-Steiner syndrome. Technical quality metrics met all acceptance criteria.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Positive",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.family",
+      "context" : "HumanName.family",
+      "source" : "Schmidt",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.given",
+      "context" : "HumanName.given",
+      "source" : "Anna",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.prefix",
+      "context" : "HumanName.prefix",
+      "source" : "Dr.",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.family",
+      "context" : "HumanName.family",
+      "source" : "Weber",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.given",
+      "context" : "HumanName.given",
+      "source" : "Thomas",
+      "target" : null
+    }]
+  }]
+}

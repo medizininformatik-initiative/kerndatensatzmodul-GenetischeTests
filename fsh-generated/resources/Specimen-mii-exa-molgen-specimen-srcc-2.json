@@ -6,6 +6,15 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore"
     ]
   },
+  "collection": {
+    "collectedDateTime": "2022-11-30"
+  },
+  "identifier": [
+    {
+      "system": "https://www.charite.de/fhir/sid/bioproben",
+      "value": "00070025"
+    }
+  ],
   "type": {
     "coding": [
       {
@@ -19,14 +28,5 @@
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient-srcc"
   },
-  "receivedTime": "2022-11-30",
-  "collection": {
-    "collectedDateTime": "2022-11-30"
-  },
-  "identifier": [
-    {
-      "system": "https://www.charite.de/fhir/sid/bioproben",
-      "value": "00070025"
-    }
-  ]
+  "receivedTime": "2022-11-30"
 }

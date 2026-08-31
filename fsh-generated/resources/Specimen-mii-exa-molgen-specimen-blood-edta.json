@@ -7,18 +7,6 @@
       "value": "EDTA-2024-001"
     }
   ],
-  "type": {
-    "coding": [
-      {
-        "code": "119361006",
-        "system": "http://snomed.info/sct",
-        "display": "Plasma specimen"
-      }
-    ]
-  },
-  "subject": {
-    "reference": "Patient/mii-exa-molgen-patient"
-  },
   "collection": {
     "collectedDateTime": "2024-01-15T09:30:00+01:00"
   },
@@ -46,5 +34,17 @@
         "unit": "milliliter"
       }
     }
-  ]
+  ],
+  "type": {
+    "coding": [
+      {
+        "code": "119361006",
+        "system": "http://snomed.info/sct",
+        "display": "Plasma specimen"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient"
+  }
 }

@@ -1,40 +1,22 @@
 {
   "resourceType": "Bundle",
   "id": "mii-exa-befund-bundle-1-braf",
-  "type": "transaction",
-  "timestamp": "2022-07-14T12:11:00+01:00",
   "entry": [
     {
-      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-molekulargenetischer-befundbericht-1",
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/mii-exa-molgen-befundbericht-1"
+      },
+      "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-befundbericht-1",
       "resource": {
         "resourceType": "DiagnosticReport",
-        "id": "mii-exa-molgen-molekulargenetischer-befundbericht-1",
+        "id": "mii-exa-molgen-befundbericht-1",
         "meta": {
           "profile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht|2026.0.4",
             "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report|3.0.0"
           ]
         },
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "51969-4",
-              "display": "Genetic analysis report"
-            }
-          ]
-        },
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
-                "code": "GE",
-                "display": "Genetics"
-              }
-            ]
-          }
-        ],
         "extension": [
           {
             "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-reference",
@@ -66,10 +48,17 @@
             "reference": "ServiceRequest/mii-exa-molgen-anforderung-1"
           }
         ],
-        "status": "final",
-        "subject": {
-          "reference": "Patient/mii-exa-molgen-patient"
-        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "GE",
+                "display": "Genetics"
+              }
+            ]
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
@@ -100,14 +89,27 @@
             "reference": "Observation/mii-exa-molgen-mikrosatelliteninstabilitaet-1"
           }
         ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "51969-4",
+              "display": "Genetic analysis report"
+            }
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient"
+        },
         "conclusion": "BRAF p.V600E Mutation liegt vor. Bitte Therapieoption mit einem BRAF-Inhibitor prüfen."
-      },
-      "request": {
-        "method": "PUT",
-        "url": "DiagnosticReport/mii-exa-molgen-molekulargenetischer-befundbericht-1"
       }
     },
     {
+      "request": {
+        "method": "PUT",
+        "url": "Task/mii-exa-molgen-medikationsempfehlung-1"
+      },
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-medikationsempfehlung-1",
       "resource": {
         "resourceType": "Task",
@@ -118,8 +120,6 @@
             "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation|3.0.0"
           ]
         },
-        "status": "requested",
-        "intent": "proposal",
         "basedOn": [
           {
             "reference": "servicerequest/example"
@@ -135,19 +135,21 @@
           ],
           "text": "Alternative Medikation in Erwägung ziehen"
         },
+        "status": "requested",
+        "intent": "proposal",
         "for": {
           "reference": "Patient/mii-exa-molgen-patient"
         },
         "reasonReference": {
           "reference": "Observation/mii-exa-molgen-therapeutische-implikation-1"
         }
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Task/mii-exa-molgen-medikationsempfehlung-1"
       }
     },
     {
+      "request": {
+        "method": "PUT",
+        "url": "Task/mii-exa-molgen-folgemassnahme-1"
+      },
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/example-mii-molgen-folgemassnahme-1",
       "resource": {
         "resourceType": "Task",
@@ -158,13 +160,13 @@
             "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/followup-recommendation|3.0.0"
           ]
         },
-        "status": "requested",
-        "intent": "proposal",
         "basedOn": [
           {
             "reference": "servicerequest/example"
           }
         ],
+        "status": "requested",
+        "intent": "proposal",
         "code": {
           "coding": [
             {
@@ -181,13 +183,13 @@
         "reasonReference": {
           "reference": "Observation/mii-exa-molgen-therapeutische-implikation-1"
         }
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Task/mii-exa-molgen-folgemassnahme-1"
       }
     },
     {
+      "request": {
+        "method": "PUT",
+        "url": "FamilyMemberHistory/mii-exa-molgen-family-member-history-1"
+      },
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-family-member-history-1",
       "resource": {
         "resourceType": "FamilyMemberHistory",
@@ -208,6 +210,19 @@
               "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
               "code": "MTH",
               "display": "mother"
+            }
+          ]
+        },
+        "sex": {
+          "coding": [
+            {
+              "code": "female",
+              "system": "http://hl7.org/fhir/administrative-gender"
+            },
+            {
+              "code": "248152002",
+              "system": "http://snomed.info/sct",
+              "display": "Female (finding)"
             }
           ]
         },
@@ -241,27 +256,14 @@
           "reference": "Patient/mii-exa-molgen-patient"
         },
         "date": "2022-04-07",
-        "sex": {
-          "coding": [
-            {
-              "code": "female",
-              "system": "http://hl7.org/fhir/administrative-gender"
-            },
-            {
-              "code": "248152002",
-              "system": "http://snomed.info/sct",
-              "display": "Female (finding)"
-            }
-          ]
-        },
         "deceasedBoolean": true
-      },
-      "request": {
-        "method": "PUT",
-        "url": "FamilyMemberHistory/mii-exa-molgen-family-member-history-1"
       }
     },
     {
+      "request": {
+        "method": "PUT",
+        "url": "ServiceRequest/mii-exa-molgen-anforderung-1"
+      },
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-anforderung-1",
       "resource": {
         "resourceType": "ServiceRequest",
@@ -271,8 +273,6 @@
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test|2026.0.4"
           ]
         },
-        "status": "active",
-        "intent": "order",
         "category": [
           {
             "coding": [
@@ -304,13 +304,6 @@
           ],
           "text": "BRAF: Exon 15 (Codon 600)"
         },
-        "subject": {
-          "reference": "Patient/mii-exa-molgen-patient"
-        },
-        "authoredOn": "2022-04-07",
-        "requester": {
-          "reference": "Practitioner/mii-exa-molgen-practitioner-physician"
-        },
         "reasonCode": [
           {
             "coding": [
@@ -331,20 +324,36 @@
           {
             "reference": "FamilyMemberHistory/mii-exa-molgen-family-member-history-1"
           }
-        ]
-      },
-      "request": {
-        "method": "PUT",
-        "url": "ServiceRequest/mii-exa-molgen-anforderung-1"
+        ],
+        "status": "active",
+        "intent": "order",
+        "subject": {
+          "reference": "Patient/mii-exa-molgen-patient"
+        },
+        "authoredOn": "2022-04-07",
+        "requester": {
+          "reference": "Practitioner/mii-exa-molgen-practitioner-physician"
+        }
       }
     },
     {
+      "request": {
+        "method": "PUT",
+        "url": "Patient/mii-exa-molgen-patient"
+      },
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/example-mii-molgen-patient",
       "resource": {
         "resourceType": "Patient",
         "id": "mii-exa-molgen-patient",
         "identifier": [
           {
+            "assigner": {
+              "identifier": {
+                "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier",
+                "value": "Charité"
+              },
+              "display": "Charité - Universitätsmedizin Berlin"
+            },
             "use": "usual",
             "type": {
               "coding": [
@@ -355,16 +364,16 @@
               ]
             },
             "system": "https://www.medizininformatik-initiative.de/fhir/sid/patienten",
-            "value": "42285243",
-            "assigner": {
-              "display": "Charité - Universitätsmedizin Berlin",
-              "identifier": {
-                "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier",
-                "value": "Charité"
-              }
-            }
+            "value": "42285243"
           },
           {
+            "assigner": {
+              "identifier": {
+                "use": "official",
+                "value": "109519005",
+                "system": "http://fhir.de/sid/arge-ik/iknr"
+              }
+            },
             "use": "official",
             "type": {
               "coding": [
@@ -375,16 +384,12 @@
               ]
             },
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "Z234567890",
-            "assigner": {
-              "identifier": {
-                "use": "official",
-                "value": "109519005",
-                "system": "http://fhir.de/sid/arge-ik/iknr"
-              }
-            }
+            "value": "Z234567890"
           },
           {
+            "assigner": {
+              "display": "Signal Iduna"
+            },
             "use": "secondary",
             "type": {
               "coding": [
@@ -394,24 +399,11 @@
                 }
               ]
             },
-            "value": "123456",
-            "assigner": {
-              "display": "Signal Iduna"
-            }
+            "value": "123456"
           }
         ],
         "name": [
           {
-            "use": "official",
-            "family": "Van-der-Dussen",
-            "_family": {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Van-der-Dussen"
-                }
-              ]
-            },
             "given": [
               "Maja",
               "Julia"
@@ -428,60 +420,70 @@
                   }
                 ]
               }
-            ]
+            ],
+            "use": "official",
+            "family": "Van-der-Dussen",
+            "_family": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                  "valueString": "Van-der-Dussen"
+                }
+              ]
+            }
           },
           {
             "use": "maiden",
             "family": "Haffer"
           }
         ],
-        "gender": "female",
-        "birthDate": "1968-09-19",
-        "deceasedBoolean": false,
         "address": [
           {
-            "type": "both",
             "line": [
               "Anna-Louisa-Karsch Str. 2"
             ],
+            "type": "both",
             "city": "Berlin",
             "state": "DE-BE",
             "postalCode": "10178",
             "country": "DE"
           }
-        ]
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Patient/mii-exa-molgen-patient"
+        ],
+        "gender": "female",
+        "birthDate": "1968-09-19",
+        "deceasedBoolean": false
       }
     },
     {
+      "request": {
+        "method": "PUT",
+        "url": "Practitioner/mii-exa-molgen-practitioner-lab"
+      },
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/example-mii-molgen-practitioner-lab",
       "resource": {
         "resourceType": "Practitioner",
         "id": "mii-exa-molgen-practitioner-lab",
-        "active": true,
         "name": [
           {
-            "use": "official",
-            "text": "Dr. Daniel Schmidt",
-            "family": "Schmidt",
             "given": [
               "Daniel"
             ],
             "prefix": [
               "Dr."
-            ]
+            ],
+            "use": "official",
+            "text": "Dr. Daniel Schmidt",
+            "family": "Schmidt"
           }
-        ]
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Practitioner/mii-exa-molgen-practitioner-lab"
+        ],
+        "active": true
       }
     },
     {
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/mii-exa-molgen-specimen-1"
+      },
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/example-mii-molgen-specimen-1",
       "resource": {
         "resourceType": "Specimen",
@@ -489,15 +491,6 @@
         "meta": {
           "profile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore"
-          ]
-        },
-        "type": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "128159001",
-              "display": "Tissue specimen from colon (specimen)"
-            }
           ]
         },
         "collection": {
@@ -518,17 +511,26 @@
             "value": "5432"
           }
         ],
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "128159001",
+              "display": "Tissue specimen from colon (specimen)"
+            }
+          ]
+        },
         "status": "available",
         "subject": {
           "reference": "Patient/mii-exa-molgen-patient"
         }
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Specimen/mii-exa-molgen-specimen-1"
       }
     },
     {
+      "request": {
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-diagnostische-implikation-1"
+      },
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-diagnostische-implikation-1",
       "resource": {
         "resourceType": "Observation",
@@ -537,15 +539,6 @@
           "profile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation|2026.0.4",
             "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|3.0.0"
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-              "code": "diagnostic-implication",
-              "display": "Diagnostic Implication"
-            }
           ]
         },
         "category": [
@@ -565,6 +558,16 @@
                 "code": "GE"
               }
             ]
+          }
+        ],
+        "performer": [
+          {
+            "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
+          }
+        ],
+        "derivedFrom": [
+          {
+            "reference": "Observation/mii-exa-molgen-variante-1"
           }
         ],
         "component": [
@@ -580,28 +583,27 @@
             "valueString": "Nachweis einer aktivierenden Mutation BRAF V600E"
           }
         ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+              "code": "diagnostic-implication",
+              "display": "Diagnostic Implication"
+            }
+          ]
+        },
         "status": "final",
         "subject": {
           "reference": "Patient/mii-exa-molgen-patient"
         },
-        "effectiveDateTime": "2022-04-07",
-        "performer": [
-          {
-            "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
-          }
-        ],
-        "derivedFrom": [
-          {
-            "reference": "Observation/mii-exa-molgen-variante-1"
-          }
-        ]
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-diagnostische-implikation-1"
+        "effectiveDateTime": "2022-04-07"
       }
     },
     {
+      "request": {
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-therapeutische-implikation-1"
+      },
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-therapeutische-implikation-1",
       "resource": {
         "resourceType": "Observation",
@@ -610,15 +612,6 @@
           "profile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation|2026.0.4",
             "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapeutic-implication|3.0.0"
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
-              "code": "therapeutic-implication",
-              "display": "Therapeutic Implication"
-            }
           ]
         },
         "category": [
@@ -640,6 +633,16 @@
             ]
           }
         ],
+        "performer": [
+          {
+            "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
+          }
+        ],
+        "derivedFrom": [
+          {
+            "reference": "Observation/mii-exa-molgen-variante-1"
+          }
+        ],
         "component": [
           {
             "code": {
@@ -653,15 +656,6 @@
             "valueString": "Nachweis einer aktivierenden Mutation BRAF V600E. Triple-Therapie mit einem EGFR-Antikörper sowie einem BRAF- und einem MEK- Inhibitor prüfen."
           },
           {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "51963-7",
-                  "display": "Medication assessed [ID]"
-                }
-              ]
-            },
             "valueCodeableConcept": {
               "coding": [
                 {
@@ -676,9 +670,7 @@
                 }
               ],
               "text": "BRAF Inhibitor"
-            }
-          },
-          {
+            },
             "code": {
               "coding": [
                 {
@@ -687,13 +679,24 @@
                   "display": "Medication assessed [ID]"
                 }
               ]
-            },
+            }
+          },
+          {
             "valueCodeableConcept": {
               "coding": [
                 {
                   "code": "L01FE",
                   "system": "http://www.whocc.no/atc",
                   "display": "EGFR (Epidermal Growth Factor Receptor) inhibitors"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "51963-7",
+                  "display": "Medication assessed [ID]"
                 }
               ]
             }
@@ -719,28 +722,27 @@
             }
           }
         ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+              "code": "therapeutic-implication",
+              "display": "Therapeutic Implication"
+            }
+          ]
+        },
         "status": "final",
         "subject": {
           "reference": "Patient/mii-exa-molgen-patient"
         },
-        "effectiveDateTime": "2022-04-07",
-        "performer": [
-          {
-            "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
-          }
-        ],
-        "derivedFrom": [
-          {
-            "reference": "Observation/mii-exa-molgen-variante-1"
-          }
-        ]
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-therapeutische-implikation-1"
+        "effectiveDateTime": "2022-04-07"
       }
     },
     {
+      "request": {
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-variante-1"
+      },
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-variante-1",
       "resource": {
         "resourceType": "Observation",
@@ -751,15 +753,11 @@
             "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant|3.0.0"
           ]
         },
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "69548-6",
-              "display": "Genetic variant assessment"
-            }
-          ]
-        },
+        "basedOn": [
+          {
+            "reference": "ServiceRequest/mii-exa-molgen-anforderung-1"
+          }
+        ],
         "category": [
           {
             "coding": [
@@ -956,11 +954,15 @@
             }
           }
         ],
-        "basedOn": [
-          {
-            "reference": "ServiceRequest/mii-exa-molgen-anforderung-1"
-          }
-        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "69548-6",
+              "display": "Genetic variant assessment"
+            }
+          ]
+        },
         "status": "final",
         "subject": {
           "reference": "Patient/mii-exa-molgen-patient"
@@ -990,13 +992,13 @@
         "device": {
           "reference": "Device/mii-exa-molgen-device-sequencer"
         }
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-variante-1"
       }
     },
     {
+      "request": {
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-genotyp-1"
+      },
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-genotyp-1",
       "resource": {
         "resourceType": "Observation",
@@ -1005,15 +1007,6 @@
           "profile": [
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp|2026.0.4",
             "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype|3.0.0"
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "84413-4",
-              "display": "Genotype display name"
-            }
           ]
         },
         "category": [
@@ -1033,6 +1026,14 @@
                 "code": "GE"
               }
             ]
+          }
+        ],
+        "valueCodeableConcept": {
+          "text": "BRAF rs113488022 T>A"
+        },
+        "derivedFrom": [
+          {
+            "reference": "Observation/mii-exa-molgen-variante-1"
           }
         ],
         "component": [
@@ -1076,14 +1077,20 @@
             }
           }
         ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "84413-4",
+              "display": "Genotype display name"
+            }
+          ]
+        },
         "status": "final",
         "subject": {
           "reference": "Patient/mii-exa-molgen-patient"
         },
         "effectiveDateTime": "2022-04-07",
-        "valueCodeableConcept": {
-          "text": "BRAF rs113488022 T>A"
-        },
         "method": {
           "coding": [
             {
@@ -1098,19 +1105,14 @@
         },
         "device": {
           "reference": "Device/mii-exa-molgen-device-sequencer"
-        },
-        "derivedFrom": [
-          {
-            "reference": "Observation/mii-exa-molgen-variante-1"
-          }
-        ]
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-genotyp-1"
+        }
       }
     },
     {
+      "request": {
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-mutationslast-1"
+      },
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-mutationslast-1",
       "resource": {
         "resourceType": "Observation",
@@ -1141,6 +1143,11 @@
             ]
           }
         ],
+        "performer": [
+          {
+            "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
+          }
+        ],
         "status": "final",
         "code": {
           "coding": [
@@ -1154,11 +1161,6 @@
         "subject": {
           "reference": "Patient/mii-exa-molgen-patient"
         },
-        "performer": [
-          {
-            "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
-          }
-        ],
         "valueQuantity": {
           "value": 12,
           "code": "1/1000000{Base}",
@@ -1168,57 +1170,57 @@
         "specimen": {
           "reference": "Specimen/mii-exa-molgen-specimen-1"
         }
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-mutationslast-1"
       }
     },
     {
+      "request": {
+        "method": "PUT",
+        "url": "Device/mii-exa-molgen-device-sequencer"
+      },
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-device-sequencer",
       "resource": {
         "resourceType": "Device",
         "id": "mii-exa-molgen-device-sequencer",
-        "status": "active",
-        "manufacturer": "Illumina",
         "deviceName": [
           {
             "name": "MiSeq",
             "type": "manufacturer-name"
           }
-        ]
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Device/mii-exa-molgen-device-sequencer"
+        ],
+        "status": "active",
+        "manufacturer": "Illumina"
       }
     },
     {
+      "request": {
+        "method": "PUT",
+        "url": "Practitioner/mii-exa-molgen-practitioner-physician"
+      },
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-practitioner-physician",
       "resource": {
         "resourceType": "Practitioner",
         "id": "mii-exa-molgen-practitioner-physician",
-        "active": true,
         "name": [
           {
-            "use": "official",
-            "text": "Dr. Linda Rubens",
-            "family": "Rubens",
             "given": [
               "Linda"
             ],
             "prefix": [
               "Dr."
-            ]
+            ],
+            "use": "official",
+            "text": "Dr. Linda Rubens",
+            "family": "Rubens"
           }
-        ]
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Practitioner/mii-exa-molgen-practitioner-physician"
+        ],
+        "active": true
       }
     },
     {
+      "request": {
+        "method": "PUT",
+        "url": "Observation/mii-exa-molgen-mikrosatelliteninstabilitaet-1"
+      },
       "fullUrl": "https://www.medizininformatik-initiative.de/fhir/mii-exa-molgen-mikrosatelliteninstabilitaet-1",
       "resource": {
         "resourceType": "Observation",
@@ -1274,11 +1276,9 @@
         "specimen": {
           "reference": "Specimen/mii-exa-molgen-specimen-1"
         }
-      },
-      "request": {
-        "method": "PUT",
-        "url": "Observation/mii-exa-molgen-mikrosatelliteninstabilitaet-1"
       }
     }
-  ]
+  ],
+  "type": "transaction",
+  "timestamp": "2022-07-14T12:11:00+01:00"
 }

@@ -9,7 +9,6 @@
   "relationship": {
     "coding": [
       {
-        "system": "http://snomed.info/sct",
         "extension": [
           {
             "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad",
@@ -36,6 +35,7 @@
             }
           }
         ],
+        "system": "http://snomed.info/sct",
         "code": "72705000",
         "display": "Mother (person)"
       },
@@ -45,6 +45,25 @@
         "display": "mother"
       }
     ]
+  },
+  "sex": {
+    "coding": [
+      {
+        "code": "female",
+        "system": "http://hl7.org/fhir/administrative-gender"
+      },
+      {
+        "code": "248152002",
+        "system": "http://snomed.info/sct",
+        "display": "Female (finding)"
+      }
+    ]
+  },
+  "deceasedAge": {
+    "value": 71,
+    "unit": "years",
+    "system": "http://unitsofmeasure.org",
+    "code": "a"
   },
   "reasonCode": [
     {
@@ -80,7 +99,6 @@
           }
         ]
       },
-      "contributedToDeath": true,
       "onsetAge": {
         "value": 70,
         "unit": "years",
@@ -91,31 +109,13 @@
         {
           "text": "STEMI mit fatalen Komplikationen trotz Akutintervention"
         }
-      ]
+      ],
+      "contributedToDeath": true
     }
   ],
   "status": "completed",
   "patient": {
     "reference": "Patient/mii-exa-molgen-patient"
   },
-  "date": "2024-03-10",
-  "sex": {
-    "coding": [
-      {
-        "code": "female",
-        "system": "http://hl7.org/fhir/administrative-gender"
-      },
-      {
-        "code": "248152002",
-        "system": "http://snomed.info/sct",
-        "display": "Female (finding)"
-      }
-    ]
-  },
-  "deceasedAge": {
-    "value": 71,
-    "unit": "years",
-    "system": "http://unitsofmeasure.org",
-    "code": "a"
-  }
+  "date": "2024-03-10"
 }

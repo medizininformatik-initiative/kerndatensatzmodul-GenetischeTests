@@ -1,0 +1,37 @@
+{
+  "id" : "SearchParameter-mii-sp-molgen-genomic-study-analysis-device",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "SearchParameter.name",
+      "context" : "SearchParameter.name",
+      "source" : "SP_MII_MolGen_GenomicStudyAnalysis_Device",
+      "target" : null
+    },
+    {
+      "id" : "SearchParameter.publisher",
+      "context" : "SearchParameter.publisher",
+      "source" : "Medizininformatik Initiative",
+      "target" : "Medizininformatik Initiative"
+    },
+    {
+      "id" : "ContactDetail.name",
+      "context" : "ContactDetail.name",
+      "source" : "Medizininformatik Initiative",
+      "target" : null
+    },
+    {
+      "id" : "SearchParameter.description",
+      "context" : "SearchParameter.description",
+      "source" : "Suchparameter für verwendetes Gerät in GenomicStudyAnalysis",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Germany",
+      "target" : null
+    }]
+  }]
+}

@@ -70,6 +70,8 @@
 [mii-exa-befund-bundle-befund-srcc]: Bundle-mii-exa-befund-bundle-befund-srcc.html
 [mii-exa-molgen-anforderung-fgfr2-fusion]: ServiceRequest-mii-exa-molgen-anforderung-fgfr2-fusion.html
 [mii-exa-molgen-anforderung-srcc]: ServiceRequest-mii-exa-molgen-anforderung-srcc.html
+[mii-exa-molgen-befundbericht-fgfr2-fusion]: DiagnosticReport-mii-exa-molgen-befundbericht-fgfr2-fusion.html
+[mii-exa-molgen-befundbericht-srcc]: DiagnosticReport-mii-exa-molgen-befundbericht-srcc.html
 [mii-exa-molgen-bundle-befund-2-nipbl]: Bundle-mii-exa-molgen-bundle-befund-2-nipbl.html
 [mii-exa-molgen-bundle-befund-2-nipbl-condition-lab]: Condition-mii-exa-molgen-bundle-befund-2-nipbl-condition-lab.html
 [mii-exa-molgen-bundle-fam-his-breast-ovar-can]: Bundle-mii-exa-molgen-bundle-fam-his-breast-ovar-can.html
@@ -87,8 +89,6 @@
 [mii-exa-molgen-family-member-history-2]: FamilyMemberHistory-mii-exa-molgen-family-member-history-2.html
 [mii-exa-molgen-family-member-history-srcc]: FamilyMemberHistory-mii-exa-molgen-family-member-history-srcc.html
 [mii-exa-molgen-medikationsempfehlung-fgfr2-fusion]: Task-mii-exa-molgen-medikationsempfehlung-fgfr2-fusion.html
-[mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion.html
-[mii-exa-molgen-molekulargenetischer-befundbericht-srcc]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-srcc.html
 [mii-exa-molgen-patient]: Patient-mii-exa-molgen-patient.html
 [mii-exa-molgen-patient-2]: Patient-mii-exa-molgen-patient-2.html
 [mii-exa-molgen-patient-brca1]: Patient-mii-exa-molgen-patient-brca1.html
@@ -107,6 +107,7 @@
 [mii-exa-molgen-specimen-srcc-2]: Specimen-mii-exa-molgen-specimen-srcc-2.html
 [mii-exa-molgen-therapeutische-implikation-fgfr2-fusion]: Observation-mii-exa-molgen-therapeutische-implikation-fgfr2-fusion.html
 [mii-exa-molgen-variante-srcc-ctnna1]: Observation-mii-exa-molgen-variante-srcc-ctnna1.html
+[mii-param-molgen-manifest]: Parameters-mii-param-molgen-manifest.html
 [mii-sp-molgen-diagnostic-report-genomic-study]: SearchParameter-mii-sp-molgen-diagnostic-report-genomic-study.html
 [mii-sp-molgen-diagnostic-report-recommended-action]: SearchParameter-mii-sp-molgen-diagnostic-report-recommended-action.html
 [mii-sp-molgen-genomic-study-analysis-device]: SearchParameter-mii-sp-molgen-genomic-study-analysis-device.html
@@ -116,10 +117,10 @@
 [mii-exa-molgen-mikrosatelliteninstabilitaet-1]: Observation-mii-exa-molgen-mikrosatelliteninstabilitaet-1.html
 [mii-exa-molgen-molekulare-konsequenz-brca1]: Observation-mii-exa-molgen-molekulare-konsequenz-brca1.html
 [mii-exa-molgen-genomic-study-1]: Procedure-mii-exa-molgen-genomic-study-1.html
-[mii-exa-molgen-molekulargenetischer-befundbericht-1]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-1.html
-[mii-exa-molgen-molekulargenetischer-befundbericht-2]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-2.html
-[mii-exa-molgen-molekulargenetischer-befundbericht-tumorboard-3]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-tumorboard-3.html
-[mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel]: DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel.html
+[mii-exa-molgen-befundbericht-1]: DiagnosticReport-mii-exa-molgen-befundbericht-1.html
+[mii-exa-molgen-befundbericht-2]: DiagnosticReport-mii-exa-molgen-befundbericht-2.html
+[mii-exa-molgen-befundbericht-tumorboard-3]: DiagnosticReport-mii-exa-molgen-befundbericht-tumorboard-3.html
+[mii-exa-molgen-befundbericht-trurisk-panel]: DiagnosticReport-mii-exa-molgen-befundbericht-trurisk-panel.html
 [mii-exa-molgen-variante-2]: Observation-mii-exa-molgen-variante-2.html
 [mii-exa-molgen-diagnostische-implikation-2]: Observation-mii-exa-molgen-diagnostische-implikation-2.html
 [mii-exa-molgen-molekulare-konsequenz-2]: Observation-mii-exa-molgen-molekulare-konsequenz-2.html

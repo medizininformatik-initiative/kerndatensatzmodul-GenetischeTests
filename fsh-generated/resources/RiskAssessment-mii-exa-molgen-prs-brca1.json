@@ -6,11 +6,15 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score|2026.0.4"
     ]
   },
+  "basis": [
+    {
+      "reference": "Observation/mii-exa-molgen-variante-brca1"
+    }
+  ],
   "prediction": [
     {
       "extension": [
         {
-          "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/risk-assessment-einflussfaktor",
           "valueCodeableConcept": {
             "coding": [
               {
@@ -20,7 +24,8 @@
               }
             ],
             "text": "Der verwendete Polygene Risikoscore wurde bisher nur für die europäische Bevölkerung bei Brustkrebs validiert."
-          }
+          },
+          "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/risk-assessment-einflussfaktor"
         }
       ],
       "outcome": {
@@ -47,10 +52,5 @@
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient-2"
   },
-  "occurrenceDateTime": "2022-11-01",
-  "basis": [
-    {
-      "reference": "Observation/mii-exa-molgen-variante-brca1"
-    }
-  ]
+  "occurrenceDateTime": "2022-11-01"
 }

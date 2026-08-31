@@ -1,0 +1,27 @@
+2026-08-28T13:17:33Z  INFO   2.1  repo-identity  params  dir=. repo=medizininformatik-initiative/kerndatensatzmodul-GenetischeTests rendered=<none>
+    Tier R (the source repository) and tier H (the rendered guide), spec §2.1.
+    Reporting only: no file in the module repository is written by this script.
+2026-08-28T13:17:33Z  INFO   2.1  repo-identity  identity-claim  field=title value=kerndatensatzmodul-GenetischeTests tier=R source=README.md first heading
+    A CANDIDATE, confirmed at Gate A -- a README heading is written for human
+    readers, and a module's `title` is a conformance-artefact field.
+2026-08-28T13:17:33Z  WARN   2.1  repo-identity  identity-contradiction: field=title  now=kerndatensatzmodul-GenetischeTests (tier R, README.md first heading)  vs  title=MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht (tier S, sushi-config.yaml: title)
+    Two sources disagree about the same identity field. This is REPORTED, not
+    resolved: the tier ranking (spec §2.1) says which value a human should
+    probably adopt, and adopting one here would silently rename, re-license or
+    re-version a published module. Both readings stand in the ledger; Gate A
+    decides, and nothing in the repository is rewritten either way.
+2026-08-28T13:17:33Z  INFO   2.1  repo-identity  no LICENSE file in the repository root  dir=.
+2026-08-28T13:17:33Z  INFO   2.1  repo-identity  release tags in the local checkout (newest last)  tags=v2026.0.1 v2026.0.2 v2026.0.3 v2026.0.4 v.1.0.0
+    Tags are evidence for WHICH RELEASE a commit corresponds to; the module's
+    version still comes from the published package (§2.1.1).
+2026-08-28T13:17:33Z  WARN   2.1  repo-identity  not-recoverable-from-a-repository: publisher  owner=medizininformatik-initiative
+    The GitHub owner is an ACCOUNT that hosts the repository, not the
+    publishing organisation of a conformance artefact -- the same reason the
+    registry `author` is not a publisher (§2.1.1). `publisher` stays a Gate-A
+    field: a human names the organisation.
+2026-08-28T13:17:33Z  INFO   2.1  repo-identity  release tags on GitHub (newest first)  tags=v2026.0.4 v2026.0.3 v2026.0.2 v2026.0.1 v2026.0.0 v.1.0.0 2025.0.0-alpha1
+    Cross-check: the tag matching the published package's version is what
+    ties that RELEASE to the commit being migrated (§2.1.1, which version).
+2026-08-28T13:17:33Z  INFO   2.1  repo-identity  done  fields_recovered=1 exit=0
+    Recovered, not applied: every value above is Gate-A evidence, recorded in
+    the identity ledger beside the other tiers' readings (spec §2.1).

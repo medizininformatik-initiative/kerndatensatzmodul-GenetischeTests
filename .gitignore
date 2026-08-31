@@ -5,7 +5,13 @@ Thumbs.db
 
 temp.xml
 temp.json
-index.md 
+# ANCHORED to the repository root during the 2026-08-28 template migration.
+# This line used to read "index.md", unanchored, which git applies at EVERY depth.
+# Before the migration the repository had no input/pagecontent/, so it never mattered;
+# afterwards it silently swallowed the guide's home page in BOTH languages, and the
+# IG Publisher failed in CI with "Template based HTML file index.html is missing
+# source file index.md" while building green locally, where the untracked file exists.
+/index.md
 /input-cache
 /output
 /temp
@@ -33,3 +39,19 @@ Ballotierung*.pdf
 
 # Package artifacts
 *.tgz
+
+# ---- appended from mii-kds-module-template v0.13.0 (IG-template migration) ----
+output/
+temp/
+template/
+input-cache/
+fsh-generated/
+publisher.jar
+node_modules/
+*.log
+# ...but NOT the migration audit trail. migration-log/ IS the evidence the
+# migration report cites: the run log, and the raw output of every step behind
+# every number in it. The bare *.log above (from the module template) would
+# have dropped all of it from git, which is the same unanchored-pattern class
+# as the /index.md line above.
+!migration-log/**

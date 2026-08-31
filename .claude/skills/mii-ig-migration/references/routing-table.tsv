@@ -1,0 +1,40 @@
+# routing-table.tsv - the mechanized form of the spec-9 SEMANTIC page mapping,
+# read by scripts/page-structure-advice.py (override with --routing-table).
+#
+# pattern<TAB>target<TAB>note
+#
+# pattern semantics: a lowercase COMPACTED token, alphanumerics only - the same
+# compaction the advice script applies to page names (lowercase, every other
+# character dropped; umlauts are STRIPPED ENTIRELY by that compaction, so the
+# ae/oe/ue spelling and the stripped spelling are different tokens - add both
+# spellings where they occur). A source page routes to the named target home
+# when its compacted slug OR its compacted title CONTAINS the pattern; patterns
+# shorter than 3 characters are ignored. The check runs AFTER the exact
+# agreed-page slug/menu-label match and BEFORE artefact-anchor matching, and
+# the folder-landing-page guard still applies. When several patterns hit the
+# same page the LONGEST pattern wins; the earlier row wins a length tie.
+#
+# target: the agreed page (no .md) the content merges into - spec 9e branch 3.
+#
+# A human EXTENDS this table per module family (organ modules, PRO instruments,
+# ... each bring their own recurring page names); rows are never removed
+# silently - retire one with a note in the migration report instead.
+#
+# Initial rows: spec 9 + 9e, German aliases included.
+uml	uml-diagrams	spec 9: UML page -> the template's uml-diagrams page
+referenzen	implementer-guidance	spec 9: Referenzen
+references	implementer-guidance	spec 9: References (EN alias)
+anwendungsfaelle	guidance	spec 9: Anwendungsfaelle (ae spelling)
+anwendungsfalle	guidance	spec 9: Anwendungsfaelle (alias)
+usecases	guidance	spec 9: use cases (EN alias)
+szenarien	guidance	spec 9: Szenarien / scenario narratives
+datensatz	logical-models	spec 9: Datensatz
+datensaetze	logical-models	spec 9: Datensaetze (ae spelling)
+informationsmodell	logical-models	spec 9: Informationsmodell
+releasenotes	changes	spec 9: Releasenotes -> changes
+terminologien	code-systems	spec 9: Terminologien
+capabilitystatement	capability-statements	spec 9: CapabilityStatement page
+beschreibungmodul	index	spec 9: Beschreibung des Moduls -> index
+kontextimgesamtprojekt	implementer-guidance	spec 9: Bezuege zu anderen Modulen
+abweichungen	guidance	spec 9e: Abweichungen (e.g. Abweichungen-zum-oBDS)
+bezugzu	guidance	spec 9e: Bezug zu nationalen/internationalen Standards

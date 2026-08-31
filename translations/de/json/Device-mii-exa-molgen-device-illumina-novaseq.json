@@ -1,0 +1,37 @@
+{
+  "id" : "Device-mii-exa-molgen-device-illumina-novaseq",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "Device.manufacturer",
+      "context" : "Device.manufacturer",
+      "source" : "Illumina Inc.",
+      "target" : null
+    },
+    {
+      "id" : "Device.serialNumber",
+      "context" : "Device.serialNumber",
+      "source" : "SN12345",
+      "target" : null
+    },
+    {
+      "id" : "Device.deviceName.name",
+      "context" : "Device.deviceName.name",
+      "source" : "NovaSeq 6000 Sequencing System",
+      "target" : null
+    },
+    {
+      "id" : "Device.modelNumber",
+      "context" : "Device.modelNumber",
+      "source" : "NovaSeq 6000",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Medical laboratory analyzer",
+      "target" : null
+    }]
+  }]
+}

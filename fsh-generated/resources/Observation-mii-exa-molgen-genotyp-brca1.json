@@ -7,15 +7,6 @@
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype|3.0.0"
     ]
   },
-  "code": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "84413-4",
-        "display": "Genotype display name"
-      }
-    ]
-  },
   "category": [
     {
       "coding": [
@@ -33,6 +24,14 @@
           "code": "GE"
         }
       ]
+    }
+  ],
+  "valueCodeableConcept": {
+    "text": "BRCA1, c.5266dup, p.(Gln1756Profs*74)"
+  },
+  "derivedFrom": [
+    {
+      "reference": "Observation/mii-exa-molgen-variante-brca1"
     }
   ],
   "component": [
@@ -76,14 +75,20 @@
       }
     }
   ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "84413-4",
+        "display": "Genotype display name"
+      }
+    ]
+  },
   "status": "final",
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient-brca1"
   },
   "effectiveDateTime": "2022-11-01",
-  "valueCodeableConcept": {
-    "text": "BRCA1, c.5266dup, p.(Gln1756Profs*74)"
-  },
   "method": {
     "coding": [
       {
@@ -98,10 +103,5 @@
   },
   "device": {
     "reference": "Device/mii-exa-molgen-device-sequencer-nextseq"
-  },
-  "derivedFrom": [
-    {
-      "reference": "Observation/mii-exa-molgen-variante-brca1"
-    }
-  ]
+  }
 }

@@ -12,8 +12,6 @@
       "value": "PRK4QE59A"
     }
   ],
-  "status": "active",
-  "intent": "order",
   "category": [
     {
       "coding": [
@@ -35,13 +33,6 @@
     ],
     "text": "Therapierelevante genetische Veränderungen bei Intrahepatischem Gallengangskarzinom"
   },
-  "subject": {
-    "reference": "Patient/mii-exa-molgen-patient-fgfr2-fusion"
-  },
-  "authoredOn": "2022-11-30",
-  "requester": {
-    "reference": "Practitioner/mii-exa-molgen-practitioner-physician"
-  },
   "reasonCode": [
     {
       "coding": [
@@ -58,5 +49,14 @@
         }
       ]
     }
-  ]
+  ],
+  "status": "active",
+  "intent": "order",
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient-fgfr2-fusion"
+  },
+  "authoredOn": "2022-11-30",
+  "requester": {
+    "reference": "Practitioner/mii-exa-molgen-practitioner-physician"
+  }
 }

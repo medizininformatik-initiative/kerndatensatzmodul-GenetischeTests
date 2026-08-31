@@ -185,7 +185,7 @@ Source: MII_PR_MolGen_MolekulargenetischerBefundbericht
 * media -> "mide-dataelement-1698" "Daten"
 * media -> "mide-dataelement-1447" "Anhänge"
 
-Instance: mii-exa-molgen-molekulargenetischer-befundbericht-1
+Instance: mii-exa-molgen-befundbericht-1
 InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
 Title: "Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom"
@@ -215,7 +215,7 @@ Description: "Beispiel für molekulargenetischen Befund BRAF mutiert bei colorek
 * result[biomarker][+] = Reference(mii-exa-molgen-mikrosatelliteninstabilitaet-1)
 * conclusion = "BRAF p.V600E Mutation liegt vor. Bitte Therapieoption mit einem BRAF-Inhibitor prüfen."
 
-Instance: mii-exa-molgen-molekulargenetischer-befundbericht-2
+Instance: mii-exa-molgen-befundbericht-2
 InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
 Title: "Molekulargentischer Befund 2: Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang"
@@ -272,7 +272,7 @@ Description: "Beispiel für molekulargenetischen Befund Molekulargenetische Diag
 
 //Fusion
 
-Instance: mii-exa-molgen-molekulargenetischer-befundbericht-tumorboard-3
+Instance: mii-exa-molgen-befundbericht-tumorboard-3
 InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
 Title: "Molekulargentischer Befund 3: Tumorboard Genfusion"
@@ -301,7 +301,7 @@ Description: "Beispiel für molekulargenetischen Befund Tumorboard Genfusion."
 * conclusion = "Nachweis der bekannten treibenden FGFR2-Fusion"
 
 // 04 docx
-Instance: mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel
+Instance: mii-exa-molgen-befundbericht-trurisk-panel
 InstanceOf: mii-pr-molgen-molekulargenetischer-befundbericht
 Usage: #example
 Title: "Molekulargentischer Befund Familiäre Belastung für Brust- und Eierstockkrebs"

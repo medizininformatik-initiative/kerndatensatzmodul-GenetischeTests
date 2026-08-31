@@ -20,6 +20,19 @@
       }
     ]
   },
+  "sex": {
+    "coding": [
+      {
+        "code": "female",
+        "system": "http://hl7.org/fhir/administrative-gender"
+      },
+      {
+        "code": "248152002",
+        "system": "http://snomed.info/sct",
+        "display": "Female (finding)"
+      }
+    ]
+  },
   "reasonCode": [
     {
       "coding": [
@@ -50,18 +63,5 @@
     "reference": "Patient/mii-exa-molgen-patient"
   },
   "date": "2022-04-07",
-  "sex": {
-    "coding": [
-      {
-        "code": "female",
-        "system": "http://hl7.org/fhir/administrative-gender"
-      },
-      {
-        "code": "248152002",
-        "system": "http://snomed.info/sct",
-        "display": "Female (finding)"
-      }
-    ]
-  },
   "deceasedBoolean": true
 }

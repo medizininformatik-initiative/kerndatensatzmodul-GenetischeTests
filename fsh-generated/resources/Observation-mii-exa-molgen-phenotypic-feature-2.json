@@ -1,7 +1,6 @@
 {
   "resourceType": "Observation",
   "id": "mii-exa-molgen-phenotypic-feature-2",
-  "status": "final",
   "category": [
     {
       "coding": [
@@ -12,6 +11,12 @@
       ]
     }
   ],
+  "performer": [
+    {
+      "reference": "Practitioner/mii-exa-molgen-practitioner-physician"
+    }
+  ],
+  "status": "final",
   "code": {
     "coding": [
       {
@@ -33,10 +38,5 @@
         "display": "Present"
       }
     ]
-  },
-  "performer": [
-    {
-      "reference": "Practitioner/mii-exa-molgen-practitioner-physician"
-    }
-  ]
+  }
 }

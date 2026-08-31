@@ -1,0 +1,31 @@
+{
+  "id" : "Practitioner-mii-exa-molgen-practitioner-physician",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "HumanName.text",
+      "context" : "HumanName.text",
+      "source" : "Dr. Linda Rubens",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.family",
+      "context" : "HumanName.family",
+      "source" : "Rubens",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.given",
+      "context" : "HumanName.given",
+      "source" : "Linda",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.prefix",
+      "context" : "HumanName.prefix",
+      "source" : "Dr.",
+      "target" : null
+    }]
+  }]
+}

@@ -1,0 +1,12 @@
+2026-08-28T13:16:29Z  INFO   5.1c  simplifier-discover  params  base=https://simplifier.net org=<none> module=<none> package=<none> project=<none> guide=MII-Modul-MolekulargenetischerBefundbericht-v2026-DE pin=<propose> out=migration-log
+    Discovery only: nothing in the module repository is written, and no value is
+    claimed into the identity ledger -- a guide's version is not the module's
+    version (spec §5.1c).
+2026-08-28T13:16:29Z  INFO   5.1c  simplifier-discover  hop 3 skipped  guide_key_supplied=MII-Modul-MolekulargenetischerBefundbericht-v2026-DE
+2026-08-28T13:16:30Z  WARN   5.1c  simplifier-discover  no-published-version: hop 4 lists only a preview  key=MII-Modul-MolekulargenetischerBefundbericht-v2026-DE preview=1 url=https://simplifier.net/published-guide/MII-Modul-MolekulargenetischerBefundbericht-v2026-DE/versions
+    `?version=current` is the LIVE EDITABLE project, so harvesting it makes the
+    migration unreproducible -- two runs could silently differ. Nothing is
+    pinned here; a human decides whether to publish a version first.
+2026-08-28T13:16:30Z  WARN   5.1c  simplifier-discover  no-discovery: the chain yielded no guide page  pages=0 exit=1
+    Read the WARNs above for the hop that stopped it. An empty result is a
+    finding for a human, never a licence to construct a key, a slug or a version.

@@ -7,15 +7,11 @@
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant|3.0.0"
     ]
   },
-  "code": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "69548-6",
-        "display": "Genetic variant assessment"
-      }
-    ]
-  },
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/mii-exa-molgen-anforderung-trurisk-panel"
+    }
+  ],
   "category": [
     {
       "coding": [
@@ -35,6 +31,15 @@
       ]
     }
   ],
+  "method": {
+    "coding": [
+      {
+        "code": "LA26398-0",
+        "system": "http://loinc.org",
+        "display": "Sequencing"
+      }
+    ]
+  },
   "component": [
     {
       "code": {
@@ -201,6 +206,13 @@
       }
     },
     {
+      "valueQuantity": {
+        "value": 95,
+        "comparator": ">",
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "code": "%"
+      },
       "code": {
         "coding": [
           {
@@ -208,21 +220,18 @@
             "system": "http://loinc.org"
           }
         ]
-      },
-      "valueQuantity": {
-        "value": 95,
-        "comparator": ">",
-        "unit": "%",
-        "system": "http://unitsofmeasure.org",
-        "code": "%"
       }
     }
   ],
-  "basedOn": [
-    {
-      "reference": "ServiceRequest/mii-exa-molgen-anforderung-trurisk-panel"
-    }
-  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "69548-6",
+        "display": "Genetic variant assessment"
+      }
+    ]
+  },
   "status": "final",
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient-brca1"
@@ -234,15 +243,6 @@
         "code": "LA9633-4",
         "system": "http://loinc.org",
         "display": "Present"
-      }
-    ]
-  },
-  "method": {
-    "coding": [
-      {
-        "code": "LA26398-0",
-        "system": "http://loinc.org",
-        "display": "Sequencing"
       }
     ]
   },

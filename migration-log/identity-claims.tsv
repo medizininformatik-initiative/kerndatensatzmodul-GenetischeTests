@@ -1,0 +1,22 @@
+2026-08-28T13:17:23Z	id	S	sushi-config.yaml: id	mii-ig-molgen-de-v2026	2.1	identity-read
+2026-08-28T13:17:23Z	canonical	S	sushi-config.yaml: canonical	https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen	2.1	identity-read
+2026-08-28T13:17:23Z	packageId	S	sushi-config.yaml: packageId	de.medizininformatikinitiative.kerndatensatz.molgen	2.1	identity-read
+2026-08-28T13:17:23Z	name	S	sushi-config.yaml: name	MII_IG_MolGen_DE	2.1	identity-read
+2026-08-28T13:17:23Z	title	S	sushi-config.yaml: title	MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht	2.1	identity-read
+2026-08-28T13:17:23Z	version	S	sushi-config.yaml: version	2026.0.4	2.1	identity-read
+2026-08-28T13:17:23Z	status	S	sushi-config.yaml: status	active	2.1	identity-read
+2026-08-28T13:17:23Z	fhirVersion	S	sushi-config.yaml: fhirVersion	4.0.1	2.1	identity-read
+2026-08-28T13:17:23Z	releaseLabel	S	sushi-config.yaml: releaseLabel	ci-build	2.1	identity-read
+2026-08-28T13:17:23Z	copyrightYear	S	sushi-config.yaml: copyrightYear	2021+	2.1	identity-read
+2026-08-28T13:17:23Z	publisher	S	sushi-config.yaml: publisher.name	Medizininformatik-Initiative	2.1	identity-read
+2026-08-28T13:17:23Z	publisherUrl	S	sushi-config.yaml: publisher.url	https://www.medizininformatik-initiative.de/	2.1	identity-read
+2026-08-28T13:17:23Z	publisherEmail	S	sushi-config.yaml: publisher.email	info@medizininformatik-initiative.de	2.1	identity-read
+2026-08-28T13:17:23Z	language	S	sushi-config.yaml: language (single-language setup, NOT identity -- spec Language)	de	2.1	identity-read
+2026-08-28T13:17:23Z	packageId	R	package.json: name	de.medizininformatikinitiative.kerndatensatz.molgen	2.1	identity-read
+2026-08-28T13:17:23Z	version	R	package.json: version	2026.0.4	2.1	identity-read
+2026-08-28T13:17:23Z	fhirVersion	R	package.json: fhirVersions[0]	4.0.1	2.1	identity-read
+2026-08-28T13:17:23Z	version	H	implementation-guides/ImplementationGuide-2026.x-DE/mii-ig-molgen-de-v2026.json: version	2026.0.4	2.1	identity-read
+2026-08-28T13:17:33Z	title	R	README.md first heading	kerndatensatzmodul-GenetischeTests	2.1	repo-identity
+2026-08-28T13:18:07Z	publisher	source	input/fsh/rulesets/publisher.fsh: RuleSet Publisher ^publisher (artefact-level, applied to every conformance resource)	Medizininformatik Initiative	2.1	identity-read
+2026-08-28T13:53:14Z	license	source	implementation-guides/ImplementationGuide-2026.x-DE/.../Index.page.md, section 'Copyright-Hinweis, Nutzungshinweise': 'Der Inhalt dieser Spezifikation ist oeffentlich. Die Nachnutzungs- bzw. Veroeffentlichungsansprueche sind nicht beschraenkt.'	unrestricted-reuse (no SPDX id)	2.2	licence-evidence
+2026-08-28T13:53:14Z	copyrightYear	source	same section: 'Copyright (c) 2022+: TMF e. V.'	2022+	2.2	licence-evidence

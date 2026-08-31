@@ -7,15 +7,41 @@
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report|3.0.0"
     ]
   },
-  "code": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "51969-4",
-        "display": "Genetic analysis report"
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-reference",
+      "valueReference": {
+        "reference": "Procedure/mii-exa-molgen-genomic-study-comprehensive-wes"
       }
-    ]
-  },
+    },
+    {
+      "valueRelatedArtifact": {
+        "type": "documentation",
+        "label": "GATK Best Practices for Germline SNP & Indel Discovery",
+        "url": "https://gatk.broadinstitute.org/hc/en-us/articles/360035535932"
+      },
+      "url": "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
+    },
+    {
+      "valueAnnotation": {
+        "extension": [
+          {
+            "valueCodeableConcept": {
+              "text": "Quality Metrics"
+            },
+            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/annotation-code"
+          }
+        ],
+        "text": "Mean coverage: 120X, 98.5% of bases >20X, 95.2% of target regions callable. Q30 bases: 92%. Contamination estimate: <1%. Sample identity confirmed by SNP fingerprinting."
+      },
+      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report-note"
+    }
+  ],
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/mii-exa-molgen-anforderung-wes"
+    }
+  ],
   "category": [
     {
       "coding": [
@@ -27,45 +53,6 @@
       ]
     }
   ],
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-reference",
-      "valueReference": {
-        "reference": "Procedure/mii-exa-molgen-genomic-study-comprehensive-wes"
-      }
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact",
-      "valueRelatedArtifact": {
-        "type": "documentation",
-        "label": "GATK Best Practices for Germline SNP & Indel Discovery",
-        "url": "https://gatk.broadinstitute.org/hc/en-us/articles/360035535932"
-      }
-    },
-    {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report-note",
-      "valueAnnotation": {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/annotation-code",
-            "valueCodeableConcept": {
-              "text": "Quality Metrics"
-            }
-          }
-        ],
-        "text": "Mean coverage: 120X, 98.5% of bases >20X, 95.2% of target regions callable. Q30 bases: 92%. Contamination estimate: <1%. Sample identity confirmed by SNP fingerprinting."
-      }
-    }
-  ],
-  "basedOn": [
-    {
-      "reference": "ServiceRequest/mii-exa-molgen-anforderung-wes"
-    }
-  ],
-  "status": "final",
-  "subject": {
-    "reference": "Patient/mii-exa-molgen-patient"
-  },
   "performer": [
     {
       "reference": "Practitioner/mii-exa-molgen-practitioner-lab"
@@ -92,7 +79,6 @@
       }
     }
   ],
-  "conclusion": "Whole exome sequencing identified a pathogenic de novo variant in the KMT2A gene, consistent with Wiedemann-Steiner syndrome. This explains the patient's developmental delay and dysmorphic features. Technical quality metrics met all acceptance criteria.",
   "conclusionCode": [
     {
       "coding": [
@@ -103,5 +89,19 @@
         }
       ]
     }
-  ]
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "51969-4",
+        "display": "Genetic analysis report"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient"
+  },
+  "conclusion": "Whole exome sequencing identified a pathogenic de novo variant in the KMT2A gene, consistent with Wiedemann-Steiner syndrome. This explains the patient's developmental delay and dysmorphic features. Technical quality metrics met all acceptance criteria."
 }

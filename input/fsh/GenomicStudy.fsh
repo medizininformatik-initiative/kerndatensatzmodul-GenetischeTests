@@ -254,7 +254,7 @@ Description: "Genomic Study Analysis ist ein Profil, das die Durchführung von k
 
 // Fusion
 
-//Instance: mii-exa-molgen-molekulargenetischer-befundbericht-tumorboard-3
+//Instance: mii-exa-molgen-befundbericht-tumorboard-3
 //InstanceOf: sd-mii-modul-molgen-molekulargenetischer-befundbericht
 //Usage: #example
 //Title: "Molekulargentischer Befund 3: Tumorboard Genfusion"

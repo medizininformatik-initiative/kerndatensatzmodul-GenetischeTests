@@ -6,15 +6,6 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore"
     ]
   },
-  "type": {
-    "coding": [
-      {
-        "system": "http://snomed.info/sct",
-        "code": "128159001",
-        "display": "Tissue specimen from colon (specimen)"
-      }
-    ]
-  },
   "collection": {
     "collectedDateTime": "2022-03-24T12:44:00+01:00",
     "bodySite": {
@@ -33,6 +24,15 @@
       "value": "5432"
     }
   ],
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "128159001",
+        "display": "Tissue specimen from colon (specimen)"
+      }
+    ]
+  },
   "status": "available",
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient"
