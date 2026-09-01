@@ -14,7 +14,7 @@
 
 Profiles: [MII PR MolGen Genomic Study Analysis](StructureDefinition-mii-pr-molgen-genomic-study-analysis.md), [https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.4](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.4)
 
-**Genomic Study Analysis Specimen**: [mii-exa-molgen-specimen-ffpe-tumor](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/mii-exa-molgen-specimen-ffpe-tumor)
+**Genomic Study Analysis Specimen**: [Specimen: identifier = https://www.charite.de/fhir/sid/bioproben#specimen_tso500_ffpe_01; status = available; type = Formalin-fixed paraffin-embedded tissue specimen; receivedTime = 2024-05-16 09:20:00+0200](Specimen-mii-exa-molgen-specimen-ffpe-tumor.md)
 
 > **Genomic Study Analysis Device**
 * device: [Device: identifier = https://www.medizininformatik-initiative.de/fhir/sid/lab-devices#TSO500v2-LOT-20240518-A; status = active; manufacturer = Illumina Inc.; expirationDate = 2026-12-31; lotNumber = 20240518-A; modelNumber = 20130527; type = ](Device-mii-exa-molgen-device-tso500-lot.md)
@@ -59,7 +59,7 @@ Profiles: [MII PR MolGen Genomic Study Analysis](StructureDefinition-mii-pr-molg
   "extension" : [{
     "url" : "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen",
     "valueReference" : {
-      "reference" : "mii-exa-molgen-specimen-ffpe-tumor"
+      "reference" : "Specimen/mii-exa-molgen-specimen-ffpe-tumor"
     }
   },
   {

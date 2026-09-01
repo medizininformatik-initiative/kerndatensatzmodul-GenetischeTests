@@ -113,6 +113,7 @@ These are example instances that show what data produced and consumed by systems
 | [ EDTA Blood Sample  ](Specimen-mii-exa-molgen-specimen-blood-edta.md) | EDTA-Blutprobe für DNA-Extraktion |
 | [ Empfohlene Folgemaßnahme bei BRCA1 Variante  ](Task-mii-exa-molgen-folgemassnahme-brca1.md) | Beispiel für empfohlene Folgemaßnahme abgeleitet von genetischer Variante im BRCA1 Gen an Hand von NGS. |
 | [ FASTQ Sequencing Files  ](DocumentReference-mii-exa-molgen-documentreference-fastq.md) | Raw sequencing data files |
+| [ FFPE-Tumorgewebe (NSCLC) fuer TSO500  ](Specimen-mii-exa-molgen-specimen-ffpe-tumor.md) | Formalinfixiertes, in Paraffin eingebettetes Tumorgewebe aus der Lunge, Ausgangsmaterial der TSO500-v2-Analyse bei nicht-kleinzelligem Lungenkarzinom |
 | [ Family History - Father with Type 2 Diabetes  ](FamilyMemberHistory-mii-exa-molgen-family-member-history-diabetes.md) | Example of family member history documenting father's Type 2 diabetes mellitus (ICD-10: E11.9) |
 | [ Family History - Mother with Myocardial Infarction  ](FamilyMemberHistory-mii-exa-molgen-family-member-history-mi.md) | Example of family member history documenting mother's ST-elevation myocardial infarction (ICD-10: I21.2) |
 | [ Family History - Sister with Retinal Disorder  ](FamilyMemberHistory-mii-exa-molgen-family-member-history-retinal.md) | Example of family member history documenting sister's retinal disorder (ICD-10: H35.8) |

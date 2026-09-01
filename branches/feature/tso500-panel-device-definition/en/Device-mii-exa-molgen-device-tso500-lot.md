@@ -14,7 +14,7 @@
 
 **identifier**: `https://www.medizininformatik-initiative.de/fhir/sid/lab-devices`/TSO500v2-LOT-20240518-A
 
-**definition**: [DeviceDefinition: identifier = https://www.medizininformatik-initiative.de/fhir/sid/panel-catalog#TSO500-v2; manufacturer[x] = Illumina Inc.; modelNumber = 20130527; type = ; version = ](DeviceDefinition-mii-exa-molgen-devicedef-tso500.md)
+**definition**: [DeviceDefinition: identifier = https://www.medizininformatik-initiative.de/fhir/sid/panel-catalog#TSO500-v2; manufacturer[x] = Illumina Inc.; modelNumber = 20130527; type = ; version = 2](DeviceDefinition-mii-exa-molgen-devicedef-tso500.md)
 
 **status**: Active
 

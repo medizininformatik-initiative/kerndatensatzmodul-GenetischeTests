@@ -158,7 +158,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "name" : "MII_PR_MolGen_EmpfohleneFolgemassnahme",
   "title" : "MII PR MolGen Empfohlene Folgemaßnahme",
   "status" : "active",
-  "date" : "2026-09-01T21:11:35+00:00",
+  "date" : "2026-09-01T21:27:10+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

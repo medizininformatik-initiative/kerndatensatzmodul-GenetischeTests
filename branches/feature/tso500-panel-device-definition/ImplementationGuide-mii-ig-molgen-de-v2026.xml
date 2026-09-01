@@ -1566,6 +1566,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/mii-exa-molgen-specimen-ffpe-tumor"/>
+      </reference>
+      <name value="FFPE-Tumorgewebe (NSCLC) fuer TSO500"/>
+      <description value="Formalinfixiertes, in Paraffin eingebettetes Tumorgewebe aus der Lunge, Ausgangsmaterial der TSO500-v2-Analyse bei nicht-kleinzelligem Lungenkarzinom"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Procedure"/>
       </extension>
       <reference>

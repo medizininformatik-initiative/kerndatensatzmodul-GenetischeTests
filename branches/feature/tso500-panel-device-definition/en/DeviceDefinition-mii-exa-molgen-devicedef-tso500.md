@@ -34,7 +34,7 @@
 | - | **SystemType** | **Version** |
 | * | Hybrid capture-based comprehensive genomic profiling panel for solid tumors (RUO) | 523 SNV/Indel genes; 59 CNV genes; 23 DNA rearrangement genes; 55 RNA fusion/splice genes; TMB; MSI; HRD; 1.94 Mb panel size |
 
-**version**: 
+**version**: 2
 
 
 
@@ -61,9 +61,7 @@
     "systemType" : "Hybrid capture-based comprehensive genomic profiling panel for solid tumors (RUO)",
     "version" : "523 SNV/Indel genes; 59 CNV genes; 23 DNA rearrangement genes; 55 RNA fusion/splice genes; TMB; MSI; HRD; 1.94 Mb panel size"
   }],
-  "_version" : [{
-    "value" : "2"
-  }]
+  "version" : ["2"]
 }
 
 ```

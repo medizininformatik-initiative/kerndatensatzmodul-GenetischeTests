@@ -2021,6 +2021,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/mii-exa-molgen-specimen-ffpe-tumor"
+      },
+      "name" : "FFPE-Tumorgewebe (NSCLC) fuer TSO500",
+      "description" : "Formalinfixiertes, in Paraffin eingebettetes Tumorgewebe aus der Lunge, Ausgangsmaterial der TSO500-v2-Analyse bei nicht-kleinzelligem Lungenkarzinom",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Procedure"
       }],
       "reference" : {

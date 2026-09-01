@@ -14,9 +14,15 @@
 
 Profiles: [MII PR MolGen Genomic Study](StructureDefinition-mii-pr-molgen-genomic-study.md), [https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study|2026.0.4](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study|2026.0.4)
 
-**Genomic Study Analysis Extension**: 
+**Genomic Study Analysis Extension**: [Procedure: extension = ->Specimen: identifier = https://www.charite.de/fhir/sid/bioproben#specimen_tso500_ffpe_01; status = available; type = Formalin-fixed paraffin-embedded tissue specimen; receivedTime = 2024-05-16 09:20:00+0200,,DNA hybridization,; status = completed; category = Laboratory](Procedure-mii-exa-molgen-genomic-study-analysis-tso500-libprep.md)
 
-**Exception Generating Narrative: Cannot invoke "org.hl7.fhir.r5.renderers.utils.ResourceWrapper.fhirType()" because "resource" is null **
+**Genomic Study Analysis Extension**: [Procedure: extension = ->Specimen: identifier = https://www.charite.de/fhir/sid/bioproben#specimen_tso500_ffpe_01; status = available; type = Formalin-fixed paraffin-embedded tissue specimen; receivedTime = 2024-05-16 09:20:00+0200,,Sequencing,; status = completed; category = Laboratory](Procedure-mii-exa-molgen-genomic-study-analysis-tso500-sequencing.md)
+
+**status**: Completed
+
+**category**: Laboratory
+
+**subject**: [Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Medical record number (use: usual, ))](Patient-mii-exa-molgen-patient.md)
 
 
 

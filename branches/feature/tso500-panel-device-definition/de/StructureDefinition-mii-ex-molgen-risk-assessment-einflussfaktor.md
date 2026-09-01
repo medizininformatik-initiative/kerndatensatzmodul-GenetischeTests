@@ -74,7 +74,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-molge
   "name" : "MII_EX_MolGen_RiskAssessment_Einflussfaktor",
   "title" : "MII EX MolGen RiskAssessment Einflussfaktor",
   "status" : "active",
-  "date" : "2026-09-01T21:11:35+00:00",
+  "date" : "2026-09-01T21:27:10+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
