@@ -118,9 +118,9 @@ jobs:
       - name: Probe
         id: probe
         env:
-          C: ${{ secrets.SU_TERMSERV_CLIENT_CERT }}
-          K: ${{ secrets.SU_TERMSERV_CLIENT_KEY }}
-          P: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD }}
+          C: ${{ secrets.SU_TERMSERV_CLIENT_CERT || secrets.CDS_DEV_CLIENT_CERT }}
+          K: ${{ secrets.SU_TERMSERV_CLIENT_KEY || secrets.CDS_DEV_CLIENT_KEY }}
+          P: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD || secrets.CDS_DEV_CLIENT_CERT_PASSWORD }}
         run: |
           if [ -n "${C}" ] && [ -n "${K}" ] && [ -n "${P}" ]; then
             echo "has_cert=true" >> "${GITHUB_OUTPUT}"
@@ -159,10 +159,20 @@ jobs:
     # storing the same cert twice under two different secret names.
     # If your organisation already provisions CDS_DEV_CLIENT_* centrally, replace
     # this block with `secrets: inherit`.
+    #
+    # THIS MODULE: medizininformatik-initiative DOES provision them centrally, as
+    # organisation secrets CDS_DEV_CLIENT_CERT / _KEY / _CERT_PASSWORD. Rather than
+    # `secrets: inherit` (which would also hand every unrelated org secret to the
+    # reusable workflow) or storing the same certificate twice, each read prefers this
+    # repository's canonical SU_TERMSERV_* name and falls back to the organisation's
+    # CDS_DEV_* name. Setting the SU_TERMSERV_* secrets later
+    # (scripts/set-su-termserv-secrets.sh) then takes precedence with no further edit.
+    # The same fallback is in ig-publisher.yml, module-release.yml and go-publish.yml,
+    # which build the nginx client-certificate proxy for the terminology server.
     secrets:
-      CDS_DEV_CLIENT_CERT: ${{ secrets.SU_TERMSERV_CLIENT_CERT }}
-      CDS_DEV_CLIENT_KEY: ${{ secrets.SU_TERMSERV_CLIENT_KEY }}
-      CDS_DEV_CLIENT_CERT_PASSWORD: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD }}
+      CDS_DEV_CLIENT_CERT: ${{ secrets.SU_TERMSERV_CLIENT_CERT || secrets.CDS_DEV_CLIENT_CERT }}
+      CDS_DEV_CLIENT_KEY: ${{ secrets.SU_TERMSERV_CLIENT_KEY || secrets.CDS_DEV_CLIENT_KEY }}
+      CDS_DEV_CLIENT_CERT_PASSWORD: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD || secrets.CDS_DEV_CLIENT_CERT_PASSWORD }}
 
   template-repo-notice:
     name: Validation skipped on the template repo
