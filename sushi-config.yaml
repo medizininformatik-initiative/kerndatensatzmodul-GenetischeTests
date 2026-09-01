@@ -100,10 +100,14 @@ packageId: de.medizininformatikinitiative.kerndatensatz.molgen
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: "2021+"
 releaseLabel: ci-build  # Quelle gewinnt (sushi-config.yaml der Quelle) -- TODO:REVIEW Gate A: fuer ein publiziertes Release ist "Release" das erwartete Label; nicht still normalisiert
-# license:  # TODO:REVIEW Gate A -- NICHT gesetzt: die Quelle deklariert nirgends eine Lizenz
-#   (kein license-Feld in sushi-config.yaml/package.json, keine LICENSE-Datei, keine spdx-Extension
-#   in input/fsh). Das Template liefert CC-BY-4.0 als Literal; Umlizenzierung ist eine
-#   Menschenentscheidung (Spec 2.2), keine Migrations-Default.  # 
+# https://www.hl7.org/fhir/valueset-spdx-license.html
+# DECIDED at Gate A on 2026-08-28 by the module maintainer (migration report DEC-1).
+# The source declared no licence in any machine-read place; its home page stated only
+# "Der Inhalt dieser Spezifikation ist oeffentlich. Die Nachnutzungs- bzw.
+# Veroeffentlichungsansprueche sind nicht beschraenkt." CC-BY-4.0 adds an attribution
+# requirement that wording did not impose, so this is a deliberate change of terms for
+# releases from here on, not a formalisation of the 2026.0.4 statement.
+license: CC-BY-4.0
 # Must equal the publication date; go-publish.yml validates this.
 date: "2026-01-02"
 jurisdiction: urn:iso:std:iso:3166#DE "Germany" # https://www.hl7.org/fhir/valueset-jurisdiction.html

@@ -136,19 +136,10 @@ Ansprechpersonen für die fachlichen Inhalte des Moduls:
 
 ### Copyright und Lizenz
 
-<!-- Der Lizenz-Wortlaut unten ist der der QUELLE guide's own (Index.page.md,
-     "Copyright-Hinweis, Nutzungshinweise"). The module template ships a
-     die entfernte Lizenzaussage (Wortlaut in migration-log/run.log, Schritt 2.2) statement here as a literal; it was REMOVED
-     because the source asserts no CC licence, and relicensing a published
-     module is a human decision, not a migration default (migration spec 2.2).
-     `license:` in sushi-config.yaml is unset for the same reason.
-     TODO:REVIEW Gate A: decide the module's licence, then make this page,
-     sushi-config.yaml and a LICENSE file say the same thing. -->
-
 Copyright © 2022+: TMF e. V., Charlottenstraße 42, 10117 Berlin
 
-Der Inhalt dieser Spezifikation ist öffentlich. Die Nachnutzungs- bzw.
-Veröffentlichungsansprüche sind nicht beschränkt.
+Dieses Werk ist lizenziert unter der
+[Creative-Commons-Namensnennung-4.0-International-Lizenz (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.de).
 
 Zu den Nutzungsrechten der zugrunde liegenden FHIR-Technologie siehe die
 FHIR-Basisspezifikation.

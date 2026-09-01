@@ -136,20 +136,10 @@ Contacts for the domain content of this module:
 
 ### Copyright and License
 
-<!-- The licence wording below is the SOURCE guide's own (Index.page.md,
-     "Copyright-Hinweis, Nutzungshinweise"). The module template ships a
-     licence statement here as a literal; it was REMOVED because the source
-     asserts no licence of that kind, and relicensing a published module is a
-     human decision, not a migration default (migration spec 2.2). The exact
-     wording that was removed is in migration-log/run.log, step 2.2.
-     `license:` in sushi-config.yaml is unset for the same reason.
-     TODO:REVIEW Gate A: decide the module's licence, then make this page,
-     sushi-config.yaml and a LICENSE file say the same thing. -->
-
 Copyright © 2022+: TMF e. V., Charlottenstraße 42, 10117 Berlin
 
-The content of this specification is public. Reuse and republication claims are
-not restricted.
+This work is licensed under the
+[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
 For the usage rights of the underlying FHIR technology, see the FHIR base
 specification.

@@ -5,7 +5,7 @@
 **Decision requested:** approve with the listed conditions — the ① decisions below must be answered first.
 **State:** complete through build and verification.
 **Published?** No package was released to the FHIR package registry. The rendered preview is private (local build at `output/`); pushing the branch publishes it to `gh-pages` under `branches/migration-2026.0.4-template-v0.13.0/`.
-**Recommendation:** merge after Gate A answers the licence question (DEC-1), confirms the example-id rename (DEC-2) and reconciles the two CI systems (DEC-4) — everything else is either already correct or a pre-existing finding this migration only made visible.
+**Recommendation:** merged 2026-08-28. DEC-1 (licence) is closed; DEC-2 (example ids) and DEC-4 (the two CI systems) remain, and now attach to the release tag rather than to the merge — everything else is either already correct or a pre-existing finding this migration only made visible.
 
 ## How to use this report
 
@@ -27,7 +27,7 @@ The module is the MII core-dataset module for molecular genetic findings: 16 pro
 - **Build:** SUSHI (the compiler that turns FSH into FHIR resources) reports **0 errors, 0 warnings**. The IG Publisher's separate QA report lists **68 errors / 961 warnings / 0 broken links**. Two tools, two counts — QA errors do not fail the build.
 - **QA acceptance bar:** no worse than the unmigrated source. The source's own last CI run reported **113 errors**; this build reports **68**. The two are not the same measurement (③ QA-1 explains), but nothing got worse and no error sits in a page this migration wrote.
 - **Verification:** **128 IDENTISCH · 70 DIVERGIERT · 50 NICHT PRÜFBAR** — the check ran and matched · ran and found a named difference · could not run. The third is **not** a pass. **42 of the 70 divergences are one systematic false positive** (③ QA-2), re-measured three ways; the rest are named individually below.
-- **Open for humans:** **4 decisions (①)**, **4 reviews (②)**, **9 QA items (③)**; **3 of them block publication** and are listed under *Sign-off*.
+- **Open for humans:** **3 decisions (①)** (DEC-1 closed), **4 reviews (②)**, **9 QA items (③)**; **2 of them block publication** and are listed under *Sign-off*.
 - **Not checked by this migration:** clinical correctness of any prose, the genetics domain content itself, and whether the terminology bindings are the right ones. Unchanged from the source, and out of scope here.
 
 ## Where the evidence lives
@@ -113,13 +113,14 @@ Accepting these needs no action — merging accepts all of them. To reject one, 
 
 ## ① Decision queue (Gate A — someone must choose)
 
-**DEC-1 — The module declares no licence, and this migration refused to invent one** · severity **blocking** · Gate A
+**DEC-1 — Licence — ✅ DECIDED 2026-08-28: CC-BY-4.0** · severity **blocking** · Gate A · *closed*
 
 - **What it is:** The source declares no licence anywhere a machine reads it: no `license:` in `sushi-config.yaml`, none in `package.json`, no `LICENSE` file, no SPDX extension in the FSH. Its home page *does* carry a reuse statement — "Der Inhalt dieser Spezifikation ist öffentlich. Die Nachnutzungs- bzw. Veröffentlichungsansprüche sind nicht beschränkt" — but that names no licence, so it cannot go into `license:`, which takes an SPDX code. The module template ships `license: CC-BY-4.0` as a plain literal that no placeholder check flags; adopting it would have silently relicensed a published module.
 - **Where:** `sushi-config.yaml` (the `license:` block, commented out with a TODO) · `input/pagecontent/index.md` and its German mirror (the copyright section) · `input/pagecontent/metadata.md` and its mirror (the FAIR table row R1.1).
 - **If nobody acts:** the guide ships asserting no licence. Consumers have only the prose statement on the home page; the FHIR package carries no licence field; check F3 stays DIVERGIERT; the FAIR metadata row on `metadata.md` reads "TODO:REVIEW" in the published guide.
 - **Options:** (a) `CC0-1.0` → closest to the source's "reuse is not restricted" wording · (b) `CC-BY-4.0` → what the template ships and what sibling module *Biobank* declares on artefact-level evidence; **more restrictive than what the source promises**, so it is a change of terms, not a formalisation · (c) leave it undeclared → the current state, honest but incomplete.
-  **Default applied now:** (c) — nothing is asserted, and the home page carries the source's own wording verbatim.
+  **DECIDED:** (b) `CC-BY-4.0`, by the module maintainer on 2026-08-28. Applied in all five places: `sushi-config.yaml` `license:`, a new root `LICENSE` file, the copyright section of `index.md` in both languages, and the FAIR R1.1 row of `metadata.md` in both languages. Verified: the generated ImplementationGuide resource carries `license: CC-BY-4.0`.
+  **Recorded consequence:** CC BY 4.0 requires attribution, which the 2026.0.4 home-page wording ("reuse and republication claims are not restricted") did not. This is a deliberate change of terms for releases from here on, not a formalisation of what 2026.0.4 said — stated as such in `LICENSE` and in the `sushi-config.yaml` comment so no reader has to reconstruct it.
 - **Next action:** pick an SPDX id, then make three places agree: `license:` in `sushi-config.yaml`, a `LICENSE` file at the repo root, and the copyright section of `index.md` in both languages.
 - **Who decides:** the module maintainer with TF-KDS — a licence binds every consumer of the published package, and MII wants it consistent across modules.
 - **Effort · impact:** minutes to apply, but the decision itself is legal · consumer-visible.
@@ -315,7 +316,7 @@ The 50 NICHT PRÜFBAR rows are checks that could not run: mostly C4 rows needing
 Paste of `migration-log/qa-checklist.md` (GENERATED — regenerate, do not retype), plus the report-authored items:
 
 **Gate A — identity** (module maintainer, with TF-KDS)
-- [ ] **DEC-1** licence decided, and `sushi-config.yaml`, a `LICENSE` file and `index.md` made to agree — **blocks publication**
+- [x] **DEC-1** licence decided (CC-BY-4.0) and applied in all five places — *closed 2026-08-28*
 - [ ] **DEC-2** the six renamed example ids confirmed, and the mapping added to the changelog — **blocks publication**
 - [ ] **DEC-3** publisher spelling and copyright year decided
 - [ ] **DEC-4** the two CI systems reconciled and `fsh-generated/` un-half-tracked — **blocks a clean release**
