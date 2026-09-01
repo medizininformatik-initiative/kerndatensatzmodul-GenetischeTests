@@ -7,24 +7,14 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.4"
     ]
   },
-  "status": "completed",
-  "category": {
-    "coding": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-        "code": "laboratory"
-      }
-    ]
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen",
       "valueReference": {
-        "reference": "mii-exa-molgen-specimen-ffpe-tumor"
+        "reference": "Specimen/mii-exa-molgen-specimen-ffpe-tumor"
       }
     },
     {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device",
       "extension": [
         {
           "url": "device",
@@ -44,7 +34,8 @@
             ]
           }
         }
-      ]
+      ],
+      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device"
     },
     {
       "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type",
@@ -59,7 +50,6 @@
       }
     },
     {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-regions",
       "extension": [
         {
           "url": "description",
@@ -221,9 +211,19 @@
             ]
           }
         }
-      ]
+      ],
+      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-regions"
     }
   ],
+  "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+      }
+    ]
+  },
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient"
   }

@@ -156,8 +156,8 @@
     "fshName": "mii-exa-molgen-device-tso500-lot",
     "fshType": "Instance",
     "fshFile": "GenomicStudyTSO500.fsh",
-    "startLine": 29,
-    "endLine": 42
+    "startLine": 31,
+    "endLine": 44
   },
   {
     "outputFile": "DeviceDefinition-mii-exa-molgen-devicedef-tso500.json",
@@ -165,7 +165,23 @@
     "fshType": "Instance",
     "fshFile": "GenomicStudyTSO500.fsh",
     "startLine": 12,
-    "endLine": 26
+    "endLine": 28
+  },
+  {
+    "outputFile": "DiagnosticReport-mii-exa-molgen-befundbericht-1.json",
+    "fshName": "mii-exa-molgen-befundbericht-1",
+    "fshType": "Instance",
+    "fshFile": "MolekulargenetischerBefundbericht.fsh",
+    "startLine": 188,
+    "endLine": 216
+  },
+  {
+    "outputFile": "DiagnosticReport-mii-exa-molgen-befundbericht-2.json",
+    "fshName": "mii-exa-molgen-befundbericht-2",
+    "fshType": "Instance",
+    "fshFile": "MolekulargenetischerBefundbericht.fsh",
+    "startLine": 218,
+    "endLine": 271
   },
   {
     "outputFile": "DiagnosticReport-mii-exa-molgen-befundbericht-comprehensive-wes.json",
@@ -176,48 +192,32 @@
     "endLine": 227
   },
   {
-    "outputFile": "DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-1.json",
-    "fshName": "mii-exa-molgen-molekulargenetischer-befundbericht-1",
-    "fshType": "Instance",
-    "fshFile": "MolekulargenetischerBefundbericht.fsh",
-    "startLine": 188,
-    "endLine": 216
-  },
-  {
-    "outputFile": "DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-2.json",
-    "fshName": "mii-exa-molgen-molekulargenetischer-befundbericht-2",
-    "fshType": "Instance",
-    "fshFile": "MolekulargenetischerBefundbericht.fsh",
-    "startLine": 218,
-    "endLine": 271
-  },
-  {
-    "outputFile": "DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion.json",
-    "fshName": "mii-exa-molgen-molekulargenetischer-befundbericht-fgfr2-fusion",
+    "outputFile": "DiagnosticReport-mii-exa-molgen-befundbericht-fgfr2-fusion.json",
+    "fshName": "mii-exa-molgen-befundbericht-fgfr2-fusion",
     "fshType": "Instance",
     "fshFile": "additional-examples.fsh",
     "startLine": 864,
     "endLine": 879
   },
   {
-    "outputFile": "DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-srcc.json",
-    "fshName": "mii-exa-molgen-molekulargenetischer-befundbericht-srcc",
+    "outputFile": "DiagnosticReport-mii-exa-molgen-befundbericht-srcc.json",
+    "fshName": "mii-exa-molgen-befundbericht-srcc",
     "fshType": "Instance",
     "fshFile": "additional-examples.fsh",
     "startLine": 687,
     "endLine": 722
   },
   {
-    "outputFile": "DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel.json",
-    "fshName": "mii-exa-molgen-molekulargenetischer-befundbericht-trurisk-panel",
+    "outputFile": "DiagnosticReport-mii-exa-molgen-befundbericht-trurisk-panel.json",
+    "fshName": "mii-exa-molgen-befundbericht-trurisk-panel",
     "fshType": "Instance",
     "fshFile": "MolekulargenetischerBefundbericht.fsh",
     "startLine": 304,
     "endLine": 332
   },
   {
-    "outputFile": "DiagnosticReport-mii-exa-molgen-molekulargenetischer-befundbericht-tumorboard-3.json",
-    "fshName": "mii-exa-molgen-molekulargenetischer-befundbericht-tumorboard-3",
+    "outputFile": "DiagnosticReport-mii-exa-molgen-befundbericht-tumorboard-3.json",
+    "fshName": "mii-exa-molgen-befundbericht-tumorboard-3",
     "fshType": "Instance",
     "fshFile": "MolekulargenetischerBefundbericht.fsh",
     "startLine": 275,
@@ -636,16 +636,16 @@
     "fshName": "mii-exa-molgen-genomic-study-analysis-tso500-libprep",
     "fshType": "Instance",
     "fshFile": "GenomicStudyTSO500.fsh",
-    "startLine": 58,
-    "endLine": 102
+    "startLine": 82,
+    "endLine": 126
   },
   {
     "outputFile": "Procedure-mii-exa-molgen-genomic-study-analysis-tso500-sequencing.json",
     "fshName": "mii-exa-molgen-genomic-study-analysis-tso500-sequencing",
     "fshType": "Instance",
     "fshFile": "GenomicStudyTSO500.fsh",
-    "startLine": 105,
-    "endLine": 125
+    "startLine": 129,
+    "endLine": 149
   },
   {
     "outputFile": "Procedure-mii-exa-molgen-genomic-study-analysis-wes-bioinformatics.json",
@@ -700,8 +700,8 @@
     "fshName": "mii-exa-molgen-genomic-study-tso500",
     "fshType": "Instance",
     "fshFile": "GenomicStudyTSO500.fsh",
-    "startLine": 45,
-    "endLine": 55
+    "startLine": 69,
+    "endLine": 79
   },
   {
     "outputFile": "RiskAssessment-mii-exa-molgen-prs-brca1.json",
@@ -846,6 +846,14 @@
     "fshFile": "GenomicStudyComprehensive.fsh",
     "startLine": 124,
     "endLine": 136
+  },
+  {
+    "outputFile": "Specimen-mii-exa-molgen-specimen-ffpe-tumor.json",
+    "fshName": "mii-exa-molgen-specimen-ffpe-tumor",
+    "fshType": "Instance",
+    "fshFile": "GenomicStudyTSO500.fsh",
+    "startLine": 54,
+    "endLine": 66
   },
   {
     "outputFile": "Specimen-mii-exa-molgen-specimen-srcc-2.json",

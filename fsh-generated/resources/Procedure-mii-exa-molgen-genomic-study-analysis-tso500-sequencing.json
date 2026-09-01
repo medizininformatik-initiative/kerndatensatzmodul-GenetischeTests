@@ -7,24 +7,14 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.4"
     ]
   },
-  "status": "completed",
-  "category": {
-    "coding": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-        "code": "laboratory"
-      }
-    ]
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen",
       "valueReference": {
-        "reference": "mii-exa-molgen-specimen-ffpe-tumor"
+        "reference": "Specimen/mii-exa-molgen-specimen-ffpe-tumor"
       }
     },
     {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device",
       "extension": [
         {
           "url": "device",
@@ -32,7 +22,8 @@
             "reference": "Device/mii-exa-molgen-device-illumina-novaseq"
           }
         }
-      ]
+      ],
+      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device"
     },
     {
       "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type",
@@ -47,7 +38,6 @@
       }
     },
     {
-      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-metrics",
       "extension": [
         {
           "url": "read-depth",
@@ -71,9 +61,19 @@
           "url": "metrics-description",
           "valueString": "Mean target coverage 1000X; 95% der Zielregionen >250X; Q30 >90%; FFPE-bedingte Qualitätsfilter angewandt"
         }
-      ]
+      ],
+      "url": "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-metrics"
     }
   ],
+  "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+      }
+    ]
+  },
   "subject": {
     "reference": "Patient/mii-exa-molgen-patient"
   }

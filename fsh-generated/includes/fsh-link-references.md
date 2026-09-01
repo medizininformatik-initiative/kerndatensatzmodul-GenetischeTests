@@ -26,6 +26,7 @@
 [mii-exa-molgen-family-member-history-mi]: FamilyMemberHistory-mii-exa-molgen-family-member-history-mi.html
 [mii-exa-molgen-family-member-history-retinal]: FamilyMemberHistory-mii-exa-molgen-family-member-history-retinal.html
 [mii-exa-molgen-documentreference-fastq]: DocumentReference-mii-exa-molgen-documentreference-fastq.html
+[mii-exa-molgen-specimen-ffpe-tumor]: Specimen-mii-exa-molgen-specimen-ffpe-tumor.html
 [mii-exa-molgen-genomic-study-analysis-braf]: Procedure-mii-exa-molgen-genomic-study-analysis-braf.html
 [mii-exa-molgen-genomic-study-analysis-cornelia-de-lange]: Procedure-mii-exa-molgen-genomic-study-analysis-cornelia-de-lange.html
 [mii-exa-molgen-genomic-study-analysis-trurisk-panel]: Procedure-mii-exa-molgen-genomic-study-analysis-trurisk-panel.html

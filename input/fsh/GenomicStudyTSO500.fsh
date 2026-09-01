@@ -20,7 +20,9 @@ Description: "Katalogeintrag des TSO500 v2 Capture Panels: 523 Gene für SNV/Ind
 * deviceName[+].name = "TruSight Oncology 500 v2"
 * deviceName[=].type = #model-name
 * modelNumber = "20130527"
-* version.value = "2"
+// DeviceDefinition.version ist in FHIR R4 ein einfacher string (0..*);
+// die BackboneElement-Form mit .value gibt es erst in R5.
+* version = "2"
 * specialization.systemType = "Hybrid capture-based comprehensive genomic profiling panel for solid tumors (RUO)"
 * specialization.version = "523 SNV/Indel genes; 59 CNV genes; 23 DNA rearrangement genes; 55 RNA fusion/splice genes; TMB; MSI; HRD; 1.94 Mb panel size"
 * type.text = "Comprehensive genomic profiling capture panel"
@@ -40,6 +42,28 @@ Description: "Konkrete Kit-Charge des TSO500 v2 Panels im Labor, verweist auf de
 * expirationDate = "2026-12-31"
 * type.text = "Comprehensive genomic profiling capture panel (TSO500 v2)"
 * status = #active
+
+// === Probenmaterial: FFPE-Tumorgewebe ===
+// TSO500 v2 ist auf FFPE-Gewebe ausgelegt -- Illumina gibt fuer die v2 einen
+// abgesenkten Input von 10-30 ng DNA und 20-40 ng RNA an, gerade damit
+// limitiertes und degradiertes FFPE-Material verwendbar bleibt.
+// Kodierung: SNOMED CT 441652008 als Probenart (im biobank-ValueSet
+// mii-vs-biobank-probenart-sct, Descendant von 123038009 Specimen) und
+// 39607008 als Entnahmeort (mii-vs-biobank-body-structures-sct, Descendant
+// von 123037004 Body structure); beide gegen den Terminologieserver validiert.
+Instance: mii-exa-molgen-specimen-ffpe-tumor
+InstanceOf: https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore
+Usage: #example
+Title: "FFPE-Tumorgewebe (NSCLC) fuer TSO500"
+Description: "Formalinfixiertes, in Paraffin eingebettetes Tumorgewebe aus der Lunge, Ausgangsmaterial der TSO500-v2-Analyse bei nicht-kleinzelligem Lungenkarzinom"
+* status = #available
+* type = $SCT#441652008 "Formalin-fixed paraffin-embedded tissue specimen"
+* subject = Reference(mii-exa-molgen-patient)
+* receivedTime = "2024-05-16T09:20:00+02:00"
+* collection.collectedDateTime = "2024-05-15"
+* collection.bodySite = $SCT#39607008 "Lung structure"
+* identifier.system = "https://www.charite.de/fhir/sid/bioproben"
+* identifier.value = "specimen_tso500_ffpe_01"
 
 // === GenomicStudy: TSO500 NSCLC Profiling ===
 Instance: mii-exa-molgen-genomic-study-tso500
