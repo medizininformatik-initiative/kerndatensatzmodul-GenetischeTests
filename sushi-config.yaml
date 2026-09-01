@@ -249,25 +249,48 @@ extension:
 # `main`. Fixed versions only — never `current`/`dev` (the go-publish workflow and the convention
 # check reject floating versions; the dependency checker proposes bumps).
 dependencies:
-  # Die SECHS Pins der Quelle, unveraendert uebernommen (Spec 2.1: die Quelle gewinnt).
-  # Die Quelle schrieb x-ranges (1.5.x, 2026.0.x, 3.0.x, 6.1.x); das Template und die
-  # convention-check des Moduls verlangen feste Versionen. Aufgeloest wurde auf GENAU die
-  # Version, die SUSHI beim Quell-Baseline-Lauf am 2026-08-28 selbst gezogen hat
-  # (migration-log/sushi-source-baseline.log) -- eine Festschreibung des Ist-Zustands,
-  # kein Versions-Bump. TODO:REVIEW Gate A.
-  hl7.fhir.uv.genomics-reporting: 3.0.0        # Quelle: 3.0.x
-  de.medizininformatikinitiative.kerndatensatz.meta: 2026.0.0   # Quelle: 2026.0.x
-  de.basisprofil.r4: 1.5.4                     # Quelle: 1.5.x
-  de.medizininformatikinitiative.kerndatensatz.base: 2026.0.1   # Quelle: 2026.0.x
-  de.medizininformatikinitiative.kerndatensatz.biobank: 2026.0.1 # Quelle: 2026.0.x
-  hl7.terminology.r4: 6.1.0                    # Quelle: 6.1.x -- das Template pinnt 7.3.0;
-                                               # die Quelle gewinnt, ein THO-Sprung 6->7 ist
-                                               # eine fachliche Entscheidung (Gate A), keine Migration.
-  # Template-Maschinerie, NICHT Quell-Identitaet (SKILL.md Schritt 3): die CRMI-meta.profile-
-  # Anspruechen des Templates brauchen dieses Paket. Gate A.
+  # NO INLINE COMMENT AFTER A VERSION. SUSHI strips it correctly, but the IG
+  # Publisher parses this file with its own reader and takes everything up to the
+  # end of the line as the version -- "Unable to install de.basisprofil.r4#1.5.4
+  # # Quelle: 1.5.x: Invalid criteria". It stays hidden for as long as SUSHI has
+  # already put the package in ~/.fhir/packages, which is why three green builds
+  # did not reveal it; the first dependency the cache does not hold breaks the run.
+  # Keep every note ABOVE its line.
+
+  # Source pin: 3.0.x
+  hl7.fhir.uv.genomics-reporting: 3.0.0
+
+  # Source pin: 2026.0.x, resolved to 2026.0.0 at migration time.
+  # Bumped 2026-09-01 to the 2027 ballot release candidate (there is no released
+  # 2027.0.0 yet; dist-tags.latest still points at 2026.0.0). Measured: identical
+  # canonical set, no artefact removed, this module's generated resources byte-identical.
+  de.medizininformatikinitiative.kerndatensatz.meta: 2027.0.0-ballot.rc3
+
+  # Source pin: 1.5.x, resolved to 1.5.4 at migration time.
+  # Bumped 2026-09-01 to 1.6.0 -- a FINAL release and the registry's dist-tags.latest.
+  de.basisprofil.r4: 1.6.0
+
+  # Source pin: 2026.0.x, resolved to 2026.0.1 at migration time.
+  # Bumped 2026-09-01 to the 2027 ballot release candidate, same measurement as meta.
+  # Of the 16 resources whose content changed across both packages, 3 are referenced
+  # by this module (Diagnose, Patient, PatientPseudonymisiert); every change is
+  # additive (new 0..1 / 0..* extensions) and one binding on address.country was
+  # REMOVED, i.e. loosened. Nothing was deleted or tightened.
+  de.medizininformatikinitiative.kerndatensatz.base: 2027.0.0-ballot.rc1
+
+  # Source pin: 2026.0.x
+  de.medizininformatikinitiative.kerndatensatz.biobank: 2026.0.1
+
+  # Source pin: 6.1.x. The module template pins 7.3.0; the source wins here, because
+  # a THO 6 -> 7 jump is a terminology decision (Gate A), not a migration step.
+  hl7.terminology.r4: 6.1.0
+
+  # Template machinery, NOT source identity (migration skill step 3): the template's
+  # CRMI meta.profile claims require this package. Gate A.
   hl7.fhir.uv.crmi: 2.0.0
-  # Direkt gepinnt gegen die Auto-Injection des IG Publishers; SUSHI loeste beim Quell-Baseline
-  # "latest" auf 5.3.0 auf -- also der Ist-Zustand, festgeschrieben.
+
+  # Pinned directly against the IG Publisher's auto-injection; SUSHI resolved "latest"
+  # to 5.3.0 at the source baseline, so this freezes the state that was measured.
   hl7.fhir.uv.extensions.r4: 5.3.0
 pages:
   index.md:
