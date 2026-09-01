@@ -1,0 +1,2154 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artefaktübersicht - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2026.0.4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link href="assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
+<link href="assets/css/template-base.css" rel="stylesheet"/>
+
+<link href="assets/css/num-diz.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"18"}
+    h3,h4,h5,h6{--heading-prefix:"18.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Branding override for the fhir2.base.template header placeholder
+     (base ships includes/fragment-header.html as a single comment; it is included
+     inside "#segment-header > .container", before the #ig-status block).
+     Language handling: only the asset and its descriptive alt text switch on
+     include.lang (the pattern kerndatensatz-basis uses); no translatable UI
+     strings are hard-coded.
+     Brand handling: the project logo additionally switches on
+     site.data.brand.design (input/data/brand.json in the consuming IG, see
+     docs/styleguide.md §10). Only the exact value 'mii' selects the MII
+     logos - anything else, including no brand.json at all, falls through to
+     the NUM-DIZ default.
+     Two logos, mirroring kerndatensatz-basis: the HL7 FHIR logo (links to the
+     FHIR spec) in #family-nav, and the project logo in #project-nav.
+     fhir-logo-www.png is shipped by fhir2.base.template
+     (content/assets/images/), so it resolves from the inherited assets without
+     shipping it here. -->
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://hl7.org/fhir">
+    <img height="50" alt="HL7 FHIR" src="assets/images/fhir-logo-www.png"/>
+  </a>
+</div>
+<div id="project-nav">
+
+  <a id="project-logo" no-external="true" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+    <img height="50" alt="NUM-DIZ (Netzwerk Universitätsmedizin — Datenintegrationszentrum)" src="assets/images/logo-num-diz-de.svg"/>
+
+  </a>
+
+</div>
+<!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+     is the untouched default. Logic in assets/js/font-size-control.js, the
+     zoom mapping + button styling in template-base.css ("font-size control"
+     block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
+     on include.lang. REMOVAL: delete this block, the js file and the CSS
+     block - one commit, styleguide §5a. -->
+
+<div class="ig-fontsize" role="group" aria-label="Schriftgröße">
+  <button type="button" data-level="0" aria-pressed="true" aria-label="Schriftgröße: Standard">A</button>
+  <button type="button" data-level="1" aria-pressed="false" aria-label="Schriftgröße: größer">A</button>
+  <button type="button" data-level="2" aria-pressed="false" aria-label="Schriftgröße: am größten">A</button>
+</div>
+
+<script src="assets/js/font-size-control.js" defer></script>
+<!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+     patches the Bootstrap-3 components the publisher renders - navbar
+     dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
+     (structure-tabs) the full ARIA tabs pattern, alerts live-region
+     announcements. `defer` guarantees it executes AFTER the parser-inserted
+     bootstrap.min.js at the end of the body. Vendored from
+     paypal/bootstrap-accessibility-plugin @ v1.0.7 (the admin-ch fork was
+     evaluated and rejected: 151 commits behind upstream, its 6 deltas are
+     site-specific tab tweaks). REMOVAL: delete this tag, both vendored
+     assets and the fragment-css link - guard test pins the hashes. -->
+<script src="assets/js/bootstrap-accessibility.min.js" defer></script>
+<!-- Back-to-top button: appears after one viewport of scrolling (logic in
+     assets/js/back-to-top.js, styling in template-base.css "back-to-top"
+     block). Rendered here inside #segment-header, which is OUTSIDE the
+     data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
+     this block, the js file and the CSS block - one commit, styleguide §8. -->
+
+<button type="button" class="ig-back-to-top" aria-label="Zurück zum Seitenanfang">↑</button>
+
+<script src="assets/js/back-to-top.js" defer></script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII Implementierungsleitfaden Kerndatensatz-Modul Molekulargenetischer Befundbericht</span>
+            <br/>
+            <span style="display:inline-block;">2026.0.4 - 
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- German translation of input/includes/menu.xml.
+     Keep the href targets IDENTICAL to the source menu; translate only labels.
+     Structure notes (OPTIONAL entries, link-only entries, the interim
+     meta-wiki links) are documented in the source menu's header and in
+     docs/page-structure.md / docs/optional-pages.md. -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Startseite</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Anleitung<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="guidance.html">Anleitung</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
+      <li><a href="qualitaetsbericht.html">Qualitätsbericht</a></li>
+      <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
+      <li><a href="logical-models.html">Datensätze und Beschreibungen</a></li>
+      <li><a href="uml-diagrams.html">UML-Diagramme</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <!-- Eltern-Eintrag und die ersten vier Einträge verlinken die KDS-weiten
+         Konformitätsregeln des Meta-Moduls (INTERIM: Meta-Wiki; siehe
+         Quell-Menü). -->
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Konformität<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Konformität</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">Allgemeine Anforderungen</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must-Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Umgang mit fehlenden Daten</a></li>
+      <li><a href="security-and-privacy.html">Sicherheit und Datenschutz</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artefakte<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="artifacts.html">Artefakt-Übersicht</a></li>
+      <li><a href="profiles.html">Profile</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="extensions.html">Extensions</a></li>
+      <li><a href="capability-statements.html">CapabilityStatements</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="search-parameters.html">Suchparameter</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="logical-models.html">Logische Modelle</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="value-sets.html">ValueSets</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="examples.html">Beispiele</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Änderungshistorie</a></li>
+  <li class="dropdown">
+    <!-- Der Eltern-Eintrag verlinkt bewusst das PFLICHT-Kind (Versionierung):
+         die Metadaten-Übersicht ist optional. -->
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadaten<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="metadata.html">Metadaten-Übersicht</a></li>
+      <li><a href="version-history.html">Versionierung</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Sprache:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/artifacts.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Inhaltsverzeichnis</b></a></li><li><b>Artefaktübersicht</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht - Local Development build (v2026.0.4) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Artefaktübersicht</h2>
+  
+  <p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
+  
+  Für die aktuelle Seite ist keine Übersetzung verfügbar, daher wurde sie in der Standardsprache dargestellt.
+  
+  </p>
+  
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc">
+   <p>Inhalt:</p>
+   <ul>
+      <li>
+         <a href="#1">Verhalten: CapabilityStatements</a>
+      </li>
+      <li>
+         <a href="#2">Verhalten: Suchparameter (SearchParameter)</a>
+      </li>
+      <li>
+         <a href="#3">Strukturen: Logische Modelle</a>
+      </li>
+      <li>
+         <a href="#4">Strukturen: Ressourcenprofile</a>
+      </li>
+      <li>
+         <a href="#5">Strukturen: Extension-Definitionen</a>
+      </li>
+      <li>
+         <a href="#6">Terminologie: ValueSets</a>
+      </li>
+      <li>
+         <a href="#7">Beispiel: Beispielinstanzen</a>
+      </li>
+      <li>
+         <a href="#8">Sonstige</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml">
+   <p>Diese Seite bietet eine Liste der FHIR-Artefakte, die in diesem Implementierungsleitfaden definiert sind.</p>
+   <a name="1"> </a>
+   <h3>Verhalten: CapabilityStatements </h3>
+    <p>Die folgenden Artefakte definieren die spezifischen Fähigkeiten, die verschiedene Systemtypen haben müssen, um diesem Implementierungsleitfaden zu entsprechen. Von Systemen, die mit dem Implementierungsleitfaden konform sind, wird erwartet, dass sie die Konformität mit einem oder mehreren der folgenden Capability Statements deklarieren.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-mii-cps-molgen-capabilitystatement.html"
+                  title="CapabilityStatement/mii-cps-molgen-capabilitystatement">
+                  <span title="CapabilityStatement/mii-cps-molgen-capabilitystatement">MII CPS MolGen CapabilityStatement
+</span>
+               </a>
+            </td>
+            <td>
+<p>Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul MolGen der Medizininformatik Initiative zu implementieren.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Verhalten: Suchparameter (SearchParameter) </h3>
+    <p>Diese definieren die Eigenschaften, nach denen ein RESTful-Server durchsucht werden kann. Sie können auch zum Sortieren und Einbeziehen verwandter Ressourcen verwendet werden.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-mii-sp-molgen-diagnostic-report-genomic-study.html"
+                  title="SearchParameter/mii-sp-molgen-diagnostic-report-genomic-study">
+                  <span title="SearchParameter/mii-sp-molgen-diagnostic-report-genomic-study">mii-sp-molgen-diagnostic-report-genomic-study
+</span>
+               </a>
+            </td>
+            <td>
+<p>Suchparameter für GenomicStudy Referenz in DiagnosticReport</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-mii-sp-molgen-diagnostic-report-recommended-action.html"
+                  title="SearchParameter/mii-sp-molgen-diagnostic-report-recommended-action">
+                  <span title="SearchParameter/mii-sp-molgen-diagnostic-report-recommended-action">mii-sp-molgen-diagnostic-report-recommended-action
+</span>
+               </a>
+            </td>
+            <td>
+<p>Suchparameter für empfohlene Maßnahmen in DiagnosticReport</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-mii-sp-molgen-genomic-study-analysis-device.html"
+                  title="SearchParameter/mii-sp-molgen-genomic-study-analysis-device">
+                  <span title="SearchParameter/mii-sp-molgen-genomic-study-analysis-device">mii-sp-molgen-genomic-study-analysis-device
+</span>
+               </a>
+            </td>
+            <td>
+<p>Suchparameter für verwendetes Gerät in GenomicStudyAnalysis</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-mii-sp-molgen-genomic-study-analysis-method.html"
+                  title="SearchParameter/mii-sp-molgen-genomic-study-analysis-method">
+                  <span title="SearchParameter/mii-sp-molgen-genomic-study-analysis-method">mii-sp-molgen-genomic-study-analysis-method
+</span>
+               </a>
+            </td>
+            <td>
+<p>Suchparameter für Methoden-Typ in GenomicStudyAnalysis</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-mii-sp-molgen-genomic-study-analysis-regions-studied.html"
+                  title="SearchParameter/mii-sp-molgen-genomic-study-analysis-regions-studied">
+                  <span title="SearchParameter/mii-sp-molgen-genomic-study-analysis-regions-studied">mii-sp-molgen-genomic-study-analysis-regions-studied
+</span>
+               </a>
+            </td>
+            <td>
+<p>Suchparameter für untersuchte Gene/Regionen in GenomicStudyAnalysis</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-mii-sp-molgen-genomic-study-analysis-specimen.html"
+                  title="SearchParameter/mii-sp-molgen-genomic-study-analysis-specimen">
+                  <span title="SearchParameter/mii-sp-molgen-genomic-study-analysis-specimen">mii-sp-molgen-genomic-study-analysis-specimen
+</span>
+               </a>
+            </td>
+            <td>
+<p>Suchparameter für Specimen in GenomicStudyAnalysis</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Strukturen: Logische Modelle </h3>
+    <p>Diese definieren Datenmodelle, die den von diesem Implementierungsleitfaden abgedeckten Bereich in geschäftsfreundlicheren Begriffen darstellen als die zugrunde liegenden FHIR-Ressourcen.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-LogicalModelMolGen.html"
+                  title="StructureDefinition/LogicalModelMolGen">
+                  <span title="StructureDefinition/LogicalModelMolGen">MII LM MolGen LogicalModel
+</span>
+               </a>
+            </td>
+            <td>
+<p>LogicalModel des MII Moduls Molekulargenetischer Befundbericht</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Strukturen: Ressourcenprofile </h3>
+    <p>Diese definieren Einschränkungen für FHIR-Ressourcen für Systeme, die mit dem Implementierungsleitfaden konform sind.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-molgen-anforderung-genetischer-test.html"
+                  title="StructureDefinition/mii-pr-molgen-anforderung-genetischer-test">
+                  <span title="StructureDefinition/mii-pr-molgen-anforderung-genetischer-test">MII PR MolGen Anforderung genetischer Test
+</span>
+               </a>
+            </td>
+            <td>
+<p>Der Laborauftrag oder die Anfrage, die die Durchführung des genetischen Tests auslöst.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-molgen-diagnostische-implikation.html"
+                  title="StructureDefinition/mii-pr-molgen-diagnostische-implikation">
+                  <span title="StructureDefinition/mii-pr-molgen-diagnostische-implikation">MII PR MolGen Diagnostische Implikation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Dieses Profil beschreibt den Zusammenhang zwischen einem oder mehreren Genotyp/Haplotyp/Varianten und Beweisen für oder gegen eine bestimmte Krankheit.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.html"
+                  title="StructureDefinition/mii-pr-molgen-empfohlene-folgemassnahme">
+                  <span title="StructureDefinition/mii-pr-molgen-empfohlene-folgemassnahme">MII PR MolGen Empfohlene Folgemaßnahme
+</span>
+               </a>
+            </td>
+            <td>
+<p>Das Profil dieser Task Ressource beschreibt die empfohlenen Folgemaßnahmen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-molgen-familienanamnese.html"
+                  title="StructureDefinition/mii-pr-molgen-familienanamnese">
+                  <span title="StructureDefinition/mii-pr-molgen-familienanamnese">MII PR MolGen Familienanamnese
+</span>
+               </a>
+            </td>
+            <td>
+<p>Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-molgen-genomic-study.html"
+                  title="StructureDefinition/mii-pr-molgen-genomic-study">
+                  <span title="StructureDefinition/mii-pr-molgen-genomic-study">MII PR MolGen Genomic Study
+</span>
+               </a>
+            </td>
+            <td>
+<p>Genomic Study ist ein Profil, dass die Durchführung von übergeorndenten molekulargenetischen Untersuchungen (Studies) beschreibt. Einzelne Assays werden dann als GenomicStudyAnalysis abgebildet. Es ist vom GenomicStudy-Profils aus dem Genomics Reporting IG abgeleitet .</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-molgen-genomic-study-analysis.html"
+                  title="StructureDefinition/mii-pr-molgen-genomic-study-analysis">
+                  <span title="StructureDefinition/mii-pr-molgen-genomic-study-analysis">MII PR MolGen Genomic Study Analysis
+</span>
+               </a>
+            </td>
+            <td>
+<p>Genomic Study Analysis ist ein Profil, das die Durchführung von konkreten molekulargenetischen Methoden und Assays beschreibt. Es ist vom GenomicStudyAnalysis-Profil aus dem Genomics Reporting IG abgeleitet. Die Darstellung über GenomicStudyAnalysis ist präziser als die vorherige UntersuchteRegion, da sie eine klare Repräsentation ermöglicht, welche Regionen mit welchem Assay untersucht wurden und welche Bereiche callable bzw. nicht-callable waren. Dies ermöglicht eine genauere Qualitätsbewertung und Interpretation der Ergebnisse, insbesondere bei negativen Befunden.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-molgen-genotyp.html"
+                  title="StructureDefinition/mii-pr-molgen-genotyp">
+                  <span title="StructureDefinition/mii-pr-molgen-genotyp">MII PR MolGen Genotyp
+</span>
+               </a>
+            </td>
+            <td>
+<p>Dieses Profil beschreibt die Feststellung eines bestimmten Genotyps auf der Grundlage einer oder mehrerer Varianten oder Haplotypen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-molgen-medikationsempfehlung.html"
+                  title="StructureDefinition/mii-pr-molgen-medikationsempfehlung">
+                  <span title="StructureDefinition/mii-pr-molgen-medikationsempfehlung">MII PR MolGen Medikationsempfehlung
+</span>
+               </a>
+            </td>
+            <td>
+<p>Das Profil dieser Task Ressource dient dazu, auf der Grundlage der genetischen Ergebnisse medikamanetöse Maßnahmen vorzuschlagen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html"
+                  title="StructureDefinition/mii-pr-molgen-mikrosatelliteninstabilitaet">
+                  <span title="StructureDefinition/mii-pr-molgen-mikrosatelliteninstabilitaet">MII PR MolGen Mikrosatelliteninstabilität
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mikrosatelliteninstabilität (MSI) ist ein Zustand genetischer Hypermutabilität (Neigung zu Mutationen), der aus einer gestörten DNA-Mismatch-Reparatur (MMR) resultiert. Das Profil basiert auf dem CG STU3 MolecularBiomarker-Profil</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-molgen-molekularer-biomarker.html"
+                  title="StructureDefinition/mii-pr-molgen-molekularer-biomarker">
+                  <span title="StructureDefinition/mii-pr-molgen-molekularer-biomarker">MII PR MolGen Molekulare Biomarker
+</span>
+               </a>
+            </td>
+            <td>
+<p>Dieses Profil beschreibt molekulare Biomarker, z.B. genübergreifende Biomarker wie Tumormutationslast (TMB) oder Mikrosatelliteninstabilität (MSI). Es ist ein abstraktes Profil, konkrete Biomarker-Profile erben davon.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html"
+                  title="StructureDefinition/mii-pr-molgen-molekulare-konsequenz">
+                  <span title="StructureDefinition/mii-pr-molgen-molekulare-konsequenz">MII PR MolGen Molekulare Konsequenz
+</span>
+               </a>
+            </td>
+            <td>
+<p>Dieses Profil beschreibt den Zusammenhang von bestimmten Varianten, Haplotypen oder Genotypen und bestimmten Konsequenzen auf molekularer Ebene.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.html"
+                  title="StructureDefinition/mii-pr-molgen-molekulargenetischer-befundbericht">
+                  <span title="StructureDefinition/mii-pr-molgen-molekulargenetischer-befundbericht">MII PR MolGen Molekulargenetischer Befundbericht
+</span>
+               </a>
+            </td>
+            <td>
+<p>Der DiagnosticReport ist zentraler Bestandteil aller genetischen Befundberichte und enthält Metadaten über den gesamten Bericht sowie alle relevanten Informationen, die im Rahmen der molekulargenetischen Analyse gefunden wurden.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-molgen-mutationslast.html"
+                  title="StructureDefinition/mii-pr-molgen-mutationslast">
+                  <span title="StructureDefinition/mii-pr-molgen-mutationslast">MII PR MolGen Mutationslast
+</span>
+               </a>
+            </td>
+            <td>
+<p>Dieses Profil beschreibt die Gesamtzahl der in der DNA von Krebszellen gefundenen Mutationen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-molgen-polygener-risiko-score.html"
+                  title="StructureDefinition/mii-pr-molgen-polygener-risiko-score">
+                  <span title="StructureDefinition/mii-pr-molgen-polygener-risiko-score">MII PR MolGen Polygener Risiko Score
+</span>
+               </a>
+            </td>
+            <td>
+<p>Profil für Polygenen Risiko Score</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-molgen-therapeutische-implikation.html"
+                  title="StructureDefinition/mii-pr-molgen-therapeutische-implikation">
+                  <span title="StructureDefinition/mii-pr-molgen-therapeutische-implikation">MII PR MolGen Therapeutische Implikation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Dieses Profil beschreibt den möglichen Einfluss genetischer Merkmale auf eine medikamentöse oder nicht-medikamentöse Therapie.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-molgen-variante.html"
+                  title="StructureDefinition/mii-pr-molgen-variante">
+                  <span title="StructureDefinition/mii-pr-molgen-variante">MII PR MolGen Variante
+</span>
+               </a>
+            </td>
+            <td>
+<p>Dieses Profil ermöglicht eine vollständige Beschreibung der gefundenen Variante unter Verwendung von Eigenschaften aus einer Vielzahl von Testmethoden.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Strukturen: Extension-Definitionen </h3>
+    <p>Diese definieren Einschränkungen für FHIR-Datentypen für Systeme, die mit diesem Implementierungsleitfaden konform sind.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-ex-molgen-verwandtschaftsgrad.html"
+                  title="StructureDefinition/mii-ex-molgen-verwandtschaftsgrad">
+                  <span title="StructureDefinition/mii-ex-molgen-verwandtschaftsgrad">MII EX Mol Gen Verwandtschaftsgrad
+</span>
+               </a>
+            </td>
+            <td>
+<p>Extension erlaubt die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-ex-molgen-empfohlene-massnahme.html"
+                  title="StructureDefinition/mii-ex-molgen-empfohlene-massnahme">
+                  <span title="StructureDefinition/mii-ex-molgen-empfohlene-massnahme">MII EX MolGen Empfohlene Maßnahme
+</span>
+               </a>
+            </td>
+            <td>
+<p>Die Extension verweist auf eine vorgeschlagene Maßnahme, die auf der Grundlage der Ergebnisse des Befundberichts empfohlen wird.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-ex-molgen-familiare-linie.html"
+                  title="StructureDefinition/mii-ex-molgen-familiare-linie">
+                  <span title="StructureDefinition/mii-ex-molgen-familiare-linie">MII EX MolGen Familiare Linie
+</span>
+               </a>
+            </td>
+            <td>
+<p>Extension erlaubt die Angabe der familiären Linie zwischen Patient und Familienangehörigen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-ex-molgen-risk-assessment-einflussfaktor.html"
+                  title="StructureDefinition/mii-ex-molgen-risk-assessment-einflussfaktor">
+                  <span title="StructureDefinition/mii-ex-molgen-risk-assessment-einflussfaktor">MII EX MolGen RiskAssessment Einflussfaktor
+</span>
+               </a>
+            </td>
+            <td>
+<p>Die Extension erweitert RiskAssessment.prediction um die Möglichkeit, weitere ausschlaggebende Faktoren mit Einfluss auf die Risikoberechnung anzugeben.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-ex-molgen-verwandtschaftsverhaeltnis.html"
+                  title="StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis">
+                  <span title="StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis">MII EX MolGen Verwandtschaftsverhaeltnis
+</span>
+               </a>
+            </td>
+            <td>
+<p>Extension erlaubt die Angabe eines Verwandtschaftsverhältnisses zwischen Patient und Familienangehörigen.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Terminologie: ValueSets </h3>
+    <p>Diese definieren Wertemengen, die von Systemen verwendet werden, die mit dem Implementierungsleitfaden konform sind.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-molgen-verwandtschaftsgrad.html"
+                  title="ValueSet/mii-vs-molgen-verwandtschaftsgrad">
+                  <span title="ValueSet/mii-vs-molgen-verwandtschaftsgrad">MII VS Mol Gen Verwandtschaftsgrad
+</span>
+               </a>
+            </td>
+            <td>
+<p>ValueSet für die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-molgen-familiaere-linie.html"
+                  title="ValueSet/mii-vs-molgen-familiaere-linie">
+                  <span title="ValueSet/mii-vs-molgen-familiaere-linie">MII VS MolGen Familiäre Linie
+</span>
+               </a>
+            </td>
+            <td>
+<p>ValueSet für die Angabe der familären Linie zwischen Patient und Familienangehörigen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-molgen-family-member-snomed.html"
+                  title="ValueSet/mii-vs-molgen-family-member-snomed">
+                  <span title="ValueSet/mii-vs-molgen-family-member-snomed">MII VS MolGen Family Member SNOMED
+</span>
+               </a>
+            </td>
+            <td>
+<p>The ValueSet contains codes for related family member types from SNOMED CT.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-molgen-verwandtschaftsverhaeltnis.html"
+                  title="ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis">
+                  <span title="ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis">MII VS MolGen Verwandtschaftsverhaeltnis
+</span>
+               </a>
+            </td>
+            <td>
+<p>ValueSet für die Angabe eines Verwandtschaftsverhältnis zwischen Patient und Familienangehörigen.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
+   <h3>Beispiel: Beispielinstanzen </h3>
+    <p>Dies sind Beispielinstanzen, die zeigen, wie Daten aussehen könnten, die von Systemen produziert und konsumiert werden, die mit diesem Implementierungsleitfaden konform sind.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="PlanDefinition-mii-exa-molgen-protocol-agilent-sureselect.html"
+                  title="PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect">
+                  <span title="PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect">Agilent SureSelect Human All Exon V7 Protocol
+</span>
+               </a>
+            </td>
+            <td>
+<p>Protokoll für Exom-Anreicherung</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-mii-exa-molgen-anforderung-1.html"
+                  title="ServiceRequest/mii-exa-molgen-anforderung-1">
+                  <span title="ServiceRequest/mii-exa-molgen-anforderung-1">Anforderung BRAF Genetische Testung
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für Anforderung für genetische Testung auf genetische Variante im BRAF Gen an Hand von NGS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-mii-exa-molgen-anforderung-trurisk-panel.html"
+                  title="ServiceRequest/mii-exa-molgen-anforderung-trurisk-panel">
+                  <span title="ServiceRequest/mii-exa-molgen-anforderung-trurisk-panel">Anforderung Molekulargenetische Diagnose Familiäre Belastung für Brust- und Eierstockkrebs
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für Anforderung für genetische Testung bei Familiärer Belastung für Brust- und Eierstockkrebs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-mii-exa-molgen-anforderung-2.html"
+                  title="ServiceRequest/mii-exa-molgen-anforderung-2">
+                  <span title="ServiceRequest/mii-exa-molgen-anforderung-2">Anforderung Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für Anforderung für genetische Testung auf pathogene Variante im NIPBL Gen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-mii-exa-molgen-anforderung-wes.html"
+                  title="ServiceRequest/mii-exa-molgen-anforderung-wes">
+                  <span title="ServiceRequest/mii-exa-molgen-anforderung-wes">Anforderung Whole Exome Sequencing
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DocumentReference-mii-exa-molgen-documentreference-bed-file.html"
+                  title="DocumentReference/mii-exa-molgen-documentreference-bed-file">
+                  <span title="DocumentReference/mii-exa-molgen-documentreference-bed-file">BED File for Target Regions
+</span>
+               </a>
+            </td>
+            <td>
+<p>BED-Datei mit den Zielregionen des Exom-Kits</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-mii-exa-molgen-folgemassnahme-1.html"
+                  title="Task/mii-exa-molgen-folgemassnahme-1">
+                  <span title="Task/mii-exa-molgen-folgemassnahme-1">BRAF Empfohlene Folgemaßnahme
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für empfohlene Folgemaßnahme abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-variante-1.html"
+                  title="Observation/mii-exa-molgen-variante-1">
+                  <span title="Observation/mii-exa-molgen-variante-1">BRAF Variante
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für genetische Variante im BRAF Gen an Hand von NGS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-diagnostische-implikation-1.html"
+                  title="Observation/mii-exa-molgen-diagnostische-implikation-1">
+                  <span title="Observation/mii-exa-molgen-diagnostische-implikation-1">BRAF Variante Diagnostische Implikation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-mii-exa-molgen-medikationsempfehlung-1.html"
+                  title="Task/mii-exa-molgen-medikationsempfehlung-1">
+                  <span title="Task/mii-exa-molgen-medikationsempfehlung-1">BRAF Variante Medikationsempfehlung
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für Medikationsempfehlung abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-molekulare-konsequenz-1.html"
+                  title="Observation/mii-exa-molgen-molekulare-konsequenz-1">
+                  <span title="Observation/mii-exa-molgen-molekulare-konsequenz-1">BRAF Variante Molekulare Konsequenz
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für molekulare Konsequenz abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-therapeutische-implikation-1.html"
+                  title="Observation/mii-exa-molgen-therapeutische-implikation-1">
+                  <span title="Observation/mii-exa-molgen-therapeutische-implikation-1">BRAF Variante Therapeutische Implikation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für therapeutische Implikation abgeleitet von genetische Variante im BRAF Gen an Hand von NGS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-mutationslast-1.html"
+                  title="Observation/mii-exa-molgen-mutationslast-1">
+                  <span title="Observation/mii-exa-molgen-mutationslast-1">Beispiel Mutationslast in Tumorprobe
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für Mutationslast in Tumorprobe.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-diagnostische-implikation-cnv-4.html"
+                  title="Observation/mii-exa-molgen-diagnostische-implikation-cnv-4">
+                  <span title="Observation/mii-exa-molgen-diagnostische-implikation-cnv-4">CNV SMO Diagnostische Implikation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für diagnostische Implikation abgeleitet von Copy Number Variante im SMO Gen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-molekulare-konsequenz-cnv-4.html"
+                  title="Observation/mii-exa-molgen-molekulare-konsequenz-cnv-4">
+                  <span title="Observation/mii-exa-molgen-molekulare-konsequenz-cnv-4">CNV SMO Molekulare Konsequenz
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für molekulare Konsequenz abgeleitet von Copy Number Variante im SMO Gen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-mii-exa-molgen-bundle-comprehensive-wes.html"
+                  title="Bundle/mii-exa-molgen-bundle-comprehensive-wes">
+                  <span title="Bundle/mii-exa-molgen-bundle-comprehensive-wes">Comprehensive WES Bundle with Full Technical Documentation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Transaktions-Bundle für eine vollständige Whole Exome Sequencing Analyse mit detaillierten technischen Angaben zu Geräten, Kits, Metriken und Bioinformatik-Pipeline. Dieses Beispiel zeigt die erweiterten Dokumentationsmöglichkeiten für Forschungsprojekte.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-mii-exa-molgen-befundbericht-comprehensive-wes.html"
+                  title="DiagnosticReport/mii-exa-molgen-befundbericht-comprehensive-wes">
+                  <span title="DiagnosticReport/mii-exa-molgen-befundbericht-comprehensive-wes">Comprehensive WES Report with Full Technical Documentation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für einen vollständigen WES-Bericht mit detaillierten technischen Angaben</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-mii-exa-molgen-genomic-study-comprehensive-wes.html"
+                  title="Procedure/mii-exa-molgen-genomic-study-comprehensive-wes">
+                  <span title="Procedure/mii-exa-molgen-genomic-study-comprehensive-wes">Comprehensive Whole Exome Sequencing Study
+</span>
+               </a>
+            </td>
+            <td>
+<p>Vollständiges Exom-Sequenzierung Beispiel mit detaillierten technischen Angaben</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Media-mii-exa-molgen-media-coverage-plot.html"
+                  title="Media/mii-exa-molgen-media-coverage-plot">
+                  <span title="Media/mii-exa-molgen-media-coverage-plot">Coverage Plot
+</span>
+               </a>
+            </td>
+            <td>
+<p>Graphical representation of sequencing coverage</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-mii-exa-molgen-specimen-dna-library.html"
+                  title="Specimen/mii-exa-molgen-specimen-dna-library">
+                  <span title="Specimen/mii-exa-molgen-specimen-dna-library">DNA Library
+</span>
+               </a>
+            </td>
+            <td>
+<p>Prepared DNA library for sequencing</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-diagnostische-implikation-comprehensive.html"
+                  title="Observation/mii-exa-molgen-diagnostische-implikation-comprehensive">
+                  <span title="Observation/mii-exa-molgen-diagnostische-implikation-comprehensive">Diagnostic Implication for KMT2A Variant
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-diagnostische-implikation-brca1.html"
+                  title="Observation/mii-exa-molgen-diagnostische-implikation-brca1">
+                  <span title="Observation/mii-exa-molgen-diagnostische-implikation-brca1">Diagnostische Implikation BRCA1 Variante
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für diagnostische Implikation abgeleitet von SNP im BRCA1.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-mii-exa-molgen-specimen-blood-edta.html"
+                  title="Specimen/mii-exa-molgen-specimen-blood-edta">
+                  <span title="Specimen/mii-exa-molgen-specimen-blood-edta">EDTA Blood Sample
+</span>
+               </a>
+            </td>
+            <td>
+<p>EDTA-Blutprobe für DNA-Extraktion</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-mii-exa-molgen-folgemassnahme-brca1.html"
+                  title="Task/mii-exa-molgen-folgemassnahme-brca1">
+                  <span title="Task/mii-exa-molgen-folgemassnahme-brca1">Empfohlene Folgemaßnahme bei BRCA1 Variante
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für empfohlene Folgemaßnahme abgeleitet von genetischer Variante im BRCA1 Gen an Hand von NGS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DocumentReference-mii-exa-molgen-documentreference-fastq.html"
+                  title="DocumentReference/mii-exa-molgen-documentreference-fastq">
+                  <span title="DocumentReference/mii-exa-molgen-documentreference-fastq">FASTQ Sequencing Files
+</span>
+               </a>
+            </td>
+            <td>
+<p>Raw sequencing data files</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="FamilyMemberHistory-mii-exa-molgen-family-member-history-diabetes.html"
+                  title="FamilyMemberHistory/mii-exa-molgen-family-member-history-diabetes">
+                  <span title="FamilyMemberHistory/mii-exa-molgen-family-member-history-diabetes">Family History - Father with Type 2 Diabetes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example of family member history documenting father's Type 2 diabetes mellitus (ICD-10: E11.9)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="FamilyMemberHistory-mii-exa-molgen-family-member-history-mi.html"
+                  title="FamilyMemberHistory/mii-exa-molgen-family-member-history-mi">
+                  <span title="FamilyMemberHistory/mii-exa-molgen-family-member-history-mi">Family History - Mother with Myocardial Infarction
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example of family member history documenting mother's ST-elevation myocardial infarction (ICD-10: I21.2)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="FamilyMemberHistory-mii-exa-molgen-family-member-history-retinal.html"
+                  title="FamilyMemberHistory/mii-exa-molgen-family-member-history-retinal">
+                  <span title="FamilyMemberHistory/mii-exa-molgen-family-member-history-retinal">Family History - Sister with Retinal Disorder
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example of family member history documenting sister's retinal disorder (ICD-10: H35.8)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-mii-exa-molgen-genomic-study-analysis-braf.html"
+                  title="Procedure/mii-exa-molgen-genomic-study-analysis-braf">
+                  <span title="Procedure/mii-exa-molgen-genomic-study-analysis-braf">Genomic Study Analysis BRAF
+</span>
+               </a>
+            </td>
+            <td>
+<p>Analyse der BRAF Region mittels NGS</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-mii-exa-molgen-genomic-study-analysis-cornelia-de-lange.html"
+                  title="Procedure/mii-exa-molgen-genomic-study-analysis-cornelia-de-lange">
+                  <span title="Procedure/mii-exa-molgen-genomic-study-analysis-cornelia-de-lange">Genomic Study Analysis Cornelia de Lange Panel
+</span>
+               </a>
+            </td>
+            <td>
+<p>NGS-Analyse des Cornelia de Lange-Syndrom Panels</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-mii-exa-molgen-genomic-study-analysis-trurisk-panel.html"
+                  title="Procedure/mii-exa-molgen-genomic-study-analysis-trurisk-panel">
+                  <span title="Procedure/mii-exa-molgen-genomic-study-analysis-trurisk-panel">Genomic Study Analysis TruRisk Panel v3
+</span>
+               </a>
+            </td>
+            <td>
+<p>NGS-Analyse des TruRisk Panel v3 für erblichen Brust- und Eierstockkrebs</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-mii-exa-molgen-genomic-study-cornelia-de-lange.html"
+                  title="Procedure/mii-exa-molgen-genomic-study-cornelia-de-lange">
+                  <span title="Procedure/mii-exa-molgen-genomic-study-cornelia-de-lange">Genomic Study Cornelia de Lange Panel
+</span>
+               </a>
+            </td>
+            <td>
+<p>Genomische Studie für Cornelia de Lange-Syndrom Panel</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-mii-exa-molgen-genomic-study-tso500.html"
+                  title="Procedure/mii-exa-molgen-genomic-study-tso500">
+                  <span title="Procedure/mii-exa-molgen-genomic-study-tso500">Genomic Study TSO500 NSCLC
+</span>
+               </a>
+            </td>
+            <td>
+<p>Komprehensives Tumor-Profiling mit TSO500 bei nicht-kleinzelligem Lungenkarzinom (NSCLC)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-mii-exa-molgen-genomic-study-trurisk-panel.html"
+                  title="Procedure/mii-exa-molgen-genomic-study-trurisk-panel">
+                  <span title="Procedure/mii-exa-molgen-genomic-study-trurisk-panel">Genomic Study TruRisk Panel v3
+</span>
+               </a>
+            </td>
+            <td>
+<p>Genomische Studie für TruRisk Panel v3</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-genotyp-1.html"
+                  title="Observation/mii-exa-molgen-genotyp-1">
+                  <span title="Observation/mii-exa-molgen-genotyp-1">Genotyp BRAF
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für Genotyp BRAF Gen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-genotyp-brca1.html"
+                  title="Observation/mii-exa-molgen-genotyp-brca1">
+                  <span title="Observation/mii-exa-molgen-genotyp-brca1">Genotyp BRCA1
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für Genotyp BRCA1 Gen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-genotyp-2.html"
+                  title="Observation/mii-exa-molgen-genotyp-2">
+                  <span title="Observation/mii-exa-molgen-genotyp-2">Genotyp NIPBL
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für Genotyp NIPBL Gen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Device-mii-exa-molgen-device-illumina-novaseq.html"
+                  title="Device/mii-exa-molgen-device-illumina-novaseq">
+                  <span title="Device/mii-exa-molgen-device-illumina-novaseq">Illumina NovaSeq 6000 Sequencer
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für Sequenziergerät</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Device-mii-exa-molgen-device-thermofisher-ionchef.html"
+                  title="Device/mii-exa-molgen-device-thermofisher-ionchef">
+                  <span title="Device/mii-exa-molgen-device-thermofisher-ionchef">Ion Chef System
+</span>
+               </a>
+            </td>
+            <td>
+<p>Library Preparation System</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-variante-comprehensive-pathogenic.html"
+                  title="Observation/mii-exa-molgen-variante-comprehensive-pathogenic">
+                  <span title="Observation/mii-exa-molgen-variante-comprehensive-pathogenic">KMT2A Pathogenic Variant from WES
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-mikrosatelliteninstabilitaet-1.html"
+                  title="Observation/mii-exa-molgen-mikrosatelliteninstabilitaet-1">
+                  <span title="Observation/mii-exa-molgen-mikrosatelliteninstabilitaet-1">Mikrosatelliteninstabilität
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für Mikrosatelliteninstabilität in Tumorprobe.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-molekulare-konsequenz-brca1.html"
+                  title="Observation/mii-exa-molgen-molekulare-konsequenz-brca1">
+                  <span title="Observation/mii-exa-molgen-molekulare-konsequenz-brca1">Molekulare Konsequenz BRCA1 Variante
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für molekulare Konsequenz abgeleitet von SNP im BRCA1.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-mii-exa-molgen-befundbericht-1.html"
+                  title="DiagnosticReport/mii-exa-molgen-befundbericht-1">
+                  <span title="DiagnosticReport/mii-exa-molgen-befundbericht-1">Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für molekulargenetischen Befund BRAF mutiert bei colorektalem Adenokarzniom.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-mii-exa-molgen-genomic-study-1.html"
+                  title="Procedure/mii-exa-molgen-genomic-study-1">
+                  <span title="Procedure/mii-exa-molgen-genomic-study-1">Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für molekulargenetischen Befund BRAF mutiert bei colorektalem Adenokarzniom.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-mii-exa-molgen-befundbericht-2.html"
+                  title="DiagnosticReport/mii-exa-molgen-befundbericht-2">
+                  <span title="DiagnosticReport/mii-exa-molgen-befundbericht-2">Molekulargentischer Befund 2: Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für molekulargenetischen Befund Molekulargenetische Diagnose eines Cornelia de Lange-Syndrom autosomal dominanter Erbgang.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-mii-exa-molgen-befundbericht-tumorboard-3.html"
+                  title="DiagnosticReport/mii-exa-molgen-befundbericht-tumorboard-3">
+                  <span title="DiagnosticReport/mii-exa-molgen-befundbericht-tumorboard-3">Molekulargentischer Befund 3: Tumorboard Genfusion
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für molekulargenetischen Befund Tumorboard Genfusion.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-mii-exa-molgen-befundbericht-trurisk-panel.html"
+                  title="DiagnosticReport/mii-exa-molgen-befundbericht-trurisk-panel">
+                  <span title="DiagnosticReport/mii-exa-molgen-befundbericht-trurisk-panel">Molekulargentischer Befund Familiäre Belastung für Brust- und Eierstockkrebs
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für molekulargenetischen Befund einer BRCA1 Variante bei Familiärer Belastung für Brust- und Eierstockkrebs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-variante-2.html"
+                  title="Observation/mii-exa-molgen-variante-2">
+                  <span title="Observation/mii-exa-molgen-variante-2">NIPBL Variante
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für genetische Variante im NIPBL Gen an Hand von WGS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-diagnostische-implikation-2.html"
+                  title="Observation/mii-exa-molgen-diagnostische-implikation-2">
+                  <span title="Observation/mii-exa-molgen-diagnostische-implikation-2">NIPBL Variante Diagnostische Implikation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für diagnostische Implikation abgeleitet von genetischer Variante im NIPBL Gen an Hand von WGS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-molekulare-konsequenz-2.html"
+                  title="Observation/mii-exa-molgen-molekulare-konsequenz-2">
+                  <span title="Observation/mii-exa-molgen-molekulare-konsequenz-2">NIPBL Variante Molekulare Konsequenz
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für molekulare Konsequenz abgeleitet von genetischer Variante im NIPBL Gen an Hand von WGS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-mii-exa-molgen-practitioner-ordering.html"
+                  title="Practitioner/mii-exa-molgen-practitioner-ordering">
+                  <span title="Practitioner/mii-exa-molgen-practitioner-ordering">Ordering Practitioner
+</span>
+               </a>
+            </td>
+            <td>
+<p>Anfordernder Arzt</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="RiskAssessment-mii-exa-molgen-prs-brca1.html"
+                  title="RiskAssessment/mii-exa-molgen-prs-brca1">
+                  <span title="RiskAssessment/mii-exa-molgen-prs-brca1">Polygener Risiko Score BRCA1 Variante
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für Polygenen Risiko Score bei Variante BRCA1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-mii-exa-molgen-genomic-study-analysis-tso500-libprep.html"
+                  title="Procedure/mii-exa-molgen-genomic-study-analysis-tso500-libprep">
+                  <span title="Procedure/mii-exa-molgen-genomic-study-analysis-tso500-libprep">TSO500 Library Preparation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Library Preparation und Hybrid-Capture-Target-Enrichment mit dem TSO500 Panel</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-mii-exa-molgen-genomic-study-analysis-tso500-sequencing.html"
+                  title="Procedure/mii-exa-molgen-genomic-study-analysis-tso500-sequencing">
+                  <span title="Procedure/mii-exa-molgen-genomic-study-analysis-tso500-sequencing">TSO500 Sequencing on NovaSeq 6000
+</span>
+               </a>
+            </td>
+            <td>
+<p>Paired-end Sequenzierung der TSO500-Library auf Illumina NovaSeq 6000</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Device-mii-exa-molgen-device-tso500-lot.html"
+                  title="Device/mii-exa-molgen-device-tso500-lot">
+                  <span title="Device/mii-exa-molgen-device-tso500-lot">TSO500 v2 Kit Lot 20240518
+</span>
+               </a>
+            </td>
+            <td>
+<p>Konkrete Kit-Charge des TSO500 v2 Panels im Labor, verweist auf den Katalog-Eintrag in der DeviceDefinition</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DeviceDefinition-mii-exa-molgen-devicedef-tso500.html"
+                  title="DeviceDefinition/mii-exa-molgen-devicedef-tso500">
+                  <span title="DeviceDefinition/mii-exa-molgen-devicedef-tso500">TruSight Oncology 500 v2 Panel (DeviceDefinition)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Katalogeintrag des TSO500 v2 Capture Panels: 523 Gene für SNV/Indel, 59 Gene für CNV, 23 Gene für DNA-Rearrangements, 55 Gene für RNA-Fusionen und Splice-Varianten; integrierte Biomarker TMB, MSI und HRD; Panelgröße 1,94 Mb</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-variante-brca1.html"
+                  title="Observation/mii-exa-molgen-variante-brca1">
+                  <span title="Observation/mii-exa-molgen-variante-brca1">Variante BRCA1
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für genetische Variante BRCA1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-variante-fgfr2-fusion.html"
+                  title="Observation/mii-exa-molgen-variante-fgfr2-fusion">
+                  <span title="Observation/mii-exa-molgen-variante-fgfr2-fusion">Variante FGFR2-DBP Fusion
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für genetische Variante FGFR2-DBP Fusion.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-variante-cnv-4.html"
+                  title="Observation/mii-exa-molgen-variante-cnv-4">
+                  <span title="Observation/mii-exa-molgen-variante-cnv-4">Variante SMO CNV
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispiel für genetische Copy Number Variante SMO Gen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-mii-exa-molgen-genomic-study-analysis-wes-bioinformatics.html"
+                  title="Procedure/mii-exa-molgen-genomic-study-analysis-wes-bioinformatics">
+                  <span title="Procedure/mii-exa-molgen-genomic-study-analysis-wes-bioinformatics">WES Bioinformatics Analysis
+</span>
+               </a>
+            </td>
+            <td>
+<p>Bioinformatische Auswertung für Whole Exome Sequencing</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-mii-exa-molgen-genomic-study-analysis-wes-library-prep.html"
+                  title="Procedure/mii-exa-molgen-genomic-study-analysis-wes-library-prep">
+                  <span title="Procedure/mii-exa-molgen-genomic-study-analysis-wes-library-prep">WES Library Preparation Analysis
+</span>
+               </a>
+            </td>
+            <td>
+<p>Library Preparation für Whole Exome Sequencing</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-mii-exa-molgen-genomic-study-analysis-wes-sequencing.html"
+                  title="Procedure/mii-exa-molgen-genomic-study-analysis-wes-sequencing">
+                  <span title="Procedure/mii-exa-molgen-genomic-study-analysis-wes-sequencing">WES Sequencing Analysis
+</span>
+               </a>
+            </td>
+            <td>
+<p>Sequenzierung für Whole Exome Sequencing mit detaillierten Metriken</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-mii-exa-befund-bundle-1-braf.html"
+                  title="Bundle/mii-exa-befund-bundle-1-braf">
+                  <span title="Bundle/mii-exa-befund-bundle-1-braf">mii-exa-befund-bundle-1-braf
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-mii-exa-befund-bundle-befund-2-nipbl-clinical.html"
+                  title="Bundle/mii-exa-befund-bundle-befund-2-nipbl-clinical">
+                  <span title="Bundle/mii-exa-befund-bundle-befund-2-nipbl-clinical">mii-exa-befund-bundle-befund-2-nipbl-clinical
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-mii-exa-befund-bundle-befund-fgfr2-fusion.html"
+                  title="Bundle/mii-exa-befund-bundle-befund-fgfr2-fusion">
+                  <span title="Bundle/mii-exa-befund-bundle-befund-fgfr2-fusion">mii-exa-befund-bundle-befund-fgfr2-fusion
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-mii-exa-befund-bundle-befund-srcc.html"
+                  title="Bundle/mii-exa-befund-bundle-befund-srcc">
+                  <span title="Bundle/mii-exa-befund-bundle-befund-srcc">mii-exa-befund-bundle-befund-srcc
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-mii-exa-molgen-anforderung-fgfr2-fusion.html"
+                  title="ServiceRequest/mii-exa-molgen-anforderung-fgfr2-fusion">
+                  <span title="ServiceRequest/mii-exa-molgen-anforderung-fgfr2-fusion">mii-exa-molgen-anforderung-fgfr2-fusion
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-mii-exa-molgen-anforderung-srcc.html"
+                  title="ServiceRequest/mii-exa-molgen-anforderung-srcc">
+                  <span title="ServiceRequest/mii-exa-molgen-anforderung-srcc">mii-exa-molgen-anforderung-srcc
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-mii-exa-molgen-befundbericht-fgfr2-fusion.html"
+                  title="DiagnosticReport/mii-exa-molgen-befundbericht-fgfr2-fusion">
+                  <span title="DiagnosticReport/mii-exa-molgen-befundbericht-fgfr2-fusion">mii-exa-molgen-befundbericht-fgfr2-fusion
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-mii-exa-molgen-befundbericht-srcc.html"
+                  title="DiagnosticReport/mii-exa-molgen-befundbericht-srcc">
+                  <span title="DiagnosticReport/mii-exa-molgen-befundbericht-srcc">mii-exa-molgen-befundbericht-srcc
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-mii-exa-molgen-bundle-befund-2-nipbl.html"
+                  title="Bundle/mii-exa-molgen-bundle-befund-2-nipbl">
+                  <span title="Bundle/mii-exa-molgen-bundle-befund-2-nipbl">mii-exa-molgen-bundle-befund-2-nipbl
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-mii-exa-molgen-bundle-befund-2-nipbl-condition-lab.html"
+                  title="Condition/mii-exa-molgen-bundle-befund-2-nipbl-condition-lab">
+                  <span title="Condition/mii-exa-molgen-bundle-befund-2-nipbl-condition-lab">mii-exa-molgen-bundle-befund-2-nipbl-condition-lab
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-mii-exa-molgen-bundle-fam-his-breast-ovar-can.html"
+                  title="Bundle/mii-exa-molgen-bundle-fam-his-breast-ovar-can">
+                  <span title="Bundle/mii-exa-molgen-bundle-fam-his-breast-ovar-can">mii-exa-molgen-bundle-fam-his-breast-ovar-can
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ChargeItem-mii-exa-molgen-chargeitem-ebm-21.html"
+                  title="ChargeItem/mii-exa-molgen-chargeitem-ebm-21">
+                  <span title="ChargeItem/mii-exa-molgen-chargeitem-ebm-21">mii-exa-molgen-chargeitem-ebm-21
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ChargeItem-mii-exa-molgen-chargeitem-ebm-22.html"
+                  title="ChargeItem/mii-exa-molgen-chargeitem-ebm-22">
+                  <span title="ChargeItem/mii-exa-molgen-chargeitem-ebm-22">mii-exa-molgen-chargeitem-ebm-22
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ChargeItem-mii-exa-molgen-chargeitem-ebm-23.html"
+                  title="ChargeItem/mii-exa-molgen-chargeitem-ebm-23">
+                  <span title="ChargeItem/mii-exa-molgen-chargeitem-ebm-23">mii-exa-molgen-chargeitem-ebm-23
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ChargeItem-mii-exa-molgen-chargeitem-ebm-24.html"
+                  title="ChargeItem/mii-exa-molgen-chargeitem-ebm-24">
+                  <span title="ChargeItem/mii-exa-molgen-chargeitem-ebm-24">mii-exa-molgen-chargeitem-ebm-24
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-mii-exa-molgen-condition-nipbl-clinical.html"
+                  title="Condition/mii-exa-molgen-condition-nipbl-clinical">
+                  <span title="Condition/mii-exa-molgen-condition-nipbl-clinical">mii-exa-molgen-condition-nipbl-clinical
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Device-mii-exa-molgen-device-sequencer.html"
+                  title="Device/mii-exa-molgen-device-sequencer">
+                  <span title="Device/mii-exa-molgen-device-sequencer">mii-exa-molgen-device-sequencer
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Device-mii-exa-molgen-device-sequencer-2.html"
+                  title="Device/mii-exa-molgen-device-sequencer-2">
+                  <span title="Device/mii-exa-molgen-device-sequencer-2">mii-exa-molgen-device-sequencer-2
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Device-mii-exa-molgen-device-sequencer-nextseq.html"
+                  title="Device/mii-exa-molgen-device-sequencer-nextseq">
+                  <span title="Device/mii-exa-molgen-device-sequencer-nextseq">mii-exa-molgen-device-sequencer-nextseq
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-diagnostische-implikation-fgfr2-fusion.html"
+                  title="Observation/mii-exa-molgen-diagnostische-implikation-fgfr2-fusion">
+                  <span title="Observation/mii-exa-molgen-diagnostische-implikation-fgfr2-fusion">mii-exa-molgen-diagnostische-implikation-fgfr2-fusion
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-diagnostische-implikation-srcc-ctnna1.html"
+                  title="Observation/mii-exa-molgen-diagnostische-implikation-srcc-ctnna1">
+                  <span title="Observation/mii-exa-molgen-diagnostische-implikation-srcc-ctnna1">mii-exa-molgen-diagnostische-implikation-srcc-ctnna1
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="FamilyMemberHistory-mii-exa-molgen-family-member-history-1.html"
+                  title="FamilyMemberHistory/mii-exa-molgen-family-member-history-1">
+                  <span title="FamilyMemberHistory/mii-exa-molgen-family-member-history-1">mii-exa-molgen-family-member-history-1
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="FamilyMemberHistory-mii-exa-molgen-family-member-history-2.html"
+                  title="FamilyMemberHistory/mii-exa-molgen-family-member-history-2">
+                  <span title="FamilyMemberHistory/mii-exa-molgen-family-member-history-2">mii-exa-molgen-family-member-history-2
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="FamilyMemberHistory-mii-exa-molgen-family-member-history-srcc.html"
+                  title="FamilyMemberHistory/mii-exa-molgen-family-member-history-srcc">
+                  <span title="FamilyMemberHistory/mii-exa-molgen-family-member-history-srcc">mii-exa-molgen-family-member-history-srcc
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-mii-exa-molgen-medikationsempfehlung-fgfr2-fusion.html"
+                  title="Task/mii-exa-molgen-medikationsempfehlung-fgfr2-fusion">
+                  <span title="Task/mii-exa-molgen-medikationsempfehlung-fgfr2-fusion">mii-exa-molgen-medikationsempfehlung-fgfr2-fusion
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-mii-exa-molgen-patient.html"
+                  title="Patient/mii-exa-molgen-patient">
+                  <span title="Patient/mii-exa-molgen-patient">mii-exa-molgen-patient
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-mii-exa-molgen-patient-2.html"
+                  title="Patient/mii-exa-molgen-patient-2">
+                  <span title="Patient/mii-exa-molgen-patient-2">mii-exa-molgen-patient-2
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-mii-exa-molgen-patient-brca1.html"
+                  title="Patient/mii-exa-molgen-patient-brca1">
+                  <span title="Patient/mii-exa-molgen-patient-brca1">mii-exa-molgen-patient-brca1
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-mii-exa-molgen-patient-fgfr2-fusion.html"
+                  title="Patient/mii-exa-molgen-patient-fgfr2-fusion">
+                  <span title="Patient/mii-exa-molgen-patient-fgfr2-fusion">mii-exa-molgen-patient-fgfr2-fusion
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-mii-exa-molgen-patient-srcc.html"
+                  title="Patient/mii-exa-molgen-patient-srcc">
+                  <span title="Patient/mii-exa-molgen-patient-srcc">mii-exa-molgen-patient-srcc
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-phenotypic-feature-1.html"
+                  title="Observation/mii-exa-molgen-phenotypic-feature-1">
+                  <span title="Observation/mii-exa-molgen-phenotypic-feature-1">mii-exa-molgen-phenotypic-feature-1
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-phenotypic-feature-2.html"
+                  title="Observation/mii-exa-molgen-phenotypic-feature-2">
+                  <span title="Observation/mii-exa-molgen-phenotypic-feature-2">mii-exa-molgen-phenotypic-feature-2
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-phenotypic-feature-3.html"
+                  title="Observation/mii-exa-molgen-phenotypic-feature-3">
+                  <span title="Observation/mii-exa-molgen-phenotypic-feature-3">mii-exa-molgen-phenotypic-feature-3
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-phenotypic-feature-4.html"
+                  title="Observation/mii-exa-molgen-phenotypic-feature-4">
+                  <span title="Observation/mii-exa-molgen-phenotypic-feature-4">mii-exa-molgen-phenotypic-feature-4
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-mii-exa-molgen-practitioner-lab.html"
+                  title="Practitioner/mii-exa-molgen-practitioner-lab">
+                  <span title="Practitioner/mii-exa-molgen-practitioner-lab">mii-exa-molgen-practitioner-lab
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-mii-exa-molgen-practitioner-physician.html"
+                  title="Practitioner/mii-exa-molgen-practitioner-physician">
+                  <span title="Practitioner/mii-exa-molgen-practitioner-physician">mii-exa-molgen-practitioner-physician
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-mii-exa-molgen-specimen-1.html"
+                  title="Specimen/mii-exa-molgen-specimen-1">
+                  <span title="Specimen/mii-exa-molgen-specimen-1">mii-exa-molgen-specimen-1
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-mii-exa-molgen-specimen-2.html"
+                  title="Specimen/mii-exa-molgen-specimen-2">
+                  <span title="Specimen/mii-exa-molgen-specimen-2">mii-exa-molgen-specimen-2
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-mii-exa-molgen-specimen-brca1.html"
+                  title="Specimen/mii-exa-molgen-specimen-brca1">
+                  <span title="Specimen/mii-exa-molgen-specimen-brca1">mii-exa-molgen-specimen-brca1
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-mii-exa-molgen-specimen-srcc.html"
+                  title="Specimen/mii-exa-molgen-specimen-srcc">
+                  <span title="Specimen/mii-exa-molgen-specimen-srcc">mii-exa-molgen-specimen-srcc
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-mii-exa-molgen-specimen-srcc-2.html"
+                  title="Specimen/mii-exa-molgen-specimen-srcc-2">
+                  <span title="Specimen/mii-exa-molgen-specimen-srcc-2">mii-exa-molgen-specimen-srcc-2
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-therapeutische-implikation-fgfr2-fusion.html"
+                  title="Observation/mii-exa-molgen-therapeutische-implikation-fgfr2-fusion">
+                  <span title="Observation/mii-exa-molgen-therapeutische-implikation-fgfr2-fusion">mii-exa-molgen-therapeutische-implikation-fgfr2-fusion
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-molgen-variante-srcc-ctnna1.html"
+                  title="Observation/mii-exa-molgen-variante-srcc-ctnna1">
+                  <span title="Observation/mii-exa-molgen-variante-srcc-ctnna1">mii-exa-molgen-variante-srcc-ctnna1
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="8"> </a>
+   <h3>Sonstige </h3>
+    <p>Dies sind Ressourcen, die in diesem Implementierungsleitfaden verwendet werden, die in keine der anderen Kategorien passen.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Parameters-mii-param-molgen-manifest.html"
+                  title="Parameters/mii-param-molgen-manifest">
+                  <span title="Parameters/mii-param-molgen-manifest">mii-param-molgen-manifest
+</span>
+               </a>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package de.medizininformatikinitiative.kerndatensatz.molgen#2026.0.4 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Tue, Sep 1, 2026 21:11+0000">2026-09-01</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/impressum">Impressum</a>
+                 <br/>
+                 <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7®, FHIR® and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
