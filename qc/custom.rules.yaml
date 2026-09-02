@@ -72,7 +72,7 @@
 - name: version-filled
   status: "Checking that every conformance resource carries the release version"
   filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
-  predicate: version.exists() and (version in ('2026.0.4'))
+  predicate: version.exists() and (version in ('2027.0.0-ballot.rc1'))
   error-message: "version missing, or not equal to the module's CalVer version"
   files:
     - /**/*.xml

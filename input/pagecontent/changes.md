@@ -82,6 +82,35 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 
 ---
 
+#### Version 2027.0.0-ballot.rc1
+
+**Date:** 2026-09-02 · **Release candidate**
+
+First release candidate built on the MII KDS module template. The guide is now
+built and rendered by the HL7 IG Publisher instead of Simplifier, in English with
+a German translation.
+
+* **Migrated onto the MII KDS module template** (v0.13.0), which references the
+  shared MII IG template. All 41 pages of the previous Simplifier guide were
+  routed into the template page set: 15 became per-profile intro notes rendered on
+  top of the generated artifact pages, the rest merged into the agreed pages.
+  Identity, canonical URLs and the artifact set are unchanged.
+* **Licence declared:** CC BY 4.0. The previous releases named no licence.
+* **Dependencies:** `kerndatensatz.meta` and `kerndatensatz.base` to the 2027
+  ballot release candidates, `de.basisprofil.r4` to 1.6.0, `hl7.terminology.r4`
+  from 6.1.0 to 7.3.0.
+* **CapabilityStatement corrected:** the module's own six search parameters are
+  now declared (they were missing entirely), and a wrong canonical for the
+  FamilyMemberHistory `reason-code` parameter was fixed.
+* **Search parameters** are listed on their own page, derived from the built
+  artifacts rather than maintained by hand.
+* **New example:** an FFPE tumour tissue Specimen for the TSO500 panel study,
+  which two GenomicStudyAnalysis examples referenced but which never existed.
+* **Six DiagnosticReport example ids shortened** so the package can be built at
+  all — the previous ids produced a package path over the tar format's 100-byte
+  limit. Old → new: `mii-exa-molgen-molekulargenetischer-befundbericht-*` →
+  `mii-exa-molgen-befundbericht-*`.
+
 #### Version 2026.0.4
 
 **Date:** 2026-01-02

@@ -89,6 +89,36 @@ werden können.</p>
 
 ---
 
+#### Version 2027.0.0-ballot.rc1
+
+**Datum:** 2026-09-02 · **Release Candidate**
+
+Erster Release Candidate auf Basis des MII-KDS-Modul-Templates. Der Leitfaden wird
+jetzt vom HL7 IG Publisher gebaut und gerendert statt von Simplifier, englisch mit
+deutscher Übersetzung.
+
+* **Migration auf das MII-KDS-Modul-Template** (v0.13.0), das das gemeinsame
+  MII-IG-Template referenziert. Alle 41 Seiten des bisherigen Simplifier-Leitfadens
+  wurden in den Template-Seitensatz überführt: 15 wurden zu Intro-Notes über den
+  generierten Artefaktseiten, der Rest ging in die vereinbarten Seiten. Identität,
+  kanonische URLs und Artefaktmenge sind unverändert.
+* **Lizenz deklariert:** CC BY 4.0. Die bisherigen Releases nannten keine Lizenz.
+* **Abhängigkeiten:** `kerndatensatz.meta` und `kerndatensatz.base` auf die
+  2027er-Ballot-Kandidaten, `de.basisprofil.r4` auf 1.6.0, `hl7.terminology.r4`
+  von 6.1.0 auf 7.3.0.
+* **CapabilityStatement korrigiert:** Die sechs eigenen Suchparameter des Moduls
+  sind jetzt deklariert (sie fehlten vollständig), und eine falsche Kanonische beim
+  FamilyMemberHistory-Parameter `reason-code` wurde behoben.
+* **Suchparameter** stehen auf einer eigenen Seite, aus den gebauten Artefakten
+  abgeleitet statt von Hand gepflegt.
+* **Neues Beispiel:** ein FFPE-Tumorgewebe-Specimen für die TSO500-Panel-Studie,
+  auf das zwei GenomicStudyAnalysis-Beispiele verwiesen, das es aber nie gab.
+* **Sechs DiagnosticReport-Beispiel-IDs gekürzt**, damit das Paket überhaupt
+  baubar ist — die bisherigen IDs erzeugten einen Paketpfad über der
+  100-Byte-Grenze des tar-Formats. Alt → neu:
+  `mii-exa-molgen-molekulargenetischer-befundbericht-*` →
+  `mii-exa-molgen-befundbericht-*`.
+
 #### Version 2026.0.4
 
 **Datum:** 2026-01-02

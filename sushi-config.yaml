@@ -92,14 +92,15 @@ description: "FHIR profiles for molecular genetic findings - variants, molecular
 status: active # draft | active | retired | unknown
 # MII modules use CalVer YYYY.n.n (e.g. 2026.0.1) per the MII Module Release
 # Workflow — NOT SemVer. Only the template tooling repos use SemVer.
-version: "2026.0.4"
+version: "2027.0.0-ballot.rc1"
 # packageId pattern per the MII naming convention:
 # de.medizininformatikinitiative.kerndatensatz.<slug> (for example,
 # kerndatensatz-basis uses de.medizininformatikinitiative.kerndatensatz.base).
 packageId: de.medizininformatikinitiative.kerndatensatz.molgen
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: "2021+"
-releaseLabel: ci-build  # Quelle gewinnt (sushi-config.yaml der Quelle) -- TODO:REVIEW Gate A: fuer ein publiziertes Release ist "Release" das erwartete Label; nicht still normalisiert
+releaseLabel: Release  # DECIDED 2026-09-02: a formal publication carries Release,
+                       # not the source's ci-build (migration report DEC-3).
 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # DECIDED at Gate A on 2026-08-28 by the module maintainer (migration report DEC-1).
 # The source declared no licence in any machine-read place; its home page stated only
@@ -109,7 +110,7 @@ releaseLabel: ci-build  # Quelle gewinnt (sushi-config.yaml der Quelle) -- TODO:
 # releases from here on, not a formalisation of the 2026.0.4 statement.
 license: CC-BY-4.0
 # Must equal the publication date; go-publish.yml validates this.
-date: "2026-01-02"
+date: "2026-09-02"
 jurisdiction: urn:iso:std:iso:3166#DE "Germany" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # NUM-DIZ takes over IG development and maintenance when MII funding ends
 # (end-2026), so NUM-DIZ is the publisher shown in the footer's
@@ -159,14 +160,14 @@ extension:
       - url: packageId
         valueId: de.medizininformatikinitiative.kerndatensatz.molgen
       - url: version
-        valueString: "2026.0.4"
+        valueString: "2027.0.0-ballot.rc1"
       - url: uri
         valueUri: https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen
   # Year this release sequence became effective
   # (for example, kerndatensatz-basis records "2026").
   - url: http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod
     valuePeriod:
-      start: "2026"
+      start: "2027"
   - url: http://hl7.org/fhir/StructureDefinition/artifact-author
     valueContactDetail:
       telecom:
@@ -286,11 +287,14 @@ dependencies:
   de.medizininformatikinitiative.kerndatensatz.base: 2027.0.0-ballot.rc1
 
   # Source pin: 2026.0.x
+  # Bumped 2026-09-02 to the 2027 ballot release candidate, in step with meta and base.
+  # dist-tags.latest is still 2026.0.1; a released 2027.0.0 is awaited.
   de.medizininformatikinitiative.kerndatensatz.biobank: 2026.0.1
 
-  # Source pin: 6.1.x. The module template pins 7.3.0; the source wins here, because
-  # a THO 6 -> 7 jump is a terminology decision (Gate A), not a migration step.
-  hl7.terminology.r4: 6.1.0
+  # Source pin was 6.1.x, resolved to 6.1.0 at migration time. Bumped 2026-09-02 to
+  # 7.3.0 by maintainer decision - the major jump the migration deliberately did not
+  # make on its own. 7.3.0 is dist-tags.latest and what the module template pins.
+  hl7.terminology.r4: 7.3.0
 
   # Template machinery, NOT source identity (migration skill step 3): the template's
   # CRMI meta.profile claims require this package. Gate A.

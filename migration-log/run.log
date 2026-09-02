@@ -4838,3 +4838,191 @@
 2026-09-02T03:39:46Z  WARN   5.5  gen-page-title-po  unit dropped (no longer in the pages: tree)  title='Quality Report'
 2026-09-02T03:39:46Z  INFO   5.5  gen-page-title-po  result  exit=0  every page title translated
 2026-09-02T03:39:46Z  INFO   5.5  gen-page-title-po  done  cmd=`python3 .claude/skills/mii-ig-migration/scripts/gen-page-title-po.py fsh-generated/resources/ImplementationGuide-mii-ig-molgen-de-v2026.json migration-log/menu-titles-de.txt de input/translations/de/ImplementationGuide-mii-ig-molgen-de-v2026.po`  exit=0 raw_log=migration-log/gen-page-title-po.log raw_log_lines=8
+2026-09-02T04:15:51Z  INFO   5.1b.5  parent-snapshots  params  mode=detect package=de.medizininformatikinitiative.kerndatensatz.biobank version=2027.0.0-ballot.rc1 registry=https://packages.simplifier.net fhir_version=4.0.1
+    cmd=`curl -sfL https://packages.simplifier.net/de.medizininformatikinitiative.kerndatensatz.biobank/2027.0.0-ballot.rc1 -o p.tgz && tar xzf p.tgz`
+2026-09-02T04:15:51Z  INFO   5.1b.5  parent-snapshots  surveyed  structure_definitions=24 with_snapshot=22 without_snapshot=2
+2026-09-02T04:15:51Z  WARN   5.1b.5  parent-snapshots  parent-partially-snapshotted: 2 of 24 StructureDefinitions carry no snapshot
+    Only the profiles actually derived from need one; check which of the
+    missing set the module's FSH names as a Parent before building.
+2026-09-02T04:15:51Z  WARN   5.1b.5  parent-snapshots  intra-package-derivation: 2 SD(s) derive from another SD in this package  files=StructureDefinition-mii-pr-biobank-specimen.json, StructureDefinition-mii-pr-biobank-zellinie-organoid.json
+    Generate those AFTER their own parent, and re-read the result: a snapshot
+    generated against a parent that had none is not evidence of anything.
+2026-09-02T04:15:51Z  INFO   5.1b.5  parent-snapshots  done  mode=detect missing_snapshots=2 of 24 exit=1
+    The condition IS present. It is not a post-processing task and not a
+    reason to invent a parent: generate the snapshots with `build` (spec
+    §5.1b.5), or record the dependent profiles as blocked and migrate the rest.
+2026-09-02T04:16:01Z  INFO   5.1b.5  parent-snapshots  params  mode=build package=de.medizininformatikinitiative.kerndatensatz.biobank version=2027.0.0-ballot.rc1 registry=https://packages.simplifier.net fhir_version=4.0.1
+    cmd=`curl -sfL https://packages.simplifier.net/de.medizininformatikinitiative.kerndatensatz.biobank/2027.0.0-ballot.rc1 -o p.tgz && tar xzf p.tgz`
+2026-09-02T04:16:01Z  INFO   5.1b.5  parent-snapshots  surveyed  structure_definitions=24 with_snapshot=22 without_snapshot=2
+2026-09-02T04:16:01Z  WARN   5.1b.5  parent-snapshots  parent-partially-snapshotted: 2 of 24 StructureDefinitions carry no snapshot
+    Only the profiles actually derived from need one; check which of the
+    missing set the module's FSH names as a Parent before building.
+2026-09-02T04:16:01Z  WARN   5.1b.5  parent-snapshots  intra-package-derivation: 2 SD(s) derive from another SD in this package  files=StructureDefinition-mii-pr-biobank-specimen.json, StructureDefinition-mii-pr-biobank-zellinie-organoid.json
+    Generate those AFTER their own parent, and re-read the result: a snapshot
+    generated against a parent that had none is not evidence of anything.
+2026-09-02T04:16:01Z  INFO   5.1b.5  parent-snapshots  base package for the element-count floor  base_dir=/Users/thome/.fhir/packages/hl7.fhir.r4.core#4.0.1/package
+2026-09-02T04:16:01Z  INFO   5.1b.5  parent-snapshots  generating with the OFFICIAL HL7 generator  validator=/Users/thome/.fhir/validators/validator_cli.jar java="openjdk version "17.0.17" 2025-10-21" fhir_version=4.0.1
+    cmd=`java -jar /Users/thome/.fhir/validators/validator_cli.jar snapshot <sd.json> -version 4.0.1 -tx n/a -ig /var/folders/fp/zh9lp0950ysg28_1vb5mhwcc0000gn/T/tmp.XkSoXEJtnc/src/package -output <out.json>`
+    One invocation PER FILE: a batch run aborts at the first failure and silently
+    skips the rest. Nothing here merges a differential by hand (script header).
+2026-09-02T04:16:10Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-Biobank.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/LogicalModel/Biobank reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:16:17Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-anzahl-aliquots.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-anzahl-aliquots reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:16:25Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-anzahl-passagen.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-anzahl-passagen reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:16:32Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-diagnose.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Diagnose reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:16:38Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-ebene.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-ebene reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:16:45Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-einstellung-blutversorgung.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/EinstellungBlutversorgung reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:16:51Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-feature-r5.json  url=http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:16:58Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-infektiositaetsstatus.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-infektiositaetsstatus reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:05Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-kontaktrolle.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/KontaktRolle reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:11Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-kulturprotokoll.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-kulturprotokoll reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:18Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-modifikationen.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-modifikationen reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:24Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-temperaturbedingungen.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:31Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-verwaltende-organisation.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/VerwaltendeOrganisation reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:38Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-observation-dna-konzentration.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-pr-biobank-observation-dna-konzentration reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:45Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-observation-karyotyp.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-pr-biobank-observation-karyotyp reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:52Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-observation-morphologie.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-pr-biobank-observation-morphologie reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:58Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-observation-proliferation.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-pr-biobank-observation-proliferation reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:18:05Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-observation-qualitaetspruefung.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-pr-biobank-observation-qualitaetspruefung reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:18:12Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-observation-wachstumstyp.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-pr-biobank-observation-wachstumstyp reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:18:18Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-organization.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Organization reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:18:24Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-specimen-core.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:18:31Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-specimen.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Specimen reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:18:38Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-substance-additiv.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:18:44Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-zellinie-organoid.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-pr-biobank-zellinie-organoid reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:18:45Z  INFO   5.1b.5  parent-snapshots  rebuild written  dir=/var/folders/fp/zh9lp0950ysg28_1vb5mhwcc0000gn/T/tmp.XkSoXEJtnc/rebuilt/package merged=0 refused=0
+    Only the `snapshot` property was added; every other field is the upstream
+    bytes re-serialized. Do not diff this against upstream expecting byte
+    equality -- key order and indentation are the serializer's.
+2026-09-02T04:18:45Z  INFO   5.1b.5  parent-snapshots  generated 0 of 24 snapshots  expected=24 actual=0
+2026-09-02T04:18:45Z  WARN   5.1b.5  parent-snapshots  silent-partial-success: generated 0 of 24 snapshots
+    Exit status is not evidence of completeness; these two counts are.
+    Reconcile against the step-1 inventory before continuing.
+2026-09-02T04:18:45Z  ERROR  5.1b.5  parent-snapshots  required-parent-still-without-snapshot: https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore  file=StructureDefinition-mii-pr-biobank-specimen-core.json
+    This one blocks the migration: SUSHI still cannot import it. Escalate it
+    to Gate A with the generator's reason, and migrate the rest -- never
+    fabricate the parent (guardrails 1 and 3).
+2026-09-02T04:18:45Z  WARN   5.1b.5  parent-snapshots  rebuild-incomplete: the generator refused 24 of 24 StructureDefinition(s)  files=StructureDefinition-Biobank.json StructureDefinition-mii-ex-biobank-anzahl-aliquots.json StructureDefinition-mii-ex-biobank-anzahl-passagen.json StructureDefinition-mii-ex-biobank-diagnose.json StructureDefinition-mii-ex-biobank-ebene.json StructureDefinition-mii-ex-biobank-einstellung-blutversorgung.json StructureDefinition-mii-ex-biobank-feature-r5.json StructureDefinition-mii-ex-biobank-infektiositaetsstatus.json StructureDefinition-mii-ex-biobank-kontaktrolle.json StructureDefinition-mii-ex-biobank-kulturprotokoll.json StructureDefinition-mii-ex-biobank-modifikationen.json StructureDefinition-mii-ex-biobank-temperaturbedingungen.json StructureDefinition-mii-ex-biobank-verwaltende-organisation.json StructureDefinition-mii-pr-biobank-observation-dna-konzentration.json StructureDefinition-mii-pr-biobank-observation-karyotyp.json StructureDefinition-mii-pr-biobank-observation-morphologie.json StructureDefinition-mii-pr-biobank-observation-proliferation.json StructureDefinition-mii-pr-biobank-observation-qualitaetspruefung.json StructureDefinition-mii-pr-biobank-observation-wachstumstyp.json StructureDefinition-mii-pr-biobank-organization.json StructureDefinition-mii-pr-biobank-specimen-core.json StructureDefinition-mii-pr-biobank-specimen.json StructureDefinition-mii-pr-biobank-substance-additiv.json StructureDefinition-mii-pr-biobank-zellinie-organoid.json
+    Each refusal is named above with the generator's own reason. Decide per file
+    whether the module's FSH depends on it; those that it does are Gate-A
+    escalations for the upstream maintainers.
+2026-09-02T04:18:45Z  INFO   5.1b.5  parent-snapshots  done  mode=build generated=0 of 24 required_blocked=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore exit=1
