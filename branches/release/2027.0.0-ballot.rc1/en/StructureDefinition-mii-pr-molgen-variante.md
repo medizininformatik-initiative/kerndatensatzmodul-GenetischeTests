@@ -129,7 +129,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-var
   "name" : "MII_PR_MolGen_Variante",
   "title" : "MII PR MolGen Variante",
   "status" : "active",
-  "date" : "2026-09-02T09:30:27+00:00",
+  "date" : "2026-09-02T09:55:35+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

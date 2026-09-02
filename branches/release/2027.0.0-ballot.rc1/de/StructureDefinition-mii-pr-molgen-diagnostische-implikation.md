@@ -153,7 +153,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "name" : "MII_PR_MolGen_DiagnostischeImplikation",
   "title" : "MII PR MolGen Diagnostische Implikation",
   "status" : "active",
-  "date" : "2026-09-02T09:30:27+00:00",
+  "date" : "2026-09-02T09:55:35+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
