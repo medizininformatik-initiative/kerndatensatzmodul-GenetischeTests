@@ -158,6 +158,10 @@ Usage: #definition
 * insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
 * insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
 * insert SupportSearchParam(status, http://hl7.org/fhir/SearchParameter/Procedure-status, #token, #SHALL)
+// GenomicStudy und GenomicStudyAnalysis sind beide Procedure und werden durch den
+// Code unterschieden — ohne diesen Parameter lassen sie sich serverseitig nicht
+// trennen. Die frueheren Profil-Intros sagten ihn zu, das CapabilityStatement nicht.
+* insert SupportSearchParam(code, http://hl7.org/fhir/SearchParameter/clinical-code, #token, #SHALL)
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/clinical-patient, #reference, #SHALL)
 * insert SupportSearchParam(encounter, http://hl7.org/fhir/SearchParameter/clinical-encounter, #reference, #SHALL)
 * insert SupportSearchParam(performer, http://hl7.org/fhir/SearchParameter/Procedure-performer, #reference, #SHALL)

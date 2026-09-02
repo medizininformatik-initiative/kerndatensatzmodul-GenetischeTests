@@ -37,51 +37,6 @@ The profile is derived from the profile [GenomicStudy](http://hl7.org/fhir/uv/ge
 
 ---
 
-**Search parameters**
-
-The following search parameters are relevant for the GenomicStudy profile, also in combination:
-
-1. The search parameter ```_id``` MUST be supported:
-
-    Examples: 
-
-    ```GET [base]/Procedure?_id=example-mii-molgen-genomic-study-1```
-
-    Usage notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-2. The search parameter "_profile" MUST be supported:
-
-    Examples:
-    
-    ```GET [base]/Procedure?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study```
-
-    Usage notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-3. The search parameter "subject" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Procedure?subject=Patient/example-mii-molgen-patient```
-
-    Usage notes: Further information on searching by "subject" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-4. The search parameter "status" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Procedure?status=completed```
-
-    Usage notes: Further information on searching by "status" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#token).
-
-5. The search parameter "code" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/Procedure?code=http://loinc.org|33747-0```
-
-    Usage notes: Further information on searching by "code" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#token).
-
---- 
 
 **Examples**
 

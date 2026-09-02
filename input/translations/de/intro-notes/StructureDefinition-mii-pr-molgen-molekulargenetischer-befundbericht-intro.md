@@ -90,154 +90,25 @@ Beispiele sind VCF-, BAM-, CRAM- und andere ähnliche Dateien.
 
 --- 
 
-**Suchparameter**
-
-Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in Kombination:
-
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
-
-    Beispiele: 
-
-    ```GET [base]/DiagnosticReport?_id=example-mii-molgen-molekulargenetischer-befundbericht-1```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-2. Der Suchparameter "_profile" MUSS unterstützt werden:
-
-    Beispiele:
-    
-    ```GET [base]/DiagnosticReport?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-3. Der Suchparameter "code" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DiagnosticReport?code=http://loinc.org|51969-4```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
-
-4. Der Suchparameter "subject" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DiagnosticReport?subject=Patient/example-mii-molgen-patient```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-5. Der Suchparameter "category" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DiagnosticReport?category=http://terminology.hl7.org/CodeSystem/v2-0074|GE```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "category" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
-
-6. Der Suchparameter "encounter" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DiagnosticReport?encounter=Encounter/12345```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-7. Der Suchparameter "date" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DiagnosticReport?date=2022-07-13```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "date" finden sich in der [FHIR-Basisspezifikation - Abschnitt "date"](http://hl7.org/fhir/R4/search.html#date).
-
-8. Der Suchparameter "issued" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DiagnosticReport?issued=2022-07-13```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "issued" finden sich in der [FHIR-Basisspezifikation - Abschnitt "date"](http://hl7.org/fhir/R4/search.html#date).
-
-9. Der Suchparameter "performer" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DiagnosticReport?performer=Practioner/example-mii-molgen-practitioner-laboratory```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "performer" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-10. Der Suchparameter "requestor" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DiagnosticReport?requestor=Practioner/example-mii-molgen-practitioner-physician```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "requestor" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-11. Der Suchparameter "specimen" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DiagnosticReport?specimen=Specimen/example-mii-molgen-specimen```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "specimen" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-12. Der Suchparameter "status" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DiagnosticReport?status=final```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "status" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
-
-13. Der Suchparameter "result" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DiagnosticReport?result=Observation/example-mii-molgen-variante-1```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "result" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-14. Der Suchparameter "media" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DiagnosticReport?media=Media/12345```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "media" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-15. Der Suchparameter "conclusion" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DiagnosticReport?conclusion=http://snomed.info/sct|830150003```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "conclusion" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
-
----
 
 **Examples**
 
 Befundbericht-1 BRAF
 
   
-
 ---
 
 Befundbericht-2 NIPBL
 
   
-
 ---
 
 Die in Befundbericht-2 abzurechnenden EBM-Ziffern werden separat in ChargeItem Ressourcen erfasst.
 
  
-
 ---
 
 Befundbericht-3 Risk-Panel
 
  
-
 ---

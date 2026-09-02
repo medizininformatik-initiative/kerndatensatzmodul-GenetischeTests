@@ -5026,3 +5026,22 @@
     whether the module's FSH depends on it; those that it does are Gate-A
     escalations for the upstream maintainers.
 2026-09-02T04:18:45Z  INFO   5.1b.5  parent-snapshots  done  mode=build generated=0 of 24 required_blocked=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore exit=1
+
+  ---------------------------------------------------------------------------
+  Release-Vorbereitung 2027.0.0-ballot.rc1, Suchparameter-Konsolidierung.
+  Auftrag des Nutzers, woertlich: "Die muessen da raus, die Search parameter im
+  CapabilityStatement muessen richtig sein, und auf der Search Paramter IG Seite
+  muessen alle Selbst deklarierten SearchParamter erklaert sein".
+  ---------------------------------------------------------------------------
+2026-09-02T09:20:00Z  INFO   6.1  searchparam-consolidation  params  scope=intro-notes+capabilitystatement+search-parameters-page
+2026-09-02T09:21:00Z  INFO   6.1.1  intro-note-blocks  scan  found=28 files=14_en+14_de lines=3373 words=12122
+2026-09-02T09:22:00Z  INFO   6.1.2  coverage-check  params  method=extract_GET_examples_from_blocks compare_against=CapabilityStatement_declared_set
+2026-09-02T09:22:30Z  WARN   6.1.2  coverage-check  gap  resource=DiagnosticReport,ServiceRequest,Task param=requestor verdict=not_a_fhir_r4_parameter note=typo_for_requester_which_is_already_declared_on_ServiceRequest_and_Task; DiagnosticReport hat in R4 gar keinen requester. Nichts zu erhalten.
+2026-09-02T09:22:40Z  WARN   6.1.2  coverage-check  gap  resource=Procedure param=code verdict=real_and_missing note=GenomicStudy und GenomicStudyAnalysis sind beide Procedure und nur ueber den Code trennbar
+2026-09-02T09:23:00Z  INFO   6.1.3  capabilitystatement  edit  added=Procedure.code source=http://hl7.org/fhir/SearchParameter/clinical-code expectation=SHALL total=109->110
+2026-09-02T09:24:00Z  INFO   6.1.4  intro-note-blocks  done  removed=28 lines=3373 words=12122 residue_search_parameter=0 residue_Pathologie-Befund=0
+2026-09-02T09:24:10Z  NOTE   6.1.4  qa-7  resolved  Der falsche Modulname "Modul Pathologie-Befund" stand ausschliesslich in diesen Bloecken und ist damit weg.
+2026-09-02T09:25:00Z  INFO   6.1.5  searchparameter-descriptions  edit  count=6 from=German_restating_own_name to=English_stating_reached_element_and_reason reason=guide rendert englisch als Default, description ist nutzersichtbar auf der Artefaktseite
+2026-09-02T09:26:00Z  INFO   6.1.6  search-parameters-page  rewrite  files=2 sections=6+6 example_queries=6+6 parity=ok
+2026-09-02T09:26:30Z  INFO   6.1.6  example-ids  verify  corrected=3 mii-exa-molgen-empfohlene-folgemassnahme-1->mii-exa-molgen-folgemassnahme-1 mii-exa-molgen-device-tso500->mii-exa-molgen-device-tso500-lot LA26418-6->LA26398-0 method=abgeglichen gegen fsh-generated/resources
+2026-09-02T09:27:00Z  INFO   6.2  release-checks  done  convention_check_release=PASS language_model_check=PASS M6=2027.0.0-ballot.rc1 M9=none_undecided
