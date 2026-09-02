@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-mutationslast-1"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast|2027.0.0-ballot.rc1"/>
+    <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/tmb|3.0.0"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-molgen-mutationslast-1</b></p><a name="mii-exa-molgen-mutationslast-1"> </a><a name="hcmii-exa-molgen-mutationslast-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="StructureDefinition-mii-pr-molgen-mutationslast.html">MII PR MolGen Mutationslast</a> version: 2027.0.0-ballot.rc1, <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/tmb|3.0.0">http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/tmb|3.0.0</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs biomarker-category}">A characterization of a given biomarker observation.</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 94076-7}">Mutations/Megabase [# Ratio] in Tumor</span></p><p><b>subject</b>: <a href="Patient-mii-exa-molgen-patient.html">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Medical record number (use: usual, ))</a></p><p><b>performer</b>: <a href="Practitioner-mii-exa-molgen-practitioner-lab.html">Practitioner Dr. Daniel Schmidt(official)</a></p><p><b>value</b>: 12 Mutations/Megabase<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1/1000000{Base} = '1/1000000{Base}')</span></p><p><b>specimen</b>: <a href="Specimen-mii-exa-molgen-specimen-1.html">Specimen: identifier = https://biobank.uk-musterstadt.de/fhir/sid/proben#5432; status = available; type = Tissue specimen from colon (specimen)</a></p></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-molgen-mutationslast-1</b></p><a name="de-mii-exa-molgen-mutationslast-1"> </a><a name="de-hcmii-exa-molgen-mutationslast-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="StructureDefinition-mii-pr-molgen-mutationslast.html">MII PR MolGen Mutationslast</a> version: 2027.0.0-ballot.rc1, <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/tmb|3.0.0">http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/tmb|3.0.0</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs biomarker-category}">A characterization of a given biomarker observation.</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 94076-7}">Mutations/Megabase [# Ratio] in Tumor</span></p><p><b>subject</b>: <a href="Patient-mii-exa-molgen-patient.html">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Krankenaktennummer (use: usual, ))</a></p><p><b>performer</b>: <a href="Practitioner-mii-exa-molgen-practitioner-lab.html">Practitioner Dr. Daniel Schmidt(official)</a></p><p><b>value</b>: 12 Mutations/Megabase<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1/1000000{Base} = '1/1000000{Base}')</span></p><p><b>specimen</b>: <a href="Specimen-mii-exa-molgen-specimen-1.html">Specimen: identifier = https://biobank.uk-musterstadt.de/fhir/sid/proben#5432; status = available; type = Tissue specimen from colon (specimen)</a></p></div></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+      <display value="Laboratory"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs"/>
+      <code value="biomarker-category"/>
+      <display value="A characterization of a given biomarker observation."/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="94076-7"/>
+      <display value="Mutations/Megabase [# Ratio] in Tumor"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-molgen-patient"/>
+  </subject>
+  <performer>
+    <reference value="Practitioner/mii-exa-molgen-practitioner-lab"/>
+  </performer>
+  <valueQuantity>
+    <value value="12"/>
+    <unit value="Mutations/Megabase"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="1/1000000{Base}"/>
+  </valueQuantity>
+  <specimen>
+    <reference value="Specimen/mii-exa-molgen-specimen-1"/>
+  </specimen>
+</Observation>
