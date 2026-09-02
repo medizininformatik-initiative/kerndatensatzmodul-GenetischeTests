@@ -1,0 +1,37 @@
+{
+  "id" : "DeviceDefinition-mii-exa-molgen-devicedef-tso500",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "DeviceDefinition.deviceName.name",
+      "context" : "DeviceDefinition.deviceName.name",
+      "source" : "TruSight Oncology 500 v2",
+      "target" : null
+    },
+    {
+      "id" : "DeviceDefinition.modelNumber",
+      "context" : "DeviceDefinition.modelNumber",
+      "source" : "20130527",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Comprehensive genomic profiling capture panel",
+      "target" : null
+    },
+    {
+      "id" : "DeviceDefinition.specialization.systemType",
+      "context" : "DeviceDefinition.specialization.systemType",
+      "source" : "Hybrid capture-based comprehensive genomic profiling panel for solid tumors (RUO)",
+      "target" : null
+    },
+    {
+      "id" : "DeviceDefinition.specialization.version",
+      "context" : "DeviceDefinition.specialization.version",
+      "source" : "523 SNV/Indel genes; 59 CNV genes; 23 DNA rearrangement genes; 55 RNA fusion/splice genes; TMB; MSI; HRD; 1.94 Mb panel size",
+      "target" : null
+    }]
+  }]
+}

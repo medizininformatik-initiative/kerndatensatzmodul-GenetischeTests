@@ -1,0 +1,31 @@
+{
+  "id" : "Device-mii-exa-molgen-device-tso500-lot",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "Device.manufacturer",
+      "context" : "Device.manufacturer",
+      "source" : "Illumina Inc.",
+      "target" : null
+    },
+    {
+      "id" : "Device.lotNumber",
+      "context" : "Device.lotNumber",
+      "source" : "20240518-A",
+      "target" : null
+    },
+    {
+      "id" : "Device.modelNumber",
+      "context" : "Device.modelNumber",
+      "source" : "20130527",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Comprehensive genomic profiling capture panel (TSO500 v2)",
+      "target" : null
+    }]
+  }]
+}

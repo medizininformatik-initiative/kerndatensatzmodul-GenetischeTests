@@ -26,11 +26,13 @@
 [mii-exa-molgen-family-member-history-mi]: FamilyMemberHistory-mii-exa-molgen-family-member-history-mi.html
 [mii-exa-molgen-family-member-history-retinal]: FamilyMemberHistory-mii-exa-molgen-family-member-history-retinal.html
 [mii-exa-molgen-documentreference-fastq]: DocumentReference-mii-exa-molgen-documentreference-fastq.html
+[mii-exa-molgen-specimen-ffpe-tumor]: Specimen-mii-exa-molgen-specimen-ffpe-tumor.html
 [mii-exa-molgen-genomic-study-analysis-braf]: Procedure-mii-exa-molgen-genomic-study-analysis-braf.html
 [mii-exa-molgen-genomic-study-analysis-cornelia-de-lange]: Procedure-mii-exa-molgen-genomic-study-analysis-cornelia-de-lange.html
 [mii-exa-molgen-genomic-study-analysis-trurisk-panel]: Procedure-mii-exa-molgen-genomic-study-analysis-trurisk-panel.html
 [mii-exa-molgen-genomic-study-cornelia-de-lange]: Procedure-mii-exa-molgen-genomic-study-cornelia-de-lange.html
 [mii-exa-molgen-genomic-study-trurisk-panel]: Procedure-mii-exa-molgen-genomic-study-trurisk-panel.html
+[mii-exa-molgen-genomic-study-tso500]: Procedure-mii-exa-molgen-genomic-study-tso500.html
 [mii-exa-molgen-genotyp-1]: Observation-mii-exa-molgen-genotyp-1.html
 [mii-exa-molgen-genotyp-brca1]: Observation-mii-exa-molgen-genotyp-brca1.html
 [mii-exa-molgen-genotyp-2]: Observation-mii-exa-molgen-genotyp-2.html
@@ -126,6 +128,10 @@
 [mii-exa-molgen-molekulare-konsequenz-2]: Observation-mii-exa-molgen-molekulare-konsequenz-2.html
 [mii-exa-molgen-practitioner-ordering]: Practitioner-mii-exa-molgen-practitioner-ordering.html
 [mii-exa-molgen-prs-brca1]: RiskAssessment-mii-exa-molgen-prs-brca1.html
+[mii-exa-molgen-devicedef-tso500]: DeviceDefinition-mii-exa-molgen-devicedef-tso500.html
+[mii-exa-molgen-genomic-study-analysis-tso500-libprep]: Procedure-mii-exa-molgen-genomic-study-analysis-tso500-libprep.html
+[mii-exa-molgen-genomic-study-analysis-tso500-sequencing]: Procedure-mii-exa-molgen-genomic-study-analysis-tso500-sequencing.html
+[mii-exa-molgen-device-tso500-lot]: Device-mii-exa-molgen-device-tso500-lot.html
 [mii-exa-molgen-variante-brca1]: Observation-mii-exa-molgen-variante-brca1.html
 [mii-exa-molgen-variante-fgfr2-fusion]: Observation-mii-exa-molgen-variante-fgfr2-fusion.html
 [mii-exa-molgen-variante-cnv-4]: Observation-mii-exa-molgen-variante-cnv-4.html

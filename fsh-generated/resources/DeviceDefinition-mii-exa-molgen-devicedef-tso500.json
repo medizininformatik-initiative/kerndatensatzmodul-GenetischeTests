@@ -1,0 +1,30 @@
+{
+  "resourceType": "DeviceDefinition",
+  "id": "mii-exa-molgen-devicedef-tso500",
+  "identifier": [
+    {
+      "system": "https://www.medizininformatik-initiative.de/fhir/sid/panel-catalog",
+      "value": "TSO500-v2"
+    }
+  ],
+  "deviceName": [
+    {
+      "name": "TruSight Oncology 500 v2",
+      "type": "model-name"
+    }
+  ],
+  "version": [
+    "2"
+  ],
+  "specialization": [
+    {
+      "systemType": "Hybrid capture-based comprehensive genomic profiling panel for solid tumors (RUO)",
+      "version": "523 SNV/Indel genes; 59 CNV genes; 23 DNA rearrangement genes; 55 RNA fusion/splice genes; TMB; MSI; HRD; 1.94 Mb panel size"
+    }
+  ],
+  "type": {
+    "text": "Comprehensive genomic profiling capture panel"
+  },
+  "manufacturerString": "Illumina Inc.",
+  "modelNumber": "20130527"
+}
