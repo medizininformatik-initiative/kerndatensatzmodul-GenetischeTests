@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante | *Version*:2026.0.4 |
-| Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_PR_MolGen_Variante |
+| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_PR_MolGen_Variante |
 
  
 Dieses Profil ermöglicht eine vollständige Beschreibung der gefundenen Variante unter Verwendung von Eigenschaften aus einer Vielzahl von Testmethoden. 
@@ -208,7 +208,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "name" : "MII_PR_MolGen_Variante",
   "title" : "MII PR MolGen Variante",
   "status" : "active",
-  "date" : "2026-09-01T21:27:10+00:00",
+  "date" : "2026-09-02T02:35:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/risk-assessment-einflussfaktor | *Version*:2026.0.4 |
-| Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_EX_MolGen_RiskAssessment_Einflussfaktor |
+| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_EX_MolGen_RiskAssessment_Einflussfaktor |
 
 Die Extension erweitert RiskAssessment.prediction um die Möglichkeit, weitere ausschlaggebende Faktoren mit Einfluss auf die Risikoberechnung anzugeben.
 
@@ -74,7 +74,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-molge
   "name" : "MII_EX_MolGen_RiskAssessment_Einflussfaktor",
   "title" : "MII EX MolGen RiskAssessment Einflussfaktor",
   "status" : "active",
-  "date" : "2026-09-01T21:27:10+00:00",
+  "date" : "2026-09-02T02:35:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

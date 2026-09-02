@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis | *Version*:2026.0.4 |
-| Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_EX_MolGen_Verwandtschaftsverhaeltnis |
+| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_EX_MolGen_Verwandtschaftsverhaeltnis |
 
 Extension erlaubt die Angabe eines Verwandtschaftsverhältnisses zwischen Patient und Familienangehörigen.
 
@@ -82,7 +82,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-molge
   "name" : "MII_EX_MolGen_Verwandtschaftsverhaeltnis",
   "title" : "MII EX MolGen Verwandtschaftsverhaeltnis",
   "status" : "active",
-  "date" : "2026-09-01T21:27:10+00:00",
+  "date" : "2026-09-02T02:35:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

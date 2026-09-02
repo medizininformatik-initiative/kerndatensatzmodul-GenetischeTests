@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-family-member-snomed | *Version*:2026.0.4 |
-| Active as of 2026-09-01 | *Computable Name*:MII_VS_MolGen_FamilyMember_SNOMED |
+| Active as of 2026-09-02 | *Computable Name*:MII_VS_MolGen_FamilyMember_SNOMED |
 
  
 The ValueSet contains codes for related family member types from SNOMED CT. 
@@ -41,7 +41,7 @@ The ValueSet contains codes for related family member types from SNOMED CT.
   "name" : "MII_VS_MolGen_FamilyMember_SNOMED",
   "title" : "MII VS MolGen Family Member SNOMED",
   "status" : "active",
-  "date" : "2026-09-01T21:27:10+00:00",
+  "date" : "2026-09-02T02:35:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

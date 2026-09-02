@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp | *Version*:2026.0.4 |
-| Active as of 2026-09-01 | *Computable Name*:MII_PR_MolGen_Genotyp |
+| Active as of 2026-09-02 | *Computable Name*:MII_PR_MolGen_Genotyp |
 
  
 Dieses Profil beschreibt die Feststellung eines bestimmten Genotyps auf der Grundlage einer oder mehrerer Varianten oder Haplotypen. 
@@ -106,7 +106,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-gen
   "name" : "MII_PR_MolGen_Genotyp",
   "title" : "MII PR MolGen Genotyp",
   "status" : "active",
-  "date" : "2026-09-01T21:27:10+00:00",
+  "date" : "2026-09-02T02:35:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

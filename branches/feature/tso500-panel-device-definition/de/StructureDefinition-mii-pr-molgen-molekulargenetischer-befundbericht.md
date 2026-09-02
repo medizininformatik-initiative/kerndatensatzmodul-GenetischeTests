@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht | *Version*:2026.0.4 |
-| Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_PR_MolGen_MolekulargenetischerBefundbericht |
+| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_PR_MolGen_MolekulargenetischerBefundbericht |
 
  
 Der DiagnosticReport ist zentraler Bestandteil aller genetischen Befundberichte und enthält Metadaten über den gesamten Bericht sowie alle relevanten Informationen, die im Rahmen der molekulargenetischen Analyse gefunden wurden. 
@@ -244,7 +244,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "name" : "MII_PR_MolGen_MolekulargenetischerBefundbericht",
   "title" : "MII PR MolGen Molekulargenetischer Befundbericht",
   "status" : "active",
-  "date" : "2026-09-01T21:27:10+00:00",
+  "date" : "2026-09-02T02:35:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

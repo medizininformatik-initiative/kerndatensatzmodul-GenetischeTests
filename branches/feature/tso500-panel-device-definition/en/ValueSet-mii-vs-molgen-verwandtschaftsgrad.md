@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-verwandtschaftsgrad | *Version*:2026.0.4 |
-| Active as of 2026-09-01 | *Computable Name*:MII_VS_MolGen_Verwandtschaftsgrad |
+| Active as of 2026-09-02 | *Computable Name*:MII_VS_MolGen_Verwandtschaftsgrad |
 
  
 ValueSet für die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen. 
@@ -41,7 +41,7 @@ ValueSet für die Angabe eines Verwandtschaftsgrades zwischen Patient und Famili
   "name" : "MII_VS_MolGen_Verwandtschaftsgrad",
   "title" : "MII VS Mol Gen Verwandtschaftsgrad",
   "status" : "active",
-  "date" : "2026-09-01T21:27:10+00:00",
+  "date" : "2026-09-02T02:35:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

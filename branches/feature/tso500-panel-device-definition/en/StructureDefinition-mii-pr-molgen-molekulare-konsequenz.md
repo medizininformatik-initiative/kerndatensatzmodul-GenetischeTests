@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz | *Version*:2026.0.4 |
-| Active as of 2026-09-01 | *Computable Name*:MII_PR_MolGen_MolekulareKonsequenz |
+| Active as of 2026-09-02 | *Computable Name*:MII_PR_MolGen_MolekulareKonsequenz |
 
  
 Dieses Profil beschreibt den Zusammenhang von bestimmten Varianten, Haplotypen oder Genotypen und bestimmten Konsequenzen auf molekularer Ebene. 
@@ -94,7 +94,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-mol
   "name" : "MII_PR_MolGen_MolekulareKonsequenz",
   "title" : "MII PR MolGen Molekulare Konsequenz",
   "status" : "active",
-  "date" : "2026-09-01T21:27:10+00:00",
+  "date" : "2026-09-02T02:35:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

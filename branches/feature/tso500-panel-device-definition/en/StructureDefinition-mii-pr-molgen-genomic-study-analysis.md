@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis | *Version*:2026.0.4 |
-| Active as of 2026-09-01 | *Computable Name*:MII_PR_MolGen_GenomicStudyAnalysis |
+| Active as of 2026-09-02 | *Computable Name*:MII_PR_MolGen_GenomicStudyAnalysis |
 
  
 Genomic Study Analysis ist ein Profil, das die Durchführung von konkreten molekulargenetischen Methoden und Assays beschreibt. Es ist vom GenomicStudyAnalysis-Profil aus dem Genomics Reporting IG abgeleitet. Die Darstellung über GenomicStudyAnalysis ist präziser als die vorherige UntersuchteRegion, da sie eine klare Repräsentation ermöglicht, welche Regionen mit welchem Assay untersucht wurden und welche Bereiche callable bzw. nicht-callable waren. Dies ermöglicht eine genauere Qualitätsbewertung und Interpretation der Ergebnisse, insbesondere bei negativen Befunden. 
@@ -93,7 +93,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-gen
   "name" : "MII_PR_MolGen_GenomicStudyAnalysis",
   "title" : "MII PR MolGen Genomic Study Analysis",
   "status" : "active",
-  "date" : "2026-09-01T21:27:10+00:00",
+  "date" : "2026-09-02T02:35:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

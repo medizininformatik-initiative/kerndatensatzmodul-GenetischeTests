@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme | *Version*:2026.0.4 |
-| Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_PR_MolGen_EmpfohleneFolgemassnahme |
+| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_PR_MolGen_EmpfohleneFolgemassnahme |
 
  
 Das Profil dieser Task Ressource beschreibt die empfohlenen Folgemaßnahmen. 
@@ -158,7 +158,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "name" : "MII_PR_MolGen_EmpfohleneFolgemassnahme",
   "title" : "MII PR MolGen Empfohlene Folgemaßnahme",
   "status" : "active",
-  "date" : "2026-09-01T21:27:10+00:00",
+  "date" : "2026-09-02T02:35:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
