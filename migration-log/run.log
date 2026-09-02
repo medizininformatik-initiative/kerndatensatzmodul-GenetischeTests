@@ -5080,3 +5080,10 @@
 2026-09-02T10:30:30Z  NOTE   7.4  begruendung  Keines der beiden Profile traegt eine Kerndatensatz-Anforderung, das Modul leitet von keinem etwas ab, und es gibt zu keinem ein Beispiel. SHALL verpflichtete zu etwas, das der Guide nirgends vorfuehrt.
 2026-09-02T10:31:00Z  INFO   7.4.1  pages  edit  files=2 removed=offener-Punkt-Kasten added=Abschnitt "Erwartung" mit Begruendung; Haplotype-SHALL-Absatz entfernt, Erwartung jetzt einmal fuer beide
 2026-09-02T10:32:00Z  INFO   7.4.2  sushi  done  errors=0 warnings=0 supportedProfile_gesamt=17 haplotype=MAY sequence-phase-relationship=MAY
+2026-09-02T14:25:00Z  INFO   8.1  pr51  merged  effect=.gitignore ignoriert fsh-generated nicht mehr pauschal, nur noch die drei Churn-Dateien wie in kerndatensatz-biobank
+2026-09-02T14:26:00Z  INFO   8.1.1  rebase  done  branches=release/2027.0.0-ballot.rc1,docs/upstream-genomics-reporting onto=main@eb0fad50 conflicts=0
+2026-09-02T14:30:00Z  DEC    8.2  capabilitystatement-expectation  decided  Entscheidung des Nutzers: "genotype auch" genotyp=SHALL->MAY
+2026-09-02T14:30:30Z  NOTE   8.2  begruendung  Genotyp, Haplotype und Sequence Phase Relationship sagen alle etwas ueber Allele als Ganzes statt ueber einen einzelnen Befund. Viele Labore leiten das nie ab. Verpflichtender Kern bleiben Befundbericht, Variante und die Implikationen.
+2026-09-02T14:31:00Z  RETRACT 8.3  befundbericht-slices  Frueherer Verdacht in dieser Sitzung, result[haplotype] und result[sequence-phase-relation] seien untypisierte MS-Slices ohne Ziel, war FALSCH. Das Elternprofil genomic-report typisiert beide bereits (slicing discriminator type=profile path=resolve()); das Differential wiederholt das nur nicht. Nichts zu reparieren.
+2026-09-02T14:32:00Z  INFO   8.4  sushi  done  errors=0 warnings=0 supportedProfile=17 SHALL=14 MAY=3
+2026-09-02T14:33:00Z  INFO   8.5  capability-statements-page  edit  files=2 added=Abschnitt "Warum drei Profile MAY sind"

@@ -105,7 +105,12 @@ Usage: #definition
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation|2027.0.0-ballot.rc1, #SHALL)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2027.0.0-ballot.rc1, #SHALL)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz|2027.0.0-ballot.rc1, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp|2027.0.0-ballot.rc1, #SHALL)
+// Genotyp ist MAY, nicht SHALL: eine aggregierte Allel-Aussage, die viele Labore gar
+// nicht erzeugen. Der verpflichtende Kern dieses Moduls sind Befundbericht, Variante
+// und die Implikationen. Wer Genotypen austauscht, nutzt dieses Profil - erzeugen muss
+// sie niemand. Entschieden 2026-09-02, zusammen mit haplotype und
+// sequence-phase-relationship, mit denen Genotyp fachlich eine Gruppe bildet.
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp|2027.0.0-ballot.rc1, #MAY)
 // Zwei Profile aus Clinical Genomics STU3, die dieses Modul unveraendert verwendet und
 // nicht selbst profiliert. Beide MAY: sie tragen keine Anforderung des Kerndatensatzes,
 // dieses Modul leitet nichts von ihnen ab, und es gibt kein einziges Beispiel dafuer.
