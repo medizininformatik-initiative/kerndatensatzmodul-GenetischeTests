@@ -77,7 +77,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-gen
   "name" : "MII_PR_MolGen_Genotyp",
   "title" : "MII PR MolGen Genotyp",
   "status" : "active",
-  "date" : "2026-09-02T14:33:35+00:00",
+  "date" : "2026-09-02T15:03:15+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

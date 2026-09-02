@@ -146,7 +146,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-mol
   "name" : "MII_PR_MolGen_MolekulargenetischerBefundbericht",
   "title" : "MII PR MolGen Molekulargenetischer Befundbericht",
   "status" : "active",
-  "date" : "2026-09-02T14:33:35+00:00",
+  "date" : "2026-09-02T15:03:15+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
@@ -975,6 +975,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-mol
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekularer-biomarker"]
+      }],
       "mustSupport" : true
     },
     {

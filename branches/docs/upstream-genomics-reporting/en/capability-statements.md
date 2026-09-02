@@ -19,7 +19,7 @@ Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/Ca
 
 #### Why three profiles are MAY
 
-Of the seventeen supported profiles, fourteen carry `SHALL` and three carry `MAY`: `genotyp`, `haplotype` and `sequence-phase-relationship`.
+Of the eighteen supported profiles, fifteen carry `SHALL` and three carry `MAY`: `genotyp`, `haplotype` and `sequence-phase-relationship`.
 
 All three state something about **alleles as a whole** rather than about a single finding: which alleles sit at a locus, which variants travel together, and whether two variants sit on the same copy of a chromosome. Many laboratories never derive these — they report the variants and stop. Requiring them with `SHALL` would oblige implementers to produce data they do not have.
 

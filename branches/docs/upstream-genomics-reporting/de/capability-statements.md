@@ -21,7 +21,7 @@ Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/Ca
 
 #### Warum drei Profile MAY sind
 
-Von den siebzehn unterstützten Profilen tragen vierzehn `SHALL` und drei `MAY`: `genotyp`, `haplotype` und `sequence-phase-relationship`.
+Von den achtzehn unterstützten Profilen tragen fünfzehn `SHALL` und drei `MAY`: `genotyp`, `haplotype` und `sequence-phase-relationship`.
 
 Alle drei sagen etwas über **Allele als Ganzes** aus statt über einen einzelnen Befund: welche Allele an einem Locus sitzen, welche Varianten gemeinsam vererbt werden und ob zwei Varianten auf derselben Chromosomenkopie liegen. Viele Labore leiten das nie ab — sie berichten die Varianten und hören dort auf. Ein `SHALL` würde Implementierende zu Daten verpflichten, die sie nicht haben.
 

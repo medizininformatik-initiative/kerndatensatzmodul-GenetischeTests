@@ -168,7 +168,7 @@ Atomic ValueResultAtomic resultDataTestAnalyteBatteryOrganizer","",0,*,"Y","",""
 ","Haplotyp","Referenz zu Haplotyp-Ergebnissen","Observations can contain observations.","Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful.","","","","","","","",,,,,"",,,,"DiagnosticReport.result",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","OBXs"
 "DiagnosticReport.result:biomarker","DiagnosticReport.result","biomarker","Data
-Atomic ValueResultAtomic resultDataTestAnalyteBatteryOrganizer","",0,*,"Y","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-biomarker]]}
+Atomic ValueResultAtomic resultDataTestAnalyteBatteryOrganizer","",0,*,"Y","","","Reference {[]} {[CanonicalType[https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekularer-biomarker]]}
 ","Biomarker","Referenz zu molekularen Biomarkern wie TMB oder MSI","Observations can contain observations.","Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful.","","","","","","","",,,,,"",,,,"DiagnosticReport.result",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","OBXs"
 "DiagnosticReport.imagingStudy","DiagnosticReport.imagingStudy","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ImagingStudy]]}

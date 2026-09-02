@@ -160,6 +160,7 @@ This structure refers to these other structures:
 * [MII PR MolGen Therapeutische Implikation (https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation)](StructureDefinition-mii-pr-molgen-therapeutische-implikation.md)
 * [MII PR MolGen Variante (https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante)](StructureDefinition-mii-pr-molgen-variante.md)
 * [MII PR MolGen Genotyp (https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp)](StructureDefinition-mii-pr-molgen-genotyp.md)
+* [MII PR MolGen Molekulare Biomarker (https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekularer-biomarker)](StructureDefinition-mii-pr-molgen-molekularer-biomarker.md)
 
 **Extensions**
 
@@ -198,6 +199,7 @@ This structure refers to these other structures:
 * [MII PR MolGen Therapeutische Implikation (https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation)](StructureDefinition-mii-pr-molgen-therapeutische-implikation.md)
 * [MII PR MolGen Variante (https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante)](StructureDefinition-mii-pr-molgen-variante.md)
 * [MII PR MolGen Genotyp (https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp)](StructureDefinition-mii-pr-molgen-genotyp.md)
+* [MII PR MolGen Molekulare Biomarker (https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekularer-biomarker)](StructureDefinition-mii-pr-molgen-molekularer-biomarker.md)
 
 **Extensions**
 
@@ -222,7 +224,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "name" : "MII_PR_MolGen_MolekulargenetischerBefundbericht",
   "title" : "MII PR MolGen Molekulargenetischer Befundbericht",
   "status" : "active",
-  "date" : "2026-09-02T14:33:35+00:00",
+  "date" : "2026-09-02T15:03:15+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
@@ -1051,6 +1053,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekularer-biomarker"]
+      }],
       "mustSupport" : true
     },
     {
