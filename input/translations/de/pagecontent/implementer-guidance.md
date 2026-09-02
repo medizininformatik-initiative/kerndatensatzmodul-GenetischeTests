@@ -102,9 +102,6 @@ Grundlage einer oder mehrerer Varianten.
 Canonical: `http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype`
 · [Profilseite](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html)
 
-Das [CapabilityStatement](CapabilityStatement-mii-cps-molgen-capabilitystatement.html)
-deklariert dieses Profil mit `SHALL`; ein konformer Server muss es also unterstützen.
-
 ##### Komponenten
 
 STU3 definiert auf diesem Profil fünf Component-Slices. Zwei davon tragen Elemente
@@ -146,16 +143,20 @@ Canonical: `http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequen
 | ValueSet | [`sequence-phase-relationship-vs`](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-sequence-phase-relationship-vs.html), Bindung `required` |
 | CodeSystem | [`sequence-phase-relationship-cs`](http://hl7.org/fhir/uv/genomics-reporting/STU3/CodeSystem-sequence-phase-relationship-cs.html) — Canonical `http://terminology.hl7.org/CodeSystem/sequence-phase-relationship-cs`, es gehört also zu HL7 Terminology und wird im STU3-Guide nur mitgerendert |
 
-<!-- DERIVED:no-source source=none gate=B -->
-> **Offener Punkt für das Release: Dieses Profil ist im CapabilityStatement nicht
-> deklariert.**
-> Haplotype ist mit `SHALL` deklariert, Sequence Phase Relationship gar nicht —
-> obwohl diese Seite beide als verwendet darstellt. Entweder ist das
-> CapabilityStatement unvollständig, oder dieses Profil wird von Implementierenden
-> tatsächlich nicht erwartet und die Seite sagt zu viel. Was von beidem zutrifft,
-> ist eine Entscheidung der Modulautorinnen und -autoren und lässt sich nicht aus
-> den Artefakten ablesen.
-{: .ig-highlight .ig-highlight-grey}
+##### Erwartung
+
+Beide Profile sind im
+[CapabilityStatement](CapabilityStatement-mii-cps-molgen-capabilitystatement.html)
+mit **`MAY`** deklariert.
+
+Das ist Absicht und wurde für dieses Release so entschieden. Ein `MAY` besagt: Wer
+Haplotypen oder Phasenbeziehungen austauscht, soll dafür diese STU3-Profile nehmen
+und nichts Eigenes erfinden — verpflichtet ist dazu aber niemand. Keines der beiden
+Profile trägt eine Anforderung des Kerndatensatzes, dieses Modul leitet von keinem
+etwas ab, und der Guide zeigt zu keinem ein Beispiel. Haplotype stand zuvor auf
+`SHALL` und verpflichtete Implementierende damit zu etwas, das der Guide nirgends
+vorführt; Sequence Phase Relationship war gar nicht deklariert, obwohl diese Seite
+es als verwendet darstellte. Beide werden jetzt gleich behandelt.
 
 ### Referenzen
 

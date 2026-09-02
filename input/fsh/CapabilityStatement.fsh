@@ -105,8 +105,15 @@ Usage: #definition
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation|2027.0.0-ballot.rc1, #SHALL)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2027.0.0-ballot.rc1, #SHALL)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz|2027.0.0-ballot.rc1, #SHALL)
-* insert SupportProfile(http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype, #SHALL)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp|2027.0.0-ballot.rc1, #SHALL)
+// Zwei Profile aus Clinical Genomics STU3, die dieses Modul unveraendert verwendet und
+// nicht selbst profiliert. Beide MAY: sie tragen keine Anforderung des Kerndatensatzes,
+// dieses Modul leitet nichts von ihnen ab, und es gibt kein einziges Beispiel dafuer.
+// Haplotype stand frueher auf SHALL, was Implementierende zu etwas verpflichtete, das
+// der Guide nirgends zeigt; Sequence Phase Relationship war gar nicht deklariert,
+// obwohl die Implementiererseite beide als verwendet darstellt. Entschieden 2026-09-02.
+* insert SupportProfile(http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype, #MAY)
+* insert SupportProfile(http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship, #MAY)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast|2027.0.0-ballot.rc1, #SHALL)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet|2027.0.0-ballot.rc1, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
