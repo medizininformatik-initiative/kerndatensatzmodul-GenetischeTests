@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-genotyp-1"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp|2026.0.4"/>
+    <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype|3.0.0"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-molgen-genotyp-1</b></p><a name="mii-exa-molgen-genotyp-1"> </a><a name="hcmii-exa-molgen-genotyp-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="StructureDefinition-mii-pr-molgen-genotyp.html">MII PR MolGen Genotyp</a> version: 2026.0.4, <a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-genotype.html">Genotype</a> version: 3.0.0</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 GE}">Genetics</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 84413-4}">Genotype display name</span></p><p><b>subject</b>: <a href="Patient-mii-exa-molgen-patient.html">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Medical record number (use: usual, ))</a></p><p><b>effective</b>: 2022-04-07</p><p><b>value</b>: <span title="Codes:">BRAF rs113488022 T&gt;A</span></p><p><b>method</b>: <span title="Codes:{http://loinc.org LA26398-0}">Sequencing</span></p><p><b>specimen</b>: <a href="Specimen-mii-exa-molgen-specimen-1.html">Specimen: identifier = https://biobank.uk-musterstadt.de/fhir/sid/proben#5432; status = available; type = Tissue specimen from colon (specimen)</a></p><p><b>device</b>: <a href="Device-mii-exa-molgen-device-sequencer.html">Device: status = active; manufacturer = Illumina</a></p><p><b>derivedFrom</b>: <a href="Observation-mii-exa-molgen-variante-1.html">Observation Genetic variant assessment</a></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48018-6}">Gene studied [ID]</span></p><p><b>value</b>: <span title="Codes:{http://www.genenames.org/geneId HGNC:1097}">BRAF</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48001-2}">Cytogenetic (chromosome) location</span></p><p><b>value</b>: <span title="Codes:{urn:oid:2.16.840.1.113883.6.335 7q34}">7q34</span></p></blockquote></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+      <display value="Laboratory"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="GE"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="84413-4"/>
+      <display value="Genotype display name"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-molgen-patient"/>
+  </subject>
+  <effectiveDateTime value="2022-04-07"/>
+  <valueCodeableConcept>
+    <text value="BRAF rs113488022 T&gt;A"/>
+  </valueCodeableConcept>
+  <method>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LA26398-0"/>
+      <display value="Sequencing"/>
+    </coding>
+  </method>
+  <specimen>
+    <reference value="Specimen/mii-exa-molgen-specimen-1"/>
+  </specimen>
+  <device>
+    <reference value="Device/mii-exa-molgen-device-sequencer"/>
+  </device>
+  <derivedFrom>
+    <reference value="Observation/mii-exa-molgen-variante-1"/>
+  </derivedFrom>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48018-6"/>
+        <display value="Gene studied [ID]"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.genenames.org/geneId"/>
+        <code value="HGNC:1097"/>
+        <display value="BRAF"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48001-2"/>
+        <display value="Cytogenetic (chromosome) location"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.6.335"/>
+        <code value="7q34"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+</Observation>

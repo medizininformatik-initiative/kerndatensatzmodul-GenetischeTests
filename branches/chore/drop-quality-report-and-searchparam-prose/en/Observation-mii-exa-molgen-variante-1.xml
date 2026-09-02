@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-variante-1"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2026.0.4"/>
+    <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant|3.0.0"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-molgen-variante-1</b></p><a name="mii-exa-molgen-variante-1"> </a><a name="hcmii-exa-molgen-variante-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="StructureDefinition-mii-pr-molgen-variante.html">MII PR MolGen Variante</a> version: 2026.0.4, <a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-variant.html">Variant</a> version: 3.0.0</p></div><p><b>basedOn</b>: <a href="ServiceRequest-mii-exa-molgen-anforderung-1.html">ServiceRequest Molecular genetic test (procedure)</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 GE}">Genetics</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 69548-6}">Genetic variant assessment</span></p><p><b>subject</b>: <a href="Patient-mii-exa-molgen-patient.html">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Medical record number (use: usual, ))</a></p><p><b>effective</b>: 2022-04-07</p><p><b>value</b>: <span title="Codes:{http://loinc.org LA9633-4}">Present</span></p><p><b>method</b>: <span title="Codes:{http://loinc.org LA26398-0}">Sequencing</span></p><p><b>specimen</b>: <a href="Specimen-mii-exa-molgen-specimen-1.html">Specimen: identifier = https://biobank.uk-musterstadt.de/fhir/sid/proben#5432; status = available; type = Tissue specimen from colon (specimen)</a></p><p><b>device</b>: <a href="Device-mii-exa-molgen-device-sequencer.html">Device: status = active; manufacturer = Illumina</a></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48018-6}">Gene studied [ID]</span></p><p><b>value</b>: <span title="Codes:{http://www.genenames.org/geneId HGNC:1097}">BRAF</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48013-7}">Genomic reference sequence [ID]</span></p><p><b>value</b>: <span title="Codes:{http://www.ncbi.nlm.nih.gov/refseq NM_004333.4}">NM_004333.4</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 47999-8}">DNA region name [Identifier]</span></p><p><b>value</b>: Exon #15</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 47999-8}">DNA region name [Identifier]</span></p><p><b>value</b>: Codon #582 - #612</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48004-6}">DNA change (c.HGVS)</span></p><p><b>value</b>: <span title="Codes:{http://varnomen.hgvs.org NM_004333.4:c.1799T&gt;A}">NM_004333.4:c.1799T&gt;A</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48005-3}">Amino acid change (pHGVS)</span></p><p><b>value</b>: <span title="Codes:{http://varnomen.hgvs.org p.(Val600Glu)}">p.(Val600Glu)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 81258-6}">Sample variant allelic frequency [NFr]</span></p><p><b>value</b>: 30.25 %<span style="background: LightGoldenRodYellow"> (Details: UCUM  code% = '%')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48001-2}">Cytogenetic (chromosome) location</span></p><p><b>value</b>: <span title="Codes:{urn:oid:2.16.840.1.113883.6.335 7q34}">7q34</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48019-4}">DNA change type</span></p><p><b>value</b>: <span title="Codes:{http://sequenceontology.org SO:1000008}">point_mutation</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 81252-9}">Discrete genetic variant</span></p><p><b>value</b>: <span title="Codes:{http://www.ncbi.nlm.nih.gov/projects/SNP rs113488022}">rs113488022</span></p></blockquote></div>
+  </text>
+  <basedOn>
+    <reference value="ServiceRequest/mii-exa-molgen-anforderung-1"/>
+  </basedOn>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+      <display value="Laboratory"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="GE"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="69548-6"/>
+      <display value="Genetic variant assessment"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-molgen-patient"/>
+  </subject>
+  <effectiveDateTime value="2022-04-07"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LA9633-4"/>
+      <display value="Present"/>
+    </coding>
+  </valueCodeableConcept>
+  <method>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LA26398-0"/>
+      <display value="Sequencing"/>
+    </coding>
+  </method>
+  <specimen>
+    <reference value="Specimen/mii-exa-molgen-specimen-1"/>
+  </specimen>
+  <device>
+    <reference value="Device/mii-exa-molgen-device-sequencer"/>
+  </device>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48018-6"/>
+        <display value="Gene studied [ID]"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.genenames.org/geneId"/>
+        <code value="HGNC:1097"/>
+        <display value="BRAF"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48013-7"/>
+        <display value="Genomic reference sequence [ID]"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.ncbi.nlm.nih.gov/refseq"/>
+        <code value="NM_004333.4"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="47999-8"/>
+        <display value="DNA region name [Identifier]"/>
+      </coding>
+    </code>
+    <valueString value="Exon #15"/>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="47999-8"/>
+        <display value="DNA region name [Identifier]"/>
+      </coding>
+    </code>
+    <valueString value="Codon #582 - #612"/>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48004-6"/>
+        <display value="DNA change (c.HGVS)"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://varnomen.hgvs.org"/>
+        <code value="NM_004333.4:c.1799T&gt;A"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48005-3"/>
+        <display value="Amino acid change (pHGVS)"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://varnomen.hgvs.org"/>
+        <code value="p.(Val600Glu)"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="81258-6"/>
+        <display value="Sample variant allelic frequency [NFr]"/>
+      </coding>
+    </code>
+    <valueQuantity>
+      <value value="30.25"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="%"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48001-2"/>
+        <display value="Cytogenetic (chromosome) location"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.6.335"/>
+        <code value="7q34"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48019-4"/>
+        <display value="DNA change type"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://sequenceontology.org"/>
+        <code value="SO:1000008"/>
+        <display value="point_mutation"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="81252-9"/>
+        <display value="Discrete genetic variant"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.ncbi.nlm.nih.gov/projects/SNP"/>
+        <code value="rs113488022"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+</Observation>

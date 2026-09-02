@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-genomic-study-analysis-tso500-sequencing"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"/>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.4"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="extensions"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-molgen-genomic-study-analysis-tso500-sequencing</b></p><a name="de-mii-exa-molgen-genomic-study-analysis-tso500-sequencing"> </a><a name="de-hcmii-exa-molgen-genomic-study-analysis-tso500-sequencing"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="StructureDefinition-mii-pr-molgen-genomic-study-analysis.html">MII PR MolGen Genomic Study Analysis</a>, <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.4">https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.4</a></p></div><p><b>Genomic Study Analysis Specimen</b>: <a href="Specimen-mii-exa-molgen-specimen-ffpe-tumor.html">Specimen: identifier = https://www.charite.de/fhir/sid/bioproben#specimen_tso500_ffpe_01; status = available; type = Formalin-fixed paraffin-embedded tissue specimen; receivedTime = 2024-05-16 09:20:00+0200</a></p><blockquote><p><b>Genomic Study Analysis Device</b></p><ul><li>device: <a href="Device-mii-exa-molgen-device-illumina-novaseq.html">Device: identifier = https://www.medizininformatik-initiative.de/fhir/sid/lab-devices#NOVASEQ-6000-SN12345; status = active; manufacturer = Illumina Inc.; serialNumber = SN12345; modelNumber = NovaSeq 6000; type = Medical laboratory analyzer</a></li></ul></blockquote><p><b>Genomic Study Analysis Method Type</b>: <span title="Codes:{http://loinc.org LA26398-0}">Sequencing</span></p><blockquote><p><b>Genomic Study Analysis Metrics</b></p><ul><li>read-depth: 1000 reads<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></li><li>sequencing-coverage: 95 percent<span style="background: LightGoldenRodYellow"> (Details: UCUM  code% = '%')</span></li><li>metrics-description: Mean target coverage 1000X; 95% der Zielregionen &gt;250X; Q30 &gt;90%; FFPE-bedingte Qualitätsfilter angewandt</li></ul></blockquote><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>subject</b>: <a href="Patient-mii-exa-molgen-patient.html">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Krankenaktennummer (use: usual, ))</a></p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen">
+    <valueReference>
+      <reference value="Specimen/mii-exa-molgen-specimen-ffpe-tumor"/>
+    </valueReference>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device">
+    <extension url="device">
+      <valueReference>
+        <reference value="Device/mii-exa-molgen-device-illumina-novaseq"/>
+      </valueReference>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="LA26398-0"/>
+        <display value="Sequencing"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-metrics">
+    <extension url="read-depth">
+      <valueQuantity>
+        <value value="1000"/>
+        <unit value="reads"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="1"/>
+      </valueQuantity>
+    </extension>
+    <extension url="sequencing-coverage">
+      <valueQuantity>
+        <value value="95"/>
+        <unit value="percent"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="%"/>
+      </valueQuantity>
+    </extension>
+    <extension url="metrics-description">
+      <valueString value="Mean target coverage 1000X; 95% der Zielregionen &gt;250X; Q30 &gt;90%; FFPE-bedingte Qualitätsfilter angewandt"/>
+    </extension>
+  </extension>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/mii-exa-molgen-patient"/>
+  </subject>
+</Procedure>
