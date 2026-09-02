@@ -82,7 +82,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-molge
   "name" : "MII_EX_MolGen_Verwandtschaftsgrad",
   "title" : "MII EX Mol Gen Verwandtschaftsgrad",
   "status" : "active",
-  "date" : "2026-09-02T14:15:24+00:00",
+  "date" : "2026-09-02T14:33:35+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

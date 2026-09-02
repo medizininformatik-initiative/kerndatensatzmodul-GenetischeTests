@@ -17,3 +17,13 @@ Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/Ca
 
 [mii-cps-molgen-capabilitystatement](CapabilityStatement-mii-cps-molgen-capabilitystatement.md)
 
+#### Why three profiles are MAY
+
+Of the seventeen supported profiles, fourteen carry `SHALL` and three carry `MAY`: `genotyp`, `haplotype` and `sequence-phase-relationship`.
+
+All three state something about **alleles as a whole** rather than about a single finding: which alleles sit at a locus, which variants travel together, and whether two variants sit on the same copy of a chromosome. Many laboratories never derive these — they report the variants and stop. Requiring them with `SHALL` would oblige implementers to produce data they do not have.
+
+`MAY` says the useful thing instead: whoever does exchange genotypes, haplotypes or phase relationships uses these profiles rather than inventing their own. The mandatory core of this module is the report itself, the variants, and the implications drawn from them.
+
+Two of the three — `haplotype` and `sequence-phase-relationship` — are not profiled by this module at all; they are used as they come from Clinical Genomics STU3 and are described under [Implementer Guidance](implementer-guidance.md).
+

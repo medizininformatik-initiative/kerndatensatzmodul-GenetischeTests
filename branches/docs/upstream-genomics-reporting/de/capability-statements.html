@@ -329,6 +329,27 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
 
 <p><a href="CapabilityStatement-mii-cps-molgen-capabilitystatement.html">mii-cps-molgen-capabilitystatement</a></p>
 
+<h4 id="warum-drei-profile-may-sind">Warum drei Profile <code class="language-plaintext highlighter-rouge">MAY</code> sind</h4>
+
+<p>Von den siebzehn unterstützten Profilen tragen vierzehn <code class="language-plaintext highlighter-rouge">SHALL</code> und drei <code class="language-plaintext highlighter-rouge">MAY</code>:
+<code class="language-plaintext highlighter-rouge">genotyp</code>, <code class="language-plaintext highlighter-rouge">haplotype</code> und <code class="language-plaintext highlighter-rouge">sequence-phase-relationship</code>.</p>
+
+<p>Alle drei sagen etwas über <strong>Allele als Ganzes</strong> aus statt über einen einzelnen
+Befund: welche Allele an einem Locus sitzen, welche Varianten gemeinsam vererbt
+werden und ob zwei Varianten auf derselben Chromosomenkopie liegen. Viele Labore
+leiten das nie ab — sie berichten die Varianten und hören dort auf. Ein <code class="language-plaintext highlighter-rouge">SHALL</code>
+würde Implementierende zu Daten verpflichten, die sie nicht haben.</p>
+
+<p><code class="language-plaintext highlighter-rouge">MAY</code> sagt stattdessen das Brauchbare: Wer Genotypen, Haplotypen oder
+Phasenbeziehungen austauscht, nutzt dafür diese Profile und erfindet nichts Eigenes.
+Der verpflichtende Kern dieses Moduls sind der Befundbericht, die Varianten und die
+daraus gezogenen Implikationen.</p>
+
+<p>Zwei der drei — <code class="language-plaintext highlighter-rouge">haplotype</code> und <code class="language-plaintext highlighter-rouge">sequence-phase-relationship</code> — werden von diesem
+Modul gar nicht profiliert; sie werden unverändert aus Clinical Genomics STU3
+übernommen und sind unter <a href="implementer-guidance.html">Implementierungshinweise</a>
+beschrieben.</p>
+
 
 
 
@@ -354,7 +375,7 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 2, 2026 14:15+0000">2026-09-02</span>
+          Erstellt <span title="Wed, Sep 2, 2026 14:33+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

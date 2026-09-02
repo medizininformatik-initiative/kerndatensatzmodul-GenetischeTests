@@ -390,8 +390,9 @@ Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktione
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation|2027.0.0-ballot.rc1",
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2027.0.0-ballot.rc1",
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz|2027.0.0-ballot.rc1",
-      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype",
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp|2027.0.0-ballot.rc1",
+      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype",
+      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship",
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast|2027.0.0-ballot.rc1",
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet|2027.0.0-ballot.rc1"],
       "_supportedProfile" : [{
@@ -421,13 +422,19 @@ Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktione
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-          "valueCode" : "SHALL"
+          "valueCode" : "MAY"
         }]
       },
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-          "valueCode" : "SHALL"
+          "valueCode" : "MAY"
+        }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
         }]
       },
       {

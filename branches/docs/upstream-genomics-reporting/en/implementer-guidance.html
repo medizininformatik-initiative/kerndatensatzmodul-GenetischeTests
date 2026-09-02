@@ -467,9 +467,6 @@ of one or more variants.</p>
 <p>Canonical: <code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype</code>
 · <a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html">Profile page</a></p>
 
-<p>The <a href="CapabilityStatement-mii-cps-molgen-capabilitystatement.html">CapabilityStatement</a>
-declares this profile with <code class="language-plaintext highlighter-rouge">SHALL</code>, so a conformant server must support it.</p>
-
 <h5 id="components">Components</h5>
 
 <p>STU3 defines five component slices on this profile. Two of them carry elements of
@@ -563,16 +560,20 @@ condition is present.</p>
   </tbody>
 </table>
 
-<!-- DERIVED:no-source source=none gate=B -->
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p><strong>Open point for the release: this profile is not declared in the
-CapabilityStatement.</strong>
-Haplotype is declared with <code class="language-plaintext highlighter-rouge">SHALL</code>, Sequence Phase Relationship is not declared
-at all — although this page presents both as used. Either the CapabilityStatement
-is incomplete, or this profile is in fact not expected of implementers and the
-page overstates it. Which of the two applies is a decision for the module's
-authors, not one that can be read off the artifacts.</p>
-</blockquote>
+<h5 id="expectation">Expectation</h5>
+
+<p>Both profiles are declared in the
+<a href="CapabilityStatement-mii-cps-molgen-capabilitystatement.html">CapabilityStatement</a>
+with <strong><code class="language-plaintext highlighter-rouge">MAY</code></strong>.</p>
+
+<p>That is deliberate, and it was decided for this release. A <code class="language-plaintext highlighter-rouge">MAY</code> says: if you
+exchange haplotypes or phase relationships, use these STU3 profiles rather than
+inventing your own — but nothing in the core dataset of this module obliges you to
+produce them. Neither profile carries a core dataset requirement, this module
+derives nothing from either of them, and the guide shows no example of either.
+Haplotype previously stood at <code class="language-plaintext highlighter-rouge">SHALL</code>, which obliged implementers to support
+something the guide never demonstrates; Sequence Phase Relationship was not declared
+at all, although this page presented it as used. Both are now stated the same way.</p>
 
 <h3 id="references">References</h3>
 
@@ -622,7 +623,7 @@ Initiative.</p>
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 2, 2026 14:15+0000">2026-09-02</span>
+          Generated <span title="Wed, Sep 2, 2026 14:33+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

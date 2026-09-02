@@ -59,8 +59,6 @@ This profile describes the determination of a particular haplotype on the basis 
 
 Canonical: `http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype` · [Profile page](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html)
 
-The [CapabilityStatement](CapabilityStatement-mii-cps-molgen-capabilitystatement.md) declares this profile with `SHALL`, so a conformant server must support it.
-
 ##### Components
 
 STU3 defines five component slices on this profile. Two of them carry elements of the logical dataset of this module:
@@ -94,7 +92,11 @@ Canonical: `http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequen
 | ValueSet | [`sequence-phase-relationship-vs`](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-sequence-phase-relationship-vs.html), binding`required` |
 | CodeSystem | [`sequence-phase-relationship-cs`](http://hl7.org/fhir/uv/genomics-reporting/STU3/CodeSystem-sequence-phase-relationship-cs.html)— canonical`http://terminology.hl7.org/CodeSystem/sequence-phase-relationship-cs`, i.e. it belongs to HL7 Terminology and is only rendered in the STU3 guide |
 
-> **Open point for the release: this profile is not declared in the CapabilityStatement.** Haplotype is declared with `SHALL`, Sequence Phase Relationship is not declared at all — although this page presents both as used. Either the CapabilityStatement is incomplete, or this profile is in fact not expected of implementers and the page overstates it. Which of the two applies is a decision for the module's authors, not one that can be read off the artifacts.
+##### Expectation
+
+Both profiles are declared in the [CapabilityStatement](CapabilityStatement-mii-cps-molgen-capabilitystatement.md) with **`MAY`**.
+
+That is deliberate, and it was decided for this release. A `MAY` says: if you exchange haplotypes or phase relationships, use these STU3 profiles rather than inventing your own — but nothing in the core dataset of this module obliges you to produce them. Neither profile carries a core dataset requirement, this module derives nothing from either of them, and the guide shows no example of either. Haplotype previously stood at `SHALL`, which obliged implementers to support something the guide never demonstrates; Sequence Phase Relationship was not declared at all, although this page presented it as used. Both are now stated the same way.
 
 ### References
 

@@ -1,9 +1,9 @@
 MII_IG_MolGen_DE : Validation Results
 =========================================
 
-err = 64, warn = 835, info = 3591
+err = 64, warn = 835, info = 3592
 IG Publisher Version: 2.3.2 Out of date - current version is 2.3.3
-Generated Wed Sep 02 14:30:13 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc1 (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen)
+Generated Wed Sep 02 14:46:11 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc1 (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen)
  Build Errors : 0 / 49 / 0
  /home/runner/work/kerndatensatzmodul-GenetischeTests/kerndatensatzmodul-GenetischeTests/fsh-generated/resources/Bundle-mii-exa-befund-bundle-1-braf : 8 / 68 / 65
  /home/runner/work/kerndatensatzmodul-GenetischeTests/kerndatensatzmodul-GenetischeTests/fsh-generated/resources/Bundle-mii-exa-befund-bundle-befund-2-nipbl-clinical : 3 / 68 / 44
@@ -12,7 +12,7 @@ Generated Wed Sep 02 14:30:13 UTC 2026. FHIR version 4.0.1 for de.medizininforma
  /home/runner/work/kerndatensatzmodul-GenetischeTests/kerndatensatzmodul-GenetischeTests/fsh-generated/resources/Bundle-mii-exa-molgen-bundle-befund-2-nipbl : 3 / 55 / 39
  /home/runner/work/kerndatensatzmodul-GenetischeTests/kerndatensatzmodul-GenetischeTests/fsh-generated/resources/Bundle-mii-exa-molgen-bundle-comprehensive-wes : 2 / 23 / 39
  /home/runner/work/kerndatensatzmodul-GenetischeTests/kerndatensatzmodul-GenetischeTests/fsh-generated/resources/Bundle-mii-exa-molgen-bundle-fam-his-breast-ovar-can : 4 / 40 / 34
- /home/runner/work/kerndatensatzmodul-GenetischeTests/kerndatensatzmodul-GenetischeTests/fsh-generated/resources/CapabilityStatement-mii-cps-molgen-capabilitystatement : 0 / 4 / 120
+ /home/runner/work/kerndatensatzmodul-GenetischeTests/kerndatensatzmodul-GenetischeTests/fsh-generated/resources/CapabilityStatement-mii-cps-molgen-capabilitystatement : 0 / 4 / 121
  /home/runner/work/kerndatensatzmodul-GenetischeTests/kerndatensatzmodul-GenetischeTests/fsh-generated/resources/ChargeItem-mii-exa-molgen-chargeitem-ebm-21 : 0 / 2 / 1
  /home/runner/work/kerndatensatzmodul-GenetischeTests/kerndatensatzmodul-GenetischeTests/fsh-generated/resources/ChargeItem-mii-exa-molgen-chargeitem-ebm-22 : 0 / 2 / 1
  /home/runner/work/kerndatensatzmodul-GenetischeTests/kerndatensatzmodul-GenetischeTests/fsh-generated/resources/ChargeItem-mii-exa-molgen-chargeitem-ebm-23 : 0 / 2 / 1
@@ -674,7 +674,8 @@ INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[15].definition:
 INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[16].definition: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/DiagnosticReport-GenomicStudy to 2027.0.0-ballot.rc1
 INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[17].definition: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/DiagnosticReport-RecommendedAction to 2027.0.0-ballot.rc1
 INFORMATION: CapabilityStatement.rest[0].resource[2].profile: Pinned the version of http://hl7.org/fhir/StructureDefinition/Observation to 4.0.1
-INFORMATION: CapabilityStatement.rest[0].resource[2].supportedProfile[4]: Pinned the version of http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype to 3.0.0
+INFORMATION: CapabilityStatement.rest[0].resource[2].supportedProfile[5]: Pinned the version of http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype to 3.0.0
+INFORMATION: CapabilityStatement.rest[0].resource[2].supportedProfile[6]: Pinned the version of http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship to 3.0.0
 INFORMATION: CapabilityStatement.rest[0].resource[2].searchParam[0].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Resource-id to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[2].searchParam[1].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Resource-lastUpdated to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[2].searchParam[2].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Resource-profile to 4.0.1
@@ -4755,7 +4756,7 @@ ERROR: Task/mii-exa-molgen-medikationsempfehlung-fgfr2-fusion: Task.code: Error 
 WARNING: Task/mii-exa-molgen-medikationsempfehlung-fgfr2-fusion: Task.code: Could not confirm that the codings provided are in the value set http://loinc.org/vs/LL4049-4 and a coding from this value set is required (class = SERVER_ERROR)
 == fsh-generated/resources/ValueSet-mii-vs-molgen-familiaere-linie.json ==
 WARNING: ValueSet/mii-vs-molgen-familiaere-linie: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
-ERROR: ValueSet/mii-vs-molgen-familiaere-linie: ValueSet.compose.include[0].concept[1]: The code '66839005' is not valid in the system http://snomed.info/sct (error: [fe7221f8-e047-4f84-b2ef-8203643b74fe]: Type-level request to $validate-code must specify either valueSet or url parameter.)
+ERROR: ValueSet/mii-vs-molgen-familiaere-linie: ValueSet.compose.include[0].concept[1]: The code '66839005' is not valid in the system http://snomed.info/sct (error: [acaada71-49d6-4544-8f07-b2e55a955ba5]: Type-level request to $validate-code must specify either valueSet or url parameter.)
 WARNING: ValueSet/mii-vs-molgen-familiaere-linie: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 WARNING: Resource: The resource ValueSet/mii-vs-molgen-familiaere-linie should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-mii-vs-molgen-family-member-snomed.json ==
@@ -4764,18 +4765,18 @@ WARNING: ValueSet/mii-vs-molgen-family-member-snomed: ValueSet: Published value 
 WARNING: Resource: The resource ValueSet/mii-vs-molgen-family-member-snomed should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-mii-vs-molgen-verwandtschaftsgrad.json ==
 WARNING: ValueSet/mii-vs-molgen-verwandtschaftsgrad: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
-ERROR: ValueSet/mii-vs-molgen-verwandtschaftsgrad: ValueSet.compose.include[0].concept[1]: The code '699110007' is not valid in the system http://snomed.info/sct (error: [073ec838-84e1-497f-a035-19082f173d68]: Type-level request to $validate-code must specify either valueSet or url parameter.)
+ERROR: ValueSet/mii-vs-molgen-verwandtschaftsgrad: ValueSet.compose.include[0].concept[1]: The code '699110007' is not valid in the system http://snomed.info/sct (error: [67e0d067-8d43-4e45-a0c8-c8fdeef32df6]: Type-level request to $validate-code must specify either valueSet or url parameter.)
 WARNING: ValueSet/mii-vs-molgen-verwandtschaftsgrad: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 WARNING: Resource: The resource ValueSet/mii-vs-molgen-verwandtschaftsgrad should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-mii-vs-molgen-verwandtschaftsverhaeltnis.json ==
 WARNING: ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
-ERROR: ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis: ValueSet.compose.include[0].concept[1]: The code '13646006' is not valid in the system http://snomed.info/sct (error: [f7a00b56-97e0-40bc-8ff9-7298f5422bbb]: Type-level request to $validate-code must specify either valueSet or url parameter.)
-ERROR: ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis: ValueSet.compose.include[0].concept[2]: The code '60614009' is not valid in the system http://snomed.info/sct (error: [00e6401b-d92e-4e95-b8b2-e6bbd1a97e74]: Type-level request to $validate-code must specify either valueSet or url parameter.)
-ERROR: ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis: ValueSet.compose.include[0].concept[3]: The code '73678001' is not valid in the system http://snomed.info/sct (error: [4881013a-ae4c-40dc-b2c0-205a43263900]: Type-level request to $validate-code must specify either valueSet or url parameter.)
-ERROR: ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis: ValueSet.compose.include[0].concept[4]: The code '45929001' is not valid in the system http://snomed.info/sct (error: [7417d3ba-17c4-4cdf-8ad7-79e0c0297de8]: Type-level request to $validate-code must specify either valueSet or url parameter.)
-ERROR: ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis: ValueSet.compose.include[0].concept[5]: The code '2272004' is not valid in the system http://snomed.info/sct (error: [be2df65a-ba88-4f60-9c82-691e968fed5e]: Type-level request to $validate-code must specify either valueSet or url parameter.)
-ERROR: ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis: ValueSet.compose.include[0].concept[6]: The code '62296006' is not valid in the system http://snomed.info/sct (error: [29d64c35-3c79-4cc7-84fb-9bb38f2de7b0]: Type-level request to $validate-code must specify either valueSet or url parameter.)
-ERROR: ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis: ValueSet.compose.include[0].concept[7]: The code '17945006' is not valid in the system http://snomed.info/sct (error: [75747a84-6e58-4420-ab13-e0be24d8c5b5]: Type-level request to $validate-code must specify either valueSet or url parameter.)
+ERROR: ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis: ValueSet.compose.include[0].concept[1]: The code '13646006' is not valid in the system http://snomed.info/sct (error: [6a26ac20-ba1a-44b3-bc63-4a02ddefe3f0]: Type-level request to $validate-code must specify either valueSet or url parameter.)
+ERROR: ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis: ValueSet.compose.include[0].concept[2]: The code '60614009' is not valid in the system http://snomed.info/sct (error: [cfb37250-fa7a-470c-998a-b92bf2f7a9cd]: Type-level request to $validate-code must specify either valueSet or url parameter.)
+ERROR: ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis: ValueSet.compose.include[0].concept[3]: The code '73678001' is not valid in the system http://snomed.info/sct (error: [c11c2785-04be-4268-8f08-a7275e8dd001]: Type-level request to $validate-code must specify either valueSet or url parameter.)
+ERROR: ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis: ValueSet.compose.include[0].concept[4]: The code '45929001' is not valid in the system http://snomed.info/sct (error: [066c4be7-0e1b-4a22-9f89-d3289a1871db]: Type-level request to $validate-code must specify either valueSet or url parameter.)
+ERROR: ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis: ValueSet.compose.include[0].concept[5]: The code '2272004' is not valid in the system http://snomed.info/sct (error: [cdd9794f-91ff-484b-9181-0516fb7f5ddc]: Type-level request to $validate-code must specify either valueSet or url parameter.)
+ERROR: ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis: ValueSet.compose.include[0].concept[6]: The code '62296006' is not valid in the system http://snomed.info/sct (error: [693c50c9-8098-48c4-aa96-7b98e4683d51]: Type-level request to $validate-code must specify either valueSet or url parameter.)
+ERROR: ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis: ValueSet.compose.include[0].concept[7]: The code '17945006' is not valid in the system http://snomed.info/sct (error: [23d594f3-36ff-4f34-95b9-755fecc36551]: Type-level request to $validate-code must specify either valueSet or url parameter.)
 WARNING: ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 WARNING: Resource: The resource ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == input/resources/Parameters-expansion-manifest.json ==
