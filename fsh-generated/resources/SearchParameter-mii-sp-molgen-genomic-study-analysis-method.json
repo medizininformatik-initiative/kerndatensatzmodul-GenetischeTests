@@ -21,7 +21,7 @@
   "status": "active",
   "experimental": false,
   "date": "2024-11-08",
-  "description": "Suchparameter für Methoden-Typ in GenomicStudyAnalysis",
+  "description": "Finds analyses by the sequencing or genotyping method applied (for example targeted panel, whole exome, whole genome). The method sits in the genomic-study-analysis-method-type extension, which no base Procedure search parameter reaches.",
   "code": "method-type",
   "type": "token",
   "expression": "Procedure.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type').value"

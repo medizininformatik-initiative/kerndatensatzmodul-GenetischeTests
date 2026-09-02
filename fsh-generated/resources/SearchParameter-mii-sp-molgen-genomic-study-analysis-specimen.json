@@ -24,7 +24,7 @@
   "status": "active",
   "experimental": false,
   "date": "2024-11-08",
-  "description": "Suchparameter für Specimen in GenomicStudyAnalysis",
+  "description": "Finds analyses performed on a given specimen. The specimen sits in the genomic-study-analysis-specimen extension, so the base Procedure.specimen search parameter does not reach it.",
   "code": "specimen",
   "type": "reference",
   "expression": "Procedure.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen').value"

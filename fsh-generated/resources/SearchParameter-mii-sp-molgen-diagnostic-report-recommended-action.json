@@ -24,7 +24,7 @@
   "status": "active",
   "experimental": false,
   "date": "2024-11-08",
-  "description": "Suchparameter für empfohlene Maßnahmen in DiagnosticReport",
+  "description": "Finds the reports that recommend a given follow-up action, such as a confirmatory test or a therapy recommendation. The reference sits in the recommended-action extension and is not reachable through DiagnosticReport.result.",
   "code": "recommended-action",
   "type": "reference",
   "expression": "DiagnosticReport.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/recommended-action').value"

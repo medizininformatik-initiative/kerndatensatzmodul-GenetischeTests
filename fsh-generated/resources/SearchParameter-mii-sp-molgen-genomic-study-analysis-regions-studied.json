@@ -21,7 +21,7 @@
   "status": "active",
   "experimental": false,
   "date": "2024-11-08",
-  "description": "Suchparameter für untersuchte Gene/Regionen in GenomicStudyAnalysis",
+  "description": "Finds analyses that actually examined a given gene or genomic region. This is what distinguishes a variant that was not found from a region that was never examined: without it a query cannot tell the two apart. The value sits in the studied sub-extension of genomic-study-analysis-regions.",
   "code": "regions-studied",
   "type": "token",
   "expression": "Procedure.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-regions').extension.where(url='studied').value"

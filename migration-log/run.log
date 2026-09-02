@@ -5045,3 +5045,6 @@
 2026-09-02T09:26:00Z  INFO   6.1.6  search-parameters-page  rewrite  files=2 sections=6+6 example_queries=6+6 parity=ok
 2026-09-02T09:26:30Z  INFO   6.1.6  example-ids  verify  corrected=3 mii-exa-molgen-empfohlene-folgemassnahme-1->mii-exa-molgen-folgemassnahme-1 mii-exa-molgen-device-tso500->mii-exa-molgen-device-tso500-lot LA26418-6->LA26398-0 method=abgeglichen gegen fsh-generated/resources
 2026-09-02T09:27:00Z  INFO   6.2  release-checks  done  convention_check_release=PASS language_model_check=PASS M6=2027.0.0-ballot.rc1 M9=none_undecided
+2026-09-02T09:35:00Z  WARN   6.1.5  searchparameter-descriptions  fsh-parse-error  file=input/fsh/SearchParameter.fsh line=168 cause=doppelte Anfuehrungszeichen innerhalb eines FSH-Strings ("not found" / "not looked for") sushi_errors=4 fix=umformuliert_ohne_zitate
+2026-09-02T09:36:00Z  INFO   6.3  sushi  done  errors=0 warnings=0 profiles=16 extensions=5 logicals=1 valuesets=4 instances=128
+2026-09-02T09:36:30Z  INFO   6.3  artifact-verify  done  capabilitystatement_searchparams=110 procedure_includes_code=true version=2027.0.0-ballot.rc1

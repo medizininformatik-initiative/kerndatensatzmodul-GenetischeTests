@@ -24,7 +24,7 @@
   "status": "active",
   "experimental": false,
   "date": "2024-11-08",
-  "description": "Suchparameter für verwendetes Gerät in GenomicStudyAnalysis",
+  "description": "Finds analyses run on a given sequencer or analytical device, for tracing results back to the instrument that produced them. The device sits in the genomic-study-analysis-device extension, not in Procedure.",
   "code": "device",
   "type": "reference",
   "expression": "Procedure.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device').value"

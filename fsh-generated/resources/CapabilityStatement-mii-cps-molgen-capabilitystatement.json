@@ -1022,6 +1022,17 @@
                   "valueCode": "SHALL"
                 }
               ],
+              "name": "code",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-code",
+              "type": "token"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
               "name": "subject",
               "definition": "http://hl7.org/fhir/SearchParameter/clinical-patient",
               "type": "reference"

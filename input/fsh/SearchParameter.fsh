@@ -165,7 +165,7 @@ Usage: #definition
 * status = #active
 * experimental = false
 * date = "2024-11-08"
-* description = "Finds analyses that actually examined a given gene or genomic region. This is what distinguishes "not found" from "not looked for": without it a query cannot tell an absent variant from an unexamined region. The value sits in the studied sub-extension of genomic-study-analysis-regions."
+* description = "Finds analyses that actually examined a given gene or genomic region. This is what distinguishes a variant that was not found from a region that was never examined: without it a query cannot tell the two apart. The value sits in the studied sub-extension of genomic-study-analysis-regions."
 * code = #regions-studied
 * base = #Procedure
 * type = #token

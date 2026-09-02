@@ -24,7 +24,7 @@
   "status": "active",
   "experimental": false,
   "date": "2024-11-08",
-  "description": "Suchparameter für GenomicStudy Referenz in DiagnosticReport",
+  "description": "Finds the reports produced by a given genomic study, which is the link from the clinical report back to the investigation behind it. The reference sits in the genomic-study-reference extension; DiagnosticReport has no base search parameter for it.",
   "code": "genomic-study",
   "type": "reference",
   "expression": "DiagnosticReport.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-reference').value"
