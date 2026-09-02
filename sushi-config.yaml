@@ -117,10 +117,13 @@ jurisdiction: urn:iso:std:iso:3166#DE "Germany" # https://www.hl7.org/fhir/value
 # proper name, hence language-neutral. The module CONTENT stays MII content —
 # the artifact copyright labels in input/fsh/rulesets/crmi.fsh are unaffected.
 publisher:
-  name: Medizininformatik Initiative  # Quelle: input/fsh/rulesets/publisher.fsh (RuleSet Publisher);
-    # die Quelle gewinnt ueber die NUM-DIZ-Vorgabe des Templates -- Gate A bestaetigt.
-    # Divergenz in der Quelle selbst: sushi-config.yaml der Quelle schrieb "Medizininformatik-Initiative"
-    # (mit Bindestrich), die Artefakt-Ebene "Medizininformatik Initiative" (ohne). Artefakt-Ebene gewinnt.
+  # DECIDED at Gate A on 2026-09-02 (migration report DEC-3): the HYPHENATED form.
+  # The source contradicted itself -- its sushi-config.yaml wrote
+  # "Medizininformatik-Initiative" (hyphen), its artefact-level RuleSet in
+  # input/fsh/rulesets/publisher.fsh wrote "Medizininformatik Initiative" (space),
+  # and the latter stamped all 33 conformance resources. Both now use the hyphen.
+  # The template's own default here is NUM-DIZ; the source wins, as before.
+  name: Medizininformatik-Initiative
   url: https://www.medizininformatik-initiative.de/
   email: info@medizininformatik-initiative.de  # Quelle: sushi-config.yaml publisher.email
 

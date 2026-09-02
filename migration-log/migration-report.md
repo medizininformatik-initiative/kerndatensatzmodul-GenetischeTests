@@ -141,7 +141,7 @@ Accepting these needs no action — merging accepts all of them. To reject one, 
 - **Reversible:** yes — `git revert e0f0dcd`, at the cost of an unbuildable package.
 - **Evidence:** `run.log 5.6 tar-name-limit` · verification `C1 ×6` · the old→new pairs are in that log line and in the `C1` rows of `verification-findings.tsv`.
 
-**DEC-3 — Three identity fields disagree between the source's own files** · severity **medium** · Gate A
+**DEC-3 — Three identity fields disagree between the source's own files** · severity **medium** · Gate A · *publisher closed 2026-09-02*
 
 - **What it is:** Three fields have two source values each. The migration carried the higher-tier one and **changed nothing**, per spec §2.1 ("reported, never resolved").
   - `publisher`: `sushi-config.yaml` says `Medizininformatik-Initiative` (hyphen), `input/fsh/rulesets/publisher.fsh` says `Medizininformatik Initiative` (space) and stamps that onto **every conformance resource**. The migration used the artefact-level value, so the guide is now internally consistent — but it differs from the source's `sushi-config.yaml`.
@@ -150,7 +150,8 @@ Accepting these needs no action — merging accepts all of them. To reject one, 
 - **Where:** `sushi-config.yaml` (`publisher:`, `copyrightYear:`) · `input/fsh/rulesets/publisher.fsh` · `input/pagecontent/index.md` copyright section (both languages).
 - **If nobody acts:** the published guide shows `2021+` in its package metadata and `2022+` on its home page. Cosmetic, but a reader will notice.
 - **Options:** for `publisher`, (a) keep `Medizininformatik Initiative` everywhere → what is in the tree now · (b) switch to the hyphenated form → then `publisher.fsh` and every generated resource must change too. For `copyrightYear`, pick one year and use it in both places.
-  **Default applied now:** (a) for publisher; both years left where the source put them.
+  **DECIDED 2026-09-02:** the HYPHENATED form, `Medizininformatik-Initiative`, by the module maintainer. Applied in all four places: `sushi-config.yaml` `publisher.name`, both rules in `input/fsh/rulesets/publisher.fsh` (which stamps every conformance resource), the `ImplementationGuide.publisher` unit of the German page-title catalogue, and `input/fsh/CapabilityStatement.fsh`, which set the field literally instead of using the RuleSet — plus the same name in its `description` prose. Verified: **33 of 33** generated resources now carry the hyphen, 0 carry the old spelling, and no occurrence of the unhyphenated form remains in `input/fsh/`.
+  **Still open:** the copyright year — `sushi-config.yaml` says `2021+`, the home page says `Copyright © 2022+`.
 - **Next action:** confirm the publisher spelling; pick a copyright year and make `sushi-config.yaml` and `index.md` agree.
 - **Who decides:** the module maintainer.
 - **Effort · impact:** minutes · cosmetic.
@@ -318,7 +319,8 @@ Paste of `migration-log/qa-checklist.md` (GENERATED — regenerate, do not retyp
 **Gate A — identity** (module maintainer, with TF-KDS)
 - [x] **DEC-1** licence decided (CC-BY-4.0) and applied in all five places — *closed 2026-08-28*
 - [ ] **DEC-2** the six renamed example ids confirmed, and the mapping added to the changelog — **blocks publication**
-- [ ] **DEC-3** publisher spelling and copyright year decided
+- [x] **DEC-3** publisher spelling decided (hyphenated) and applied to all 33 resources — *closed 2026-09-02*
+- [ ] **DEC-3b** copyright year decided: `2021+` (sushi-config) vs `2022+` (home page)
 - [ ] **DEC-4** the two CI systems reconciled and `fsh-generated/` un-half-tracked — **blocks a clean release**
 - [ ] `releaseLabel: ci-build` confirmed or changed to `Release`
 - [ ] the artefact set confirmed complete: 134 resources, canonical-URL and id diffs against the source empty apart from the six of DEC-2
