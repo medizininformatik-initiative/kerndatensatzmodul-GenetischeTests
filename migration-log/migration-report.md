@@ -287,7 +287,7 @@ The full page-by-page mapping is `migration-log/page-map.tsv` (43 rows: 41 pages
 | `guidance.md` | 3 | scope in/out and modelling rationale, the use-case scenarios, the use-case overview |
 | `value-sets.md` | 4 | the whole terminology cluster (the Code Systems page was removed: the module defines none) |
 | `index.md`, `changes.md`, `uml-diagrams.md`, `logical-models.md`, `capability-statements.md`, `extensions.md` | 6 | one page each |
-| `qualitaetsbericht.md` | 1 | **the only page created beyond the template's fixed set** |
+| ~~`qualitaetsbericht.md`~~ | 1 | created by the migration, **RETIRED 2026-09-02** by the maintainer: the live QA report supersedes it |
 | RETIRED | 2 trees | `ImplementationGuide-2025.x-DE`, `ImplementationGuide-1.x` — retained as history |
 
 **Directives:** 731 Simplifier/FQL directives were resolved, **0 unresolved**. 38 `pagelink`, 15 artefact links, 2 external links, 8 render-to-artefact, 12 render-to-external, 1 image, 1 branch-pinned GitHub hotlink copied into `input/images/`; 17 `<tabs>`, 11 `{{tree}}` and 30 FQL metadata blocks **dropped**, because the generated artifact page renders exactly those views itself — the artifact-page-with-intro pattern. Of the 51 `{{json}}` directives, 24 rendered the profile's own JSON and were dropped for the same reason; the other **27 pointed at example instances**, and dropping those left captions pointing at nothing, so each affected intro note now carries a marked *Examples* section listing them as links, in source order, identically in both languages (FIX-5). One source typo was resolved with a recorded reason and marked in the rendered page (`mii-vs-molgen-verwandtsverhaeltnis` → `…verwandtschaftsverhaeltnis`, exactly one candidate).
@@ -363,3 +363,10 @@ The five ERROR lines, so none is mistaken for an open failure: **two** are the `
 ## Next step
 
 Open the pull request against `main` (the repository's own convention: every merged PR uses it), let CI build the branch preview, and take the preview into Gate A. **Nothing is published by this branch** — merging to `main` is what publishes, which is the Gate-D decision.
+
+## Post-merge changes (after the migration was signed off)
+
+| Date | Change | Why |
+|---|---|---|
+| 2026-09-02 | `qualitaetsbericht.md` retired in both languages, with its `pages:` entry, both menu entries and its `.po` unit | the guide now ships a live QA report; a hand-maintained snapshot of error counts would drift. The page-map row is marked RETIRED with that reason. |
+| 2026-09-02 | the Search Parameters section removed from `implementer-guidance.md` in both languages (735 / 632 words) | the CapabilityStatement carries 103 `searchParam` entries across 7 resources, so the prose list was redundant — and it was the section that named the wrong module (QA-7). |
