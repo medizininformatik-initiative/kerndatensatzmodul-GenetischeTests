@@ -20,7 +20,7 @@ temp.json
 .history
 
 validation.html
-fsh-generated/resources/ImplementationGuide-mii-ig-molgen*
+/fsh-generated/resources/ImplementationGuide-mii-ig-molgen*
 
 # FHIR Validator
 validator_cli.jar
@@ -45,7 +45,21 @@ output/
 temp/
 template/
 input-cache/
-fsh-generated/
+# NOT ignored wholesale, deliberately. The MII-wide shared workflow
+# medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_dotnet_validation.yml
+# -- which BOTH .github/workflows/validation.yml (the module template's) and the
+# repository's own main.yml call -- runs SUSHI and then COMMITS fsh-generated/resources/
+# back to the branch. Ignoring the directory makes that step fail with
+# "The following paths are ignored by one of your .gitignore files: fsh-generated".
+# The module template gitignores it because it treats generated output as a build
+# artefact; the template's own CI never hits the conflict, because validation.yml
+# skips these jobs on the template repository itself. The already-migrated sibling
+# module kerndatensatz-biobank commits fsh-generated/ and ignores only the three
+# churn files below -- that is the configuration a real MII module needs, so it is
+# the one used here. See DEC-4 in migration-log/migration-report.md.
+/fsh-generated/data/fsh-index.json
+/fsh-generated/fsh-index.txt
+/fsh-generated/includes*
 publisher.jar
 node_modules/
 *.log
