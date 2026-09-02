@@ -5057,3 +5057,22 @@
 2026-09-02T09:52:00Z  INFO   6.5.1  qc-error-count  diff  main=13521 branch=13522 delta=+1
 2026-09-02T09:52:10Z  INFO   6.5.1  qc-error-count  identified  rule=CalVer-Version resource=implementation-guides/ImplementationGuide-2026.x-DE/mii-ig-molgen-de-v2026.json cause=stillgelegter Simplifier-Baum traegt 2026.0.4 und faellt durch, sobald die Live-Version darueber hinausgeht; 1.x und 2025.x taten das auf main schon
 2026-09-02T09:52:30Z  INFO   6.5.2  qc-rule  edit  file=qc/custom.rules.yaml rule=CalVer added_exclusion=!/implementation-guides/** effect=3 dauerhafte Falschtreffer weg, waechst sonst je Release um einen
+
+  ---------------------------------------------------------------------------
+  Rueckfrage des Nutzers zum Abschnitt "Upstream-Profile aus HL7 Genomics
+  Reporting": "aber das sieht mir doch duerftig aus, was alles von oben
+  uebernommen wird, mehr nicht?"
+  ---------------------------------------------------------------------------
+2026-09-02T10:10:00Z  INFO   7.1  upstream-audit  params  method=jede genomics-reporting-Canonical aus fsh-generated auszaehlen, nach Nutzungsart getrennt
+2026-09-02T10:10:30Z  INFO   7.1  upstream-audit  done  parents_direct=10 parents_indirect=2 extension_parents=1 extensions_used=12 valuesets=3 codesystems=2 dokumentiert_im_Abschnitt=2
+2026-09-02T10:11:00Z  NOTE   7.1  upstream-audit  verdict  Die enge Aussage des Abschnitts (zwei unveraendert genutzte Profile) ist richtig; die Seite liess aber offen, dass die Gesamtabhaengigkeit ein Vielfaches betraegt.
+2026-09-02T10:12:00Z  WARN   7.2  profiles.md  defect  Vererbungstabelle nennt Mikrosatelliteninstabilitaet und Mutationslast als direkte Kinder von molecular-biomarker; tatsaechlich erben sie von mii-pr-molgen-molekularer-biomarker (zwei Stufen)
+2026-09-02T10:12:10Z  WARN   7.2  profiles.md  defect  MII_PR_MolGen_MolekularerBiomarker fehlt in der Tabelle vollstaendig
+2026-09-02T10:13:00Z  WARN   7.3  haplotype-mapping  defect  Observation.component:CytogenicLocation existiert nicht; STU3 heisst der Slice cytogenetic-location
+2026-09-02T10:13:10Z  NOTE   7.3  haplotype-mapping  incomplete  Abschnitt bildete 2 von 5 Component-Slices ab; die drei uebrigen waren nicht als vorhanden-aber-nicht-gemappt kenntlich
+2026-09-02T10:14:00Z  WARN   7.4  capabilitystatement  asymmetry  haplotype=SHALL sequence-phase-relationship=nicht deklariert, obwohl die Seite beide als verwendet darstellt verdict=Autorenentscheidung, als offener Punkt auf der Seite markiert, nicht eigenmaechtig geaendert
+2026-09-02T10:15:00Z  INFO   7.5  slice-name-audit  params  method=alle Observation.component-Verweise in Intro-Notes und Pagecontent gegen STU3-Snapshots und eigene StructureDefinitions
+2026-09-02T10:15:30Z  WARN   7.5  slice-name-audit  found  RefSequenceAssembly amino-acid-change-type associated-phenotype CytogenicLocation
+2026-09-02T10:16:00Z  INFO   7.5.1  slice-fix  done  RefSequenceAssembly->reference-sequence-assembly associated-phenotype->predicted-phenotype CytogenicLocation->cytogenetic-location
+2026-09-02T10:16:30Z  INFO   7.5.2  slice-fix  done  amino-acid-change-type=Zeile aus Variante-Note entfernt reason=STU3 hat den Slice auf variant nicht; das Datensatzelement Mutationskonsequenz (funktionell) ist auf MolekulareKonsequenz bereits als component:functional-effect gemappt
+2026-09-02T10:17:00Z  INFO   7.5.3  slice-name-audit  verify  unbekannte_slice_namen=0

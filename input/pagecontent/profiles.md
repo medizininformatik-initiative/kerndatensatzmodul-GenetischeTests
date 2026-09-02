@@ -38,8 +38,17 @@ The following table shows the inheritance relationships of the profiles in this 
 | MII_PR_MolGen_EmpfohleneFolgemassnahme | followup-recommendation | Recommended follow-up action |
 | MII_PR_MolGen_GenomicStudy | genomic-study | Genomic study |
 | MII_PR_MolGen_GenomicStudyAnalysis | genomic-study-analysis | Analysis within the genomic study |
-| MII_PR_MolGen_Mikrosatelliteninstabilitaet | molecular-biomarker | MSI status |
-| MII_PR_MolGen_Mutationslast | molecular-biomarker | Tumor mutational burden |
+| MII_PR_MolGen_MolekularerBiomarker | molecular-biomarker | Base profile for the biomarker profiles of this module |
+
+##### Profiles derived from another profile of this module
+
+| Profile name | Parent profile | Description |
+|--------------|----------------|-------------|
+| MII_PR_MolGen_Mikrosatelliteninstabilitaet | MII_PR_MolGen_MolekularerBiomarker | MSI status |
+| MII_PR_MolGen_Mutationslast | MII_PR_MolGen_MolekularerBiomarker | Tumor mutational burden |
+
+Both reach Clinical Genomics STU3 through MII_PR_MolGen_MolekularerBiomarker, not
+directly.
 
 ##### Profiles derived directly from FHIR R4
 

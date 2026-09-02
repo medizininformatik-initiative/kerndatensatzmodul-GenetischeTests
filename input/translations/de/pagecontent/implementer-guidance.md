@@ -75,64 +75,87 @@ Befundbericht berücksichtigt wurden.
 
 ### Upstream-Profile aus HL7 Genomics Reporting
 
-<!-- TODO:REVIEW Diese gruppierende Überschrift und der folgende Einleitungssatz
-     sind redaktionell ergänzt, um die Vorgabe umzusetzen, dass die beiden
-     folgenden Profile nicht von diesem Modul profiliert werden. Die Aussage
-     selbst stammt aus den Quellseiten ("stammt aus" / "entspricht ... aus HL7
-     Genomics Reporting Implementation Guide STU3"). -->
+Dieses Modul baut durchgängig auf
+[HL7 Genomics Reporting STU3](http://hl7.org/fhir/uv/genomics-reporting/STU3/) auf,
+nicht bloß daneben. Aus den gebauten Artefakten ausgezählt:
 
-Die folgenden beiden Profile stammen aus dem
-[HL7 Genomics Reporting Implementation Guide STU3](http://hl7.org/fhir/uv/genomics-reporting/STU3/)
-und werden von diesem Modul nicht eigenständig profiliert. Sie werden hier
-beschrieben, weil sie bei der Umsetzung genetischer Befunde gemeinsam mit den
-Profilen dieses Moduls verwendet werden.
+| Wie das Modul STU3 nutzt | Anzahl |
+|---|---|
+| Eigene Profile, die direkt von einem STU3-Profil erben | 10 |
+| Eigene Profile, die indirekt erben (über MII_PR_MolGen_MolekularerBiomarker) | 2 |
+| Eigene Extensions, die von einer STU3-Extension erben | 1 |
+| In den Profilen verwendete STU3-Extensions | 12 |
+| Gebundene STU3-ValueSets | 3 |
+| Aus STU3 übernommene Codesysteme | 2 |
+
+Welches Profil dieses Moduls von welchem STU3-Profil abstammt, steht in der
+[Vererbungstabelle auf der Profilseite](profiles.html). **Dieser Abschnitt behandelt
+etwas Engeres**: die beiden STU3-Profile, die dieses Modul **unverändert** verwendet,
+ohne ein eigenes Profil davon abzuleiten. Genau deshalb haben sie keine Seite unter
+[Artefakte](artifacts.html) und werden hier beschrieben.
 
 #### Haplotype (Observation)
 
 Dieses Profil beschreibt die Feststellung eines bestimmten Haplotyps auf der
 Grundlage einer oder mehrerer Varianten.
 
-Canonical: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype
+Canonical: `http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype`
+· [Profilseite](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html)
 
-<!-- TODO:REVIEW Das Linkziel im folgenden Satz endet in der Quellseite auf
-     ".html.html" und ist damit vermutlich defekt. Unverändert übernommen, weil
-     Linkziele in dieser Migration nicht geändert werden dürfen. -->
+Das [CapabilityStatement](CapabilityStatement-mii-cps-molgen-capabilitystatement.html)
+deklariert dieses Profil mit `SHALL`; ein konformer Server muss es also unterstützen.
 
-Das Profil
-[Haplotype](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html)
-stammt aus dem
-[HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
+##### Komponenten
 
-##### Profil
+STU3 definiert auf diesem Profil fünf Component-Slices. Zwei davon tragen Elemente
+des logischen Datensatzes dieses Moduls:
 
 | FHIR-Element | Logischer Datensatz |
 |---|---|
-| Observation.component:gene-studied | Methoden.Getestete Gene |
-| Observation.component:CytogenicLocation | Ergebnisse.Veränderungen.Zytogenetische Lokalisierung |
+| `Observation.component:gene-studied` | Methoden.Getestete Gene |
+| `Observation.component:cytogenetic-location` | Ergebnisse.Veränderungen.Zytogenetische Lokalisierung |
+
+Die übrigen drei stehen zur Verfügung, sind aber nicht auf den logischen Datensatz
+abgebildet: `conclusion-string`, `reference-sequence-assembly` und
+`chromosome-identifier`.
 
 #### Sequence Phase Relationship (Observation)
 
 Zeigt an, ob zwei Varianten in Cis- (gleicher Strang) oder Trans-
-(entgegengesetzter Strang) Beziehung zueinander stehen.
+(entgegengesetzter Strang) Beziehung zueinander stehen — ob sie also auf derselben
+Chromosomenkopie sitzen oder auf verschiedenen. Diese Unterscheidung entscheidet
+darüber, ob zwei Varianten in demselben Gen ein Allel betreffen oder beide, und
+damit, ob eine rezessive Erkrankung vorliegt.
 
-Das Profil entspricht
-[Sequence Phase Relationship](http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship)
-aus dem
-[HL7 Genomics Reporting Implementation Guide STU3](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
+Canonical: `http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship`
+· [Profilseite](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-sequence-phase-relationship.html)
+
+##### Struktur
+
+| Element | Kard. | Inhalt |
+|---|---|---|
+| `Observation.code` | 1..1 | fest auf LOINC `82120-7` |
+| `Observation.value[x]` | 1..1 | die Phasenbeziehung, `required` an das ValueSet unten gebunden |
+| `Observation.derivedFrom:variant` | 0..* | die in Beziehung gesetzten Varianten — das Profil [Variante](StructureDefinition-mii-pr-molgen-variante.html) dieses Moduls leitet sich von dem hier referenzierten STU3-Profil ab |
+| `Observation.derivedFrom:haplotype` | 0..* | alternativ die in Beziehung gesetzten Haplotypen |
 
 ##### Terminologie
 
-###### CodeSystem
+| | |
+|---|---|
+| ValueSet | [`sequence-phase-relationship-vs`](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-sequence-phase-relationship-vs.html), Bindung `required` |
+| CodeSystem | [`sequence-phase-relationship-cs`](http://hl7.org/fhir/uv/genomics-reporting/STU3/CodeSystem-sequence-phase-relationship-cs.html) — Canonical `http://terminology.hl7.org/CodeSystem/sequence-phase-relationship-cs`, es gehört also zu HL7 Terminology und wird im STU3-Guide nur mitgerendert |
 
-**Sequence Phase Relationship CodeSystem**
-
-[SequencePhaseRelationshipCS](http://hl7.org/fhir/uv/genomics-reporting/STU3/CodeSystem-sequence-phase-relationship-cs.html)
-
-###### ValueSet
-
-**Sequence Phase Relationship ValueSet**
-
-[seq-phase-relationship](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-sequence-phase-relationship-vs.html)
+<!-- DERIVED:no-source source=none gate=B -->
+> **Offener Punkt für das Release: Dieses Profil ist im CapabilityStatement nicht
+> deklariert.**
+> Haplotype ist mit `SHALL` deklariert, Sequence Phase Relationship gar nicht —
+> obwohl diese Seite beide als verwendet darstellt. Entweder ist das
+> CapabilityStatement unvollständig, oder dieses Profil wird von Implementierenden
+> tatsächlich nicht erwartet und die Seite sagt zu viel. Was von beidem zutrifft,
+> ist eine Entscheidung der Modulautorinnen und -autoren und lässt sich nicht aus
+> den Artefakten ablesen.
+{: .ig-highlight .ig-highlight-grey}
 
 ### Referenzen
 
