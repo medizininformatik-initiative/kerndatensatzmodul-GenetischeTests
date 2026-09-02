@@ -126,6 +126,10 @@ Description: "Der DiagnosticReport ist zentraler Bestandteil aller genetischen B
 //* result[region-studied] MS
 //* result[region-studied] only Reference(MII_PR_MolGen_UntersuchteRegion)
 * result[biomarker] MS
+// Bisher ohne eigene Typisierung, wodurch der Slice jedes STU3-molecular-biomarker
+// akzeptierte statt der Biomarker dieses Moduls. Verengt auf das eigene Basisprofil;
+// Mikrosatelliteninstabilitaet und Mutationslast erben davon und passen weiterhin.
+* result[biomarker] only Reference(MII_PR_MolGen_MolekularerBiomarker)
 * result[biomarker] ^short = "Biomarker"
 * result[biomarker] ^definition = "Referenz zu molekularen Biomarkern wie TMB oder MSI"
 * insert Translation(result[biomarker] ^short, de-DE, Biomarker)

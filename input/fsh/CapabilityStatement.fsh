@@ -105,6 +105,10 @@ Usage: #definition
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation|2027.0.0-ballot.rc1, #SHALL)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2027.0.0-ballot.rc1, #SHALL)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz|2027.0.0-ballot.rc1, #SHALL)
+// Basisprofil von Mikrosatelliteninstabilitaet und Mutationslast. Es war bisher gar
+// nicht deklariert: einem Server wurden die beiden Kinder vorgeschrieben, ihr
+// Elternprofil aber verschwiegen. SHALL, konsistent mit den beiden Kindern.
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekularer-biomarker|2027.0.0-ballot.rc1, #SHALL)
 // Genotyp ist MAY, nicht SHALL: eine aggregierte Allel-Aussage, die viele Labore gar
 // nicht erzeugen. Der verpflichtende Kern dieses Moduls sind Befundbericht, Variante
 // und die Implikationen. Wer Genotypen austauscht, nutzt dieses Profil - erzeugen muss

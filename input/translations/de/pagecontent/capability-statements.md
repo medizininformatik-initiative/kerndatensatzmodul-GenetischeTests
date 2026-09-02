@@ -18,7 +18,7 @@ Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/Ca
 
 #### Warum drei Profile `MAY` sind
 
-Von den siebzehn unterstützten Profilen tragen vierzehn `SHALL` und drei `MAY`:
+Von den achtzehn unterstützten Profilen tragen fünfzehn `SHALL` und drei `MAY`:
 `genotyp`, `haplotype` und `sequence-phase-relationship`.
 
 Alle drei sagen etwas über **Allele als Ganzes** aus statt über einen einzelnen

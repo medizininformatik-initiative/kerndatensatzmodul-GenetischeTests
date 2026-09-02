@@ -5087,3 +5087,13 @@
 2026-09-02T14:31:00Z  RETRACT 8.3  befundbericht-slices  Frueherer Verdacht in dieser Sitzung, result[haplotype] und result[sequence-phase-relation] seien untypisierte MS-Slices ohne Ziel, war FALSCH. Das Elternprofil genomic-report typisiert beide bereits (slicing discriminator type=profile path=resolve()); das Differential wiederholt das nur nicht. Nichts zu reparieren.
 2026-09-02T14:32:00Z  INFO   8.4  sushi  done  errors=0 warnings=0 supportedProfile=17 SHALL=14 MAY=3
 2026-09-02T14:33:00Z  INFO   8.5  capability-statements-page  edit  files=2 added=Abschnitt "Warum drei Profile MAY sind"
+2026-09-02T14:45:00Z  INFO   8.6  shall-audit  params  Kriterium aus der Genotyp-Entscheidung auf die verbleibenden SHALL angewandt: erzeugen ganze Laborklassen das nie?
+2026-09-02T14:45:30Z  NOTE   8.6  shall-audit  kandidaten  mikrosatelliteninstabilitaet(Onkologie,1 Beispiel) mutationslast(Onkologie,1) polygener-risiko-score(praediktiv,1) familienanamnese(nur hereditaer,6) medikationsempfehlung(2) empfohlene-folgemassnahme(2)
+2026-09-02T14:46:00Z  DEC    8.6  shall-audit  decided  Entscheidung des Nutzers: "Nichts weiter aendern". MSI, TMB und PRS bleiben SHALL. Begruendung des Kerndatensatzes: sie werden von allen Standorten gefordert, unabhaengig davon ob ein einzelnes Labor sie erzeugt.
+2026-09-02T14:47:00Z  WARN   8.7  molekularer-biomarker  gap  Profil existiert und ist Elternprofil von MSI und Mutationslast, war aber im CapabilityStatement nicht deklariert; result[biomarker] im Befundbericht erbte STU3-molecular-biomarker statt des eigenen Profils
+2026-09-02T14:47:30Z  DEC    8.7  molekularer-biomarker  decided  Entscheidung des Nutzers: deklarieren und result[biomarker] verengen
+2026-09-02T14:48:00Z  INFO   8.7.1  capabilitystatement  edit  added=mii-pr-molgen-molekularer-biomarker expectation=SHALL total=17->18 verteilung=15_SHALL+3_MAY
+2026-09-02T14:48:30Z  INFO   8.7.2  befundbericht  edit  result[biomarker] only Reference(MII_PR_MolGen_MolekularerBiomarker)
+2026-09-02T14:49:00Z  INFO   8.7.3  beispiele  verify  referenziert=mutationslast-1,mikrosatelliteninstabilitaet-1 beide_erben_von=MolekularerBiomarker bruch=keiner
+2026-09-02T14:49:30Z  INFO   8.7.4  capability-statements-page  edit  Zahlen 17/14 -> 18/15 in beiden Sprachen
+2026-09-02T14:50:00Z  INFO   8.8  sushi  done  errors=0 warnings=0
