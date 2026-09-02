@@ -1,0 +1,49 @@
+{
+  "resourceType" : "Procedure",
+  "id" : "mii-exa-molgen-genomic-study-analysis-wes-bioinformatics",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis",
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.4"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-molgen-genomic-study-analysis-wes-bioinformatics</b></p><a name=\"de-mii-exa-molgen-genomic-study-analysis-wes-bioinformatics\"> </a><a name=\"de-hcmii-exa-molgen-genomic-study-analysis-wes-bioinformatics\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-mii-pr-molgen-genomic-study-analysis.html\">MII PR MolGen Genomic Study Analysis</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.4\">https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.4</a></p></div><blockquote><p><b>Genomic Study Analysis Input</b></p><ul><li>type: <span title=\"Codes:\">FASTQ files</span></li></ul></blockquote><p><b>Genomic Study Analysis Method Type</b>: <span title=\"Codes:{http://loinc.org LA26811-2}\">Computational analysis</span></p><blockquote><p><b>Genomic Study Analysis Regions</b></p><ul><li>description: Callable regions after quality filtering</li></ul></blockquote><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-molgen-patient.html\">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Krankenaktennummer\u00a0(use:\u00a0usual,\u00a0))</a></p></div>"
+  },
+  "extension" : [{
+    "extension" : [{
+      "url" : "type",
+      "valueCodeableConcept" : {
+        "text" : "FASTQ files"
+      }
+    }],
+    "url" : "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-input"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "LA26811-2",
+        "display" : "Computational analysis"
+      }]
+    }
+  },
+  {
+    "extension" : [{
+      "url" : "description",
+      "valueString" : "Callable regions after quality filtering"
+    }],
+    "url" : "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-regions"
+  }],
+  "status" : "completed",
+  "category" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-molgen-patient"
+  }
+}
