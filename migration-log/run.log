@@ -5048,3 +5048,12 @@
 2026-09-02T09:35:00Z  WARN   6.1.5  searchparameter-descriptions  fsh-parse-error  file=input/fsh/SearchParameter.fsh line=168 cause=doppelte Anfuehrungszeichen innerhalb eines FSH-Strings ("not found" / "not looked for") sushi_errors=4 fix=umformuliert_ohne_zitate
 2026-09-02T09:36:00Z  INFO   6.3  sushi  done  errors=0 warnings=0 profiles=16 extensions=5 logicals=1 valuesets=4 instances=128
 2026-09-02T09:36:30Z  INFO   6.3  artifact-verify  done  capabilitystatement_searchparams=110 procedure_includes_code=true version=2027.0.0-ballot.rc1
+2026-09-02T09:50:00Z  INFO   6.4  ci-preview  done  ig_build=success pages=2034 qa_errors=64 qa_broken_links=0 baseline_was=68 preview=https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/branches/release/2027.0.0-ballot.rc1/
+2026-09-02T09:50:30Z  INFO   6.4.1  render-verify  done  search-parameters_sections=6_en+6_de get_examples=6_en+6_de intro_note_residue=0 pathologie-befund_residue=0
+2026-09-02T09:51:00Z  INFO   6.5  ci-red-jobs  triage  method=Vergleich_gegen_denselben_Job_auf_main
+2026-09-02T09:51:10Z  NOTE   6.5  dotnet-validation  pre-existing  cause=git add fsh-generated scheitert am pauschalen .gitignore-Eintrag verdict=PR51 auf main identisch rot
+2026-09-02T09:51:20Z  NOTE   6.5  java-validator  pre-existing  cause=validation.json wird nicht geschrieben, Schritt endet mit exit 1 verdict=auf main identisch rot
+2026-09-02T09:51:30Z  WARN   6.5  simplifier-qc  regression  main=success branch=failure cause=derselbe .gitignore-Blocker, auf main lief der Commit-Schritt nur nicht an note=nicht durch Inhaltsaenderungen verursacht, aber ohne PR51 nicht gruen zu bekommen
+2026-09-02T09:52:00Z  INFO   6.5.1  qc-error-count  diff  main=13521 branch=13522 delta=+1
+2026-09-02T09:52:10Z  INFO   6.5.1  qc-error-count  identified  rule=CalVer-Version resource=implementation-guides/ImplementationGuide-2026.x-DE/mii-ig-molgen-de-v2026.json cause=stillgelegter Simplifier-Baum traegt 2026.0.4 und faellt durch, sobald die Live-Version darueber hinausgeht; 1.x und 2025.x taten das auf main schon
+2026-09-02T09:52:30Z  INFO   6.5.2  qc-rule  edit  file=qc/custom.rules.yaml rule=CalVer added_exclusion=!/implementation-guides/** effect=3 dauerhafte Falschtreffer weg, waechst sonst je Release um einen
