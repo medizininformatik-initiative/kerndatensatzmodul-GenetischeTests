@@ -8,6 +8,13 @@
 ## Your Task
 Publish the FHIR package to Simplifier.net using either the web interface or CLI tools.
 
+> **Simplifier project.** `medizininformatikinitiative-modulomics` is the correct
+> project — that is where this module publishes. `.claude/config.yaml` names
+> `medizininformatikinitiative-modulmolekulargenetischerbefundbericht` in
+> `simplifier.project_url` and `simplifier.guide_url`; those entries are stale or
+> refer to something else. Confirmed by the release owner on 2026-09-03. Do not
+> "correct" this command against that config without asking.
+
 ### Step 1: Pick the right tarball — READ THIS FIRST
 
 There are two candidates and only one of them is publishable.
@@ -72,7 +79,7 @@ cd /Users/thome/code/fhir-profiling/kerndatensatzmodul-GenetischeTests
 
 # Publish package
 simplifier push \
-  --project medizininformatikinitiative-modulmolekulargenetischerbefundbericht \
+  --project medizininformatikinitiative-modulomics \
   --version [VERSION] \
   --path ${PACKAGE_NAME}-${VERSION}.tgz
 ```
@@ -80,13 +87,13 @@ simplifier push \
 **Option B: Using Firely Terminal (alternative)**
 ```bash
 fhir publish \
-  --project medizininformatikinitiative-modulmolekulargenetischerbefundbericht \
+  --project medizininformatikinitiative-modulomics \
   --version [VERSION]
 ```
 
 **Option C: Manual Upload Instructions**
 If CLI tools unavailable, provide step-by-step manual instructions:
-1. Navigate to https://simplifier.net/medizininformatikinitiative-modulmolekulargenetischerbefundbericht
+1. Navigate to https://simplifier.net/medizininformatikinitiative-modulomics
 2. Click "Upload" or "New Version"
 3. Select the tarball built by `/build-package` in the project root
 4. Confirm version and metadata
@@ -116,7 +123,7 @@ Provide summary:
 **Package**: de.medizininformatikinitiative.kerndatensatz.molgen
 **Version**: [VERSION]
 **Status**: ✅ Published | ❌ Failed
-**URL**: https://simplifier.net/medizininformatikinitiative-modulmolekulargenetischerbefundbericht/~packages
+**URL**: https://simplifier.net/medizininformatikinitiative-modulomics/~packages
 **Install Command**:
   fhir install de.medizininformatikinitiative.kerndatensatz.molgen@[VERSION]
 ```
