@@ -13,7 +13,3 @@ zwischen `/en/` und `/de/`.
 Dateiname wie die englische Seite); Ressourcen-Übersetzungen als `.po`-Dateien
 unter `input/translations/de/`. Details:
 [`docs/recipes/add-translation.md`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-GenetischeTests/blob/main/docs/recipes/add-translation.md) in diesem Repository.
-
-> [TODO: Vermerken Sie, welche Teile des Moduls bereits ins Deutsche übersetzt
-> sind.]
-{: .ig-highlight .ig-highlight-grey}

@@ -94,13 +94,6 @@ Not enabled in this scaffold, but prepared as commented blocks in
   [CRMI Manifest Parameters](https://hl7.org/fhir/uv/crmi/STU2/en/StructureDefinition-crmi-manifestparameters.html)
   resource and the `path-expansion-params` / `pin-manifest` parameters.
 
-> [TODO: Enable the blocks your module needs and then update the tables above.
-> If your module also applies the CRMI shareable/publishable profiles to its own
-> StructureDefinitions, CapabilityStatements, CodeSystems and ValueSets — the
-> `kerndatensatz-basis` idiom is a shared `RuleSet` in
-> [`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-GenetischeTests/blob/main/input/fsh/rulesets/crmi.fsh) — add the corresponding rows here.]
-{: .ig-highlight .ig-highlight-grey}
-
 ##### CodeSystem supplements
 
 Where a module publishes CodeSystem supplements, note that the CRMI
@@ -152,11 +145,6 @@ it with `path-expansion-params` and `pin-manifest`. Both readers and tooling
 then have one stable place to inspect the parameters used for expansion and
 package pinning.
 
-> [TODO: Add the manifest for your module (see the commented blocks in
-> `sushi-config.yaml`) and link the generated `Parameters` resource page here,
-> or state explicitly that this module does not pin expansion parameters.]
-{: .ig-highlight .ig-highlight-grey}
-
 #### Relationship to FAIR
 
 The [FAIR principles](https://www.go-fair.org/fair-principles/) describe goals
@@ -204,11 +192,6 @@ asserted to be a persistently identified FAIR dataset.
 | R1.3 | RDA-R1.3-01M | Metadata complies with a community standard | FHIR R4, the CRMI profiles, the KDS publication conventions and canonical resource metadata. |
 | R1.3 | RDA-R1.3-01D | Data complies with a community standard | The examples declare this module's profiles. In production, conformance must be validated against the profiles, bindings and CapabilityStatement expectations. |
 | R1.3 | RDA-R1.3-02M | Metadata is machine-understandable per a community standard | CRMI-conformant FHIR metadata as JSON/XML and as a FHIR package in the NPM package format used by the IG Publisher ecosystem. |
-
-> [TODO: The table lists the indicators of priority *Essential*. If your module
-> wants the complete self-assessment, extend it with the *Important* and
-> *Useful* indicators — `kerndatensatz-basis` carries the full table.]
-{: .ig-highlight .ig-highlight-grey}
 
 #### Practical use
 
