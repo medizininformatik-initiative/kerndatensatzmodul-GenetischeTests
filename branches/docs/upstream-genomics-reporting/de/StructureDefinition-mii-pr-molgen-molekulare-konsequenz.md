@@ -56,6 +56,7 @@ Beispiel 2: MolekulareKonsequenz für NIPBL-Variante
 **Usages:**
 
 * Examples for this Profile: [Observation/mii-exa-molgen-molekulare-konsequenz-1](Observation-mii-exa-molgen-molekulare-konsequenz-1.md), [Observation/mii-exa-molgen-molekulare-konsequenz-2](Observation-mii-exa-molgen-molekulare-konsequenz-2.md), [Observation/mii-exa-molgen-molekulare-konsequenz-brca1](Observation-mii-exa-molgen-molekulare-konsequenz-brca1.md) and [Observation/mii-exa-molgen-molekulare-konsequenz-cnv-4](Observation-mii-exa-molgen-molekulare-konsequenz-cnv-4.md)
+* CapabilityStatements using this Profile: [MII CPS MolGen CapabilityStatement](CapabilityStatement-mii-cps-molgen-capabilitystatement.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.molgen|current/StructureDefinition/StructureDefinition-mii-pr-molgen-molekulare-konsequenz.json)
 
@@ -136,7 +137,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "name" : "MII_PR_MolGen_MolekulareKonsequenz",
   "title" : "MII PR MolGen Molekulare Konsequenz",
   "status" : "active",
-  "date" : "2026-09-03T06:40:42+00:00",
+  "date" : "2026-09-03T06:57:15+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

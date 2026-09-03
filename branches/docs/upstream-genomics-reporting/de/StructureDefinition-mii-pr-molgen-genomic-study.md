@@ -61,6 +61,7 @@ Beispiel 1: GenomicStudy für Panel-Sequenzierung
 **Usages:**
 
 * Examples for this Profile: [Procedure/mii-exa-molgen-genomic-study-1](Procedure-mii-exa-molgen-genomic-study-1.md), [Procedure/mii-exa-molgen-genomic-study-comprehensive-wes](Procedure-mii-exa-molgen-genomic-study-comprehensive-wes.md), [Procedure/mii-exa-molgen-genomic-study-cornelia-de-lange](Procedure-mii-exa-molgen-genomic-study-cornelia-de-lange.md), [Procedure/mii-exa-molgen-genomic-study-trurisk-panel](Procedure-mii-exa-molgen-genomic-study-trurisk-panel.md) and [Procedure/mii-exa-molgen-genomic-study-tso500](Procedure-mii-exa-molgen-genomic-study-tso500.md)
+* CapabilityStatements using this Profile: [MII CPS MolGen CapabilityStatement](CapabilityStatement-mii-cps-molgen-capabilitystatement.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.molgen|current/StructureDefinition/StructureDefinition-mii-pr-molgen-genomic-study.json)
 
@@ -129,7 +130,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "name" : "MII_PR_MolGen_GenomicStudy",
   "title" : "MII PR MolGen Genomic Study",
   "status" : "active",
-  "date" : "2026-09-03T06:40:42+00:00",
+  "date" : "2026-09-03T06:57:15+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

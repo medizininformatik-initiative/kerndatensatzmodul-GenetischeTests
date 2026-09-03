@@ -89,7 +89,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-anf
   "name" : "MII_PR_MolGen_AnforderungGenetischerTest",
   "title" : "MII PR MolGen Anforderung genetischer Test",
   "status" : "active",
-  "date" : "2026-09-03T06:40:42+00:00",
+  "date" : "2026-09-03T06:57:15+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

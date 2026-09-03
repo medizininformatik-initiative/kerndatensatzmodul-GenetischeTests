@@ -19,6 +19,33 @@ Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/Ca
 
 [mii-cps-molgen-capabilitystatement](CapabilityStatement-mii-cps-molgen-capabilitystatement.md)
 
+#### Unterstützte Profile und ihre Erwartung
+
+Das oben gerenderte CapabilityStatement listet die unterstützten Profile als Links, **zeigt aber die Erwartung dazu nicht an** — der IG Publisher lässt sie weg. Die folgende Tabelle holt das nach. Sie ist aus dem gebauten CapabilityStatement erzeugt und kann deshalb nicht davon abweichen.
+
+| | | |
+| :--- | :--- | :--- |
+| `DiagnosticReport` | [MII PR MolGen Molekulargenetischer Befundbericht](StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.md) | `SHALL` |
+| `FamilyMemberHistory` | [MII PR MolGen Familienanamnese](StructureDefinition-mii-pr-molgen-familienanamnese.md) | `SHALL` |
+| `Observation` | [MII PR MolGen Diagnostische Implikation](StructureDefinition-mii-pr-molgen-diagnostische-implikation.md) | `SHALL` |
+| `Observation` | [MII PR MolGen Mikrosatelliteninstabilität](StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.md) | `SHALL` |
+| `Observation` | [MII PR MolGen Molekulare Konsequenz](StructureDefinition-mii-pr-molgen-molekulare-konsequenz.md) | `SHALL` |
+| `Observation` | [MII PR MolGen Molekularer Biomarker](StructureDefinition-mii-pr-molgen-molekularer-biomarker.md) | `SHALL` |
+| `Observation` | [MII PR MolGen Mutationslast](StructureDefinition-mii-pr-molgen-mutationslast.md) | `SHALL` |
+| `Observation` | [MII PR MolGen Therapeutische Implikation](StructureDefinition-mii-pr-molgen-therapeutische-implikation.md) | `SHALL` |
+| `Observation` | [MII PR MolGen Variante](StructureDefinition-mii-pr-molgen-variante.md) | `SHALL` |
+| `Procedure` | [MII PR MolGen Genomic Study Analysis](StructureDefinition-mii-pr-molgen-genomic-study-analysis.md) | `SHALL` |
+| `Procedure` | [MII PR MolGen Genomic Study](StructureDefinition-mii-pr-molgen-genomic-study.md) | `SHALL` |
+| `RiskAssessment` | [MII PR MolGen Polygener Risiko Score](StructureDefinition-mii-pr-molgen-polygener-risiko-score.md) | `SHALL` |
+| `ServiceRequest` | [MII PR MolGen Anforderung genetischer Test](StructureDefinition-mii-pr-molgen-anforderung-genetischer-test.md) | `SHALL` |
+| `Task` | [MII PR MolGen Empfohlene Folgemaßnahme](StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.md) | `SHALL` |
+| `Task` | [MII PR MolGen Medikationsempfehlung](StructureDefinition-mii-pr-molgen-medikationsempfehlung.md) | `SHALL` |
+| `Observation` | [MII PR MolGen Genotyp](StructureDefinition-mii-pr-molgen-genotyp.md) | `MAY` |
+| `Observation` | [haplotype](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html) | `MAY` |
+| `Observation` | [sequence-phase-relationship](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-sequence-phase-relationship.html) | `MAY` |
+
+`SHALL` heißt, ein konformer Server muss das Profil unterstützen; `MAY` heißt, es ist für alle spezifiziert, die diese Daten austauschen, aber kein Server ist verpflichtet, sie zu erzeugen.
+
 #### Warum drei Profile MAY sind
 
 Von den achtzehn unterstützten Profilen tragen fünfzehn `SHALL` und drei `MAY`: `genotyp`, `haplotype` und `sequence-phase-relationship`.
