@@ -40,6 +40,21 @@ Die folgende Tabelle zeigt die Vererbungsbeziehungen der Profile in diesem Modul
 
 Beide erreichen Clinical Genomics STU3 über MII_PR_MolGen_MolekularerBiomarker, nicht direkt.
 
+##### Zwei Canonical-Schemata — Absicht, kein Versehen
+
+Zwölf Profile tragen ein kurzes Canonical, vier eines mit dem Präfix `mii-pr-molgen-`:
+
+| | | |
+| :--- | :--- | :--- |
+| kurz | `…/StructureDefinition/variante` | die zwölf älteren Profile |
+| mit Präfix | `…/StructureDefinition/mii-pr-molgen-genomic-study` | GenomicStudy, GenomicStudyAnalysis, MolekulareKonsequenz, MolekularerBiomarker |
+
+Die vier präfixierten kamen bei der Migration auf Clinical Genomics STU3 hinzu und haben den Präfix aus ihren Ids übernommen. Die beiden GenomicStudy-Profile behielten zudem ihre englischen Namen, während das Modul sonst deutsch benennt.
+
+**Das wird nicht vereinheitlicht.** Alle vier Canonicals sind mit Version 2026.0.4 ausgeliefert und damit feste Identität: wer diese Version einsetzt, hat die URLs in Profilbindungen, in `meta.profile` und in Suchabfragen stehen. Ein Umbenennen bräche diese Referenzen, und eine Ballotierung ist dafür der falsche Zeitpunkt — die Prüfenden würden Inhalte begutachten und gleichzeitig mit kaputten Referenzen kämpfen. Ob modulübergreifend eine gemeinsame Konvention gelten soll, ist eine Frage für die TF-KDS und nicht für dieses Modul allein.
+
+Wer eine Referenz von Hand schreibt, nimmt das Canonical von der Profilseite selbst und leitet es nicht aus dem Profilnamen ab.
+
 ##### Profile direkt von FHIR R4
 
 | | | |

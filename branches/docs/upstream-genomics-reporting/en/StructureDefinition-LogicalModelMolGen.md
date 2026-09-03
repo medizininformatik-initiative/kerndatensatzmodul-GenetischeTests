@@ -41,7 +41,7 @@ Other representations of profile: [CSV](../StructureDefinition-LogicalModelMolGe
   "name" : "MII_LM_MolGen_LogicalModel",
   "title" : "MII LM MolGen LogicalModel",
   "status" : "active",
-  "date" : "2026-09-03T08:11:50+00:00",
+  "date" : "2026-09-03T08:25:48+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

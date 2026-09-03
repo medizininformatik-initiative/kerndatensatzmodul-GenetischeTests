@@ -81,7 +81,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-mol
   "name" : "MII_PR_MolGen_MolekulareKonsequenz",
   "title" : "MII PR MolGen Molekulare Konsequenz",
   "status" : "active",
-  "date" : "2026-09-03T08:11:50+00:00",
+  "date" : "2026-09-03T08:25:48+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

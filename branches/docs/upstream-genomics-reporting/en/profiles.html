@@ -464,6 +464,48 @@ conventions). The module's extensions are listed on the
 <p>Both reach Clinical Genomics STU3 through MII_PR_MolGen_MolekularerBiomarker, not
 directly.</p>
 
+<h5 id="two-canonical-url-schemes--deliberate-not-an-oversight">Two canonical URL schemes — deliberate, not an oversight</h5>
+
+<p>Twelve profiles carry a short canonical, four carry one prefixed with
+<code class="language-plaintext highlighter-rouge">mii-pr-molgen-</code>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scheme</th>
+      <th>Canonical ends in</th>
+      <th>Profiles</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>short</td>
+      <td><code class="language-plaintext highlighter-rouge">…/StructureDefinition/variante</code></td>
+      <td>the twelve older profiles</td>
+    </tr>
+    <tr>
+      <td>prefixed</td>
+      <td><code class="language-plaintext highlighter-rouge">…/StructureDefinition/mii-pr-molgen-genomic-study</code></td>
+      <td>GenomicStudy, GenomicStudyAnalysis, MolekulareKonsequenz, MolekularerBiomarker</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The four prefixed ones were added during the migration to Clinical Genomics STU3 and
+picked up the prefix from their ids. The two GenomicStudy profiles also kept their
+English names, where the rest of the module names profiles in German.</p>
+
+<p><strong>This is not going to be harmonised.</strong> All four canonicals shipped in version
+2026.0.4, so they are established identity: anyone using that release has these URLs
+in profile bindings, in <code class="language-plaintext highlighter-rouge">meta.profile</code> and in search queries. Renaming them would
+break those references, and a ballot is the wrong moment — reviewers would be
+checking content and fighting broken references at the same time. Whether a common
+convention should apply across all MII core dataset modules is a question for the
+TF-KDS, not for this module alone.</p>
+
+<p>When writing a reference by hand, take the canonical from the profile's own page
+rather than deriving it from the profile name.</p>
+
 <h5 id="profiles-derived-directly-from-fhir-r4">Profiles derived directly from FHIR R4</h5>
 
 <table>
@@ -895,7 +937,7 @@ directly.</p>
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Sep 3, 2026 08:11+0000">2026-09-03</span>
+          Generated <span title="Thu, Sep 3, 2026 08:25+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
