@@ -62,7 +62,7 @@ function targetEntry(overrides = {}) {
   };
 }
 
-function fixture(entry = targetEntry()) {
+function fixture(entry = targetEntry(), requestOverride = request) {
   const root = mkdtempSync(join(tmpdir(), "ig-registry-entry-"));
   const registry = join(root, "fhir-ig-list.json");
   const requestFile = join(root, "publication-request.json");
@@ -76,7 +76,7 @@ function fixture(entry = targetEntry()) {
   const entrySource = JSON.stringify(entry);
   const source = `{ "guides" : [${JSON.stringify(unrelated)},\n  ${entrySource}] }\n`;
   writeFileSync(registry, source);
-  writeFileSync(requestFile, JSON.stringify(request));
+  writeFileSync(requestFile, JSON.stringify(requestOverride));
   writeFileSync(packageFile, JSON.stringify(packageMetadata));
   return {
     registry,
@@ -137,6 +137,48 @@ test("validates an entry that is already corrected", () => {
 
   assert.equal(result.changed, false);
   assert.equal(readFileSync(files.registry, "utf8"), files.source);
+});
+
+test("accepts the \"<sequence> <Status>\" edition name a non-release publication gets", () => {
+  // The Publisher appends the status to the sequence whenever it is not "release":
+  // a ballot candidate publishes as "2026 Draft". The public FHIR IG registry carries
+  // 82 such editions ("STU 1 Ballot", "Releases Draft"). Comparing against the bare
+  // sequence rejected every ballot, which is when a module most needs to publish.
+  const draftRequest = { ...request, status: "draft" };
+  const entry = targetEntry({ history, language: ["en", "de"] });
+  entry.editions[0].name = `${request.sequence} Draft`;
+
+  const files = fixture(entry, draftRequest);
+  const result = fixIgRegistryEntry(
+    files.registry,
+    files.requestFile,
+    files.packageFile,
+    canonical,
+    history,
+    ["en", "de"],
+  );
+
+  assert.equal(result.changed, false);
+});
+
+test("still demands the bare sequence when the publication status is release", () => {
+  const releaseRequest = { ...request, status: "release" };
+  const entry = targetEntry({ history, language: ["en", "de"] });
+  entry.editions[0].name = `${request.sequence} Draft`;
+
+  const files = fixture(entry, releaseRequest);
+  assert.throws(
+    () =>
+      fixIgRegistryEntry(
+        files.registry,
+        files.requestFile,
+        files.packageFile,
+        canonical,
+        history,
+        ["en", "de"],
+      ),
+    /edition\.name/,
+  );
 });
 
 test("rejects placeholder or mismatched generated metadata before writing", () => {
