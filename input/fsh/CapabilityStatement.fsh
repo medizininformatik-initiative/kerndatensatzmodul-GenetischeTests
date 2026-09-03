@@ -101,10 +101,14 @@ Usage: #definition
 * insert Profile(http://hl7.org/fhir/StructureDefinition/Observation)
 // Removed: ergebnis-zusammenfassung (replaced by GenomicReport.conclusion)
 // Removed: untersuchte-region (replaced by GenomicStudy/Analysis)
+// Diese drei Profile tragen den Praefix im Canonical, die uebrigen zwoelf nicht.
+// Das ist seit 2026.0.4 so veroeffentlicht und damit feste Identitaet - nicht die
+// Profile sind falsch, sondern die Eintraege hier zeigten auf Canonicals, die es
+// nicht gibt. Korrigiert 2026-09-02.
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation|2027.0.0-ballot.rc1, #SHALL)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation|2027.0.0-ballot.rc1, #SHALL)
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2027.0.0-ballot.rc1, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulare-konsequenz|2027.0.0-ballot.rc1, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz|2027.0.0-ballot.rc1, #SHALL)
 // Basisprofil von Mikrosatelliteninstabilitaet und Mutationslast. Es war bisher gar
 // nicht deklariert: einem Server wurden die beiden Kinder vorgeschrieben, ihr
 // Elternprofil aber verschwiegen. SHALL, konsistent mit den beiden Kindern.
@@ -166,8 +170,8 @@ Usage: #definition
 // Procedure requirements (for GenomicStudy)
 * insert SupportResource(Procedure, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/Procedure)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study|2027.0.0-ballot.rc1, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2027.0.0-ballot.rc1, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study|2027.0.0-ballot.rc1, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis|2027.0.0-ballot.rc1, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
