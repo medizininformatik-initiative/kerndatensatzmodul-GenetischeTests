@@ -5107,3 +5107,17 @@
 2026-09-02T15:32:30Z  INFO   10.2  cps-canonicals  verify  nicht_aufloesbare_eigene_canonicals=0
 2026-09-02T15:33:00Z  NOTE   10.3  canonical-schema  offen  12 Profile ohne Praefix, 3 mit. Vereinheitlichen waere ein Identitaetsbruch fuer bereits veroeffentlichte Profile - bewusst nicht angefasst, hier vermerkt.
 2026-09-02T15:34:00Z  INFO   10.4  sushi  done  errors=0 warnings=0
+
+  ---------------------------------------------------------------------------
+  Fehler-Triage mit dem Nutzer: "dann triagier mit mir mal die echten Fehler"
+  ---------------------------------------------------------------------------
+2026-09-03T07:20:00Z  INFO   11.1  error-triage  params  quelle=qa.txt des IG-Builds zu docs/upstream-genomics-reporting error_zeilen=85
+2026-09-03T07:20:30Z  RETRACT 11.1  error-triage  Meine frühere Aussage "grob 4 echte Fehler" war zu niedrig. Es sind 13 Fehlerzeilen, die auf 6 verschiedene Defekte zurückgehen; der Rest (70) ist Terminologieserver.
+2026-09-03T07:21:00Z  INFO   11.2  kategorie-A  infrastruktur  anzahl=70 loinc_LIST_filter=42 valueset_SERVER_ERROR=19 snomed_validate-code_aufruffehler=9 verdict=keine Datenfehler dieses Moduls
+2026-09-03T07:22:00Z  INFO   11.3  hgnc-lookup  verify  HGNC:3942=MTOR HGNC:3689=FGFR2 HGNC:2697=DBP HGNC:3943=nicht_vorhanden HGNC:3690=FGFR3 quelle=Terminologieserver
+2026-09-03T07:22:30Z  NOTE   11.3  tso500-genliste  Die uebrigen elf Gene sind korrekt: derselbe Validierungslauf hat alle vierzehn geprueft und nur zwei bemaengelt.
+2026-09-03T07:23:00Z  INFO   11.4  loinc-lookup  verify  95123-6="Gene fusion transcript details ... Narrative" skala=Nar -> das Feld erwartet Text, das Profil bindet es an CodeableConcept
+2026-09-03T07:24:00Z  DEC    11.5  gene-fusion  decided  Entscheidung des Nutzers: "So lassen und in known_errors dokumentieren". Verworfen: nur text ohne coding; Slice im Profil auf string (Typwechsel an einem seit 2026.0.4 veroeffentlichten Profil).
+2026-09-03T07:25:00Z  INFO   11.6  fixes  done  C1=basedOn_servicerequest/example->mii-exa-molgen-anforderung-1 (2 Instanzen) C2=meta.profile_msi|tmb->molecular-biomarker (2) C3=HGNC:3942->3689 C4=HGNC:3943->3690 C5=practitioner->practitioner-bundle
+2026-09-03T07:26:00Z  INFO   11.7  known_errors  created  Die Datei existierte nie, obwohl CLAUDE.md sie als "validation source of truth" benennt. Kategorien A (70, Infrastruktur), B (2, bewusst), C (11, behoben).
+2026-09-03T07:27:00Z  INFO   11.8  sushi  done  errors=0 warnings=0

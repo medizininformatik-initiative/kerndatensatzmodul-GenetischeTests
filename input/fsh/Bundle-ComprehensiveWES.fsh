@@ -235,7 +235,7 @@ Usage: #inline
 * code = $LNC#86205-2 "Whole exome sequence analysis in Blood or Tissue by Molecular genetics method"
 * subject = Reference(Patient/mii-exa-molgen-patient-wes)
 * authoredOn = "2024-01-10"
-* requester = Reference(Practitioner/mii-exa-molgen-practitioner)
+* requester = Reference(Practitioner/mii-exa-molgen-practitioner-bundle)
 * reasonCode = $SCT#110359009 "Intellectual disability (disorder)"
 
 
