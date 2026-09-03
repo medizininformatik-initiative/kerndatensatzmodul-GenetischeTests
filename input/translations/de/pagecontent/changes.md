@@ -105,7 +105,13 @@ deutscher Übersetzung.
 * **Lizenz deklariert:** CC BY 4.0. Die bisherigen Releases nannten keine Lizenz.
 * **Abhängigkeiten:** `kerndatensatz.meta` und `kerndatensatz.base` auf die
   2027er-Ballot-Kandidaten, `de.basisprofil.r4` auf 1.6.0, `hl7.terminology.r4`
-  von 6.1.0 auf 7.3.0.
+  von 6.1.0 auf 7.3.0 und `kerndatensatz.biobank` von 2026.0.1 auf
+  `2027.0.0-ballot.rc2`. Das `2027.0.0-ballot.rc1` des Biobank-Moduls war nicht
+  nutzbar: sein Profil `SpecimenCore` und das davon abgeleitete `Specimen` wurden
+  ohne Snapshot ausgeliefert, was der Build dieses Moduls zurückweist. `rc2` bringt
+  für alle 24 StructureDefinitions Snapshots mit, und die Canonicals sind
+  unverändert — die sechs `SpecimenCore`-Beispiele hier mussten also nicht angepasst
+  werden.
 * **CapabilityStatement korrigiert:** Die sechs eigenen Suchparameter des Moduls
   sind jetzt deklariert (sie fehlten vollständig), und eine falsche Kanonische beim
   FamilyMemberHistory-Parameter `reason-code` wurde behoben.
