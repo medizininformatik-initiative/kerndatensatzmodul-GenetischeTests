@@ -115,9 +115,17 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if grep -q '{{' sushi-config.yaml; then
+          # Comment lines are excluded on purpose. The header of sushi-config.yaml
+          # DOCUMENTS the placeholders - first-run-setup.md step 1 points authors at it
+          # ("its header lists every placeholder and what it means"), so a correctly
+          # bootstrapped module still carries {{SPECIAL_URL_1}}, {{CITATION_TEXT}} and
+          # friends inside `#` comments. Matching those made every real module look like
+          # the un-instantiated template and skipped its whole release path: on this repo
+          # the v2027.0.0-ballot.rc1 tag produced no build, no draft release and no
+          # announcement, silently. Only a placeholder in an ACTIVE value counts.
+          if grep -v '^[[:space:]]*#' sushi-config.yaml | grep -q '{{'; then
             echo "is_module=false" >> "${GITHUB_OUTPUT}"
-            echo "::notice::Unreplaced {{...}} placeholders found in sushi-config.yaml. This looks like the un-instantiated module template (or a module whose set-up is unfinished), so the MII CalVer release path is skipped. A real module — placeholders replaced by hand, per the first-run bootstrap's checklist — runs it for real."
+            echo "::notice::Unreplaced {{...}} placeholders found in an ACTIVE VALUE in sushi-config.yaml (comment lines are ignored - the file header documents the placeholders). This looks like the un-instantiated module template (or a module whose set-up is unfinished), so the MII CalVer release path is skipped. A real module — placeholders replaced by hand, per the first-run bootstrap's checklist — runs it for real."
           else
             echo "is_module=true" >> "${GITHUB_OUTPUT}"
             echo "Bootstrapped module detected — the CalVer release path applies."
