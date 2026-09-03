@@ -25,8 +25,8 @@ The profile is derived from the profile [Genotype](http://hl7.org/fhir/uv/genomi
 | FHIR element | Logical data set |
 |---|---|
 | Observation.component:gene-studied | Methoden.Getestete Gene |
-| Observation.component:CytogenicLocation | Ergebnisse.Veränderungen.Zytogenetische Lokalisierung |
-| Observation.component:RefSequenceAssembly | Ergebnisse.Veränderungen.Referenzgenom |
+| Observation.component:cytogenetic-location | Ergebnisse.Veränderungen.Zytogenetische Lokalisierung |
+| Observation.component:reference-sequence-assembly | Ergebnisse.Veränderungen.Referenzgenom |
 | Observation.device | Methoden.Geräte / Software / Kits |
 | Observation.method | Methoden.Methode | 
 | Observation.performer | Weiteres.Labor / Institution/ Ansprechpartner |

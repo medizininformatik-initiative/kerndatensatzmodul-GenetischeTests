@@ -1,0 +1,108 @@
+# known_errors.txt — die Validierungsfehler, die dieses Modul bewusst stehen lässt
+#
+# CLAUDE.md benennt diese Datei als "validation source of truth". Sie existierte
+# bis 2026-09-03 nicht: die Fehlerzahl aus qa.txt stand unkommentiert im Raum, und
+# niemand konnte unterscheiden, was ein Defekt dieses Moduls ist und was nicht.
+#
+# Grundlage: qa.txt des IG-Builds zu docs/upstream-genomics-reporting, 85
+# ERROR-Zeilen. Jede ist unten einer Kategorie zugeordnet. Wer die Zahl das nächste
+# Mal prüft, vergleicht gegen diese Datei, nicht gegen null.
+#
+# Format: eine Kategorie je Block. ANZAHL ist der Stand bei der letzten Triage.
+# Weicht die tatsächliche Zahl ab, ist entweder ein Fehler behoben oder ein neuer
+# dazugekommen — beides gehört untersucht, nicht überschrieben.
+
+
+## ────────────────────────────────────────────────────────────────────────────
+## A. TERMINOLOGIESERVER, NICHT UNSERE DATEN                      ANZAHL: 70
+## ────────────────────────────────────────────────────────────────────────────
+#
+# Diese Fehler entstehen in der Interaktion zwischen Validator und dem
+# vorgeschalteten Terminologieserver. Sie sagen nichts über die Codes in unseren
+# Instanzen aus — der Server konnte sie schlicht nicht prüfen. Sie verschwinden,
+# sobald die Validierung gegen einen Server läuft, der LOINC-Answer-Lists und
+# typgebundene $validate-code-Aufrufe beherrscht.
+
+A1  ANZAHL: 42
+    "Error from http://127.0.0.1:8090/fhir: Error: There is no declared filter
+     called LIST on code system http://loinc.org"
+    Die LOINC-Answer-List-ValueSets (loinc.org/vs/LL...) definieren sich über
+    einen LIST-Filter. Der Server kennt den nicht und bricht die Expansion ab.
+
+A2  ANZAHL: 19
+    "Could not confirm that the codings provided are in the value set
+     http://loinc.org/vs/LL1971-2 | LL2938-0 | LL4049-4 ... (class = SERVER_ERROR)"
+    Die Folge von A1: ohne Expansion kann der Validator die Bindung nicht prüfen.
+    Der Validator markiert das selbst als SERVER_ERROR, nicht als Datenfehler.
+
+A3  ANZAHL: 9
+    "The code '...' is not valid in the system http://snomed.info/sct
+     (error: Type-level request to $validate-code must specify either valueSet
+     or url parameter.)"
+    Betrifft mii-vs-molgen-verwandtschaftsverhaeltnis, -verwandtschaftsgrad und
+    -familiaere-linie. Der Aufruf ist fehlerhaft, nicht der Code: der Validator
+    fragt SNOMED typ-gebunden ab, ohne valueSet oder url mitzugeben. Die Codes
+    selbst sind dabei nie geprüft worden.
+
+
+## ────────────────────────────────────────────────────────────────────────────
+## B. BEWUSST HINGENOMMEN                                          ANZAHL: 2
+## ────────────────────────────────────────────────────────────────────────────
+
+B1  ANZAHL: 2   (einzeln + im Bundle)
+    Observation/mii-exa-molgen-variante-fgfr2-fusion
+    component[gene-fusion].value.coding.code
+    "Unknown code 'HGNC:3689::HGNC:2697' in the CodeSystem
+     'http://www.genenames.org/geneId'"
+
+    ENTSCHEIDUNG 2026-09-03: bleibt so.
+
+    Der Sachverhalt: LOINC 95123-6 ("Gene fusion transcript details ...
+    Narrative") hat die Skala Nar und erwartet damit Text. Das Profil Variante
+    dieses Moduls bindet den Slice gene-fusion aber an CodeableConcept, weshalb
+    das Beispiel eine Fusionsnotation als Code führen muss. HGNC vergibt keinen
+    Code für Genpaare, also ist HGNC:3689::HGNC:2697 zwangsläufig unbekannt.
+
+    Zwei Alternativen wurden erwogen und verworfen: nur `text` ohne `coding` zu
+    setzen, und den Slice im Profil auf `string` umzustellen. Letzteres wäre
+    fachlich am saubersten, ist aber ein Typwechsel an einem seit 2026.0.4
+    veröffentlichten Profil.
+
+    Die beteiligten Gene sind an anderer Stelle korrekt codiert:
+    component[gene-studied] trägt HGNC:3689 (FGFR2). Es geht hier verloren, dass
+    DBP (HGNC:2697) der Fusionspartner ist — maschinell auswertbar ist die
+    Fusion also nicht.
+
+    Aufzulösen, sobald es ein Codesystem für Fusionsnotationen gibt oder das
+    Profil ohnehin bricht.
+
+
+## ────────────────────────────────────────────────────────────────────────────
+## C. BEHOBEN AM 2026-09-03 — hier nur zur Nachvollziehbarkeit
+## ────────────────────────────────────────────────────────────────────────────
+#
+# Diese Fehler waren echte Defekte und sind korrigiert. Sie stehen hier, damit
+# beim nächsten Vergleich nachvollziehbar ist, warum die Zahl gesunken ist.
+
+C1  war 4x  Task.basedOn = Reference(servicerequest/example)
+            in mii-exa-molgen-folgemassnahme-1 und -medikationsempfehlung-1.
+            Platzhalter, dazu kleingeschriebener Ressourcentyp, Ziel existierte
+            nicht. -> Reference(mii-exa-molgen-anforderung-1), der BRAF-
+            Anforderung, zu der beide Tasks fachlich gehören.
+
+C2  war 4x  meta.profile verwies auf genomics-reporting/StructureDefinition/msi
+            bzw. /tmb in Version 3.0.0. Das sind STU2-Profilnamen; STU3 hat beide
+            in molecular-biomarker zusammengeführt. -> molecular-biomarker|3.0.0.
+
+C3  war 1x  TSO500-Genliste: HGNC:3942 mit Display "FGFR2". HGNC:3942 ist MTOR.
+            -> HGNC:3689.
+
+C4  war 1x  TSO500-Genliste: HGNC:3943 mit Display "FGFR3". Existiert nicht.
+            -> HGNC:3690.
+            C3 und C4 waren fortlaufend geraten (3942/3943 statt 3689/3690). Die
+            übrigen elf Gene der Liste sind korrekt — derselbe Validierungslauf
+            hat alle vierzehn geprüft und nur diese zwei bemängelt.
+
+C5  war 1x  Bundle-ComprehensiveWES: requester zeigte auf
+            Practitioner/mii-exa-molgen-practitioner, den es nicht gibt. Das
+            Bundle bringt seinen eigenen mit. -> -practitioner-bundle.

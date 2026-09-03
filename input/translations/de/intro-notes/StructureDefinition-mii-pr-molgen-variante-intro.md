@@ -57,7 +57,6 @@ Das Profil ist abgeleitet vom Profil [Variant](http://hl7.org/fhir/uv/genomics-r
 | Observation.component:genomic-hgvs | Ergebnisse.Veränderungen.Genomische DNA Veränderung | 
 | Observation.component:reference-sequence-assembly | Ergebnisse.Veränderungen.Referenzgenom |
 | Observation.component:coding-change-type | Ergebnisse.Veränderungen.DNA Mutationstyp |
-| Observation.component:amino-acid-change-type | Ergebnisse.Veränderungen.Mutationskonsequenz (funktionell) |
 | Observation.component:sample-allelic-frequency | Ergebnisse.Veränderungen.Proben-Allelfrequenz |
 | Observation.component:genomic-source-class | Ergebnisse.Veränderungen.Ursprung der Variante |
 | Observation.component:cytogenetic-location | Ergebnisse.Veränderungen.Zytogenetische Lokalisierung |

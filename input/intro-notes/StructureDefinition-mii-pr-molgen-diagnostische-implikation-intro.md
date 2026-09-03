@@ -23,7 +23,7 @@ The profile is derived from the profile [Diagnostic Implication](http://hl7.org/
 
 | FHIR element | Logical data set |
 |---|---|
-| Observation.component:associated-phenotype | Interpretation.Assoziierter Phänotyp |
+| Observation.component:predicted-phenotype | Interpretation.Assoziierter Phänotyp |
 | Observation.component:evidence-level | Interpretation.Clinical Annotation Level Of Evidence |
 | Observation.component:mode-of-inheritance | Interpretation.Vererbungsmodus |
 | Observation.component:conclusion-string | Interpretation.Zusammenfassung |
