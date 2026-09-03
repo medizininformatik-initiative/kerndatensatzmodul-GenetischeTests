@@ -5121,3 +5121,8 @@
 2026-09-03T07:25:00Z  INFO   11.6  fixes  done  C1=basedOn_servicerequest/example->mii-exa-molgen-anforderung-1 (2 Instanzen) C2=meta.profile_msi|tmb->molecular-biomarker (2) C3=HGNC:3942->3689 C4=HGNC:3943->3690 C5=practitioner->practitioner-bundle
 2026-09-03T07:26:00Z  INFO   11.7  known_errors  created  Die Datei existierte nie, obwohl CLAUDE.md sie als "validation source of truth" benennt. Kategorien A (70, Infrastruktur), B (2, bewusst), C (11, behoben).
 2026-09-03T07:27:00Z  INFO   11.8  sushi  done  errors=0 warnings=0
+2026-09-03T07:40:00Z  INFO   12.1  release-prepare  invoked  Kommando /release-prepare ohne Versionsargument
+2026-09-03T07:40:30Z  NOTE   12.1  release-prepare  stale  Das Kommando beschreibt den Simplifier-Workflow VOR der Template-Migration. Phasen 1-3 und 5 sind fuer 2027.0.0-ballot.rc1 bereits erledigt; Phase 4 zeigt auf implementation-guides/**, das dieses Repo selbst als stillgelegt deklariert.
+2026-09-03T07:41:00Z  INFO   12.2  release-prepare  ist-zustand  branch=release/2027.0.0-ballot.rc1 pr=58 package.json=2027.0.0-ballot.rc1 sushi-config=2027.0.0-ballot.rc1 version.fsh=2027.0.0-ballot.rc1
+2026-09-03T07:42:00Z  INFO   12.3  changelog  edit  files=2 sections=+3 punkte=8->21 inhalt=PR59 (Erwartungen, Biomarker, Canonicals, Fehler-Triage, known_errors)
+2026-09-03T07:42:30Z  NOTE   12.4  release-prepare  offene-abweichungen  1) Versionsformat des Kommandos (YYYY.0.0[-rc.X|-ballot]) deckt 2027.0.0-ballot.rc1 nicht ab. 2) Branchnamensschema release/v{VERSION} vs. vorhandenes release/2027.0.0-ballot.rc1 ohne v - relevant fuer den Tag. 3) Phasen 7-8 nennen Simplifier, publiziert wird aber ueber module-release.yml/go-publish.
