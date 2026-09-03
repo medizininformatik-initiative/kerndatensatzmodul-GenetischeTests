@@ -5142,3 +5142,8 @@
 2026-09-03T10:12:00Z  INFO   14.2.1  package-manifest  fixed  alle Felder aus sushi-config nachgezogen, Dependencies vollstaendig daraus uebernommen, license=CC-BY-4.0 author=Medizininformatik-Initiative
 2026-09-03T10:13:00Z  INFO   14.3  rebuild  done  375K fremddateien=0 pfade_ueber_100_byte=0 sd=22 manifest=vorhanden
 2026-09-03T10:13:30Z  NOTE   14.4  publish  offen  NICHT publiziert - Simplifier-Veroeffentlichung wartet auf ausdrueckliche Freigabe des Nutzers
+2026-09-03T10:30:00Z  INFO   15.1  canonical-schema  frage  Nutzer: sind molecular-consequence, genomic-study, genomic-study-analysis STU3-Profile, sollen wir sie direkt benennen?
+2026-09-03T15.1  antwort-a  Direktes Referenzieren der STU3-Profile scheidet aus: alle vier eigenen Profile tragen durchgehend MustSupport plus deutsche Beschreibungen, zwei zusaetzlich verengte Typen. Das ist die Substanz eines nationalen Profils; ohne sie verliert der Kerndatensatz seine Pflichtfeld-Aussagen. Anders als bei haplotype und sequence-phase-relationship, die das Modul unveraendert uebernimmt.
+2026-09-03T10:31:00Z  INFO   15.2  canonical-schema  befund  Drei Inkonsistenzen: Praefix (4 mit mii-pr-molgen-, 12 ohne), Sprache (genomic-study/-analysis englisch, Rest deutsch), und alle vier sind in 2026.0.4 veroeffentlicht.
+2026-09-03T10:32:00Z  DEC    15.2  canonical-schema  decided  Entscheidung des Nutzers: so lassen, dokumentieren. Canonicals sind Identitaet; ein Ballot ist der falsche Zeitpunkt fuer einen Bruch. Eine modulweite Konvention waere Sache der TF-KDS.
+2026-09-03T10:33:00Z  INFO   15.2.1  profiles-page  edit  files=2 Abschnitt "Zwei Canonical-Schemata" mit Tabelle, Begruendung und dem Hinweis, Canonicals von der Profilseite zu nehmen statt sie aus dem Namen abzuleiten

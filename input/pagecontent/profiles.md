@@ -50,6 +50,31 @@ The following table shows the inheritance relationships of the profiles in this 
 Both reach Clinical Genomics STU3 through MII_PR_MolGen_MolekularerBiomarker, not
 directly.
 
+##### Two canonical URL schemes — deliberate, not an oversight
+
+Twelve profiles carry a short canonical, four carry one prefixed with
+`mii-pr-molgen-`:
+
+| Scheme | Canonical ends in | Profiles |
+|---|---|---|
+| short | `…/StructureDefinition/variante` | the twelve older profiles |
+| prefixed | `…/StructureDefinition/mii-pr-molgen-genomic-study` | GenomicStudy, GenomicStudyAnalysis, MolekulareKonsequenz, MolekularerBiomarker |
+
+The four prefixed ones were added during the migration to Clinical Genomics STU3 and
+picked up the prefix from their ids. The two GenomicStudy profiles also kept their
+English names, where the rest of the module names profiles in German.
+
+**This is not going to be harmonised.** All four canonicals shipped in version
+2026.0.4, so they are established identity: anyone using that release has these URLs
+in profile bindings, in `meta.profile` and in search queries. Renaming them would
+break those references, and a ballot is the wrong moment — reviewers would be
+checking content and fighting broken references at the same time. Whether a common
+convention should apply across all MII core dataset modules is a question for the
+TF-KDS, not for this module alone.
+
+When writing a reference by hand, take the canonical from the profile's own page
+rather than deriving it from the profile name.
+
 ##### Profiles derived directly from FHIR R4
 
 | Profile name | Parent resource (FHIR R4) | Description |
