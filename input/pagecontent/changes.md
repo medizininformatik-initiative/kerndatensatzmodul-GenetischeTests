@@ -82,6 +82,91 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 
 ---
 
+#### Version 2027.0.0-ballot.rc1
+
+**Date:** 2026-09-02 · **Release candidate**
+
+First release candidate built on the MII KDS module template. The guide is now
+built and rendered by the HL7 IG Publisher instead of Simplifier, in English with
+a German translation.
+
+* **Migrated onto the MII KDS module template** (v0.13.0), which references the
+  shared MII IG template. All 41 pages of the previous Simplifier guide were
+  routed into the template page set: 15 became per-profile intro notes rendered on
+  top of the generated artifact pages, the rest merged into the agreed pages.
+  Identity, canonical URLs and the artifact set are unchanged.
+* **Licence declared:** CC BY 4.0. The previous releases named no licence.
+* **Dependencies:** `kerndatensatz.meta` and `kerndatensatz.base` to the 2027
+  ballot release candidates, `de.basisprofil.r4` to 1.6.0, `hl7.terminology.r4`
+  from 6.1.0 to 7.3.0.
+* **CapabilityStatement corrected:** the module's own six search parameters are
+  now declared (they were missing entirely), and a wrong canonical for the
+  FamilyMemberHistory `reason-code` parameter was fixed.
+* **Search parameters** are listed on their own page, derived from the built
+  artifacts rather than maintained by hand.
+* **New example:** an FFPE tumour tissue Specimen for the TSO500 panel study,
+  which two GenomicStudyAnalysis examples referenced but which never existed.
+* **Six DiagnosticReport example ids shortened** so the package can be built at
+  all — the previous ids produced a package path over the tar format's 100-byte
+  limit. Old → new: `mii-exa-molgen-molekulargenetischer-befundbericht-*` →
+  `mii-exa-molgen-befundbericht-*`.
+
+##### Conformance expectations
+
+* **Three profiles are now `MAY` instead of `SHALL`:** `genotyp`, and the two
+  Clinical Genomics STU3 profiles `haplotype` and `sequence-phase-relationship`.
+  All three state something about alleles as a whole rather than about a single
+  finding, and many laboratories never derive them. `sequence-phase-relationship`
+  was previously not declared at all, although the implementer page presented it as
+  used; `haplotype` stood at `SHALL`, obliging implementers to support something the
+  guide shows no example of.
+* **`MII_PR_MolGen_MolekularerBiomarker` is now declared** (`SHALL`). It is the
+  parent of Mikrosatelliteninstabilität and Mutationslast, both of which were
+  required while their base profile went unmentioned.
+* **`DiagnosticReport.result:biomarker` is narrowed** to that profile. It previously
+  inherited the STU3 slice and accepted any `molecular-biomarker`.
+* **Three supportedProfile entries pointed at canonicals that do not exist** —
+  `molekulare-konsequenz`, `genomic-study` and `genomic-study-analysis` were written
+  without the `mii-pr-molgen-` prefix that those three profiles actually carry. A
+  server could not have resolved them. The canonicals themselves are unchanged: they
+  are what the published 2026.0.4 package ships.
+
+##### Documentation
+
+* **The upstream relationship to Clinical Genomics STU3 is stated properly.** The
+  implementer page documented two profiles; the real dependency is ten profiles
+  inheriting directly, two indirectly, one extension, twelve extensions used, three
+  ValueSets and two code systems.
+* **The CapabilityStatement page carries a profile/expectation table.** The IG
+  Publisher renders supported profiles as a bare list of links and drops the
+  `SHALL`/`MAY` expectation, so without this table the expectations are invisible in
+  the rendered guide.
+* **The search parameters are stated once.** The numbered lists repeated on all 14
+  profile intro pages were removed (3373 lines); they duplicated the
+  CapabilityStatement, had drifted from it, and named the wrong module.
+* **Corrected element names** that do not exist in STU3: `CytogenicLocation` →
+  `cytogenetic-location`, `RefSequenceAssembly` → `reference-sequence-assembly`,
+  `associated-phenotype` → `predicted-phenotype`. A mapping to
+  `amino-acid-change-type` was dropped: STU3 has no such component on `variant`, and
+  the dataset element moved to `molecular-consequence`.
+
+##### Example corrections
+
+* `Task.basedOn` in two examples referenced `servicerequest/example` — a placeholder
+  with a lowercase resource type, resolving to nothing. Now the BRAF request.
+* Two examples claimed the STU2 profiles `msi` and `tmb`, which STU3 folded into
+  `molecular-biomarker`.
+* Two gene ids in the TSO500 panel were wrong: `HGNC:3942` (which is MTOR) labelled
+  FGFR2, and `HGNC:3943` (which does not exist) labelled FGFR3. Correct are
+  `HGNC:3689` and `HGNC:3690`.
+* A Practitioner reference in the comprehensive WES bundle pointed at a resource
+  that exists nowhere.
+* **`known_errors.txt` was added.** Of the validation errors, the large majority are
+  terminology-server limitations rather than defects of this module; the file states
+  which is which, and records the one error accepted deliberately (the FGFR2::DBP
+  fusion coding, where LOINC 95123-6 is narrative-scaled but the profile binds the
+  slice to CodeableConcept).
+
 #### Version 2026.0.4
 
 **Date:** 2026-01-02

@@ -72,7 +72,7 @@
 - name: version-filled
   status: "Checking that every conformance resource carries the release version"
   filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
-  predicate: version.exists() and (version in ('2026.0.4'))
+  predicate: version.exists() and (version in ('2027.0.0-ballot.rc1'))
   error-message: "version missing, or not equal to the module's CalVer version"
   files:
     - /**/*.xml
@@ -80,6 +80,12 @@
     - "!package.json"
     - "!fsh-index.json"
     - "!menu.xml"
+    # The retired Simplifier guide trees are history and must not be edited (see
+    # implementation-guides/README.md). Each carries the version it was published
+    # under, so every one of them fails this rule the moment the live version moves
+    # past it - 1.x and 2025.x already did, and 2026.x joined them at the 2027 bump.
+    # Three permanent false positives that would grow by one per release.
+    - "!/implementation-guides/**"
 
 - name: naming-convention-id
   status: "Checking the id naming convention (mii-<prefix>-<module>-…)"

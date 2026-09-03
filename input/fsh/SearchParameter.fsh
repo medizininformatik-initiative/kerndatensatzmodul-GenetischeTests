@@ -132,7 +132,7 @@ Usage: #definition
 * status = #active
 * experimental = false
 * date = "2024-11-08"
-* description = "Suchparameter für Specimen in GenomicStudyAnalysis"
+* description = "Finds analyses performed on a given specimen. The specimen sits in the genomic-study-analysis-specimen extension, so the base Procedure.specimen search parameter does not reach it."
 * code = #specimen
 * base = #Procedure
 * type = #reference
@@ -149,7 +149,7 @@ Usage: #definition
 * status = #active
 * experimental = false
 * date = "2024-11-08"
-* description = "Suchparameter für Methoden-Typ in GenomicStudyAnalysis"
+* description = "Finds analyses by the sequencing or genotyping method applied (for example targeted panel, whole exome, whole genome). The method sits in the genomic-study-analysis-method-type extension, which no base Procedure search parameter reaches."
 * code = #method-type
 * base = #Procedure
 * type = #token
@@ -165,7 +165,7 @@ Usage: #definition
 * status = #active
 * experimental = false
 * date = "2024-11-08"
-* description = "Suchparameter für untersuchte Gene/Regionen in GenomicStudyAnalysis"
+* description = "Finds analyses that actually examined a given gene or genomic region. This is what distinguishes a variant that was not found from a region that was never examined: without it a query cannot tell the two apart. The value sits in the studied sub-extension of genomic-study-analysis-regions."
 * code = #regions-studied
 * base = #Procedure
 * type = #token
@@ -181,7 +181,7 @@ Usage: #definition
 * status = #active
 * experimental = false
 * date = "2024-11-08"
-* description = "Suchparameter für verwendetes Gerät in GenomicStudyAnalysis"
+* description = "Finds analyses run on a given sequencer or analytical device, for tracing results back to the instrument that produced them. The device sits in the genomic-study-analysis-device extension, not in Procedure."
 * code = #device
 * base = #Procedure
 * type = #reference
@@ -199,7 +199,7 @@ Usage: #definition
 * status = #active
 * experimental = false
 * date = "2024-11-08"
-* description = "Suchparameter für GenomicStudy Referenz in DiagnosticReport"
+* description = "Finds the reports produced by a given genomic study, which is the link from the clinical report back to the investigation behind it. The reference sits in the genomic-study-reference extension; DiagnosticReport has no base search parameter for it."
 * code = #genomic-study
 * base = #DiagnosticReport
 * type = #reference
@@ -216,7 +216,7 @@ Usage: #definition
 * status = #active
 * experimental = false
 * date = "2024-11-08"
-* description = "Suchparameter für empfohlene Maßnahmen in DiagnosticReport"
+* description = "Finds the reports that recommend a given follow-up action, such as a confirmatory test or a therapy recommendation. The reference sits in the recommended-action extension and is not reachable through DiagnosticReport.result."
 * code = #recommended-action
 * base = #DiagnosticReport
 * type = #reference

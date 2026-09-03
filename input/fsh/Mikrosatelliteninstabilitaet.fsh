@@ -58,7 +58,7 @@ Usage: #example
 Title: "Mikrosatelliteninstabilität"
 Description: "Beispiel für Mikrosatelliteninstabilität in Tumorprobe."
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet)
-* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/msi|3.0.0"
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-biomarker|3.0.0"
 * status = #final
 * category[labCategory] = $ObsCat#laboratory "Laboratory"
 * category[mbCategory] = http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs#biomarker-category "A characterization of a given biomarker observation."

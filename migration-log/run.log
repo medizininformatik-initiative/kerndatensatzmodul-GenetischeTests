@@ -4838,3 +4838,312 @@
 2026-09-02T03:39:46Z  WARN   5.5  gen-page-title-po  unit dropped (no longer in the pages: tree)  title='Quality Report'
 2026-09-02T03:39:46Z  INFO   5.5  gen-page-title-po  result  exit=0  every page title translated
 2026-09-02T03:39:46Z  INFO   5.5  gen-page-title-po  done  cmd=`python3 .claude/skills/mii-ig-migration/scripts/gen-page-title-po.py fsh-generated/resources/ImplementationGuide-mii-ig-molgen-de-v2026.json migration-log/menu-titles-de.txt de input/translations/de/ImplementationGuide-mii-ig-molgen-de-v2026.po`  exit=0 raw_log=migration-log/gen-page-title-po.log raw_log_lines=8
+2026-09-02T04:15:51Z  INFO   5.1b.5  parent-snapshots  params  mode=detect package=de.medizininformatikinitiative.kerndatensatz.biobank version=2027.0.0-ballot.rc1 registry=https://packages.simplifier.net fhir_version=4.0.1
+    cmd=`curl -sfL https://packages.simplifier.net/de.medizininformatikinitiative.kerndatensatz.biobank/2027.0.0-ballot.rc1 -o p.tgz && tar xzf p.tgz`
+2026-09-02T04:15:51Z  INFO   5.1b.5  parent-snapshots  surveyed  structure_definitions=24 with_snapshot=22 without_snapshot=2
+2026-09-02T04:15:51Z  WARN   5.1b.5  parent-snapshots  parent-partially-snapshotted: 2 of 24 StructureDefinitions carry no snapshot
+    Only the profiles actually derived from need one; check which of the
+    missing set the module's FSH names as a Parent before building.
+2026-09-02T04:15:51Z  WARN   5.1b.5  parent-snapshots  intra-package-derivation: 2 SD(s) derive from another SD in this package  files=StructureDefinition-mii-pr-biobank-specimen.json, StructureDefinition-mii-pr-biobank-zellinie-organoid.json
+    Generate those AFTER their own parent, and re-read the result: a snapshot
+    generated against a parent that had none is not evidence of anything.
+2026-09-02T04:15:51Z  INFO   5.1b.5  parent-snapshots  done  mode=detect missing_snapshots=2 of 24 exit=1
+    The condition IS present. It is not a post-processing task and not a
+    reason to invent a parent: generate the snapshots with `build` (spec
+    §5.1b.5), or record the dependent profiles as blocked and migrate the rest.
+2026-09-02T04:16:01Z  INFO   5.1b.5  parent-snapshots  params  mode=build package=de.medizininformatikinitiative.kerndatensatz.biobank version=2027.0.0-ballot.rc1 registry=https://packages.simplifier.net fhir_version=4.0.1
+    cmd=`curl -sfL https://packages.simplifier.net/de.medizininformatikinitiative.kerndatensatz.biobank/2027.0.0-ballot.rc1 -o p.tgz && tar xzf p.tgz`
+2026-09-02T04:16:01Z  INFO   5.1b.5  parent-snapshots  surveyed  structure_definitions=24 with_snapshot=22 without_snapshot=2
+2026-09-02T04:16:01Z  WARN   5.1b.5  parent-snapshots  parent-partially-snapshotted: 2 of 24 StructureDefinitions carry no snapshot
+    Only the profiles actually derived from need one; check which of the
+    missing set the module's FSH names as a Parent before building.
+2026-09-02T04:16:01Z  WARN   5.1b.5  parent-snapshots  intra-package-derivation: 2 SD(s) derive from another SD in this package  files=StructureDefinition-mii-pr-biobank-specimen.json, StructureDefinition-mii-pr-biobank-zellinie-organoid.json
+    Generate those AFTER their own parent, and re-read the result: a snapshot
+    generated against a parent that had none is not evidence of anything.
+2026-09-02T04:16:01Z  INFO   5.1b.5  parent-snapshots  base package for the element-count floor  base_dir=/Users/thome/.fhir/packages/hl7.fhir.r4.core#4.0.1/package
+2026-09-02T04:16:01Z  INFO   5.1b.5  parent-snapshots  generating with the OFFICIAL HL7 generator  validator=/Users/thome/.fhir/validators/validator_cli.jar java="openjdk version "17.0.17" 2025-10-21" fhir_version=4.0.1
+    cmd=`java -jar /Users/thome/.fhir/validators/validator_cli.jar snapshot <sd.json> -version 4.0.1 -tx n/a -ig /var/folders/fp/zh9lp0950ysg28_1vb5mhwcc0000gn/T/tmp.XkSoXEJtnc/src/package -output <out.json>`
+    One invocation PER FILE: a batch run aborts at the first failure and silently
+    skips the rest. Nothing here merges a differential by hand (script header).
+2026-09-02T04:16:10Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-Biobank.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/LogicalModel/Biobank reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:16:17Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-anzahl-aliquots.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-anzahl-aliquots reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:16:25Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-anzahl-passagen.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-anzahl-passagen reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:16:32Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-diagnose.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Diagnose reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:16:38Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-ebene.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-ebene reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:16:45Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-einstellung-blutversorgung.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/EinstellungBlutversorgung reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:16:51Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-feature-r5.json  url=http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:16:58Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-infektiositaetsstatus.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-infektiositaetsstatus reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:05Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-kontaktrolle.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/KontaktRolle reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:11Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-kulturprotokoll.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-kulturprotokoll reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:18Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-modifikationen.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-modifikationen reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:24Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-temperaturbedingungen.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:31Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-ex-biobank-verwaltende-organisation.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/VerwaltendeOrganisation reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:38Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-observation-dna-konzentration.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-pr-biobank-observation-dna-konzentration reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:45Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-observation-karyotyp.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-pr-biobank-observation-karyotyp reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:52Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-observation-morphologie.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-pr-biobank-observation-morphologie reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:17:58Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-observation-proliferation.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-pr-biobank-observation-proliferation reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:18:05Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-observation-qualitaetspruefung.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-pr-biobank-observation-qualitaetspruefung reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:18:12Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-observation-wachstumstyp.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-pr-biobank-observation-wachstumstyp reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:18:18Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-organization.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Organization reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:18:24Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-specimen-core.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:18:31Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-specimen.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Specimen reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:18:38Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-substance-additiv.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:18:44Z  WARN   5.1b.5  parent-snapshots  generator-refused: StructureDefinition-mii-pr-biobank-zellinie-organoid.json  url=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-pr-biobank-zellinie-organoid reason=no output produced
+    The generator declining a differential is EVIDENCE ABOUT THE PARENT, not a
+    gap to work around: an upstream differential the official merge cannot
+    process is malformed. Do not hand-finish it. Check whether the module's FSH
+    names this profile as a Parent or InstanceOf; if it does, this is a Gate-A
+    escalation for the upstream package's maintainers (spec §5.1b.4).
+2026-09-02T04:18:45Z  INFO   5.1b.5  parent-snapshots  rebuild written  dir=/var/folders/fp/zh9lp0950ysg28_1vb5mhwcc0000gn/T/tmp.XkSoXEJtnc/rebuilt/package merged=0 refused=0
+    Only the `snapshot` property was added; every other field is the upstream
+    bytes re-serialized. Do not diff this against upstream expecting byte
+    equality -- key order and indentation are the serializer's.
+2026-09-02T04:18:45Z  INFO   5.1b.5  parent-snapshots  generated 0 of 24 snapshots  expected=24 actual=0
+2026-09-02T04:18:45Z  WARN   5.1b.5  parent-snapshots  silent-partial-success: generated 0 of 24 snapshots
+    Exit status is not evidence of completeness; these two counts are.
+    Reconcile against the step-1 inventory before continuing.
+2026-09-02T04:18:45Z  ERROR  5.1b.5  parent-snapshots  required-parent-still-without-snapshot: https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore  file=StructureDefinition-mii-pr-biobank-specimen-core.json
+    This one blocks the migration: SUSHI still cannot import it. Escalate it
+    to Gate A with the generator's reason, and migrate the rest -- never
+    fabricate the parent (guardrails 1 and 3).
+2026-09-02T04:18:45Z  WARN   5.1b.5  parent-snapshots  rebuild-incomplete: the generator refused 24 of 24 StructureDefinition(s)  files=StructureDefinition-Biobank.json StructureDefinition-mii-ex-biobank-anzahl-aliquots.json StructureDefinition-mii-ex-biobank-anzahl-passagen.json StructureDefinition-mii-ex-biobank-diagnose.json StructureDefinition-mii-ex-biobank-ebene.json StructureDefinition-mii-ex-biobank-einstellung-blutversorgung.json StructureDefinition-mii-ex-biobank-feature-r5.json StructureDefinition-mii-ex-biobank-infektiositaetsstatus.json StructureDefinition-mii-ex-biobank-kontaktrolle.json StructureDefinition-mii-ex-biobank-kulturprotokoll.json StructureDefinition-mii-ex-biobank-modifikationen.json StructureDefinition-mii-ex-biobank-temperaturbedingungen.json StructureDefinition-mii-ex-biobank-verwaltende-organisation.json StructureDefinition-mii-pr-biobank-observation-dna-konzentration.json StructureDefinition-mii-pr-biobank-observation-karyotyp.json StructureDefinition-mii-pr-biobank-observation-morphologie.json StructureDefinition-mii-pr-biobank-observation-proliferation.json StructureDefinition-mii-pr-biobank-observation-qualitaetspruefung.json StructureDefinition-mii-pr-biobank-observation-wachstumstyp.json StructureDefinition-mii-pr-biobank-organization.json StructureDefinition-mii-pr-biobank-specimen-core.json StructureDefinition-mii-pr-biobank-specimen.json StructureDefinition-mii-pr-biobank-substance-additiv.json StructureDefinition-mii-pr-biobank-zellinie-organoid.json
+    Each refusal is named above with the generator's own reason. Decide per file
+    whether the module's FSH depends on it; those that it does are Gate-A
+    escalations for the upstream maintainers.
+2026-09-02T04:18:45Z  INFO   5.1b.5  parent-snapshots  done  mode=build generated=0 of 24 required_blocked=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore exit=1
+
+  ---------------------------------------------------------------------------
+  Release-Vorbereitung 2027.0.0-ballot.rc1, Suchparameter-Konsolidierung.
+  Auftrag des Nutzers, woertlich: "Die muessen da raus, die Search parameter im
+  CapabilityStatement muessen richtig sein, und auf der Search Paramter IG Seite
+  muessen alle Selbst deklarierten SearchParamter erklaert sein".
+  ---------------------------------------------------------------------------
+2026-09-02T09:20:00Z  INFO   6.1  searchparam-consolidation  params  scope=intro-notes+capabilitystatement+search-parameters-page
+2026-09-02T09:21:00Z  INFO   6.1.1  intro-note-blocks  scan  found=28 files=14_en+14_de lines=3373 words=12122
+2026-09-02T09:22:00Z  INFO   6.1.2  coverage-check  params  method=extract_GET_examples_from_blocks compare_against=CapabilityStatement_declared_set
+2026-09-02T09:22:30Z  WARN   6.1.2  coverage-check  gap  resource=DiagnosticReport,ServiceRequest,Task param=requestor verdict=not_a_fhir_r4_parameter note=typo_for_requester_which_is_already_declared_on_ServiceRequest_and_Task; DiagnosticReport hat in R4 gar keinen requester. Nichts zu erhalten.
+2026-09-02T09:22:40Z  WARN   6.1.2  coverage-check  gap  resource=Procedure param=code verdict=real_and_missing note=GenomicStudy und GenomicStudyAnalysis sind beide Procedure und nur ueber den Code trennbar
+2026-09-02T09:23:00Z  INFO   6.1.3  capabilitystatement  edit  added=Procedure.code source=http://hl7.org/fhir/SearchParameter/clinical-code expectation=SHALL total=109->110
+2026-09-02T09:24:00Z  INFO   6.1.4  intro-note-blocks  done  removed=28 lines=3373 words=12122 residue_search_parameter=0 residue_Pathologie-Befund=0
+2026-09-02T09:24:10Z  NOTE   6.1.4  qa-7  resolved  Der falsche Modulname "Modul Pathologie-Befund" stand ausschliesslich in diesen Bloecken und ist damit weg.
+2026-09-02T09:25:00Z  INFO   6.1.5  searchparameter-descriptions  edit  count=6 from=German_restating_own_name to=English_stating_reached_element_and_reason reason=guide rendert englisch als Default, description ist nutzersichtbar auf der Artefaktseite
+2026-09-02T09:26:00Z  INFO   6.1.6  search-parameters-page  rewrite  files=2 sections=6+6 example_queries=6+6 parity=ok
+2026-09-02T09:26:30Z  INFO   6.1.6  example-ids  verify  corrected=3 mii-exa-molgen-empfohlene-folgemassnahme-1->mii-exa-molgen-folgemassnahme-1 mii-exa-molgen-device-tso500->mii-exa-molgen-device-tso500-lot LA26418-6->LA26398-0 method=abgeglichen gegen fsh-generated/resources
+2026-09-02T09:27:00Z  INFO   6.2  release-checks  done  convention_check_release=PASS language_model_check=PASS M6=2027.0.0-ballot.rc1 M9=none_undecided
+2026-09-02T09:35:00Z  WARN   6.1.5  searchparameter-descriptions  fsh-parse-error  file=input/fsh/SearchParameter.fsh line=168 cause=doppelte Anfuehrungszeichen innerhalb eines FSH-Strings ("not found" / "not looked for") sushi_errors=4 fix=umformuliert_ohne_zitate
+2026-09-02T09:36:00Z  INFO   6.3  sushi  done  errors=0 warnings=0 profiles=16 extensions=5 logicals=1 valuesets=4 instances=128
+2026-09-02T09:36:30Z  INFO   6.3  artifact-verify  done  capabilitystatement_searchparams=110 procedure_includes_code=true version=2027.0.0-ballot.rc1
+2026-09-02T09:50:00Z  INFO   6.4  ci-preview  done  ig_build=success pages=2034 qa_errors=64 qa_broken_links=0 baseline_was=68 preview=https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/branches/release/2027.0.0-ballot.rc1/
+2026-09-02T09:50:30Z  INFO   6.4.1  render-verify  done  search-parameters_sections=6_en+6_de get_examples=6_en+6_de intro_note_residue=0 pathologie-befund_residue=0
+2026-09-02T09:51:00Z  INFO   6.5  ci-red-jobs  triage  method=Vergleich_gegen_denselben_Job_auf_main
+2026-09-02T09:51:10Z  NOTE   6.5  dotnet-validation  pre-existing  cause=git add fsh-generated scheitert am pauschalen .gitignore-Eintrag verdict=PR51 auf main identisch rot
+2026-09-02T09:51:20Z  NOTE   6.5  java-validator  pre-existing  cause=validation.json wird nicht geschrieben, Schritt endet mit exit 1 verdict=auf main identisch rot
+2026-09-02T09:51:30Z  WARN   6.5  simplifier-qc  regression  main=success branch=failure cause=derselbe .gitignore-Blocker, auf main lief der Commit-Schritt nur nicht an note=nicht durch Inhaltsaenderungen verursacht, aber ohne PR51 nicht gruen zu bekommen
+2026-09-02T09:52:00Z  INFO   6.5.1  qc-error-count  diff  main=13521 branch=13522 delta=+1
+2026-09-02T09:52:10Z  INFO   6.5.1  qc-error-count  identified  rule=CalVer-Version resource=implementation-guides/ImplementationGuide-2026.x-DE/mii-ig-molgen-de-v2026.json cause=stillgelegter Simplifier-Baum traegt 2026.0.4 und faellt durch, sobald die Live-Version darueber hinausgeht; 1.x und 2025.x taten das auf main schon
+2026-09-02T09:52:30Z  INFO   6.5.2  qc-rule  edit  file=qc/custom.rules.yaml rule=CalVer added_exclusion=!/implementation-guides/** effect=3 dauerhafte Falschtreffer weg, waechst sonst je Release um einen
+
+  ---------------------------------------------------------------------------
+  Rueckfrage des Nutzers zum Abschnitt "Upstream-Profile aus HL7 Genomics
+  Reporting": "aber das sieht mir doch duerftig aus, was alles von oben
+  uebernommen wird, mehr nicht?"
+  ---------------------------------------------------------------------------
+2026-09-02T10:10:00Z  INFO   7.1  upstream-audit  params  method=jede genomics-reporting-Canonical aus fsh-generated auszaehlen, nach Nutzungsart getrennt
+2026-09-02T10:10:30Z  INFO   7.1  upstream-audit  done  parents_direct=10 parents_indirect=2 extension_parents=1 extensions_used=12 valuesets=3 codesystems=2 dokumentiert_im_Abschnitt=2
+2026-09-02T10:11:00Z  NOTE   7.1  upstream-audit  verdict  Die enge Aussage des Abschnitts (zwei unveraendert genutzte Profile) ist richtig; die Seite liess aber offen, dass die Gesamtabhaengigkeit ein Vielfaches betraegt.
+2026-09-02T10:12:00Z  WARN   7.2  profiles.md  defect  Vererbungstabelle nennt Mikrosatelliteninstabilitaet und Mutationslast als direkte Kinder von molecular-biomarker; tatsaechlich erben sie von mii-pr-molgen-molekularer-biomarker (zwei Stufen)
+2026-09-02T10:12:10Z  WARN   7.2  profiles.md  defect  MII_PR_MolGen_MolekularerBiomarker fehlt in der Tabelle vollstaendig
+2026-09-02T10:13:00Z  WARN   7.3  haplotype-mapping  defect  Observation.component:CytogenicLocation existiert nicht; STU3 heisst der Slice cytogenetic-location
+2026-09-02T10:13:10Z  NOTE   7.3  haplotype-mapping  incomplete  Abschnitt bildete 2 von 5 Component-Slices ab; die drei uebrigen waren nicht als vorhanden-aber-nicht-gemappt kenntlich
+2026-09-02T10:14:00Z  WARN   7.4  capabilitystatement  asymmetry  haplotype=SHALL sequence-phase-relationship=nicht deklariert, obwohl die Seite beide als verwendet darstellt verdict=Autorenentscheidung, als offener Punkt auf der Seite markiert, nicht eigenmaechtig geaendert
+2026-09-02T10:15:00Z  INFO   7.5  slice-name-audit  params  method=alle Observation.component-Verweise in Intro-Notes und Pagecontent gegen STU3-Snapshots und eigene StructureDefinitions
+2026-09-02T10:15:30Z  WARN   7.5  slice-name-audit  found  RefSequenceAssembly amino-acid-change-type associated-phenotype CytogenicLocation
+2026-09-02T10:16:00Z  INFO   7.5.1  slice-fix  done  RefSequenceAssembly->reference-sequence-assembly associated-phenotype->predicted-phenotype CytogenicLocation->cytogenetic-location
+2026-09-02T10:16:30Z  INFO   7.5.2  slice-fix  done  amino-acid-change-type=Zeile aus Variante-Note entfernt reason=STU3 hat den Slice auf variant nicht; das Datensatzelement Mutationskonsequenz (funktionell) ist auf MolekulareKonsequenz bereits als component:functional-effect gemappt
+2026-09-02T10:17:00Z  INFO   7.5.3  slice-name-audit  verify  unbekannte_slice_namen=0
+2026-09-02T10:30:00Z  DEC    7.4  capabilitystatement-expectation  decided  Entscheidung des Nutzers: "Ja, wenn nicht sogar MAY fuer beides." haplotype=SHALL->MAY sequence-phase-relationship=nicht_deklariert->MAY
+2026-09-02T10:30:30Z  NOTE   7.4  begruendung  Keines der beiden Profile traegt eine Kerndatensatz-Anforderung, das Modul leitet von keinem etwas ab, und es gibt zu keinem ein Beispiel. SHALL verpflichtete zu etwas, das der Guide nirgends vorfuehrt.
+2026-09-02T10:31:00Z  INFO   7.4.1  pages  edit  files=2 removed=offener-Punkt-Kasten added=Abschnitt "Erwartung" mit Begruendung; Haplotype-SHALL-Absatz entfernt, Erwartung jetzt einmal fuer beide
+2026-09-02T10:32:00Z  INFO   7.4.2  sushi  done  errors=0 warnings=0 supportedProfile_gesamt=17 haplotype=MAY sequence-phase-relationship=MAY
+2026-09-02T14:25:00Z  INFO   8.1  pr51  merged  effect=.gitignore ignoriert fsh-generated nicht mehr pauschal, nur noch die drei Churn-Dateien wie in kerndatensatz-biobank
+2026-09-02T14:26:00Z  INFO   8.1.1  rebase  done  branches=release/2027.0.0-ballot.rc1,docs/upstream-genomics-reporting onto=main@eb0fad50 conflicts=0
+2026-09-02T14:30:00Z  DEC    8.2  capabilitystatement-expectation  decided  Entscheidung des Nutzers: "genotype auch" genotyp=SHALL->MAY
+2026-09-02T14:30:30Z  NOTE   8.2  begruendung  Genotyp, Haplotype und Sequence Phase Relationship sagen alle etwas ueber Allele als Ganzes statt ueber einen einzelnen Befund. Viele Labore leiten das nie ab. Verpflichtender Kern bleiben Befundbericht, Variante und die Implikationen.
+2026-09-02T14:31:00Z  RETRACT 8.3  befundbericht-slices  Frueherer Verdacht in dieser Sitzung, result[haplotype] und result[sequence-phase-relation] seien untypisierte MS-Slices ohne Ziel, war FALSCH. Das Elternprofil genomic-report typisiert beide bereits (slicing discriminator type=profile path=resolve()); das Differential wiederholt das nur nicht. Nichts zu reparieren.
+2026-09-02T14:32:00Z  INFO   8.4  sushi  done  errors=0 warnings=0 supportedProfile=17 SHALL=14 MAY=3
+2026-09-02T14:33:00Z  INFO   8.5  capability-statements-page  edit  files=2 added=Abschnitt "Warum drei Profile MAY sind"
+2026-09-02T14:45:00Z  INFO   8.6  shall-audit  params  Kriterium aus der Genotyp-Entscheidung auf die verbleibenden SHALL angewandt: erzeugen ganze Laborklassen das nie?
+2026-09-02T14:45:30Z  NOTE   8.6  shall-audit  kandidaten  mikrosatelliteninstabilitaet(Onkologie,1 Beispiel) mutationslast(Onkologie,1) polygener-risiko-score(praediktiv,1) familienanamnese(nur hereditaer,6) medikationsempfehlung(2) empfohlene-folgemassnahme(2)
+2026-09-02T14:46:00Z  DEC    8.6  shall-audit  decided  Entscheidung des Nutzers: "Nichts weiter aendern". MSI, TMB und PRS bleiben SHALL. Begruendung des Kerndatensatzes: sie werden von allen Standorten gefordert, unabhaengig davon ob ein einzelnes Labor sie erzeugt.
+2026-09-02T14:47:00Z  WARN   8.7  molekularer-biomarker  gap  Profil existiert und ist Elternprofil von MSI und Mutationslast, war aber im CapabilityStatement nicht deklariert; result[biomarker] im Befundbericht erbte STU3-molecular-biomarker statt des eigenen Profils
+2026-09-02T14:47:30Z  DEC    8.7  molekularer-biomarker  decided  Entscheidung des Nutzers: deklarieren und result[biomarker] verengen
+2026-09-02T14:48:00Z  INFO   8.7.1  capabilitystatement  edit  added=mii-pr-molgen-molekularer-biomarker expectation=SHALL total=17->18 verteilung=15_SHALL+3_MAY
+2026-09-02T14:48:30Z  INFO   8.7.2  befundbericht  edit  result[biomarker] only Reference(MII_PR_MolGen_MolekularerBiomarker)
+2026-09-02T14:49:00Z  INFO   8.7.3  beispiele  verify  referenziert=mutationslast-1,mikrosatelliteninstabilitaet-1 beide_erben_von=MolekularerBiomarker bruch=keiner
+2026-09-02T14:49:30Z  INFO   8.7.4  capability-statements-page  edit  Zahlen 17/14 -> 18/15 in beiden Sprachen
+2026-09-02T14:50:00Z  INFO   8.8  sushi  done  errors=0 warnings=0
+2026-09-02T15:10:00Z  INFO   9.1  ig-preview  done  branch=docs/upstream-genomics-reporting sha=d4d04bd2 pages=2034 qa_errors=64 broken_links=0
+2026-09-02T15:11:00Z  NOTE   9.2  capabilitystatement-rendering  finding  Der IG Publisher rendert supportedProfile als reine Linkliste OHNE die Erwartung. SHALL/MAY steht nur im JSON. Die MAY-Entscheidung ist auf der gerenderten Artefaktseite unsichtbar; sichtbar ist sie ausschliesslich ueber den Prosa-Abschnitt auf capability-statements.
+2026-09-02T15:12:00Z  WARN   9.3  profile-title  defect  MolekularerBiomarker trug Title "MII PR MolGen Molekulare Biomarker" (grammatisch falsch, passt nicht zu Profilname und Id) fix="MII PR MolGen Molekularer Biomarker"
+2026-09-02T15:30:00Z  INFO   10.1  cps-expectation-table  params  Anlass: Renderer zeigt supportedProfile ohne Erwartung; Tabelle wird aus dem gebauten Artefakt erzeugt
+2026-09-02T15:31:00Z  WARN   10.2  cps-canonicals  defect  3 von 18 supportedProfile zeigten auf nicht existierende Canonicals: molekulare-konsequenz, genomic-study, genomic-study-analysis (jeweils ohne mii-pr-molgen-Praefix)
+2026-09-02T15:31:30Z  INFO   10.2  cps-canonicals  ursache  Diese drei Profile setzen ihr Canonical MIT Praefix (MolekulareKonsequenz per ^url, GenomicStudy/Analysis mangels ^url aus der Id abgeleitet), die uebrigen zwoelf per ^url OHNE Praefix. Das CapabilityStatement war durchgehend nach dem Kurzschema geschrieben.
+2026-09-02T15:32:00Z  INFO   10.2  cps-canonicals  entscheidungsgrundlage  Die praefixierten Canonicals stehen so im veroeffentlichten Paket de.medizininformatikinitiative.kerndatensatz.molgen#2026.0.4 und sind damit feste Identitaet. Korrigiert wurde deshalb das CapabilityStatement, nicht die Profile.
+2026-09-02T15:32:30Z  INFO   10.2  cps-canonicals  verify  nicht_aufloesbare_eigene_canonicals=0
+2026-09-02T15:33:00Z  NOTE   10.3  canonical-schema  offen  12 Profile ohne Praefix, 3 mit. Vereinheitlichen waere ein Identitaetsbruch fuer bereits veroeffentlichte Profile - bewusst nicht angefasst, hier vermerkt.
+2026-09-02T15:34:00Z  INFO   10.4  sushi  done  errors=0 warnings=0
+
+  ---------------------------------------------------------------------------
+  Fehler-Triage mit dem Nutzer: "dann triagier mit mir mal die echten Fehler"
+  ---------------------------------------------------------------------------
+2026-09-03T07:20:00Z  INFO   11.1  error-triage  params  quelle=qa.txt des IG-Builds zu docs/upstream-genomics-reporting error_zeilen=85
+2026-09-03T07:20:30Z  RETRACT 11.1  error-triage  Meine frühere Aussage "grob 4 echte Fehler" war zu niedrig. Es sind 13 Fehlerzeilen, die auf 6 verschiedene Defekte zurückgehen; der Rest (70) ist Terminologieserver.
+2026-09-03T07:21:00Z  INFO   11.2  kategorie-A  infrastruktur  anzahl=70 loinc_LIST_filter=42 valueset_SERVER_ERROR=19 snomed_validate-code_aufruffehler=9 verdict=keine Datenfehler dieses Moduls
+2026-09-03T07:22:00Z  INFO   11.3  hgnc-lookup  verify  HGNC:3942=MTOR HGNC:3689=FGFR2 HGNC:2697=DBP HGNC:3943=nicht_vorhanden HGNC:3690=FGFR3 quelle=Terminologieserver
+2026-09-03T07:22:30Z  NOTE   11.3  tso500-genliste  Die uebrigen elf Gene sind korrekt: derselbe Validierungslauf hat alle vierzehn geprueft und nur zwei bemaengelt.
+2026-09-03T07:23:00Z  INFO   11.4  loinc-lookup  verify  95123-6="Gene fusion transcript details ... Narrative" skala=Nar -> das Feld erwartet Text, das Profil bindet es an CodeableConcept
+2026-09-03T07:24:00Z  DEC    11.5  gene-fusion  decided  Entscheidung des Nutzers: "So lassen und in known_errors dokumentieren". Verworfen: nur text ohne coding; Slice im Profil auf string (Typwechsel an einem seit 2026.0.4 veroeffentlichten Profil).
+2026-09-03T07:25:00Z  INFO   11.6  fixes  done  C1=basedOn_servicerequest/example->mii-exa-molgen-anforderung-1 (2 Instanzen) C2=meta.profile_msi|tmb->molecular-biomarker (2) C3=HGNC:3942->3689 C4=HGNC:3943->3690 C5=practitioner->practitioner-bundle
+2026-09-03T07:26:00Z  INFO   11.7  known_errors  created  Die Datei existierte nie, obwohl CLAUDE.md sie als "validation source of truth" benennt. Kategorien A (70, Infrastruktur), B (2, bewusst), C (11, behoben).
+2026-09-03T07:27:00Z  INFO   11.8  sushi  done  errors=0 warnings=0
+2026-09-03T07:40:00Z  INFO   12.1  release-prepare  invoked  Kommando /release-prepare ohne Versionsargument
+2026-09-03T07:40:30Z  NOTE   12.1  release-prepare  stale  Das Kommando beschreibt den Simplifier-Workflow VOR der Template-Migration. Phasen 1-3 und 5 sind fuer 2027.0.0-ballot.rc1 bereits erledigt; Phase 4 zeigt auf implementation-guides/**, das dieses Repo selbst als stillgelegt deklariert.
+2026-09-03T07:41:00Z  INFO   12.2  release-prepare  ist-zustand  branch=release/2027.0.0-ballot.rc1 pr=58 package.json=2027.0.0-ballot.rc1 sushi-config=2027.0.0-ballot.rc1 version.fsh=2027.0.0-ballot.rc1
+2026-09-03T07:42:00Z  INFO   12.3  changelog  edit  files=2 sections=+3 punkte=8->21 inhalt=PR59 (Erwartungen, Biomarker, Canonicals, Fehler-Triage, known_errors)
+2026-09-03T07:42:30Z  NOTE   12.4  release-prepare  offene-abweichungen  1) Versionsformat des Kommandos (YYYY.0.0[-rc.X|-ballot]) deckt 2027.0.0-ballot.rc1 nicht ab. 2) Branchnamensschema release/v{VERSION} vs. vorhandenes release/2027.0.0-ballot.rc1 ohne v - relevant fuer den Tag. 3) Phasen 7-8 nennen Simplifier, publiziert wird aber ueber module-release.yml/go-publish.
+2026-09-03T09:50:00Z  INFO   13.1  local-package-build  params  skill=mii-package-publishing workflow=Restore/Bake/Pack publish=nein
+2026-09-03T13:1.1  config-drift  found  .claude/config.json version=2026.0.4 tho=7.0.0 basisprofil=1.5.4 base=2026.0.0 gegen sushi-config 2027.0.0-ballot.rc1/7.3.0/1.6.0/2027.0.0-ballot.rc1; meta und biobank fehlten ganz
+2026-09-03T09:51:00Z  INFO   13.1.1  config-drift  fixed  4 Felder nachgezogen, meta und biobank ergaenzt
+2026-09-03T09:52:00Z  INFO   13.2  fhir-restore  done  exit=255 aber alle 8 direkten Dependencies im Cache; die Meldungen CircularReference/OutOfRange/Outdated betreffen Referenzen innerhalb fremder Pakete
+2026-09-03T09:53:00Z  INFO   13.3  fhir-bake  done  input=fsh-generated/resources dateien=140 root_json=33 examples=106 snapshots=22_von_22
+2026-09-03T09:53:30Z  WARN   13.3  bake-manifest  gap  package.json fehlte im gebauten Paket: der manifest-Schritt in package.bake.yaml loest files: package.json gegen den INPUT-Ordner auf, und dort liegt keine. Ein FHIR-Paket ohne package/package.json ist ungueltig. Workaround: cp package.json .bake/package/
+2026-09-03T09:54:00Z  INFO   13.4  pack  done  tarball=de.medizininformatikinitiative.kerndatensatz.molgen-2027.0.0-ballot.rc1.tgz groesse=375K fremddateien=0 sd=22 beispiele=107 pfade_ueber_100_byte=0
+2026-09-03T09:55:00Z  INFO   13.5  commands  update  build-package.md=restore-Schritt+--input+Manifest-Luecke+COPYFILE_DISABLE+tar-100-Byte-Pruefung+config-drift-Warnung release-prepare.md=7 Stellen
+2026-09-03T09:55:30Z  NOTE   13.5  release-prepare  regex  ^\d{4}\.\d+\.\d+(-[0-9A-Za-z.-]+)?$ akzeptiert 2027.0.0-ballot.rc1 und 2026.0.4, lehnt 1.2.3, 2027.0 und 2027.0.0- ab; identisch mit M6 in scripts/convention-check.mjs
+2026-09-03T10:10:00Z  INFO   14.1  package-review  params  entpackt und inhaltlich geprueft
+2026-09-03T10:10:30Z  INFO   14.1  package-review  ok  conformance=33 alle auf 2027.0.0-ballot.rc1; SD=22 (16 resource-constraint, 5 complex-type, 1 logical); ImplementationGuide korrekt ausgeschlossen; alle Hilfsbeispiele referenziert
+2026-09-03T10:11:00Z  WARN   14.2  package-manifest  defect  package.json fehlten canonical, type, title, license, url; author war ein persoenliches GitHub-Handle statt der Herausgeberin
+2026-09-03T10:11:30Z  WARN   14.2  package-manifest  drift  package.json deklarierte biobank=2027.0.0-ballot.rc1, sushi-config fuehrt 2026.0.1 - also genau die Version, die wegen fehlender SpecimenCore-Snapshots nicht nutzbar ist
+2026-09-03T10:12:00Z  INFO   14.2.1  package-manifest  fixed  alle Felder aus sushi-config nachgezogen, Dependencies vollstaendig daraus uebernommen, license=CC-BY-4.0 author=Medizininformatik-Initiative
+2026-09-03T10:13:00Z  INFO   14.3  rebuild  done  375K fremddateien=0 pfade_ueber_100_byte=0 sd=22 manifest=vorhanden
+2026-09-03T10:13:30Z  NOTE   14.4  publish  offen  NICHT publiziert - Simplifier-Veroeffentlichung wartet auf ausdrueckliche Freigabe des Nutzers
+2026-09-03T10:30:00Z  INFO   15.1  canonical-schema  frage  Nutzer: sind molecular-consequence, genomic-study, genomic-study-analysis STU3-Profile, sollen wir sie direkt benennen?
+2026-09-03T15.1  antwort-a  Direktes Referenzieren der STU3-Profile scheidet aus: alle vier eigenen Profile tragen durchgehend MustSupport plus deutsche Beschreibungen, zwei zusaetzlich verengte Typen. Das ist die Substanz eines nationalen Profils; ohne sie verliert der Kerndatensatz seine Pflichtfeld-Aussagen. Anders als bei haplotype und sequence-phase-relationship, die das Modul unveraendert uebernimmt.
+2026-09-03T10:31:00Z  INFO   15.2  canonical-schema  befund  Drei Inkonsistenzen: Praefix (4 mit mii-pr-molgen-, 12 ohne), Sprache (genomic-study/-analysis englisch, Rest deutsch), und alle vier sind in 2026.0.4 veroeffentlicht.
+2026-09-03T10:32:00Z  DEC    15.2  canonical-schema  decided  Entscheidung des Nutzers: so lassen, dokumentieren. Canonicals sind Identitaet; ein Ballot ist der falsche Zeitpunkt fuer einen Bruch. Eine modulweite Konvention waere Sache der TF-KDS.
+2026-09-03T10:33:00Z  INFO   15.2.1  profiles-page  edit  files=2 Abschnitt "Zwei Canonical-Schemata" mit Tabelle, Begruendung und dem Hinweis, Canonicals von der Profilseite zu nehmen statt sie aus dem Namen abzuleiten

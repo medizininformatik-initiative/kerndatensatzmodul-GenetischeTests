@@ -89,6 +89,93 @@ werden können.</p>
 
 ---
 
+#### Version 2027.0.0-ballot.rc1
+
+**Datum:** 2026-09-02 · **Release Candidate**
+
+Erster Release Candidate auf Basis des MII-KDS-Modul-Templates. Der Leitfaden wird
+jetzt vom HL7 IG Publisher gebaut und gerendert statt von Simplifier, englisch mit
+deutscher Übersetzung.
+
+* **Migration auf das MII-KDS-Modul-Template** (v0.13.0), das das gemeinsame
+  MII-IG-Template referenziert. Alle 41 Seiten des bisherigen Simplifier-Leitfadens
+  wurden in den Template-Seitensatz überführt: 15 wurden zu Intro-Notes über den
+  generierten Artefaktseiten, der Rest ging in die vereinbarten Seiten. Identität,
+  kanonische URLs und Artefaktmenge sind unverändert.
+* **Lizenz deklariert:** CC BY 4.0. Die bisherigen Releases nannten keine Lizenz.
+* **Abhängigkeiten:** `kerndatensatz.meta` und `kerndatensatz.base` auf die
+  2027er-Ballot-Kandidaten, `de.basisprofil.r4` auf 1.6.0, `hl7.terminology.r4`
+  von 6.1.0 auf 7.3.0.
+* **CapabilityStatement korrigiert:** Die sechs eigenen Suchparameter des Moduls
+  sind jetzt deklariert (sie fehlten vollständig), und eine falsche Kanonische beim
+  FamilyMemberHistory-Parameter `reason-code` wurde behoben.
+* **Suchparameter** stehen auf einer eigenen Seite, aus den gebauten Artefakten
+  abgeleitet statt von Hand gepflegt.
+* **Neues Beispiel:** ein FFPE-Tumorgewebe-Specimen für die TSO500-Panel-Studie,
+  auf das zwei GenomicStudyAnalysis-Beispiele verwiesen, das es aber nie gab.
+* **Sechs DiagnosticReport-Beispiel-IDs gekürzt**, damit das Paket überhaupt
+  baubar ist — die bisherigen IDs erzeugten einen Paketpfad über der
+  100-Byte-Grenze des tar-Formats. Alt → neu:
+  `mii-exa-molgen-molekulargenetischer-befundbericht-*` →
+  `mii-exa-molgen-befundbericht-*`.
+
+##### Konformitätserwartungen
+
+* **Drei Profile sind jetzt `MAY` statt `SHALL`:** `genotyp` sowie die beiden
+  Clinical-Genomics-STU3-Profile `haplotype` und `sequence-phase-relationship`. Alle
+  drei sagen etwas über Allele als Ganzes aus statt über einen Einzelbefund, und
+  viele Labore leiten sie nie ab. `sequence-phase-relationship` war zuvor gar nicht
+  deklariert, obwohl die Implementiererseite es als verwendet darstellte; `haplotype`
+  stand auf `SHALL` und verpflichtete damit zu etwas, wozu der Guide kein Beispiel
+  zeigt.
+* **`MII_PR_MolGen_MolekularerBiomarker` ist jetzt deklariert** (`SHALL`). Es ist das
+  Elternprofil von Mikrosatelliteninstabilität und Mutationslast, die beide gefordert
+  waren, während ihr Basisprofil unerwähnt blieb.
+* **`DiagnosticReport.result:biomarker` ist darauf verengt.** Zuvor erbte der Slice
+  von STU3 und akzeptierte jedes `molecular-biomarker`.
+* **Drei supportedProfile-Einträge zeigten auf Canonicals, die es nicht gibt** —
+  `molekulare-konsequenz`, `genomic-study` und `genomic-study-analysis` waren ohne
+  den Präfix `mii-pr-molgen-` geschrieben, den diese drei Profile tatsächlich tragen.
+  Ein Server hätte sie nicht auflösen können. Die Canonicals selbst bleiben
+  unverändert: sie stehen so im veröffentlichten Paket 2026.0.4.
+
+##### Dokumentation
+
+* **Die Abhängigkeit von Clinical Genomics STU3 ist jetzt korrekt beziffert.** Die
+  Implementiererseite dokumentierte zwei Profile; tatsächlich erben zehn Profile
+  direkt, zwei indirekt, eine Extension erbt, zwölf Extensions werden verwendet,
+  dazu drei ValueSets und zwei Codesysteme.
+* **Die CapabilityStatement-Seite trägt eine Tabelle Profil/Erwartung.** Der IG
+  Publisher rendert die unterstützten Profile als reine Linkliste ohne die
+  `SHALL`/`MAY`-Erwartung — ohne diese Tabelle wären die Erwartungen im gerenderten
+  Guide unsichtbar.
+* **Die Suchparameter stehen nur noch an einer Stelle.** Die nummerierten Listen auf
+  allen 14 Profil-Intro-Seiten wurden entfernt (3373 Zeilen); sie doppelten das
+  CapabilityStatement, wichen davon ab und nannten das falsche Modul.
+* **Elementnamen korrigiert**, die es in STU3 nicht gibt: `CytogenicLocation` →
+  `cytogenetic-location`, `RefSequenceAssembly` → `reference-sequence-assembly`,
+  `associated-phenotype` → `predicted-phenotype`. Ein Mapping auf
+  `amino-acid-change-type` entfiel: STU3 kennt diese Komponente auf `variant` nicht,
+  und das Datensatzelement ist nach `molecular-consequence` gewandert.
+
+##### Korrekturen an Beispielen
+
+* `Task.basedOn` verwies in zwei Beispielen auf `servicerequest/example` — ein
+  Platzhalter mit kleingeschriebenem Ressourcentyp, der ins Leere zeigte. Jetzt die
+  BRAF-Anforderung.
+* Zwei Beispiele beanspruchten die STU2-Profile `msi` und `tmb`, die STU3 in
+  `molecular-biomarker` zusammengeführt hat.
+* Zwei Gen-IDs im TSO500-Panel waren falsch: `HGNC:3942` (das ist MTOR) mit dem
+  Label FGFR2 und `HGNC:3943` (existiert nicht) mit dem Label FGFR3. Richtig sind
+  `HGNC:3689` und `HGNC:3690`.
+* Eine Practitioner-Referenz im umfassenden WES-Bundle zeigte auf eine Ressource,
+  die es nirgends gibt.
+* **`known_errors.txt` wurde angelegt.** Von den Validierungsfehlern geht die große
+  Mehrheit auf Grenzen des Terminologieservers zurück und nicht auf Defekte dieses
+  Moduls; die Datei sagt, was was ist, und hält den einen bewusst hingenommenen
+  Fehler fest (die FGFR2::DBP-Fusionscodierung, bei der LOINC 95123-6 narrativ
+  skaliert ist, das Profil den Slice aber an CodeableConcept bindet).
+
 #### Version 2026.0.4
 
 **Datum:** 2026-01-02

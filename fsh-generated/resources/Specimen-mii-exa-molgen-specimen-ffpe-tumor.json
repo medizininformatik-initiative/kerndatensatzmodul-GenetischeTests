@@ -1,0 +1,41 @@
+{
+  "resourceType": "Specimen",
+  "id": "mii-exa-molgen-specimen-ffpe-tumor",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore"
+    ]
+  },
+  "collection": {
+    "collectedDateTime": "2024-05-15",
+    "bodySite": {
+      "coding": [
+        {
+          "code": "39607008",
+          "system": "http://snomed.info/sct",
+          "display": "Lung structure"
+        }
+      ]
+    }
+  },
+  "identifier": [
+    {
+      "system": "https://www.charite.de/fhir/sid/bioproben",
+      "value": "specimen_tso500_ffpe_01"
+    }
+  ],
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "441652008",
+        "display": "Formalin-fixed paraffin-embedded tissue specimen"
+      }
+    ]
+  },
+  "status": "available",
+  "subject": {
+    "reference": "Patient/mii-exa-molgen-patient"
+  },
+  "receivedTime": "2024-05-16T09:20:00+02:00"
+}

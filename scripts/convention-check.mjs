@@ -191,7 +191,19 @@ export function evaluate({ sushiConfig = null, igIni = null, packageJson = null,
 
     field("M6 version", readTopLevel(sushiConfig, "version"), (v) => {
       if (isPlaceholder(v)) return { ok: true, parameterized: true };
-      return { ok: /^\d{4}\.\d+\.\d+$/.test(v), parameterized: false, reason: "version must be CalVer YYYY.n.n (modules never use SemVer)" };
+      // CalVer YYYY.n.n with an OPTIONAL SemVer prerelease suffix. The suffix is
+      // documented in four other places of this same template, and only this regex
+      // forbade it:
+      //   docs/release.md            "A pre-release adds a suffix: 2027.0.0-rc.1,
+      //                               2027.0.0-draft.1 … the module-release workflow
+      //                               marks any tag containing `-` as a prerelease"
+      //   .github/workflows/module-release.yml  tag glob "(+ optional -rc.1 / -alpha.1)"
+      //   input/pagecontent/version-history.md  "label — optional pre-release or build
+      //                               label, e.g. draft, ballot or cibuild"
+      //   sushi-config.yaml header    "drafts/pre-releases add a SemVer prerelease suffix"
+      // Widened here on 2026-09-02 for 2027.0.0-ballot.rc1; reported upstream so the
+      // template can carry the fix instead of each module repeating it.
+      return { ok: /^\d{4}\.\d+\.\d+(-[0-9A-Za-z.-]+)?$/.test(v), parameterized: false, reason: "version must be CalVer YYYY.n.n, optionally with a SemVer prerelease suffix (modules never use plain SemVer)" };
     });
 
     // M7 — no floating label anywhere (always hard, both branches).

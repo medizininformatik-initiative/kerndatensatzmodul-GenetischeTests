@@ -3,13 +3,13 @@
   "id": "mii-exa-molgen-medikationsempfehlung-1",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung|2026.0.4",
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung|2027.0.0-ballot.rc1",
       "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation|3.0.0"
     ]
   },
   "basedOn": [
     {
-      "reference": "servicerequest/example"
+      "reference": "ServiceRequest/mii-exa-molgen-anforderung-1"
     }
   ],
   "code": {

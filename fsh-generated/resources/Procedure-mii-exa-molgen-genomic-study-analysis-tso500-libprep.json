@@ -4,7 +4,7 @@
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis",
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2026.0.4"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2027.0.0-ballot.rc1"
     ]
   },
   "extension": [
@@ -192,7 +192,7 @@
           "valueCodeableConcept": {
             "coding": [
               {
-                "code": "HGNC:3942",
+                "code": "HGNC:3689",
                 "system": "http://www.genenames.org/geneId",
                 "display": "FGFR2"
               }
@@ -204,7 +204,7 @@
           "valueCodeableConcept": {
             "coding": [
               {
-                "code": "HGNC:3943",
+                "code": "HGNC:3690",
                 "system": "http://www.genenames.org/geneId",
                 "display": "FGFR3"
               }

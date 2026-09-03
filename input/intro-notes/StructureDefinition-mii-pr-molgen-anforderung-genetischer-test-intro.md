@@ -34,84 +34,6 @@ The request can also state one or more known symptoms via the reasonReference el
 
 ---
 
-**Search parameters**
-
-<!-- TODO:REVIEW the German page names the "Modul Pathologie-Befund" (pathology report module) here, although this is the molecular genetics module - this looks like a copy-paste error in the source. Translated literally. -->
-The following search parameters are relevant for the Pathologie-Befund (pathology report) module, also in combination:
-
-1. The search parameter ```_id``` MUST be supported:
-
-    Examples: 
-
-    ```GET [base]/ServiceRequest?_id=1234```
-    
-    Usage notes: Further information on searching by "_id" can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-2. The search parameter "_profile" MUST be supported:
-
-    Examples:
-    
-    ```GET [base]/ServiceRequest?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test```
-    
-    Usage notes: Further information on searching by "_profile" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all). 
-
-3. The search parameter "code" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/ServiceRequest?code=http://snomed.info/sct|405825005```
-    
-    Usage notes: Further information on searching by "code" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#token).
-
-4. The search parameter "based-on" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/ServiceRequest?based-on=ServiceRequest/12345```
-
-    Usage notes: Further information on searching by "based-on" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-5. The search parameter "subject" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/ServiceRequest?subject=Patient/example-mii-molgen-patient```
-
-    Usage notes: Further information on searching by "subject" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-6. The search parameter "authored" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/ServiceRequest?authored=2022-04-07```
-
-    Usage notes: Further information on searching by "authored" can be found in the [FHIR base specification - section "date"](http://hl7.org/fhir/R4/search.html#date).
-
-7. The search parameter "requestor" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/ServiceRequest?requestor=Practioner/example-mii-molgen-practitioner-physician```
-
-    Usage notes: Further information on searching by "requestor" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-8. The search parameter "reason-code" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/ServiceRequest?reason-code=http://snomed.info/sct|447886005```
-
-    Usage notes: Further information on searching by "reason-code" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#token).
-
-9. The search parameter "reason-reference" MUST be supported:
-
-    Examples:
-
-    ```GET [base]/ServiceRequest?reason-reference=Condition/12345```
-
-    Usage notes: Further information on searching by "reason-reference" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
----
 
 <!-- The Simplifier example directive that used to render beneath this caption was dropped: the IG Publisher renders each example on its own page. The examples this page referenced are linked in the "Examples" section at the end. -->
 **Examples**
@@ -119,7 +41,6 @@ The following search parameters are relevant for the Pathologie-Befund (patholog
 Request 1 - BRAF
 
  
-
 ---
 
 Example of the Specimen (sample) referenced in Request 1, based on the profile of the MII Biobank module.
@@ -129,7 +50,6 @@ Example of the Specimen (sample) referenced in Request 1, based on the profile o
 Request 2 - NIPBL
 
  
-
 ---
 
 Example of the Specimen (sample) referenced in Request 2, based on the profile of the MII Biobank module.

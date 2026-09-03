@@ -31,90 +31,12 @@ In der Anforderung können auch ein oder mehrere bekannte Symptome über das rea
 
 --- 
 
-**Suchparameter**
-
-Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in Kombination:
-
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
-
-    Beispiele: 
-
-    ```GET [base]/ServiceRequest?_id=1234```
-    
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
-
-2. Der Suchparameter "_profile" MUSS unterstützt werden:
-
-    Beispiele:
-    
-    ```GET [base]/ServiceRequest?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test```
-    
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#all). 
-
-3. Der Suchparameter "code" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/ServiceRequest?code=http://snomed.info/sct|405825005```
-    
-    Anwendungshinweise: Weitere Informationen zur Suche nach "code" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
-
-4. Der Suchparameter "based-on" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/ServiceRequest?based-on=ServiceRequest/12345```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "based-on" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-5. Der Suchparameter "subject" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/ServiceRequest?subject=Patient/example-mii-molgen-patient```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-6. Der Suchparameter "authored" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/ServiceRequest?authored=2022-04-07```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "authored" finden sich in der [FHIR-Basisspezifikation - Abschnitt "date"](http://hl7.org/fhir/R4/search.html#date).
-
-7. Der Suchparameter "requestor" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/ServiceRequest?requestor=Practioner/example-mii-molgen-practitioner-physician```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "requestor" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-8. Der Suchparameter "reason-code" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/ServiceRequest?reason-code=http://snomed.info/sct|447886005```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "reason-code" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
-
-9. Der Suchparameter "reason-reference" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/ServiceRequest?reason-reference=Condition/12345```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "reason-reference" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
----
 
 **Examples**
 
 Anforderung 1 - BRAF
 
  
-
 ---
 
 Beispiel des in der Anforderung 1 referenzierten Specimens (Probe) basierend auf dem Profil des MII Moduls Biobank.
@@ -124,7 +46,6 @@ Beispiel des in der Anforderung 1 referenzierten Specimens (Probe) basierend auf
 Anforderung 2 - NIPBL
 
  
-
 ---
 
 Beispiel des in der Anforderung 2 referenzierten Specimens (Probe) basierend auf dem Profil des MII Moduls Biobank.

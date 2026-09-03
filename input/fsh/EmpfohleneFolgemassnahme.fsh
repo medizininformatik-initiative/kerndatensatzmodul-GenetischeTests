@@ -67,7 +67,7 @@ Title: "BRAF Empfohlene Folgemaßnahme"
 Description: "Beispiel für empfohlene Folgemaßnahme abgeleitet von genetischer Variante im BRAF Gen an Hand von NGS."
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme)
 * meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/followup-recommendation|3.0.0"
-* basedOn = Reference(servicerequest/example)
+* basedOn = Reference(mii-exa-molgen-anforderung-1)
 * status = TaskStatus#requested
 * intent = $RequestIntent#proposal
 * code = $LNC#LA14020-4 "Genetic counseling recommended"

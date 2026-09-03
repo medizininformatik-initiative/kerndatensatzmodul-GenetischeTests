@@ -121,9 +121,9 @@ Description: "Library Preparation und Hybrid-Capture-Target-Enrichment mit dem T
 * extension[regions].extension[studied][+].url = "studied"
 * extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:3430 "ERBB2"
 * extension[regions].extension[studied][+].url = "studied"
-* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:3942 "FGFR2"
+* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:3689 "FGFR2"
 * extension[regions].extension[studied][+].url = "studied"
-* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:3943 "FGFR3"
+* extension[regions].extension[studied][=].valueCodeableConcept = $HGNC#HGNC:3690 "FGFR3"
 
 // === Analysis 2: Sequenzierung auf NovaSeq 6000 ===
 Instance: mii-exa-molgen-genomic-study-analysis-tso500-sequencing
