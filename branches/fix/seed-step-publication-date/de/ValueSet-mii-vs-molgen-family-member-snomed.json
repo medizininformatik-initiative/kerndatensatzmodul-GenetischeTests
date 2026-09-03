@@ -1,0 +1,45 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-molgen-family-member-snomed",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-molgen-family-member-snomed</b></p><a name=\"de-mii-vs-molgen-family-member-snomed\"> </a><a name=\"de-hcmii-vs-molgen-family-member-snomed\"> </a><ul><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where concept  descends from 125677006 (Relative)</li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-family-member-snomed",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_MolGen_FamilyMember_SNOMED",
+  "title" : "MII VS MolGen Family Member SNOMED",
+  "status" : "active",
+  "date" : "2026-09-03T16:24:20+00:00",
+  "publisher" : "Medizininformatik-Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik-Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    },
+    {
+      "system" : "email",
+      "value" : "info@medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "The ValueSet contains codes for related family member types from SNOMED CT.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "125677006"
+      }]
+    }]
+  }
+}
