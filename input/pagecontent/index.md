@@ -68,10 +68,6 @@ dependencies are described at
 How this module relates to the other MII modules is described in the
 [Guidance for Implementers](implementer-guidance.html).
 
-> [TODO: Name your module's formal dependencies (see `dependencies` in
-> `sushi-config.yaml`) and any related guides.]
-{: .ig-highlight .ig-highlight-grey}
-
 <!-- TODO:REVIEW This TODO box stays open: the migrated source page contains no
      listing of the formal package dependencies. Content must not be invented
      here. -->

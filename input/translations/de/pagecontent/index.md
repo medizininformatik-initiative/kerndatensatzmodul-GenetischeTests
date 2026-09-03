@@ -66,10 +66,6 @@ Abhängigkeiten sind unter
 beschrieben. Wie sich dieses Modul zu den anderen MII-Modulen verhält,
 beschreibt die [Anleitung für Implementierende](implementer-guidance.html).
 
-> [TODO: Nennen Sie die formalen Abhängigkeiten Ihres Moduls (siehe
-> `dependencies` in `sushi-config.yaml`) sowie verwandte Leitfäden.]
-{: .ig-highlight .ig-highlight-grey}
-
 <!-- TODO:REVIEW Diese TODO-Box bleibt offen: die migrierte Quellseite enthält
      keine Auflistung der formalen Paket-Abhängigkeiten. Inhalt darf hier nicht
      erfunden werden. -->

@@ -81,8 +81,3 @@ compares itself against the previous `dev` preview using the FHIR validator's
 The repository variable `ENABLE_VERSION_COMPARISON=false` switches the whole
 feature off — the publisher's comparison in every build workflow and this
 demonstration alike; a created module never renders the demonstration.
-
-> [TODO: If your module has a versioning policy of its own beyond the KDS scheme
-> — for example a support window for older versions, or a deprecation policy for
-> profiles — describe it here. Delete this prompt afterwards.]
-{: .ig-highlight .ig-highlight-grey}

@@ -86,9 +86,3 @@ veröffentlicht das Ergebnis unter `comparison-demo/index.html`.
 Die Repository-Variable `ENABLE_VERSION_COMPARISON=false` schaltet das
 gesamte Feature ab — den Publisher-Vergleich in allen Build-Workflows ebenso
 wie diese Demonstration; ein erstelltes Modul rendert die Demonstration nie.
-
-> [TODO: Falls Ihr Modul über das KDS-Schema hinaus eine eigene
-> Versionierungs-Politik hat — etwa einen Unterstützungszeitraum für ältere
-> Versionen oder eine Abkündigungs-Politik für Profile —, beschreiben Sie sie
-> hier. Löschen Sie diesen Hinweis anschließend.]
-{: .ig-highlight .ig-highlight-grey}
