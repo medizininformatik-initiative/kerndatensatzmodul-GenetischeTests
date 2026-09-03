@@ -1,0 +1,54 @@
+<!-- Migriert aus dem Simplifier-Leitfaden TechnischeImplementierung/Methodik/GenomicStudy-Procedure.page.md
+     (Quellbaum implementation-guides/ImplementationGuide-2026.x-DE, Commit 79eaf41, Migration 2026-08-28).
+     Simplifier-Direktiven sind nach references/fql-crosswalk.md aufgeloest. -->
+
+---
+
+#### Beschreibung
+
+Dieses Profil beschreibt eine Genomic Study als Procedure-Ressource zur Dokumentation der durchgeführten genomischen Untersuchung. Es ersetzt das veraltete UntersuchteRegion-Profil und folgt den Vorgaben des Clinical Genomics Reporting STU3.
+
+GenomicStudy dient zur Erfassung der Metadaten über die durchgeführte genomische Analyse, einschließlich der verwendeten Methoden, untersuchten Regionen und beteiligten Geräte.
+
+---
+
+Das Profil ist abgeleitet vom Profil [GenomicStudy](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-genomic-study.html) aus [HL7 Genomics Reporting Implementation Guide STU3](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
+
+---
+
+#### Profil
+
+---
+
+#### Must Support Elemente
+
+| FHIR-Element | Bedeutung | Logischer Datensatz |
+|---|---|---|
+| Procedure.status | Status der genetischen Studie (z.B. completed, cancelled) | Weiteres.Berichtstatus |
+| Procedure.code | Art der genomischen Untersuchung | Methoden.Untersuchungsart |
+| Procedure.subject | Patient/Proband der Untersuchung | Probeninformation.Patient |
+| Procedure.encounter | Fallbezug der Untersuchung | Probeninformation.Fall |
+| Procedure.performed[x] | Zeitpunkt oder Zeitraum der Durchführung | Methoden.Durchführungsdatum |
+| Procedure.reasonReference | Anforderung/Indikation für die genetische Untersuchung | Anforderung.ServiceRequest |
+| Procedure.extension:genomic-study-analysis | Referenzen zu den einzelnen GenomicStudyAnalysis-Ressourcen | Methoden.Analyseschritte |
+
+---
+
+
+**Examples**
+
+Beispiel 1: GenomicStudy für Panel-Sequenzierung
+
+---
+
+<!-- DERIVED:bridge source=the same profile page gate=B -->
+### Beispiele
+
+> **Von der Migration geschrieben, nicht aus der Quelle übernommen.** Der
+> Simplifier-Leitfaden hat diese Beispiele auf dieser Seite eingebettet; der IG
+> Publisher rendert jedes auf einer eigenen Seite. Sie stehen deshalb hier als
+> Links, in der Reihenfolge der Quelle und mit deren Bildunterschriften. Es wurde
+> nichts ergänzt und nichts weggelassen.
+{: .ig-highlight .ig-highlight-grey}
+
+- [`mii-exa-molgen-genomic-study-1`](Procedure-mii-exa-molgen-genomic-study-1.html) — Beispiel 1: GenomicStudy für Panel-Sequenzierung
