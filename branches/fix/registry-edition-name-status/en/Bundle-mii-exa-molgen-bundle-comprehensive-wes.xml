@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-bundle-comprehensive-wes"/>
+  <language value="en"/>
+  <type value="transaction"/>
+  <timestamp value="2024-01-20T10:00:00+01:00"/>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/Patient/mii-exa-molgen-patient-wes"/>
+    <resource>
+      <Patient>
+        <id value="mii-exa-molgen-patient-wes"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Patient_mii-exa-molgen-patient-wes"> </a><p class="res-header-id"><b>Generated Narrative: Patient mii-exa-molgen-patient-wes</b></p><a name="mii-exa-molgen-patient-wes"> </a><a name="hcmii-exa-molgen-patient-wes"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Max Mustermann  Male, DoB: 1970-01-01 ( https://www.medizininformatik-initiative.de/fhir/patient-ids#WES2024001)</p><hr/></div>
+        </text>
+        <identifier>
+          <system value="https://www.medizininformatik-initiative.de/fhir/patient-ids"/>
+          <value value="WES2024001"/>
+        </identifier>
+        <name>
+          <family value="Mustermann"/>
+          <given value="Max"/>
+        </name>
+        <gender value="male"/>
+        <birthDate value="1970-01-01"/>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/Device/mii-exa-molgen-device-illumina-novaseq"/>
+    <resource>
+      <Device>
+        <id value="mii-exa-molgen-device-illumina-novaseq"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Device_mii-exa-molgen-device-illumina-novaseq"> </a><p class="res-header-id"><b>Generated Narrative: Device mii-exa-molgen-device-illumina-novaseq</b></p><a name="mii-exa-molgen-device-illumina-novaseq"> </a><a name="hcmii-exa-molgen-device-illumina-novaseq"> </a><p><b>identifier</b>: <code>https://www.medizininformatik-initiative.de/fhir/sid/lab-devices</code>/NOVASEQ-6000-SN12345</p><p><b>status</b>: Active</p><p><b>manufacturer</b>: Illumina Inc.</p><p><b>serialNumber</b>: SN12345</p><h3>DeviceNames</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td>NovaSeq 6000 Sequencing System</td><td>Model name</td></tr></table><p><b>modelNumber</b>: NovaSeq 6000</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 30234008}">Medical laboratory analyzer</span></p></div>
+        </text>
+        <identifier>
+          <system value="https://www.medizininformatik-initiative.de/fhir/sid/lab-devices"/>
+          <value value="NOVASEQ-6000-SN12345"/>
+        </identifier>
+        <status value="active"/>
+        <manufacturer value="Illumina Inc."/>
+        <serialNumber value="SN12345"/>
+        <deviceName>
+          <name value="NovaSeq 6000 Sequencing System"/>
+          <type value="model-name"/>
+        </deviceName>
+        <modelNumber value="NovaSeq 6000"/>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="30234008"/>
+            <display value="Medical laboratory analyzer"/>
+          </coding>
+        </type>
+      </Device>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Device"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/Device/mii-exa-molgen-device-thermofisher-ionchef"/>
+    <resource>
+      <Device>
+        <id value="mii-exa-molgen-device-thermofisher-ionchef"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Device_mii-exa-molgen-device-thermofisher-ionchef"> </a><p class="res-header-id"><b>Generated Narrative: Device mii-exa-molgen-device-thermofisher-ionchef</b></p><a name="mii-exa-molgen-device-thermofisher-ionchef"> </a><a name="hcmii-exa-molgen-device-thermofisher-ionchef"> </a><p><b>identifier</b>: <code>https://www.medizininformatik-initiative.de/fhir/sid/lab-devices</code>/IONCHEF-IC12345</p><p><b>status</b>: Active</p><p><b>manufacturer</b>: Thermo Fisher Scientific</p><p><b>serialNumber</b>: IC12345</p><h3>DeviceNames</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td>Ion Chef System</td><td>Model name</td></tr></table><p><b>modelNumber</b>: Ion Chef</p><p><b>type</b>: <span title="Codes:">Template preparation system (Ion Chef)</span></p></div>
+        </text>
+        <identifier>
+          <system value="https://www.medizininformatik-initiative.de/fhir/sid/lab-devices"/>
+          <value value="IONCHEF-IC12345"/>
+        </identifier>
+        <status value="active"/>
+        <manufacturer value="Thermo Fisher Scientific"/>
+        <serialNumber value="IC12345"/>
+        <deviceName>
+          <name value="Ion Chef System"/>
+          <type value="model-name"/>
+        </deviceName>
+        <modelNumber value="Ion Chef"/>
+        <type>
+          <text value="Template preparation system (Ion Chef)"/>
+        </type>
+      </Device>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Device"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/Specimen/mii-exa-molgen-specimen-blood-edta-bundle"/>
+    <resource>
+      <Specimen>
+        <id value="mii-exa-molgen-specimen-blood-edta-bundle"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Specimen_mii-exa-molgen-specimen-blood-edta-bundle"> </a><p class="res-header-id"><b>Generated Narrative: Specimen mii-exa-molgen-specimen-blood-edta-bundle</b></p><a name="mii-exa-molgen-specimen-blood-edta-bundle"> </a><a name="hcmii-exa-molgen-specimen-blood-edta-bundle"> </a><p><b>identifier</b>: <code>https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids</code>/EDTA-2024-001</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 119361006}">Plasma specimen</span></p><p><b>subject</b>: <a href="Bundle-mii-exa-molgen-bundle-comprehensive-wes.html#Patient_mii-exa-molgen-patient-wes">Max Mustermann  Male, DoB: 1970-01-01 ( https://www.medizininformatik-initiative.de/fhir/patient-ids#WES2024001)</a></p><h3>Collections</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Collected[x]</b></td></tr><tr><td style="display: none">*</td><td>2024-01-15 09:30:00+0100</td></tr></table><h3>Containers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Capacity</b></td><td><b>SpecimenQuantity</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 767384004}">Evacuated blood collection tube with clot activator</span></td><td>10 milliliter<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemL = 'mL')</span></td><td>10 milliliter<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemL = 'mL')</span></td></tr></table></div>
+        </text>
+        <identifier>
+          <system value="https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids"/>
+          <value value="EDTA-2024-001"/>
+        </identifier>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="119361006"/>
+            <display value="Plasma specimen"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-wes"/>
+        </subject>
+        <collection>
+          <collectedDateTime value="2024-01-15T09:30:00+01:00"/>
+        </collection>
+        <container>
+          <type>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="767384004"/>
+              <display value="Evacuated blood collection tube with clot activator"/>
+            </coding>
+          </type>
+          <capacity>
+            <value value="10"/>
+            <unit value="milliliter"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mL"/>
+          </capacity>
+          <specimenQuantity>
+            <value value="10"/>
+            <unit value="milliliter"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mL"/>
+          </specimenQuantity>
+        </container>
+      </Specimen>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Specimen"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/Specimen/mii-exa-molgen-specimen-dna-library-bundle"/>
+    <resource>
+      <Specimen>
+        <id value="mii-exa-molgen-specimen-dna-library-bundle"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Specimen_mii-exa-molgen-specimen-dna-library-bundle"> </a><p class="res-header-id"><b>Generated Narrative: Specimen mii-exa-molgen-specimen-dna-library-bundle</b></p><a name="mii-exa-molgen-specimen-dna-library-bundle"> </a><a name="hcmii-exa-molgen-specimen-dna-library-bundle"> </a><p><b>identifier</b>: <code>https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids</code>/LIB-2024-001</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 119342007}">DNA Library</span></p><p><b>subject</b>: <a href="Bundle-mii-exa-molgen-bundle-comprehensive-wes.html#Patient_mii-exa-molgen-patient-wes">Max Mustermann  Male, DoB: 1970-01-01 ( https://www.medizininformatik-initiative.de/fhir/patient-ids#WES2024001)</a></p><p><b>parent</b>: <a href="Specimen-mii-exa-molgen-specimen-blood-edta.html">Specimen: identifier = https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids#EDTA-2024-001; type = Plasma specimen</a></p><h3>Processings</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Description</b></td><td><b>Time[x]</b></td></tr><tr><td style="display: none">*</td><td>DNA extraction and library preparation using Agilent SureSelect</td><td>2024-01-16 14:00:00+0100</td></tr></table></div>
+        </text>
+        <identifier>
+          <system value="https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids"/>
+          <value value="LIB-2024-001"/>
+        </identifier>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="119342007"/>
+            <display value="Saliva specimen"/>
+          </coding>
+          <text value="DNA Library"/>
+        </type>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-wes"/>
+        </subject>
+        <parent>
+          <reference value="Specimen/mii-exa-molgen-specimen-blood-edta"/>
+        </parent>
+        <processing>
+          <description value="DNA extraction and library preparation using Agilent SureSelect"/>
+          <timeDateTime value="2024-01-16T14:00:00+01:00"/>
+        </processing>
+      </Specimen>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Specimen"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect"/>
+    <resource>
+      <PlanDefinition>
+        <id value="mii-exa-molgen-protocol-agilent-sureselect"/>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="PlanDefinition_mii-exa-molgen-protocol-agilent-sureselect"> </a>
+<div>
+    <table class="grid dict">
+        
+        <tr>
+            <th scope="row"><b>Id: </b></th>
+            <td style="padding-left: 4px;">mii-exa-molgen-protocol-agilent-sureselect</td>
+        </tr>
+        
+
+        
+
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Title: </b></th>
+            <td style="padding-left: 4px;">Agilent SureSelect Human All Exon V7 Kit Protocol</td>
+        </tr>
+        
+
+        
+
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Type: </b></th>
+            <td style="padding-left: 4px;">
+                
+                    
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>system: </b> <span><a href="http://terminology.hl7.org/7.3.0/CodeSystem-plan-definition-type.html">http://terminology.hl7.org/CodeSystem/plan-definition-type</a></span>
+                        </p>
+                        
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>code: </b> <span>protocol</span>
+                        </p>
+                        
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>display: </b> <span>Protocol</span>
+                        </p>
+                        
+                    
+                
+                
+            </td>
+        </tr>
+        
+
+        
+
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Description: </b></th>
+            <td style="padding-left: 4px;"><div><p>Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the human exome</p>
+</div></td>
+        </tr>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Actions: </b></th>
+            <td style="padding-left: 4px;">
+                <table class="grid-dict">
+                    
+                    <tr>
+                        <td>
+                            
+                            <b> DNA Fragmentation:</b> Fragment genomic DNA to 150-200bp using Covaris
+                            
+                            <br/>
+                            
+                            
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            
+                            <b> Library Preparation:</b> End repair, A-tailing, adapter ligation
+                            
+                            <br/>
+                            
+                            
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            
+                            <b> Hybridization:</b> Hybridize with SureSelect baits for 24 hours at 65°C
+                            
+                            <br/>
+                            
+                            
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            
+                            <b> Capture:</b> Streptavidin bead capture and washing
+                            
+                            <br/>
+                            
+                            
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            
+                            <b> Amplification:</b> PCR amplification of captured library
+                            
+                            <br/>
+                            
+                            
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+        
+    </table>
+</div>
+</div>
+        </text>
+        <name value="AgilentSureSelectV7"/>
+        <title value="Agilent SureSelect Human All Exon V7 Kit Protocol"/>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/plan-definition-type"/>
+            <code value="protocol"/>
+            <display value="Protocol"/>
+          </coding>
+        </type>
+        <status value="active"/>
+        <description value="Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the human exome"/>
+        <action>
+          <title value="DNA Fragmentation"/>
+          <description value="Fragment genomic DNA to 150-200bp using Covaris"/>
+        </action>
+        <action>
+          <title value="Library Preparation"/>
+          <description value="End repair, A-tailing, adapter ligation"/>
+        </action>
+        <action>
+          <title value="Hybridization"/>
+          <description value="Hybridize with SureSelect baits for 24 hours at 65°C"/>
+        </action>
+        <action>
+          <title value="Capture"/>
+          <description value="Streptavidin bead capture and washing"/>
+        </action>
+        <action>
+          <title value="Amplification"/>
+          <description value="PCR amplification of captured library"/>
+        </action>
+      </PlanDefinition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="PlanDefinition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/DocumentReference/mii-exa-molgen-documentreference-bed-file-bundle"/>
+    <resource>
+      <DocumentReference>
+        <id value="mii-exa-molgen-documentreference-bed-file-bundle"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="DocumentReference_mii-exa-molgen-documentreference-bed-file-bundle"> </a><p class="res-header-id"><b>Generated Narrative: DocumentReference mii-exa-molgen-documentreference-bed-file-bundle</b></p><a name="mii-exa-molgen-documentreference-bed-file-bundle"> </a><a name="hcmii-exa-molgen-documentreference-bed-file-bundle"> </a><p><b>status</b>: Current</p><p><b>type</b>: <span title="Codes:">BED file - Agilent SureSelect V7 target regions</span></p><p><b>subject</b>: <a href="Bundle-mii-exa-molgen-bundle-comprehensive-wes.html#Patient_mii-exa-molgen-patient-wes">Max Mustermann  Male, DoB: 1970-01-01 ( https://www.medizininformatik-initiative.de/fhir/patient-ids#WES2024001)</a></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Title</b></td></tr><tr><td style="display: none">*</td><td>plain</td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/files/agilent_v7_targets.bed">https://www.medizininformatik-initiative.de/fhir/files/agilent_v7_targets.bed</a></td><td>Agilent SureSelect Human All Exon V7 Target Regions</td></tr></table></blockquote></div>
+        </text>
+        <status value="current"/>
+        <type>
+          <text value="BED file - Agilent SureSelect V7 target regions"/>
+        </type>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-wes"/>
+        </subject>
+        <content>
+          <attachment>
+            <contentType value="text/plain"/>
+            <url value="https://www.medizininformatik-initiative.de/fhir/files/agilent_v7_targets.bed"/>
+            <title value="Agilent SureSelect Human All Exon V7 Target Regions"/>
+          </attachment>
+        </content>
+      </DocumentReference>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="DocumentReference"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/DocumentReference/mii-exa-molgen-documentreference-fastq-bundle"/>
+    <resource>
+      <DocumentReference>
+        <id value="mii-exa-molgen-documentreference-fastq-bundle"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="DocumentReference_mii-exa-molgen-documentreference-fastq-bundle"> </a><p class="res-header-id"><b>Generated Narrative: DocumentReference mii-exa-molgen-documentreference-fastq-bundle</b></p><a name="mii-exa-molgen-documentreference-fastq-bundle"> </a><a name="hcmii-exa-molgen-documentreference-fastq-bundle"> </a><p><b>status</b>: Current</p><p><b>type</b>: <span title="Codes:">FASTQ files - paired-end sequencing data</span></p><p><b>subject</b>: <a href="Bundle-mii-exa-molgen-bundle-comprehensive-wes.html#Patient_mii-exa-molgen-patient-wes">Max Mustermann  Male, DoB: 1970-01-01 ( https://www.medizininformatik-initiative.de/fhir/patient-ids#WES2024001)</a></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Title</b></td></tr><tr><td style="display: none">*</td><td>gzip</td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/files/sample_R1.fastq.gz">https://www.medizininformatik-initiative.de/fhir/files/sample_R1.fastq.gz</a></td><td>Forward reads</td></tr></table></blockquote><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Title</b></td></tr><tr><td style="display: none">*</td><td>gzip</td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/files/sample_R2.fastq.gz">https://www.medizininformatik-initiative.de/fhir/files/sample_R2.fastq.gz</a></td><td>Reverse reads</td></tr></table></blockquote></div>
+        </text>
+        <status value="current"/>
+        <type>
+          <text value="FASTQ files - paired-end sequencing data"/>
+        </type>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-wes"/>
+        </subject>
+        <content>
+          <attachment>
+            <contentType value="application/gzip"/>
+            <url value="https://www.medizininformatik-initiative.de/fhir/files/sample_R1.fastq.gz"/>
+            <title value="Forward reads"/>
+          </attachment>
+        </content>
+        <content>
+          <attachment>
+            <contentType value="application/gzip"/>
+            <url value="https://www.medizininformatik-initiative.de/fhir/files/sample_R2.fastq.gz"/>
+            <title value="Reverse reads"/>
+          </attachment>
+        </content>
+      </DocumentReference>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="DocumentReference"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-comprehensive-wes-bundle"/>
+    <resource>
+      <Procedure>
+        <id value="mii-exa-molgen-genomic-study-comprehensive-wes-bundle"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study"/>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study|2027.0.0-ballot.rc1"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Procedure_mii-exa-molgen-genomic-study-comprehensive-wes-bundle"> </a><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-molgen-genomic-study-comprehensive-wes-bundle</b></p><a name="mii-exa-molgen-genomic-study-comprehensive-wes-bundle"> </a><a name="hcmii-exa-molgen-genomic-study-comprehensive-wes-bundle"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="StructureDefinition-mii-pr-molgen-genomic-study.html">MII PR MolGen Genomic Study</a>, <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study|2027.0.0-ballot.rc1">https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study|2027.0.0-ballot.rc1</a></p></div><p><b>Genomic Study Analysis Extension</b>: <a href="Procedure-mii-exa-molgen-genomic-study-analysis-wes-library-prep.html">Procedure: extension = -&gt;Specimen: identifier = https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids#EDTA-2024-001; type = Plasma specimen,,DNA hybridization; status = completed; category = Laboratory</a></p><p><b>Genomic Study Analysis Extension</b>: <a href="Procedure-mii-exa-molgen-genomic-study-analysis-wes-sequencing.html">Procedure: extension = -&gt;Specimen: identifier = https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids#LIB-2024-001; type = Saliva specimen,,Sequencing,,; status = completed; category = Laboratory</a></p><p><b>Genomic Study Analysis Extension</b>: <a href="Procedure-mii-exa-molgen-genomic-study-analysis-wes-bioinformatics.html">Procedure: extension = ,Computational analysis,; status = completed; category = Laboratory</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>subject</b>: <a href="Bundle-mii-exa-molgen-bundle-comprehensive-wes.html#Patient_mii-exa-molgen-patient-wes">Max Mustermann  Male, DoB: 1970-01-01 ( https://www.medizininformatik-initiative.de/fhir/patient-ids#WES2024001)</a></p></div>
+        </text>
+        <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-ext">
+          <valueReference>
+            <reference value="Procedure/mii-exa-molgen-genomic-study-analysis-wes-library-prep"/>
+          </valueReference>
+        </extension>
+        <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-ext">
+          <valueReference>
+            <reference value="Procedure/mii-exa-molgen-genomic-study-analysis-wes-sequencing"/>
+          </valueReference>
+        </extension>
+        <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-ext">
+          <valueReference>
+            <reference value="Procedure/mii-exa-molgen-genomic-study-analysis-wes-bioinformatics"/>
+          </valueReference>
+        </extension>
+        <status value="completed"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-wes"/>
+        </subject>
+      </Procedure>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Procedure"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-library-prep-bundle"/>
+    <resource>
+      <Procedure>
+        <id value="mii-exa-molgen-genomic-study-analysis-wes-library-prep-bundle"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"/>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2027.0.0-ballot.rc1"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Procedure_mii-exa-molgen-genomic-study-analysis-wes-library-prep-bundle"> </a><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-molgen-genomic-study-analysis-wes-library-prep-bundle</b></p><a name="mii-exa-molgen-genomic-study-analysis-wes-library-prep-bundle"> </a><a name="hcmii-exa-molgen-genomic-study-analysis-wes-library-prep-bundle"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="StructureDefinition-mii-pr-molgen-genomic-study-analysis.html">MII PR MolGen Genomic Study Analysis</a>, <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2027.0.0-ballot.rc1">https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2027.0.0-ballot.rc1</a></p></div><p><b>Genomic Study Analysis Specimen</b>: <a href="Specimen-mii-exa-molgen-specimen-blood-edta.html">Specimen: identifier = https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids#EDTA-2024-001; type = Plasma specimen</a></p><blockquote><p><b>Genomic Study Analysis Device</b></p><ul><li>device: <a href="Device-mii-exa-molgen-device-thermofisher-ionchef.html">Device: identifier = https://www.medizininformatik-initiative.de/fhir/sid/lab-devices#IONCHEF-IC12345; status = active; manufacturer = Thermo Fisher Scientific; serialNumber = IC12345; modelNumber = Ion Chef; type = </a></li></ul></blockquote><p><b>Genomic Study Analysis Method Type</b>: <span title="Codes:{http://loinc.org LA26810-4}">DNA hybridization</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>subject</b>: <a href="Bundle-mii-exa-molgen-bundle-comprehensive-wes.html#Patient_mii-exa-molgen-patient-wes">Max Mustermann  Male, DoB: 1970-01-01 ( https://www.medizininformatik-initiative.de/fhir/patient-ids#WES2024001)</a></p></div>
+        </text>
+        <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen">
+          <valueReference>
+            <reference value="Specimen/mii-exa-molgen-specimen-blood-edta"/>
+          </valueReference>
+        </extension>
+        <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device">
+          <extension url="device">
+            <valueReference>
+              <reference value="Device/mii-exa-molgen-device-thermofisher-ionchef"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="LA26810-4"/>
+              <display value="DNA hybridization"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <status value="completed"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-wes"/>
+        </subject>
+      </Procedure>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Procedure"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-sequencing-bundle"/>
+    <resource>
+      <Procedure>
+        <id value="mii-exa-molgen-genomic-study-analysis-wes-sequencing-bundle"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"/>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2027.0.0-ballot.rc1"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Procedure_mii-exa-molgen-genomic-study-analysis-wes-sequencing-bundle"> </a><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-molgen-genomic-study-analysis-wes-sequencing-bundle</b></p><a name="mii-exa-molgen-genomic-study-analysis-wes-sequencing-bundle"> </a><a name="hcmii-exa-molgen-genomic-study-analysis-wes-sequencing-bundle"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="StructureDefinition-mii-pr-molgen-genomic-study-analysis.html">MII PR MolGen Genomic Study Analysis</a>, <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2027.0.0-ballot.rc1">https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2027.0.0-ballot.rc1</a></p></div><p><b>Genomic Study Analysis Specimen</b>: <a href="Specimen-mii-exa-molgen-specimen-dna-library.html">Specimen: identifier = https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids#LIB-2024-001; type = Saliva specimen</a></p><blockquote><p><b>Genomic Study Analysis Device</b></p><ul><li>device: <a href="Device-mii-exa-molgen-device-illumina-novaseq.html">Device: identifier = https://www.medizininformatik-initiative.de/fhir/sid/lab-devices#NOVASEQ-6000-SN12345; status = active; manufacturer = Illumina Inc.; serialNumber = SN12345; modelNumber = NovaSeq 6000; type = Medical laboratory analyzer</a></li></ul></blockquote><p><b>Genomic Study Analysis Method Type</b>: <span title="Codes:{http://loinc.org LA26398-0}">Sequencing</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>subject</b>: <a href="Bundle-mii-exa-molgen-bundle-comprehensive-wes.html#Patient_mii-exa-molgen-patient-wes">Max Mustermann  Male, DoB: 1970-01-01 ( https://www.medizininformatik-initiative.de/fhir/patient-ids#WES2024001)</a></p></div>
+        </text>
+        <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen">
+          <valueReference>
+            <reference value="Specimen/mii-exa-molgen-specimen-dna-library"/>
+          </valueReference>
+        </extension>
+        <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device">
+          <extension url="device">
+            <valueReference>
+              <reference value="Device/mii-exa-molgen-device-illumina-novaseq"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="LA26398-0"/>
+              <display value="Sequencing"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <status value="completed"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-wes"/>
+        </subject>
+      </Procedure>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Procedure"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/Procedure/mii-exa-molgen-genomic-study-analysis-wes-bioinformatics-bundle"/>
+    <resource>
+      <Procedure>
+        <id value="mii-exa-molgen-genomic-study-analysis-wes-bioinformatics-bundle"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"/>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2027.0.0-ballot.rc1"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Procedure_mii-exa-molgen-genomic-study-analysis-wes-bioinformatics-bundle"> </a><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-molgen-genomic-study-analysis-wes-bioinformatics-bundle</b></p><a name="mii-exa-molgen-genomic-study-analysis-wes-bioinformatics-bundle"> </a><a name="hcmii-exa-molgen-genomic-study-analysis-wes-bioinformatics-bundle"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="StructureDefinition-mii-pr-molgen-genomic-study-analysis.html">MII PR MolGen Genomic Study Analysis</a>, <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2027.0.0-ballot.rc1">https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2027.0.0-ballot.rc1</a></p></div><p><b>Genomic Study Analysis Method Type</b>: <span title="Codes:{http://loinc.org LA26811-2}">Computational analysis</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>subject</b>: <a href="Bundle-mii-exa-molgen-bundle-comprehensive-wes.html#Patient_mii-exa-molgen-patient-wes">Max Mustermann  Male, DoB: 1970-01-01 ( https://www.medizininformatik-initiative.de/fhir/patient-ids#WES2024001)</a></p></div>
+        </text>
+        <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="LA26811-2"/>
+              <display value="Computational analysis"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <status value="completed"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-wes"/>
+        </subject>
+      </Procedure>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Procedure"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ServiceRequest/mii-exa-molgen-anforderung-wes-bundle"/>
+    <resource>
+      <ServiceRequest>
+        <id value="mii-exa-molgen-anforderung-wes-bundle"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test|2027.0.0-ballot.rc1"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="ServiceRequest_mii-exa-molgen-anforderung-wes-bundle"> </a><p class="res-header-id"><b>Generated Narrative: ServiceRequest mii-exa-molgen-anforderung-wes-bundle</b></p><a name="mii-exa-molgen-anforderung-wes-bundle"> </a><a name="hcmii-exa-molgen-anforderung-wes-bundle"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-molgen-anforderung-genetischer-test.html">MII PR MolGen Anforderung genetischer Test</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title="Codes:{http://loinc.org 86205-2}">Whole exome sequence analysis in Blood or Tissue by Molecular genetics method</span></p><p><b>subject</b>: <a href="Bundle-mii-exa-molgen-bundle-comprehensive-wes.html#Patient_mii-exa-molgen-patient-wes">Max Mustermann  Male, DoB: 1970-01-01 ( https://www.medizininformatik-initiative.de/fhir/patient-ids#WES2024001)</a></p><p><b>authoredOn</b>: 2024-01-10</p><p><b>requester</b>: <a href="Bundle-mii-exa-molgen-bundle-comprehensive-wes.html#Practitioner_mii-exa-molgen-practitioner-bundle">Practitioner Anna Schmidt </a></p><p><b>reasonCode</b>: <span title="Codes:{http://snomed.info/sct 110359009}">Intellectual disability (disorder)</span></p></div>
+        </text>
+        <status value="completed"/>
+        <intent value="order"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="86205-2"/>
+            <display value="Whole exome sequence analysis in Blood or Tissue by Molecular genetics method"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-wes"/>
+        </subject>
+        <authoredOn value="2024-01-10"/>
+        <requester>
+          <reference value="Practitioner/mii-exa-molgen-practitioner-bundle"/>
+        </requester>
+        <reasonCode>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="110359009"/>
+            <display value="Intellectual disability (disorder)"/>
+          </coding>
+        </reasonCode>
+      </ServiceRequest>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="ServiceRequest"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/Observation/mii-exa-molgen-variante-comprehensive-pathogenic-bundle"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-molgen-variante-comprehensive-pathogenic-bundle"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2027.0.0-ballot.rc1"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Observation_mii-exa-molgen-variante-comprehensive-pathogenic-bundle"> </a><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-molgen-variante-comprehensive-pathogenic-bundle</b></p><a name="mii-exa-molgen-variante-comprehensive-pathogenic-bundle"> </a><a name="hcmii-exa-molgen-variante-comprehensive-pathogenic-bundle"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-molgen-variante.html">MII PR MolGen Variante</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 GE}">Genetics</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 69548-6}">Genetic variant assessment</span></p><p><b>subject</b>: <a href="Bundle-mii-exa-molgen-bundle-comprehensive-wes.html#Patient_mii-exa-molgen-patient-wes">Max Mustermann  Male, DoB: 1970-01-01 ( https://www.medizininformatik-initiative.de/fhir/patient-ids#WES2024001)</a></p><p><b>effective</b>: 2024-01-10</p><p><b>value</b>: <span title="Codes:{http://loinc.org LA9633-4}">Present</span></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48018-6}">Gene studied [ID]</span></p><p><b>value</b>: <span title="Codes:{http://www.genenames.org/geneId HGNC:7132}">KMT2A</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48004-6}">DNA change (c.HGVS)</span></p><p><b>value</b>: <span title="Codes:{http://varnomen.hgvs.org NM_005933.3:c.3463C&gt;T}">NM_005933.3:c.3463C&gt;T</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 48005-3}">Amino acid change (pHGVS)</span></p><p><b>value</b>: <span title="Codes:{http://varnomen.hgvs.org p.(Arg1155Ter)}">p.(Arg1155Ter)</span></p></blockquote></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+            <code value="GE"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="69548-6"/>
+            <display value="Genetic variant assessment"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-wes"/>
+        </subject>
+        <effectiveDateTime value="2024-01-10"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA9633-4"/>
+            <display value="Present"/>
+          </coding>
+        </valueCodeableConcept>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48018-6"/>
+              <display value="Gene studied [ID]"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://www.genenames.org/geneId"/>
+              <code value="HGNC:7132"/>
+              <display value="KMT2A"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48004-6"/>
+              <display value="DNA change (c.HGVS)"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://varnomen.hgvs.org"/>
+              <code value="NM_005933.3:c.3463C&gt;T"/>
+              <display value="NM_005933.3:c.3463C&gt;T"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48005-3"/>
+              <display value="Amino acid change (pHGVS)"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://varnomen.hgvs.org"/>
+              <code value="p.(Arg1155Ter)"/>
+              <display value="p.(Arg1155Ter)"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/Observation/mii-exa-molgen-diagnostische-implikation-comprehensive-bundle"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-molgen-diagnostische-implikation-comprehensive-bundle"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation|2027.0.0-ballot.rc1"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Observation_mii-exa-molgen-diagnostische-implikation-comprehensive-bundle"> </a><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-molgen-diagnostische-implikation-comprehensive-bundle</b></p><a name="mii-exa-molgen-diagnostische-implikation-comprehensive-bundle"> </a><a name="hcmii-exa-molgen-diagnostische-implikation-comprehensive-bundle"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-molgen-diagnostische-implikation.html">MII PR MolGen Diagnostische Implikation</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 GE}">Genetics</span></p><p><b>code</b>: <span title="Codes:{http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs diagnostic-implication}">Diagnostic Implication</span></p><p><b>subject</b>: <a href="Bundle-mii-exa-molgen-bundle-comprehensive-wes.html#Patient_mii-exa-molgen-patient-wes">Max Mustermann  Male, DoB: 1970-01-01 ( https://www.medizininformatik-initiative.de/fhir/patient-ids#WES2024001)</a></p><p><b>effective</b>: 2024-01-10</p><p><b>derivedFrom</b>: <a href="Observation-mii-exa-molgen-variante-comprehensive-pathogenic.html">Observation Genetic variant assessment</a></p><h3>Components</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://loinc.org 53037-8}">Genetic variation clinical significance [Imp]</span></td><td><span title="Codes:{http://loinc.org LA6668-3}">Pathogenic</span></td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+            <code value="GE"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs"/>
+            <code value="diagnostic-implication"/>
+            <display value="Diagnostic Implication"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-wes"/>
+        </subject>
+        <effectiveDateTime value="2024-01-10"/>
+        <derivedFrom>
+          <reference value="Observation/mii-exa-molgen-variante-comprehensive-pathogenic"/>
+        </derivedFrom>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="53037-8"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="LA6668-3"/>
+              <display value="Pathogenic"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/Media/mii-exa-molgen-media-coverage-plot"/>
+    <resource>
+      <Media>
+        <id value="mii-exa-molgen-media-coverage-plot"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Media_mii-exa-molgen-media-coverage-plot"> </a><p class="res-header-id"><b>Generated Narrative: Media mii-exa-molgen-media-coverage-plot</b></p><a name="mii-exa-molgen-media-coverage-plot"> </a><a name="hcmii-exa-molgen-media-coverage-plot"> </a><p><b>status</b>: Completed</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/media-type image}">Image</span></p><p><b>subject</b>: <a href="Patient-mii-exa-molgen-patient.html">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Medical record number (use: usual, ))</a></p><p><b>created</b>: 2024-01-20 10:00:00+0100</p><h3>Contents</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Title</b></td></tr><tr><td style="display: none">*</td><td>png</td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/plots/coverage_wes_2024001.png">https://www.medizininformatik-initiative.de/fhir/plots/coverage_wes_2024001.png</a></td><td>Exome Coverage Distribution Plot</td></tr></table></div>
+        </text>
+        <status value="completed"/>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/media-type"/>
+            <code value="image"/>
+            <display value="Image"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient"/>
+        </subject>
+        <createdDateTime value="2024-01-20T10:00:00+01:00"/>
+        <content>
+          <contentType value="image/png"/>
+          <url value="https://www.medizininformatik-initiative.de/fhir/plots/coverage_wes_2024001.png"/>
+          <title value="Exome Coverage Distribution Plot"/>
+        </content>
+      </Media>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Media"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/DiagnosticReport/mii-exa-molgen-befundbericht-comprehensive-wes-bundle"/>
+    <resource>
+      <DiagnosticReport>
+        <id value="mii-exa-molgen-befundbericht-comprehensive-wes-bundle"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht|2027.0.0-ballot.rc1"/>
+          <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report|3.0.0"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="DiagnosticReport_mii-exa-molgen-befundbericht-comprehensive-wes-bundle"> </a><p class="res-header-id"><b>Generated Narrative: DiagnosticReport mii-exa-molgen-befundbericht-comprehensive-wes-bundle</b></p><a name="mii-exa-molgen-befundbericht-comprehensive-wes-bundle"> </a><a name="hcmii-exa-molgen-befundbericht-comprehensive-wes-bundle"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.html">MII PR MolGen Molekulargenetischer Befundbericht</a> version: 2027.0.0-ballot.rc1, <a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-genomic-report.html">Genomic Report</a> version: 3.0.0</p></div><h2><span title="Codes:{http://loinc.org 51969-4}">Genetic analysis report</span> (<span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 GE}">Genetics</span>) </h2><table class="grid"><tr><td>Subject</td><td>Max Mustermann  Male, DoB: 1970-01-01 ( https://www.medizininformatik-initiative.de/fhir/patient-ids#WES2024001)</td></tr><tr><td>Performer</td><td> <a href="Practitioner-mii-exa-molgen-practitioner-lab.html">Practitioner Dr. Daniel Schmidt(official)</a></td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>Relevant Time</b></td></tr><tr><td><a href="Observation-mii-exa-molgen-variante-comprehensive-pathogenic.html"><span title="Codes:{http://loinc.org 69548-6}">Genetic variant assessment</span></a></td><td><span title="Codes:{http://loinc.org LA9633-4}">Present</span></td><td>Final</td><td>2024-01-10</td></tr><tr><td><a href="Observation-mii-exa-molgen-diagnostische-implikation-comprehensive.html"><span title="Codes:{http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs diagnostic-implication}">Diagnostic Implication</span></a></td><td/><td>Final</td><td>2024-01-10</td></tr></table><p>Whole exome sequencing identified a pathogenic de novo variant in the KMT2A gene, consistent with Wiedemann-Steiner syndrome. Technical quality metrics met all acceptance criteria.</p><p><b>Coded Conclusions:</b></p><ul><li><span title="Codes:{http://loinc.org LA6576-8}">Positive</span></li></ul></div>
+        </text>
+        <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-reference">
+          <valueReference>
+            <reference value="Procedure/mii-exa-molgen-genomic-study-comprehensive-wes"/>
+          </valueReference>
+        </extension>
+        <basedOn>
+          <reference value="ServiceRequest/mii-exa-molgen-anforderung-wes"/>
+        </basedOn>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+            <code value="GE"/>
+            <display value="Genetics"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="51969-4"/>
+            <display value="Genetic analysis report"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-molgen-patient-wes"/>
+        </subject>
+        <performer>
+          <reference value="Practitioner/mii-exa-molgen-practitioner-lab"/>
+        </performer>
+        <specimen>
+          <reference value="Specimen/mii-exa-molgen-specimen-blood-edta"/>
+        </specimen>
+        <result>
+          <reference value="Observation/mii-exa-molgen-variante-comprehensive-pathogenic"/>
+        </result>
+        <result>
+          <reference value="Observation/mii-exa-molgen-diagnostische-implikation-comprehensive"/>
+        </result>
+        <media>
+          <comment value="Coverage plot showing uniform coverage across all exons"/>
+          <link>
+            <reference value="Media/mii-exa-molgen-media-coverage-plot"/>
+          </link>
+        </media>
+        <conclusion value="Whole exome sequencing identified a pathogenic de novo variant in the KMT2A gene, consistent with Wiedemann-Steiner syndrome. Technical quality metrics met all acceptance criteria."/>
+        <conclusionCode>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA6576-8"/>
+            <display value="Positive"/>
+          </coding>
+        </conclusionCode>
+      </DiagnosticReport>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="DiagnosticReport"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/Practitioner/mii-exa-molgen-practitioner-bundle"/>
+    <resource>
+      <Practitioner>
+        <id value="mii-exa-molgen-practitioner-bundle"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Practitioner_mii-exa-molgen-practitioner-bundle"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner mii-exa-molgen-practitioner-bundle</b></p><a name="mii-exa-molgen-practitioner-bundle"> </a><a name="hcmii-exa-molgen-practitioner-bundle"> </a><p><b>identifier</b>: <code>https://www.medizininformatik-initiative.de/fhir/sid/practitioner-ids</code>/12345</p><p><b>name</b>: Anna Schmidt </p></div>
+        </text>
+        <identifier>
+          <system value="https://www.medizininformatik-initiative.de/fhir/sid/practitioner-ids"/>
+          <value value="12345"/>
+        </identifier>
+        <name>
+          <family value="Schmidt"/>
+          <given value="Anna"/>
+          <prefix value="Dr."/>
+        </name>
+      </Practitioner>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Practitioner"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/Practitioner/mii-exa-molgen-practitioner-lab-bundle"/>
+    <resource>
+      <Practitioner>
+        <id value="mii-exa-molgen-practitioner-lab-bundle"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><a name="Practitioner_mii-exa-molgen-practitioner-lab-bundle"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner mii-exa-molgen-practitioner-lab-bundle</b></p><a name="mii-exa-molgen-practitioner-lab-bundle"> </a><a name="hcmii-exa-molgen-practitioner-lab-bundle"> </a><p><b>identifier</b>: <code>https://www.medizininformatik-initiative.de/fhir/sid/practitioner-ids</code>/67890</p><p><b>name</b>: Thomas Weber </p></div>
+        </text>
+        <identifier>
+          <system value="https://www.medizininformatik-initiative.de/fhir/sid/practitioner-ids"/>
+          <value value="67890"/>
+        </identifier>
+        <name>
+          <family value="Weber"/>
+          <given value="Thomas"/>
+          <prefix value="Dr."/>
+        </name>
+      </Practitioner>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Practitioner"/>
+    </request>
+  </entry>
+</Bundle>
