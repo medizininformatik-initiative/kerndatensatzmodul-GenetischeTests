@@ -179,7 +179,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "name" : "MII_PR_MolGen_Variante",
   "title" : "MII PR MolGen Variante",
   "status" : "active",
-  "date" : "2026-09-03T10:37:37+00:00",
+  "date" : "2026-09-03T10:52:28+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
