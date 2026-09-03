@@ -5126,3 +5126,12 @@
 2026-09-03T07:41:00Z  INFO   12.2  release-prepare  ist-zustand  branch=release/2027.0.0-ballot.rc1 pr=58 package.json=2027.0.0-ballot.rc1 sushi-config=2027.0.0-ballot.rc1 version.fsh=2027.0.0-ballot.rc1
 2026-09-03T07:42:00Z  INFO   12.3  changelog  edit  files=2 sections=+3 punkte=8->21 inhalt=PR59 (Erwartungen, Biomarker, Canonicals, Fehler-Triage, known_errors)
 2026-09-03T07:42:30Z  NOTE   12.4  release-prepare  offene-abweichungen  1) Versionsformat des Kommandos (YYYY.0.0[-rc.X|-ballot]) deckt 2027.0.0-ballot.rc1 nicht ab. 2) Branchnamensschema release/v{VERSION} vs. vorhandenes release/2027.0.0-ballot.rc1 ohne v - relevant fuer den Tag. 3) Phasen 7-8 nennen Simplifier, publiziert wird aber ueber module-release.yml/go-publish.
+2026-09-03T09:50:00Z  INFO   13.1  local-package-build  params  skill=mii-package-publishing workflow=Restore/Bake/Pack publish=nein
+2026-09-03T13:1.1  config-drift  found  .claude/config.json version=2026.0.4 tho=7.0.0 basisprofil=1.5.4 base=2026.0.0 gegen sushi-config 2027.0.0-ballot.rc1/7.3.0/1.6.0/2027.0.0-ballot.rc1; meta und biobank fehlten ganz
+2026-09-03T09:51:00Z  INFO   13.1.1  config-drift  fixed  4 Felder nachgezogen, meta und biobank ergaenzt
+2026-09-03T09:52:00Z  INFO   13.2  fhir-restore  done  exit=255 aber alle 8 direkten Dependencies im Cache; die Meldungen CircularReference/OutOfRange/Outdated betreffen Referenzen innerhalb fremder Pakete
+2026-09-03T09:53:00Z  INFO   13.3  fhir-bake  done  input=fsh-generated/resources dateien=140 root_json=33 examples=106 snapshots=22_von_22
+2026-09-03T09:53:30Z  WARN   13.3  bake-manifest  gap  package.json fehlte im gebauten Paket: der manifest-Schritt in package.bake.yaml loest files: package.json gegen den INPUT-Ordner auf, und dort liegt keine. Ein FHIR-Paket ohne package/package.json ist ungueltig. Workaround: cp package.json .bake/package/
+2026-09-03T09:54:00Z  INFO   13.4  pack  done  tarball=de.medizininformatikinitiative.kerndatensatz.molgen-2027.0.0-ballot.rc1.tgz groesse=375K fremddateien=0 sd=22 beispiele=107 pfade_ueber_100_byte=0
+2026-09-03T09:55:00Z  INFO   13.5  commands  update  build-package.md=restore-Schritt+--input+Manifest-Luecke+COPYFILE_DISABLE+tar-100-Byte-Pruefung+config-drift-Warnung release-prepare.md=7 Stellen
+2026-09-03T09:55:30Z  NOTE   13.5  release-prepare  regex  ^\d{4}\.\d+\.\d+(-[0-9A-Za-z.-]+)?$ akzeptiert 2027.0.0-ballot.rc1 und 2026.0.4, lehnt 1.2.3, 2027.0 und 2027.0.0- ab; identisch mit M6 in scripts/convention-check.mjs

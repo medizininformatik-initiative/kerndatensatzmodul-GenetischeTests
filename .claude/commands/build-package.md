@@ -35,7 +35,11 @@ echo "Building package: $PACKAGE_NAME version $VERSION"
    - `package.bake.yaml`
    - `input/fsh/` directory
 3. Check git status to ensure clean state or warn about uncommitted changes
-4. Verify version matches between `.claude/config.json` and `sushi-config.yaml`
+4. Verify version AND dependencies match between `.claude/config.json` and
+   `sushi-config.yaml`. `.claude/config.json` is not read by any build tool, so it
+   drifts silently — it was four fields behind on 2026-09-03. The tarball is named
+   from it, so a stale version produces a correctly built package under the wrong
+   name. `sushi-config.yaml` is the source of truth; correct the config, not it.
 
 ### Step 3: Clean Previous Build Artifacts
 Clean output directories to ensure fresh build:
@@ -43,17 +47,69 @@ Clean output directories to ensure fresh build:
 rm -rf output/ staging/ .bake/
 ```
 
-### Step 4: Run Firely Bake to Build Package Structure
-Execute Firely Bake to:
-- Compile FSH to FHIR resources (if not already compiled)
-- Transform resources to JSON
-- Generate snapshots for StructureDefinitions
-- Organize conformance resources and examples
-- Create package structure in `.bake/package/`
+### Step 4a: Restore Dependencies — REQUIRED BEFORE BAKE
 
 ```bash
-fhir bake package.bake.yaml
+fhir restore
 ```
+
+Downloads every package from `sushi-config.yaml` into the shared cache. Snapshot
+generation needs the base definitions; skipping this produces StructureDefinitions
+with missing or wrong snapshots, and the IG then renders incomplete profile trees.
+
+`fhir restore` exits non-zero and prints `[CircularReference]`, `[OutOfRange]` and
+`[Outdated]` lines even on a good run. Those describe version references *inside*
+third-party packages and are not actionable here. Judge the result by whether the
+packages are in the cache, not by the exit code:
+
+```bash
+python3 -c "
+import yaml, os
+for k, v in yaml.safe_load(open('sushi-config.yaml'))['dependencies'].items():
+    print(('OK  ' if os.path.isdir(os.path.expanduser(f'~/.fhir/packages/{k}#{v}')) else 'MISS'), f'{k}#{v}')
+"
+```
+
+Do not run other FHIR tools at the same time: `~/.fhir/packages` has no locking, and
+concurrent access corrupts reads.
+
+### Step 4b: Run Firely Bake to Build Package Structure
+
+```bash
+fhir bake package.bake.yaml --input fsh-generated/resources
+```
+
+**`--input fsh-generated/resources` is required.** Without it bake reads the repo
+root and picks up the wrong tree — since the template migration the generated
+resources live in `fsh-generated/resources/`, not under `input/`.
+
+### Step 4c: Add the Manifest — bake does NOT do this
+
+```bash
+cp package.json .bake/package/package.json
+```
+
+`package.bake.yaml` has a `manifest` step reading `files: package.json`, but it
+resolves against the *input* folder. With `--input fsh-generated/resources` there is
+no `package.json` there, so bake silently produces a package without one — and a
+FHIR package without `package/package.json` is invalid. Verify:
+
+```bash
+test -f .bake/package/package.json && echo "manifest OK" || echo "MANIFEST MISSING"
+```
+
+Then check that snapshots were actually generated (this is what Step 4a buys):
+
+```bash
+python3 -c "
+import glob, json
+sd = [f for f in glob.glob('.bake/package/*.json') if 'StructureDefinition' in f]
+n = sum(1 for f in sd if 'snapshot' in json.load(open(f)))
+print(f'StructureDefinitions: {len(sd)}, with snapshot: {n}')
+"
+```
+
+`with snapshot` must equal the total. Anything less means Step 4a did not do its job.
 
 **Expected Output**:
 - `.bake/package/` directory created
@@ -77,20 +133,26 @@ info: Package structure created in .bake/package/
 Create a tarball from the built package structure using config values:
 
 ```bash
-# Navigate to .bake directory
-cd .bake
-
-# Create tarball with proper naming (using config values)
-tar -czf ../${PACKAGE_NAME}-${VERSION}.tgz package/
-
-# Return to project root
-cd ..
+COPYFILE_DISABLE=1 tar -czf ${PACKAGE_NAME}-${VERSION}.tgz -C .bake package/
 ```
 
-**Example output for molgen 2026.0.4**:
+**`COPYFILE_DISABLE=1` is required on macOS.** Without it tar writes an AppleDouble
+`._*` sidecar next to every file, which lands in the published package.
+
+**Example for molgen 2027.0.0-ballot.rc1**:
 ```bash
-cd .bake && tar -czf ../de.medizininformatikinitiative.kerndatensatz.molgen-2026.0.4.tgz package/ && cd ..
+COPYFILE_DISABLE=1 tar -czf de.medizininformatikinitiative.kerndatensatz.molgen-2027.0.0-ballot.rc1.tgz -C .bake package/
 ```
+
+Also check the tar path limit — it has bitten this module before:
+
+```bash
+tar -tzf $TARBALL | awk 'length>100' | wc -l   # must be 0
+```
+
+The tar format caps a path at 100 bytes. Long example ids push
+`package/<Type>-<id>.json` over it and the IG Publisher then hard-fails on the
+package. Six DiagnosticReport example ids were shortened for exactly this reason.
 
 ### Step 6: Verify Package Contents
 Verify the package tarball contains the correct structure and resources:
