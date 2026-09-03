@@ -139,6 +139,10 @@
   },
   {
     "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship|3.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Observation-based-on|4.0.1"
   },
   {
@@ -972,10 +976,6 @@
   {
     "name" : "default-valueset-version",
     "valueCanonical" : "http://hl7.org/fhir/ValueSet/report-codes|4.0.1"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship|3.0.0"
   },
   {
     "name" : "default-valueset-version",

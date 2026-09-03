@@ -105,7 +105,7 @@
           <status value="generated"/>
         </text>
         <basedOn>
-          <reference value="servicerequest/example"/>
+          <reference value="ServiceRequest/mii-exa-molgen-anforderung-1"/>
         </basedOn>
         <status value="requested"/>
         <intent value="proposal"/>
@@ -144,7 +144,7 @@
           <status value="generated"/>
         </text>
         <basedOn>
-          <reference value="servicerequest/example"/>
+          <reference value="ServiceRequest/mii-exa-molgen-anforderung-1"/>
         </basedOn>
         <status value="requested"/>
         <intent value="proposal"/>
@@ -948,7 +948,7 @@
         <id value="mii-exa-molgen-mutationslast-1"/>
         <meta>
           <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast|2027.0.0-ballot.rc1"/>
-          <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/tmb|3.0.0"/>
+          <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-biomarker|3.0.0"/>
         </meta>
         <language value="de"/>
         <text>
@@ -1051,7 +1051,7 @@
         <id value="mii-exa-molgen-mikrosatelliteninstabilitaet-1"/>
         <meta>
           <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet|2027.0.0-ballot.rc1"/>
-          <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/msi|3.0.0"/>
+          <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-biomarker|3.0.0"/>
         </meta>
         <language value="de"/>
         <text>

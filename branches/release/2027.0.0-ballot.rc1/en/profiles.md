@@ -29,8 +29,31 @@ The following table shows the inheritance relationships of the profiles in this 
 | MII_PR_MolGen_EmpfohleneFolgemassnahme | followup-recommendation | Recommended follow-up action |
 | MII_PR_MolGen_GenomicStudy | genomic-study | Genomic study |
 | MII_PR_MolGen_GenomicStudyAnalysis | genomic-study-analysis | Analysis within the genomic study |
-| MII_PR_MolGen_Mikrosatelliteninstabilitaet | molecular-biomarker | MSI status |
-| MII_PR_MolGen_Mutationslast | molecular-biomarker | Tumor mutational burden |
+| MII_PR_MolGen_MolekularerBiomarker | molecular-biomarker | Base profile for the biomarker profiles of this module |
+
+##### Profiles derived from another profile of this module
+
+| | | |
+| :--- | :--- | :--- |
+| MII_PR_MolGen_Mikrosatelliteninstabilitaet | MII_PR_MolGen_MolekularerBiomarker | MSI status |
+| MII_PR_MolGen_Mutationslast | MII_PR_MolGen_MolekularerBiomarker | Tumor mutational burden |
+
+Both reach Clinical Genomics STU3 through MII_PR_MolGen_MolekularerBiomarker, not directly.
+
+##### Two canonical URL schemes — deliberate, not an oversight
+
+Twelve profiles carry a short canonical, four carry one prefixed with `mii-pr-molgen-`:
+
+| | | |
+| :--- | :--- | :--- |
+| short | `…/StructureDefinition/variante` | the twelve older profiles |
+| prefixed | `…/StructureDefinition/mii-pr-molgen-genomic-study` | GenomicStudy, GenomicStudyAnalysis, MolekulareKonsequenz, MolekularerBiomarker |
+
+The four prefixed ones were added during the migration to Clinical Genomics STU3 and picked up the prefix from their ids. The two GenomicStudy profiles also kept their English names, where the rest of the module names profiles in German.
+
+**This is not going to be harmonised.** All four canonicals shipped in version 2026.0.4, so they are established identity: anyone using that release has these URLs in profile bindings, in `meta.profile` and in search queries. Renaming them would break those references, and a ballot is the wrong moment — reviewers would be checking content and fighting broken references at the same time. Whether a common convention should apply across all MII core dataset modules is a question for the TF-KDS, not for this module alone.
+
+When writing a reference by hand, take the canonical from the profile's own page rather than deriving it from the profile name.
 
 ##### Profiles derived directly from FHIR R4
 

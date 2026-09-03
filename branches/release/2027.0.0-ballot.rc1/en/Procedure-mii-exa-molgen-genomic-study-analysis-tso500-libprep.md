@@ -211,7 +211,7 @@ Profiles: [MII PR MolGen Genomic Study Analysis](StructureDefinition-mii-pr-molg
       "valueCodeableConcept" : {
         "coding" : [{
           "system" : "http://www.genenames.org/geneId",
-          "code" : "HGNC:3942",
+          "code" : "HGNC:3689",
           "display" : "FGFR2"
         }]
       }
@@ -221,7 +221,7 @@ Profiles: [MII PR MolGen Genomic Study Analysis](StructureDefinition-mii-pr-molg
       "valueCodeableConcept" : {
         "coding" : [{
           "system" : "http://www.genenames.org/geneId",
-          "code" : "HGNC:3943",
+          "code" : "HGNC:3690",
           "display" : "FGFR3"
         }]
       }

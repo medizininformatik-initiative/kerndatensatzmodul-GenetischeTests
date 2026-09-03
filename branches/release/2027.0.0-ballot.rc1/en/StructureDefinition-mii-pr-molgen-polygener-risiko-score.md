@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-02 | *Computable Name*:MII_PR_MolGen_PolygenerRisikoScore |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_MolGen_PolygenerRisikoScore |
 
  
 Profil für Polygenen Risiko Score 
@@ -76,7 +76,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-pol
   "name" : "MII_PR_MolGen_PolygenerRisikoScore",
   "title" : "MII PR MolGen Polygener Risiko Score",
   "status" : "active",
-  "date" : "2026-09-02T09:55:35+00:00",
+  "date" : "2026-09-03T08:56:49+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

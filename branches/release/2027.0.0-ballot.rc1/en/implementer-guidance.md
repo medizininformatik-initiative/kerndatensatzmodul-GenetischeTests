@@ -40,42 +40,63 @@ The new [Modul Seltene Erkrankungen](https://simplifier.net/mii-modul-seltene-er
 
 ### Upstream Profiles from HL7 Genomics Reporting
 
-The following two profiles come from the [HL7 Genomics Reporting Implementation Guide STU3](http://hl7.org/fhir/uv/genomics-reporting/STU3/) and are not profiled by this module itself. They are described here because they are used together with this module's profiles when implementing genetic reports.
+This module is built on [HL7 Genomics Reporting STU3](http://hl7.org/fhir/uv/genomics-reporting/STU3/) throughout, not merely alongside it. Counted from the built artifacts, the dependency is:
+
+| | |
+| :--- | :--- |
+| Own profiles that inherit directly from an STU3 profile | 10 |
+| Own profiles that inherit indirectly (via MII_PR_MolGen_MolekularerBiomarker) | 2 |
+| Own extensions that inherit from an STU3 extension | 1 |
+| STU3 extensions used in the profiles | 12 |
+| STU3 ValueSets bound | 3 |
+| Code systems taken from STU3 | 2 |
+
+Which of this module's profiles derives from which STU3 profile is listed in the [inheritance table on the Profiles page](profiles.md). **This section is about something narrower**: the two STU3 profiles that this module uses **as they are**, without deriving a profile of its own from them. They have no page under [Artifacts](artifacts.md) for that reason, so they are described here.
 
 #### Haplotype (Observation)
 
 This profile describes the determination of a particular haplotype on the basis of one or more variants.
 
-Canonical: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype
+Canonical: `http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype` · [Profile page](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html)
 
-The profile [Haplotype](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html) comes from the [HL7 Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
+##### Components
 
-##### Profile
+STU3 defines five component slices on this profile. Two of them carry elements of the logical dataset of this module:
 
 | | |
 | :--- | :--- |
-| Observation.component:gene-studied | Methoden.Getestete Gene |
-| Observation.component:CytogenicLocation | Ergebnisse.Veränderungen.Zytogenetische Lokalisierung |
+| `Observation.component:gene-studied` | Methoden.Getestete Gene |
+| `Observation.component:cytogenetic-location` | Ergebnisse.Veränderungen.Zytogenetische Lokalisierung |
+
+The remaining three are available but are not mapped to the logical dataset: `conclusion-string`, `reference-sequence-assembly` and `chromosome-identifier`.
 
 #### Sequence Phase Relationship (Observation)
 
-Indicates whether two variants are in a cis (same strand) or trans (opposite strand) relationship to each other.
+Indicates whether two variants are in a cis (same strand) or trans (opposite strand) relationship to each other — that is, whether they sit on the same copy of a chromosome or on different ones. The distinction decides whether two variants in the same gene affect one allele or both, and therefore whether a recessive condition is present.
 
-The profile corresponds to [Sequence Phase Relationship](http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship) from the [HL7 Genomics Reporting Implementation Guide STU3](http://hl7.org/fhir/uv/genomics-reporting/STU3/).
+Canonical: `http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship` · [Profile page](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-sequence-phase-relationship.html)
+
+##### Structure
+
+| | | |
+| :--- | :--- | :--- |
+| `Observation.code` | 1..1 | fixed to LOINC`82120-7` |
+| `Observation.value[x]` | 1..1 | the phase relationship, bound`required`to the ValueSet below |
+| `Observation.derivedFrom:variant` | 0..* | the variants being related — the[Variante](StructureDefinition-mii-pr-molgen-variante.md)profile of this module derives from the STU3 profile referenced here |
+| `Observation.derivedFrom:haplotype` | 0..* | alternatively, the haplotypes being related |
 
 ##### Terminology
 
-###### CodeSystem
+| | |
+| :--- | :--- |
+| ValueSet | [`sequence-phase-relationship-vs`](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-sequence-phase-relationship-vs.html), binding`required` |
+| CodeSystem | [`sequence-phase-relationship-cs`](http://hl7.org/fhir/uv/genomics-reporting/STU3/CodeSystem-sequence-phase-relationship-cs.html)— canonical`http://terminology.hl7.org/CodeSystem/sequence-phase-relationship-cs`, i.e. it belongs to HL7 Terminology and is only rendered in the STU3 guide |
 
-**Sequence Phase Relationship CodeSystem**
+##### Expectation
 
-[SequencePhaseRelationshipCS](http://hl7.org/fhir/uv/genomics-reporting/STU3/CodeSystem-sequence-phase-relationship-cs.html)
+Both profiles are declared in the [CapabilityStatement](CapabilityStatement-mii-cps-molgen-capabilitystatement.md) with **`MAY`**.
 
-###### ValueSet
-
-**Sequence Phase Relationship ValueSet**
-
-[seq-phase-relationship](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-sequence-phase-relationship-vs.html)
+That is deliberate, and it was decided for this release. A `MAY` says: if you exchange haplotypes or phase relationships, use these STU3 profiles rather than inventing your own — but nothing in the core dataset of this module obliges you to produce them. Neither profile carries a core dataset requirement, this module derives nothing from either of them, and the guide shows no example of either. Haplotype previously stood at `SHALL`, which obliged implementers to support something the guide never demonstrates; Sequence Phase Relationship was not declared at all, although this page presented it as used. Both are now stated the same way.
 
 ### References
 

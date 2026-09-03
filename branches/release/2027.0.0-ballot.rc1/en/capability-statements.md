@@ -17,3 +17,40 @@ Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/Ca
 
 [mii-cps-molgen-capabilitystatement](CapabilityStatement-mii-cps-molgen-capabilitystatement.md)
 
+#### Supported profiles and their expectation
+
+The rendered CapabilityStatement above lists the supported profiles as links but **does not show the expectation attached to each one** — the IG Publisher omits it. The table below therefore restates them. It is generated from the built CapabilityStatement, so it cannot drift from the artifact.
+
+| | | |
+| :--- | :--- | :--- |
+| `DiagnosticReport` | [MII PR MolGen Molekulargenetischer Befundbericht](StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.md) | `SHALL` |
+| `FamilyMemberHistory` | [MII PR MolGen Familienanamnese](StructureDefinition-mii-pr-molgen-familienanamnese.md) | `SHALL` |
+| `Observation` | [MII PR MolGen Diagnostische Implikation](StructureDefinition-mii-pr-molgen-diagnostische-implikation.md) | `SHALL` |
+| `Observation` | [MII PR MolGen Mikrosatelliteninstabilität](StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.md) | `SHALL` |
+| `Observation` | [MII PR MolGen Molekulare Konsequenz](StructureDefinition-mii-pr-molgen-molekulare-konsequenz.md) | `SHALL` |
+| `Observation` | [MII PR MolGen Molekularer Biomarker](StructureDefinition-mii-pr-molgen-molekularer-biomarker.md) | `SHALL` |
+| `Observation` | [MII PR MolGen Mutationslast](StructureDefinition-mii-pr-molgen-mutationslast.md) | `SHALL` |
+| `Observation` | [MII PR MolGen Therapeutische Implikation](StructureDefinition-mii-pr-molgen-therapeutische-implikation.md) | `SHALL` |
+| `Observation` | [MII PR MolGen Variante](StructureDefinition-mii-pr-molgen-variante.md) | `SHALL` |
+| `Procedure` | [MII PR MolGen Genomic Study Analysis](StructureDefinition-mii-pr-molgen-genomic-study-analysis.md) | `SHALL` |
+| `Procedure` | [MII PR MolGen Genomic Study](StructureDefinition-mii-pr-molgen-genomic-study.md) | `SHALL` |
+| `RiskAssessment` | [MII PR MolGen Polygener Risiko Score](StructureDefinition-mii-pr-molgen-polygener-risiko-score.md) | `SHALL` |
+| `ServiceRequest` | [MII PR MolGen Anforderung genetischer Test](StructureDefinition-mii-pr-molgen-anforderung-genetischer-test.md) | `SHALL` |
+| `Task` | [MII PR MolGen Empfohlene Folgemaßnahme](StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.md) | `SHALL` |
+| `Task` | [MII PR MolGen Medikationsempfehlung](StructureDefinition-mii-pr-molgen-medikationsempfehlung.md) | `SHALL` |
+| `Observation` | [MII PR MolGen Genotyp](StructureDefinition-mii-pr-molgen-genotyp.md) | `MAY` |
+| `Observation` | [haplotype](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html) | `MAY` |
+| `Observation` | [sequence-phase-relationship](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-sequence-phase-relationship.html) | `MAY` |
+
+`SHALL` means a conformant server must support the profile; `MAY` means it is specified for those who exchange this data, but no server is obliged to produce it.
+
+#### Why three profiles are MAY
+
+Of the eighteen supported profiles, fifteen carry `SHALL` and three carry `MAY`: `genotyp`, `haplotype` and `sequence-phase-relationship`.
+
+All three state something about **alleles as a whole** rather than about a single finding: which alleles sit at a locus, which variants travel together, and whether two variants sit on the same copy of a chromosome. Many laboratories never derive these — they report the variants and stop. Requiring them with `SHALL` would oblige implementers to produce data they do not have.
+
+`MAY` says the useful thing instead: whoever does exchange genotypes, haplotypes or phase relationships uses these profiles rather than inventing their own. The mandatory core of this module is the report itself, the variants, and the implications drawn from them.
+
+Two of the three — `haplotype` and `sequence-phase-relationship` — are not profiled by this module at all; they are used as they come from Clinical Genomics STU3 and are described under [Implementer Guidance](implementer-guidance.md).
+

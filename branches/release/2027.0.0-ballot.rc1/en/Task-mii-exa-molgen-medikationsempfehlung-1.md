@@ -14,7 +14,7 @@
 
 Profiles: [MII PR MolGen Medikationsempfehlung](StructureDefinition-mii-pr-molgen-medikationsempfehlung.md) version: 2027.0.0-ballot.rc1, [Medication Recommendation](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-medication-recommendation.html) version: 3.0.0
 
-**basedOn**: [servicerequest/example](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/servicerequest/example)
+**basedOn**: [ServiceRequest Molecular genetic test (procedure)](ServiceRequest-mii-exa-molgen-anforderung-1.md)
 
 **status**: Requested
 
@@ -39,7 +39,7 @@ Profiles: [MII PR MolGen Medikationsempfehlung](StructureDefinition-mii-pr-molge
     "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-recommendation|3.0.0"]
   },
   "basedOn" : [{
-    "reference" : "servicerequest/example"
+    "reference" : "ServiceRequest/mii-exa-molgen-anforderung-1"
   }],
   "status" : "requested",
   "intent" : "proposal",

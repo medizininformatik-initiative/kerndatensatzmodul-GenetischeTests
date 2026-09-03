@@ -386,35 +386,63 @@ Befundbericht berücksichtigt wurden.</p>
 
 <h3 id="upstream-profile-aus-hl7-genomics-reporting">Upstream-Profile aus HL7 Genomics Reporting</h3>
 
-<!-- TODO:REVIEW Diese gruppierende Überschrift und der folgende Einleitungssatz
-     sind redaktionell ergänzt, um die Vorgabe umzusetzen, dass die beiden
-     folgenden Profile nicht von diesem Modul profiliert werden. Die Aussage
-     selbst stammt aus den Quellseiten ("stammt aus" / "entspricht ... aus HL7
-     Genomics Reporting Implementation Guide STU3"). -->
+<p>Dieses Modul baut durchgängig auf
+<a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/">HL7 Genomics Reporting STU3</a> auf,
+nicht bloß daneben. Aus den gebauten Artefakten ausgezählt:</p>
 
-<p>Die folgenden beiden Profile stammen aus dem
-<a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/">HL7 Genomics Reporting Implementation Guide STU3</a>
-und werden von diesem Modul nicht eigenständig profiliert. Sie werden hier
-beschrieben, weil sie bei der Umsetzung genetischer Befunde gemeinsam mit den
-Profilen dieses Moduls verwendet werden.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Wie das Modul STU3 nutzt</th>
+      <th>Anzahl</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Eigene Profile, die direkt von einem STU3-Profil erben</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>Eigene Profile, die indirekt erben (über MII_PR_MolGen_MolekularerBiomarker)</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Eigene Extensions, die von einer STU3-Extension erben</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>In den Profilen verwendete STU3-Extensions</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>Gebundene STU3-ValueSets</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Aus STU3 übernommene Codesysteme</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Welches Profil dieses Moduls von welchem STU3-Profil abstammt, steht in der
+<a href="profiles.html">Vererbungstabelle auf der Profilseite</a>. <strong>Dieser Abschnitt behandelt
+etwas Engeres</strong>: die beiden STU3-Profile, die dieses Modul <strong>unverändert</strong> verwendet,
+ohne ein eigenes Profil davon abzuleiten. Genau deshalb haben sie keine Seite unter
+<a href="artifacts.html">Artefakte</a> und werden hier beschrieben.</p>
 
 <h4 id="haplotype-observation">Haplotype (Observation)</h4>
 
 <p>Dieses Profil beschreibt die Feststellung eines bestimmten Haplotyps auf der
 Grundlage einer oder mehrerer Varianten.</p>
 
-<p>Canonical: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype</p>
+<p>Canonical: <code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype</code>
+· <a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html">Profilseite</a></p>
 
-<!-- TODO:REVIEW Das Linkziel im folgenden Satz endet in der Quellseite auf
-     ".html.html" und ist damit vermutlich defekt. Unverändert übernommen, weil
-     Linkziele in dieser Migration nicht geändert werden dürfen. -->
+<h5 id="komponenten">Komponenten</h5>
 
-<p>Das Profil
-<a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html">Haplotype</a>
-stammt aus dem
-<a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/">HL7 Genomics Reporting Implementation Guide</a>.</p>
-
-<h5 id="profil">Profil</h5>
+<p>STU3 definiert auf diesem Profil fünf Component-Slices. Zwei davon tragen Elemente
+des logischen Datensatzes dieses Moduls:</p>
 
 <table>
   <thead>
@@ -425,39 +453,100 @@ stammt aus dem
   </thead>
   <tbody>
     <tr>
-      <td>Observation.component:gene-studied</td>
+      <td><code class="language-plaintext highlighter-rouge">Observation.component:gene-studied</code></td>
       <td>Methoden.Getestete Gene</td>
     </tr>
     <tr>
-      <td>Observation.component:CytogenicLocation</td>
+      <td><code class="language-plaintext highlighter-rouge">Observation.component:cytogenetic-location</code></td>
       <td>Ergebnisse.Veränderungen.Zytogenetische Lokalisierung</td>
     </tr>
   </tbody>
 </table>
 
+<p>Die übrigen drei stehen zur Verfügung, sind aber nicht auf den logischen Datensatz
+abgebildet: <code class="language-plaintext highlighter-rouge">conclusion-string</code>, <code class="language-plaintext highlighter-rouge">reference-sequence-assembly</code> und
+<code class="language-plaintext highlighter-rouge">chromosome-identifier</code>.</p>
+
 <h4 id="sequence-phase-relationship-observation">Sequence Phase Relationship (Observation)</h4>
 
 <p>Zeigt an, ob zwei Varianten in Cis- (gleicher Strang) oder Trans-
-(entgegengesetzter Strang) Beziehung zueinander stehen.</p>
+(entgegengesetzter Strang) Beziehung zueinander stehen — ob sie also auf derselben
+Chromosomenkopie sitzen oder auf verschiedenen. Diese Unterscheidung entscheidet
+darüber, ob zwei Varianten in demselben Gen ein Allel betreffen oder beide, und
+damit, ob eine rezessive Erkrankung vorliegt.</p>
 
-<p>Das Profil entspricht
-<a href="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship">Sequence Phase Relationship</a>
-aus dem
-<a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/">HL7 Genomics Reporting Implementation Guide STU3</a>.</p>
+<p>Canonical: <code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship</code>
+· <a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-sequence-phase-relationship.html">Profilseite</a></p>
+
+<h5 id="struktur">Struktur</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Kard.</th>
+      <th>Inhalt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Observation.code</code></td>
+      <td>1..1</td>
+      <td>fest auf LOINC <code class="language-plaintext highlighter-rouge">82120-7</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Observation.value[x]</code></td>
+      <td>1..1</td>
+      <td>die Phasenbeziehung, <code class="language-plaintext highlighter-rouge">required</code> an das ValueSet unten gebunden</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Observation.derivedFrom:variant</code></td>
+      <td>0..*</td>
+      <td>die in Beziehung gesetzten Varianten — das Profil <a href="StructureDefinition-mii-pr-molgen-variante.html">Variante</a> dieses Moduls leitet sich von dem hier referenzierten STU3-Profil ab</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Observation.derivedFrom:haplotype</code></td>
+      <td>0..*</td>
+      <td>alternativ die in Beziehung gesetzten Haplotypen</td>
+    </tr>
+  </tbody>
+</table>
 
 <h5 id="terminologie">Terminologie</h5>
 
-<h6 id="codesystem">CodeSystem</h6>
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ValueSet</td>
+      <td><a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-sequence-phase-relationship-vs.html"><code class="language-plaintext highlighter-rouge">sequence-phase-relationship-vs</code></a>, Bindung <code class="language-plaintext highlighter-rouge">required</code></td>
+    </tr>
+    <tr>
+      <td>CodeSystem</td>
+      <td><a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/CodeSystem-sequence-phase-relationship-cs.html"><code class="language-plaintext highlighter-rouge">sequence-phase-relationship-cs</code></a> — Canonical <code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/sequence-phase-relationship-cs</code>, es gehört also zu HL7 Terminology und wird im STU3-Guide nur mitgerendert</td>
+    </tr>
+  </tbody>
+</table>
 
-<p><strong>Sequence Phase Relationship CodeSystem</strong></p>
+<h5 id="erwartung">Erwartung</h5>
 
-<p><a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/CodeSystem-sequence-phase-relationship-cs.html">SequencePhaseRelationshipCS</a></p>
+<p>Beide Profile sind im
+<a href="CapabilityStatement-mii-cps-molgen-capabilitystatement.html">CapabilityStatement</a>
+mit <strong><code class="language-plaintext highlighter-rouge">MAY</code></strong> deklariert.</p>
 
-<h6 id="valueset">ValueSet</h6>
-
-<p><strong>Sequence Phase Relationship ValueSet</strong></p>
-
-<p><a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-sequence-phase-relationship-vs.html">seq-phase-relationship</a></p>
+<p>Das ist Absicht und wurde für dieses Release so entschieden. Ein <code class="language-plaintext highlighter-rouge">MAY</code> besagt: Wer
+Haplotypen oder Phasenbeziehungen austauscht, soll dafür diese STU3-Profile nehmen
+und nichts Eigenes erfinden — verpflichtet ist dazu aber niemand. Keines der beiden
+Profile trägt eine Anforderung des Kerndatensatzes, dieses Modul leitet von keinem
+etwas ab, und der Guide zeigt zu keinem ein Beispiel. Haplotype stand zuvor auf
+<code class="language-plaintext highlighter-rouge">SHALL</code> und verpflichtete Implementierende damit zu etwas, das der Guide nirgends
+vorführt; Sequence Phase Relationship war gar nicht deklariert, obwohl diese Seite
+es als verwendet darstellte. Beide werden jetzt gleich behandelt.</p>
 
 <h3 id="referenzen">Referenzen</h3>
 
@@ -507,7 +596,7 @@ Medizininformatik-Initiative.</p>
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 2, 2026 09:55+0000">2026-09-02</span>
+          Erstellt <span title="Thu, Sep 3, 2026 08:56+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

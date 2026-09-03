@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-02 | *Computable Name*:MII_PR_MolGen_TherapeutischeImplikation |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_MolGen_TherapeutischeImplikation |
 
  
 Dieses Profil beschreibt den möglichen Einfluss genetischer Merkmale auf eine medikamentöse oder nicht-medikamentöse Therapie. 
@@ -82,7 +82,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-the
   "name" : "MII_PR_MolGen_TherapeutischeImplikation",
   "title" : "MII PR MolGen Therapeutische Implikation",
   "status" : "active",
-  "date" : "2026-09-02T09:55:35+00:00",
+  "date" : "2026-09-03T08:56:49+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

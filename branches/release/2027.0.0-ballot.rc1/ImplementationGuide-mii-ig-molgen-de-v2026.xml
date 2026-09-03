@@ -1887,10 +1887,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/mii-pr-molgen-molekularer-biomarker"/>
+        <reference value="StructureDefinition/mii-pr-molgen-molekulare-konsequenz"/>
       </reference>
-      <name value="MII PR MolGen Molekulare Biomarker"/>
-      <description value="Dieses Profil beschreibt molekulare Biomarker, z.B. genübergreifende Biomarker wie Tumormutationslast (TMB) oder Mikrosatelliteninstabilität (MSI). Es ist ein abstraktes Profil, konkrete Biomarker-Profile erben davon."/>
+      <name value="MII PR MolGen Molekulare Konsequenz"/>
+      <description value="Dieses Profil beschreibt den Zusammenhang von bestimmten Varianten, Haplotypen oder Genotypen und bestimmten Konsequenzen auf molekularer Ebene."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1898,10 +1898,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/mii-pr-molgen-molekulare-konsequenz"/>
+        <reference value="StructureDefinition/mii-pr-molgen-molekularer-biomarker"/>
       </reference>
-      <name value="MII PR MolGen Molekulare Konsequenz"/>
-      <description value="Dieses Profil beschreibt den Zusammenhang von bestimmten Varianten, Haplotypen oder Genotypen und bestimmten Konsequenzen auf molekularer Ebene."/>
+      <name value="MII PR MolGen Molekularer Biomarker"/>
+      <description value="Dieses Profil beschreibt molekulare Biomarker, z.B. genübergreifende Biomarker wie Tumormutationslast (TMB) oder Mikrosatelliteninstabilität (MSI). Es ist ein abstraktes Profil, konkrete Biomarker-Profile erben davon."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

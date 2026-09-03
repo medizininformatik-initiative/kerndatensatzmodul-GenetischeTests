@@ -400,17 +400,81 @@ MII-Namenskonventionen). Die Extensions des Moduls stehen auf der Seite
       <td>Analyse der genomischen Studie</td>
     </tr>
     <tr>
-      <td>MII_PR_MolGen_Mikrosatelliteninstabilitaet</td>
+      <td>MII_PR_MolGen_MolekularerBiomarker</td>
       <td>molecular-biomarker</td>
+      <td>Basisprofil der Biomarker-Profile dieses Moduls</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="profile-die-von-einem-anderen-profil-dieses-moduls-abstammen">Profile, die von einem anderen Profil dieses Moduls abstammen</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Profilname</th>
+      <th>Parent-Profil</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MII_PR_MolGen_Mikrosatelliteninstabilitaet</td>
+      <td>MII_PR_MolGen_MolekularerBiomarker</td>
       <td>MSI-Status</td>
     </tr>
     <tr>
       <td>MII_PR_MolGen_Mutationslast</td>
-      <td>molecular-biomarker</td>
+      <td>MII_PR_MolGen_MolekularerBiomarker</td>
       <td>Tumor-Mutationslast</td>
     </tr>
   </tbody>
 </table>
+
+<p>Beide erreichen Clinical Genomics STU3 über MII_PR_MolGen_MolekularerBiomarker,
+nicht direkt.</p>
+
+<h5 id="zwei-canonical-schemata--absicht-kein-versehen">Zwei Canonical-Schemata — Absicht, kein Versehen</h5>
+
+<p>Zwölf Profile tragen ein kurzes Canonical, vier eines mit dem Präfix
+<code class="language-plaintext highlighter-rouge">mii-pr-molgen-</code>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Schema</th>
+      <th>Canonical endet auf</th>
+      <th>Profile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>kurz</td>
+      <td><code class="language-plaintext highlighter-rouge">…/StructureDefinition/variante</code></td>
+      <td>die zwölf älteren Profile</td>
+    </tr>
+    <tr>
+      <td>mit Präfix</td>
+      <td><code class="language-plaintext highlighter-rouge">…/StructureDefinition/mii-pr-molgen-genomic-study</code></td>
+      <td>GenomicStudy, GenomicStudyAnalysis, MolekulareKonsequenz, MolekularerBiomarker</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Die vier präfixierten kamen bei der Migration auf Clinical Genomics STU3 hinzu und
+haben den Präfix aus ihren Ids übernommen. Die beiden GenomicStudy-Profile behielten
+zudem ihre englischen Namen, während das Modul sonst deutsch benennt.</p>
+
+<p><strong>Das wird nicht vereinheitlicht.</strong> Alle vier Canonicals sind mit Version 2026.0.4
+ausgeliefert und damit feste Identität: wer diese Version einsetzt, hat die URLs in
+Profilbindungen, in <code class="language-plaintext highlighter-rouge">meta.profile</code> und in Suchabfragen stehen. Ein Umbenennen bräche
+diese Referenzen, und eine Ballotierung ist dafür der falsche Zeitpunkt — die
+Prüfenden würden Inhalte begutachten und gleichzeitig mit kaputten Referenzen
+kämpfen. Ob modulübergreifend eine gemeinsame Konvention gelten soll, ist eine Frage
+für die TF-KDS und nicht für dieses Modul allein.</p>
+
+<p>Wer eine Referenz von Hand schreibt, nimmt das Canonical von der Profilseite selbst
+und leitet es nicht aus dem Profilnamen ab.</p>
 
 <h5 id="profile-direkt-von-fhir-r4">Profile direkt von FHIR R4</h5>
 
@@ -843,7 +907,7 @@ MII-Namenskonventionen). Die Extensions des Moduls stehen auf der Seite
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 2, 2026 09:55+0000">2026-09-02</span>
+          Erstellt <span title="Thu, Sep 3, 2026 08:56+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

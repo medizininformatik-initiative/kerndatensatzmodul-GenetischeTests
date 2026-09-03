@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_PR_MolGen_GenomicStudy |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_PR_MolGen_GenomicStudy |
 
  
 Genomic Study ist ein Profil, dass die Durchführung von übergeorndenten molekulargenetischen Untersuchungen (Studies) beschreibt. Einzelne Assays werden dann als GenomicStudyAnalysis abgebildet. Es ist vom GenomicStudy-Profils aus dem Genomics Reporting IG abgeleitet . 
@@ -61,6 +61,7 @@ Beispiel 1: GenomicStudy für Panel-Sequenzierung
 **Usages:**
 
 * Examples for this Profile: [Procedure/mii-exa-molgen-genomic-study-1](Procedure-mii-exa-molgen-genomic-study-1.md), [Procedure/mii-exa-molgen-genomic-study-comprehensive-wes](Procedure-mii-exa-molgen-genomic-study-comprehensive-wes.md), [Procedure/mii-exa-molgen-genomic-study-cornelia-de-lange](Procedure-mii-exa-molgen-genomic-study-cornelia-de-lange.md), [Procedure/mii-exa-molgen-genomic-study-trurisk-panel](Procedure-mii-exa-molgen-genomic-study-trurisk-panel.md) and [Procedure/mii-exa-molgen-genomic-study-tso500](Procedure-mii-exa-molgen-genomic-study-tso500.md)
+* CapabilityStatements using this Profile: [MII CPS MolGen CapabilityStatement](CapabilityStatement-mii-cps-molgen-capabilitystatement.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.molgen|current/StructureDefinition/StructureDefinition-mii-pr-molgen-genomic-study.json)
 
@@ -129,7 +130,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "name" : "MII_PR_MolGen_GenomicStudy",
   "title" : "MII PR MolGen Genomic Study",
   "status" : "active",
-  "date" : "2026-09-02T09:55:35+00:00",
+  "date" : "2026-09-03T08:56:49+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

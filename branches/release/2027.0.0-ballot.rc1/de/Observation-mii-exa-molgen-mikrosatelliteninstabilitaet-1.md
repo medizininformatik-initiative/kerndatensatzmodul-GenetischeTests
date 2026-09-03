@@ -12,7 +12,7 @@
 
 -------
 
-Profiles: [MII PR MolGen Mikrosatelliteninstabilität](StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.md) version: 2027.0.0-ballot.rc1, [http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/msi|3.0.0](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&canonical=http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/msi|3.0.0)
+Profiles: [MII PR MolGen Mikrosatelliteninstabilität](StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.md) version: 2027.0.0-ballot.rc1, [Molecular Biomarker](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-molecular-biomarker.html) version: 3.0.0
 
 **status**: Final
 
@@ -36,7 +36,7 @@ Profiles: [MII PR MolGen Mikrosatelliteninstabilität](StructureDefinition-mii-p
   "id" : "mii-exa-molgen-mikrosatelliteninstabilitaet-1",
   "meta" : {
     "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet|2027.0.0-ballot.rc1",
-    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/msi|3.0.0"]
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-biomarker|3.0.0"]
   },
   "status" : "final",
   "category" : [{

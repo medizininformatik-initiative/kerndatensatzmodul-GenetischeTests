@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_PR_MolGen_AnforderungGenetischerTest |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_PR_MolGen_AnforderungGenetischerTest |
 
  
 Der Laborauftrag oder die Anfrage, die die Durchführung des genetischen Tests auslöst. 
@@ -157,7 +157,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "name" : "MII_PR_MolGen_AnforderungGenetischerTest",
   "title" : "MII PR MolGen Anforderung genetischer Test",
   "status" : "active",
-  "date" : "2026-09-02T09:55:35+00:00",
+  "date" : "2026-09-03T08:56:49+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

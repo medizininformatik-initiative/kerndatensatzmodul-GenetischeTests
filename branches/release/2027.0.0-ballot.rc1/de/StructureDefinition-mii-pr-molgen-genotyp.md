@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_PR_MolGen_Genotyp |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_PR_MolGen_Genotyp |
 
  
 Dieses Profil beschreibt die Feststellung eines bestimmten Genotyps auf der Grundlage einer oder mehrerer Varianten oder Haplotypen. 
@@ -32,7 +32,7 @@ Das Profil ist abgeleitet vom Profil [Genotype](http://hl7.org/fhir/uv/genomics-
 
 -------
 
-| FHIR-Element | Logischer Datensatz | |—|—| | Observation.component:gene-studied | Methoden.Getestete Gene | | Observation.component:CytogenicLocation | Ergebnisse.Veränderungen.Zytogenetische Lokalisierung | | Observation.component:RefSequenceAssembly | Ergebnisse.Veränderungen.Referenzgenom | | Observation.device | Methoden.Geräte / Software / Kits | | Observation.method | Methoden.Methode | | Observation.performer | Weiteres.Labor / Institution/ Ansprechpartner |
+| FHIR-Element | Logischer Datensatz | |—|—| | Observation.component:gene-studied | Methoden.Getestete Gene | | Observation.component:cytogenetic-location | Ergebnisse.Veränderungen.Zytogenetische Lokalisierung | | Observation.component:reference-sequence-assembly | Ergebnisse.Veränderungen.Referenzgenom | | Observation.device | Methoden.Geräte / Software / Kits | | Observation.method | Methoden.Methode | | Observation.performer | Weiteres.Labor / Institution/ Ansprechpartner |
 
 -------
 
@@ -123,7 +123,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "name" : "MII_PR_MolGen_Genotyp",
   "title" : "MII PR MolGen Genotyp",
   "status" : "active",
-  "date" : "2026-09-02T09:55:35+00:00",
+  "date" : "2026-09-03T08:56:49+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

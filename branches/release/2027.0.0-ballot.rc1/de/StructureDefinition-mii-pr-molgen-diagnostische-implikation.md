@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_PR_MolGen_DiagnostischeImplikation |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_PR_MolGen_DiagnostischeImplikation |
 
  
 Dieses Profil beschreibt den Zusammenhang zwischen einem oder mehreren Genotyp/Haplotyp/Varianten und Beweisen für oder gegen eine bestimmte Krankheit. 
@@ -32,7 +32,7 @@ Das Profil ist abgeleitet vom Profil [Diagnostic Implication](http://hl7.org/fhi
 
 | | |
 | :--- | :--- |
-| Observation.component:associated-phenotype | Interpretation.Assoziierter Phänotyp |
+| Observation.component:predicted-phenotype | Interpretation.Assoziierter Phänotyp |
 | Observation.component:evidence-level | Interpretation.Clinical Annotation Level Of Evidence |
 | Observation.component:mode-of-inheritance | Interpretation.Vererbungsmodus |
 | Observation.component:conclusion-string | Interpretation.Zusammenfassung |
@@ -153,7 +153,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "name" : "MII_PR_MolGen_DiagnostischeImplikation",
   "title" : "MII PR MolGen Diagnostische Implikation",
   "status" : "active",
-  "date" : "2026-09-02T09:55:35+00:00",
+  "date" : "2026-09-03T08:56:49+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

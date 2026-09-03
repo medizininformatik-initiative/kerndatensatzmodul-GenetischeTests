@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/LogicalModelMolGen | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-02 | *Computable Name*:MII_LM_MolGen_LogicalModel |
+| Active as of 2026-09-03 | *Computable Name*:MII_LM_MolGen_LogicalModel |
 
  
 LogicalModel des MII Moduls Molekulargenetischer Befundbericht 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](../StructureDefinition-LogicalModelMolGe
   "name" : "MII_LM_MolGen_LogicalModel",
   "title" : "MII LM MolGen LogicalModel",
   "status" : "active",
-  "date" : "2026-09-02T09:55:35+00:00",
+  "date" : "2026-09-03T08:56:49+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

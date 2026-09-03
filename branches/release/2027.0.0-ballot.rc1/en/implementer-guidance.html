@@ -413,39 +413,64 @@ created.</p>
 
 <h3 id="upstream-profiles-from-hl7-genomics-reporting">Upstream Profiles from HL7 Genomics Reporting</h3>
 
-<!-- TODO:REVIEW This grouping heading and the following lead-in sentence were
-     added editorially, to implement the requirement that the two profiles below
-     are not profiled by this module. The statement itself comes from the source
-     pages ("stammt aus" / "entspricht ... aus HL7 Genomics Reporting
-     Implementation Guide STU3"). -->
+<p>This module is built on
+<a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/">HL7 Genomics Reporting STU3</a>
+throughout, not merely alongside it. Counted from the built artifacts, the
+dependency is:</p>
 
-<p>The following two profiles come from the
-<a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/">HL7 Genomics Reporting Implementation Guide STU3</a>
-and are not profiled by this module itself. They are described here because they
-are used together with this module's profiles when implementing genetic reports.</p>
+<table>
+  <thead>
+    <tr>
+      <th>How the module uses STU3</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Own profiles that inherit directly from an STU3 profile</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>Own profiles that inherit indirectly (via MII_PR_MolGen_MolekularerBiomarker)</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Own extensions that inherit from an STU3 extension</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>STU3 extensions used in the profiles</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>STU3 ValueSets bound</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Code systems taken from STU3</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Which of this module's profiles derives from which STU3 profile is listed in the
+<a href="profiles.html">inheritance table on the Profiles page</a>. <strong>This section is about
+something narrower</strong>: the two STU3 profiles that this module uses <strong>as they are</strong>,
+without deriving a profile of its own from them. They have no page under
+<a href="artifacts.html">Artifacts</a> for that reason, so they are described here.</p>
 
 <h4 id="haplotype-observation">Haplotype (Observation)</h4>
 
 <p>This profile describes the determination of a particular haplotype on the basis
 of one or more variants.</p>
 
-<p>Canonical: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype</p>
+<p>Canonical: <code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype</code>
+· <a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html">Profile page</a></p>
 
-<!-- TODO:REVIEW The link target in the following sentence ends in ".html.html"
-     in the source page and is therefore presumably broken. Taken over
-     unchanged, because link targets must not be altered in this migration. -->
+<h5 id="components">Components</h5>
 
-<p>The profile
-<a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-haplotype.html">Haplotype</a>
-comes from the
-<a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/">HL7 Genomics Reporting Implementation Guide</a>.</p>
-
-<h5 id="profile">Profile</h5>
-
-<!-- TODO:REVIEW The right-hand cells name elements of the German logical model
-     ("Methoden.Getestete Gene", "Ergebnisse.Veränderungen.Zytogenetische
-     Lokalisierung") and are left untranslated, because they are element paths,
-     not prose. -->
+<p>STU3 defines five component slices on this profile. Two of them carry elements of
+the logical dataset of this module:</p>
 
 <table>
   <thead>
@@ -456,39 +481,99 @@ comes from the
   </thead>
   <tbody>
     <tr>
-      <td>Observation.component:gene-studied</td>
+      <td><code class="language-plaintext highlighter-rouge">Observation.component:gene-studied</code></td>
       <td>Methoden.Getestete Gene</td>
     </tr>
     <tr>
-      <td>Observation.component:CytogenicLocation</td>
+      <td><code class="language-plaintext highlighter-rouge">Observation.component:cytogenetic-location</code></td>
       <td>Ergebnisse.Veränderungen.Zytogenetische Lokalisierung</td>
     </tr>
   </tbody>
 </table>
 
+<p>The remaining three are available but are not mapped to the logical dataset:
+<code class="language-plaintext highlighter-rouge">conclusion-string</code>, <code class="language-plaintext highlighter-rouge">reference-sequence-assembly</code> and <code class="language-plaintext highlighter-rouge">chromosome-identifier</code>.</p>
+
 <h4 id="sequence-phase-relationship-observation">Sequence Phase Relationship (Observation)</h4>
 
 <p>Indicates whether two variants are in a cis (same strand) or trans (opposite
-strand) relationship to each other.</p>
+strand) relationship to each other — that is, whether they sit on the same copy of
+a chromosome or on different ones. The distinction decides whether two variants in
+the same gene affect one allele or both, and therefore whether a recessive
+condition is present.</p>
 
-<p>The profile corresponds to
-<a href="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship">Sequence Phase Relationship</a>
-from the
-<a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/">HL7 Genomics Reporting Implementation Guide STU3</a>.</p>
+<p>Canonical: <code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship</code>
+· <a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-sequence-phase-relationship.html">Profile page</a></p>
+
+<h5 id="structure">Structure</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Card.</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Observation.code</code></td>
+      <td>1..1</td>
+      <td>fixed to LOINC <code class="language-plaintext highlighter-rouge">82120-7</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Observation.value[x]</code></td>
+      <td>1..1</td>
+      <td>the phase relationship, bound <code class="language-plaintext highlighter-rouge">required</code> to the ValueSet below</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Observation.derivedFrom:variant</code></td>
+      <td>0..*</td>
+      <td>the variants being related — the <a href="StructureDefinition-mii-pr-molgen-variante.html">Variante</a> profile of this module derives from the STU3 profile referenced here</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Observation.derivedFrom:haplotype</code></td>
+      <td>0..*</td>
+      <td>alternatively, the haplotypes being related</td>
+    </tr>
+  </tbody>
+</table>
 
 <h5 id="terminology">Terminology</h5>
 
-<h6 id="codesystem">CodeSystem</h6>
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ValueSet</td>
+      <td><a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-sequence-phase-relationship-vs.html"><code class="language-plaintext highlighter-rouge">sequence-phase-relationship-vs</code></a>, binding <code class="language-plaintext highlighter-rouge">required</code></td>
+    </tr>
+    <tr>
+      <td>CodeSystem</td>
+      <td><a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/CodeSystem-sequence-phase-relationship-cs.html"><code class="language-plaintext highlighter-rouge">sequence-phase-relationship-cs</code></a> — canonical <code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/sequence-phase-relationship-cs</code>, i.e. it belongs to HL7 Terminology and is only rendered in the STU3 guide</td>
+    </tr>
+  </tbody>
+</table>
 
-<p><strong>Sequence Phase Relationship CodeSystem</strong></p>
+<h5 id="expectation">Expectation</h5>
 
-<p><a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/CodeSystem-sequence-phase-relationship-cs.html">SequencePhaseRelationshipCS</a></p>
+<p>Both profiles are declared in the
+<a href="CapabilityStatement-mii-cps-molgen-capabilitystatement.html">CapabilityStatement</a>
+with <strong><code class="language-plaintext highlighter-rouge">MAY</code></strong>.</p>
 
-<h6 id="valueset">ValueSet</h6>
-
-<p><strong>Sequence Phase Relationship ValueSet</strong></p>
-
-<p><a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-sequence-phase-relationship-vs.html">seq-phase-relationship</a></p>
+<p>That is deliberate, and it was decided for this release. A <code class="language-plaintext highlighter-rouge">MAY</code> says: if you
+exchange haplotypes or phase relationships, use these STU3 profiles rather than
+inventing your own — but nothing in the core dataset of this module obliges you to
+produce them. Neither profile carries a core dataset requirement, this module
+derives nothing from either of them, and the guide shows no example of either.
+Haplotype previously stood at <code class="language-plaintext highlighter-rouge">SHALL</code>, which obliged implementers to support
+something the guide never demonstrates; Sequence Phase Relationship was not declared
+at all, although this page presented it as used. Both are now stated the same way.</p>
 
 <h3 id="references">References</h3>
 
@@ -538,7 +623,7 @@ Initiative.</p>
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 2, 2026 09:55+0000">2026-09-02</span>
+          Generated <span title="Thu, Sep 3, 2026 08:56+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

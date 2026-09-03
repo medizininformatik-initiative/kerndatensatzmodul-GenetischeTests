@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-02 | *Computable Name*:MII_PR_MolGen_GenomicStudyAnalysis |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_MolGen_GenomicStudyAnalysis |
 
  
 Genomic Study Analysis ist ein Profil, das die Durchführung von konkreten molekulargenetischen Methoden und Assays beschreibt. Es ist vom GenomicStudyAnalysis-Profil aus dem Genomics Reporting IG abgeleitet. Die Darstellung über GenomicStudyAnalysis ist präziser als die vorherige UntersuchteRegion, da sie eine klare Repräsentation ermöglicht, welche Regionen mit welchem Assay untersucht wurden und welche Bereiche callable bzw. nicht-callable waren. Dies ermöglicht eine genauere Qualitätsbewertung und Interpretation der Ergebnisse, insbesondere bei negativen Befunden. 
@@ -57,6 +57,7 @@ Example 1: GenomicStudyAnalysis for exome sequencing
 **Usages:**
 
 * Examples for this Profile: [Procedure/mii-exa-molgen-genomic-study-analysis-braf](Procedure-mii-exa-molgen-genomic-study-analysis-braf.md), [Procedure/mii-exa-molgen-genomic-study-analysis-cornelia-de-lange](Procedure-mii-exa-molgen-genomic-study-analysis-cornelia-de-lange.md), [Procedure/mii-exa-molgen-genomic-study-analysis-trurisk-panel](Procedure-mii-exa-molgen-genomic-study-analysis-trurisk-panel.md), [Procedure/mii-exa-molgen-genomic-study-analysis-tso500-libprep](Procedure-mii-exa-molgen-genomic-study-analysis-tso500-libprep.md)... Show 4 more, [Procedure/mii-exa-molgen-genomic-study-analysis-tso500-sequencing](Procedure-mii-exa-molgen-genomic-study-analysis-tso500-sequencing.md), [Procedure/mii-exa-molgen-genomic-study-analysis-wes-bioinformatics](Procedure-mii-exa-molgen-genomic-study-analysis-wes-bioinformatics.md), [Procedure/mii-exa-molgen-genomic-study-analysis-wes-library-prep](Procedure-mii-exa-molgen-genomic-study-analysis-wes-library-prep.md) and [Procedure/mii-exa-molgen-genomic-study-analysis-wes-sequencing](Procedure-mii-exa-molgen-genomic-study-analysis-wes-sequencing.md)
+* CapabilityStatements using this Profile: [MII CPS MolGen CapabilityStatement](CapabilityStatement-mii-cps-molgen-capabilitystatement.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.molgen|current/StructureDefinition/StructureDefinition-mii-pr-molgen-genomic-study-analysis.json)
 
@@ -81,7 +82,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-gen
   "name" : "MII_PR_MolGen_GenomicStudyAnalysis",
   "title" : "MII PR MolGen Genomic Study Analysis",
   "status" : "active",
-  "date" : "2026-09-02T09:55:35+00:00",
+  "date" : "2026-09-03T08:56:49+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
