@@ -21,7 +21,7 @@
 # │                           placeholder that appears in FILE NAMES — three:          │
 # │                           input/translations/de/ImplementationGuide-mii-ig-        │
 # │                           molgen.po and the IG intro page                 │
-# │                           ImplementationGuide-mii-ig-molgen-de-v2026.md in         │
+# │                           ImplementationGuide-mii-ig-molgen.md in         │
 # │                           input/pagecontent/ + its German mirror. All three        │
 # │                           must be RENAMED as well as substituted                   │
 # │                           (docs/recipes/create-a-new-module.md step 4; .po         │
@@ -73,7 +73,12 @@
 
 # id pattern per the MII naming convention: mii-ig-<slug>
 # (for example, kerndatensatz-basis uses `mii-ig-base`).
-id: mii-ig-molgen-de-v2026  # Quelle gewinnt (sushi-config.yaml der Quelle); Template-Muster waere mii-ig-molgen -- die id benennt ImplementationGuide-<id>.json, die .po-Datei und ig.ini ig=
+id: mii-ig-molgen  # Template-Muster. Die Migration hatte zunaechst die Quell-ID
+                   # mii-ig-molgen-de-v2026 behalten ("Quelle gewinnt"); Jahr und
+                   # Sprache gehoeren aber nicht in die Identitaet - das Jahr steht
+                   # in version, die Sprache in der Uebersetzung. Die id benennt
+                   # ImplementationGuide-<id>.json, die .po-Datei, den pages-Schluessel
+                   # und ig.ini ig= -- alle vier muessen zusammenpassen (P5).
 # Canonical pattern per the MII convention:
 # https://www.medizininformatik-initiative.de/fhir/modul-<slug>
 # (for example, kerndatensatz-basis uses
@@ -84,7 +89,7 @@ id: mii-ig-molgen-de-v2026  # Quelle gewinnt (sushi-config.yaml der Quelle); Tem
 canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen  # Quelle gewinnt -- ein publizierter canonical wird NIE geaendert (Guardrail 1); Template-Muster waere .../fhir/modul-molgen
 # name pattern per the MII convention: MII_IG_<Name>
 # (for example, kerndatensatz-basis uses `MII_IG_Base`).
-name: MII_IG_MolGen_DE  # Quelle
+name: MII_IG_MolGen  # ohne Sprachsuffix: die Sprache steckt in der Uebersetzung, nicht in der Identitaet
 # title pattern: "MII Implementation Guide <Title>" (for example,
 # kerndatensatz-basis uses "MII Implementation Guide Core Dataset Base").
 title: MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht  # Quelle gewinnt (deutscher Titel, wie publiziert); Template-Muster waere "MII Implementation Guide <Title>"
@@ -352,13 +357,13 @@ pages:
   # the kerndatensatz-basis idiom (ImplementationGuide-mii-ig-base.md there).
   # BOTH this entry's key and the two source files carry molgen in
   # their NAME: like the IG-level .po catalogue, rename
-  # input/pagecontent/ImplementationGuide-mii-ig-molgen-de-v2026.md and its
+  # input/pagecontent/ImplementationGuide-mii-ig-molgen.md and its
   # German mirror under input/translations/de/pagecontent/ when you set your
   # slug (docs/recipes/create-a-new-module.md step 4). The CI self-check
   # substitutes and renames all of them for the template repo's own preview.
-  # NOTE: derived from the module ID (mii-ig-molgen-de-v2026), NOT from the slug --
+  # NOTE: derived from the module ID (mii-ig-molgen), NOT from the slug --
   # SUSHI writes ImplementationGuide-<id>.json from the id and nothing else (check P5).
-  ImplementationGuide-mii-ig-molgen-de-v2026.md:
+  ImplementationGuide-mii-ig-molgen.md:
     title: MII ImplementationGuide Resource
 
   translationinfo.md:
