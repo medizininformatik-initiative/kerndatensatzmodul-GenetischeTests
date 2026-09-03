@@ -2723,13 +2723,13 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html"
+        "valueUri" : "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/mii-pr-molgen-molekularer-biomarker"
+        "reference" : "StructureDefinition/mii-pr-molgen-molekulare-konsequenz"
       },
-      "name" : "MII PR MolGen Molekulare Biomarker",
-      "description" : "Dieses Profil beschreibt molekulare Biomarker, z.B. genübergreifende Biomarker wie Tumormutationslast (TMB) oder Mikrosatelliteninstabilität (MSI). Es ist ein abstraktes Profil, konkrete Biomarker-Profile erben davon.",
+      "name" : "MII PR MolGen Molekulare Konsequenz",
+      "description" : "Dieses Profil beschreibt den Zusammenhang von bestimmten Varianten, Haplotypen oder Genotypen und bestimmten Konsequenzen auf molekularer Ebene.",
       "exampleBoolean" : false
     },
     {
@@ -2739,13 +2739,13 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html"
+        "valueUri" : "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/mii-pr-molgen-molekulare-konsequenz"
+        "reference" : "StructureDefinition/mii-pr-molgen-molekularer-biomarker"
       },
-      "name" : "MII PR MolGen Molekulare Konsequenz",
-      "description" : "Dieses Profil beschreibt den Zusammenhang von bestimmten Varianten, Haplotypen oder Genotypen und bestimmten Konsequenzen auf molekularer Ebene.",
+      "name" : "MII PR MolGen Molekularer Biomarker",
+      "description" : "Dieses Profil beschreibt molekulare Biomarker, z.B. genübergreifende Biomarker wie Tumormutationslast (TMB) oder Mikrosatelliteninstabilität (MSI). Es ist ein abstraktes Profil, konkrete Biomarker-Profile erben davon.",
       "exampleBoolean" : false
     },
     {

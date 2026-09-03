@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_PR_MolGen_Variante |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_PR_MolGen_Variante |
 
  
 Dieses Profil ermöglicht eine vollständige Beschreibung der gefundenen Variante unter Verwendung von Eigenschaften aus einer Vielzahl von Testmethoden. 
@@ -102,7 +102,7 @@ Beispiel 4: Variante BRCA1
 
 **Usages:**
 
-* Refer to this Profile: [MII PR MolGen Diagnostische Implikation](StructureDefinition-mii-pr-molgen-diagnostische-implikation.md), [MII PR MolGen Molekulare Konsequenz](StructureDefinition-mii-pr-molgen-molekulare-konsequenz.md), [MII PR MolGen Molekulare Biomarker](StructureDefinition-mii-pr-molgen-molekularer-biomarker.md), [MII PR MolGen Molekulargenetischer Befundbericht](StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.md) and [MII PR MolGen Therapeutische Implikation](StructureDefinition-mii-pr-molgen-therapeutische-implikation.md)
+* Refer to this Profile: [MII PR MolGen Diagnostische Implikation](StructureDefinition-mii-pr-molgen-diagnostische-implikation.md), [MII PR MolGen Molekulare Konsequenz](StructureDefinition-mii-pr-molgen-molekulare-konsequenz.md), [MII PR MolGen Molekularer Biomarker](StructureDefinition-mii-pr-molgen-molekularer-biomarker.md), [MII PR MolGen Molekulargenetischer Befundbericht](StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.md) and [MII PR MolGen Therapeutische Implikation](StructureDefinition-mii-pr-molgen-therapeutische-implikation.md)
 * Examples for this Profile: [Observation/mii-exa-molgen-variante-1](Observation-mii-exa-molgen-variante-1.md), [Observation/mii-exa-molgen-variante-2](Observation-mii-exa-molgen-variante-2.md), [Observation/mii-exa-molgen-variante-brca1](Observation-mii-exa-molgen-variante-brca1.md), [Observation/mii-exa-molgen-variante-cnv-4](Observation-mii-exa-molgen-variante-cnv-4.md)... Show 3 more, [Observation/mii-exa-molgen-variante-comprehensive-pathogenic](Observation-mii-exa-molgen-variante-comprehensive-pathogenic.md), [Observation/mii-exa-molgen-variante-fgfr2-fusion](Observation-mii-exa-molgen-variante-fgfr2-fusion.md) and [Observation/mii-exa-molgen-variante-srcc-ctnna1](Observation-mii-exa-molgen-variante-srcc-ctnna1.md)
 * CapabilityStatements using this Profile: [MII CPS MolGen CapabilityStatement](CapabilityStatement-mii-cps-molgen-capabilitystatement.md)
 
@@ -179,7 +179,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "name" : "MII_PR_MolGen_Variante",
   "title" : "MII PR MolGen Variante",
   "status" : "active",
-  "date" : "2026-09-02T15:03:15+00:00",
+  "date" : "2026-09-03T06:40:42+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

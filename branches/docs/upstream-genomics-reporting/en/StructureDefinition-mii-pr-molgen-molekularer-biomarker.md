@@ -1,15 +1,15 @@
-# MII PR MolGen Molekulare Biomarker - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc1
+# MII PR MolGen Molekularer Biomarker - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **MII PR MolGen Molekulare Biomarker**
+* **MII PR MolGen Molekularer Biomarker**
 
-## Resource Profile: MII PR MolGen Molekulare Biomarker 
+## Resource Profile: MII PR MolGen Molekularer Biomarker 
 
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekularer-biomarker | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-02 | *Computable Name*:MII_PR_MolGen_MolekularerBiomarker |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_MolGen_MolekularerBiomarker |
 
  
 Dieses Profil beschreibt molekulare Biomarker, z.B. genübergreifende Biomarker wie Tumormutationslast (TMB) oder Mikrosatelliteninstabilität (MSI). Es ist ein abstraktes Profil, konkrete Biomarker-Profile erben davon. 
@@ -41,9 +41,9 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-mol
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekularer-biomarker",
   "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_MolGen_MolekularerBiomarker",
-  "title" : "MII PR MolGen Molekulare Biomarker",
+  "title" : "MII PR MolGen Molekularer Biomarker",
   "status" : "active",
-  "date" : "2026-09-02T15:03:15+00:00",
+  "date" : "2026-09-03T06:40:42+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

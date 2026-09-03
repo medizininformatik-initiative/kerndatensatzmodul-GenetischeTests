@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:AgilentSureSelectV7 |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:AgilentSureSelectV7 |
 
  
 Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the human exome 
@@ -27,7 +27,7 @@ Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the hu
 * **Actions: **: **Title: **
   * : Agilent SureSelect Human All Exon V7 Kit Protocol
 * **Actions: **: **Date: **
-  * : 2026-09-02 15:03:15+0000
+  * : 2026-09-03 06:40:42+0000
 * **Actions: **: **Publisher: **
   * : Medizininformatik-Initiative
 * **Actions: **: **Description: **
@@ -55,7 +55,7 @@ Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the hu
     }]
   },
   "status" : "active",
-  "date" : "2026-09-02T15:03:15+00:00",
+  "date" : "2026-09-03T06:40:42+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "contact" : [{
     "name" : "Medizininformatik-Initiative",

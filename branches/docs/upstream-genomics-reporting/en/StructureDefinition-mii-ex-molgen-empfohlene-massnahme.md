@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-massnahme | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-02 | *Computable Name*:MII_EX_MolGen_EmpfohleneMassnahme |
+| Active as of 2026-09-03 | *Computable Name*:MII_EX_MolGen_EmpfohleneMassnahme |
 
 Die Extension verweist auf eine vorgeschlagene Maßnahme, die auf der Grundlage der Ergebnisse des Befundberichts empfohlen wird.
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-molgen-emp
   "name" : "MII_EX_MolGen_EmpfohleneMassnahme",
   "title" : "MII EX MolGen Empfohlene Maßnahme",
   "status" : "active",
-  "date" : "2026-09-02T15:03:15+00:00",
+  "date" : "2026-09-03T06:40:42+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

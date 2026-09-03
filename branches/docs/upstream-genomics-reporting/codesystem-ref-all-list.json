@@ -103,8 +103,8 @@
     "oids" : ["2.16.840.1.113883.4.642.4.114"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-request-intent.html" : "RequestIntent",
-    "http://hl7.org/fhir/R4/valueset-task-intent.html" : "TaskIntent"
+    "http://hl7.org/fhir/R4/valueset-task-intent.html" : "TaskIntent",
+    "http://hl7.org/fhir/R4/valueset-request-intent.html" : "RequestIntent"
   },
   {
     "url" : "http://hl7.org/fhir/request-priority",
@@ -231,25 +231,25 @@
     "oids" : ["2.16.840.1.113883.6.1"],
     "uses" : {
     },
-    "https://loinc.org/LL4034-6" : "LOINC Answer Codes for LL4034-6",
-    "https://loinc.org/LL5323-2" : "LOINC Answer Codes for LL5323-2",
-    "https://loinc.org/LL5489-1" : "LOINC Answer Codes for LL5489-1",
-    "https://loinc.org/LL1037-2" : "LOINC Answer Codes for LL1037-2",
-    "https://loinc.org/LL381-5" : "LOINC Answer Codes for LL381-5",
-    "https://loinc.org/LL2938-0" : "LOINC Answer Codes for LL2938-0",
-    "https://loinc.org/LL541-4" : "LOINC Answer Codes for LL541-4",
-    "https://loinc.org/LL378-1" : "LOINC Answer Codes for LL378-1",
-    "https://loinc.org/LL4049-4" : "LOINC Answer Codes for LL4049-4",
-    "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
-    "https://loinc.org/LL1971-2" : "LOINC Answer Codes for LL1971-2",
-    "https://loinc.org/LL3994-2" : "LOINC Answer Codes for LL3994-2",
-    "https://loinc.org/LL380-7" : "LOINC Answer Codes for LL380-7",
     "https://loinc.org/LL1040-6" : "LOINC Answer Codes for LL1040-6",
-    "https://loinc.org/LL4050-2" : "LOINC Answer Codes for LL4050-2",
+    "https://loinc.org/LL2938-0" : "LOINC Answer Codes for LL2938-0",
+    "https://loinc.org/LL4049-4" : "LOINC Answer Codes for LL4049-4",
+    "https://loinc.org/LL1971-2" : "LOINC Answer Codes for LL1971-2",
     "http://hl7.org/fhir/R4/valueset-report-codes.html" : "LOINC Diagnostic Report Codes",
-    "https://loinc.org/LL4048-6" : "LOINC Answer Codes for LL4048-6",
     "http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-genetic-therapeutic-implications-vs.html" : "Genetic Therapeutic Implications",
-    "http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-molecular-biomarker-code-vs.html" : "Molecular Biomarker Codes"
+    "https://loinc.org/LL3994-2" : "LOINC Answer Codes for LL3994-2",
+    "https://loinc.org/LL5323-2" : "LOINC Answer Codes for LL5323-2",
+    "https://loinc.org/LL1037-2" : "LOINC Answer Codes for LL1037-2",
+    "https://loinc.org/LL378-1" : "LOINC Answer Codes for LL378-1",
+    "https://loinc.org/LL541-4" : "LOINC Answer Codes for LL541-4",
+    "https://loinc.org/LL5489-1" : "LOINC Answer Codes for LL5489-1",
+    "https://loinc.org/LL4034-6" : "LOINC Answer Codes for LL4034-6",
+    "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
+    "https://loinc.org/LL4050-2" : "LOINC Answer Codes for LL4050-2",
+    "https://loinc.org/LL4048-6" : "LOINC Answer Codes for LL4048-6",
+    "https://loinc.org/LL380-7" : "LOINC Answer Codes for LL380-7",
+    "http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-molecular-biomarker-code-vs.html" : "Molecular Biomarker Codes",
+    "https://loinc.org/LL381-5" : "LOINC Answer Codes for LL381-5"
   },
   {
     "url" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
@@ -273,31 +273,31 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-condition-outcome.html" : "Condition Outcome Codes",
-    "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
     "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
-    "http://hl7.org/fhir/R4/valueset-participant-role.html" : "Participant Roles",
-    "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
-    "https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot.rc1/ValueSet-mii-vs-diagnose-diagnosecodes-snomed.html" : "MII VS Diagnose Diagnose-Codes SNOMED",
-    "ValueSet-mii-vs-molgen-verwandtschaftsverhaeltnis.html" : "MII VS MolGen Verwandtschaftsverhaeltnis",
-    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
-    "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
-    "http://hl7.org/fhir/R4/valueset-servicerequest-category.html" : "Service Request Category Codes",
-    "http://hl7.org/fhir/R4/valueset-procedure-outcome.html" : "Procedure Outcome Codes (SNOMED CT)",
+    "http://hl7.org/fhir/R4/valueset-condition-outcome.html" : "Condition Outcome Codes",
     "http://hl7.org/fhir/R4/valueset-device-action.html" : "Procedure Device Action Codes",
-    "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
     "http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-genetic-therapeutic-implications-vs.html" : "Genetic Therapeutic Implications",
-    "http://hl7.org/fhir/R4/valueset-device-kind.html" : "FHIR Device Types",
+    "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
+    "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
     "http://hl7.org/fhir/R4/valueset-procedure-followup.html" : "Procedure Follow up Codes (SNOMED CT)",
-    "ValueSet-mii-vs-molgen-verwandtschaftsgrad.html" : "MII VS Mol Gen Verwandtschaftsgrad",
-    "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
-    "http://hl7.org/fhir/R4/valueset-procedure-not-performed-reason.html" : "Procedure Not Performed Reason (SNOMED-CT)",
+    "https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot.rc1/ValueSet-mii-vs-diagnose-diagnosecodes-snomed.html" : "MII VS Diagnose Diagnose-Codes SNOMED",
     "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
-    "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
-    "ValueSet-mii-vs-molgen-family-member-snomed.html" : "MII VS MolGen Family Member SNOMED",
     "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
+    "http://hl7.org/fhir/R4/valueset-participant-role.html" : "Participant Roles",
+    "http://hl7.org/fhir/R4/valueset-device-kind.html" : "FHIR Device Types",
+    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+    "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
+    "ValueSet-mii-vs-molgen-verwandtschaftsverhaeltnis.html" : "MII VS MolGen Verwandtschaftsverhaeltnis",
+    "ValueSet-mii-vs-molgen-verwandtschaftsgrad.html" : "MII VS Mol Gen Verwandtschaftsgrad",
+    "ValueSet-mii-vs-molgen-familiaere-linie.html" : "MII VS MolGen Familiäre Linie",
+    "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
+    "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
     "http://hl7.org/fhir/R4/valueset-procedure-category.html" : "Procedure Category Codes (SNOMED CT)",
-    "ValueSet-mii-vs-molgen-familiaere-linie.html" : "MII VS MolGen Familiäre Linie"
+    "ValueSet-mii-vs-molgen-family-member-snomed.html" : "MII VS MolGen Family Member SNOMED",
+    "http://hl7.org/fhir/R4/valueset-servicerequest-category.html" : "Service Request Category Codes",
+    "http://hl7.org/fhir/R4/valueset-procedure-not-performed-reason.html" : "Procedure Not Performed Reason (SNOMED-CT)",
+    "http://hl7.org/fhir/R4/valueset-procedure-outcome.html" : "Procedure Outcome Codes (SNOMED CT)"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
@@ -393,9 +393,9 @@
     "oids" : ["2.16.840.1.113883.5.111"],
     "uses" : {
     },
+    "http://terminology.hl7.org/7.3.0/ValueSet-v3-ServiceDeliveryLocationRoleType.html" : "ServiceDeliveryLocationRoleType",
     "http://terminology.hl7.org/7.3.0/ValueSet-v3-FamilyMember.html" : "FamilyMember",
-    "http://terminology.hl7.org/7.3.0/ValueSet-v3-PersonalRelationshipRoleType.html" : "PersonalRelationshipRoleType",
-    "http://terminology.hl7.org/7.3.0/ValueSet-v3-ServiceDeliveryLocationRoleType.html" : "ServiceDeliveryLocationRoleType"
+    "http://terminology.hl7.org/7.3.0/ValueSet-v3-PersonalRelationshipRoleType.html" : "PersonalRelationshipRoleType"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/variant-confidence-status-cs",
@@ -452,9 +452,9 @@
     "description" : "\"The Sequence Ontology is a set of terms and relationships used to describe the features and attributes of biological sequence. SO includes different kinds of features which can be located on the sequence. Biological features are those which are defined by their disposition to be involved in a biological process.\"\r\n\r\n\"The Sequence Ontologies are provided as a resource to the biological community. They have the following obvious uses:\r\n\r\n* To provide for a structured controlled vocabulary for the description of primary annotations of nucleic acid sequence, e.g. the annotations shared by a DAS server ([BioDAS](http://www.biodas.org/documents/das2/das2_protocol.html), [Biosapiens DAS](http://www.biosapiens.info/page.php?page=das_portal)), or annotations encoded by [GFF3](http://www.sequenceontology.org/gff3.shtml).\"\r\n\r\n* To provide for a structured representation of these annotations within databases. Were genes within model organism databases to be annotated with these terms then it would be possible to query all these databases for, for example, all genes whose transcripts are edited, or trans-spliced, or are bound by a particular protein. One such genomic database is [Chado](http://www.gmod.org/wiki/Chado).\r\n\r\n* To provide a structured controlled vocabulary for the description of mutations at both the sequence and more gross level in the context of genomic databases.\"\r\n\r\n\"The Sequence Ontology is part of [OBO](http://www.obofoundry.org/). It has close links to other ontology projects such as the [RNAO consortium](http://roc.bgsu.edu/), and the [Biosapiens polypeptide features](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=BS).\"\r\n\r\nThe content can be browsed [here](http://www.sequenceontology.org/browser/obob.cgi)\r\n\r\nThe content can be downloaded [here](https://github.com/The-Sequence-Ontology/SO-Ontologies)\r\n\r\nFor information on contributing, please see [here](https://github.com/The-Sequence-Ontology/SO-Ontologies#contributing)\r\n\r\nTo request a term or register feedback, see [here](https://github.com/The-Sequence-Ontology/SO-Ontologies/issues)",
     "uses" : {
     },
-    "http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-molecular-consequence-vs.html" : "Molecular Consequence Value Set",
     "http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-dna-change-type-vs.html" : "DNA Change Type",
-    "http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-functional-effect-vs.html" : "Functional Effect Value Set"
+    "http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-functional-effect-vs.html" : "Functional Effect Value Set",
+    "http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-molecular-consequence-vs.html" : "Molecular Consequence Value Set"
   },
   {
     "url" : "urn:ietf:bcp:47",

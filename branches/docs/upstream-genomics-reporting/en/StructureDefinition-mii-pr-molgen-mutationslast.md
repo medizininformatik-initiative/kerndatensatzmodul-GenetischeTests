@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-02 | *Computable Name*:MII_PR_MolGen_Mutationslast |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_MolGen_Mutationslast |
 
  
 Dieses Profil beschreibt die Gesamtzahl der in der DNA von Krebszellen gefundenen Mutationen. 
@@ -72,7 +72,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-mut
   "name" : "MII_PR_MolGen_Mutationslast",
   "title" : "MII PR MolGen Mutationslast",
   "status" : "active",
-  "date" : "2026-09-02T15:03:15+00:00",
+  "date" : "2026-09-03T06:40:42+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

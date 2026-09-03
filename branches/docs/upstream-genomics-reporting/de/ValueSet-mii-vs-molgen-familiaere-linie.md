@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-familiaere-linie | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_VS_MolGen_FamiliaereLinie |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_VS_MolGen_FamiliaereLinie |
 
  
 ValueSet für die Angabe der familären Linie zwischen Patient und Familienangehörigen. 
@@ -41,7 +41,7 @@ ValueSet für die Angabe der familären Linie zwischen Patient und Familienangeh
   "name" : "MII_VS_MolGen_FamiliaereLinie",
   "title" : "MII VS MolGen Familiäre Linie",
   "status" : "active",
-  "date" : "2026-09-02T15:03:15+00:00",
+  "date" : "2026-09-03T06:40:42+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
