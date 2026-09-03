@@ -619,6 +619,8 @@ jobs:
         env:
           CANONICAL: ${{ steps.release.outputs.canonical }}
           PUBLICATION_BASE: ${{ steps.release.outputs.publication_base }}
+          # The seed step runs under set -u and builds the RSS dates from this.
+          PUBLICATION_DATE: ${{ steps.release.outputs.publication_date }}
         run: |
           set -euo pipefail
           # The very first -go-publish needs the webroot configuration that
