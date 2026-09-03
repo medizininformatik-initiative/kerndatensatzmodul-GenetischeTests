@@ -705,6 +705,11 @@ jobs:
           TX_URL: ${{ steps.terminology.outputs.tx_url }}
         run: |
           set -euo pipefail
+          # -fhir-settings: the SAME allowlist the build invocation above passes.
+          # Without it publisher 2.3.1+ SSRF hardening refuses the local proxy:
+          #   "Refusing to fetch from non-https URL: http://127.0.0.1:8090/fhir/metadata"
+          # The flag was added to the build call and missed here, although both use
+          # the same -tx URL. Found by the first-publication dry run on 2026-09-03.
           java -Xmx6g -jar "${RUNNER_TEMP}/publisher.jar" -go-publish \
             -source "${GITHUB_WORKSPACE}/source" \
             -web "${GITHUB_WORKSPACE}/site" \
@@ -715,6 +720,7 @@ jobs:
             -zips "${RUNNER_TEMP}/publication-zips" \
             -date "${PUBLICATION_DATE}" \
             -tx "${TX_URL}" \
+            -fhir-settings "${GITHUB_WORKSPACE}/source/.github/fhir-settings.json" \
             2>&1 | tee "${RUNNER_TEMP}/go-publish.log"
 
       - name: Correct and validate FHIR IG registry entry
