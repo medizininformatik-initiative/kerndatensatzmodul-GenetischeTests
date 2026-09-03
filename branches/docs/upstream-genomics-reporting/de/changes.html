@@ -436,6 +436,69 @@ baubar ist — die bisherigen IDs erzeugten einen Paketpfad über der
 <code class="language-plaintext highlighter-rouge">mii-exa-molgen-befundbericht-*</code>.</li>
 </ul>
 
+<h5 id="konformitätserwartungen">Konformitätserwartungen</h5>
+
+<ul>
+  <li><strong>Drei Profile sind jetzt <code class="language-plaintext highlighter-rouge">MAY</code> statt <code class="language-plaintext highlighter-rouge">SHALL</code>:</strong> <code class="language-plaintext highlighter-rouge">genotyp</code> sowie die beiden
+Clinical-Genomics-STU3-Profile <code class="language-plaintext highlighter-rouge">haplotype</code> und <code class="language-plaintext highlighter-rouge">sequence-phase-relationship</code>. Alle
+drei sagen etwas über Allele als Ganzes aus statt über einen Einzelbefund, und
+viele Labore leiten sie nie ab. <code class="language-plaintext highlighter-rouge">sequence-phase-relationship</code> war zuvor gar nicht
+deklariert, obwohl die Implementiererseite es als verwendet darstellte; <code class="language-plaintext highlighter-rouge">haplotype</code>
+stand auf <code class="language-plaintext highlighter-rouge">SHALL</code> und verpflichtete damit zu etwas, wozu der Guide kein Beispiel
+zeigt.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">MII_PR_MolGen_MolekularerBiomarker</code> ist jetzt deklariert</strong> (<code class="language-plaintext highlighter-rouge">SHALL</code>). Es ist das
+Elternprofil von Mikrosatelliteninstabilität und Mutationslast, die beide gefordert
+waren, während ihr Basisprofil unerwähnt blieb.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">DiagnosticReport.result:biomarker</code> ist darauf verengt.</strong> Zuvor erbte der Slice
+von STU3 und akzeptierte jedes <code class="language-plaintext highlighter-rouge">molecular-biomarker</code>.</li>
+  <li><strong>Drei supportedProfile-Einträge zeigten auf Canonicals, die es nicht gibt</strong> —
+<code class="language-plaintext highlighter-rouge">molekulare-konsequenz</code>, <code class="language-plaintext highlighter-rouge">genomic-study</code> und <code class="language-plaintext highlighter-rouge">genomic-study-analysis</code> waren ohne
+den Präfix <code class="language-plaintext highlighter-rouge">mii-pr-molgen-</code> geschrieben, den diese drei Profile tatsächlich tragen.
+Ein Server hätte sie nicht auflösen können. Die Canonicals selbst bleiben
+unverändert: sie stehen so im veröffentlichten Paket 2026.0.4.</li>
+</ul>
+
+<h5 id="dokumentation">Dokumentation</h5>
+
+<ul>
+  <li><strong>Die Abhängigkeit von Clinical Genomics STU3 ist jetzt korrekt beziffert.</strong> Die
+Implementiererseite dokumentierte zwei Profile; tatsächlich erben zehn Profile
+direkt, zwei indirekt, eine Extension erbt, zwölf Extensions werden verwendet,
+dazu drei ValueSets und zwei Codesysteme.</li>
+  <li><strong>Die CapabilityStatement-Seite trägt eine Tabelle Profil/Erwartung.</strong> Der IG
+Publisher rendert die unterstützten Profile als reine Linkliste ohne die
+<code class="language-plaintext highlighter-rouge">SHALL</code>/<code class="language-plaintext highlighter-rouge">MAY</code>-Erwartung — ohne diese Tabelle wären die Erwartungen im gerenderten
+Guide unsichtbar.</li>
+  <li><strong>Die Suchparameter stehen nur noch an einer Stelle.</strong> Die nummerierten Listen auf
+allen 14 Profil-Intro-Seiten wurden entfernt (3373 Zeilen); sie doppelten das
+CapabilityStatement, wichen davon ab und nannten das falsche Modul.</li>
+  <li><strong>Elementnamen korrigiert</strong>, die es in STU3 nicht gibt: <code class="language-plaintext highlighter-rouge">CytogenicLocation</code> →
+<code class="language-plaintext highlighter-rouge">cytogenetic-location</code>, <code class="language-plaintext highlighter-rouge">RefSequenceAssembly</code> → <code class="language-plaintext highlighter-rouge">reference-sequence-assembly</code>,
+<code class="language-plaintext highlighter-rouge">associated-phenotype</code> → <code class="language-plaintext highlighter-rouge">predicted-phenotype</code>. Ein Mapping auf
+<code class="language-plaintext highlighter-rouge">amino-acid-change-type</code> entfiel: STU3 kennt diese Komponente auf <code class="language-plaintext highlighter-rouge">variant</code> nicht,
+und das Datensatzelement ist nach <code class="language-plaintext highlighter-rouge">molecular-consequence</code> gewandert.</li>
+</ul>
+
+<h5 id="korrekturen-an-beispielen">Korrekturen an Beispielen</h5>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Task.basedOn</code> verwies in zwei Beispielen auf <code class="language-plaintext highlighter-rouge">servicerequest/example</code> — ein
+Platzhalter mit kleingeschriebenem Ressourcentyp, der ins Leere zeigte. Jetzt die
+BRAF-Anforderung.</li>
+  <li>Zwei Beispiele beanspruchten die STU2-Profile <code class="language-plaintext highlighter-rouge">msi</code> und <code class="language-plaintext highlighter-rouge">tmb</code>, die STU3 in
+<code class="language-plaintext highlighter-rouge">molecular-biomarker</code> zusammengeführt hat.</li>
+  <li>Zwei Gen-IDs im TSO500-Panel waren falsch: <code class="language-plaintext highlighter-rouge">HGNC:3942</code> (das ist MTOR) mit dem
+Label FGFR2 und <code class="language-plaintext highlighter-rouge">HGNC:3943</code> (existiert nicht) mit dem Label FGFR3. Richtig sind
+<code class="language-plaintext highlighter-rouge">HGNC:3689</code> und <code class="language-plaintext highlighter-rouge">HGNC:3690</code>.</li>
+  <li>Eine Practitioner-Referenz im umfassenden WES-Bundle zeigte auf eine Ressource,
+die es nirgends gibt.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">known_errors.txt</code> wurde angelegt.</strong> Von den Validierungsfehlern geht die große
+Mehrheit auf Grenzen des Terminologieservers zurück und nicht auf Defekte dieses
+Moduls; die Datei sagt, was was ist, und hält den einen bewusst hingenommenen
+Fehler fest (die FGFR2::DBP-Fusionscodierung, bei der LOINC 95123-6 narrativ
+skaliert ist, das Profil den Slice aber an CodeableConcept bindet).</li>
+</ul>
+
 <h4 id="version-202604">Version 2026.0.4</h4>
 
 <p><strong>Datum:</strong> 2026-01-02</p>
@@ -920,7 +983,7 @@ baubar ist — die bisherigen IDs erzeugten einen Paketpfad über der
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Thu, Sep 3, 2026 07:38+0000">2026-09-03</span>
+          Erstellt <span title="Thu, Sep 3, 2026 07:56+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

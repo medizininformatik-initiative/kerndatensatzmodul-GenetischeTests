@@ -41,7 +41,7 @@ ValueSet für die Angabe eines Verwandtschaftsgrades zwischen Patient und Famili
   "name" : "MII_VS_MolGen_Verwandtschaftsgrad",
   "title" : "MII VS Mol Gen Verwandtschaftsgrad",
   "status" : "active",
-  "date" : "2026-09-03T07:38:27+00:00",
+  "date" : "2026-09-03T07:56:27+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

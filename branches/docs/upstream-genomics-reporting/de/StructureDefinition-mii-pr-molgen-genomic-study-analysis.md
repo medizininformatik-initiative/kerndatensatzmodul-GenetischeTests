@@ -126,7 +126,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "name" : "MII_PR_MolGen_GenomicStudyAnalysis",
   "title" : "MII PR MolGen Genomic Study Analysis",
   "status" : "active",
-  "date" : "2026-09-03T07:38:27+00:00",
+  "date" : "2026-09-03T07:56:27+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
