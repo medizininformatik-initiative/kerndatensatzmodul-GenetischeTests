@@ -1,0 +1,1269 @@
+# MII LM MolGen LogicalModel - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc1
+
+* [**Inhaltsverzeichnis**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **MII LM MolGen LogicalModel**
+
+## Logisches Modell: MII LM MolGen LogicalModel 
+
+| | |
+| :--- | :--- |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/LogicalModelMolGen | *Version*:2027.0.0-ballot.rc1 |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_LM_MolGen_LogicalModel |
+
+ 
+LogicalModel des MII Moduls Molekulargenetischer Befundbericht 
+
+**Usages:**
+
+* This Logical Model is not used by any profiles in this Specification
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.molgen|current/StructureDefinition/StructureDefinition-LogicalModelMolGen.json)
+
+### Formale Ansichten des Profilinhalts
+
+ [Beschreibung von Profilen, Differentials, Snapshots und deren Repräsentationen](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+*  [Schlüsselelemente-Tabelle](#tabs-key) 
+*  [Differential-Tabelle](#tabs-diff) 
+*  [Snapshot-Tabelle](#tabs-snap) 
+*  [Statistiken/Referenzen](#tabs-summ) 
+*  [Alle](#tabs-all) 
+
+#### Terminology Bindings
+
+#### Constraints
+
+Diese Struktur ist abgeleitet von [Element](http://hl7.org/fhir/R4/datatypes.html#Element) 
+
+#### Terminology Bindings (Differential)
+
+#### Terminology Bindings
+
+#### Constraints
+
+Diese Struktur ist abgeleitet von [Element](http://hl7.org/fhir/R4/datatypes.html#Element) 
+
+** Summary **
+
+Mandatory: 0 element(3 nested mandatory elements)
+
+ **Schlüsselelemente-Ansicht** 
+
+#### Terminology Bindings
+
+#### Constraints
+
+ **Differential-Ansicht** 
+
+Diese Struktur ist abgeleitet von [Element](http://hl7.org/fhir/R4/datatypes.html#Element) 
+
+#### Terminology Bindings (Differential)
+
+ **Snapshot-AnsichtView** 
+
+#### Terminology Bindings
+
+#### Constraints
+
+Diese Struktur ist abgeleitet von [Element](http://hl7.org/fhir/R4/datatypes.html#Element) 
+
+** Summary **
+
+Mandatory: 0 element(3 nested mandatory elements)
+
+ 
+
+Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-LogicalModelMolGen.csv), [Excel](../StructureDefinition-LogicalModelMolGen.xlsx) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "LogicalModelMolGen",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/LogicalModelMolGen",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_LM_MolGen_LogicalModel",
+  "title" : "MII LM MolGen LogicalModel",
+  "status" : "active",
+  "date" : "2026-09-03T11:31:01+00:00",
+  "publisher" : "Medizininformatik-Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik-Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik-Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    },
+    {
+      "system" : "email",
+      "value" : "info@medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "LogicalModel des MII Moduls Molekulargenetischer Befundbericht",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "FHIR",
+    "name" : "MolGen LogicalModel FHIR Mapping"
+  }],
+  "kind" : "logical",
+  "abstract" : false,
+  "type" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/LogicalModelMolGen",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation" : "specialization",
+  "differential" : {
+    "element" : [{
+      "id" : "LogicalModelMolGen",
+      "path" : "LogicalModelMolGen",
+      "short" : "MII LM MolGen LogicalModel",
+      "definition" : "LogicalModel des MII Moduls Molekulargenetischer Befundbericht"
+    },
+    {
+      "id" : "LogicalModelMolGen.Probeninformation",
+      "path" : "LogicalModelMolGen.Probeninformation",
+      "short" : "Probeninformation",
+      "definition" : "Probeninformation",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Probeninformation.Patient",
+      "path" : "LogicalModelMolGen.Probeninformation.Patient",
+      "short" : "Patient",
+      "definition" : "Abgebildet im KDS Modul Person",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Patient"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Probeninformation.Probe",
+      "path" : "LogicalModelMolGen.Probeninformation.Probe",
+      "short" : "Probe",
+      "definition" : "Abgebildet im KDS Modul Biobank",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Specimen"]
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Specimen"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Anforderung",
+      "path" : "LogicalModelMolGen.Anforderung",
+      "short" : "Anforderung",
+      "definition" : "Anforderung",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "ServiceRequest"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Anforderung.Indikation",
+      "path" : "LogicalModelMolGen.Anforderung.Indikation",
+      "short" : "Indikation",
+      "definition" : "Indikation",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Anforderung.Indikation.Indikation",
+      "path" : "LogicalModelMolGen.Anforderung.Indikation.Indikation",
+      "short" : "Indikation",
+      "definition" : "Indikation; (mögliche) Erkrankung Terminologien: ICD-10, SNOMED, Orpha, HPO - Bsp.: Verdacht auf… / Ausschluss von… / Mögliche Therapie für ...",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "ServiceRequest.reasonCode"
+      },
+      {
+        "identity" : "FHIR",
+        "map" : "ServiceRequest.reasonReference"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Anforderung.Indikation.Gesundheitszustand",
+      "path" : "LogicalModelMolGen.Anforderung.Indikation.Gesundheitszustand",
+      "short" : "Gesundheitszustand",
+      "definition" : "Aktueller Gesundheitszustand; Angabe aktueller Beschwerden oder nachgewiesener Erkrankung - Terminologie: HPO",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Condition"]
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "ServiceRequest.supportingInfo"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Anforderung.Indikation.KrankengeschichteFamilie",
+      "path" : "LogicalModelMolGen.Anforderung.Indikation.KrankengeschichteFamilie",
+      "short" : "Krankengeschichte Familie",
+      "definition" : "Krankengeschichte Familie",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory"]
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "FamilyMemberHistory"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Anforderung.Indikation.Anlagetraeger",
+      "path" : "LogicalModelMolGen.Anforderung.Indikation.Anlagetraeger",
+      "short" : "Anlageträger",
+      "definition" : "Anlageträgerstatus der Familie - Ist gefordert wenn Verwandte des Index-Falles ebenfalls sequenziert wurden - Terminologie: PED",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",
+        "http://hl7.org/fhir/StructureDefinition/Condition",
+        "http://hl7.org/fhir/StructureDefinition/Observation"]
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "FamilyMemberHistory"
+      },
+      {
+        "identity" : "FHIR",
+        "map" : "Condition"
+      },
+      {
+        "identity" : "FHIR",
+        "map" : "Observation"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Anforderung.Indikation.RelevanteVorergebnisse",
+      "path" : "LogicalModelMolGen.Anforderung.Indikation.RelevanteVorergebnisse",
+      "short" : "Relevante Vorergebnisse",
+      "definition" : "Angabe zuvor durchgeführter relevanter Tests (inklusive z.B. Methode, getestete Gene, und Ergebnisse)",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Condition",
+        "http://hl7.org/fhir/StructureDefinition/Observation",
+        "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+        "http://hl7.org/fhir/StructureDefinition/DocumentReference"]
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Condition"
+      },
+      {
+        "identity" : "FHIR",
+        "map" : "Observation"
+      },
+      {
+        "identity" : "FHIR",
+        "map" : "DiagnosticReport"
+      },
+      {
+        "identity" : "FHIR",
+        "map" : "DocumentReference"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Anforderung.Anforderer",
+      "path" : "LogicalModelMolGen.Anforderung.Anforderer",
+      "short" : "Anforderer",
+      "definition" : "Informationen zur Person, die die molekulargenetischen Untersuchungen in Auftrag gibt",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Practitioner",
+        "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+        "http://hl7.org/fhir/StructureDefinition/Organization",
+        "http://hl7.org/fhir/StructureDefinition/Patient",
+        "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+        "http://hl7.org/fhir/StructureDefinition/Device"]
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Practitioner"
+      },
+      {
+        "identity" : "FHIR",
+        "map" : "PractitionerRole"
+      },
+      {
+        "identity" : "FHIR",
+        "map" : "Organization"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Anforderung.Anforderer.ZuTestendeGene",
+      "path" : "LogicalModelMolGen.Anforderung.Anforderer.ZuTestendeGene",
+      "short" : "Zu testende Gene",
+      "definition" : "Angabe der zu testenden Gene",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "ServiceRequest.code"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Anforderung.Anforderer.EinheitlicherBewertungsmassstab",
+      "path" : "LogicalModelMolGen.Anforderung.Anforderer.EinheitlicherBewertungsmassstab",
+      "short" : "Einheitlicher Bewertungsmaßstab",
+      "definition" : "Der Einheitliche Bewertungsmaßstab definiert den Inhalt der abrechnungsfähigen vertragsärztlichen Leistungen Einheitlicher Bewertungsmaßstab (EBM): Angabe der Ziffern",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/ChargeItem"]
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "ChargeItem"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Anforderung.Anforderer.Anforderungstext",
+      "path" : "LogicalModelMolGen.Anforderung.Anforderer.Anforderungstext",
+      "short" : "Anforderungstext",
+      "definition" : "Freitext für die Angabe von entweder originaler, unveränderter Anforderungstext, oder alternativ: zusätzliche Anforderungen oder angeforderter Test",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "ServiceRequest.code.text"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Anforderung.DatumDerAnforderung",
+      "path" : "LogicalModelMolGen.Anforderung.DatumDerAnforderung",
+      "short" : "Datum der Anforderung",
+      "definition" : "Angabe des Datums der Anforderung",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "ServiceRequest.authoredOn"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Anforderung.Bemerkungen",
+      "path" : "LogicalModelMolGen.Anforderung.Bemerkungen",
+      "short" : "Bemerkungen",
+      "definition" : "Bemerkungen",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Annotation"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "ServiceRequest.note"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Methoden",
+      "path" : "LogicalModelMolGen.Methoden",
+      "short" : "Methoden",
+      "definition" : "Methoden",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Methoden.Methode",
+      "path" : "LogicalModelMolGen.Methoden.Methode",
+      "short" : "Methode",
+      "definition" : "Methode und Referenz zur Methode - beinhaltet alle sequenzbasierenden Analytik-Methoden, während nicht sequenzbasierende Aufarbeitungsmethoden in das Modul Pathologie zuzuordnen sind.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.method"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Methoden.RelevanteParameter",
+      "path" : "LogicalModelMolGen.Methoden.RelevanteParameter",
+      "short" : "Relevante Parameter",
+      "definition" : "Relevante Parameter (Angabe von Primer / Zyklenanzahl, Panel)",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Observation",
+        "http://hl7.org/fhir/StructureDefinition/DocumentReference"]
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation"
+      },
+      {
+        "identity" : "FHIR",
+        "map" : "DocumentReference"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Methoden.GeraeteSoftwareKits",
+      "path" : "LogicalModelMolGen.Methoden.GeraeteSoftwareKits",
+      "short" : "Geräte / Software / Kits",
+      "definition" : "Angaben verwendeter Geräte / Software / Kits inklusive Target enrichment für die Analyse (u.U. Angabe von  Hersteller; Versionsnummer)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Device"]
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Device"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Methoden.GetesteteGene",
+      "path" : "LogicalModelMolGen.Methoden.GetesteteGene",
+      "short" : "Getestete Gene",
+      "definition" : "Angabe der getesteten Gene",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:gene-studied"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Methoden.Referenzsequenz",
+      "path" : "LogicalModelMolGen.Methoden.Referenzsequenz",
+      "short" : "Referenzsequenz",
+      "definition" : "Transkript Referenzsequenz (Ensembl und RefSeq)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:transcript-ref-seq"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Methoden.ReadDepthCoverage",
+      "path" : "LogicalModelMolGen.Methoden.ReadDepthCoverage",
+      "short" : "Read depth/Coverage",
+      "definition" : "Anzahl der Ablesungen eines bestimmten Nukleotids im Genom in einem Experiment",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:allelic-read-depth"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Methoden.IntronSpanningIVS",
+      "path" : "LogicalModelMolGen.Methoden.IntronSpanningIVS",
+      "short" : "Intron spanning / IVS",
+      "definition" : "Intron spanning  oder  IVS (InterVening Sequence, z.B. Introns)",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:dna-region"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Methoden.StartUndEndnukleotid",
+      "path" : "LogicalModelMolGen.Methoden.StartUndEndnukleotid",
+      "short" : "Start- und Endnukleotid",
+      "definition" : "Start- und Endnukleotid",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Range"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:exact-start-end"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Methoden.SensitivitaetDetektionslimit",
+      "path" : "LogicalModelMolGen.Methoden.SensitivitaetDetektionslimit",
+      "short" : "Sensitivität/Detektionslimit",
+      "definition" : "Sensitivität/Detektionslimit",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:detection-limit"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Methoden.LimitierungenBemerkungen",
+      "path" : "LogicalModelMolGen.Methoden.LimitierungenBemerkungen",
+      "short" : "Limitierungen/Bemerkungen",
+      "definition" : "Limitierungen/Bemerkungen, Freitext",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Annotation"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.note"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse",
+      "path" : "LogicalModelMolGen.Ergebnisse",
+      "short" : "Ergebnisse",
+      "definition" : "Ergebnisse",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Zusammenfassung",
+      "path" : "LogicalModelMolGen.Ergebnisse.Zusammenfassung",
+      "short" : "Zusammenfassung",
+      "definition" : "Zusammenfassung",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://loinc.org/vs/LL541-4"
+      },
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.valueCodeableConcept"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Veraenderungen",
+      "path" : "LogicalModelMolGen.Ergebnisse.Veraenderungen",
+      "short" : "Veränderungen",
+      "definition" : "Veränderungen",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.VeraenderungProteinebene",
+      "path" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.VeraenderungProteinebene",
+      "short" : "Veränderungen auf Proteinebene: Terminologie: HGVS - Angabe möglich von: Formal Protein (pHGVS) 3-letter code:  Bsp.: p.(Cys47Tyr),  p.(Val600Glu) - Formal Protein (pHGVS) 1-letter code:  Bsp.: p.(C47Y) - Trivialname (Kurzform):  Bsp.: C47Y",
+      "definition" : "Veränderungen auf Proteinebene: Terminologie: HGVS - Angabe möglich von: Formal Protein (pHGVS) 3-letter code:  Bsp.: p.(Cys47Tyr),  p.(Val600Glu) - Formal Protein (pHGVS) 1-letter code:  Bsp.: p.(C47Y) - Trivialname (Kurzform):  Bsp.: C47Y",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:protein-hgvs"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.DNAVeraenderungen",
+      "path" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.DNAVeraenderungen",
+      "short" : "Veränderung auf DNA-Level, formale Beschreibung  mittels cHGVS",
+      "definition" : "Veränderung auf DNA-Level, formale Beschreibung  mittels cHGVS",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:coding-hgvs"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.GenomischeDNAVeraenderung",
+      "path" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.GenomischeDNAVeraenderung",
+      "short" : "Genomische DNA Veränderung gHGVS",
+      "definition" : "Genomische DNA Veränderung gHGVS",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:genomic-hgvs"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.TranskriptID",
+      "path" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.TranskriptID",
+      "short" : "Transkript- ID (Code) - Terminologie: NCBI, Ensembl, GTR, LRG",
+      "definition" : "Transkript- ID (Code) - Terminologie: NCBI, Ensembl, GTR, LRG",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:transcript-ref-seq"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.Referenzgenom",
+      "path" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.Referenzgenom",
+      "short" : "Referenzgenom - Der Genome Build hat zwei Formate, entweder hg und eine Nummer (hg18, hg19, hg38) oder GRCh/NCBI und eine Nummer (NCBI35, NCBI36, GRCh37, GRCh38).",
+      "definition" : "Referenzgenom - Der Genome Build hat zwei Formate, entweder hg und eine Nummer (hg18, hg19, hg38) oder GRCh/NCBI und eine Nummer (NCBI35, NCBI36, GRCh37, GRCh38).",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:reference-sequence-assembly"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.RefAllel",
+      "path" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.RefAllel",
+      "short" : "Referenzallel",
+      "definition" : "Referenzallel",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:ref-allele"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.AltAllel",
+      "path" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.AltAllel",
+      "short" : "Jedes alternative (ALT) Allel an dem untersuchten Lokus",
+      "definition" : "Jedes alternative (ALT) Allel an dem untersuchten Lokus",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:alt-allele"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.DNAMutationstyp",
+      "path" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.DNAMutationstyp",
+      "short" : "Varianten-Typ bzw. Mutationsart - Terminologie: Sequence Ontology (include codes from http://sequenceontology.org where concept IsA SO:0002072)",
+      "definition" : "Varianten-Typ bzw. Mutationsart - Terminologie: Sequence Ontology (include codes from http://sequenceontology.org where concept IsA SO:0002072)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:coding-change-type"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.MutationskonsequenzFunktionell",
+      "path" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.MutationskonsequenzFunktionell",
+      "short" : "Mutationskonsequenz (funktionell) - Terminologie: Sequence Ontology",
+      "definition" : "Mutationskonsequenz (funktionell) - Terminologie: Sequence Ontology",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://loinc.org/vs/LL380-7"
+      },
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:amino-acid-change-type"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.ProbenAllelfrequenz",
+      "path" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.ProbenAllelfrequenz",
+      "short" : "Allelfrequenz",
+      "definition" : "Allelfrequenz",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:sample-allelic-frequency"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.UrsprungDerVariante",
+      "path" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.UrsprungDerVariante",
+      "short" : "Ursprung der Variante",
+      "definition" : "Ursprung der Variante",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://loinc.org/vs/LL378-1"
+      },
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:genomic-source-class"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.VariantenID",
+      "path" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.VariantenID",
+      "short" : "Varianten ID; eindeutige Beschreibung der Variante - Terminologie: ClinVar, HGMD, COSMIC, PMID, dbSNP",
+      "definition" : "Varianten ID; eindeutige Beschreibung der Variante - Terminologie: ClinVar, HGMD, COSMIC, PMID, dbSNP",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:variation-code"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.Chromosom",
+      "path" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.Chromosom",
+      "short" : "Chromosom",
+      "definition" : "Chromosom",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://loinc.org/vs/LL2938-0"
+      },
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:chromosome-identifier"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.Exon",
+      "path" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.Exon",
+      "short" : "Exon",
+      "definition" : "Exon",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:dna-region"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.ZytogenetischeLokalisierung",
+      "path" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.ZytogenetischeLokalisierung",
+      "short" : "Variante - Terminologie: ISCN",
+      "definition" : "Variante - Terminologie: ISCN",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:cytogenetic-location"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.Kopienzahlvariationen",
+      "path" : "LogicalModelMolGen.Ergebnisse.Veraenderungen.Kopienzahlvariationen",
+      "short" : "Kopienzahlvariationen der betroffenen Gene",
+      "definition" : "Kopienzahlvariationen der betroffenen Gene",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:copy-number"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Mutationslast",
+      "path" : "LogicalModelMolGen.Ergebnisse.Mutationslast",
+      "short" : "Somat. Mutationen / Mutationslast",
+      "definition" : "Somat. Mutationen / Mutationslast",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.valueQuantity"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Mikrosatelliteninstabilitaet",
+      "path" : "LogicalModelMolGen.Ergebnisse.Mikrosatelliteninstabilitaet",
+      "short" : "Mikrosatelliteninstabilität",
+      "definition" : "Mikrosatelliteninstabilität",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "http://loinc.org/vs/LL3994-2"
+      },
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.valueCodeableConcept"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Ergebnisse.Daten",
+      "path" : "LogicalModelMolGen.Ergebnisse.Daten",
+      "short" : "Rohdaten / Link auf die Datei/Dateien",
+      "definition" : "Rohdaten / Link auf die Datei/Dateien",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/DocumentReference"]
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "DocumentReference"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Interpretation",
+      "path" : "LogicalModelMolGen.Interpretation",
+      "short" : "Interpretation",
+      "definition" : "Interpretation",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Interpretation.KlinischeSignifikanz",
+      "path" : "LogicalModelMolGen.Interpretation.KlinischeSignifikanz",
+      "short" : "Finale Interpretation / Einschätzung",
+      "definition" : "Finale Interpretation / Einschätzung",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "http://loinc.org/vs/LL4034-6"
+      },
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:clinical-significance"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Interpretation.Referenzen",
+      "path" : "LogicalModelMolGen.Interpretation.Referenzen",
+      "short" : "Referenzen",
+      "definition" : "Referenzen",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "RelatedArtifact"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "RelatedArtifact"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Interpretation.ClinicalAnnotationLevelOfEvidence",
+      "path" : "LogicalModelMolGen.Interpretation.ClinicalAnnotationLevelOfEvidence",
+      "short" : "Clinical Annotation Level Of Evidence",
+      "definition" : "Clinical Annotation Level Of Evidence",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "example",
+        "valueSet" : "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/evidence-level-example-vs"
+      },
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:evidence-level"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Interpretation.AssoziierterPhaenotyp",
+      "path" : "LogicalModelMolGen.Interpretation.AssoziierterPhaenotyp",
+      "short" : "Mit Präsenz einer Variante assoziierter Phänotyp",
+      "definition" : "Mit Präsenz einer Variante assoziierter Phänotyp",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:predicted-phenotype"
+      },
+      {
+        "identity" : "FHIR",
+        "map" : "Observation.component:phenotypic-treatment-context"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Interpretation.Vererbungsmodus",
+      "path" : "LogicalModelMolGen.Interpretation.Vererbungsmodus",
+      "short" : "Art der Vererbung für beschriebenen Phänotyp",
+      "definition" : "Art der Vererbung für beschriebenen Phänotyp",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/condition-inheritance-mode-vs"
+      },
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:mode-of-inheritance"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Interpretation.Zusammenfassung",
+      "path" : "LogicalModelMolGen.Interpretation.Zusammenfassung",
+      "short" : "Zusammenfassung als Freitext, kann inhaltlich folgende Punkte beinhalten: Antwort auf ursprüngliche Fragestellung ausformuliert Therapeutikum/Wirkstoff/Wirkstoffklasse Effekt/Auswirkung",
+      "definition" : "Zusammenfassung als Freitext, kann inhaltlich folgende Punkte beinhalten: Antwort auf ursprüngliche Fragestellung ausformuliert Therapeutikum/Wirkstoff/Wirkstoffklasse Effekt/Auswirkung",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Observation.component:conclusion-string"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Interpretation.Medikamentenbewertung",
+      "path" : "LogicalModelMolGen.Interpretation.Medikamentenbewertung",
+      "short" : "Medikamentenbewertung",
+      "definition" : "Medikamentenbewertung",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Interpretation.Empfehlungen",
+      "path" : "LogicalModelMolGen.Interpretation.Empfehlungen",
+      "short" : "Empfehlungen: Andere/Allgemeine Empfehlungen (Freitext / Links) / Generelle ergänzende Referenz(en) (Bsp: PuMed-link / PMID)",
+      "definition" : "Empfehlungen: Andere/Allgemeine Empfehlungen (Freitext / Links) / Generelle ergänzende Referenz(en) (Bsp: PuMed-link / PMID)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "http://loinc.org/vs/LL1037-2"
+      },
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Task.code"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Interpretation.Medikationsempfehlung",
+      "path" : "LogicalModelMolGen.Interpretation.Medikationsempfehlung",
+      "short" : "Medikationsempfehlung - Terminologie: LOINC",
+      "definition" : "Medikationsempfehlung - Terminologie: LOINC",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://loinc.org/vs/LL4049-4"
+      },
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Task.code"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Weiteres",
+      "path" : "LogicalModelMolGen.Weiteres",
+      "short" : "WeiteresFormales",
+      "definition" : "WeiteresFormales",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Weiteres.BerichtID",
+      "path" : "LogicalModelMolGen.Weiteres.BerichtID",
+      "short" : "Identifikationsnummer des Berichtes",
+      "definition" : "Identifikationsnummer des Berichtes",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Identifier"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "DiagnosticReport.identifier"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Weiteres.Anhaenge",
+      "path" : "LogicalModelMolGen.Weiteres.Anhaenge",
+      "short" : "Anhänge z.B. Tabellarische Übersicht Panel",
+      "definition" : "Anhänge z.B. Tabellarische Übersicht Panel",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Media",
+        "http://hl7.org/fhir/StructureDefinition/DocumentReference"]
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Media"
+      },
+      {
+        "identity" : "FHIR",
+        "map" : "DocumentReference"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Weiteres.Berichtstatus",
+      "path" : "LogicalModelMolGen.Weiteres.Berichtstatus",
+      "short" : "Berichtstatus (z.B. vorab oder final)",
+      "definition" : "Berichtstatus (z.B. vorab oder final)",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
+      },
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "DiagnosticReport.status"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Weiteres.DatumDesBerichts",
+      "path" : "LogicalModelMolGen.Weiteres.DatumDesBerichts",
+      "short" : "Datum des Berichtes /Zeitstempel (Bericht verfasst / freigegeben am)",
+      "definition" : "Datum des Berichtes /Zeitstempel (Bericht verfasst / freigegeben am)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "instant"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "DiagnosticReport.issued"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Weiteres.LaborInstitutionAnsprechpartner",
+      "path" : "LogicalModelMolGen.Weiteres.LaborInstitutionAnsprechpartner",
+      "short" : "LaborInstitutionAnsprechpartner",
+      "definition" : "LaborInstitutionAnsprechpartner",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Practitioner"
+      },
+      {
+        "identity" : "FHIR",
+        "map" : "Organization"
+      },
+      {
+        "identity" : "FHIR",
+        "map" : "PractitionerRole"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Weiteres.LaborInstitutionAnsprechpartner.Laborakkreditierungen",
+      "path" : "LogicalModelMolGen.Weiteres.LaborInstitutionAnsprechpartner.Laborakkreditierungen",
+      "short" : "Labor-Akkreditierungen",
+      "definition" : "Labor-Akkreditierungen",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Practitioner.qualification"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Weiteres.LaborInstitutionAnsprechpartner.NameAnsprechpartner",
+      "path" : "LogicalModelMolGen.Weiteres.LaborInstitutionAnsprechpartner.NameAnsprechpartner",
+      "short" : "Name Ansprechpartner (Titel - Nachname - Zuname - Vorname)",
+      "definition" : "Name Ansprechpartner (Titel - Nachname - Zuname - Vorname)",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "HumanName"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Practitioner.name"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Weiteres.LaborInstitutionAnsprechpartner.Adresse",
+      "path" : "LogicalModelMolGen.Weiteres.LaborInstitutionAnsprechpartner.Adresse",
+      "short" : "Adresszeile 1  & 2, Angabe von Stadt, Postleitzahl, Land",
+      "definition" : "Adresszeile 1  & 2, Angabe von Stadt, Postleitzahl, Land",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Address"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Practitioner.address"
+      }]
+    },
+    {
+      "id" : "LogicalModelMolGen.Weiteres.LaborInstitutionAnsprechpartner.Kontakt",
+      "path" : "LogicalModelMolGen.Weiteres.LaborInstitutionAnsprechpartner.Kontakt",
+      "short" : "Angabe von Telefonnummer, Faxnummer und Email",
+      "definition" : "Angabe von Telefonnummer, Faxnummer und Email",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "ContactPoint"
+      }],
+      "mapping" : [{
+        "identity" : "FHIR",
+        "map" : "Practitioner.telecom"
+      }]
+    }]
+  }
+}
+
+```
