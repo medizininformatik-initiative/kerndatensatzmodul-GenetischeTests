@@ -54,7 +54,7 @@ klinischer Routinedaten für die medizinische Forschung.
 - **[Profile](profiles.html)** und die weiteren
   **[Artefaktseiten](artifacts.html)** — die technischen Artefakte.
 - **[Beispiele](examples.html)** — Beispielinstanzen.
-- **[Abhängigkeiten](ImplementationGuide-mii-ig-molgen-de-v2026.html)** — die
+- **[Abhängigkeiten](ImplementationGuide-mii-ig-molgen.html)** — die
   ImplementationGuide-Ressource mit der Abhängigkeitstabelle, der
   Cross-Version-Analyse und den Copyright-Angaben.
 
