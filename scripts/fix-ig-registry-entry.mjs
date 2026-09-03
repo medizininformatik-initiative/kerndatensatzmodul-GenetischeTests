@@ -265,12 +265,19 @@ function validateEntry(
     );
   } else {
     const edition = editions[0];
-    assertEqual(
-      edition.name,
-      requiredString(request, "sequence", "Publication request"),
-      "edition.name",
-      errors,
-    );
+    // The Publisher composes the edition name as "<sequence> <Status>" whenever the
+    // publication status is not "release": a ballot or draft publishes as "2027 Draft",
+    // not "2027". That is regular - the public FHIR IG registry carries 82 such
+    // editions ("STU 1 Ballot", "Releases Draft", "STU 1 Draft"). Comparing against the
+    // bare sequence rejected every non-release publication, which is exactly what a
+    // ballot candidate is.
+    const sequence = requiredString(request, "sequence", "Publication request");
+    const status = typeof request?.status === "string" ? request.status.trim() : "";
+    const expectedEditionName =
+      status && status.toLowerCase() !== "release"
+        ? `${sequence} ${status.charAt(0).toUpperCase()}${status.slice(1)}`
+        : sequence;
+    assertEqual(edition.name, expectedEditionName, "edition.name", errors);
     assertEqual(edition.package, `${packageId}#${version}`, "edition.package", errors);
     assertEqual(
       normalizeUrl(edition.url ?? "", "Generated edition URL"),
