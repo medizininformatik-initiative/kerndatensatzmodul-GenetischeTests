@@ -1,7 +1,7 @@
 Profile: MII_PR_MolGen_MolekularerBiomarker
 Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/molecular-biomarker
 Id: mii-pr-molgen-molekularer-biomarker
-Title: "MII PR MolGen Molekulare Biomarker"
+Title: "MII PR MolGen Molekularer Biomarker"
 Description: "Dieses Profil beschreibt molekulare Biomarker, z.B. genübergreifende Biomarker wie Tumormutationslast (TMB) oder Mikrosatelliteninstabilität (MSI). Es ist ein abstraktes Profil, konkrete Biomarker-Profile erben davon."
 * insert Publisher
 * insert PR_CS_VS_Version

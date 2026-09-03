@@ -5097,3 +5097,6 @@
 2026-09-02T14:49:00Z  INFO   8.7.3  beispiele  verify  referenziert=mutationslast-1,mikrosatelliteninstabilitaet-1 beide_erben_von=MolekularerBiomarker bruch=keiner
 2026-09-02T14:49:30Z  INFO   8.7.4  capability-statements-page  edit  Zahlen 17/14 -> 18/15 in beiden Sprachen
 2026-09-02T14:50:00Z  INFO   8.8  sushi  done  errors=0 warnings=0
+2026-09-02T15:10:00Z  INFO   9.1  ig-preview  done  branch=docs/upstream-genomics-reporting sha=d4d04bd2 pages=2034 qa_errors=64 broken_links=0
+2026-09-02T15:11:00Z  NOTE   9.2  capabilitystatement-rendering  finding  Der IG Publisher rendert supportedProfile als reine Linkliste OHNE die Erwartung. SHALL/MAY steht nur im JSON. Die MAY-Entscheidung ist auf der gerenderten Artefaktseite unsichtbar; sichtbar ist sie ausschliesslich ueber den Prosa-Abschnitt auf capability-statements.
+2026-09-02T15:12:00Z  WARN   9.3  profile-title  defect  MolekularerBiomarker trug Title "MII PR MolGen Molekulare Biomarker" (grammatisch falsch, passt nicht zu Profilname und Id) fix="MII PR MolGen Molekularer Biomarker"
