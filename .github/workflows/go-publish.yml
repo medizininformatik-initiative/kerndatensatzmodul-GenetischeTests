@@ -653,6 +653,57 @@ jobs:
             }' > site/publish-setup.json
           touch site/.nojekyll
 
+          # package-feed.xml / publication-feed.xml — the two RSS feeds that the
+          # publish-setup.json written just above DECLARES under "feeds", but that
+          # nothing here creates. -go-publish reads the declaration, looks for the
+          # files and dies:
+          #   java.lang.Error: Attempt to copy .../site/package-feed.xml but it
+          #   doesn't exist   (PublicationProcess.updateFeed)
+          # The reference module keeps them as checked-in files under
+          # publication/webroot/; a generated module has no such folder, so they are
+          # seeded here in the same shape: an empty channel the Publisher fills.
+          # First publication only — afterwards the feeds live on in the webroot.
+          # LC_ALL=C: RFC-822 dates in RSS need English day and month abbreviations.
+          # Without it a localised runner writes "Do., 03 Sep. 2026" instead of
+          # "Wed, 02 Sep 2026". Caught by running this block on a German-locale machine,
+          # where the GNU -d form also silently fell through to the fallback and used
+          # today instead of the publication date.
+          feed_date="$(LC_ALL=C date -u -d "${PUBLICATION_DATE}" '+%a, %d %b %Y 00:00:00 GMT')"
+          seed_feed() {
+            local file="$1" title="$2" description="$3"
+            [[ -e "site/${file}" ]] && return 0
+            cat > "site/${file}" <<XML
+          <?xml version="1.0" encoding="UTF-8"?>
+          <rss xmlns:dc="http://purl.org/dc/elements/1.1/"
+               xmlns:content="http://purl.org/rss/1.0/modules/content/"
+               xmlns:fhir="http://hl7.org/fhir/feed"
+               xmlns:atom="http://www.w3.org/2005/Atom"
+               version="2.0">
+            <channel>
+              <title>${title}</title>
+              <description>${description}</description>
+              <link>${PUBLICATION_BASE}</link>
+              <generator>Medical Informatics Initiative (MII)</generator>
+              <lastBuildDate>${feed_date}</lastBuildDate>
+              <atom:link href="${PUBLICATION_BASE}/${file}"
+                         rel="self"
+                         type="application/rss+xml"/>
+              <pubDate>${feed_date}</pubDate>
+              <language>en</language>
+              <ttl>600</ttl>
+            </channel>
+          </rss>
+          XML
+            test -s "site/${file}"
+          }
+          seed_feed package-feed.xml \
+            "${EXPECTED_PACKAGE_ID} FHIR packages" \
+            "FHIR packages published by the Medical Informatics Initiative"
+          seed_feed publication-feed.xml \
+            "${EXPECTED_PACKAGE_ID} FHIR publications" \
+            "FHIR Implementation Guide releases published by the Medical Informatics Initiative"
+
+
           # package-registry.json — REQUIRED by -go-publish, and not created by
           # anything above. Without it the Publisher stops before doing any work:
           #   "ERROR @ parameters: There is no package-registry.json file. Create
@@ -671,6 +722,7 @@ jobs:
             echo
             echo "- Generated publish-setup.json for ${PUBLICATION_BASE}"
             echo "- Generated package-registry.json (required by -go-publish)"
+            echo "- Generated package-feed.xml and publication-feed.xml (declared in publish-setup.json)"
           } >> "${GITHUB_STEP_SUMMARY}"
 
       - name: Prepare publication workspace
