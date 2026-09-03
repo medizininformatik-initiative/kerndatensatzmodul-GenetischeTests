@@ -39,7 +39,11 @@ move-examples:
   - delete: /**/*.terminologyCapabilities*.json
   - delete: /**/*onGenerate*.json
   - delete: /**/*onCheck*.json
-  - move: /package/examples
+  # Singular. The FHIR package convention and the IG Publisher both use
+  # `package/example/`; this said `examples/`, so a locally baked package put its
+  # instances where nothing looks for them. Caught by diffing a bake against the
+  # IG Publisher output of the same commit.
+  - move: /package/example
   - target: output
 
 manifest:
