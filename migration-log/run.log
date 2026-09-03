@@ -5135,3 +5135,10 @@
 2026-09-03T09:54:00Z  INFO   13.4  pack  done  tarball=de.medizininformatikinitiative.kerndatensatz.molgen-2027.0.0-ballot.rc1.tgz groesse=375K fremddateien=0 sd=22 beispiele=107 pfade_ueber_100_byte=0
 2026-09-03T09:55:00Z  INFO   13.5  commands  update  build-package.md=restore-Schritt+--input+Manifest-Luecke+COPYFILE_DISABLE+tar-100-Byte-Pruefung+config-drift-Warnung release-prepare.md=7 Stellen
 2026-09-03T09:55:30Z  NOTE   13.5  release-prepare  regex  ^\d{4}\.\d+\.\d+(-[0-9A-Za-z.-]+)?$ akzeptiert 2027.0.0-ballot.rc1 und 2026.0.4, lehnt 1.2.3, 2027.0 und 2027.0.0- ab; identisch mit M6 in scripts/convention-check.mjs
+2026-09-03T10:10:00Z  INFO   14.1  package-review  params  entpackt und inhaltlich geprueft
+2026-09-03T10:10:30Z  INFO   14.1  package-review  ok  conformance=33 alle auf 2027.0.0-ballot.rc1; SD=22 (16 resource-constraint, 5 complex-type, 1 logical); ImplementationGuide korrekt ausgeschlossen; alle Hilfsbeispiele referenziert
+2026-09-03T10:11:00Z  WARN   14.2  package-manifest  defect  package.json fehlten canonical, type, title, license, url; author war ein persoenliches GitHub-Handle statt der Herausgeberin
+2026-09-03T10:11:30Z  WARN   14.2  package-manifest  drift  package.json deklarierte biobank=2027.0.0-ballot.rc1, sushi-config fuehrt 2026.0.1 - also genau die Version, die wegen fehlender SpecimenCore-Snapshots nicht nutzbar ist
+2026-09-03T10:12:00Z  INFO   14.2.1  package-manifest  fixed  alle Felder aus sushi-config nachgezogen, Dependencies vollstaendig daraus uebernommen, license=CC-BY-4.0 author=Medizininformatik-Initiative
+2026-09-03T10:13:00Z  INFO   14.3  rebuild  done  375K fremddateien=0 pfade_ueber_100_byte=0 sd=22 manifest=vorhanden
+2026-09-03T10:13:30Z  NOTE   14.4  publish  offen  NICHT publiziert - Simplifier-Veroeffentlichung wartet auf ausdrueckliche Freigabe des Nutzers
