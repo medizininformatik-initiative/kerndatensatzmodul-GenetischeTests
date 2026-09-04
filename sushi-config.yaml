@@ -318,6 +318,11 @@ pages:
       title: Guidance for Implementers
     uml-diagrams.md:
       title: UML Diagrams
+    # Consolidated on 2026-09-04 from two documents that lay unpublished in the
+    # repository root. Implementer-facing migration guidance belongs in the guide,
+    # not beside it -- sites look here, not in the repository.
+    stu2-to-stu3.md:
+      title: Migration STU2 to STU3
 
   # The only Conformance-cluster PAGE of this guide; the MII-wide conformance
   # topics are menu links to the Meta module (see input/includes/menu.xml).
