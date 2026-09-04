@@ -1,0 +1,301 @@
+' ============================================================================
+' Struktur des Domänenmodells — SPRACHNEUTRAL.
+'
+' Diese Datei enthält kein einziges übersetzbares Wort. Jeder sichtbare Text
+' steht in einer der beiden Sprachdateien:
+'
+'     logical-model-domain-de.puml   ->  MII_MolGen_LogicalModel_Domain_de.svg
+'     logical-model-domain-en.puml   ->  MII_MolGen_LogicalModel_Domain_en.svg
+'
+' Wer Klassen, Attribute oder Beziehungen ändert, ändert NUR diese Datei; wer
+' Formulierungen ändert, ändert NUR eine Sprachdatei. So kann das deutsche und
+' das englische Diagramm strukturell nicht auseinanderlaufen — der Fehler, den
+' zwei vollständige Kopien früher oder später machen.
+'
+' Neu rendern (PlantUML + Graphviz):
+'     plantuml -tsvg -o ../images input/images-source/logical-model-domain-*.puml
+'
+' Die Endung .iuml ist Absicht: der IG Publisher rendert nur *.plantuml aus
+' input/images-source/, ein Include-Fragment darf dabei nicht als eigenes
+' Diagramm auftauchen.
+' ============================================================================
+
+!theme plain
+
+' A4 Landscape optimization
+skinparam dpi 150
+skinparam maxMessageSize 150
+
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam padding 3
+skinparam roundcorner 5
+skinparam nodesep 70
+skinparam ranksep 100
+left to right direction
+
+' Color scheme for different sections
+skinparam class {
+    BackgroundColor<<Core>> #E8F4F8
+    BackgroundColor<<Request>> #FFF4E6
+    BackgroundColor<<Methods>> #E8F5E9
+    BackgroundColor<<Results>> #F3E5F5
+    BackgroundColor<<Interpretation>> #E1F5FE
+    BackgroundColor<<Metadata>> #F5F5F5
+    BorderColor #424242
+    BorderThickness 2
+    FontSize 10
+}
+
+skinparam packageStyle rectangle
+
+skinparam arrow {
+    Color #424242
+    Thickness 1.5
+}
+
+skinparam note {
+    BackgroundColor #FAFAFA
+    BorderColor #424242
+    FontSize 9
+}
+
+title <size:16><b>$TITLE</b></size>\n<size:11>$SUBTITLE</size>\n
+
+' ===== EXTERNAL DEPENDENCIES =====
+
+package "$PKG_EXTERNAL" <<Metadata>> {
+    class "$C_PATIENT" as Patient <<Core>> {
+        **$C_PATIENT_MODULE**
+    }
+
+    class "$C_SPECIMEN" as Probe <<Core>> {
+        **$C_SPECIMEN_MODULE**
+    }
+
+    note right of Patient
+        **$N_EXT_TITLE**
+        --
+        • **$N_EXT_PERSON**: Patient, Practitioner,
+          PractitionerRole, Organization
+        • **$N_EXT_BIOBANK**: Specimen
+        • **$N_EXT_DIAGNOSIS**: Condition,
+          FamilyMemberHistory
+        • **$N_EXT_CASE**: Encounter
+    end note
+}
+
+' ===== CORE ENTITY =====
+
+class "$C_REPORT" as Befundbericht <<Core>> {
+    +$A_REPORT_ID: Identifier
+    +$A_REPORT_STATUS: code
+    +$A_REPORT_DATE: instant
+    +$A_REPORT_ATTACH: Reference[]
+}
+
+' ===== REQUEST =====
+
+class "$C_REQUEST" as Anforderung <<Request>> {
+    +$A_REQ_REQUESTER: Reference
+    +$A_REQ_GENES: CodeableConcept[]
+    +$A_REQ_BILLING: ChargeItem
+    +$A_REQ_DATE: dateTime
+    +$A_REQ_TEXT: string
+    +$A_REQ_NOTES: Annotation
+}
+
+class "$C_INDICATION" as Indikation <<Request>> {
+    +$A_IND_INDICATION: CodeableConcept
+    +$A_IND_CONDITION: Reference(Condition)
+    +$A_IND_FAMILY: Reference
+    +$A_IND_CARRIER: Reference[]
+    +$A_IND_PRIOR: Reference[]
+}
+
+' ===== METHODS =====
+
+class "$C_METHODS" as Methoden <<Methods>> {
+    +$A_MET_METHOD: CodeableConcept
+    +$A_MET_DEVICES: Reference(Device)
+    +$A_MET_PARAMS: Reference[]
+    --
+    **$G_MET_REGIONS**
+    +$A_MET_GENES: CodeableConcept[]
+    +$A_MET_REFSEQ: CodeableConcept
+    +$A_MET_INTRON: string
+    +$A_MET_RANGE: Range
+    --
+    **$G_MET_QUALITY**
+    +$A_MET_DEPTH: CodeableConcept
+    +$A_MET_SENSITIVITY: Quantity
+    +$A_MET_LIMITS: Annotation
+}
+
+' ===== RESULTS =====
+
+class "$C_RESULTS" as Ergebnisse <<Results>> {
+    +$A_RES_SUMMARY: CodeableConcept
+    +$A_RES_RAW: Reference(DocumentReference)[]
+}
+
+class "$C_VARIANTS" as Veraenderungen <<Results>> {
+    **$G_VAR_GENOMIC**
+    +$A_VAR_GENE: CodeableConcept
+    +$A_VAR_CHROMOSOME: CodeableConcept
+    +$A_VAR_CYTOBAND: CodeableConcept
+    +$A_VAR_EXON: string
+    --
+    **$G_VAR_HGVS**
+    +$A_VAR_PHGVS: CodeableConcept
+    +$A_VAR_CHGVS: CodeableConcept
+    +$A_VAR_GHGVS: CodeableConcept
+    +$A_VAR_TRANSCRIPT: CodeableConcept
+    --
+    **$G_VAR_DETAILS**
+    +$A_VAR_REFALLELE: string
+    +$A_VAR_ALTALLELE: string
+    +$A_VAR_MUTTYPE: CodeableConcept
+    +$A_VAR_CNV: Quantity
+    --
+    **$G_VAR_METADATA**
+    +$A_VAR_REFGENOME: CodeableConcept
+    +$A_VAR_AF: Quantity
+    +$A_VAR_ORIGIN: CodeableConcept
+    +$A_VAR_ID: CodeableConcept
+}
+
+class "$C_BIOMARKER" as MolBiomarker <<Results>> {
+    <<abstract>>
+    +$A_BIO_CROSSGENE
+}
+
+class "$C_TMB" as TMB <<Results>> {
+    +$A_VALUE: Quantity
+    +$A_TMB_SOMATIC
+}
+
+class "$C_MSI" as MSI <<Results>> {
+    +$A_VALUE: CodeableConcept
+}
+
+MolBiomarker <|-- TMB
+MolBiomarker <|-- MSI
+
+' ===== INTERPRETATION =====
+
+class "$C_INTERPRETATION" as Interpretation <<Interpretation>> {
+    **$G_INT_CONSEQUENCE**
+    +$A_INT_FUNCTIONAL: CodeableConcept
+    --
+    **$G_INT_CLINICAL**
+    +$A_INT_SIGNIFICANCE: CodeableConcept
+    +$A_INT_EVIDENCE: CodeableConcept
+    +$A_INT_PHENOTYPE: CodeableConcept
+    +$A_INT_INHERITANCE: CodeableConcept
+    --
+    **$G_INT_THERAPEUTIC**
+    +$A_INT_DRUG: CodeableConcept[]
+    +$A_INT_MEDICATION: CodeableConcept
+    --
+    **$G_INT_SUMMARY**
+    +$A_INT_CONCLUSION: string
+    +$A_INT_RECOMMEND: CodeableConcept
+    +$A_INT_REFERENCES: RelatedArtifact[]
+}
+
+' ===== METADATA =====
+
+class "$C_LAB" as Labor <<Metadata>> {
+    +$A_LAB_NAME: HumanName
+    +$A_LAB_ADDRESS: Address
+    +$A_LAB_CONTACT: ContactPoint
+    +$A_LAB_ACCRED: CodeableConcept[]
+}
+
+' ===== LAYOUT HINTS (enforce left-to-right workflow) =====
+
+Patient -[hidden]right-> Anforderung
+Anforderung -[hidden]right-> Methoden
+Methoden -[hidden]right-> Ergebnisse
+Ergebnisse -[hidden]right-> Interpretation
+
+' ===== RELATIONSHIPS =====
+' The role names on the core structure are FHIR element names and stay English
+' in both languages on purpose — they are what an implementer greps for.
+
+Befundbericht "1" -- "1" Patient : subject
+Befundbericht "1" -- "0..*" Probe : specimen
+Befundbericht "1" *-- "0..*" Anforderung : basedOn
+Befundbericht "1" -- "1" Labor : performer
+
+Anforderung "1" *-down- "0..*" Indikation : contains
+Patient "1" -- "0..*" Anforderung : $R_FOR
+
+Anforderung "1" -right-> "0..*" Methoden : $R_INITIATES
+Methoden "1" -- "0..*" Probe : $R_EXAMINES
+
+Methoden "1" -right-> "1" Ergebnisse : $R_YIELDS
+Ergebnisse "1" *-down- "0..*" Veraenderungen : $R_VARIANTS
+Ergebnisse "1" *-down- "0..*" MolBiomarker : $R_BIOMARKERS
+
+Ergebnisse "1" -right-> "0..*" Interpretation : $R_INTERPRETED
+Veraenderungen "0..*" -- "0..*" Interpretation : $R_CONCERNS
+MolBiomarker "0..*" -- "0..*" Interpretation : $R_INFORMS
+
+Befundbericht "1" o-down- "0..*" Methoden : $R_DOCUMENTS
+Befundbericht "1" o-down- "0..*" Ergebnisse : $R_CONTAINS
+Befundbericht "1" o-down- "0..*" MolBiomarker : $R_CONTAINS
+Befundbericht "1" o-down- "0..*" Interpretation : $R_COMPRISES
+
+' ===== NOTES =====
+' The bullet lists name FHIR artefacts of this module and are NOT translated.
+' Note bodies do NOT interpret \n, so every line needs its own variable.
+
+note bottom of Befundbericht
+  **$N_REPORT_TITLE**
+  $N_REPORT_BODY_1
+  $N_REPORT_BODY_2
+end note
+
+note right of Methoden
+  **$N_DOMAIN_CONCEPT**
+  $N_MAPPED_AS
+  • GenomicStudy
+  • GenomicStudyAnalysis (STU3)
+  • Device, Observation
+end note
+
+note right of Veraenderungen
+  **$N_DOMAIN_CONCEPT: $C_VARIANTS_PLAIN**
+  $N_MAPPED_AS
+  • Variante (Observation Profile)
+  • Genotyp
+  • Haplotyp
+
+  $N_VAR_COMPONENTS_1
+  $N_VAR_COMPONENTS_2
+end note
+
+note right of Interpretation
+  **$N_DOMAIN_CONCEPT**
+  $N_MAPPED_AS
+  • MolekulareKonsequenz (STU3)
+  • DiagnostischeImplikation
+  • TherapeutischeImplikation
+  • Medikationsempfehlung (Task)
+  • EmpfohleneFolgemaßnahme (Task)
+end note
+
+note right of MolBiomarker
+  **$C_BIOMARKER_PLAIN**
+  $N_BIO_BODY_1
+  $N_BIO_BODY_2
+
+  $N_MAPPED_AS
+  • MolekularerBiomarker (abstract)
+  • Mutationslast
+  • Mikrosatelliteninstabilität
+  • PolygenerRisikoScore
+end note

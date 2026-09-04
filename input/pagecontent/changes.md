@@ -22,8 +22,8 @@ This page records the changes between the released versions of the
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the KDS calendar
 versioning scheme described on the [Versioning](version-history.html) page.
 
-Each version gets its own section with the release date and the changes grouped
-by category:
+Each version gets its own section with the release date and its changes. These
+categories are available for them:
 
 * **Added** — new profiles, extensions, value sets, search parameters, pages.
 * **Changed** — modified constraints, bindings, guidance or documentation.
@@ -35,10 +35,14 @@ by category:
 Leave out the categories with nothing to report. Where a change is driven by an
 issue or a pull request, link it.
 
-<!-- TODO:REVIEW The version sections migrated from Simplifier group their entries by topic
-     instead of by the Keep a Changelog categories listed above. That is one of the two
-     groupings the template allows; decide at Gate C whether to convert the sections to
-     categories. -->
+The version sections group their entries **by topic** — by the profile or area
+affected — rather than by these categories. The template allows either, and for a FHIR
+module the topical axis carries further: a renamed component is *Added* and *Removed* at
+once, and someone asking what changed about Variante finds it in one place.
+
+**Security is the exception.** Changes with a security or data-protection impact always
+get their own block under that name — they have to be findable without reading through
+topical sections. There have been none so far.
 
 <div class="ig-highlight ig-highlight-red">
 <h5>Breaking changes MUST be reported and explained</h5>
@@ -529,7 +533,7 @@ MII IG Modul Molekulargenetischer Befundbericht/
     - now inherits from the new Molekularer Biomarker module
     - `component[conclusion-string]` is therefore dropped
   - Therapeutische Implikation
-    - component[prognosis] is dropped <!-- TODO:REVIEW The source broke off mid-sentence here ("weil in den (Gründe?)"); the rationale is missing and needs to be supplied. -->
+    - `component[prognosis]` is dropped **without a successor**. Checked against every STU3 profile: neither `therapeutic-implication` nor `diagnostic-implication`, `molecular-consequence` or the shared parent `implication` carries a prognosis slice. Anyone who used to set this value has nowhere to put it in STU3.
     - `component[predicted-therapeutic-implication]` changed to `component[therapeutic-implication]`
   - Untersuchte Region
     - the profile is dropped; information about location and instruments is coded via GenomicStudy/GenomicStudyAnalysis instead

@@ -197,10 +197,9 @@ Beispielhafte Evidenzlevel-Codes für die Klassifikation von Varianten.
 
 Therapeutische Implikationen genetischer Varianten.
 
-**Canonical:** `http://hl7.org/fhir/uv/genomics-reporting/ValueSet/therapeutic-implication-vs`
+**Canonical:** `http://hl7.org/fhir/uv/genomics-reporting/ValueSet/genetic-therapeutic-implications-vs`
 
-[therapeutic-implication-vs](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-genetic-therapeutic-implications-vs.html)
-<!-- TODO:REVIEW STU2 canonical .../ValueSet/therapeutic-implication-vs has no STU3 page; genetic-therapeutic-implications-vs is the nearest STU3 ValueSet but carries a DIFFERENT canonical, so the equivalence is UNCONFIRMED -->
+[genetic-therapeutic-implications-vs](http://hl7.org/fhir/uv/genomics-reporting/STU3/ValueSet-genetic-therapeutic-implications-vs.html)
 
 ---
 

@@ -22,8 +22,8 @@ Moduls **Molekulargenetischer Befundbericht** fest, die neueste Version zuerst. 
 KDS-CalVer-Schema, das die Seite [Versionierung](version-history.html)
 beschreibt.
 
-Jede Version erhält einen eigenen Abschnitt mit dem Release-Datum und den nach
-Kategorien gruppierten Änderungen:
+Jede Version erhält einen eigenen Abschnitt mit dem Release-Datum und ihren
+Änderungen. Dafür stehen diese Kategorien zur Verfügung:
 
 * **Hinzugefügt** — neue Profile, Extensions, ValueSets, Suchparameter, Seiten.
 * **Geändert** — geänderte Einschränkungen, Bindings, Hinweise oder
@@ -37,10 +37,15 @@ Kategorien gruppierten Änderungen:
 Kategorien ohne Inhalt werden weggelassen. Geht eine Änderung auf ein Issue oder
 einen Pull-Request zurück, wird darauf verlinkt.
 
-<!-- TODO:REVIEW Die aus Simplifier migrierten Versionsabschnitte gruppieren ihre Einträge
-     thematisch statt nach den oben genannten Keep-a-Changelog-Kategorien. Das ist eine der
-     beiden von der Vorlage zugelassenen Gruppierungen; bei Gate C entscheiden, ob die
-     Abschnitte auf Kategorien umgestellt werden. -->
+Die Versionsabschnitte gruppieren ihre Einträge **thematisch** — nach betroffenem
+Profil oder Bereich — statt nach diesen Kategorien. Beides lässt die Vorlage zu, und für
+ein FHIR-Modul trägt die thematische Achse weiter: Eine umbenannte Komponente ist
+*Hinzugefügt* und *Entfernt* zugleich, und wer wissen will, was sich an Variante geändert
+hat, findet es so an einer Stelle.
+
+**Sicherheit ist davon ausgenommen.** Änderungen mit Auswirkung auf Sicherheit oder
+Datenschutz bekommen immer einen eigenen, so benannten Block — sie müssen auffindbar
+sein, ohne dass man thematische Abschnitte danach durchsucht. Bisher gab es keine.
 
 <div class="ig-highlight ig-highlight-red">
 <h5>Breaking Changes MÜSSEN berichtet und erläutert werden</h5>
@@ -541,7 +546,7 @@ MII IG Modul Molekulargenetischer Befundbericht/
     - erbt jetzt vom neuen Molekularer Biomarker Modul
     - damit entfällt `component[conclusion-string]`
   - Therapeutische Implikation
-    - component[prognosis] fällt weg <!-- TODO:REVIEW Die Quelle brach den Satz hier ab ("weil in den (Gründe?)"); die Begründung fehlt und muss ergänzt werden. -->
+    - `component[prognosis]` fällt **ersatzlos** weg. Geprüft gegen alle STU3-Profile: weder `therapeutic-implication` noch `diagnostic-implication`, `molecular-consequence` oder das gemeinsame Elternprofil `implication` führen einen Prognose-Slice. Wer den Wert bisher gesetzt hat, findet in STU3 keinen Platz dafür.
     - `component[predicted-therapeutic-implication]` zu `component[therapeutic-implication]` geändert
   - Untersuchte Region
     - Profil fällt weg, Information über Lokalisation und Geräte wird stattdessen über GenomicStudy/GenomicStudyAnalysis kodiert
