@@ -88,6 +88,20 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 
 The first candidate was formally published; this one closes what that exposed.
 
+##### No breaking changes
+
+Checked rather than assumed, because the CalVer number carries no warning of its own.
+
+The SNOMED CT pin moves a full year, from `20250701` to `20260701`, which is the one
+change here that could have removed or inactivated codes. All **49** distinct SNOMED
+codes this module uses were looked up against both versions on the MII terminology
+server: **none differs** — same existence, same display. Instances valid against rc1
+remain valid against rc2.
+
+The five newly pinned systems constrain future expansions but change nothing today:
+each was pinned to the version the server already resolved to by default. The
+remaining changes are documentation and release automation.
+
 ##### Terminology
 
 * **Every externally versioned code system is now pinned**, not just SNOMED CT. The

@@ -5211,3 +5211,6 @@
 2026-09-04T08:20:30Z  NOTE   30.1  first-flag  publication-request.json "first" von true auf FALSE. rc1 war die erste formale Publikation, gh-pages traegt jetzt package-list.json; go-publish prueft das und bricht sonst ab mit "package-list.json already exists on gh-pages: follow-up publications must use false".
 2026-09-04T08:21:00Z  INFO   30.2  changelog  rc2-Abschnitt in beiden Sprachen: Terminologie-Pins (Tabelle mit 6 Systemen), STU2-STU3-Seite, fuenf Template-Fehler der Release-Automatisierung. Paritaet je 5 Punkte und 8 Tabellenzeilen.
 2026-09-04T08:21:30Z  INFO   30.3  verify  sushi 0/0, M6=2027.0.0-ballot.rc2 PASS, language-model-check PASS, IG-Ressource und package.json tragen rc2
+2026-09-04T14:15:00Z  INFO   31.1  breaking-change  geprueft  Der Changelog-Block des Templates verlangt eine ausdrueckliche Aussage. Kandidat war der SNOMED-Sprung 20250701 -> 20260701 (ein Jahr Aenderungen).
+2026-09-04T14:15:30Z  INFO   31.1  breaking-change  ergebnis  Alle 49 verschiedenen SNOMED-Codes des Moduls gegen beide Versionen am MII-Server abgefragt: 0 Unterschiede in Existenz und Display. Kein Breaking Change. Die fuenf neu gepinnten Systeme wurden auf die ohnehin geltende Server-Vorgabe gepinnt, aendern also heute nichts.
+2026-09-04T14:16:00Z  INFO   31.2  changelog  ergaenzt  Abschnitt "Keine Breaking Changes" mit der Pruefgrundlage, beide Sprachen.

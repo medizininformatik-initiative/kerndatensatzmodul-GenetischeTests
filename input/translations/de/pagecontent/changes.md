@@ -95,6 +95,20 @@ werden können.</p>
 
 Der erste Kandidat wurde formal publiziert; dieser räumt auf, was dabei sichtbar wurde.
 
+##### Keine Breaking Changes
+
+Geprüft statt angenommen — die CalVer-Nummer warnt von sich aus nicht.
+
+Der SNOMED-CT-Pin springt ein volles Jahr, von `20250701` auf `20260701`; das ist die
+einzige Änderung hier, die Codes hätte entfernen oder inaktivieren können. Alle **49**
+verschiedenen SNOMED-Codes dieses Moduls wurden gegen beide Versionen am
+MII-Terminologieserver abgefragt: **keiner unterscheidet sich** — gleiche Existenz,
+gleiches Display. Instanzen, die gegen rc1 valide waren, bleiben es gegen rc2.
+
+Die fünf neu gepinnten Systeme schränken künftige Expansionen ein, ändern heute aber
+nichts: jedes wurde auf die Version gepinnt, die der Server ohnehin als Vorgabe
+lieferte. Die übrigen Änderungen betreffen Dokumentation und Release-Automatisierung.
+
 ##### Terminologie
 
 * **Alle extern versionierten Codesysteme sind jetzt gepinnt**, nicht nur SNOMED CT.
