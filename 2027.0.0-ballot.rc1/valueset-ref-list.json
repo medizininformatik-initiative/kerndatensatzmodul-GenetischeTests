@@ -1,0 +1,269 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/ValueSet/diagnostic-report-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "DiagnosticReportStatus",
+    "title" : "DiagnosticReportStatus",
+    "description" : "The status of the diagnostic report.",
+    "systems" : ["http://hl7.org/fhir/diagnostic-report-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.235"],
+    "sources" : ["2.16.840.1.113883.4.642.3.235"],
+    "uses" : {
+    },
+    "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel",
+    "StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.html" : "MII PR MolGen Molekulargenetischer Befundbericht"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/condition-inheritance-mode-vs",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ConditionInheritanceModeVS",
+    "title" : "Condition Inheritance Patterns",
+    "description" : "Value Set for specific transmission patterns of a condition in a pedigree",
+    "systems" : ["http://human-phenotype-ontology.org"],
+    "uses" : {
+    },
+    "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel",
+    "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/evidence-level-example-vs",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "EvidenceLevelExampleVS",
+    "title" : "Evidence Level Examples",
+    "description" : "Example sources of values for Evidence Level",
+    "systems" : ["http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/clinvar-evidence-level-custom-cs",
+    "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/pharmgkb-evidence-level-custom-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel",
+    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz",
+    "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation",
+    "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgnc-vs",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "HGNCVS",
+    "title" : "HUGO Gene Nomenclature Committee Gene Names (HGNC)",
+    "description" : "This value set includes all HGNC Codes, which includes multiple code systems. In this guide, Gene IDs from HGNC are used as CodeableConcepts, which must be sent with the HGNC gene ID including the prefix 'HGNC:' as the code and the HGNC 'gene symbol' as display. CAUTION: HGNC also indexes gene groups by numeric ID (without a prefix), and older systems may send HGNC gene IDs without the prefix, so care must be taken to confirm alignment. We have separately included the genegroup code system to draw attention to this ambiguity and potential error.",
+    "systems" : ["http://www.genenames.org/genegroup",
+    "http://www.genenames.org"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-molgen-variante.html" : "MII PR MolGen Variante",
+    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekularer Biomarker",
+    "StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html" : "MII PR MolGen Mikrosatelliteninstabilität",
+    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
+    "StructureDefinition-mii-pr-molgen-mutationslast.html" : "MII PR MolGen Mutationslast"
+  },
+  {
+    "url" : "http://loinc.org/vs/LL1037-2",
+    "version" : null,
+    "status" : "active",
+    "name" : "LOINCAnswersLL1037-2",
+    "title" : "LOINC Answer Codes for LL1037-2",
+    "description" : "",
+    "systems" : ["http://loinc.org"],
+    "uses" : {
+    },
+    "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel"
+  },
+  {
+    "url" : "http://loinc.org/vs/LL2938-0",
+    "version" : null,
+    "status" : "active",
+    "name" : "LOINCAnswersLL2938-0",
+    "title" : "LOINC Answer Codes for LL2938-0",
+    "description" : "",
+    "systems" : ["http://loinc.org"],
+    "uses" : {
+    },
+    "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel"
+  },
+  {
+    "url" : "http://loinc.org/vs/LL378-1",
+    "version" : null,
+    "status" : "active",
+    "name" : "LOINCAnswersLL378-1",
+    "title" : "LOINC Answer Codes for LL378-1",
+    "description" : "",
+    "systems" : ["http://loinc.org"],
+    "uses" : {
+    },
+    "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel"
+  },
+  {
+    "url" : "http://loinc.org/vs/LL380-7",
+    "version" : null,
+    "status" : "active",
+    "name" : "LOINCAnswersLL380-7",
+    "title" : "LOINC Answer Codes for LL380-7",
+    "description" : "",
+    "systems" : ["http://loinc.org"],
+    "uses" : {
+    },
+    "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel"
+  },
+  {
+    "url" : "http://loinc.org/vs/LL3994-2",
+    "version" : null,
+    "status" : "active",
+    "name" : "LOINCAnswersLL3994-2",
+    "title" : "LOINC Answer Codes for LL3994-2",
+    "description" : "",
+    "systems" : ["http://loinc.org"],
+    "uses" : {
+    },
+    "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel"
+  },
+  {
+    "url" : "http://loinc.org/vs/LL4034-6",
+    "version" : null,
+    "status" : "active",
+    "name" : "LOINCAnswersLL4034-6",
+    "title" : "LOINC Answer Codes for LL4034-6",
+    "description" : "",
+    "systems" : ["http://loinc.org"],
+    "uses" : {
+    },
+    "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel"
+  },
+  {
+    "url" : "http://loinc.org/vs/LL4049-4",
+    "version" : null,
+    "status" : "active",
+    "name" : "LOINCAnswersLL4049-4",
+    "title" : "LOINC Answer Codes for LL4049-4",
+    "description" : "",
+    "systems" : ["http://loinc.org"],
+    "uses" : {
+    },
+    "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel"
+  },
+  {
+    "url" : "http://loinc.org/vs/LL541-4",
+    "version" : null,
+    "status" : "active",
+    "name" : "LOINCAnswersLL541-4",
+    "title" : "LOINC Answer Codes for LL541-4",
+    "description" : "",
+    "systems" : ["http://loinc.org"],
+    "uses" : {
+    },
+    "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-PersonalRelationshipRoleType",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "PersonalRelationshipRoleType",
+    "title" : "PersonalRelationshipRoleType",
+    "description" : "Types of personal relationships between two living subjects.\r\n\r\n*Example:*Parent, sibling, unrelated friend, neighbor",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode"],
+    "oids" : ["2.16.840.1.113883.1.11.19563"],
+    "sources" : ["2.16.840.1.113883.1.11.19563"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-molgen-familienanamnese.html" : "MII PR MolGen Familienanamnese"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_Diagnose_DiagnoseCodes_SNOMED",
+    "title" : "MII VS Diagnose Diagnose-Codes SNOMED",
+    "description" : "Enthaelt alle SNOMED Clinical finding, Event und Situation with explicit context codes",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-molgen-familienanamnese.html" : "MII PR MolGen Familienanamnese"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_Diagnose_AlphaID",
+    "title" : "MII VS Diagnose Alpha-ID",
+    "description" : "Enthaelt Alpha-ID-Codes der Versionen 2018 bis 2025",
+    "systems" : ["http://fhir.de/CodeSystem/bfarm/alpha-id"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-molgen-familienanamnese.html" : "MII PR MolGen Familienanamnese"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_Diagnose_ICD10GM",
+    "title" : "MII VS Diagnose ICD-10-GM",
+    "description" : "Enthaelt ICD-10-GM-Codes der Versionen 2009 bis 2025",
+    "systems" : ["http://fhir.de/CodeSystem/bfarm/icd-10-gm"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-molgen-familienanamnese.html" : "MII PR MolGen Familienanamnese"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_Diagnose_Orphanet",
+    "title" : "MII VS Diagnose Orphanet",
+    "description" : "Enthaelt alle Orpha-Kennnummern (ORPHAcodes)",
+    "systems" : ["http://www.orpha.net"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-molgen-familienanamnese.html" : "MII PR MolGen Familienanamnese"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-familiaere-linie",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_MolGen_FamiliaereLinie",
+    "title" : "MII VS MolGen Familiäre Linie",
+    "description" : "ValueSet für die Angabe der familären Linie zwischen Patient und Familienangehörigen.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-ex-molgen-familiare-linie.html" : "MII EX MolGen Familiare Linie"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-family-member-snomed",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_MolGen_FamilyMember_SNOMED",
+    "title" : "MII VS MolGen Family Member SNOMED",
+    "description" : "The ValueSet contains codes for related family member types from SNOMED CT.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-molgen-familienanamnese.html" : "MII PR MolGen Familienanamnese"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-verwandtschaftsgrad",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_MolGen_Verwandtschaftsgrad",
+    "title" : "MII VS Mol Gen Verwandtschaftsgrad",
+    "description" : "ValueSet für die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-ex-molgen-verwandtschaftsgrad.html" : "MII EX Mol Gen Verwandtschaftsgrad"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_MolGen_Verwandtsverhaeltnis",
+    "title" : "MII VS MolGen Verwandtschaftsverhaeltnis",
+    "description" : "ValueSet für die Angabe eines Verwandtschaftsverhältnis zwischen Patient und Familienangehörigen.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-ex-molgen-verwandtschaftsverhaeltnis.html" : "MII EX MolGen Verwandtschaftsverhaeltnis"
+  }]
+}
