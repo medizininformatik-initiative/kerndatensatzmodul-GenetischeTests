@@ -47,7 +47,12 @@ Alias: $v3-RoleCode-vs = http://terminology.hl7.org/ValueSet/v3-PersonalRelation
 
 
 // ---- appended from mii-kds-module-template v0.13.0 (aliases.fsh) during the IG-template migration; module definitions win ----
-Alias: $sct = http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250701
+// UNUSED, kept only so the template's alias set stays recognisable: all 92 SNOMED
+// codes in this module are written with $SCT (unversioned, line 2). The version
+// that actually binds is the one in input/resources/Parameters-expansion-manifest.json;
+// editing the alias below changes nothing. Kept in sync with the manifest so the two
+// never contradict each other in a reader's eyes.
+Alias: $sct = http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701
 Alias: $sct-no-ver = http://snomed.info/sct
 
 // ── Further code systems used across MII modules ─────────────────────────────

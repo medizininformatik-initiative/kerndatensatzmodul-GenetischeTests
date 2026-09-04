@@ -25,8 +25,9 @@ each MII CalVer release is bound to one SNOMED CT International release.
 |---|---|---|
 | `v2025.*` | 2024-07-01 | `http://snomed.info/sct/900000000000207008/version/20240701` |
 | `v2026.*` | 2025-07-01 | `http://snomed.info/sct/900000000000207008/version/20250701` |
+| `v2027.*` | 2026-07-01 | `http://snomed.info/sct/900000000000207008/version/20260701` |
 
-The shipped file carries the **verified `v2026.*` pin**, matching the 2026
+The shipped file carries the **verified `v2027.*` pin**, matching the 2026
 dependency line this template pins in `sushi-config.yaml`. When your module moves
 to a later CalVer line, look the release up in that wiki table and update this
 file **and** the `$sct` alias in `input/fsh/aliases.fsh`. Do not guess a version —
