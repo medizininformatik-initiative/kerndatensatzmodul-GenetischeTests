@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-genomic-study-analysis-cornelia-de-lange"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"/>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2027.0.0-ballot.rc2"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-molgen-genomic-study-analysis-cornelia-de-lange</b></p><a name="mii-exa-molgen-genomic-study-analysis-cornelia-de-lange"> </a><a name="hcmii-exa-molgen-genomic-study-analysis-cornelia-de-lange"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="StructureDefinition-mii-pr-molgen-genomic-study-analysis.html">MII PR MolGen Genomic Study Analysis</a>, <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2027.0.0-ballot.rc2">https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genomic-study-analysis|2027.0.0-ballot.rc2</a></p></div><p><b>Genomic Study Analysis Specimen</b>: <a href="Specimen-mii-exa-molgen-specimen-2.html">Specimen: identifier = https://www.charite.de/fhir/sid/bioproben#specimen_02; status = available; type = Blood specimen with edetic acid (specimen); receivedTime = 2021-11-24</a></p><blockquote><p><b>Genomic Study Analysis Device</b></p><ul><li>device: <a href="Device-mii-exa-molgen-device-sequencer-2.html">Device: status = active; manufacturer = Illumina</a></li></ul></blockquote><p><b>Genomic Study Analysis Method Type</b>: <span title="Codes:{http://loinc.org LA26398-0}">Sequencing</span></p><blockquote><p><b>Genomic Study Analysis Regions</b></p><ul><li>description: Cornelia de Lange Panel: Alle kodierenden Exons der Gene NIPBL, HDAC8, RAD21, SMC1A, SMC3, TP63</li><li>studied: <span title="Codes:{http://www.genenames.org/geneId HGNC:28862}">NIPBL</span></li><li>studied: <span title="Codes:{http://www.genenames.org/geneId HGNC:13315}">HDAC8</span></li><li>studied: <span title="Codes:{http://www.genenames.org/geneId HGNC:9811}">RAD21</span></li><li>studied: <span title="Codes:{http://www.genenames.org/geneId HGNC:11111}">SMC1A</span></li><li>studied: <span title="Codes:{http://www.genenames.org/geneId HGNC:2468}">SMC3</span></li><li>studied: <span title="Codes:{http://www.genenames.org/geneId HGNC:15979}">TP63</span></li></ul></blockquote><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>subject</b>: <a href="Patient-mii-exa-molgen-patient-2.html">Melanie Marie Müller (official) Female, DoB: 2021-09-19 ( Medical record number (use: usual, ))</a></p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen">
+    <valueReference>
+      <reference value="Specimen/mii-exa-molgen-specimen-2"/>
+    </valueReference>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device">
+    <extension url="device">
+      <valueReference>
+        <reference value="Device/mii-exa-molgen-device-sequencer-2"/>
+      </valueReference>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="LA26398-0"/>
+        <display value="Sequencing"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-regions">
+    <extension url="description">
+      <valueString value="Cornelia de Lange Panel: Alle kodierenden Exons der Gene NIPBL, HDAC8, RAD21, SMC1A, SMC3, TP63"/>
+    </extension>
+    <extension url="studied">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://www.genenames.org/geneId"/>
+          <code value="HGNC:28862"/>
+          <display value="NIPBL"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="studied">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://www.genenames.org/geneId"/>
+          <code value="HGNC:13315"/>
+          <display value="HDAC8"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="studied">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://www.genenames.org/geneId"/>
+          <code value="HGNC:9811"/>
+          <display value="RAD21"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="studied">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://www.genenames.org/geneId"/>
+          <code value="HGNC:11111"/>
+          <display value="SMC1A"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="studied">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://www.genenames.org/geneId"/>
+          <code value="HGNC:2468"/>
+          <display value="SMC3"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="studied">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://www.genenames.org/geneId"/>
+          <code value="HGNC:15979"/>
+          <display value="TP63"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/mii-exa-molgen-patient-2"/>
+  </subject>
+</Procedure>
