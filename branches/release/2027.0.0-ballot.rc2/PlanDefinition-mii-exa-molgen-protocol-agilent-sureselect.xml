@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-protocol-agilent-sureselect"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/>
+<div>
+    <table class="grid dict">
+        
+        <tr>
+            <th scope="row"><b>Id: </b></th>
+            <td style="padding-left: 4px;">mii-exa-molgen-protocol-agilent-sureselect</td>
+        </tr>
+        
+
+        
+        <tr>
+            <th scope="row"><b>Url: </b></th>
+            <td style="padding-left: 4px;"><a href="PlanDefinition-mii-exa-molgen-protocol-agilent-sureselect.html">Agilent SureSelect Human All Exon V7 Kit Protocol</a></td>
+        </tr>
+        
+
+        
+        <tr>
+            <th scope="row"><b>Version: </b></th>
+            <td style="padding-left: 4px;">2027.0.0-ballot.rc2</td>
+        </tr>
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Title: </b></th>
+            <td style="padding-left: 4px;">Agilent SureSelect Human All Exon V7 Kit Protocol</td>
+        </tr>
+        
+
+        
+
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Type: </b></th>
+            <td style="padding-left: 4px;">
+                
+                    
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>system: </b> <span><a href="http://terminology.hl7.org/7.3.0/CodeSystem-plan-definition-type.html">http://terminology.hl7.org/CodeSystem/plan-definition-type</a></span>
+                        </p>
+                        
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>code: </b> <span>protocol</span>
+                        </p>
+                        
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>display: </b> <span>Protocol</span>
+                        </p>
+                        
+                    
+                
+                
+            </td>
+        </tr>
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Date: </b></th>
+            <td style="padding-left: 4px;">2026-09-04 11:45:55+0000</td>
+        </tr>
+        
+
+        
+        <tr>
+            <th scope="row"><b>Publisher: </b></th>
+            <td style="padding-left: 4px;">Medizininformatik-Initiative</td>
+        </tr>
+        
+
+        
+        <tr>
+            <th scope="row"><b>Description: </b></th>
+            <td style="padding-left: 4px;"><div><p>Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the human exome</p>
+</div></td>
+        </tr>
+        
+
+        
+
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Jurisdiction: </b></th>
+            <td style="padding-left: 4px;">DE</td>
+        </tr>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Actions: </b></th>
+            <td style="padding-left: 4px;">
+                <table class="grid-dict">
+                    
+                    <tr>
+                        <td>
+                            
+                            <b> DNA Fragmentation:</b> Fragment genomic DNA to 150-200bp using Covaris
+                            
+                            <br/>
+                            
+                            
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            
+                            <b> Library Preparation:</b> End repair, A-tailing, adapter ligation
+                            
+                            <br/>
+                            
+                            
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            
+                            <b> Hybridization:</b> Hybridize with SureSelect baits for 24 hours at 65°C
+                            
+                            <br/>
+                            
+                            
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            
+                            <b> Capture:</b> Streptavidin bead capture and washing
+                            
+                            <br/>
+                            
+                            
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            
+                            <b> Amplification:</b> PCR amplification of captured library
+                            
+                            <br/>
+                            
+                            
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+        
+    </table>
+</div>
+</div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/>
+<div>
+    <table class="grid dict">
+        
+        <tr>
+            <th scope="row"><b>Id: </b></th>
+            <td style="padding-left: 4px;">mii-exa-molgen-protocol-agilent-sureselect</td>
+        </tr>
+        
+
+        
+        <tr>
+            <th scope="row"><b>Url: </b></th>
+            <td style="padding-left: 4px;"><a href="PlanDefinition-mii-exa-molgen-protocol-agilent-sureselect.html">Agilent SureSelect Human All Exon V7 Kit Protocol</a></td>
+        </tr>
+        
+
+        
+        <tr>
+            <th scope="row"><b>Version: </b></th>
+            <td style="padding-left: 4px;">2027.0.0-ballot.rc2</td>
+        </tr>
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Title: </b></th>
+            <td style="padding-left: 4px;">Agilent SureSelect Human All Exon V7 Kit Protocol</td>
+        </tr>
+        
+
+        
+
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Type: </b></th>
+            <td style="padding-left: 4px;">
+                
+                    
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>system: </b> <span><a href="http://terminology.hl7.org/7.3.0/CodeSystem-plan-definition-type.html">http://terminology.hl7.org/CodeSystem/plan-definition-type</a></span>
+                        </p>
+                        
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>code: </b> <span>protocol</span>
+                        </p>
+                        
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>display: </b> <span>Protocol</span>
+                        </p>
+                        
+                    
+                
+                
+            </td>
+        </tr>
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Date: </b></th>
+            <td style="padding-left: 4px;">2026-09-04 11:45:55+0000</td>
+        </tr>
+        
+
+        
+        <tr>
+            <th scope="row"><b>Publisher: </b></th>
+            <td style="padding-left: 4px;">Medizininformatik-Initiative</td>
+        </tr>
+        
+
+        
+        <tr>
+            <th scope="row"><b>Description: </b></th>
+            <td style="padding-left: 4px;"><div><p>Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the human exome</p>
+</div></td>
+        </tr>
+        
+
+        
+
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Jurisdiction: </b></th>
+            <td style="padding-left: 4px;">DE</td>
+        </tr>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Actions: </b></th>
+            <td style="padding-left: 4px;">
+                <table class="grid-dict">
+                    
+                    <tr>
+                        <td>
+                            
+                            <b> DNA Fragmentation:</b> Fragment genomic DNA to 150-200bp using Covaris
+                            
+                            <br/>
+                            
+                            
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            
+                            <b> Library Preparation:</b> End repair, A-tailing, adapter ligation
+                            
+                            <br/>
+                            
+                            
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            
+                            <b> Hybridization:</b> Hybridize with SureSelect baits for 24 hours at 65°C
+                            
+                            <br/>
+                            
+                            
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            
+                            <b> Capture:</b> Streptavidin bead capture and washing
+                            
+                            <br/>
+                            
+                            
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            
+                            <b> Amplification:</b> PCR amplification of captured library
+                            
+                            <br/>
+                            
+                            
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+        
+    </table>
+</div>
+</div></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect"/>
+  <version value="2027.0.0-ballot.rc2"/>
+  <name value="AgilentSureSelectV7"/>
+  <title value="Agilent SureSelect Human All Exon V7 Kit Protocol"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/plan-definition-type"/>
+      <code value="protocol"/>
+      <display value="Protocol"/>
+    </coding>
+  </type>
+  <status value="active"/>
+  <date value="2026-09-04T11:45:55+00:00"/>
+  <publisher value="Medizininformatik-Initiative"/>
+  <contact>
+    <name value="Medizininformatik-Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@medizininformatik-initiative.de"/>
+    </telecom>
+  </contact>
+  <description value="Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the human exome"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <action>
+    <title value="DNA Fragmentation"/>
+    <description value="Fragment genomic DNA to 150-200bp using Covaris"/>
+  </action>
+  <action>
+    <title value="Library Preparation"/>
+    <description value="End repair, A-tailing, adapter ligation"/>
+  </action>
+  <action>
+    <title value="Hybridization"/>
+    <description value="Hybridize with SureSelect baits for 24 hours at 65°C"/>
+  </action>
+  <action>
+    <title value="Capture"/>
+    <description value="Streptavidin bead capture and washing"/>
+  </action>
+  <action>
+    <title value="Amplification"/>
+    <description value="PCR amplification of captured library"/>
+  </action>
+</PlanDefinition>

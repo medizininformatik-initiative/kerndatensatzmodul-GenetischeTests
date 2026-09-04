@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Migration STU2 to STU3 - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+    <link rel="stylesheet" href="assets/css/project.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+      <!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link rel="stylesheet" href="assets/css/bootstrap-accessibility.css"/>
+<link rel="stylesheet" href="assets/css/template-base.css"/>
+
+<link rel="stylesheet" href="assets/css/num-diz.css"/>
+
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+    <script src="assets/js/direction-management.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"2.3"}
+    h3,h4,h5,h6{--heading-prefix:"2.3"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+
+          <!-- Branding override for the fhir2.base.template header placeholder
+     (base ships includes/fragment-header.html as a single comment; it is included
+     inside "#segment-header > .container", before the #ig-status block).
+     Language handling: only the asset and its descriptive alt text switch on
+     include.lang (the pattern kerndatensatz-basis uses); no translatable UI
+     strings are hard-coded.
+     Brand handling: the project logo additionally switches on
+     site.data.brand.design (input/data/brand.json in the consuming IG, see
+     docs/styleguide.md §10). Only the exact value 'mii' selects the MII
+     logos - anything else, including no brand.json at all, falls through to
+     the NUM-DIZ default.
+     Two logos, mirroring kerndatensatz-basis: the HL7 FHIR logo (links to the
+     FHIR spec) in #family-nav, and the project logo in #project-nav.
+     fhir-logo-www.png is shipped by fhir2.base.template
+     (content/assets/images/), so it resolves from the inherited assets without
+     shipping it here. -->
+<div id="family-nav">
+  <a no-external="true" id="family-logo" href="https://hl7.org/fhir">
+    <img src="assets/images/fhir-logo-www.png" alt="HL7 FHIR" height="50"/>
+  </a>
+</div>
+<div id="project-nav">
+
+  <a no-external="true" id="project-logo" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+    <img src="assets/images/logo-num-diz-de.svg" alt="NUM-DIZ (Netzwerk Universitätsmedizin — Datenintegrationszentrum)" height="50"/>
+
+  </a>
+
+</div>
+  <!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+     is the untouched default. Logic in assets/js/font-size-control.js, the
+     zoom mapping + button styling in template-base.css ("font-size control"
+     block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
+     on include.lang. REMOVAL: delete this block, the js file and the CSS
+     block - one commit, styleguide §5a. -->
+
+<div role="group" class="ig-fontsize" aria-label="Schriftgröße">
+  <button type="button" aria-label="Schriftgröße: Standard" data-level="0" aria-pressed="true">A</button>
+  <button type="button" aria-label="Schriftgröße: größer" data-level="1" aria-pressed="false">A</button>
+  <button type="button" aria-label="Schriftgröße: am größten" data-level="2" aria-pressed="false">A</button>
+</div>
+
+<script defer="null" src="assets/js/font-size-control.js"></script>
+  <!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+     patches the Bootstrap-3 components the publisher renders - navbar
+     dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
+     (structure-tabs) the full ARIA tabs pattern, alerts live-region
+     announcements. `defer` guarantees it executes AFTER the parser-inserted
+     bootstrap.min.js at the end of the body. Vendored from
+     paypal/bootstrap-accessibility-plugin @ v1.0.7 (the admin-ch fork was
+     evaluated and rejected: 151 commits behind upstream, its 6 deltas are
+     site-specific tab tweaks). REMOVAL: delete this tag, both vendored
+     assets and the fragment-css link - guard test pins the hashes. -->
+<script defer="null" src="assets/js/bootstrap-accessibility.min.js"></script>
+  <!-- Back-to-top button: appears after one viewport of scrolling (logic in
+     assets/js/back-to-top.js, styling in template-base.css "back-to-top"
+     block). Rendered here inside #segment-header, which is OUTSIDE the
+     data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
+     this block, the js file and the CSS block - one commit, styleguide §8. -->
+
+<button type="button" class="ig-back-to-top" aria-label="Zurück zum Seitenanfang">↑</button>
+
+<script defer="null" src="assets/js/back-to-top.js"></script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII Implementierungsleitfaden Kerndatensatz-Modul Molekulargenetischer Befundbericht</span>
+            <br/>
+            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- German translation of input/includes/menu.xml.
+     Keep the href targets IDENTICAL to the source menu; translate only labels.
+     Structure notes (OPTIONAL entries, link-only entries, the interim
+     meta-wiki links) are documented in the source menu's header and in
+     docs/page-structure.md / docs/optional-pages.md. -->
+<ul class="nav navbar-nav">
+  <li><a href="index.html">Startseite</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Anleitung<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="guidance.html">Anleitung</a></li>
+        <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
+        <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
+      <li><a href="logical-models.html">Datensätze und Beschreibungen</a></li>
+      <li><a href="uml-diagrams.html">UML-Diagramme</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+      <!-- Eltern-Eintrag und die ersten vier Einträge verlinken die KDS-weiten
+         Konformitätsregeln des Meta-Moduls (INTERIM: Meta-Wiki; siehe
+         Quell-Menü). -->
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Konformität<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Konformität</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">Allgemeine Anforderungen</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must-Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Umgang mit fehlenden Daten</a></li>
+      <li><a href="security-and-privacy.html">Sicherheit und Datenschutz</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artefakte<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="artifacts.html">Artefakt-Übersicht</a></li>
+      <li><a href="profiles.html">Profile</a></li>
+        <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="extensions.html">Extensions</a></li>
+      <li><a href="capability-statements.html">CapabilityStatements</a></li>
+        <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="search-parameters.html">Suchparameter</a></li>
+        <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="logical-models.html">Logische Modelle</a></li>
+        <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="value-sets.html">ValueSets</a></li>
+        <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="examples.html">Beispiele</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Änderungshistorie</a></li>
+  <li class="dropdown">
+      <!-- Der Eltern-Eintrag verlinkt bewusst das PFLICHT-Kind (Versionierung):
+         die Metadaten-Übersicht ist optional. -->
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadaten<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+        <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="metadata.html">Metadaten-Übersicht</a></li>
+      <li><a href="version-history.html">Versionierung</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>    <!-- /.nav-collapse -->
+
+              
+
+
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;" id="select_flg" class="flaglist">
+    <div><img src="assets/images/lang-de.png" alt="flag en" class="flag"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Sprache:</div>
+ 	<div style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;" id="flaglist" class="flaglist">
+    <div><img src="assets/images/lang-de.png" alt="flag de" class="flag"/>Deutsch</div>
+
+    <div><a href="../en/stu2-to-stu3.html"><img src="assets/images/lang-en.png" alt="flag en" class="flag"/>English</a></div>
+
+  </div>
+</div>
+
+
+
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Inhaltsverzeichnis</b></a></li><li><a href="guidance.html"><b>Anleitung</b></a></li><li><b>Migration STU2 to STU3</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht - Local Development build (v2027.0.0-ballot.rc2) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Migration STU2 to STU3</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div>
+  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
+</div>
+
+<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
+
+Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfaden verfasst wurde.  Informationen zu diesen Übersetzungen und Anweisungen zum Abgeben von Feedback zu den Übersetzungen finden Sie <a href="translationinfo.html">hier</a>.
+
+</p>
+
+  <!-- markdownlint-disable MD041 -->
+  <!-- Deutsche Spiegelung von input/pagecontent/stu2-to-stu3.md.
+     Zusammengeführt am 2026-09-04 aus zwei Dokumenten, die unveröffentlicht im
+     Repository-Wurzelverzeichnis lagen: STU2-to-STU3-Migration-Guide-Lightweight.md und
+     COMPLETE-CHANGE-LIST-STU2-TO-STU3.md. Drei Dinge wurden dabei geändert: die Zusage
+     von StructureMaps und Beispielverzeichnissen ist entfallen (sie existierten nie,
+     und die DIZ-Datenintegration könnte sie ohnehin meist nicht ausführen), die
+     veraltete Paketversion ist raus, und die Vererbung von MSI/Mutationslast war falsch
+     beschrieben. Beide Dateien müssen dasselbe aussagen. -->
+
+<h3 id="migration-von-clinical-genomics-stu2-auf-stu3">Migration von Clinical Genomics STU2 auf STU3</h3>
+
+<p><a name="l466">​</a>Mit Version 2026.0.0 ist dieses Modul von
+<a href="http://hl7.org/fhir/uv/genomics-reporting/STU2/">Clinical Genomics Reporting STU2</a> auf
+<a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/">STU3</a> umgestiegen. Diese Seite sagt,
+was sich geändert hat und wie Bestandsdaten überführt werden. Sie richtet sich an
+Standorte, die bereits Daten gegen die 2025er-Linie erzeugen.</p>
+
+<p><strong>Hier stehen bewusst keine StructureMaps.</strong> Die Datenintegration eines
+Datenintegrationszentrums läuft über eigene ETL-Strecken, und eine FHIR-Mapping-Engine
+gehört selten dazu. Eine StructureMap würde eine Transformation beschreiben, die die
+meisten Standorte gar nicht ausführen könnten. Stattdessen steht die Abbildung hier
+deklarativ — umsetzbar in der Technologie, die eure Strecke ohnehin verwendet.</p>
+
+<h4 id="profile-was-aus-was-wurde">Profile: was aus was wurde</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Profil</th>
+      <th>STU2</th>
+      <th>STU3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>UntersuchteRegion</td>
+      <td><code class="language-plaintext highlighter-rouge">…/StructureDefinition/region-studied</code></td>
+      <td><strong>entfallen</strong> — siehe GenomicStudy unten</td>
+    </tr>
+    <tr>
+      <td>ErgebnisZusammenfassung</td>
+      <td>eigene Observation</td>
+      <td><strong>entfallen</strong> — geht in <code class="language-plaintext highlighter-rouge">DiagnosticReport.conclusionCode</code> auf</td>
+    </tr>
+    <tr>
+      <td>Variante</td>
+      <td><code class="language-plaintext highlighter-rouge">…/variant</code></td>
+      <td><code class="language-plaintext highlighter-rouge">…/variant</code> — Basis unverändert, Komponenten umbenannt</td>
+    </tr>
+    <tr>
+      <td>Mikrosatelliteninstabilität</td>
+      <td>direkt von <code class="language-plaintext highlighter-rouge">Observation</code></td>
+      <td>über <code class="language-plaintext highlighter-rouge">MII_PR_MolGen_MolekularerBiomarker</code></td>
+    </tr>
+    <tr>
+      <td>Mutationslast</td>
+      <td>direkt von <code class="language-plaintext highlighter-rouge">Observation</code></td>
+      <td>über <code class="language-plaintext highlighter-rouge">MII_PR_MolGen_MolekularerBiomarker</code></td>
+    </tr>
+    <tr>
+      <td>MolekulareKonsequenz</td>
+      <td>—</td>
+      <td><strong>neu</strong>, von <code class="language-plaintext highlighter-rouge">…/molecular-consequence</code></td>
+    </tr>
+    <tr>
+      <td>GenomicStudy</td>
+      <td>—</td>
+      <td><strong>neu</strong>, von <code class="language-plaintext highlighter-rouge">…/genomic-study</code> (eine <code class="language-plaintext highlighter-rouge">Procedure</code>)</td>
+    </tr>
+    <tr>
+      <td>GenomicStudyAnalysis</td>
+      <td>—</td>
+      <td><strong>neu</strong>, von <code class="language-plaintext highlighter-rouge">…/genomic-study-analysis</code> (eine <code class="language-plaintext highlighter-rouge">Procedure</code>)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Zu den zwei Stufen bei den Biomarkern: MSI und Mutationslast erben <strong>nicht</strong> direkt vom
+STU3-Profil <code class="language-plaintext highlighter-rouge">molecular-biomarker</code>. Sie erben von <code class="language-plaintext highlighter-rouge">MII_PR_MolGen_MolekularerBiomarker</code>
+dieses Moduls, und dieses erbt von STU3. Praktisch ist die Folge dieselbe — siehe die
+Kategorie-Anforderung unten —, aber eine Profilbindung gegen das STU3-Canonical greift
+nicht.</p>
+
+<h4 id="komponenten-in-variante">Komponenten in Variante</h4>
+
+<p>Die Slice-Namen haben sich geändert; in einer Instanz erkennt man eine Komponente am
+<code class="language-plaintext highlighter-rouge">code</code>, deshalb bleibt das meiste in den Daten unsichtbar:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Komponente</th>
+      <th>LOINC</th>
+      <th>Was sich geändert hat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DNA-Änderung (c.HGVS)</td>
+      <td><code class="language-plaintext highlighter-rouge">48004-6</code></td>
+      <td>unverändert</td>
+    </tr>
+    <tr>
+      <td>Transkript-Referenz</td>
+      <td><code class="language-plaintext highlighter-rouge">51958-7</code></td>
+      <td>unverändert</td>
+    </tr>
+    <tr>
+      <td>Aminosäure-Änderung</td>
+      <td><code class="language-plaintext highlighter-rouge">48005-3</code></td>
+      <td>unverändert</td>
+    </tr>
+    <tr>
+      <td>Art der Aminosäure-Änderung</td>
+      <td><code class="language-plaintext highlighter-rouge">48006-1</code></td>
+      <td><strong>aus dem Profil entfernt</strong></td>
+    </tr>
+    <tr>
+      <td>Molekulare Konsequenz</td>
+      <td>verschiedene</td>
+      <td><strong>verlagert</strong> in eine eigene MolekulareKonsequenz-Observation</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Drei Slices haben den Präfix <code class="language-plaintext highlighter-rouge">representative-</code> bekommen — <code class="language-plaintext highlighter-rouge">coding-hgvs</code>,
+<code class="language-plaintext highlighter-rouge">transcript-ref-seq</code> und <code class="language-plaintext highlighter-rouge">protein-hgvs</code>. Das betrifft nur, wer Slices namentlich
+referenziert, etwa in eigenen abgeleiteten Profilen oder in FHIRPath; Instanzdaten
+bleiben unberührt.</p>
+
+<h4 id="die-zusätzliche-kategorie-bei-msi-und-mutationslast">Die zusätzliche Kategorie bei MSI und Mutationslast</h4>
+
+<p>Weil beide jetzt unter einem Biomarker-Profil hängen, brauchen sie neben <code class="language-plaintext highlighter-rouge">laboratory</code>
+eine zweite <code class="language-plaintext highlighter-rouge">category</code>:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"category"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/observation-category"</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"laboratory"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Laboratory"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs"</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"biomarker-category"</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A characterization of a given biomarker observation."</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Auf das zweite System achten: die Biomarker-Kategorie kommt aus dem
+Clinical-Genomics-<code class="language-plaintext highlighter-rouge">tbd-codes-cs</code>, <strong>nicht</strong> aus <code class="language-plaintext highlighter-rouge">observation-category</code>. STU3 fordert
+beide Slices mit <code class="language-plaintext highlighter-rouge">1..1</code>, eine Instanz mit nur <code class="language-plaintext highlighter-rouge">laboratory</code> fällt also durch die
+Validierung. Das ist der häufigste Fehler beim Überführen von Daten der 2025er-Linie.</p>
+
+<h4 id="weg-1--aus-untersuchteregion-wird-genomicstudy">Weg 1 — aus UntersuchteRegion wird GenomicStudy</h4>
+
+<p>STU2 hielt die untersuchten Regionen als Komponenten einer Observation fest. STU3
+ersetzt das durch ein <code class="language-plaintext highlighter-rouge">Procedure</code>-Paar: eine GenomicStudy, die orchestriert, und eine
+oder mehrere GenomicStudyAnalysis-Schritte, die die Details tragen.</p>
+
+<p><strong>Vorher:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Observation"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"…/mii-pr-molgen-untersuchte-region"</span><span class="p">]</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"component"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"48018-6"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HGNC:1097"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRAF"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Nachher</strong> — die untersuchte Region wandert in die Extension
+<code class="language-plaintext highlighter-rouge">genomic-study-analysis-regions</code> eines Analyseschritts:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Procedure"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"…/mii-pr-molgen-genomic-study-analysis"</span><span class="p">]</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">".../genomic-study-analysis-regions"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"studied"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HGNC:1097"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRAF"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+  </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Die minimal tragfähige Migration ist genau das: ein Analyseschritt je bisheriger
+UntersuchteRegion, mit denselben Gen-Codes. Alles Weitere, was GenomicStudyAnalysis
+bietet — Sequenzierer und Pipeline als <code class="language-plaintext highlighter-rouge">Device</code>, Methodentyp, Lesetiefe und Abdeckung,
+Probe, Ein- und Ausgabedateien — ist optional und lohnt nur dort, wo das Quellsystem es
+tatsächlich vorhält.</p>
+
+<p>Zu bedenken: <code class="language-plaintext highlighter-rouge">regions-studied</code> ist das, womit eine Abfrage <em>nicht gefunden</em> von <em>nicht
+gesucht</em> unterscheiden kann. Wenn eure STU2-Daten untersuchte Regionen festgehalten
+haben, nehmt sie mit — sie wegzulassen kostet genau diese Unterscheidung.</p>
+
+<h4 id="weg-2--aus-ergebniszusammenfassung-wird-conclusioncode">Weg 2 — aus ErgebnisZusammenfassung wird conclusionCode</h4>
+
+<p><strong>Vorher:</strong> eine eigene Observation, referenziert aus <code class="language-plaintext highlighter-rouge">DiagnosticReport.result</code>.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DiagnosticReport"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Observation/ergebnis-zusammenfassung-1"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">}</span><span class="w">
+
+</span><span class="p">{</span><span class="w"> </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Observation"</span><span class="p">,</span><span class="w"> </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ergebnis-zusammenfassung-1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LA6576-8"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Positive"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Nachher:</strong> der Code wandert an den Befund selbst, die Observation entfällt.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DiagnosticReport"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"conclusionCode"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LA6576-8"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Positive"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Dabei den nun ins Leere zeigenden <code class="language-plaintext highlighter-rouge">result</code>-Eintrag entfernen, nicht nur den
+<code class="language-plaintext highlighter-rouge">conclusionCode</code> ergänzen.</p>
+
+<h4 id="weg-3--umbenannte-slices-in-variante">Weg 3 — umbenannte Slices in Variante</h4>
+
+<p>Nur relevant, wer Slice-Namen referenziert. In den Instanzdaten ändert sich nichts, weil
+Komponenten über den <code class="language-plaintext highlighter-rouge">code</code> identifiziert werden:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>STU2-Slice</th>
+      <th>STU3-Slice</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">coding-hgvs</code></td>
+      <td><code class="language-plaintext highlighter-rouge">representative-coding-hgvs</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">transcript-ref-seq</code></td>
+      <td><code class="language-plaintext highlighter-rouge">representative-transcript-ref-seq</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">protein-hgvs</code></td>
+      <td><code class="language-plaintext highlighter-rouge">representative-protein-hgvs</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="checkliste">Checkliste</h4>
+
+<p><strong>Vorbereitung</strong></p>
+
+<ul>
+  <li>Aktuelles Paket ziehen und den <a href="changes.html">Changelog</a> der Zielversion lesen.</li>
+  <li>Feststellen, welche Profile ihr tatsächlich erzeugt. Die meisten Standorte nutzen
+einen Bruchteil des Moduls.</li>
+  <li>Alle Instanzen finden, die <code class="language-plaintext highlighter-rouge">untersuchte-region</code> oder <code class="language-plaintext highlighter-rouge">ergebnis-zusammenfassung</code> in
+<code class="language-plaintext highlighter-rouge">meta.profile</code> tragen — das sind die beiden, die sich nicht mechanisch überführen
+lassen.</li>
+</ul>
+
+<p><strong>Während der Migration</strong></p>
+
+<ul>
+  <li>Die zweite <code class="language-plaintext highlighter-rouge">category</code> bei MSI- und Mutationslast-Instanzen ergänzen.</li>
+  <li>Jede UntersuchteRegion in eine GenomicStudy plus mindestens eine
+GenomicStudyAnalysis aufteilen und die untersuchten Regionen erhalten.</li>
+  <li>Jeden ErgebnisZusammenfassung-Wert nach <code class="language-plaintext highlighter-rouge">DiagnosticReport.conclusionCode</code> überführen
+und die Observation samt <code class="language-plaintext highlighter-rouge">result</code>-Referenz löschen.</li>
+  <li>Molekulare Konsequenzen aus Variante in eine eigene MolekulareKonsequenz auslagern.</li>
+</ul>
+
+<p><strong>Danach</strong></p>
+
+<ul>
+  <li>Gegen das veröffentlichte Paket validieren; welche Profile dieses Modul deklariert und
+mit welcher Erwartung, steht auf der Seite
+<a href="capability-statements.html">Capability Statements</a>.</li>
+  <li>Die Ausgabe nach verbliebenen STU2-Canonicals durchsuchen — <code class="language-plaintext highlighter-rouge">untersuchte-region</code>,
+<code class="language-plaintext highlighter-rouge">ergebnis-zusammenfassung</code>, <code class="language-plaintext highlighter-rouge">region-studied</code> —, bevor die Migration als erledigt gilt.</li>
+</ul>
+
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+  <script src="assets/js/flags.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
+          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Fri, Sep 4, 2026 11:45+0000">2026-09-04</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+              <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                 | <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/" target="_blank">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/" target="_blank">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/impressum" target="_blank">Impressum</a>
+                 <br/>
+                   <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7&reg;, FHIR&reg; and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
