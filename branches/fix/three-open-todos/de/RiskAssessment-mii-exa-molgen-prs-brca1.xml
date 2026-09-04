@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RiskAssessment xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-prs-brca1"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score|2027.0.0-ballot.rc2"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: RiskAssessment mii-exa-molgen-prs-brca1</b></p><a name="de-mii-exa-molgen-prs-brca1"> </a><a name="de-hcmii-exa-molgen-prs-brca1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-molgen-polygener-risiko-score.html">MII PR MolGen Polygener Risiko Score</a> version: 2027.0.0-ballot.rc2</p></div><p><b>status</b>: Final</p><p><b>subject</b>: <a href="Patient-mii-exa-molgen-patient-2.html">Melanie Marie Müller (official) Female, DoB: 2021-09-19 ( Krankenaktennummer (use: usual, ))</a></p><p><b>occurrence</b>: 2022-11-01</p><p><b>basis</b>: <a href="Observation-mii-exa-molgen-variante-brca1.html">Observation Genetic variant assessment</a></p><h3>Predictions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Extension</b></td><td><b>Outcome</b></td><td><b>QualitativeRisk</b></td></tr><tr><td style="display: none">*</td><td/><td><span title="Codes:{http://snomed.info/sct 718220008}">Hereditary breast and ovarian cancer syndrome (disorder)</span></td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/risk-probability high}">High likelihood</span></td></tr></table></div>
+  </text>
+  <status value="final"/>
+  <subject>
+    <reference value="Patient/mii-exa-molgen-patient-2"/>
+  </subject>
+  <occurrenceDateTime value="2022-11-01"/>
+  <basis>
+    <reference value="Observation/mii-exa-molgen-variante-brca1"/>
+  </basis>
+  <prediction>
+    <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/risk-assessment-einflussfaktor">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="414152003"/>
+          <display value="European (ethnic group)"/>
+        </coding>
+        <text value="Der verwendete Polygene Risikoscore wurde bisher nur für die europäische Bevölkerung bei Brustkrebs validiert."/>
+      </valueCodeableConcept>
+    </extension>
+    <outcome>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="718220008"/>
+        <display value="Hereditary breast and ovarian cancer syndrome (disorder)"/>
+      </coding>
+    </outcome>
+    <qualitativeRisk>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/risk-probability"/>
+        <code value="high"/>
+        <display value="High likelihood"/>
+      </coding>
+    </qualitativeRisk>
+  </prediction>
+</RiskAssessment>
