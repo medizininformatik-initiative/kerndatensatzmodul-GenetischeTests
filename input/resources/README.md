@@ -25,8 +25,36 @@ each MII CalVer release is bound to one SNOMED CT International release.
 |---|---|---|
 | `v2025.*` | 2024-07-01 | `http://snomed.info/sct/900000000000207008/version/20240701` |
 | `v2026.*` | 2025-07-01 | `http://snomed.info/sct/900000000000207008/version/20250701` |
+| `v2027.*` | 2026-07-01 | `http://snomed.info/sct/900000000000207008/version/20260701` |
 
-The shipped file carries the **verified `v2026.*` pin**, matching the 2026
+### Which systems are pinned, and which cannot be
+
+Pinned, each version read from the MII terminology server
+(`ontoserver.mii-termserv.de`) on 2026-09-04 rather than guessed:
+
+| Code system | Version | Codings in this module |
+|---|---|---|
+| SNOMED CT | `…/version/20260701` | 134 |
+| LOINC | `2.83` | 286 |
+| HGNC | `20250704` | 61 |
+| Human Phenotype Ontology | `20250303` | 27 |
+| Sequence Ontology | `20241118` | 14 |
+| ICD-10-GM | `2026` | 16 |
+
+LOINC is pinned at **2.83**, not the 2.82 that `kerndatensatzmodul-labor` carries.
+Both are on the server; 2.83 is what the build already resolves against by default,
+so pinning it changes nothing today and makes it reproducible tomorrow. Pinning 2.82
+would change behaviour and risk new findings — the opposite of what a pin is for.
+
+**Not pinned, and why.** HGVS (`varnomen.hgvs.org`, 24 codings), ATC
+(`whocc.no/atc`, 8) and Orphanet (`orpha.net`, 4) return no version from the server;
+UCUM (`unitsofmeasure.org`, 26) is unversioned by design. The HL7 systems — 221
+codings across `terminology.hl7.org` and `hl7.org/fhir` — take their version from
+the `hl7.terminology.r4` package pin in `sushi-config.yaml`, not from here. The 15
+identifier systems (74 codings, `…/sid/…` and NamingSystems) are not code systems at
+all.
+
+The shipped file carries the **verified `v2027.*` pin**, matching the 2026
 dependency line this template pins in `sushi-config.yaml`. When your module moves
 to a later CalVer line, look the release up in that wiki table and update this
 file **and** the `$sct` alias in `input/fsh/aliases.fsh`. Do not guess a version —
