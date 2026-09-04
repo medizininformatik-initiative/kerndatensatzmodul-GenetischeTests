@@ -66,9 +66,21 @@ Abhängigkeiten sind unter
 beschrieben. Wie sich dieses Modul zu den anderen MII-Modulen verhält,
 beschreibt die [Anleitung für Implementierende](implementer-guidance.html).
 
-<!-- TODO:REVIEW Diese TODO-Box bleibt offen: die migrierte Quellseite enthält
-     keine Auflistung der formalen Paket-Abhängigkeiten. Inhalt darf hier nicht
-     erfunden werden. -->
+Dieser Leitfaden baut auf den folgenden Paketen auf. Die Tabelle stammt aus
+`dependencies:` in `sushi-config.yaml` und kann deshalb nicht von dem abweichen,
+was der Build tatsächlich auflöst:
+
+| Paket | Version | Wofür |
+|---|---|---|
+| `hl7.fhir.uv.genomics-reporting` | `3.0.0` | HL7 Clinical Genomics Reporting STU3 — die internationale Basis, von der jedes genetische Profil hier abstammt |
+| `de.medizininformatikinitiative.kerndatensatz.meta` | `2027.0.0-ballot.rc3` | MII-Kerndatensatz-Modul Meta — Provenienz und die gemeinsamen Suchparameter |
+| `de.basisprofil.r4` | `1.6.0` | Deutsche Basisprofile — Identifikatoren, Adressen, Versicherung |
+| `de.medizininformatikinitiative.kerndatensatz.base` | `2027.0.0-ballot.rc1` | MII-Kerndatensatz-Modul Basis — Patient, Encounter und die modulübergreifenden Grundlagen |
+| `de.medizininformatikinitiative.kerndatensatz.biobank` | `2027.0.0-ballot.rc2` | MII-Kerndatensatz-Modul Biobank — die Specimen-Profile, auf die die genomischen Studien verweisen |
+| `hl7.terminology.r4` | `7.3.0` | HL7 Terminology — die Codesysteme, auf die sich die FHIR-Kernspezifikation stützt |
+| `hl7.fhir.uv.crmi` | `2.0.0` | Canonical Resource Management Infrastructure — erklärt, wie dieser Leitfaden seine Artefakte versioniert |
+| `hl7.fhir.uv.extensions.r4` | `5.3.0` | HL7-Extension-Paket |
+
 
 Weitere FHIR-Implementierungsleitfäden finden sich in der offiziellen
 **[FHIR IG Registry](https://fhir.org/guides/registry/)** (Quelle:

@@ -529,7 +529,7 @@ MII IG Modul Molekulargenetischer Befundbericht/
     - now inherits from the new Molekularer Biomarker module
     - `component[conclusion-string]` is therefore dropped
   - Therapeutische Implikation
-    - component[prognosis] is dropped <!-- TODO:REVIEW The source broke off mid-sentence here ("weil in den (Gründe?)"); the rationale is missing and needs to be supplied. -->
+    - `component[prognosis]` is dropped **without a successor**. Checked against every STU3 profile: neither `therapeutic-implication` nor `diagnostic-implication`, `molecular-consequence` or the shared parent `implication` carries a prognosis slice. Anyone who used to set this value has nowhere to put it in STU3.
     - `component[predicted-therapeutic-implication]` changed to `component[therapeutic-implication]`
   - Untersuchte Region
     - the profile is dropped; information about location and instruments is coded via GenomicStudy/GenomicStudyAnalysis instead
