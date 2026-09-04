@@ -45,7 +45,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-molgen-fam
   "name" : "MII_EX_MolGen_FamiliareLinie",
   "title" : "MII EX MolGen Familiare Linie",
   "status" : "active",
-  "date" : "2026-09-04T10:35:16+00:00",
+  "date" : "2026-09-04T10:56:56+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
