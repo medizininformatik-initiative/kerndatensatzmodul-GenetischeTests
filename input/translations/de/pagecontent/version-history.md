@@ -13,7 +13,7 @@ Das Modul **Molekulargenetischer Befundbericht** folgt dem KDS-Schema der Kalend
 (CalVer) in einer SemVer-kompatiblen numerischen Form:
 
 * Format **`JJJJ.MINOR.PATCH[-label]`** — die aktuelle Version ist
-  `2027.0.0-ballot.rc1`;
+  `2027.0.0-ballot.rc2`;
 * **`JJJJ`** — das Jahr, in dem der Leitfaden gilt und genutzt werden soll; es
   tritt an die Stelle der Major-Version;
 * **`MINOR`** — wird für nicht brechende Ergänzungen und Präzisierungen erhöht;
