@@ -41,7 +41,7 @@ The ValueSet contains codes for related family member types from SNOMED CT.
   "name" : "MII_VS_MolGen_FamilyMember_SNOMED",
   "title" : "MII VS MolGen Family Member SNOMED",
   "status" : "active",
-  "date" : "2026-09-04T12:05:45+00:00",
+  "date" : "2026-09-04T13:46:18+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

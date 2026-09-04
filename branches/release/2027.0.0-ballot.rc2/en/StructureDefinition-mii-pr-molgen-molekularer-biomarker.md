@@ -43,7 +43,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-mol
   "name" : "MII_PR_MolGen_MolekularerBiomarker",
   "title" : "MII PR MolGen Molekularer Biomarker",
   "status" : "active",
-  "date" : "2026-09-04T12:05:45+00:00",
+  "date" : "2026-09-04T13:46:18+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
