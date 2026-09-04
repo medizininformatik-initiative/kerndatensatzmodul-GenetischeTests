@@ -15,16 +15,16 @@
 #            (kerndatensatz-meta wiki). Modelled on the reference module's
 #            release workflow — for example kerndatensatz-basis `main.yml`
 #            (RELEASE + NOTIFY_ZULIP jobs) + hands off to `go-publish.yml`.
-#            On a CalVer tag it BUILDS the IG (buildability gate), CREATES a
-#            DRAFT GitHub Release with generated notes, and — when a human
-#            publishes that release — ANNOUNCES it to the MII Zulip (topic
-#            "Releases"). Formal FHIR publication stays behind the gated,
-#            manual `go-publish.yml` (this workflow only points at it).
+#            On a CalVer tag it BUILDS the IG (buildability gate), PUBLISHES a
+#            GitHub Release carrying the module's own changelog section for that
+#            version, and ANNOUNCES it to the MII Zulip (topic "Releases").
+#            Formal FHIR publication stays behind the gated, manual
+#            `go-publish.yml` (this workflow only points at it).
 #
 # Triggers:
 #   - push tag `v[0-9]+.[0-9]+.[0-9]+*` (CalVer, e.g. v2026.0.1; the same glob
 #     kerndatensatz-basis uses, for example) →
-#     build + create the DRAFT release.
+#     build + publish the release with the changelog notes for that version.
 #   - release published → announce on the MII Zulip.
 #   - workflow_dispatch → dry run: build only, NO release side effects.
 #
@@ -34,6 +34,8 @@
 #   - vars.ENABLE_ZULIP_ANNOUNCE — gates `notify_zulip`; ON by default (set to
 #     'false' to disable the MII announcement). Same toggle name the template's
 #     notify-zulip.yml uses — both are "MII Zulip release announcement".
+#   - vars.RELEASE_AS_DRAFT — set to 'true' to draft the release instead of
+#     publishing it, for a version that needs a look before it goes out.
 #
 # Template-repo self-skip: the `guard` job detects unreplaced `{{...}}`
 #   placeholders in sushi-config.yaml. On the UN-INSTANTIATED template repo (or a
@@ -44,12 +46,13 @@
 # Human-gated steps (never automated):
 #   1. Preparing the release (branch, version bump, PR, merge, tag) — the human
 #      does steps 1–5 of the wiki workflow; this file reacts to the pushed tag.
-#   2. Publishing the DRAFT release — turns the draft
-#      created here into a published release, which fires `notify_zulip`.
-#   3. Formal FHIR publication via `go-publish.yml` — manual
+#      Writing the changelog section for the version is part of that, and it is
+#      where the release notes are reviewed: they go through a pull request,
+#      then this workflow publishes them verbatim.
+#   2. Formal FHIR publication via `go-publish.yml` — manual
 #      workflow_dispatch, `publish: false` (a complete dry run) by default. This
 #      workflow only PRINTS the handoff; it never dispatches go-publish itself.
-#   4. secrets.ZULIP_API_KEY — mapped to env; when absent the
+#   3. secrets.ZULIP_API_KEY — mapped to env; when absent the
 #      announcement SKIPS with a ::notice, it never fails the release.
 #
 # Terminology: the build prefers the MII terminology server
@@ -324,11 +327,23 @@ jobs:
           retention-days: 30
 
   # ---------------------------------------------------------------------------
-  # release — wiki step 5: on a pushed CalVer tag, create a DRAFT GitHub Release
-  # with auto-generated notes (for example, the RELEASE job of kerndatensatz-basis
-  # `main.yml` does the same). A human finalizes
-  # and PUBLISHES it (wiki step 7), which fires `notify_zulip`. Draft, so the
-  # human can attach the package and edit notes before it goes out.
+  # release — wiki step 5: on a pushed CalVer tag, create and PUBLISH the GitHub
+  # Release, carrying the notes the module already wrote on its changelog page.
+  #
+  # This used to create a DRAFT whose body said "Add your own release notes
+  # here", which made publishing a manual step for a self-inflicted reason: the
+  # module keeps per-version release notes in input/pagecontent/changes.md, and
+  # those go through a pull request like every other change. Reading them here
+  # removes both the scaffold and the hand step. The review window did not
+  # disappear — it moved to where the notes are actually written.
+  #
+  # Publishing fires `notify_zulip`. Two repository variables opt back out:
+  # ENABLE_ZULIP_ANNOUNCE=false keeps the release quiet, RELEASE_AS_DRAFT=true
+  # restores the old draft behaviour without editing this file.
+  #
+  # If the changelog has no section for the tag, the release is DRAFTED instead
+  # of published and the job summary says why. A release must never go out
+  # carrying notes nobody wrote.
   # ---------------------------------------------------------------------------
   release:
     needs: [guard, build]
@@ -341,6 +356,12 @@ jobs:
     permissions:
       contents: write # create the GitHub Release for this tag
     steps:
+      - name: Check out the tag (the changelog is the source of the notes)
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 1
+
       - name: Prepare version
         id: prep
         shell: bash
@@ -348,6 +369,62 @@ jobs:
           set -euo pipefail
           version="${GITHUB_REF#refs/tags/}"
           echo "version=${version}" >> "${GITHUB_OUTPUT}"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "22"
+
+      - name: Take the release notes from the changelog page
+        id: notes
+        shell: bash
+        env:
+          VERSION: ${{ steps.prep.outputs.version }}
+        run: |
+          set -euo pipefail
+
+          # Guide-relative links (profiles.html) resolve on the changelog page
+          # but not on a GitHub release page, so they are rewritten against the
+          # place this version is actually published.
+          #
+          # That place is publication-request.json's "path" — NOT the canonical
+          # in sushi-config.yaml. The canonical is the module's FHIR identity
+          # (…/fhir/ext/modul-molgen) and no page is served under it; the guide
+          # lives on GitHub Pages under the version. Both are URLs and it is an
+          # easy swap to make, so: the one that resolves in a browser is here.
+          version_path="$(jq -r '.path // empty' publication-request.json)"
+          if [ -z "${version_path}" ]; then
+            echo "::warning::publication-request.json has no .path — release links stay relative."
+          elif [ "${version_path%"${VERSION#v}"}" = "${version_path}" ]; then
+            # The path is bumped alongside the version when a release is
+            # prepared. If it no longer ends in this version, the file is stale
+            # and the links would point at the wrong release.
+            echo "::warning::publication-request.json .path (${version_path}) does not end in ${VERSION#v} — release links stay relative."
+            version_path=""
+          fi
+
+          # A missing section must not fail the release: the tag is pushed and
+          # the package is built. It is a reason to fall back to a draft, so a
+          # human writes the notes before anything goes out.
+          if notes="$(node scripts/release-notes-from-changelog.mjs "${VERSION}" \
+                        --canonical "${version_path}" 2>notes.err)"; then
+            echo "found=true" >> "${GITHUB_OUTPUT}"
+            {
+              echo "body<<RELEASE_NOTES_EOF"
+              echo "${notes}"
+              echo "RELEASE_NOTES_EOF"
+            } >> "${GITHUB_OUTPUT}"
+          else
+            echo "found=false" >> "${GITHUB_OUTPUT}"
+            echo "::warning::No changelog section for ${VERSION} — drafting instead of publishing. $(cat notes.err)"
+            {
+              echo "body<<RELEASE_NOTES_EOF"
+              echo "This version has no section in the changelog"
+              echo "(\`input/pagecontent/changes.md\`). Write the notes there, then"
+              echo "edit and publish this draft."
+              echo "RELEASE_NOTES_EOF"
+            } >> "${GITHUB_OUTPUT}"
+          fi
 
       - name: Download the build (package.tgz for the release assets)
         # Attaching the package to every release is what makes the version
@@ -358,52 +435,47 @@ jobs:
           name: module-release-build
           path: release-assets
 
-      - name: Create the draft GitHub Release
+      - name: Create the GitHub Release
         uses: softprops/action-gh-release@3d0d9888cb7fd7b750713d6e236d1fcb99157228 # v3.0.2
         with:
           name: "${{ steps.prep.outputs.version }}"
           files: release-assets/package.tgz
-          draft: true
+          draft: ${{ steps.notes.outputs.found != 'true' || vars.RELEASE_AS_DRAFT == 'true' }}
           prerelease: ${{ contains(steps.prep.outputs.version, '-') }}
           generate_release_notes: true
           body: |
             ## MII KDS module release ${{ steps.prep.outputs.version }}
 
-            <!-- DELETE START -->
-            This is a **draft** created automatically from the CalVer tag. The
-            module's FHIR package (`package.tgz`) is already attached — future
-            releases' version comparison fetches the previous package from this
-            asset, so leave it in place. Before publishing (wiki step 7): edit
-            these notes and remove the DELETE blocks.
-            <!-- DELETE END -->
+            ${{ steps.notes.outputs.body }}
 
-            ### Changes
+            ---
 
-            <!-- DELETE START -->
-            Add your own release notes here; the auto-generated notes are below.
-            <!-- DELETE END -->
+            The module's FHIR package (`package.tgz`) is attached; leave it in
+            place, because the version comparison of the next release fetches
+            the previous package from exactly this asset. It is a buildability
+            artefact and marked `notForPublication` — the package to consume
+            comes from the formal publication below.
 
-            ### Next: formal FHIR publication (human-gated)
-
-            <!-- DELETE START -->
-            After publishing this release, run the gated **go-publish.yml**
-            (Actions → "Publish release with IG Publisher" → Run workflow):
+            The formal FHIR publication is a separate, human-gated step:
+            Actions → "Publish release with IG Publisher" (`go-publish.yml`),
             first with `publish: false` (a complete dry run), then — only after
-            review — with `publish: true`. This workflow never triggers
-            go-publish itself. See `docs/release.md`.
-            <!-- DELETE END -->
-
-            See the auto-generated release notes below.
+            review — with `publish: true`.
 
       - name: Hand off to gated formal publication (go-publish.yml)
         shell: bash
         run: |
           {
-            echo "### Release drafted — next steps (human-gated)"
+            if [ "${{ steps.notes.outputs.found }}" = "true" ] && [ "${{ vars.RELEASE_AS_DRAFT }}" != "true" ]; then
+              echo "### Release published — one step left (human-gated)"
+              echo
+              echo "Release \`${{ steps.prep.outputs.version }}\` is public, carrying the notes from the changelog page. The MII Zulip announcement has fired."
+            else
+              echo "### Release DRAFTED — two steps left"
+              echo
+              echo "The changelog has no section for \`${{ steps.prep.outputs.version }}\`, or RELEASE_AS_DRAFT is set. Write the notes in \`input/pagecontent/changes.md\`, then edit and publish the draft."
+            fi
             echo
-            echo "1. Finalize and **publish** the draft Release \`${{ steps.prep.outputs.version }}\` (fires the MII Zulip announcement)."
-            echo "2. Run the gated **go-publish.yml** dry run: Actions → \"Publish release with IG Publisher\" → \`release_ref = ${{ steps.prep.outputs.version }}\`, \`publish = false\`."
-            echo "3. After review, re-run go-publish with \`publish = true\`."
+            echo "Run the gated **go-publish.yml** dry run: Actions → \"Publish release with IG Publisher\" → \`release_ref = ${{ steps.prep.outputs.version }}\`, \`publish = false\`. After review, re-run with \`publish = true\`."
             echo
             echo "The two paths never mix: modules release with CalVer via this workflow; the template repos release with SemVer via Release Please. See docs/release.md."
           } >> "${GITHUB_STEP_SUMMARY}"
