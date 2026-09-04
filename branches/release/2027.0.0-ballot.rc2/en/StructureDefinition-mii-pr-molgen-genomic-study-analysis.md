@@ -82,7 +82,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-gen
   "name" : "MII_PR_MolGen_GenomicStudyAnalysis",
   "title" : "MII PR MolGen Genomic Study Analysis",
   "status" : "active",
-  "date" : "2026-09-04T11:45:55+00:00",
+  "date" : "2026-09-04T12:05:45+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

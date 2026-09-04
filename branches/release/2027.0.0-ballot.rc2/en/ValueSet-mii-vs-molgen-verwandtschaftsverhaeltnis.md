@@ -41,7 +41,7 @@ ValueSet für die Angabe eines Verwandtschaftsverhältnis zwischen Patient und F
   "name" : "MII_VS_MolGen_Verwandtsverhaeltnis",
   "title" : "MII VS MolGen Verwandtschaftsverhaeltnis",
   "status" : "active",
-  "date" : "2026-09-04T11:45:55+00:00",
+  "date" : "2026-09-04T12:05:45+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

@@ -123,7 +123,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "name" : "MII_PR_MolGen_Genotyp",
   "title" : "MII PR MolGen Genotyp",
   "status" : "active",
-  "date" : "2026-09-04T11:45:55+00:00",
+  "date" : "2026-09-04T12:05:45+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
