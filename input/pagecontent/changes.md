@@ -82,6 +82,56 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 
 ---
 
+#### Version 2027.0.0-ballot.rc2
+
+**Date:** 2026-09-04 · **Release candidate**
+
+The first candidate was formally published; this one closes what that exposed.
+
+##### Terminology
+
+* **Every externally versioned code system is now pinned**, not just SNOMED CT. The
+  expansion manifest bound one system out of sixteen candidates, while its own
+  documentation promised that an expansion "produces the same codes today, at release
+  time, and three years later". LOINC alone carries 286 codings here and was unpinned.
+
+  | Code system | Version | Codings |
+  |---|---|---|
+  | SNOMED CT | `…/version/20260701` (was `20250701`) | 134 |
+  | LOINC | `2.83` | 286 |
+  | HGNC | `20250704` | 61 |
+  | Human Phenotype Ontology | `20250303` | 27 |
+  | Sequence Ontology | `20241118` | 14 |
+  | ICD-10-GM | `2026` | 16 |
+
+  Every version was read from the MII terminology server rather than guessed. HGVS, ATC
+  and Orphanet are not pinned because the server returns no version for them; UCUM is
+  unversioned by design.
+
+##### Documentation
+
+* **Migration from STU2 to STU3** is now a page in the guide. It consolidates two
+  documents that lay unpublished in the repository root and corrects three errors found
+  while checking them against the built artifacts — most importantly the second
+  `category` required on Mikrosatelliteninstabilität and Mutationslast, which was given
+  with the wrong code and the wrong system, and which is the most common validation
+  failure when moving 2025-line data forward.
+
+* That guidance carries **no StructureMaps**, deliberately: data integration at a Data
+  Integration Center runs on its own ETL and rarely includes a FHIR mapping engine, so
+  the mappings are stated declaratively instead.
+
+##### Release automation
+
+* Five defects in the shared module template were fixed here, each of which only bites a
+  module doing something for the first time: the release guard treated documented
+  `{{…}}` placeholders in comments as an un-instantiated template and silently skipped
+  the entire release path; the first formal publication created neither
+  `package-registry.json` nor the two RSS feeds its own `publish-setup.json` declares;
+  the `-go-publish` invocation did not receive the terminology allowlist the build
+  invocation gets; and the registry validator rejected the `"<sequence> <Status>"`
+  edition name that any non-release publication receives.
+
 #### Version 2027.0.0-ballot.rc1
 
 **Date:** 2026-09-02 · **Release candidate**

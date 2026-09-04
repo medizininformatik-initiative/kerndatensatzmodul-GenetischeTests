@@ -89,6 +89,58 @@ werden können.</p>
 
 ---
 
+#### Version 2027.0.0-ballot.rc2
+
+**Datum:** 2026-09-04 · **Release-Kandidat**
+
+Der erste Kandidat wurde formal publiziert; dieser räumt auf, was dabei sichtbar wurde.
+
+##### Terminologie
+
+* **Alle extern versionierten Codesysteme sind jetzt gepinnt**, nicht nur SNOMED CT.
+  Das Expansions-Manifest band eines von sechzehn in Frage kommenden Systemen, während
+  seine eigene Dokumentation zusagt, eine Expansion liefere „dieselben Codes heute, zum
+  Release-Zeitpunkt und in drei Jahren". Allein LOINC trägt hier 286 Codings und war
+  ungepinnt.
+
+  | Codesystem | Version | Codings |
+  |---|---|---|
+  | SNOMED CT | `…/version/20260701` (vorher `20250701`) | 134 |
+  | LOINC | `2.83` | 286 |
+  | HGNC | `20250704` | 61 |
+  | Human Phenotype Ontology | `20250303` | 27 |
+  | Sequence Ontology | `20241118` | 14 |
+  | ICD-10-GM | `2026` | 16 |
+
+  Jede Version wurde am MII-Terminologieserver abgefragt, nicht geraten. HGVS, ATC und
+  Orphanet sind nicht gepinnt, weil der Server für sie keine Version liefert; UCUM ist
+  konstruktionsbedingt versionslos.
+
+##### Dokumentation
+
+* **Migration von STU2 auf STU3** ist jetzt eine Seite im Guide. Sie führt zwei
+  Dokumente zusammen, die unveröffentlicht im Repository-Wurzelverzeichnis lagen, und
+  korrigiert drei Fehler, die beim Abgleich gegen die gebauten Artefakte auffielen — vor
+  allem die zweite `category`, die Mikrosatelliteninstabilität und Mutationslast
+  brauchen: sie war mit falschem Code und falschem System angegeben und ist der
+  häufigste Validierungsfehler beim Überführen von Daten der 2025er-Linie.
+
+* Diese Anleitung enthält **bewusst keine StructureMaps**: Die Datenintegration eines
+  Datenintegrationszentrums läuft über eigene ETL-Strecken und enthält selten eine
+  FHIR-Mapping-Engine, deshalb stehen die Abbildungen deklarativ da.
+
+##### Release-Automatisierung
+
+* Fünf Fehler im gemeinsamen Modul-Template wurden hier behoben, von denen jeder nur
+  Module trifft, die etwas zum ersten Mal tun: der Release-Guard hielt dokumentierte
+  `{{…}}`-Platzhalter in Kommentaren für eine uninstanziierte Vorlage und übersprang
+  stillschweigend den gesamten Release-Pfad; die erste formale Publikation legte weder
+  `package-registry.json` noch die beiden RSS-Feeds an, die ihre eigene
+  `publish-setup.json` deklariert; der `-go-publish`-Aufruf bekam die
+  Terminologie-Allowlist nicht, die der Build-Aufruf erhält; und der Registry-Prüfer
+  wies den Editionsnamen „`<Sequence> <Status>`" zurück, den jede
+  Nicht-Release-Publikation bekommt.
+
 #### Version 2027.0.0-ballot.rc1
 
 **Datum:** 2026-09-02 · **Release Candidate**

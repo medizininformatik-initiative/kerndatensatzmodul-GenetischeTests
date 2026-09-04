@@ -114,7 +114,7 @@ Das menschenlesbare Versionsschema beschreibt die Seite
 Politik als CRMI-Metadaten ausgedrückt wird.
 
 Das Modul verwendet die Kalender-Versionierung in der SemVer-kompatiblen
-numerischen Form `JJJJ.MINOR.PATCH[-label]`, derzeit `2027.0.0-ballot.rc1`. Das
+numerischen Form `JJJJ.MINOR.PATCH[-label]`, derzeit `2027.0.0-ballot.rc2`. Das
 Kalenderjahr dient als CRMI-`<major>`-Komponente; `MINOR` und `PATCH` behalten
 ihre übliche additive bzw. korrigierende Bedeutung. Stabile Versionen lassen
 sich damit über den deklarierten Versionsalgorithmus `semver` vergleichen. Labels

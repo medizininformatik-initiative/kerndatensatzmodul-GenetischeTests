@@ -97,7 +97,7 @@ description: "FHIR profiles for molecular genetic findings - variants, molecular
 status: active # draft | active | retired | unknown
 # MII modules use CalVer YYYY.n.n (e.g. 2026.0.1) per the MII Module Release
 # Workflow — NOT SemVer. Only the template tooling repos use SemVer.
-version: "2027.0.0-ballot.rc1"
+version: "2027.0.0-ballot.rc2"
 # packageId pattern per the MII naming convention:
 # de.medizininformatikinitiative.kerndatensatz.<slug> (for example,
 # kerndatensatz-basis uses de.medizininformatikinitiative.kerndatensatz.base).
@@ -115,7 +115,7 @@ releaseLabel: Release  # DECIDED 2026-09-02: a formal publication carries Releas
 # releases from here on, not a formalisation of the 2026.0.4 statement.
 license: CC-BY-4.0
 # Must equal the publication date; go-publish.yml validates this.
-date: "2026-09-02"
+date: "2026-09-04"
 jurisdiction: urn:iso:std:iso:3166#DE "Germany" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # NUM-DIZ takes over IG development and maintenance when MII funding ends
 # (end-2026), so NUM-DIZ is the publisher shown in the footer's
@@ -165,7 +165,7 @@ extension:
       - url: packageId
         valueId: de.medizininformatikinitiative.kerndatensatz.molgen
       - url: version
-        valueString: "2027.0.0-ballot.rc1"
+        valueString: "2027.0.0-ballot.rc2"
       - url: uri
         valueUri: https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen
   # Year this release sequence became effective

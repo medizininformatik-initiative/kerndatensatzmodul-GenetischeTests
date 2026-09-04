@@ -111,7 +111,7 @@ The human-readable version scheme is described on the
 is expressed as CRMI metadata.
 
 The module uses calendar versioning in the SemVer-compatible numeric form
-`YYYY.MINOR.PATCH[-label]`, currently `2027.0.0-ballot.rc1`. The calendar year
+`YYYY.MINOR.PATCH[-label]`, currently `2027.0.0-ballot.rc2`. The calendar year
 serves as the CRMI `<major>` component; `MINOR` and `PATCH` keep their usual
 additive and corrective semantics. Stable versions can therefore be compared
 using the declared `semver` version algorithm. Labels carry pre-release or build
