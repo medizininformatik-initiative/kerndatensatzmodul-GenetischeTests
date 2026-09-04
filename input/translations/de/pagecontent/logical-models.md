@@ -32,6 +32,19 @@ Die vollständige Liste der Datensatz-Elemente mit ihrem Pfad und der zugehörig
      ersetzt durch den obigen Verweis auf das Element-Verzeichnis der Artefakt-Seite, die genau
      diese beiden Spalten rendert. Bei Gate C pruefen, ob stattdessen das -dict-Fragment inline
      eingebunden werden soll. -->
-<!-- TODO:REVIEW input/images/ enthaelt MII_MolGen_LogicalModel_Domain.png/.svg. Die migrierte
-     Quellseite referenziert dieses Bild nicht; es wurde daher nicht eingebunden. Bei Gate C
-     klaeren, ob es hier oder auf uml-diagrams.md gezeigt werden soll. -->
+#### Domänenmodell
+
+Das folgende Klassendiagramm zeigt dasselbe Modell als Übersicht: welche fachlichen
+Konzepte es gibt, wie sie zusammenhängen und — in den Notizen am Rand — durch welche
+FHIR-Artefakte dieses Moduls sie umgesetzt werden. Es ist bewusst
+implementierungsagnostisch: Datentypen und Kardinalitäten sind hier Orientierung, nicht
+Vorgabe. Verbindlich ist, was die [Profile](profiles.html) festlegen.
+
+<img src="MII_MolGen_LogicalModel_Domain_de.svg"
+     alt="Domänenmodell des Moduls Molekulargenetischer Befundbericht: Befundbericht, Anforderung mit Indikation, Methoden, Ergebnisse mit Veränderungen und molekularen Biomarkern, Interpretation sowie Labor, mit ihren Beziehungen und der Zuordnung zu FHIR-Artefakten"
+     style="width: 100%; max-width: 1400px; margin: 20px 0;" />
+
+Die Quelle liegt als PlantUML im Repository. Sie ist in eine sprachneutrale Struktur
+(`input/images-source/logical-model-domain.iuml`) und je eine Beschriftungsdatei pro
+Sprache aufgeteilt, damit die deutsche und die englische Fassung strukturell nicht
+auseinanderlaufen können.

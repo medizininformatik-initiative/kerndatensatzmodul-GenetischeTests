@@ -32,6 +32,18 @@ The complete list of dataset elements with their path and the corresponding expl
      (2) a table "Datensatz (path) / Erklaerung (definition)" over differential.element - replaced
      by the pointer above to the artifact page's element dictionary, which renders exactly those two
      columns. Check at Gate C whether the -dict fragment should be included inline instead. -->
-<!-- TODO:REVIEW input/images/ contains MII_MolGen_LogicalModel_Domain.png/.svg. The migrated source
-     page does not reference that image, so it was not embedded. Clarify at Gate C whether it should
-     be shown here or on uml-diagrams.md. -->
+#### Domain model
+
+The class diagram below shows the same model as an overview: which domain concepts exist,
+how they relate, and — in the notes along the edge — which FHIR artefacts of this module
+realise them. It is deliberately implementation-agnostic: data types and cardinalities
+here are orientation, not obligation. What binds is what the [profiles](profiles.html)
+state.
+
+<img src="MII_MolGen_LogicalModel_Domain_en.svg"
+     alt="Domain model of the Molekulargenetischer Befundbericht module: report, request with indication, methods, results with alterations and molecular biomarkers, interpretation and laboratory, with their relationships and the mapping to FHIR artefacts"
+     style="width: 100%; max-width: 1400px; margin: 20px 0;" />
+
+The source is kept as PlantUML in the repository. It is split into a language-neutral
+structure (`input/images-source/logical-model-domain.iuml`) and one label file per
+language, so the German and English renderings cannot drift apart structurally.

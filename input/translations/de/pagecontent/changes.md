@@ -22,8 +22,8 @@ Moduls **Molekulargenetischer Befundbericht** fest, die neueste Version zuerst. 
 KDS-CalVer-Schema, das die Seite [Versionierung](version-history.html)
 beschreibt.
 
-Jede Version erhält einen eigenen Abschnitt mit dem Release-Datum und den nach
-Kategorien gruppierten Änderungen:
+Jede Version erhält einen eigenen Abschnitt mit dem Release-Datum und ihren
+Änderungen. Dafür stehen diese Kategorien zur Verfügung:
 
 * **Hinzugefügt** — neue Profile, Extensions, ValueSets, Suchparameter, Seiten.
 * **Geändert** — geänderte Einschränkungen, Bindings, Hinweise oder
@@ -37,10 +37,15 @@ Kategorien gruppierten Änderungen:
 Kategorien ohne Inhalt werden weggelassen. Geht eine Änderung auf ein Issue oder
 einen Pull-Request zurück, wird darauf verlinkt.
 
-<!-- TODO:REVIEW Die aus Simplifier migrierten Versionsabschnitte gruppieren ihre Einträge
-     thematisch statt nach den oben genannten Keep-a-Changelog-Kategorien. Das ist eine der
-     beiden von der Vorlage zugelassenen Gruppierungen; bei Gate C entscheiden, ob die
-     Abschnitte auf Kategorien umgestellt werden. -->
+Die Versionsabschnitte gruppieren ihre Einträge **thematisch** — nach betroffenem
+Profil oder Bereich — statt nach diesen Kategorien. Beides lässt die Vorlage zu, und für
+ein FHIR-Modul trägt die thematische Achse weiter: Eine umbenannte Komponente ist
+*Hinzugefügt* und *Entfernt* zugleich, und wer wissen will, was sich an Variante geändert
+hat, findet es so an einer Stelle.
+
+**Sicherheit ist davon ausgenommen.** Änderungen mit Auswirkung auf Sicherheit oder
+Datenschutz bekommen immer einen eigenen, so benannten Block — sie müssen auffindbar
+sein, ohne dass man thematische Abschnitte danach durchsucht. Bisher gab es keine.
 
 <div class="ig-highlight ig-highlight-red">
 <h5>Breaking Changes MÜSSEN berichtet und erläutert werden</h5>

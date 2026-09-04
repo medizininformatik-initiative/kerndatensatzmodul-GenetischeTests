@@ -1,0 +1,153 @@
+@startuml MII_MolGen_LogicalModel_Domain_en
+' ============================================================================
+' English labelling of the domain model.
+' Structure: logical-model-domain.iuml — classes, attributes and relationships
+' are changed there and ONLY there. This file carries wording only. Its German
+' counterpart is logical-model-domain-de.puml; both must assign the same
+' variables.
+'
+' The module keeps its German name in the English guide (see index.md), so the
+' title does too. Names of FHIR artefacts inside the notes are identifiers and
+' are not translated either.
+' ============================================================================
+
+!$TITLE = "MII Core Data Set Module Molekulargenetischer Befundbericht - Logical Model"
+!$SUBTITLE = "Domain model (implementation-agnostic)"
+
+' --- external modules ---
+!$PKG_EXTERNAL = "External MII core data set modules"
+!$C_PATIENT = "Patient"
+!$C_PATIENT_MODULE = "Module Person"
+!$C_SPECIMEN = "Specimen"
+!$C_SPECIMEN_MODULE = "Module Biobank"
+!$N_EXT_TITLE = "External dependencies:"
+!$N_EXT_PERSON = "Person"
+!$N_EXT_BIOBANK = "Biobank"
+!$N_EXT_DIAGNOSIS = "Diagnosis"
+!$N_EXT_CASE = "Encounter"
+
+' --- report ---
+!$C_REPORT = "Molecular genetic\nreport"
+!$A_REPORT_ID = "Report ID"
+!$A_REPORT_STATUS = "Report status"
+!$A_REPORT_DATE = "Report date"
+!$A_REPORT_ATTACH = "Attachments"
+
+' --- request ---
+!$C_REQUEST = "Request"
+!$A_REQ_REQUESTER = "Requester"
+!$A_REQ_GENES = "Genes to be tested"
+!$A_REQ_BILLING = "EBM billing codes"
+!$A_REQ_DATE = "Request date"
+!$A_REQ_TEXT = "Request text"
+!$A_REQ_NOTES = "Notes"
+
+!$C_INDICATION = "Indication"
+!$A_IND_INDICATION = "Indication"
+!$A_IND_CONDITION = "Health condition"
+!$A_IND_FAMILY = "Family history"
+!$A_IND_CARRIER = "Carriers"
+!$A_IND_PRIOR = "Relevant prior results"
+
+' --- methods ---
+!$C_METHODS = "Methods"
+!$A_MET_METHOD = "Method"
+!$A_MET_DEVICES = "Devices/software/kits"
+!$A_MET_PARAMS = "Relevant parameters"
+!$G_MET_REGIONS = "Regions studied:"
+!$A_MET_GENES = "Genes tested"
+!$A_MET_REFSEQ = "Reference sequence"
+!$A_MET_INTRON = "Intron spanning/IVS"
+!$A_MET_RANGE = "Start and end nucleotide"
+!$G_MET_QUALITY = "Quality parameters:"
+!$A_MET_DEPTH = "Read depth/coverage"
+!$A_MET_SENSITIVITY = "Sensitivity/limit of detection"
+!$A_MET_LIMITS = "Limitations/notes"
+
+' --- results ---
+!$C_RESULTS = "Results"
+!$A_RES_SUMMARY = "Conclusion"
+!$A_RES_RAW = "Raw data"
+
+!$C_VARIANTS = "Alterations\n(variants)"
+!$C_VARIANTS_PLAIN = "Alterations"
+!$G_VAR_GENOMIC = "Genomic information:"
+!$A_VAR_GENE = "Gene"
+!$A_VAR_CHROMOSOME = "Chromosome"
+!$A_VAR_CYTOBAND = "Cytogenetic location"
+!$A_VAR_EXON = "Exon"
+!$G_VAR_HGVS = "HGVS notation:"
+!$A_VAR_PHGVS = "Protein-level change (pHGVS)"
+!$A_VAR_CHGVS = "DNA change (cHGVS)"
+!$A_VAR_GHGVS = "Genomic DNA change (gHGVS)"
+!$A_VAR_TRANSCRIPT = "Transcript ID"
+!$G_VAR_DETAILS = "Variant details:"
+!$A_VAR_REFALLELE = "Reference allele"
+!$A_VAR_ALTALLELE = "Alternate allele"
+!$A_VAR_MUTTYPE = "DNA mutation type"
+!$A_VAR_CNV = "Copy number variation"
+!$G_VAR_METADATA = "Metadata:"
+!$A_VAR_REFGENOME = "Reference genome"
+!$A_VAR_AF = "Sample allele frequency"
+!$A_VAR_ORIGIN = "Variant origin"
+!$A_VAR_ID = "Variant ID"
+
+!$C_BIOMARKER = "Molecular biomarkers"
+!$C_BIOMARKER_PLAIN = "Molecular biomarkers"
+!$A_BIO_CROSSGENE = "Cross-gene markers"
+!$C_TMB = "Tumor mutational\nburden (TMB)"
+!$C_MSI = "Microsatellite\ninstability (MSI)"
+!$A_VALUE = "Value"
+!$A_TMB_SOMATIC = "(somatic mutations)"
+
+' --- interpretation ---
+!$C_INTERPRETATION = "Interpretation"
+!$G_INT_CONSEQUENCE = "Molecular consequence:"
+!$A_INT_FUNCTIONAL = "Functional effect"
+!$G_INT_CLINICAL = "Clinical assessment:"
+!$A_INT_SIGNIFICANCE = "Clinical significance"
+!$A_INT_EVIDENCE = "Clinical annotation level of evidence"
+!$A_INT_PHENOTYPE = "Associated phenotype"
+!$A_INT_INHERITANCE = "Mode of inheritance"
+!$G_INT_THERAPEUTIC = "Therapeutic assessment:"
+!$A_INT_DRUG = "Medication assessment"
+!$A_INT_MEDICATION = "Medication recommendation"
+!$G_INT_SUMMARY = "Conclusion & recommendations:"
+!$A_INT_CONCLUSION = "Conclusion"
+!$A_INT_RECOMMEND = "Recommendations"
+!$A_INT_REFERENCES = "References"
+
+' --- laboratory ---
+!$C_LAB = "Laboratory/contact"
+!$A_LAB_NAME = "Name"
+!$A_LAB_ADDRESS = "Address"
+!$A_LAB_CONTACT = "Contact"
+!$A_LAB_ACCRED = "Accreditations"
+
+' --- relationships ---
+!$R_FOR = "for"
+!$R_INITIATES = "initiates"
+!$R_EXAMINES = "examines"
+!$R_YIELDS = "yields"
+!$R_VARIANTS = "alterations"
+!$R_BIOMARKERS = "biomarkers"
+!$R_INTERPRETED = "is interpreted"
+!$R_CONCERNS = "concerns"
+!$R_INFORMS = "informs"
+!$R_DOCUMENTS = "documents"
+!$R_CONTAINS = "contains"
+!$R_COMPRISES = "comprises"
+
+' --- notes ---
+!$N_REPORT_TITLE = "Central resource"
+!$N_REPORT_BODY_1 = "Documents the complete"
+!$N_REPORT_BODY_2 = "molecular genetic finding"
+!$N_DOMAIN_CONCEPT = "Domain concept"
+!$N_MAPPED_AS = "Mapped in FHIR as:"
+!$N_VAR_COMPONENTS_1 = "Component structure defined"
+!$N_VAR_COMPONENTS_2 = "in detail by the FHIR profiles"
+!$N_BIO_BODY_1 = "Cross-gene markers"
+!$N_BIO_BODY_2 = "(e.g. TMB, MSI, PRS)"
+
+!include logical-model-domain.iuml
+@enduml
