@@ -1,0 +1,974 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Profile - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link href="assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
+<link href="assets/css/template-base.css" rel="stylesheet"/>
+
+<link href="assets/css/num-diz.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Branding override for the fhir2.base.template header placeholder
+     (base ships includes/fragment-header.html as a single comment; it is included
+     inside "#segment-header > .container", before the #ig-status block).
+     Language handling: only the asset and its descriptive alt text switch on
+     include.lang (the pattern kerndatensatz-basis uses); no translatable UI
+     strings are hard-coded.
+     Brand handling: the project logo additionally switches on
+     site.data.brand.design (input/data/brand.json in the consuming IG, see
+     docs/styleguide.md §10). Only the exact value 'mii' selects the MII
+     logos - anything else, including no brand.json at all, falls through to
+     the NUM-DIZ default.
+     Two logos, mirroring kerndatensatz-basis: the HL7 FHIR logo (links to the
+     FHIR spec) in #family-nav, and the project logo in #project-nav.
+     fhir-logo-www.png is shipped by fhir2.base.template
+     (content/assets/images/), so it resolves from the inherited assets without
+     shipping it here. -->
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://hl7.org/fhir">
+    <img height="50" alt="HL7 FHIR" src="assets/images/fhir-logo-www.png"/>
+  </a>
+</div>
+<div id="project-nav">
+
+  <a id="project-logo" no-external="true" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+    <img height="50" alt="NUM-DIZ (Netzwerk Universitätsmedizin — Datenintegrationszentrum)" src="assets/images/logo-num-diz-de.svg"/>
+
+  </a>
+
+</div>
+<!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+     is the untouched default. Logic in assets/js/font-size-control.js, the
+     zoom mapping + button styling in template-base.css ("font-size control"
+     block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
+     on include.lang. REMOVAL: delete this block, the js file and the CSS
+     block - one commit, styleguide §5a. -->
+
+<div class="ig-fontsize" role="group" aria-label="Schriftgröße">
+  <button type="button" data-level="0" aria-pressed="true" aria-label="Schriftgröße: Standard">A</button>
+  <button type="button" data-level="1" aria-pressed="false" aria-label="Schriftgröße: größer">A</button>
+  <button type="button" data-level="2" aria-pressed="false" aria-label="Schriftgröße: am größten">A</button>
+</div>
+
+<script src="assets/js/font-size-control.js" defer></script>
+<!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+     patches the Bootstrap-3 components the publisher renders - navbar
+     dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
+     (structure-tabs) the full ARIA tabs pattern, alerts live-region
+     announcements. `defer` guarantees it executes AFTER the parser-inserted
+     bootstrap.min.js at the end of the body. Vendored from
+     paypal/bootstrap-accessibility-plugin @ v1.0.7 (the admin-ch fork was
+     evaluated and rejected: 151 commits behind upstream, its 6 deltas are
+     site-specific tab tweaks). REMOVAL: delete this tag, both vendored
+     assets and the fragment-css link - guard test pins the hashes. -->
+<script src="assets/js/bootstrap-accessibility.min.js" defer></script>
+<!-- Back-to-top button: appears after one viewport of scrolling (logic in
+     assets/js/back-to-top.js, styling in template-base.css "back-to-top"
+     block). Rendered here inside #segment-header, which is OUTSIDE the
+     data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
+     this block, the js file and the CSS block - one commit, styleguide §8. -->
+
+<button type="button" class="ig-back-to-top" aria-label="Zurück zum Seitenanfang">↑</button>
+
+<script src="assets/js/back-to-top.js" defer></script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII Implementierungsleitfaden Kerndatensatz-Modul Molekulargenetischer Befundbericht</span>
+            <br/>
+            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- German translation of input/includes/menu.xml.
+     Keep the href targets IDENTICAL to the source menu; translate only labels.
+     Structure notes (OPTIONAL entries, link-only entries, the interim
+     meta-wiki links) are documented in the source menu's header and in
+     docs/page-structure.md / docs/optional-pages.md. -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Startseite</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Anleitung<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="guidance.html">Anleitung</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
+      <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
+      <li><a href="logical-models.html">Datensätze und Beschreibungen</a></li>
+      <li><a href="uml-diagrams.html">UML-Diagramme</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <!-- Eltern-Eintrag und die ersten vier Einträge verlinken die KDS-weiten
+         Konformitätsregeln des Meta-Moduls (INTERIM: Meta-Wiki; siehe
+         Quell-Menü). -->
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Konformität<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Konformität</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">Allgemeine Anforderungen</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must-Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Umgang mit fehlenden Daten</a></li>
+      <li><a href="security-and-privacy.html">Sicherheit und Datenschutz</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artefakte<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="artifacts.html">Artefakt-Übersicht</a></li>
+      <li><a href="profiles.html">Profile</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="extensions.html">Extensions</a></li>
+      <li><a href="capability-statements.html">CapabilityStatements</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="search-parameters.html">Suchparameter</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="logical-models.html">Logische Modelle</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="value-sets.html">ValueSets</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="examples.html">Beispiele</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Änderungshistorie</a></li>
+  <li class="dropdown">
+    <!-- Der Eltern-Eintrag verlinkt bewusst das PFLICHT-Kind (Versionierung):
+         die Metadaten-Übersicht ist optional. -->
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadaten<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="metadata.html">Metadaten-Übersicht</a></li>
+      <li><a href="version-history.html">Versionierung</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Sprache:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/profiles.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Inhaltsverzeichnis</b></a></li><li><b>Profile</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht - Local Development build (v2027.0.0-ballot.rc2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Profile</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#profil-vererbungshierarchie" id="markdown-toc-profil-vererbungshierarchie">Profil-Vererbungshierarchie</a></li>
+  <li><a href="#workflow-anforderung-und-befundbericht" id="markdown-toc-workflow-anforderung-und-befundbericht">Workflow: Anforderung und Befundbericht</a></li>
+  <li><a href="#genetische-befunde" id="markdown-toc-genetische-befunde">Genetische Befunde</a></li>
+  <li><a href="#genetische-implikationen" id="markdown-toc-genetische-implikationen">Genetische Implikationen</a></li>
+  <li><a href="#molekulare-biomarker" id="markdown-toc-molekulare-biomarker">Molekulare Biomarker</a></li>
+  <li><a href="#therapieempfehlungen" id="markdown-toc-therapieempfehlungen">Therapieempfehlungen</a></li>
+  <li><a href="#methodik-der-genomischen-untersuchung" id="markdown-toc-methodik-der-genomischen-untersuchung">Methodik der genomischen Untersuchung</a></li>
+  <li><a href="#familienanamnese" id="markdown-toc-familienanamnese">Familienanamnese</a></li>
+</ul>
+
+</div>
+<!-- markdownlint-disable MD041 -->
+<!-- Migriert aus dem Simplifier-Leitfaden TechnischeImplementierung/Index.page.md, TechnischeImplementierung/Workflow/Index.page.md, TechnischeImplementierung/GenetischeBefunde/Index.page.md, TechnischeImplementierung/GenetischeImplikationen/Index.page.md, TechnischeImplementierung/MolekulareBiomarker/Index.page.md, TechnischeImplementierung/Therapieempfehlungen/Index.page.md, TechnischeImplementierung/Methodik/Index.page.md, TechnischeImplementierung/Familienanamnese/Index.page.md
+     (Quellbaum implementation-guides/ImplementationGuide-2026.x-DE, Commit 79eaf41, Migration 2026-08-28).
+     Simplifier-Direktiven sind nach references/fql-crosswalk.md aufgeloest. -->
+<!-- Deutsche Übersetzung von input/pagecontent/profiles.md (aufgeteilt aus der
+     früheren Kombi-Seite profiles-and-extensions.md gemäß der abgestimmten
+     TF-KDS-Menüstruktur — eine Seite je Artefakt-Typ). Die acht migrierten
+     Simplifier-Index-Seiten stehen hier als h3-Abschnitte; mehrfach vorkommende
+     Unterüberschriften ("Überblick", "Kernprofile", "Verknüpfungen",
+     "Wichtige Komponenten") sind mit ihrer Profilfamilie qualifiziert. -->
+<p>Diese Seite listet die FHIR-Profile des Moduls <strong>Molekulargenetischer Befundbericht</strong>
+(Namenskonvention <code class="language-plaintext highlighter-rouge">MII_PR_&lt;Modul&gt;_&lt;Name&gt;</code>, siehe
+<a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-GenetischeTests/blob/main/docs/recipes/add-a-profile.md"><code class="language-plaintext highlighter-rouge">docs/recipes/add-a-profile.md</code></a> in diesem Repository sowie die
+MII-Namenskonventionen). Die Extensions des Moduls stehen auf der Seite
+<a href="extensions.html">Extensions</a>.</p>
+
+<h3 id="profil-vererbungshierarchie">Profil-Vererbungshierarchie</h3>
+
+<h4 id="fhir-profile">FHIR Profile</h4>
+
+<p>Hinweise zur Verwendung der Elemente im Rahmen der Befundung von Varianten finden sich im Profil <a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-genomic-report.html">Genomics Report</a> aus <a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/">HL7 Genomics Reporting Implementation Guide</a>.</p>
+
+<p>Die folgende Tabelle zeigt die Vererbungsbeziehungen der Profile in diesem Modul:</p>
+
+<h5 id="profile-basierend-auf-clinical-genomics-stu3">Profile basierend auf Clinical Genomics STU3</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Profilname</th>
+      <th>Parent-Profil (STU3)</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MII_PR_MolGen_MolekulargenetischerBefundbericht</td>
+      <td>genomic-report</td>
+      <td>Hauptbefundbericht für genetische Analysen</td>
+    </tr>
+    <tr>
+      <td>MII_PR_MolGen_Variante</td>
+      <td>variant</td>
+      <td>Genetische Variante</td>
+    </tr>
+    <tr>
+      <td>MII_PR_MolGen_Genotyp</td>
+      <td>genotype</td>
+      <td>Genotyp-Information</td>
+    </tr>
+    <tr>
+      <td>MII_PR_MolGen_DiagnostischeImplikation</td>
+      <td>diagnostic-implication</td>
+      <td>Diagnostische Bedeutung</td>
+    </tr>
+    <tr>
+      <td>MII_PR_MolGen_TherapeutischeImplikation</td>
+      <td>therapeutic-implication</td>
+      <td>Therapeutische Bedeutung</td>
+    </tr>
+    <tr>
+      <td>MII_PR_MolGen_MolekulareKonsequenz</td>
+      <td>molecular-consequence</td>
+      <td>Molekulare Auswirkung</td>
+    </tr>
+    <tr>
+      <td>MII_PR_MolGen_Medikationsempfehlung</td>
+      <td>medication-recommendation</td>
+      <td>Medikationsempfehlung</td>
+    </tr>
+    <tr>
+      <td>MII_PR_MolGen_EmpfohleneFolgemassnahme</td>
+      <td>followup-recommendation</td>
+      <td>Empfohlene Folgemaßnahme</td>
+    </tr>
+    <tr>
+      <td>MII_PR_MolGen_GenomicStudy</td>
+      <td>genomic-study</td>
+      <td>Genomische Studie</td>
+    </tr>
+    <tr>
+      <td>MII_PR_MolGen_GenomicStudyAnalysis</td>
+      <td>genomic-study-analysis</td>
+      <td>Analyse der genomischen Studie</td>
+    </tr>
+    <tr>
+      <td>MII_PR_MolGen_MolekularerBiomarker</td>
+      <td>molecular-biomarker</td>
+      <td>Basisprofil der Biomarker-Profile dieses Moduls</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="profile-die-von-einem-anderen-profil-dieses-moduls-abstammen">Profile, die von einem anderen Profil dieses Moduls abstammen</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Profilname</th>
+      <th>Parent-Profil</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MII_PR_MolGen_Mikrosatelliteninstabilitaet</td>
+      <td>MII_PR_MolGen_MolekularerBiomarker</td>
+      <td>MSI-Status</td>
+    </tr>
+    <tr>
+      <td>MII_PR_MolGen_Mutationslast</td>
+      <td>MII_PR_MolGen_MolekularerBiomarker</td>
+      <td>Tumor-Mutationslast</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Beide erreichen Clinical Genomics STU3 über MII_PR_MolGen_MolekularerBiomarker,
+nicht direkt.</p>
+
+<h5 id="zwei-canonical-schemata--absicht-kein-versehen">Zwei Canonical-Schemata — Absicht, kein Versehen</h5>
+
+<p>Zwölf Profile tragen ein kurzes Canonical, vier eines mit dem Präfix
+<code class="language-plaintext highlighter-rouge">mii-pr-molgen-</code>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Schema</th>
+      <th>Canonical endet auf</th>
+      <th>Profile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>kurz</td>
+      <td><code class="language-plaintext highlighter-rouge">…/StructureDefinition/variante</code></td>
+      <td>die zwölf älteren Profile</td>
+    </tr>
+    <tr>
+      <td>mit Präfix</td>
+      <td><code class="language-plaintext highlighter-rouge">…/StructureDefinition/mii-pr-molgen-genomic-study</code></td>
+      <td>GenomicStudy, GenomicStudyAnalysis, MolekulareKonsequenz, MolekularerBiomarker</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Die vier präfixierten kamen bei der Migration auf Clinical Genomics STU3 hinzu und
+haben den Präfix aus ihren Ids übernommen. Die beiden GenomicStudy-Profile behielten
+zudem ihre englischen Namen, während das Modul sonst deutsch benennt.</p>
+
+<p><strong>Das wird nicht vereinheitlicht.</strong> Alle vier Canonicals sind mit Version 2026.0.4
+ausgeliefert und damit feste Identität: wer diese Version einsetzt, hat die URLs in
+Profilbindungen, in <code class="language-plaintext highlighter-rouge">meta.profile</code> und in Suchabfragen stehen. Ein Umbenennen bräche
+diese Referenzen, und eine Ballotierung ist dafür der falsche Zeitpunkt — die
+Prüfenden würden Inhalte begutachten und gleichzeitig mit kaputten Referenzen
+kämpfen. Ob modulübergreifend eine gemeinsame Konvention gelten soll, ist eine Frage
+für die TF-KDS und nicht für dieses Modul allein.</p>
+
+<p>Wer eine Referenz von Hand schreibt, nimmt das Canonical von der Profilseite selbst
+und leitet es nicht aus dem Profilnamen ab.</p>
+
+<h5 id="profile-direkt-von-fhir-r4">Profile direkt von FHIR R4</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Profilname</th>
+      <th>Parent-Ressource (FHIR R4)</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MII_PR_MolGen_AnforderungGenetischerTest</td>
+      <td>ServiceRequest</td>
+      <td>Anforderung für genetische Tests</td>
+    </tr>
+    <tr>
+      <td>MII_PR_MolGen_Familienanamnese</td>
+      <td>FamilyMemberHistory</td>
+      <td>Familienanamnese</td>
+    </tr>
+    <tr>
+      <td>MII_PR_MolGen_PolygenerRisikoScore</td>
+      <td>RiskAssessment</td>
+      <td>Polygener Risiko-Score</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="profil-beziehungsdiagramm">Profil-Beziehungsdiagramm</h4>
+
+<p>Das folgende Diagramm visualisiert die Beziehungen zwischen den verschiedenen FHIR-Profilen im Modul:</p>
+
+<p><img src="MII_MolGen_Profile_Relationships_Final.png" alt="MII Kerndatensatz Modul Molekulargenetik - Profil-Beziehungen" style="width: 100%; max-width: 1200px; margin: 20px 0;" /></p>
+
+<p><strong>Legende:</strong></p>
+<ul>
+  <li><strong>Blau (Workflow)</strong>: ServiceRequest und DiagnosticReport als zentrale Workflow-Komponenten</li>
+  <li><strong>Türkis (Study)</strong>: GenomicStudy und GenomicStudyAnalysis für Studiendaten</li>
+  <li><strong>Grün (Finding)</strong>: Genetische Befunde (Variante, Genotyp, Haplotyp)</li>
+  <li><strong>Orange (Biomarker)</strong>: Molekulare Biomarker (MSI, Mutationslast, PRS)</li>
+  <li><strong>Violett (Implication)</strong>: Klinische Implikationen (Diagnostisch, Therapeutisch, Molekular)</li>
+  <li><strong>Grau (Task)</strong>: Empfohlene Maßnahmen (Medikation, Folgemaßnahmen)</li>
+</ul>
+
+<h3 id="workflow-anforderung-und-befundbericht">Workflow: Anforderung und Befundbericht</h3>
+
+<h4 id="überblick-workflow">Überblick: Workflow</h4>
+
+<p>Der Workflow für molekulargenetische Analysen umfasst den gesamten Prozess von der Anforderung einer genetischen Untersuchung bis zur Erstellung des finalen Befundberichts.</p>
+
+<h4 id="kernkomponenten-des-workflows">Kernkomponenten des Workflows</h4>
+
+<p><strong>ServiceRequest (Anforderung)</strong>: Initiiert den diagnostischen Prozess mit spezifischen Fragestellungen und gewünschten Analysen.</p>
+
+<p><strong>DiagnosticReport (Befundbericht)</strong>: Zentrale Ressource, die alle Ergebnisse, Interpretationen und Empfehlungen zusammenführt und strukturiert darstellt.</p>
+
+<h4 id="workflow-ablauf">Workflow-Ablauf</h4>
+
+<ol>
+  <li><strong>Anforderung</strong>: Kliniker stellt Anfrage für genetische Testung mit klinischer Fragestellung</li>
+  <li><strong>Probenentnahme</strong>: Gewinnung und Vorbereitung der Probe (referenziert durch Specimen)</li>
+  <li><strong>Durchführung</strong>: Genetische Analyse mittels GenomicStudy</li>
+  <li><strong>Auswertung</strong>: Identifikation von Varianten und deren Interpretation</li>
+  <li><strong>Befunderstellung</strong>: Zusammenführung aller Ergebnisse im DiagnosticReport</li>
+  <li><strong>Empfehlungen</strong>: Ableitung therapeutischer oder diagnostischer Konsequenzen</li>
+</ol>
+
+<h4 id="verknüpfungen-workflow">Verknüpfungen: Workflow</h4>
+
+<ul>
+  <li>ServiceRequest → DiagnosticReport über <code class="language-plaintext highlighter-rouge">basedOn</code></li>
+  <li>DiagnosticReport → GenomicStudy über Extension</li>
+  <li>DiagnosticReport → Observations über <code class="language-plaintext highlighter-rouge">result</code></li>
+  <li>DiagnosticReport → Tasks über <code class="language-plaintext highlighter-rouge">recommended-action</code> Extension</li>
+</ul>
+
+<h3 id="genetische-befunde">Genetische Befunde</h3>
+
+<h4 id="überblick-genetische-befunde">Überblick: Genetische Befunde</h4>
+
+<p>Genetische Befunde dokumentieren die identifizierten genetischen Varianten und deren molekulare Eigenschaften. Diese Observation-basierten Profile bilden die faktische Grundlage für die molekulargenetische Diagnostik ohne interpretative Bewertungen.</p>
+
+<h4 id="kernprofile-genetische-befunde">Kernprofile: Genetische Befunde</h4>
+
+<p><strong>Variante</strong>: Einzelne genetische Veränderung mit detaillierten molekularen Annotationen.</p>
+
+<p><strong>Genotyp</strong>: Kombination von Allelen an einem bestimmten Genlocus, wichtig für die Vererbungsanalyse.</p>
+
+<p><strong>Haplotyp</strong>: Gruppe von gekoppelten genetischen Varianten, die gemeinsam vererbt werden.</p>
+
+<p><strong>Sequence Phase Relationship</strong>: Beschreibt die Phasenbeziehung zwischen Varianten (cis/trans).</p>
+
+<h4 id="wichtige-komponenten-der-variante">Wichtige Komponenten der Variante</h4>
+
+<h5 id="molekulare-annotation">Molekulare Annotation</h5>
+
+<ul>
+  <li>HGVS-Notation auf verschiedenen Ebenen (genomisch, Transkript, Protein)</li>
+  <li>Referenzsequenzen (bevorzugt MANE-Transkripte)</li>
+  <li>Genomische Position (Chromosom, Start, Ende)</li>
+  <li>Referenz- und alternative Allele</li>
+  <li>Gen-Symbol (HGNC)</li>
+</ul>
+
+<h5 id="allelischer-status">Allelischer Status</h5>
+
+<ul>
+  <li>Zygosität (heterozygot, homozygot, hemizygot)</li>
+  <li>Allelfrequenz (VAF - Variant Allele Frequency) in der untersuchten Probe</li>
+  <li>Allelic Read Depth (Anzahl der Reads pro Allel)</li>
+</ul>
+
+<h4 id="verknüpfungen-genetische-befunde">Verknüpfungen: Genetische Befunde</h4>
+
+<ul>
+  <li>Varianten können zu Genotypen gruppiert werden (<code class="language-plaintext highlighter-rouge">hasMember</code>)</li>
+  <li>Genotypen können Haplotypen bilden</li>
+  <li>Alle Befunde referenzieren die zugehörige GenomicStudy über <code class="language-plaintext highlighter-rouge">partOf</code></li>
+  <li>Interpretationen in den Implikationen verweisen über <code class="language-plaintext highlighter-rouge">derivedFrom</code> auf diese Befunde</li>
+</ul>
+
+<h4 id="abgrenzung-der-genetischen-befunde">Abgrenzung der Genetischen Befunde</h4>
+
+<p><strong>Nicht in den Befunden enthalten:</strong></p>
+<ul>
+  <li>Pathogenität und klinische Bedeutung → siehe Implikationen</li>
+  <li>Coverage und Sequenziertiefe → siehe Methodik (GenomicStudy)</li>
+  <li>Qualitätsmetriken → siehe Methodik (GenomicStudyAnalysis)</li>
+</ul>
+
+<h3 id="genetische-implikationen">Genetische Implikationen</h3>
+
+<h4 id="überblick-genetische-implikationen">Überblick: Genetische Implikationen</h4>
+
+<p>Genetische Implikationen bewerten und interpretieren die identifizierten genetischen Befunde hinsichtlich ihrer klinischen Bedeutung. Diese Observation-Profile enthalten die medizinische Einordnung der Varianten.</p>
+
+<h4 id="kernprofile-genetische-implikationen">Kernprofile: Genetische Implikationen</h4>
+
+<p><strong>Diagnostische Implikation</strong>: Bewertet die Bedeutung einer Variante für die Diagnosestellung und Krankheitsursache.</p>
+
+<p><strong>Therapeutische Implikation</strong>: Beschreibt die Auswirkungen auf Therapieentscheidungen und Medikamentenwahl.</p>
+
+<p><strong>Molekulare Konsequenz</strong>: Dokumentiert die funktionellen Auswirkungen auf Genprodukte (Proteine, RNA).</p>
+
+<h4 id="wichtige-komponenten-genetische-implikationen">Wichtige Komponenten: Genetische Implikationen</h4>
+
+<h5 id="klinische-bewertung">Klinische Bewertung</h5>
+
+<ul>
+  <li>Pathogenität nach ACMG-Kriterien (pathogen, likely pathogen, VUS, likely benign, benign)</li>
+  <li>Evidenzlevel für klinische Aussagen</li>
+  <li>Assoziierte Erkrankungen (ICD-10, Orphanet, OMIM)</li>
+  <li>Penetranz und Expressivität</li>
+</ul>
+
+<h5 id="therapeutische-relevanz">Therapeutische Relevanz</h5>
+
+<ul>
+  <li>Medikamenten-Wirksamkeit (Response/Non-Response)</li>
+  <li>Dosisanpassungen basierend auf Genotyp</li>
+  <li>Kontraindikationen</li>
+  <li>Pharmakogenetische Guidelines (CPIC, DPWG)</li>
+</ul>
+
+<h5 id="molekulare-effekte">Molekulare Effekte</h5>
+
+<ul>
+  <li>Funktionsverlust (Loss of Function)</li>
+  <li>Funktionsgewinn (Gain of Function)</li>
+  <li>Dominant-negativer Effekt</li>
+  <li>Auswirkung auf Proteinfaltung oder -stabilität</li>
+</ul>
+
+<h4 id="verknüpfungen-genetische-implikationen">Verknüpfungen: Genetische Implikationen</h4>
+
+<ul>
+  <li>Implikationen verweisen über <code class="language-plaintext highlighter-rouge">derivedFrom</code> auf die zugrundeliegenden Varianten</li>
+  <li>Therapeutische Implikationen können zu Medikationsempfehlungen führen</li>
+  <li>Diagnostische Implikationen können weitere Untersuchungen triggern</li>
+</ul>
+
+<h4 id="evidenz-und-quellen">Evidenz und Quellen</h4>
+
+<ul>
+  <li>ClinVar-Klassifikationen</li>
+  <li>Literaturverweise (PubMed)</li>
+  <li>Datenbank-Einträge (COSMIC, dbSNP, gnomAD)</li>
+  <li>Expertenkonsens und Guidelines</li>
+</ul>
+
+<h3 id="molekulare-biomarker">Molekulare Biomarker</h3>
+
+<h4 id="überblick-molekulare-biomarker">Überblick: Molekulare Biomarker</h4>
+
+<p>Molekulare Biomarker sind aggregierte genomische oder molekulare Messgrößen, die prognostische oder prädiktive Aussagen über Krankheitsverlauf und Therapieansprechen ermöglichen. Alle Biomarker-Profile erben vom <a href="https://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-molecular-biomarker.html">Clinical Genomics STU3 Molecular Biomarker</a> Profil.</p>
+
+<h4 id="aktuell-definierte-profile-nicht-abschließend">Aktuell definierte Profile (nicht abschließend)</h4>
+
+<p><strong>Mikrosatelliteninstabilität (MSI)</strong>: Marker für DNA-Mismatch-Reparatur-Defizienz, wichtig für Immuntherapie-Entscheidungen.</p>
+
+<p><strong>Mutationslast (TMB)</strong>: Gesamtzahl somatischer Mutationen pro Megabase, Prädiktor für Checkpoint-Inhibitor-Ansprechen.</p>
+
+<p><strong>Polygener Risiko-Score (PRS)</strong>: Kombinierte Bewertung multipler genetischer Varianten zur Risikostratifizierung (RiskAssessment-basiert).</p>
+
+<h4 id="erweiterbarkeit">Erweiterbarkeit</h4>
+
+<p>Das Molecular Biomarker Profil ist <strong>flexibel erweiterbar</strong> und wird bereits für weitere Analysen genutzt:</p>
+
+<h5 id="in-modul-molekulares-tumorboards-mtb-weiter-spezifiziert">In Modul Molekulares Tumorboards (MTB) weiter spezifiziert</h5>
+
+<ul>
+  <li><strong>Immunhistochemie (IHC)</strong>: generische Observations, spezielle Profile für PD-L1 Expression, HER2-Status</li>
+  <li><strong>In-situ-Hybridisierung (ISH)</strong>: z.B. FISH für Genamplifikationen</li>
+  <li><strong>Homologe Rekombinationsdefizienz (HRD)</strong>: inkl. Subskalen</li>
+</ul>
+
+<h5 id="weitere-mögliche-biomarker-ohne-spezifische-genzuordnung">Weitere mögliche Biomarker ohne spezifische Genzuordnung</h5>
+
+<ul>
+  <li>Chromosomale Instabilität (CIN)</li>
+  <li>Klonale Hämatopoese (CHIP)</li>
+  <li>Liquid Biopsy Marker (ctDNA-Fraktion)</li>
+  <li>Methylierungssignaturen</li>
+</ul>
+
+<h4 id="verknüpfungen-molekulare-biomarker">Verknüpfungen: Molekulare Biomarker</h4>
+
+<ul>
+  <li>Alle Biomarker erben vom STU3 <code class="language-plaintext highlighter-rouge">molecular-biomarker</code> Profil</li>
+  <li>Referenzieren die zugrundeliegende GenomicStudy über <code class="language-plaintext highlighter-rouge">partOf</code></li>
+  <li>Können aus verschiedenen Analysemethoden stammen (NGS, IHC, ISH)</li>
+  <li>Werden im DiagnosticReport als <code class="language-plaintext highlighter-rouge">result</code> eingebunden</li>
+</ul>
+
+<h3 id="therapieempfehlungen">Therapieempfehlungen</h3>
+
+<h4 id="überblick-therapieempfehlungen">Überblick: Therapieempfehlungen</h4>
+
+<p>Therapieempfehlungen dokumentieren konkrete Handlungsanweisungen, die sich aus den genetischen Befunden ergeben. Diese Task-basierten Profile ermöglichen die strukturierte Weitergabe von Empfehlungen.</p>
+
+<h4 id="kernprofile-therapieempfehlungen">Kernprofile: Therapieempfehlungen</h4>
+
+<p><strong>Medikationsempfehlung</strong>: Pharmakogenetisch begründete Empfehlungen zu Medikamentenwahl und -dosierung.</p>
+
+<p><strong>Empfohlene Folgemaßnahme</strong>: Weitere diagnostische oder präventive Maßnahmen basierend auf genetischen Befunden.</p>
+
+<h4 id="medikationsempfehlung">Medikationsempfehlung</h4>
+
+<ul>
+  <li>Medikamentenauswahl basierend auf Genotyp</li>
+  <li>Dosisanpassungen oder Kontraindikationen</li>
+  <li>Evidenzbasis: CPIC, DPWG, PharmGKB</li>
+  <li>Beispiele: CYP2D6, TPMT, DPYD, HLA-B*57:01</li>
+</ul>
+
+<h4 id="empfohlene-folgemaßnahme">Empfohlene Folgemaßnahme</h4>
+
+<ul>
+  <li>Familienuntersuchung bei hereditären Erkrankungen</li>
+  <li>Tumorboard-Vorstellung</li>
+  <li>Intensivierte Vorsorge</li>
+  <li>Genetische Beratung</li>
+  <li>Verlaufskontrollen</li>
+</ul>
+
+<h4 id="verknüpfungen-therapieempfehlungen">Verknüpfungen: Therapieempfehlungen</h4>
+
+<ul>
+  <li>Tasks verweisen über <code class="language-plaintext highlighter-rouge">reasonReference</code> auf die Implikationen</li>
+  <li>DiagnosticReport referenziert Tasks über <code class="language-plaintext highlighter-rouge">recommended-action</code> Extension</li>
+  <li>Task-Status tracking: draft → requested → completed</li>
+</ul>
+
+<h3 id="methodik-der-genomischen-untersuchung">Methodik der genomischen Untersuchung</h3>
+
+<h4 id="überblick-methodik">Überblick: Methodik</h4>
+
+<p>Die Methodik-Profile dokumentieren die technischen Details der durchgeführten genetischen Analysen, von der Probenverarbeitung bis zur bioinformatischen Auswertung.</p>
+
+<h4 id="kernprofile-methodik">Kernprofile: Methodik</h4>
+
+<p><strong>GenomicStudy</strong>: Übergeordnete Studie, die alle Analysen zu einer Probe zusammenfasst (ersetzt UntersuchteRegion aus STU2, plus umfangreichere Methodikinformation und Workflow-IDs).</p>
+
+<p><strong>GenomicStudyAnalysis</strong>: Einzelne Analyseschritte innerhalb einer Studie (z.B. Library Prep, Sequenzierung, Bioinformatik).</p>
+
+<h4 id="wichtige-komponenten-methodik">Wichtige Komponenten: Methodik</h4>
+
+<h5 id="untersuchte-regionen">Untersuchte Regionen</h5>
+
+<ul>
+  <li>Gene und Genpanels (HGNC)</li>
+  <li>Genomische Koordinaten</li>
+  <li>Transkripte (MANE bevorzugt)</li>
+  <li>Callable/Non-callable Regionen</li>
+</ul>
+
+<h5 id="methodendokumentation">Methodendokumentation</h5>
+
+<ul>
+  <li>Sequenzier-Technologie (WGS, WES, Panel)</li>
+  <li>Geräte und Kits</li>
+  <li>Software-Pipelines und Versionen</li>
+  <li>Qualitätsparameter</li>
+</ul>
+
+<h5 id="qualitätsmetriken">Qualitätsmetriken</h5>
+
+<ul>
+  <li>Coverage (Mean, Median)</li>
+  <li>Sequenziertiefe</li>
+  <li>Q30-Scores</li>
+  <li>Callable Regions Prozentsatz</li>
+</ul>
+
+<h4 id="migration-von-stu2">Migration von STU2</h4>
+
+<p><strong>UntersuchteRegion (alt)</strong> → <strong>GenomicStudy (neu)</strong></p>
+
+<ul>
+  <li>Erweiterte Metadaten</li>
+  <li>Hierarchische Workflow-Abbildung</li>
+  <li>Bessere Gerätedokumentation</li>
+  <li>Strukturierte Qualitätsmetriken</li>
+</ul>
+
+<h4 id="verknüpfungen-methodik">Verknüpfungen: Methodik</h4>
+
+<ul>
+  <li>GenomicStudy wird über Extension vom DiagnosticReport referenziert</li>
+  <li>Observations (Varianten) verweisen über <code class="language-plaintext highlighter-rouge">partOf</code> auf GenomicStudy</li>
+  <li>GenomicStudyAnalysis als Extension in GenomicStudy eingebettet</li>
+  <li>Specimen-Referenzen für Probenzuordnung</li>
+</ul>
+
+<h4 id="implementierungshinweise-methodik">Implementierungshinweise: Methodik</h4>
+
+<ul>
+  <li>Minimale Implementierung: Nur untersuchte Gene/Regionen</li>
+  <li>Erweiterte Implementierung: Vollständige Workflow-Dokumentation</li>
+  <li>Forschungsprojekte nutzen erweiterte Metriken</li>
+  <li>Routine-Diagnostik fokussiert auf Basis-Informationen</li>
+</ul>
+
+<h3 id="familienanamnese">Familienanamnese</h3>
+
+<h4 id="überblick-familienanamnese">Überblick: Familienanamnese</h4>
+
+<p>Die Familienanamnese erfasst genetisch relevante Erkrankungen bei Blutsverwandten und ist essentiell für die Interpretation hereditärer Varianten und die Risikoeinschätzung.</p>
+
+<h4 id="kernprofil-familienanamnese">Kernprofil: Familienanamnese</h4>
+
+<p><strong>FamilyMemberHistory</strong>: Dokumentiert Erkrankungen von Familienangehörigen mit detaillierten Verwandtschaftsinformationen.</p>
+
+<h4 id="wichtige-komponenten-familienanamnese">Wichtige Komponenten: Familienanamnese</h4>
+
+<h5 id="verwandtschaftsbeziehung">Verwandtschaftsbeziehung</h5>
+
+<ul>
+  <li>Verwandtschaftsgrad (1., 2., 3. Grades)</li>
+  <li>Verwandtschaftsverhältnis (leiblich, adoptiert)</li>
+  <li>Familiäre Linie (mütterlich, väterlich)</li>
+  <li>Spezifische Beziehung (Mutter, Vater, Geschwister, etc.)</li>
+</ul>
+
+<h5 id="erkrankungsdokumentation">Erkrankungsdokumentation</h5>
+
+<ul>
+  <li>Diagnosen (ICD-10, Orphanet, OMIM)</li>
+  <li>Manifestationsalter</li>
+  <li>Krankheitsverlauf</li>
+  <li>Todesursache (falls zutreffend)</li>
+</ul>
+
+<h4 id="extensions-mii-spezifisch">Extensions (MII-spezifisch)</h4>
+
+<p>Drei spezielle Extensions erweitern die Standardressource:</p>
+
+<ul>
+  <li><strong>Verwandtschaftsgrad</strong>: Grad der biologischen Verwandtschaft</li>
+  <li><strong>Verwandtschaftsverhältnis</strong>: Art der Beziehung (leiblich/adoptiert)</li>
+  <li><strong>Familiäre Linie</strong>: Mütterliche oder väterliche Seite</li>
+</ul>
+
+<p>Details siehe <a href="extensions.html">Extensions</a>
+<!-- TODO:REVIEW Linkziel umgeschrieben: die Simplifier-Quelle verwies auf
+     Extensions/Familienanamnese-Extensions.page.md; dieser Inhalt steht jetzt auf
+     extensions.html. --></p>
+
+<h4 id="klinische-bedeutung-der-familienanamnese">Klinische Bedeutung der Familienanamnese</h4>
+
+<ul>
+  <li>Identifikation hereditärer Muster</li>
+  <li>Risikostratifizierung für Anlageträger</li>
+  <li>Indikationsstellung für erweiterte Diagnostik</li>
+  <li>Familienberatung und Kaskadenscreening</li>
+</ul>
+
+<h4 id="verknüpfungen-familienanamnese">Verknüpfungen: Familienanamnese</h4>
+
+<ul>
+  <li>Referenziert über <code class="language-plaintext highlighter-rouge">patient</code> den Indexpatienten</li>
+  <li>Kann über <code class="language-plaintext highlighter-rouge">reasonReference</code> auf genetische Befunde verweisen</li>
+  <li>Wird in ServiceRequest als <code class="language-plaintext highlighter-rouge">reasonReference</code> für Testindikation genutzt</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
+          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Fri, Sep 4, 2026 16:51+0000">2026-09-04</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/impressum">Impressum</a>
+                 <br/>
+                 <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7®, FHIR® and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
