@@ -1,0 +1,1056 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Änderungshistorie - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link href="assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
+<link href="assets/css/template-base.css" rel="stylesheet"/>
+
+<link href="assets/css/num-diz.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"12"}
+    h3,h4,h5,h6{--heading-prefix:"12"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Branding override for the fhir2.base.template header placeholder
+     (base ships includes/fragment-header.html as a single comment; it is included
+     inside "#segment-header > .container", before the #ig-status block).
+     Language handling: only the asset and its descriptive alt text switch on
+     include.lang (the pattern kerndatensatz-basis uses); no translatable UI
+     strings are hard-coded.
+     Brand handling: the project logo additionally switches on
+     site.data.brand.design (input/data/brand.json in the consuming IG, see
+     docs/styleguide.md §10). Only the exact value 'mii' selects the MII
+     logos - anything else, including no brand.json at all, falls through to
+     the NUM-DIZ default.
+     Two logos, mirroring kerndatensatz-basis: the HL7 FHIR logo (links to the
+     FHIR spec) in #family-nav, and the project logo in #project-nav.
+     fhir-logo-www.png is shipped by fhir2.base.template
+     (content/assets/images/), so it resolves from the inherited assets without
+     shipping it here. -->
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://hl7.org/fhir">
+    <img height="50" alt="HL7 FHIR" src="assets/images/fhir-logo-www.png"/>
+  </a>
+</div>
+<div id="project-nav">
+
+  <a id="project-logo" no-external="true" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+    <img height="50" alt="NUM-DIZ (Netzwerk Universitätsmedizin — Datenintegrationszentrum)" src="assets/images/logo-num-diz-de.svg"/>
+
+  </a>
+
+</div>
+<!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+     is the untouched default. Logic in assets/js/font-size-control.js, the
+     zoom mapping + button styling in template-base.css ("font-size control"
+     block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
+     on include.lang. REMOVAL: delete this block, the js file and the CSS
+     block - one commit, styleguide §5a. -->
+
+<div class="ig-fontsize" role="group" aria-label="Schriftgröße">
+  <button type="button" data-level="0" aria-pressed="true" aria-label="Schriftgröße: Standard">A</button>
+  <button type="button" data-level="1" aria-pressed="false" aria-label="Schriftgröße: größer">A</button>
+  <button type="button" data-level="2" aria-pressed="false" aria-label="Schriftgröße: am größten">A</button>
+</div>
+
+<script src="assets/js/font-size-control.js" defer></script>
+<!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+     patches the Bootstrap-3 components the publisher renders - navbar
+     dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
+     (structure-tabs) the full ARIA tabs pattern, alerts live-region
+     announcements. `defer` guarantees it executes AFTER the parser-inserted
+     bootstrap.min.js at the end of the body. Vendored from
+     paypal/bootstrap-accessibility-plugin @ v1.0.7 (the admin-ch fork was
+     evaluated and rejected: 151 commits behind upstream, its 6 deltas are
+     site-specific tab tweaks). REMOVAL: delete this tag, both vendored
+     assets and the fragment-css link - guard test pins the hashes. -->
+<script src="assets/js/bootstrap-accessibility.min.js" defer></script>
+<!-- Back-to-top button: appears after one viewport of scrolling (logic in
+     assets/js/back-to-top.js, styling in template-base.css "back-to-top"
+     block). Rendered here inside #segment-header, which is OUTSIDE the
+     data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
+     this block, the js file and the CSS block - one commit, styleguide §8. -->
+
+<button type="button" class="ig-back-to-top" aria-label="Zurück zum Seitenanfang">↑</button>
+
+<script src="assets/js/back-to-top.js" defer></script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII Implementierungsleitfaden Kerndatensatz-Modul Molekulargenetischer Befundbericht</span>
+            <br/>
+            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- German translation of input/includes/menu.xml.
+     Keep the href targets IDENTICAL to the source menu; translate only labels.
+     Structure notes (OPTIONAL entries, link-only entries, the interim
+     meta-wiki links) are documented in the source menu's header and in
+     docs/page-structure.md / docs/optional-pages.md. -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Startseite</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Anleitung<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="guidance.html">Anleitung</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
+      <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
+      <li><a href="logical-models.html">Datensätze und Beschreibungen</a></li>
+      <li><a href="uml-diagrams.html">UML-Diagramme</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <!-- Eltern-Eintrag und die ersten vier Einträge verlinken die KDS-weiten
+         Konformitätsregeln des Meta-Moduls (INTERIM: Meta-Wiki; siehe
+         Quell-Menü). -->
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Konformität<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Konformität</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">Allgemeine Anforderungen</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must-Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Umgang mit fehlenden Daten</a></li>
+      <li><a href="security-and-privacy.html">Sicherheit und Datenschutz</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artefakte<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="artifacts.html">Artefakt-Übersicht</a></li>
+      <li><a href="profiles.html">Profile</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="extensions.html">Extensions</a></li>
+      <li><a href="capability-statements.html">CapabilityStatements</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="search-parameters.html">Suchparameter</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="logical-models.html">Logische Modelle</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="value-sets.html">ValueSets</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="examples.html">Beispiele</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Änderungshistorie</a></li>
+  <li class="dropdown">
+    <!-- Der Eltern-Eintrag verlinkt bewusst das PFLICHT-Kind (Versionierung):
+         die Metadaten-Übersicht ist optional. -->
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadaten<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="metadata.html">Metadaten-Übersicht</a></li>
+      <li><a href="version-history.html">Versionierung</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Sprache:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/changes.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Inhaltsverzeichnis</b></a></li><li><b>Änderungshistorie</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Änderungshistorie</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+
+<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
+
+Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfaden verfasst wurde.  Informationen zu diesen Übersetzungen und Anweisungen zum Abgeben von Feedback zu den Übersetzungen finden Sie <a href="translationinfo.html">hier</a>.
+
+</p>
+
+<!-- markdownlint-disable MD041 -->
+<!-- Migriert aus dem Simplifier-Leitfaden ReleaseNotes.page.md
+     (Quellbaum implementation-guides/ImplementationGuide-2026.x-DE, Commit 79eaf41, Migration 2026-08-28).
+     Simplifier-Direktiven sind nach references/fql-crosswalk.md aufgeloest. -->
+<!-- Deutsche Übersetzung der Standardsprachseite input/pagecontent/changes.md
+     — beide Dateien müssen dasselbe aussagen. Struktur aus kerndatensatz-basis
+     input/pagecontent/changes.md (Branch main) — ein Abschnitt je Version,
+     neueste zuerst — und aus der MII-Release-Notes-Vorlage
+     (kerndatensatz-meta/implementation-guides/MedizininformatikInitiative-ImplementationGuide-Template/
+     MII-IG-Modul--Modul/Release-notes.page.md), die "Keep a Changelog" vorgibt.
+
+     Pflegeregel: Für jedes Release oben einen neuen Abschnitt
+     `#### Version <x>` ergänzen, in BEIDEN Sprachen, als Teil des
+     Release-Pull-Requests. Einen veröffentlichten Abschnitt danach nicht mehr
+     ändern. -->
+
+<h3 id="änderungshistorie">Änderungshistorie</h3>
+
+<p>Diese Seite hält die Änderungen zwischen den veröffentlichten Versionen des
+Moduls <strong>Molekulargenetischer Befundbericht</strong> fest, die neueste Version zuerst. Sie folgt
+<a href="https://keepachangelog.com/de/1.1.0/">Keep a Changelog</a> und dem
+KDS-CalVer-Schema, das die Seite <a href="version-history.html">Versionierung</a>
+beschreibt.</p>
+
+<p>Jede Version erhält einen eigenen Abschnitt mit dem Release-Datum und den nach
+Kategorien gruppierten Änderungen:</p>
+
+<ul>
+  <li><strong>Hinzugefügt</strong> — neue Profile, Extensions, ValueSets, Suchparameter, Seiten.</li>
+  <li><strong>Geändert</strong> — geänderte Einschränkungen, Bindings, Hinweise oder
+Dokumentation.</li>
+  <li><strong>Abgekündigt</strong> — Artefakte, die noch existieren, aber nicht mehr genutzt
+werden sollen.</li>
+  <li><strong>Entfernt</strong> — zurückgezogene Artefakte.</li>
+  <li><strong>Behoben</strong> — Korrekturen von Fehlern.</li>
+  <li><strong>Sicherheit</strong> — Änderungen mit Auswirkung auf Sicherheit oder Datenschutz.</li>
+</ul>
+
+<p>Kategorien ohne Inhalt werden weggelassen. Geht eine Änderung auf ein Issue oder
+einen Pull-Request zurück, wird darauf verlinkt.</p>
+
+<!-- TODO:REVIEW Die aus Simplifier migrierten Versionsabschnitte gruppieren ihre Einträge
+     thematisch statt nach den oben genannten Keep-a-Changelog-Kategorien. Das ist eine der
+     beiden von der Vorlage zugelassenen Gruppierungen; bei Gate C entscheiden, ob die
+     Abschnitte auf Kategorien umgestellt werden. -->
+
+<div class="ig-highlight ig-highlight-red">
+<h5>Breaking Changes MÜSSEN berichtet und erläutert werden</h5>
+<p>Ein Versionsabschnitt mit einer Breaking Change ist erst vollständig, wenn
+er ausdrücklich und in diesem Changelog beantwortet:</p>
+<ul>
+<li><b>Was genau sich geändert hat</b> zwischen den beiden Versionen — das
+Artefakt, das Element, die alte und die neue Einschränkung (nicht nur
+„Profil X wurde überarbeitet“).</li>
+<li><b>Was das für bestehende Daten bedeutet:</b> Validieren Daten, die der
+Vorversion entsprachen, weiterhin gegen die neue Version? Falls nein: welche
+Ressourcen und Elemente sind betroffen, und wie zeigt sich der Fehler?</li>
+<li><b>Was Implementierende tun sollten:</b> die Empfehlung der Autorinnen
+und Autoren zur Migration bestehender Daten auf die neue Version —
+Transformationsschritte, Standardwerte, Umkodierungs-Hinweise — oder die
+ausdrückliche Aussage, dass kein Migrationspfad bereitgestellt wird, und
+warum.</li>
+</ul>
+<p><b>Was als Breaking Change zählt</b> — behandeln Sie eine Änderung als
+Breaking Change, wenn sie eines der Folgenden tut, auch wenn sie klein wirkt:
+eine Kardinalität verschärft (<code>0..*</code> → <code>1..1</code>), eine
+Binding-Stärke erhöht (example → required), Codes aus einem required-ValueSet
+entfernt, ein Element oder einen Slice entfernt oder umbenennt, einen Typ
+einengt, eine Invariante oder eine Must-Support-Pflicht hinzufügt oder eine
+kanonische URL ändert. Im Zweifel: als Breaking Change berichten.</p>
+<p><b>Breaking für wen:</b> benennen Sie beide Perspektiven — <i>gespeicherte
+Daten</i> (Instanzen, die gegen die alte Version valide sind) und
+<i>Implementierungen</i> (Clients und Server, die dagegen gebaut wurden; ein
+entfernter Suchparameter bricht Implementierungen, während jede gespeicherte
+Instanz valide bleibt).</p>
+<p><b>Die Versionsnummer warnt niemanden.</b> Das KDS-Kalender-Versionsschema
+(<code>JJJJ.n.n</code>) trägt kein Major-Signal wie SemVer — dieser
+Changelog-Abschnitt ist die <i>einzige</i> Warnung, die Lesende bekommen.</p>
+<p><b>Verlinken Sie das technische Delta.</b> Ab der zweiten formalen
+Publikation aktivieren Sie den Versionsvergleich des IG Publishers
+(<code>version-comparison</code> in <code>sushi-config.yaml</code> — siehe die
+Seite <a href="version-history.html">Versionierung</a> zur Einrichtung und
+ihren Voraussetzungen); er veröffentlicht einen maschinell erzeugten
+Vergleich unter <code>comparison-v&lt;Vorversion&gt;/index.html</code>.
+Verlinken Sie ihn aus dem Versionsabschnitt, damit die Erläuterung und der
+technische Diff nebeneinanderstehen.</p>
+<p>Kennzeichnen Sie solche Einträge deutlich (zum Beispiel mit dem Präfix
+<b>BREAKING:</b>), damit sie beim Überfliegen des Abschnitts nicht übersehen
+werden können.</p>
+</div>
+
+<hr />
+
+<h4 id="version-202700-ballotrc1">Version 2027.0.0-ballot.rc1</h4>
+
+<p><strong>Datum:</strong> 2026-09-02 · <strong>Release Candidate</strong></p>
+
+<p>Erster Release Candidate auf Basis des MII-KDS-Modul-Templates. Der Leitfaden wird
+jetzt vom HL7 IG Publisher gebaut und gerendert statt von Simplifier, englisch mit
+deutscher Übersetzung.</p>
+
+<ul>
+  <li><strong>Migration auf das MII-KDS-Modul-Template</strong> (v0.13.0), das das gemeinsame
+MII-IG-Template referenziert. Alle 41 Seiten des bisherigen Simplifier-Leitfadens
+wurden in den Template-Seitensatz überführt: 15 wurden zu Intro-Notes über den
+generierten Artefaktseiten, der Rest ging in die vereinbarten Seiten. Identität,
+kanonische URLs und Artefaktmenge sind unverändert.</li>
+  <li><strong>Lizenz deklariert:</strong> CC BY 4.0. Die bisherigen Releases nannten keine Lizenz.</li>
+  <li><strong>Abhängigkeiten:</strong> <code class="language-plaintext highlighter-rouge">kerndatensatz.meta</code> und <code class="language-plaintext highlighter-rouge">kerndatensatz.base</code> auf die
+2027er-Ballot-Kandidaten, <code class="language-plaintext highlighter-rouge">de.basisprofil.r4</code> auf 1.6.0, <code class="language-plaintext highlighter-rouge">hl7.terminology.r4</code>
+von 6.1.0 auf 7.3.0 und <code class="language-plaintext highlighter-rouge">kerndatensatz.biobank</code> von 2026.0.1 auf
+<code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc2</code>. Das <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc1</code> des Biobank-Moduls war nicht
+nutzbar: sein Profil <code class="language-plaintext highlighter-rouge">SpecimenCore</code> und das davon abgeleitete <code class="language-plaintext highlighter-rouge">Specimen</code> wurden
+ohne Snapshot ausgeliefert, was der Build dieses Moduls zurückweist. <code class="language-plaintext highlighter-rouge">rc2</code> bringt
+für alle 24 StructureDefinitions Snapshots mit, und die Canonicals sind
+unverändert — die sechs <code class="language-plaintext highlighter-rouge">SpecimenCore</code>-Beispiele hier mussten also nicht angepasst
+werden.</li>
+  <li><strong>CapabilityStatement korrigiert:</strong> Die sechs eigenen Suchparameter des Moduls
+sind jetzt deklariert (sie fehlten vollständig), und eine falsche Kanonische beim
+FamilyMemberHistory-Parameter <code class="language-plaintext highlighter-rouge">reason-code</code> wurde behoben.</li>
+  <li><strong>Suchparameter</strong> stehen auf einer eigenen Seite, aus den gebauten Artefakten
+abgeleitet statt von Hand gepflegt.</li>
+  <li><strong>Neues Beispiel:</strong> ein FFPE-Tumorgewebe-Specimen für die TSO500-Panel-Studie,
+auf das zwei GenomicStudyAnalysis-Beispiele verwiesen, das es aber nie gab.</li>
+  <li><strong>Sechs DiagnosticReport-Beispiel-IDs gekürzt</strong>, damit das Paket überhaupt
+baubar ist — die bisherigen IDs erzeugten einen Paketpfad über der
+100-Byte-Grenze des tar-Formats. Alt → neu:
+<code class="language-plaintext highlighter-rouge">mii-exa-molgen-molekulargenetischer-befundbericht-*</code> →
+<code class="language-plaintext highlighter-rouge">mii-exa-molgen-befundbericht-*</code>.</li>
+</ul>
+
+<h5 id="konformitätserwartungen">Konformitätserwartungen</h5>
+
+<ul>
+  <li><strong>Drei Profile sind jetzt <code class="language-plaintext highlighter-rouge">MAY</code> statt <code class="language-plaintext highlighter-rouge">SHALL</code>:</strong> <code class="language-plaintext highlighter-rouge">genotyp</code> sowie die beiden
+Clinical-Genomics-STU3-Profile <code class="language-plaintext highlighter-rouge">haplotype</code> und <code class="language-plaintext highlighter-rouge">sequence-phase-relationship</code>. Alle
+drei sagen etwas über Allele als Ganzes aus statt über einen Einzelbefund, und
+viele Labore leiten sie nie ab. <code class="language-plaintext highlighter-rouge">sequence-phase-relationship</code> war zuvor gar nicht
+deklariert, obwohl die Implementiererseite es als verwendet darstellte; <code class="language-plaintext highlighter-rouge">haplotype</code>
+stand auf <code class="language-plaintext highlighter-rouge">SHALL</code> und verpflichtete damit zu etwas, wozu der Guide kein Beispiel
+zeigt.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">MII_PR_MolGen_MolekularerBiomarker</code> ist jetzt deklariert</strong> (<code class="language-plaintext highlighter-rouge">SHALL</code>). Es ist das
+Elternprofil von Mikrosatelliteninstabilität und Mutationslast, die beide gefordert
+waren, während ihr Basisprofil unerwähnt blieb.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">DiagnosticReport.result:biomarker</code> ist darauf verengt.</strong> Zuvor erbte der Slice
+von STU3 und akzeptierte jedes <code class="language-plaintext highlighter-rouge">molecular-biomarker</code>.</li>
+  <li><strong>Drei supportedProfile-Einträge zeigten auf Canonicals, die es nicht gibt</strong> —
+<code class="language-plaintext highlighter-rouge">molekulare-konsequenz</code>, <code class="language-plaintext highlighter-rouge">genomic-study</code> und <code class="language-plaintext highlighter-rouge">genomic-study-analysis</code> waren ohne
+den Präfix <code class="language-plaintext highlighter-rouge">mii-pr-molgen-</code> geschrieben, den diese drei Profile tatsächlich tragen.
+Ein Server hätte sie nicht auflösen können. Die Canonicals selbst bleiben
+unverändert: sie stehen so im veröffentlichten Paket 2026.0.4.</li>
+</ul>
+
+<h5 id="dokumentation">Dokumentation</h5>
+
+<ul>
+  <li><strong>Die Abhängigkeit von Clinical Genomics STU3 ist jetzt korrekt beziffert.</strong> Die
+Implementiererseite dokumentierte zwei Profile; tatsächlich erben zehn Profile
+direkt, zwei indirekt, eine Extension erbt, zwölf Extensions werden verwendet,
+dazu drei ValueSets und zwei Codesysteme.</li>
+  <li><strong>Die CapabilityStatement-Seite trägt eine Tabelle Profil/Erwartung.</strong> Der IG
+Publisher rendert die unterstützten Profile als reine Linkliste ohne die
+<code class="language-plaintext highlighter-rouge">SHALL</code>/<code class="language-plaintext highlighter-rouge">MAY</code>-Erwartung — ohne diese Tabelle wären die Erwartungen im gerenderten
+Guide unsichtbar.</li>
+  <li><strong>Die Suchparameter stehen nur noch an einer Stelle.</strong> Die nummerierten Listen auf
+allen 14 Profil-Intro-Seiten wurden entfernt (3373 Zeilen); sie doppelten das
+CapabilityStatement, wichen davon ab und nannten das falsche Modul.</li>
+  <li><strong>Elementnamen korrigiert</strong>, die es in STU3 nicht gibt: <code class="language-plaintext highlighter-rouge">CytogenicLocation</code> →
+<code class="language-plaintext highlighter-rouge">cytogenetic-location</code>, <code class="language-plaintext highlighter-rouge">RefSequenceAssembly</code> → <code class="language-plaintext highlighter-rouge">reference-sequence-assembly</code>,
+<code class="language-plaintext highlighter-rouge">associated-phenotype</code> → <code class="language-plaintext highlighter-rouge">predicted-phenotype</code>. Ein Mapping auf
+<code class="language-plaintext highlighter-rouge">amino-acid-change-type</code> entfiel: STU3 kennt diese Komponente auf <code class="language-plaintext highlighter-rouge">variant</code> nicht,
+und das Datensatzelement ist nach <code class="language-plaintext highlighter-rouge">molecular-consequence</code> gewandert.</li>
+</ul>
+
+<h5 id="korrekturen-an-beispielen">Korrekturen an Beispielen</h5>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Task.basedOn</code> verwies in zwei Beispielen auf <code class="language-plaintext highlighter-rouge">servicerequest/example</code> — ein
+Platzhalter mit kleingeschriebenem Ressourcentyp, der ins Leere zeigte. Jetzt die
+BRAF-Anforderung.</li>
+  <li>Zwei Beispiele beanspruchten die STU2-Profile <code class="language-plaintext highlighter-rouge">msi</code> und <code class="language-plaintext highlighter-rouge">tmb</code>, die STU3 in
+<code class="language-plaintext highlighter-rouge">molecular-biomarker</code> zusammengeführt hat.</li>
+  <li>Zwei Gen-IDs im TSO500-Panel waren falsch: <code class="language-plaintext highlighter-rouge">HGNC:3942</code> (das ist MTOR) mit dem
+Label FGFR2 und <code class="language-plaintext highlighter-rouge">HGNC:3943</code> (existiert nicht) mit dem Label FGFR3. Richtig sind
+<code class="language-plaintext highlighter-rouge">HGNC:3689</code> und <code class="language-plaintext highlighter-rouge">HGNC:3690</code>.</li>
+  <li>Eine Practitioner-Referenz im umfassenden WES-Bundle zeigte auf eine Ressource,
+die es nirgends gibt.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">known_errors.txt</code> wurde angelegt.</strong> Von den Validierungsfehlern geht die große
+Mehrheit auf Grenzen des Terminologieservers zurück und nicht auf Defekte dieses
+Moduls; die Datei sagt, was was ist, und hält den einen bewusst hingenommenen
+Fehler fest (die FGFR2::DBP-Fusionscodierung, bei der LOINC 95123-6 narrativ
+skaliert ist, das Profil den Slice aber an CodeableConcept bindet).</li>
+</ul>
+
+<h4 id="version-202604">Version 2026.0.4</h4>
+
+<p><strong>Datum:</strong> 2026-01-02</p>
+
+<h5 id="package-build--versionskonsistenz">Package Build &amp; Versionskonsistenz</h5>
+
+<p><strong>Problem</strong>: v2026.0.3 Package auf Simplifier enthielt unerwünschte Text-Dateien (FSH-Quelldateien, Markdown, etc.)</p>
+
+<p><strong>Behebung</strong>:</p>
+
+<ul>
+  <li><strong>Versionskonsistenz</strong>: CapabilityStatement und alle SearchParameters verwenden jetzt das zentrale <code class="language-plaintext highlighter-rouge">Version</code>-Ruleset</li>
+  <li><strong>CapabilityStatement</strong>: Hardcodierte Version <code class="language-plaintext highlighter-rouge">2026.0.0-alpha</code> durch <code class="language-plaintext highlighter-rouge">* insert Version</code> ersetzt</li>
+  <li><strong>SearchParameters</strong>: <code class="language-plaintext highlighter-rouge">* insert Version</code> zu allen 6 aktiven SearchParameter-Instanzen hinzugefügt</li>
+  <li><strong>SupportProfile URLs</strong>: Alle kanonischen URLs im CapabilityStatement auf <code class="language-plaintext highlighter-rouge">|2026.0.4</code> aktualisiert</li>
+</ul>
+
+<p><strong>Technische Details</strong>:</p>
+
+<ul>
+  <li>Lokaler Package-Build enthält ausschließlich JSON-Ressourcen (korrekt)</li>
+  <li>Simplifier-Pipeline muss korrekten Bake-Workflow verwenden</li>
+</ul>
+
+<hr />
+
+<h4 id="version-202603">Version 2026.0.3</h4>
+
+<h5 id="maintenance-release">Maintenance Release</h5>
+
+<p><strong>Dependency Updates</strong></p>
+
+<ul>
+  <li><strong>kerndatensatz.biobank</strong>: Updated to <code class="language-plaintext highlighter-rouge">2026.0.x</code> (flexible versioning)</li>
+</ul>
+
+<p><strong>Aktuelle Abhängigkeiten</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">hl7.fhir.uv.genomics-reporting</code></td>
+      <td>3.0.x</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.meta</code></td>
+      <td>2026.0.x</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.base</code></td>
+      <td>2026.0.x</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.biobank</code></td>
+      <td>2026.0.x</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">de.basisprofil.r4</code></td>
+      <td>1.5.x</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">hl7.terminology.r4</code></td>
+      <td>6.1.x</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Package Build</strong></p>
+
+<ul>
+  <li><strong>ImplementationGuide-Filterung</strong>: package.bake.yaml verbessert, um ImplementationGuide-Ressourcen aus dem FHIR-Package auszuschließen</li>
+</ul>
+
+<hr />
+
+<h4 id="version-202602">Version 2026.0.2</h4>
+
+<h5 id="hotfix-package-build-fehler">Hotfix: Package-Build-Fehler</h5>
+
+<p><strong>Technische Korrektur</strong></p>
+
+<ul>
+  <li><strong>Package Build</strong>: v2026.0.1 wurde mit fehlerhaftem Package-Build publiziert
+    <ul>
+      <li>Problem: Package enthielt gesamtes Repository (377 Dateien, 2.1 MB) statt nur FHIR-Ressourcen</li>
+      <li>Ursache: Verwendung von <code class="language-plaintext highlighter-rouge">npm pack</code> anstatt <code class="language-plaintext highlighter-rouge">fhir bake</code> für Package-Erstellung</li>
+      <li>Auswirkung: SUSHI konnte keine Ressourcen aus dem Package laden (0 resources statt 36)</li>
+      <li>Behebung: Korrekter Build-Prozess mit <code class="language-plaintext highlighter-rouge">fhir bake package.bake.yaml</code></li>
+      <li>Ergebnis: Package nun korrekt strukturiert (140 Dateien, 381 KB)</li>
+    </ul>
+  </li>
+  <li><strong>Dokumentation</strong>: build-package.md aktualisiert mit korrektem <code class="language-plaintext highlighter-rouge">fhir bake</code> Workflow
+    <ul>
+      <li>Explizite Verifikationsschritte für Package-Struktur</li>
+      <li>Warnungen vor falschen Build-Methoden</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Hinweis</strong>: v2026.0.1 bleibt auf Simplifier verfügbar, sollte aber nicht verwendet werden. Alle abhängigen Module sollten auf v2026.0.2 aktualisieren.</p>
+
+<hr />
+
+<h4 id="version-202601">Version 2026.0.1</h4>
+
+<h5 id="hotfix-familienanamnese-canonical-url">Hotfix: Familienanamnese Canonical URL</h5>
+
+<p><strong>Breaking Change Fix</strong></p>
+
+<ul>
+  <li><strong>Familienanamnese Profile</strong>: Canonical URL wiederhergestellt zur ursprünglichen Version:
+    <ul>
+      <li>Canonical URL: <code class="language-plaintext highlighter-rouge">https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese</code></li>
+      <li>Die URL wurde in v2026.0.0 versehentlich geändert, was ein breaking change war</li>
+      <li>Wiederherstellung der ursprünglichen URL zur Gewährleistung der Rückwärtskompatibilität</li>
+      <li>Betroffene abhängige Module: Seltene Erkrankungen (SE)</li>
+      <li>Commit: 065fabf</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Hinweis</strong>: Die URL <code class="language-plaintext highlighter-rouge">familienanamnese</code> entspricht zwar nicht formal den aktuellen Namenskonventionen (erwartbar wäre <code class="language-plaintext highlighter-rouge">mii-pr-molgen-familienanamnese</code>), wird aber beibehalten um breaking changes zu vermeiden.</p>
+
+<!-- TODO:REVIEW Dieser Abschnitt und der Abschnitt 2026.0.0 beschreiben Breaking Changes
+     (kanonische URL, umbenannte und entfernte Komponenten/Slices). Bei Gate C prüfen, ob sie
+     mit dem Präfix "BREAKING:" gekennzeichnet und um die von der Vorlage geforderten Angaben
+     (Auswirkung auf bestehende Daten, Migrationsempfehlung) ergänzt werden müssen. -->
+
+<hr />
+
+<h4 id="version-202600">Version 2026.0.0</h4>
+
+<h5 id="änderungen-nach-ballotierung">Änderungen nach Ballotierung</h5>
+
+<h6 id="vervollständigung-und-korrektur-der-beispiele">Vervollständigung und Korrektur der Beispiele</h6>
+
+<h6 id="datumsstempel-für-observations-hdb-762-hdb-763">Datumsstempel für Observations (HDB-762, HDB-763)</h6>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">effective[x]</code> und <code class="language-plaintext highlighter-rouge">issued</code> MS zu allen Observation-Profilen hinzugefügt</li>
+</ul>
+
+<h6 id="servicerequestrequester-hdb-768">ServiceRequest.requester (HDB-768)</h6>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Referenztypen eingeschränkt auf: Practitioner</td>
+          <td>PractitionerRole</td>
+          <td>Organization</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<h6 id="terminologie-dokumentation-hdb-749">Terminologie-Dokumentation (HDB-749)</h6>
+
+<p>Konsolidierung von 18 Terminologie-Seiten in 4 übersichtliche Seiten, organisiert nach Herkunft:</p>
+
+<ul>
+  <li><strong>MII-ValueSets</strong>: Unsere 4 eigenen ValueSets (Familiäre Linie, Family Member SNOMED, Verwandtschaftsgrad, Verwandtschaftsverhältnis)</li>
+  <li><strong>ClinicalGenomics</strong>: Alle Clinical Genomics STU3 ValueSets + CodeSystems</li>
+  <li><strong>Terminologien</strong>: Externe Standards (LOINC, SNOMED CT, HGNC, HGVS, etc.) mit Lizenzinformationen</li>
+  <li><strong>Index</strong>: Übersicht mit Entscheidungskriterien zur ValueSet-Auswahl</li>
+</ul>
+
+<p>Entfernte Einzelseiten: ClinVar-Evidence-Level, Condition-Inheritance-Pattern, DNAChangeType, Evidence-Level-Examples, Functional-Effect, HGNC, HGVS, HighLowcodes, MolecularConsequence, PharmGKB-Evidence-Level, TBD-Codes, Variant-Confidence-Status, VariantInheritance</p>
+
+<h6 id="url-namensraum-migration">URL-Namensraum-Migration</h6>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">example.org</code> URLs durch MII FHIR Namensraum ersetzt (<code class="language-plaintext highlighter-rouge">https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/</code>)</li>
+</ul>
+
+<h6 id="molekularer-biomarker-profil">Molekularer Biomarker Profil</h6>
+
+<ul>
+  <li><strong>Neues Profil</strong>: <code class="language-plaintext highlighter-rouge">MII_PR_MolGen_MolekularerBiomarker</code> als gemeinsames Elternprofil für:
+    <ul>
+      <li>Mikrosatelliteninstabilität (erbt jetzt von MolekularerBiomarker)</li>
+      <li>Mutationslast (erbt jetzt von MolekularerBiomarker)</li>
+    </ul>
+  </li>
+  <li>Basiert auf Clinical Genomics STU3 MolecularBiomarker-Profil</li>
+</ul>
+
+<h6 id="deutsche-übersetzungen-de-de">Deutsche Übersetzungen (de-DE)</h6>
+
+<ul>
+  <li><strong>Must Support Elemente</strong>: Alle MS-Elemente in allen Profilen mit deutschen Übersetzungen versehen</li>
+</ul>
+
+<h6 id="konfiguration">Konfiguration</h6>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">language: de</code> in sushi-config.yaml hinzugefügt (Issue #34)</li>
+</ul>
+
+<h6 id="cicd-verbesserungen">CI/CD Verbesserungen</h6>
+
+<ul>
+  <li><strong>Automatische Releases</strong>: GitHub Actions erstellt automatisch Draft-Releases beim Tag-Push</li>
+  <li><strong>Zulip-Benachrichtigung</strong>: Automatische Benachrichtigung im MII-Kerndatensatz Stream bei Release-Veröffentlichung</li>
+  <li><strong>FHIR Package Caching</strong>: Beschleunigte CI-Pipeline durch Caching von FHIR-Paketen</li>
+</ul>
+
+<h6 id="familienanamnese-terminology-bindings">Familienanamnese Terminology-Bindings</h6>
+
+<ul>
+  <li>Relationship-Bindings aufgeweicht: <code class="language-plaintext highlighter-rouge">required</code> → <code class="language-plaintext highlighter-rouge">extensible</code> für SNOMED CT und v3-RoleCode</li>
+  <li>Ermöglicht Verwendung im Seltene Erkrankungen (SE) Modul mit spezifischen Verwandtschaftsverhältnissen</li>
+</ul>
+
+<h6 id="terminologie-server-anforderungen">Terminologie-Server Anforderungen</h6>
+
+<p>Das folgende CodeSystem muss auf dem Terminologie-Server importiert werden:</p>
+
+<ul>
+  <li><strong>URL:</strong> <code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/variant-confidence-status-cs</code></li>
+  <li><strong>Quelle:</strong> https://hl7.org/fhir/uv/genomics-reporting/STU3/CodeSystem-variant-confidence-status-cs.json</li>
+  <li><strong>Hinweis:</strong> Kanonische URL hat sich von STU2 (<code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/variant-confidence-status-cs</code>) zu STU3 geändert</li>
+</ul>
+
+<h5 id="strukturänderungen-der-implementation-guide-navigation">Strukturänderungen der Implementation Guide Navigation</h5>
+
+<!-- TODO:REVIEW Die beiden folgenden Navigationsbäume beschreiben die Seitenstruktur des
+     Simplifier-Leitfadens vor dem Umzug auf das KDS-Modul-Template. Sie sind hier als
+     historischer Changelog-Eintrag zu 2026.0.0 erhalten. Bei Gate C entscheiden, ob ein
+     Hinweis auf die neue Template-Struktur ergänzt wird. -->
+
+<h6 id="ig-struktur-version-2025x-flache-struktur">IG-Struktur Version 2025.x (Flache Struktur)</h6>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MII IG Modul Molekulargenetischer Befundbericht/
+├── IG MII KDS Modul Molekulargenetischer Befundbericht
+├── Beschreibung Modul Molekulargenetischer Befundbericht
+├── Anwendungsfälle Informationsmodell
+├── Beschreibung von Szenarien für die Anwendung der Module
+├── Datensätze inkl. Beschreibungen
+├── Kontext im Gesamtprojekt Bezüge zu anderen Modulen
+├── Technische Implementierung/
+│   ├── Technische Implementierung (leer)
+│   ├── FHIR Profile
+│   ├── Anforderung-ServiceRequest
+│   ├── Befundbericht-DiagnosticReport
+│   ├── DiagnostischeImplikation-Observation
+│   ├── TherapeutischeImplikation-Observation
+│   ├── Variante-Observation
+│   ├── ErgebnisZusammenfassung-Observation
+│   ├── UntersuchteRegion-Observation
+│   ├── Mikrosatelliteninstabilität-Observation
+│   ├── Mutationslast-Observation
+│   ├── Familienanamnese---FamilyMemberHistory
+│   ├── Empfohlene Folgemaßnahme-Task
+│   ├── Medikationsempfehlung-Task
+│   ├── Polygener-Risiko-Score---RiskAssessment
+│   ├── Genotyp---Observation
+│   ├── Haplotype-Observation
+│   ├── Sequence-Phase-Relationship---Observation
+│   ├── CapabilityStatement
+│   ├── Terminologien
+│   ├── CodeSystems
+│   ├── ValueSets
+│   └── [Weitere einzelne Terminologie-Seiten]
+├── UML
+└── Referenzen
+</code></pre></div></div>
+
+<h6 id="ig-struktur-version-2026x-hierarchische-themengruppierung">IG-Struktur Version 2026.x (Hierarchische Themengruppierung)</h6>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MII IG Modul Molekulargenetischer Befundbericht/
+├── Hauptseite
+├── Beschreibung Modul Molekulargenetischer Befundbericht
+├── Anwendungsfälle / Informationsmodell/
+│   ├── Index
+│   ├── Basis des Informationsmodells  
+│   ├── Profile-Relationships
+│   └── Szenarien
+├── Kontext im Gesamtprojekt Bezug zu anderen Modulen
+├── Technische Implementierung/
+│   ├── Index
+│   ├── Workflow/
+│   │   ├── Index
+│   │   ├── Befundbericht-DiagnosticReport
+│   │   ├── Anforderung-ServiceRequest
+│   ├── Genetische Befunde/
+│   │   ├── Index
+│   │   ├── Variante-Observation
+│   │   ├── Genotyp-Observation
+│   │   ├── Haplotyp-Observation
+│   │   └── Sequence-Phase-Relationship-Observation
+│   ├── Genetische Implikationen/
+│   │   ├── Index
+│   │   ├── Molekulare Konsequenz-Observation 🆕
+│   │   ├── Diagnostische Implikation-Observation
+│   │   └── Therapeutische Implikation-Observation
+│   ├── Molekulare Biomarker/
+│   │   ├── Index
+│   │   ├── Mikrosatelliteninstabilität-Observation
+│   │   ├── Mutationslast-Observation
+│   │   └── Polygener Risiko Score-Observation
+│   ├── Therapieempfehlungen/
+│   │   ├── Index
+│   │   ├── EmpfohleneFolgemassnahme-Task
+│   │   └── Medikationsempfehlung-Task
+│   ├── Methodik/
+│   │   ├── Index
+│   │   ├── GenomicStudy-Procedure 🆕
+│   │   └── GenomicStudyAnalysis-Procedure 🆕
+│   ├── Familienanamnese/
+│   │   ├── Index
+│   │   ├── Familienanamnese---FamilyMemberHistory
+│   │   └── Familienanamnese-Extensions 🆕
+│   ├── CapabilityStatement
+│   └── Terminologie/
+│       ├── Index
+│       ├── CodeSystems
+│       └── ValueSets
+│   
+│   
+├── Referenzen
+├── Release Notes
+└── Kommentierung v2026 🆕
+</code></pre></div></div>
+
+<h6 id="entfernteersetzte-seiten">Entfernte/Ersetzte Seiten</h6>
+
+<ul>
+  <li>❌ ErgebnisZusammenfassung-Observation → in DiagnosticReport.conclusion</li>
+  <li>❌ UntersuchteRegion-Observation → GenomicStudy/GenomicStudyAnalysis</li>
+</ul>
+
+<h6 id="neue-seiten">Neue Seiten</h6>
+
+<ul>
+  <li>🆕 Molekulare Konsequenz (aus DiagnostischeImplikation ausgelagert)</li>
+  <li>🆕 GenomicStudy/GenomicStudyAnalysis (STU3)</li>
+  <li>🆕 Index-Seiten für jede Kategorie</li>
+  <li>🆕 Szenarien (konkrete Anwendungsbeispiele)</li>
+  <li>🆕 Kommentierung v2026</li>
+</ul>
+
+<h5 id="technische-änderungen">Technische Änderungen</h5>
+
+<h6 id="migration-zu-clinical-genomics-stu3">Migration zu Clinical Genomics STU3</h6>
+
+<ul>
+  <li>Dependency auf den Clinical Genomics Reporting von STU2 auf STU3
+    <ul>
+      <li>Neues MolecularBiomarker-Profil</li>
+      <li>Neues Molekulare-Konsequenz-Profil (downstream-Beschreibung von genetischen Änderungen)</li>
+      <li>DiagnosticImplication
+        <ul>
+          <li>Schärfung der Profilierung mit Fokus auf Erkrankungsrisiko, Auslagerung der reinen Beschreibung der Änderung ins Molekulare-Konsequenz-Profil</li>
+          <li><code class="language-plaintext highlighter-rouge">extension[genomic-artifact]</code> durch <code class="language-plaintext highlighter-rouge">extension[workflow-relatedArtifact]</code> ersetzt</li>
+          <li>component[functional-effect] in MolecularConsequence übertragen</li>
+        </ul>
+      </li>
+      <li>Ergebnis-Zusammenfassung
+        <ul>
+          <li>Löschen des Profils (Grund: Redundanzen, Ergebnis kann über GenomicReport.conclusion/conclusionCode abgebildet werden)</li>
+        </ul>
+      </li>
+      <li>Mikrosatelliteninstabilität
+        <ul>
+          <li>erbt jetzt vom STU3 Molecular Biomarker Profile</li>
+          <li><code class="language-plaintext highlighter-rouge">component[conclusion-string]</code> entfällt</li>
+        </ul>
+      </li>
+      <li>Molekulargenetischer Befundbericht erbt jetzt von genomic-report und nicht mehr genomics-report
+        <ul>
+          <li>wegfallen des [overall]-Slices</li>
+          <li>Zusammenlegen der extensions für [genomics-artifact] und [genomics-file] in [workflow-relatedArtifact]</li>
+          <li>extension[genomics-risk-assessment] ist jetzt extension[genomic-risk-assessment]</li>
+          <li>extension[region-studied] entfällt; Metadaten über die Untersuchte Region werden jetzt über GenomicStudy/GenomicStudyAnalysis abgebildet</li>
+        </ul>
+      </li>
+      <li>Mutationslast
+        <ul>
+          <li>erbt jetzt vom neuen Molekularer Biomarker Modul</li>
+          <li>damit entfällt <code class="language-plaintext highlighter-rouge">component[conclusion-string]</code></li>
+        </ul>
+      </li>
+      <li>Therapeutische Implikation
+        <ul>
+          <li>component[prognosis] fällt weg <!-- TODO:REVIEW Die Quelle brach den Satz hier ab ("weil in den (Gründe?)"); die Begründung fehlt und muss ergänzt werden. --></li>
+          <li><code class="language-plaintext highlighter-rouge">component[predicted-therapeutic-implication]</code> zu <code class="language-plaintext highlighter-rouge">component[therapeutic-implication]</code> geändert</li>
+        </ul>
+      </li>
+      <li>Untersuchte Region
+        <ul>
+          <li>Profil fällt weg, Information über Lokalisation und Geräte wird stattdessen über GenomicStudy/GenomicStudyAnalysis kodiert</li>
+        </ul>
+      </li>
+      <li>Variante
+        <ul>
+          <li>component[coding-hgvs] umbenannt in component[representative-coding-hgvs]</li>
+          <li>component[transcript-ref-seq] umbenannt in component[representative-transcript-ref-seq]</li>
+          <li>component[protein-hgvs] umbenannt in component[representative-protein-hgvs]</li>
+          <li>component[amino-acid-change-type] gelöscht</li>
+          <li>component[molecular-consequence] aus Variante gelöst und in MolecularConsequence überführt</li>
+        </ul>
+      </li>
+      <li>Beispiele entsprechend angepasst (alte Beispiele für Diagnostische Implikation entsprechen eher neuem Profil für Molekulare Konsequenz)</li>
+      <li>Neue Ordnerstruktur im GitHub-Repo</li>
+    </ul>
+  </li>
+  <li>Logical Model (LogicalModel.fsh)
+    <ul>
+      <li>Elementnamen bereinigt: Bindestriche entfernt und durch CamelCase ersetzt (z.B. Krankengeschichte-Familie → KrankengeschichteFamilie)</li>
+      <li>Sonderzeichen entfernt: Mikrosatelliteninstabilität → Mikrosatelliteninstabilitaet</li>
+      <li>FHIR-Mappings entsprechend aktualisiert für Konsistenz</li>
+      <li>Alle Elementnamen folgen jetzt FHIR-Namenskonventionen (nur alphanumerische Zeichen)</li>
+    </ul>
+  </li>
+  <li>Profil-Korrektur (Anforderung.fsh)
+    <ul>
+      <li>Typo korrigiert: "gentischer" → "genetischer" in Profile ID und InstanceOf Referenzen</li>
+      <li>Korrekte Canonical URL: mii-pr-molgen-anforderung-genetischer-test</li>
+    </ul>
+  </li>
+  <li>Familienanamnese (FamilyMemberHistory.fsh)
+    <ul>
+      <li>Terminology-Bindings an Diagnose-Modul 2025.0.1 angeglichen</li>
+      <li>ValueSet-Migration für ICD-10-GM, Alpha-ID, SNOMED CT und Orphanet Codings:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">reasonCode.coding[icd10-gm]</code>: <code class="language-plaintext highlighter-rouge">http://fhir.de/ValueSet/bfarm/icd-10-gm</code> → <code class="language-plaintext highlighter-rouge">https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm</code></li>
+          <li><code class="language-plaintext highlighter-rouge">reasonCode.coding[alpha-id]</code>: <code class="language-plaintext highlighter-rouge">http://fhir.de/ValueSet/bfarm/alpha-id</code> → <code class="language-plaintext highlighter-rouge">https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid</code></li>
+          <li><code class="language-plaintext highlighter-rouge">reasonCode.coding[sct]</code>: bereits <code class="language-plaintext highlighter-rouge">https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct</code></li>
+          <li><code class="language-plaintext highlighter-rouge">reasonCode.coding[orphanet]</code>: Neues Binding zu <code class="language-plaintext highlighter-rouge">https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet</code></li>
+          <li>Gleiche Änderungen für <code class="language-plaintext highlighter-rouge">condition.code.coding</code> Slices</li>
+        </ul>
+      </li>
+      <li>Relationship-Bindings aufgeweicht: <code class="language-plaintext highlighter-rouge">required</code> → <code class="language-plaintext highlighter-rouge">extensible</code> für SNOMED CT und v3-RoleCode
+        <ul>
+          <li>Erlaubt Flexibilität bei ungewöhnlichen Verwandtschaftsverhältnissen</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h4 id="version-202500">Version 2025.0.0</h4>
+
+<ul>
+  <li>Package-ID aktualisiert</li>
+  <li>Abhängigkeiten harmonisiert</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
+          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Fri, Sep 4, 2026 10:35+0000">2026-09-04</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/impressum">Impressum</a>
+                 <br/>
+                 <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7®, FHIR® and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

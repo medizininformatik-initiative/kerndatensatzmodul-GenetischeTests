@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-befundbericht-comprehensive-wes"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht|2027.0.0-ballot.rc1"/>
+    <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report|3.0.0"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: DiagnosticReport mii-exa-molgen-befundbericht-comprehensive-wes</b></p><a name="mii-exa-molgen-befundbericht-comprehensive-wes"> </a><a name="hcmii-exa-molgen-befundbericht-comprehensive-wes"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.html">MII PR MolGen Molekulargenetischer Befundbericht</a> version: 2027.0.0-ballot.rc1, <a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-genomic-report.html">Genomic Report</a> version: 3.0.0</p></div><h2><span title="Codes:{http://loinc.org 51969-4}">Genetic analysis report</span> (<span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 GE}">Genetics</span>) </h2><table class="grid"><tr><td>Subject</td><td>Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Medical record number (use: usual, ))</td></tr><tr><td>Performer</td><td> <a href="Practitioner-mii-exa-molgen-practitioner-lab.html">Practitioner Dr. Daniel Schmidt(official)</a></td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>Relevant Time</b></td></tr><tr><td><a href="Observation-mii-exa-molgen-variante-comprehensive-pathogenic.html"><span title="Codes:{http://loinc.org 69548-6}">Genetic variant assessment</span></a></td><td><span title="Codes:{http://loinc.org LA9633-4}">Present</span></td><td>Final</td><td>2024-01-10</td></tr><tr><td><a href="Observation-mii-exa-molgen-diagnostische-implikation-comprehensive.html"><span title="Codes:{http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs diagnostic-implication}">Diagnostic Implication</span></a></td><td/><td>Final</td><td>2024-01-10</td></tr></table><p>Whole exome sequencing identified a pathogenic de novo variant in the KMT2A gene, consistent with Wiedemann-Steiner syndrome. This explains the patient's developmental delay and dysmorphic features. Technical quality metrics met all acceptance criteria.</p><p><b>Coded Conclusions:</b></p><ul><li><span title="Codes:{http://loinc.org LA6576-8}">Positive</span></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-reference">
+    <valueReference>
+      <reference value="Procedure/mii-exa-molgen-genomic-study-comprehensive-wes"/>
+    </valueReference>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact">
+    <valueRelatedArtifact>
+      <type value="documentation"/>
+      <label value="GATK Best Practices for Germline SNP &amp; Indel Discovery"/>
+      <url value="https://gatk.broadinstitute.org/hc/en-us/articles/360035535932"/>
+    </valueRelatedArtifact>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report-note">
+    <valueAnnotation>
+      <extension url="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/annotation-code">
+        <valueCodeableConcept>
+          <text value="Quality Metrics"/>
+        </valueCodeableConcept>
+      </extension>
+      <text value="Mean coverage: 120X, 98.5% of bases &gt;20X, 95.2% of target regions callable. Q30 bases: 92%. Contamination estimate: &lt;1%. Sample identity confirmed by SNP fingerprinting."/>
+    </valueAnnotation>
+  </extension>
+  <basedOn>
+    <reference value="ServiceRequest/mii-exa-molgen-anforderung-wes"/>
+  </basedOn>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="GE"/>
+      <display value="Genetics"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="51969-4"/>
+      <display value="Genetic analysis report"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-molgen-patient"/>
+  </subject>
+  <performer>
+    <reference value="Practitioner/mii-exa-molgen-practitioner-lab"/>
+  </performer>
+  <specimen>
+    <reference value="Specimen/mii-exa-molgen-specimen-blood-edta"/>
+  </specimen>
+  <result>
+    <reference value="Observation/mii-exa-molgen-variante-comprehensive-pathogenic"/>
+  </result>
+  <result>
+    <reference value="Observation/mii-exa-molgen-diagnostische-implikation-comprehensive"/>
+  </result>
+  <media>
+    <comment value="Coverage plot showing uniform coverage across all exons"/>
+    <link>
+      <reference value="Media/mii-exa-molgen-media-coverage-plot"/>
+    </link>
+  </media>
+  <conclusion value="Whole exome sequencing identified a pathogenic de novo variant in the KMT2A gene, consistent with Wiedemann-Steiner syndrome. This explains the patient's developmental delay and dysmorphic features. Technical quality metrics met all acceptance criteria."/>
+  <conclusionCode>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LA6576-8"/>
+      <display value="Positive"/>
+    </coding>
+  </conclusionCode>
+</DiagnosticReport>

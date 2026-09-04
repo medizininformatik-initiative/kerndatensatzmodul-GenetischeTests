@@ -1,0 +1,339 @@
+{
+  "package": "de.medizininformatikinitiative.kerndatensatz.molgen",
+  "version": "2027.0.0-ballot.rc1",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "DE",
+  "extensions": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-massnahme",
+      "title": "MII EX MolGen Empfohlene Maßnahme",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-familiare-linie",
+      "title": "MII EX MolGen Familiare Linie",
+      "types": [
+        "Coding"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad",
+      "title": "MII EX Mol Gen Verwandtschaftsgrad",
+      "types": [
+        "Coding"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis",
+      "title": "MII EX MolGen Verwandtschaftsverhaeltnis",
+      "types": [
+        "Coding"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/risk-assessment-einflussfaktor",
+      "title": "MII EX MolGen RiskAssessment Einflussfaktor",
+      "types": [
+        "CodeableConcept"
+      ]
+    }
+  ],
+  "profiles": {
+    "ServiceRequest": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test",
+        "title": "MII PR MolGen Anforderung genetischer Test"
+      }
+    ],
+    "Observation": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation",
+        "title": "MII PR MolGen Therapeutische Implikation"
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante",
+        "title": "MII PR MolGen Variante"
+      }
+    ],
+    "Task": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung",
+        "title": "MII PR MolGen Medikationsempfehlung"
+      }
+    ],
+    "FamilyMemberHistory": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese",
+        "title": "MII PR MolGen Familienanamnese"
+      }
+    ],
+    "Procedure": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study",
+        "title": "MII PR MolGen Genomic Study"
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis",
+        "title": "MII PR MolGen Genomic Study Analysis"
+      }
+    ],
+    "DiagnosticReport": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht",
+        "title": "MII PR MolGen Molekulargenetischer Befundbericht"
+      }
+    ],
+    "RiskAssessment": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score",
+        "title": "MII PR MolGen Polygener Risiko Score"
+      }
+    ]
+  },
+  "usage": {
+    "http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit": [
+      "Bundle.entry.resource.code.coding",
+      "Condition.code.coding",
+      "FamilyMemberHistory.condition.code.coding"
+    ],
+    "http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen": [
+      "FamilyMemberHistory.condition.code.coding"
+    ],
+    "http://fhir.de/StructureDefinition/lebensphase": [
+      "Bundle.entry.resource.onsetPeriod.start",
+      "Condition.onsetPeriod.start"
+    ],
+    "http://fhir.de/StructureDefinition/seitenlokalisation": [
+      "FamilyMemberHistory.condition.code.coding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-author": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-editor": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-endorser": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-purpose": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-reviewer": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-topic": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-usage": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/bodySite": [
+      "Observation"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
+      "CapabilityStatement.rest.resource",
+      "CapabilityStatement.rest.resource.interaction",
+      "CapabilityStatement.rest.resource.searchParam",
+      "CapabilityStatement.rest.resource.supportedProfile"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/cqf-expansionParameters": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/hla-genotyping-results-allele-database": [
+      "DiagnosticReport"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/hla-genotyping-results-glstring": [
+      "DiagnosticReport"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/humanname-own-name": [
+      "Bundle.entry.resource.name.family",
+      "Patient.name.family"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier": [
+      "Bundle.entry.resource.name.prefix",
+      "Patient.name.prefix"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/observation-secondaryFinding": [
+      "Observation"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/package-source": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/resource-approvalDate": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/translation": [
+      "CapabilityStatement.publisher",
+      "ImplementationGuide.definition.page.page.page.title",
+      "ImplementationGuide.definition.page.page.title",
+      "ImplementationGuide.definition.page.title",
+      "ImplementationGuide.publisher",
+      "ImplementationGuide.title",
+      "SearchParameter.publisher",
+      "StructureDefinition.differential.element.definition",
+      "StructureDefinition.differential.element.short",
+      "StructureDefinition.publisher",
+      "StructureDefinition.snapshot.element.definition",
+      "StructureDefinition.snapshot.element.short",
+      "ValueSet.publisher"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact": [
+      "Bundle.entry.resource",
+      "DiagnosticReport",
+      "Observation"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo": [
+      "Bundle.entry.resource",
+      "DiagnosticReport"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page",
+      "ImplementationGuide.definition.page.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report-note": [
+      "Bundle.entry.resource",
+      "DiagnosticReport"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-risk-assessment": [
+      "Bundle.entry.resource",
+      "DiagnosticReport",
+      "Observation"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-change-type": [
+      "Procedure"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device": [
+      "Bundle.entry.resource",
+      "Procedure"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-ext": [
+      "Bundle.entry.resource",
+      "Procedure"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-focus": [
+      "Procedure"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-genome-build": [
+      "Procedure"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-genomic-source-class": [
+      "Procedure"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-input": [
+      "Procedure"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type": [
+      "Bundle.entry.resource",
+      "Procedure"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-metrics": [
+      "Procedure"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-output": [
+      "Procedure"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-protocol-performed": [
+      "Procedure"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-regions": [
+      "Procedure"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-specimen": [
+      "Bundle.entry.resource",
+      "Procedure"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-title": [
+      "Procedure"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-reference": [
+      "Bundle.entry.resource",
+      "DiagnosticReport"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-referrer-ext": [
+      "Procedure"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medication-assessed-reference": [
+      "Observation.component"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/recommended-action": [
+      "Bundle.entry.resource",
+      "DiagnosticReport"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/repeat-motif-order": [
+      "Observation.component"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapy-assessed-reference": [
+      "Observation.component"
+    ],
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/workflow-relatedArtifactComponent": [
+      "Observation.component"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-massnahme": [
+      "DiagnosticReport"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-familiare-linie": [
+      "FamilyMemberHistory.relationship.coding"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad": [
+      "FamilyMemberHistory.relationship.coding"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis": [
+      "FamilyMemberHistory.relationship.coding"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/risk-assessment-einflussfaktor": [
+      "Bundle.entry.resource.prediction",
+      "RiskAssessment.prediction"
+    ]
+  }
+}
