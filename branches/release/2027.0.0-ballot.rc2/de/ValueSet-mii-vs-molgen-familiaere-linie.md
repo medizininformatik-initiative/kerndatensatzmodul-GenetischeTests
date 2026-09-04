@@ -41,7 +41,7 @@ ValueSet für die Angabe der familären Linie zwischen Patient und Familienangeh
   "name" : "MII_VS_MolGen_FamiliaereLinie",
   "title" : "MII VS MolGen Familiäre Linie",
   "status" : "active",
-  "date" : "2026-09-04T13:46:18+00:00",
+  "date" : "2026-09-04T15:11:34+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

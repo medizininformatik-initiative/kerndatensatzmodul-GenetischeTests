@@ -86,7 +86,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-fam
   "name" : "MII_PR_MolGen_Familienanamnese",
   "title" : "MII PR MolGen Familienanamnese",
   "status" : "active",
-  "date" : "2026-09-04T13:46:18+00:00",
+  "date" : "2026-09-04T15:11:34+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

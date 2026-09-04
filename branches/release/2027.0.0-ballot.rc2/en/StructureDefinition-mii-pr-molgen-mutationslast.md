@@ -72,7 +72,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-mut
   "name" : "MII_PR_MolGen_Mutationslast",
   "title" : "MII PR MolGen Mutationslast",
   "status" : "active",
-  "date" : "2026-09-04T13:46:18+00:00",
+  "date" : "2026-09-04T15:11:34+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

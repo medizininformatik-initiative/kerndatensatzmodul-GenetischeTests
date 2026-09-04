@@ -426,6 +426,20 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 
 <p>The first candidate was formally published; this one closes what that exposed.</p>
 
+<h5 id="no-breaking-changes">No breaking changes</h5>
+
+<p>Checked rather than assumed, because the CalVer number carries no warning of its own.</p>
+
+<p>The SNOMED CT pin moves a full year, from <code class="language-plaintext highlighter-rouge">20250701</code> to <code class="language-plaintext highlighter-rouge">20260701</code>, which is the one
+change here that could have removed or inactivated codes. All <strong>49</strong> distinct SNOMED
+codes this module uses were looked up against both versions on the MII terminology
+server: <strong>none differs</strong> — same existence, same display. Instances valid against rc1
+remain valid against rc2.</p>
+
+<p>The five newly pinned systems constrain future expansions but change nothing today:
+each was pinned to the version the server already resolved to by default. The
+remaining changes are documentation and release automation.</p>
+
 <h5 id="terminology">Terminology</h5>
 
 <ul>
@@ -1096,7 +1110,7 @@ slice to CodeableConcept).</li>
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Sep 4, 2026 13:46+0000">2026-09-04</span>
+          Generated <span title="Fri, Sep 4, 2026 15:11+0000">2026-09-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
