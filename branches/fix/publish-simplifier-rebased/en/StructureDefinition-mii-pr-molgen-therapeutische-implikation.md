@@ -82,7 +82,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-the
   "name" : "MII_PR_MolGen_TherapeutischeImplikation",
   "title" : "MII PR MolGen Therapeutische Implikation",
   "status" : "active",
-  "date" : "2026-09-07T15:40:47+00:00",
+  "date" : "2026-09-07T15:58:44+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
