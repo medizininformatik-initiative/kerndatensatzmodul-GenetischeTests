@@ -91,6 +91,15 @@ test("the real changelog yields notes for the current version", () => {
     canonical: "https://example.org/ig",
   });
   assert.ok(body.length > 500, "expected substantial notes");
-  assert.doesNotMatch(body, /<!--/);
-  assert.doesNotMatch(body, /Add your own release notes/);
+  assert.doesNotMatch(body, /<!--/, "editorial comments must not survive");
+  // The section itself, and nothing of its neighbours: no heading of its own
+  // level, and it opens on the date line.
+  assert.doesNotMatch(body, /^#### Version/m, "must not spill into another version");
+  assert.match(body, /^\*\*Date:\*\* \d{4}-\d{2}-\d{2}/, "starts at the date line");
+
+  // NOT a check for the scaffold phrase "Add your own release notes here":
+  // the changelog legitimately QUOTES it when describing the workflow change
+  // that removed it, and an earlier version of this test failed on that quote.
+  // What must never appear is the scaffold's own marker, which forRelease strips.
+  assert.doesNotMatch(body, /DELETE START|DELETE END/);
 });

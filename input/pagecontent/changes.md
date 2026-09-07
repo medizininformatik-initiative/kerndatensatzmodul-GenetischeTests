@@ -88,7 +88,7 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 
 #### Version 2027.0.0-ballot.rc2
 
-**Date:** 2026-09-04 · **Release candidate**
+**Date:** 2026-09-07 · **Release candidate**
 
 The first candidate was formally published; this one closes what that exposed.
 
@@ -149,6 +149,38 @@ remaining changes are documentation and release automation.
   the `-go-publish` invocation did not receive the terminology allowlist the build
   invocation gets; and the registry validator rejected the `"<sequence> <Status>"`
   edition name that any non-release publication receives.
+
+##### Documentation (second pass)
+
+* **The domain model is now visible in the guide.** It sat in the repository as an image
+  that no page embedded; it is now on [Logical Models](logical-models.html), because it
+  illustrates exactly what that page describes. Its PlantUML source became bilingual in
+  the process: one language-neutral structure and one label file per language, assigning
+  the same 113 variables. Two full copies would have drifted apart over the years.
+
+* **Four open questions answered rather than deferred.** The `prognosis` component is
+  dropped **without a successor** — checked against every STU3 profile (`implication`,
+  `diagnostic-implication`, `therapeutic-implication`, `molecular-consequence`): none
+  carries a prognosis slice, and no `genomic-implication` profile exists. The value-set
+  reference on TherapeutischeImplikation named the dead STU2 canonical
+  `therapeutic-implication-vs` and now names `genetic-therapeutic-implications-vs`, which
+  is what the parent binds. The eight package dependencies are tabulated on the home page.
+
+* **The grouping of this changelog is settled.** Version sections stay topical rather than
+  following the Keep a Changelog categories, because a renamed component is *Added* and
+  *Removed* at once. **Security** is the exception and always gets its own block.
+
+##### Release automation (second pass)
+
+* **A release is no longer published by hand.** The workflow used to create a draft whose
+  body read "Add your own release notes here" — so the manual step was not the review, it
+  was retyping what this page already said. The workflow now reads the version's section
+  from here and publishes with it. If the section is missing, it drafts instead of
+  publishing.
+
+* `fhirpkg.lock.json` still named `rc1` for `kerndatensatz.biobank` while
+  `sushi-config.yaml` points at `rc2`. The build was never affected — SUSHI resolves
+  against `sushi-config.yaml` — but the lock file was lying.
 
 #### Version 2027.0.0-ballot.rc1
 
