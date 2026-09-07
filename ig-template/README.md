@@ -1,9 +1,9 @@
 # `ig-template/` — vendored IG template (development mirror)
 
 A **vendored mirror** of the MII IG-Publisher template package
-`de.medizininformatikinitiative.template` (version `1.3.2`), copied from
-<https://github.com/forschungsgruppe-digital-health/ig-template-mii-kds>
-at commit `b50a7cc3ebdc697f189692ee7fdd7db12d96aef5`.
+`de.medizininformatikinitiative.template` (version `1.3.4`), copied from
+<https://github.com/medizininformatik-initiative/ig-template-mii-kds>
+at commit `211d3e0d0fdf10267630d0d332337198a8201677`.
 
 **Do not edit these files here.** The single source of truth is the
 `ig-template-mii-kds` repository; local edits would silently drift and be
@@ -12,9 +12,10 @@ overwritten by the next sync.
 ## Why a mirror, and how it stays current
 
 The template package is not published to a FHIR package registry yet, so
-`ig.ini` references it as a local folder (`template = #ig-template`). To make
-sure the IG always builds against the CURRENT template during development, the
-mirror is refreshed by `scripts/sync-ig-template.sh`:
+`ig.ini` defaults to the template repository's URL (fetched at build time)
+and this folder is the OFFLINE/REPRODUCIBILITY FALLBACK, referenced as
+`template = #ig-template`. To keep the fallback in step with the CURRENT
+template, the mirror is refreshed by `scripts/sync-ig-template.sh`:
 
 - `scripts/sync-ig-template.sh` — re-vendor from `dev` (default).
 - `scripts/sync-ig-template.sh --check` — fail if the mirror has drifted (run in CI).
