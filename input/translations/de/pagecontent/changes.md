@@ -96,7 +96,7 @@ werden können.</p>
 
 #### Version 2027.0.0-ballot.rc2
 
-**Datum:** 2026-09-04 · **Release-Kandidat**
+**Datum:** 2026-09-07 · **Release-Kandidat**
 
 Der erste Kandidat wurde formal publiziert; dieser räumt auf, was dabei sichtbar wurde.
 
@@ -159,6 +159,41 @@ lieferte. Die übrigen Änderungen betreffen Dokumentation und Release-Automatis
   Terminologie-Allowlist nicht, die der Build-Aufruf erhält; und der Registry-Prüfer
   wies den Editionsnamen „`<Sequence> <Status>`" zurück, den jede
   Nicht-Release-Publikation bekommt.
+
+##### Dokumentation (zweiter Durchgang)
+
+* **Das Domänenmodell ist jetzt im Leitfaden zu sehen.** Es lag als Bild im Repository,
+  ohne dass eine Seite es einband; es steht nun auf
+  [Logische Modelle](logical-models.html), weil es genau das illustriert, was die Seite
+  beschreibt. Die PlantUML-Quelle wurde dabei zweisprachig: eine sprachneutrale Struktur
+  und je eine Beschriftungsdatei mit denselben 113 Variablen. Zwei vollständige Kopien
+  hätten sich über die Jahre auseinanderentwickelt.
+
+* **Vier offene Punkte beantwortet statt vertagt.** Die Komponente `prognosis` entfällt
+  **ersatzlos** — geprüft gegen alle STU3-Profile (`implication`,
+  `diagnostic-implication`, `therapeutic-implication`, `molecular-consequence`): keines
+  trägt einen Prognose-Slice, ein Profil `genomic-implication` existiert nicht. Der
+  ValueSet-Verweis auf TherapeutischeImplikation nannte den toten STU2-Namen
+  `therapeutic-implication-vs` und heißt jetzt `genetic-therapeutic-implications-vs`, wie
+  das Elternprofil bindet. Die acht Paketabhängigkeiten stehen als Tabelle auf der
+  Startseite.
+
+* **Die Gruppierung dieses Changelogs ist entschieden.** Die Versionsabschnitte bleiben
+  thematisch statt nach Keep-a-Changelog-Kategorien, weil eine umbenannte Komponente
+  *Hinzugefügt* und *Entfernt* zugleich ist. **Sicherheit** ist die Ausnahme und bekommt
+  immer einen eigenen Block.
+
+##### Release-Automatisierung (zweiter Durchgang)
+
+* **Ein Release wird nicht mehr von Hand veröffentlicht.** Bisher legte der Workflow einen
+  Draft an, dessen Text sagte „Add your own release notes here" — der Handgriff war also
+  nicht die Prüfung, sondern das Abtippen von etwas, das auf dieser Seite längst steht.
+  Der Workflow liest den Abschnitt der Version jetzt von hier und veröffentlicht damit
+  direkt. Fehlt der Abschnitt, wird gedraftet statt veröffentlicht.
+
+* `fhirpkg.lock.json` nannte für `kerndatensatz.biobank` noch `rc1`, während
+  `sushi-config.yaml` auf `rc2` zeigt. Der Build war nie betroffen — SUSHI löst gegen
+  `sushi-config.yaml` auf —, aber die Sperrdatei log.
 
 #### Version 2027.0.0-ballot.rc1
 

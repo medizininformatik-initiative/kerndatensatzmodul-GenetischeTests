@@ -26,7 +26,7 @@ standardized secondary use of routine clinical data for medical research.
 
 | Publication |               |
 |-------------|---------------|
-| Date        | 2026-09-04 |
+| Date        | 2026-09-07 |
 | Version     | 2027.0.0-ballot.rc2 (CalVer `YYYY.n.n`) |
 | Status      | active        |
 | Realm       | DE            |

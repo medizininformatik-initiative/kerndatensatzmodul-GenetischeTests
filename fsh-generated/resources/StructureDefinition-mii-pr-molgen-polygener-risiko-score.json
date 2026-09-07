@@ -396,6 +396,20 @@
         "mustSupport": true
       },
       {
+        "id": "RiskAssessment.prediction.extension",
+        "path": "RiskAssessment.prediction.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
         "id": "RiskAssessment.prediction.extension:whenCodeableConcept",
         "path": "RiskAssessment.prediction.extension",
         "sliceName": "whenCodeableConcept",
