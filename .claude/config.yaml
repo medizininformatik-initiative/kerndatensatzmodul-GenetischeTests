@@ -104,11 +104,20 @@ paths:
 # ═══════════════════════════════════════════════════════════════════════════════
 # ACHTUNG, hier wurde schon einmal das Falsche geschlossen: die Pakete dieses
 # Moduls werden nach `medizininformatikinitiative-modulomics` publiziert, NICHT
-# unter den beiden URLs hier. Die Release-Verantwortung hat das am 2026-09-03
-# bestaetigt. Die Eintraege unten sind veraltet oder meinen etwas anderes; sie
-# stehen noch da, weil niemand geprueft hat, wofuer genau. Wer das Publikations-
-# ziel sucht, nimmt .claude/commands/publish-simplifier.md -- dort steht es und
-# dort steht auch, warum.
+# unter den beiden URLs hier.
+#
+# Die beiden URLs mit `modulmolekulargenetischerbefundbericht` sind nicht bloss
+# veraltet, sie zeigen ins Leere -- am 2026-09-07 nachgeprueft:
+#
+#   simplifier.net/medizininformatikinitiative-modulomics                -> 200
+#   simplifier.net/medizininformatikinitiative-modulmolekular...bericht  -> 404
+#
+# Und packages.simplifier.net fuehrt unter modulomics sechs Versionen dieses
+# Moduls bis 2026.0.4. Sie stehen hier nur noch, weil niemand geprueft hat,
+# woher sie kamen; wer sie loescht, sollte vorher wissen, ob etwas sie liest.
+#
+# Wer das Publikationsziel sucht, nimmt .claude/commands/publish-simplifier.md
+# -- dort steht es, und dort steht auch, warum.
 simplifier:
   project_url: "https://simplifier.net/medizininformatikinitiative-modulmolekulargenetischerbefundbericht"
   guide_base_url: "https://simplifier.net/guide/MII-IG-Modul-MolGen-v2026-DE"
