@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DocumentReference xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-documentreference-fastq"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: DocumentReference mii-exa-molgen-documentreference-fastq</b></p><a name="mii-exa-molgen-documentreference-fastq"> </a><a name="hcmii-exa-molgen-documentreference-fastq"> </a><p><b>status</b>: Current</p><p><b>type</b>: <span title="Codes:">FASTQ files - paired-end sequencing data</span></p><p><b>subject</b>: <a href="Patient-mii-exa-molgen-patient.html">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Medical record number (use: usual, ))</a></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Title</b></td></tr><tr><td style="display: none">*</td><td>gzip</td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/files/sample_R1.fastq.gz">https://www.medizininformatik-initiative.de/fhir/files/sample_R1.fastq.gz</a></td><td>Forward reads</td></tr></table></blockquote><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Title</b></td></tr><tr><td style="display: none">*</td><td>gzip</td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/files/sample_R2.fastq.gz">https://www.medizininformatik-initiative.de/fhir/files/sample_R2.fastq.gz</a></td><td>Reverse reads</td></tr></table></blockquote></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: DocumentReference mii-exa-molgen-documentreference-fastq</b></p><a name="de-mii-exa-molgen-documentreference-fastq"> </a><a name="de-hcmii-exa-molgen-documentreference-fastq"> </a><p><b>status</b>: Current</p><p><b>type</b>: <span title="Codes:">FASTQ files - paired-end sequencing data</span></p><p><b>subject</b>: <a href="Patient-mii-exa-molgen-patient.html">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Krankenaktennummer (use: usual, ))</a></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Title</b></td></tr><tr><td style="display: none">*</td><td>gzip</td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/files/sample_R1.fastq.gz">https://www.medizininformatik-initiative.de/fhir/files/sample_R1.fastq.gz</a></td><td>Forward reads</td></tr></table></blockquote><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Title</b></td></tr><tr><td style="display: none">*</td><td>gzip</td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/files/sample_R2.fastq.gz">https://www.medizininformatik-initiative.de/fhir/files/sample_R2.fastq.gz</a></td><td>Reverse reads</td></tr></table></blockquote></div></div>
+  </text>
+  <status value="current"/>
+  <type>
+    <text value="FASTQ files - paired-end sequencing data"/>
+  </type>
+  <subject>
+    <reference value="Patient/mii-exa-molgen-patient"/>
+  </subject>
+  <content>
+    <attachment>
+      <contentType value="application/gzip"/>
+      <url value="https://www.medizininformatik-initiative.de/fhir/files/sample_R1.fastq.gz"/>
+      <title value="Forward reads"/>
+    </attachment>
+  </content>
+  <content>
+    <attachment>
+      <contentType value="application/gzip"/>
+      <url value="https://www.medizininformatik-initiative.de/fhir/files/sample_R2.fastq.gz"/>
+      <title value="Reverse reads"/>
+    </attachment>
+  </content>
+</DocumentReference>
