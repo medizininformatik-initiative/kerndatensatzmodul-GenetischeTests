@@ -1,4 +1,4 @@
-# MII PR MolGen Genomic Study - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc1
+# MII PR MolGen Genomic Study - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-04 | *Computable Name*:MII_PR_MolGen_GenomicStudy |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study | *Version*:2027.0.0-ballot.rc2 |
+| Active as of 2026-09-08 | *Computable Name*:MII_PR_MolGen_GenomicStudy |
 
  
 Genomic Study ist ein Profil, dass die Durchführung von übergeorndenten molekulargenetischen Untersuchungen (Studies) beschreibt. Einzelne Assays werden dann als GenomicStudyAnalysis abgebildet. Es ist vom GenomicStudy-Profils aus dem Genomics Reporting IG abgeleitet . 
@@ -82,11 +82,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-gen
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-molgen-genomic-study",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_PR_MolGen_GenomicStudy",
   "title" : "MII PR MolGen Genomic Study",
   "status" : "active",
-  "date" : "2026-09-04T06:24:08+00:00",
+  "date" : "2026-09-08T06:06:53+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

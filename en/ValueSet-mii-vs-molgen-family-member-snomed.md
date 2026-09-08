@@ -1,4 +1,4 @@
-# MII VS MolGen Family Member SNOMED - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc1
+# MII VS MolGen Family Member SNOMED - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-family-member-snomed | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-04 | *Computable Name*:MII_VS_MolGen_FamilyMember_SNOMED |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-family-member-snomed | *Version*:2027.0.0-ballot.rc2 |
+| Active as of 2026-09-08 | *Computable Name*:MII_VS_MolGen_FamilyMember_SNOMED |
 
  
 The ValueSet contains codes for related family member types from SNOMED CT. 
@@ -37,11 +37,11 @@ The ValueSet contains codes for related family member types from SNOMED CT.
   "resourceType" : "ValueSet",
   "id" : "mii-vs-molgen-family-member-snomed",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-family-member-snomed",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_VS_MolGen_FamilyMember_SNOMED",
   "title" : "MII VS MolGen Family Member SNOMED",
   "status" : "active",
-  "date" : "2026-09-04T06:24:08+00:00",
+  "date" : "2026-09-08T06:06:53+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

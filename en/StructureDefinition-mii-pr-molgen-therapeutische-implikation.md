@@ -1,4 +1,4 @@
-# MII PR MolGen Therapeutische Implikation - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc1
+# MII PR MolGen Therapeutische Implikation - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-04 | *Computable Name*:MII_PR_MolGen_TherapeutischeImplikation |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation | *Version*:2027.0.0-ballot.rc2 |
+| Active as of 2026-09-08 | *Computable Name*:MII_PR_MolGen_TherapeutischeImplikation |
 
  
 Dieses Profil beschreibt den möglichen Einfluss genetischer Merkmale auf eine medikamentöse oder nicht-medikamentöse Therapie. 
@@ -78,11 +78,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-the
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-molgen-therapeutische-implikation",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_PR_MolGen_TherapeutischeImplikation",
   "title" : "MII PR MolGen Therapeutische Implikation",
   "status" : "active",
-  "date" : "2026-09-04T06:24:08+00:00",
+  "date" : "2026-09-08T06:06:53+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Änderungshistorie - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc1</title>
+    <title>Änderungshistorie - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII Implementierungsleitfaden Kerndatensatz-Modul Molekulargenetischer Befundbericht</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
 
 
 
@@ -285,7 +285,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht (v2027.0.0-ballot.rc1: 2027 Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht (v2027.0.0-ballot.rc2: 2027 Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Änderungshistorie</h2>
   
 
@@ -335,8 +335,8 @@ Moduls <strong>Molekulargenetischer Befundbericht</strong> fest, die neueste Ver
 KDS-CalVer-Schema, das die Seite <a href="version-history.html">Versionierung</a>
 beschreibt.</p>
 
-<p>Jede Version erhält einen eigenen Abschnitt mit dem Release-Datum und den nach
-Kategorien gruppierten Änderungen:</p>
+<p>Jede Version erhält einen eigenen Abschnitt mit dem Release-Datum und ihren
+Änderungen. Dafür stehen diese Kategorien zur Verfügung:</p>
 
 <ul>
   <li><strong>Hinzugefügt</strong> — neue Profile, Extensions, ValueSets, Suchparameter, Seiten.</li>
@@ -352,10 +352,15 @@ werden sollen.</li>
 <p>Kategorien ohne Inhalt werden weggelassen. Geht eine Änderung auf ein Issue oder
 einen Pull-Request zurück, wird darauf verlinkt.</p>
 
-<!-- TODO:REVIEW Die aus Simplifier migrierten Versionsabschnitte gruppieren ihre Einträge
-     thematisch statt nach den oben genannten Keep-a-Changelog-Kategorien. Das ist eine der
-     beiden von der Vorlage zugelassenen Gruppierungen; bei Gate C entscheiden, ob die
-     Abschnitte auf Kategorien umgestellt werden. -->
+<p>Die Versionsabschnitte gruppieren ihre Einträge <strong>thematisch</strong> — nach betroffenem
+Profil oder Bereich — statt nach diesen Kategorien. Beides lässt die Vorlage zu, und für
+ein FHIR-Modul trägt die thematische Achse weiter: Eine umbenannte Komponente ist
+<em>Hinzugefügt</em> und <em>Entfernt</em> zugleich, und wer wissen will, was sich an Variante geändert
+hat, findet es so an einer Stelle.</p>
+
+<p><strong>Sicherheit ist davon ausgenommen.</strong> Änderungen mit Auswirkung auf Sicherheit oder
+Datenschutz bekommen immer einen eigenen, so benannten Block — sie müssen auffindbar
+sein, ohne dass man thematische Abschnitte danach durchsucht. Bisher gab es keine.</p>
 
 <div class="ig-highlight ig-highlight-red">
 <h5>Breaking Changes MÜSSEN berichtet und erläutert werden</h5>
@@ -403,6 +408,162 @@ werden können.</p>
 </div>
 
 <hr />
+
+<h4 id="version-202700-ballotrc2">Version 2027.0.0-ballot.rc2</h4>
+
+<p><strong>Datum:</strong> 2026-09-07 · <strong>Release-Kandidat</strong></p>
+
+<p>Der erste Kandidat wurde formal publiziert; dieser räumt auf, was dabei sichtbar wurde.</p>
+
+<h5 id="keine-breaking-changes">Keine Breaking Changes</h5>
+
+<p>Geprüft statt angenommen — die CalVer-Nummer warnt von sich aus nicht.</p>
+
+<p>Der SNOMED-CT-Pin springt ein volles Jahr, von <code class="language-plaintext highlighter-rouge">20250701</code> auf <code class="language-plaintext highlighter-rouge">20260701</code>; das ist die
+einzige Änderung hier, die Codes hätte entfernen oder inaktivieren können. Alle <strong>49</strong>
+verschiedenen SNOMED-Codes dieses Moduls wurden gegen beide Versionen am
+MII-Terminologieserver abgefragt: <strong>keiner unterscheidet sich</strong> — gleiche Existenz,
+gleiches Display. Instanzen, die gegen rc1 valide waren, bleiben es gegen rc2.</p>
+
+<p>Die fünf neu gepinnten Systeme schränken künftige Expansionen ein, ändern heute aber
+nichts: jedes wurde auf die Version gepinnt, die der Server ohnehin als Vorgabe
+lieferte. Die übrigen Änderungen betreffen Dokumentation und Release-Automatisierung.</p>
+
+<h5 id="terminologie">Terminologie</h5>
+
+<ul>
+  <li>
+    <p><strong>Alle extern versionierten Codesysteme sind jetzt gepinnt</strong>, nicht nur SNOMED CT.
+Das Expansions-Manifest band eines von sechzehn in Frage kommenden Systemen, während
+seine eigene Dokumentation zusagt, eine Expansion liefere „dieselben Codes heute, zum
+Release-Zeitpunkt und in drei Jahren". Allein LOINC trägt hier 286 Codings und war
+ungepinnt.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Codesystem</th>
+          <th>Version</th>
+          <th>Codings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SNOMED CT</td>
+          <td><code class="language-plaintext highlighter-rouge">…/version/20260701</code> (vorher <code class="language-plaintext highlighter-rouge">20250701</code>)</td>
+          <td>134</td>
+        </tr>
+        <tr>
+          <td>LOINC</td>
+          <td><code class="language-plaintext highlighter-rouge">2.83</code></td>
+          <td>286</td>
+        </tr>
+        <tr>
+          <td>HGNC</td>
+          <td><code class="language-plaintext highlighter-rouge">20250704</code></td>
+          <td>61</td>
+        </tr>
+        <tr>
+          <td>Human Phenotype Ontology</td>
+          <td><code class="language-plaintext highlighter-rouge">20250303</code></td>
+          <td>27</td>
+        </tr>
+        <tr>
+          <td>Sequence Ontology</td>
+          <td><code class="language-plaintext highlighter-rouge">20241118</code></td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>ICD-10-GM</td>
+          <td><code class="language-plaintext highlighter-rouge">2026</code></td>
+          <td>16</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Jede Version wurde am MII-Terminologieserver abgefragt, nicht geraten. HGVS, ATC und
+Orphanet sind nicht gepinnt, weil der Server für sie keine Version liefert; UCUM ist
+konstruktionsbedingt versionslos.</p>
+  </li>
+</ul>
+
+<h5 id="dokumentation">Dokumentation</h5>
+
+<ul>
+  <li>
+    <p><strong>Migration von STU2 auf STU3</strong> ist jetzt eine Seite im Guide. Sie führt zwei
+Dokumente zusammen, die unveröffentlicht im Repository-Wurzelverzeichnis lagen, und
+korrigiert drei Fehler, die beim Abgleich gegen die gebauten Artefakte auffielen — vor
+allem die zweite <code class="language-plaintext highlighter-rouge">category</code>, die Mikrosatelliteninstabilität und Mutationslast
+brauchen: sie war mit falschem Code und falschem System angegeben und ist der
+häufigste Validierungsfehler beim Überführen von Daten der 2025er-Linie.</p>
+  </li>
+  <li>
+    <p>Diese Anleitung enthält <strong>bewusst keine StructureMaps</strong>: Die Datenintegration eines
+Datenintegrationszentrums läuft über eigene ETL-Strecken und enthält selten eine
+FHIR-Mapping-Engine, deshalb stehen die Abbildungen deklarativ da.</p>
+  </li>
+</ul>
+
+<h5 id="release-automatisierung">Release-Automatisierung</h5>
+
+<ul>
+  <li>Fünf Fehler im gemeinsamen Modul-Template wurden hier behoben, von denen jeder nur
+Module trifft, die etwas zum ersten Mal tun: der Release-Guard hielt dokumentierte
+``-Platzhalter in Kommentaren für eine uninstanziierte Vorlage und übersprang
+stillschweigend den gesamten Release-Pfad; die erste formale Publikation legte weder
+<code class="language-plaintext highlighter-rouge">package-registry.json</code> noch die beiden RSS-Feeds an, die ihre eigene
+<code class="language-plaintext highlighter-rouge">publish-setup.json</code> deklariert; der <code class="language-plaintext highlighter-rouge">-go-publish</code>-Aufruf bekam die
+Terminologie-Allowlist nicht, die der Build-Aufruf erhält; und der Registry-Prüfer
+wies den Editionsnamen „<code class="language-plaintext highlighter-rouge">&lt;Sequence&gt; &lt;Status&gt;</code>" zurück, den jede
+Nicht-Release-Publikation bekommt.</li>
+</ul>
+
+<h5 id="dokumentation-zweiter-durchgang">Dokumentation (zweiter Durchgang)</h5>
+
+<ul>
+  <li>
+    <p><strong>Das Domänenmodell ist jetzt im Leitfaden zu sehen.</strong> Es lag als Bild im Repository,
+ohne dass eine Seite es einband; es steht nun auf
+<a href="logical-models.html">Logische Modelle</a>, weil es genau das illustriert, was die Seite
+beschreibt. Die PlantUML-Quelle wurde dabei zweisprachig: eine sprachneutrale Struktur
+und je eine Beschriftungsdatei mit denselben 113 Variablen. Zwei vollständige Kopien
+hätten sich über die Jahre auseinanderentwickelt.</p>
+  </li>
+  <li>
+    <p><strong>Vier offene Punkte beantwortet statt vertagt.</strong> Die Komponente <code class="language-plaintext highlighter-rouge">prognosis</code> entfällt
+<strong>ersatzlos</strong> — geprüft gegen alle STU3-Profile (<code class="language-plaintext highlighter-rouge">implication</code>,
+<code class="language-plaintext highlighter-rouge">diagnostic-implication</code>, <code class="language-plaintext highlighter-rouge">therapeutic-implication</code>, <code class="language-plaintext highlighter-rouge">molecular-consequence</code>): keines
+trägt einen Prognose-Slice, ein Profil <code class="language-plaintext highlighter-rouge">genomic-implication</code> existiert nicht. Der
+ValueSet-Verweis auf TherapeutischeImplikation nannte den toten STU2-Namen
+<code class="language-plaintext highlighter-rouge">therapeutic-implication-vs</code> und heißt jetzt <code class="language-plaintext highlighter-rouge">genetic-therapeutic-implications-vs</code>, wie
+das Elternprofil bindet. Die acht Paketabhängigkeiten stehen als Tabelle auf der
+Startseite.</p>
+  </li>
+  <li>
+    <p><strong>Die Gruppierung dieses Changelogs ist entschieden.</strong> Die Versionsabschnitte bleiben
+thematisch statt nach Keep-a-Changelog-Kategorien, weil eine umbenannte Komponente
+<em>Hinzugefügt</em> und <em>Entfernt</em> zugleich ist. <strong>Sicherheit</strong> ist die Ausnahme und bekommt
+immer einen eigenen Block.</p>
+  </li>
+</ul>
+
+<h5 id="release-automatisierung-zweiter-durchgang">Release-Automatisierung (zweiter Durchgang)</h5>
+
+<ul>
+  <li>
+    <p><strong>Ein Release wird nicht mehr von Hand veröffentlicht.</strong> Bisher legte der Workflow einen
+Draft an, dessen Text sagte „Add your own release notes here" — der Handgriff war also
+nicht die Prüfung, sondern das Abtippen von etwas, das auf dieser Seite längst steht.
+Der Workflow liest den Abschnitt der Version jetzt von hier und veröffentlicht damit
+direkt. Fehlt der Abschnitt, wird gedraftet statt veröffentlicht.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">fhirpkg.lock.json</code> nannte für <code class="language-plaintext highlighter-rouge">kerndatensatz.biobank</code> noch <code class="language-plaintext highlighter-rouge">rc1</code>, während
+<code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> auf <code class="language-plaintext highlighter-rouge">rc2</code> zeigt. Der Build war nie betroffen — SUSHI löst gegen
+<code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> auf —, aber die Sperrdatei log.</p>
+  </li>
+</ul>
 
 <h4 id="version-202700-ballotrc1">Version 2027.0.0-ballot.rc1</h4>
 
@@ -464,7 +625,7 @@ Ein Server hätte sie nicht auflösen können. Die Canonicals selbst bleiben
 unverändert: sie stehen so im veröffentlichten Paket 2026.0.4.</li>
 </ul>
 
-<h5 id="dokumentation">Dokumentation</h5>
+<h5 id="dokumentation-1">Dokumentation</h5>
 
 <ul>
   <li><strong>Die Abhängigkeit von Clinical Genomics STU3 ist jetzt korrekt beziffert.</strong> Die
@@ -898,7 +1059,7 @@ skaliert ist, das Profil den Slice aber an CodeableConcept bindet).</li>
       </li>
       <li>Therapeutische Implikation
         <ul>
-          <li>component[prognosis] fällt weg <!-- TODO:REVIEW Die Quelle brach den Satz hier ab ("weil in den (Gründe?)"); die Begründung fehlt und muss ergänzt werden. --></li>
+          <li><code class="language-plaintext highlighter-rouge">component[prognosis]</code> fällt <strong>ersatzlos</strong> weg. Geprüft gegen alle STU3-Profile: weder <code class="language-plaintext highlighter-rouge">therapeutic-implication</code> noch <code class="language-plaintext highlighter-rouge">diagnostic-implication</code>, <code class="language-plaintext highlighter-rouge">molecular-consequence</code> oder das gemeinsame Elternprofil <code class="language-plaintext highlighter-rouge">implication</code> führen einen Prognose-Slice. Wer den Wert bisher gesetzt hat, findet in STU3 keinen Platz dafür.</li>
           <li><code class="language-plaintext highlighter-rouge">component[predicted-therapeutic-implication]</code> zu <code class="language-plaintext highlighter-rouge">component[therapeutic-implication]</code> geändert</li>
         </ul>
       </li>
@@ -988,8 +1149,8 @@ skaliert ist, das Profil den Slice aber an CodeableConcept bindet).</li>
 
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Sep 4, 2026 06:24+0000">2026-09-04</span>
+          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Tue, Sep 8, 2026 06:06+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
