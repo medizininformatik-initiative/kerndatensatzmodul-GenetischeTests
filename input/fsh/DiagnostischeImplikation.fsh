@@ -3,6 +3,7 @@ Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic
 Id: mii-pr-molgen-diagnostische-implikation
 Title: "MII PR MolGen Diagnostische Implikation"
 Description: "Dieses Profil beschreibt den Zusammenhang zwischen einem oder mehreren Genotyp/Haplotyp/Varianten und Beweisen für oder gegen eine bestimmte Krankheit."
+* insert MolGenCRMIProfile
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^status = #active

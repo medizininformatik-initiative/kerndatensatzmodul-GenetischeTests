@@ -45,7 +45,7 @@ RuleSet: CRMICopyrightLabelInstance
 * extension[=].valueString = "2021+ Medical Informatics Initiative (MII)"
 
 // ── Approval date (StructureDefinition, CapabilityStatement, IG) ─────────────
-// Call with the module's approval date, e.g. `insert CRMIApprovalDate(2026-01-02)`.
+// Call with the module's approval date, e.g. `insert CRMIApprovalDate(2026-09-15)`.
 
 RuleSet: CRMIApprovalDate(approvalDate)
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/resource-approvalDate"
@@ -201,3 +201,161 @@ RuleSet: CRMIKnowledgeCapabilitiesValueSet
 * ^extension[=].valueCode = #publishable
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
 * ^extension[=].valueCode = #computable
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Nachportiert aus kerndatensatzmodul-onkologie (input/fsh/rulesets/crmi.fsh,
+// Stand 2027.0.0-ballot.rc2): vier Bausteine, die der basis-Port noch nicht
+// hatte, plus die MolGen-Komposite, die sie an den Callsites buendeln.
+// Callsite-Werte laut Port-Header dieser Datei: approvalDate 2026-09-15 (User 2026-09-09; der Port-Header nannte 2026-01-02),
+// Topic C17457 (NCI Thesaurus).
+// ─────────────────────────────────────────────────────────────────────────────
+
+// crmi-license + package-source (beide in meta.extension), artifact-
+// versionAlgorithm und resource-effectivePeriod. Die effectivePeriod nennt
+// das Jahr der Ausgabe, die das Artefakt traegt — hier 2027.
+RuleSet: CRMIMetaLicenseAndSource
+* ^meta.extension[+].url = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license"
+* ^meta.extension[=].valueCode = #CC-BY-4.0
+* ^meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/package-source"
+* ^meta.extension[=].extension[+].url = "packageId"
+* ^meta.extension[=].extension[=].valueId = "de.medizininformatikinitiative.kerndatensatz.molgen"
+// ACHTUNG: Versionsliteral — beim Release-Bump mitziehen (steht nicht in einem
+// zentralen Version-RuleSet; Lektion aus dem Onko-Modul, wo es beim Sprung auf
+// die Ballot-Linie vergessen wurde).
+* ^meta.extension[=].extension[+].url = "version"
+* ^meta.extension[=].extension[=].valueString = "2027.0.0-ballot.rc2"
+* ^meta.extension[=].extension[+].url = "uri"
+* ^meta.extension[=].extension[=].valueUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen"
+
+RuleSet: CRMIMetaLicenseAndSourceInstance
+* meta.extension[+].url = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license"
+* meta.extension[=].valueCode = #CC-BY-4.0
+* meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/package-source"
+* meta.extension[=].extension[+].url = "packageId"
+* meta.extension[=].extension[=].valueId = "de.medizininformatikinitiative.kerndatensatz.molgen"
+// version/uri sind SUB-Extensions der package-source ([=], nicht [+]) — ein
+// [+] legte im Onko-Modul 60x eine Top-Level-Extension mit relativem URL an
+// ('Extension.url must be an absolute URL'). Versionsliteral: beim
+// Release-Bump mitziehen.
+* meta.extension[=].extension[+].url = "version"
+* meta.extension[=].extension[=].valueString = "2027.0.0-ballot.rc2"
+* meta.extension[=].extension[+].url = "uri"
+* meta.extension[=].extension[=].valueUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen"
+
+RuleSet: CRMIVersionAlgorithm
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* ^extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
+
+RuleSet: CRMIEffectivePeriod(jahr)
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod"
+* ^extension[=].valuePeriod.start = "{jahr}"
+
+// ── MolGen-Komposite: EIN insert pro Artefakt an der Callsite ────────────────
+// crmi-shareable* verlangt experimental 1..1 — im Onko-Modul meldete der
+// QA-Report ohne diese Zeile 98x 'experimental: minimum required = 1'. Alle
+// Conformance-Artefakte sind produktiv gepflegt, daher pauschal false; ein
+// einzelnes Artefakt kann es nach dem insert ueberschreiben.
+
+RuleSet: MolGenCRMIProfile
+* insert CRMIShareableStructureDefinition
+* insert CRMIPublishableStructureDefinition
+* insert CRMIKnowledgeCapabilitiesStructureDefinition
+* insert CRMIArtifactUsageProfile
+* insert CRMIVersionPolicyStrict
+* insert CRMIApprovalDate(2026-09-15)
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C17457)
+* insert CRMIArtifactContributors
+* insert CRMIMetaLicenseAndSource
+* insert CRMIVersionAlgorithm
+* insert CRMIEffectivePeriod(2027)
+* ^experimental = false
+
+RuleSet: MolGenCRMIExtension
+* insert CRMIShareableStructureDefinition
+* insert CRMIPublishableStructureDefinition
+* insert CRMIKnowledgeCapabilitiesStructureDefinition
+* insert CRMIArtifactUsageExtension
+* insert CRMIVersionPolicyStrict
+* insert CRMIApprovalDate(2026-09-15)
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C17457)
+* insert CRMIArtifactContributors
+* insert CRMIMetaLicenseAndSource
+* insert CRMIVersionAlgorithm
+* insert CRMIEffectivePeriod(2027)
+* ^experimental = false
+
+RuleSet: MolGenCRMILogicalModel
+* insert CRMIShareableStructureDefinition
+* insert CRMIPublishableStructureDefinition
+* insert CRMIKnowledgeCapabilitiesStructureDefinition
+* insert CRMIArtifactUsageLogicalModel
+* insert CRMIVersionPolicyStrict
+* insert CRMIApprovalDate(2026-09-15)
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C17457)
+* insert CRMIArtifactContributors
+* insert CRMIMetaLicenseAndSource
+* insert CRMIVersionAlgorithm
+* insert CRMIEffectivePeriod(2027)
+* ^experimental = false
+
+RuleSet: MolGenCRMIValueSet
+* insert CRMIShareableValueSet
+* insert CRMIPublishableValueSet
+* insert CRMIComputableValueSet
+* insert CRMIKnowledgeCapabilitiesValueSet
+* insert CRMIVersionPolicyStrict
+* insert CRMIApprovalDate(2026-09-15)
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C17457)
+* insert CRMIArtifactContributors
+* insert CRMIMetaLicenseAndSource
+* insert CRMIVersionAlgorithm
+* insert CRMIEffectivePeriod(2027)
+* ^experimental = false
+
+RuleSet: MolGenCRMICapabilityStatement
+* insert CRMIShareableCapabilityStatement
+* insert CRMIPublishableCapabilityStatement
+* insert CRMIKnowledgeCapabilitiesCapabilityStatement
+* insert CRMIArtifactUsageCapabilityStatement
+* insert CRMIVersionPolicyStrictInstance
+* insert CRMIApprovalDateInstance(2026-09-15)
+* insert CRMIArtifactTopicInstance(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C17457)
+* insert CRMIArtifactContributorsInstance
+
+// SearchParameter: Konformitaetsressource als FSH-Instanz, daher Instance-
+// Pfade. crmi-publishablesearchparameter verlangt die artifact-title-
+// Extension (SearchParameter hat kein natives title-Feld) — der Titel kommt
+// als RuleSet-Parameter aus jeder Instanz.
+RuleSet: MolGenCRMISearchParameter(title)
+* meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablesearchparameter"
+* meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablesearchparameter"
+* insert CRMIMetaLicenseAndSourceInstance
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #shareable
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #publishable
+* insert CRMIVersionPolicyStrictInstance
+* insert CRMIApprovalDateInstance(2026-09-15)
+* insert CRMIArtifactContributorsInstance
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-title"
+* extension[=].valueString = "{title}"
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
+
+// ── Kind-Variante fuer Profile mit LOKALEM CRMI-tragendem Parent ─────────────
+// (Mikrosatelliteninstabilitaet, Mutationslast — Parent MolekularerBiomarker).
+// SUSHI vererbt die Caret-Extensions des lokalen Parents nur PARTIELL an die
+// Kinder: author/editor/reviewer/endorser, topic, usage, versionPolicy,
+// versionAlgorithm und knowledgeCapability kommen an — meta.profile,
+// meta.extension (license/package-source), approvalDate, effectivePeriod und
+// experimental NICHT. Ein voller Komposit-insert kollidiert dagegen mit den
+// geerbten Extensions ('multiple choice value assignments', Soft-Index-Falle
+// wie im Onko-Modul, beads pxy). Diese Variante ergaenzt daher NUR die
+// fehlenden Stuecke; approvalDate/effectivePeriod URL-keyed statt [+].
+RuleSet: MolGenCRMIProfileChild
+* insert CRMIShareableStructureDefinition
+* insert CRMIPublishableStructureDefinition
+* insert CRMIMetaLicenseAndSource
+* ^extension[http://hl7.org/fhir/StructureDefinition/resource-approvalDate].valueDate = "2026-09-15"
+* ^extension[http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod].valuePeriod.start = "2027"
+* ^experimental = false

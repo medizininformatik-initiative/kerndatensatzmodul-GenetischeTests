@@ -3,6 +3,7 @@ Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype
 Id: mii-pr-molgen-genotyp
 Title: "MII PR MolGen Genotyp"
 Description: "Dieses Profil beschreibt die Feststellung eines bestimmten Genotyps auf der Grundlage einer oder mehrerer Varianten oder Haplotypen."
+* insert MolGenCRMIProfile
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^status = #active

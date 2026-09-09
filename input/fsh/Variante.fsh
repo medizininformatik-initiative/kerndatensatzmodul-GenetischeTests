@@ -3,6 +3,7 @@ Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant
 Id: mii-pr-molgen-variante
 Title: "MII PR MolGen Variante"
 Description: "Dieses Profil ermöglicht eine vollständige Beschreibung der gefundenen Variante unter Verwendung von Eigenschaften aus einer Vielzahl von Testmethoden."
+* insert MolGenCRMIProfile
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^status = #active

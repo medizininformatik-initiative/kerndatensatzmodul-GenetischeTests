@@ -3,6 +3,7 @@ Parent: ServiceRequest
 Id: mii-pr-molgen-anforderung-genetischer-test
 Title: "MII PR MolGen Anforderung genetischer Test"
 Description: "Der Laborauftrag oder die Anfrage, die die Durchführung des genetischen Tests auslöst."
+* insert MolGenCRMIProfile
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^status = #active

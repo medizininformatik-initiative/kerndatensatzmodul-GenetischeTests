@@ -3,6 +3,7 @@ Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-st
 Id: mii-pr-molgen-genomic-study
 Title: "MII PR MolGen Genomic Study"
 Description: "Genomic Study ist ein Profil, dass die Durchführung von übergeorndenten molekulargenetischen Untersuchungen (Studies) beschreibt. Einzelne Assays werden dann als GenomicStudyAnalysis abgebildet. Es ist vom GenomicStudy-Profils aus dem Genomics Reporting IG abgeleitet ."
+* insert MolGenCRMIProfile
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^status = #active
@@ -192,6 +193,7 @@ Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-st
 Id: mii-pr-molgen-genomic-study-analysis
 Title: "MII PR MolGen Genomic Study Analysis"
 Description: "Genomic Study Analysis ist ein Profil, das die Durchführung von konkreten molekulargenetischen Methoden und Assays beschreibt. Es ist vom GenomicStudyAnalysis-Profil aus dem Genomics Reporting IG abgeleitet. Die Darstellung über GenomicStudyAnalysis ist präziser als die vorherige UntersuchteRegion, da sie eine klare Repräsentation ermöglicht, welche Regionen mit welchem Assay untersucht wurden und welche Bereiche callable bzw. nicht-callable waren. Dies ermöglicht eine genauere Qualitätsbewertung und Interpretation der Ergebnisse, insbesondere bei negativen Befunden."
+* insert MolGenCRMIProfile
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^status = #active

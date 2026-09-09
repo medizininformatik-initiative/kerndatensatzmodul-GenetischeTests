@@ -3,6 +3,7 @@ Parent: FamilyMemberHistory
 Id: mii-pr-molgen-familienanamnese
 Title: "MII PR MolGen Familienanamnese"
 Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen."
+* insert MolGenCRMIProfile
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
@@ -295,6 +296,7 @@ Extension: MII_EX_MolGen_Verwandtschaftsgrad
 Id: mii-ex-molgen-verwandtschaftsgrad
 Title: "MII EX Mol Gen Verwandtschaftsgrad"
 Description: "Extension erlaubt die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen."
+* insert MolGenCRMIExtension
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^context.type = #element
@@ -307,6 +309,7 @@ ValueSet: MII_VS_MolGen_Verwandtschaftsgrad
 Id: mii-vs-molgen-verwandtschaftsgrad
 Title: "MII VS Mol Gen Verwandtschaftsgrad"
 Description: "ValueSet für die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen."
+* insert MolGenCRMIValueSet
 * insert Publisher
 * insert PR_CS_VS_Version
 
@@ -317,6 +320,7 @@ Extension: MII_EX_MolGen_Verwandtschaftsverhaeltnis
 Id: mii-ex-molgen-verwandtschaftsverhaeltnis
 Title: "MII EX MolGen Verwandtschaftsverhaeltnis"
 Description: "Extension erlaubt die Angabe eines Verwandtschaftsverhältnisses zwischen Patient und Familienangehörigen."
+* insert MolGenCRMIExtension
 * insert Publisher
 * insert PR_CS_VS_Version
 
@@ -330,6 +334,7 @@ ValueSet: MII_VS_MolGen_Verwandtsverhaeltnis
 Id: mii-vs-molgen-verwandtschaftsverhaeltnis
 Title: "MII VS MolGen Verwandtschaftsverhaeltnis"
 Description: "ValueSet für die Angabe eines Verwandtschaftsverhältnis zwischen Patient und Familienangehörigen."
+* insert MolGenCRMIValueSet
 * insert Publisher
 * insert PR_CS_VS_Version
 
@@ -346,6 +351,7 @@ Extension: MII_EX_MolGen_FamiliareLinie
 Id: mii-ex-molgen-familiare-linie
 Title: "MII EX MolGen Familiare Linie"
 Description: "Extension erlaubt die Angabe der familiären Linie zwischen Patient und Familienangehörigen."
+* insert MolGenCRMIExtension
 * insert Publisher
 * insert PR_CS_VS_Version
 
@@ -359,6 +365,7 @@ ValueSet: MII_VS_MolGen_FamiliaereLinie
 Id: mii-vs-molgen-familiaere-linie
 Title: "MII VS MolGen Familiäre Linie"
 Description: "ValueSet für die Angabe der familären Linie zwischen Patient und Familienangehörigen."
+* insert MolGenCRMIValueSet
 * insert Publisher
 * insert PR_CS_VS_Version
 

@@ -3,6 +3,8 @@ Parent: MII_PR_MolGen_MolekularerBiomarker
 Id: mii-pr-molgen-mikrosatelliteninstabilitaet
 Title: "MII PR MolGen Mikrosatelliteninstabilität"
 Description: "Mikrosatelliteninstabilität (MSI) ist ein Zustand genetischer Hypermutabilität (Neigung zu Mutationen), der aus einer gestörten DNA-Mismatch-Reparatur (MMR) resultiert. Das Profil basiert auf dem CG STU3 MolecularBiomarker-Profil"
+// Kind eines lokalen CRMI-Parents: partieller insert, siehe RuleSet-Kommentar
+* insert MolGenCRMIProfileChild
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^status = #active

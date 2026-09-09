@@ -3,6 +3,8 @@ Parent: MII_PR_MolGen_MolekularerBiomarker
 Id: mii-pr-molgen-mutationslast
 Title: "MII PR MolGen Mutationslast"
 Description: "Dieses Profil beschreibt die Gesamtzahl der in der DNA von Krebszellen gefundenen Mutationen."
+// Kind eines lokalen CRMI-Parents: partieller insert, siehe RuleSet-Kommentar
+* insert MolGenCRMIProfileChild
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^status = #active
