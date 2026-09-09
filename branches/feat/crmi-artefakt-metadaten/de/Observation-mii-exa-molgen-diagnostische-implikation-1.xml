@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-diagnostische-implikation-1"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation|2027.0.0-ballot.rc2"/>
+    <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|3.0.0"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-molgen-diagnostische-implikation-1</b></p><a name="de-mii-exa-molgen-diagnostische-implikation-1"> </a><a name="de-hcmii-exa-molgen-diagnostische-implikation-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="StructureDefinition-mii-pr-molgen-diagnostische-implikation.html">MII PR MolGen Diagnostische Implikation</a> version: 2027.0.0-ballot.rc2, <a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-diagnostic-implication.html">Diagnostic Implication</a> version: 3.0.0</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 GE}">Genetik</span></p><p><b>code</b>: <span title="Codes:{http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs diagnostic-implication}">Diagnostic Implication</span></p><p><b>subject</b>: <a href="Patient-mii-exa-molgen-patient.html">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Krankenaktennummer (use: usual, ))</a></p><p><b>effective</b>: 2022-04-07</p><p><b>performer</b>: <a href="Practitioner-mii-exa-molgen-practitioner-lab.html">Practitioner Dr. Daniel Schmidt(official)</a></p><p><b>derivedFrom</b>: <a href="Observation-mii-exa-molgen-variante-1.html">Observation Genetic variant assessment</a></p><h3>Components</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs conclusion-string}">Conclusion Text</span></td><td>Nachweis einer aktivierenden Mutation BRAF V600E</td></tr></table></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+      <display value="Laboratory"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="GE"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs"/>
+      <code value="diagnostic-implication"/>
+      <display value="Diagnostic Implication"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-molgen-patient"/>
+  </subject>
+  <effectiveDateTime value="2022-04-07"/>
+  <performer>
+    <reference value="Practitioner/mii-exa-molgen-practitioner-lab"/>
+  </performer>
+  <derivedFrom>
+    <reference value="Observation/mii-exa-molgen-variante-1"/>
+  </derivedFrom>
+  <component>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs"/>
+        <code value="conclusion-string"/>
+      </coding>
+    </code>
+    <valueString value="Nachweis einer aktivierenden Mutation BRAF V600E"/>
+  </component>
+</Observation>
