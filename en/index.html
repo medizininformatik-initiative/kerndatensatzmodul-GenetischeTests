@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Home - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc2</title>
+    <title>Home - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc3</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc3 - 
 
 
 
@@ -314,7 +314,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht (v2027.0.0-ballot.rc2: 2027 Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht (v2027.0.0-ballot.rc3: 2027 Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Home</h2>
   
 
@@ -329,7 +329,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">2027.0.0-ballot.rc2<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen|2027.0.0-ballot.rc2"/></span>
+      <span class="copy-text">2027.0.0-ballot.rc3<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen|2027.0.0-ballot.rc3"/></span>
       </td>
     </tr>
 
@@ -347,7 +347,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           
 
             as of 
-2026-09-07
+2026-09-14
 
           
         
@@ -378,6 +378,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#target-audience" id="markdown-toc-target-audience">Target audience</a></li>
   <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
   <li><a href="#related-guides" id="markdown-toc-related-guides">Related guides</a></li>
+  <li><a href="#acknowledgements" id="markdown-toc-acknowledgements">Acknowledgements</a></li>
   <li><a href="#imprint" id="markdown-toc-imprint">Imprint</a></li>
   <li><a href="#contact" id="markdown-toc-contact">Contact</a></li>
   <li><a href="#authors-in-alphabetical-order" id="markdown-toc-authors-in-alphabetical-order">Authors (in alphabetical order)</a></li>
@@ -406,11 +407,11 @@ covers the module's use cases and the associated FHIR profiles, extensions and
 terminology resources in their normative form. The MII Core Dataset enables the
 standardized secondary use of routine clinical data for medical research.</p>
 
-<!-- TODO:REVIEW The migrated source page gives 2025-12-19 as the publication
-     date, the template scaffold gives 2026-01-02. The scaffold value is used
-     here. Also to be checked: the "(CalVer YYYY.n.n)" parenthesis in the
-     version row comes from the template and reads as an authoring hint rather
-     than a publication statement. -->
+<!-- DECIDED 2026-09-11: the table shows the date of the CURRENT version, set by
+     the release process — not a historical date of a migrated edition, so the
+     2025-12-19 versus 2026-01-02 question no longer arises. The "(CalVer
+     YYYY.n.n)" parenthesis was an authoring hint from the template and has been
+     removed; the Versioning page explains the scheme. -->
 
 <table>
   <thead>
@@ -422,11 +423,11 @@ standardized secondary use of routine clinical data for medical research.</p>
   <tbody>
     <tr>
       <td>Date</td>
-      <td>2026-09-07</td>
+      <td>2026-09-14</td>
     </tr>
     <tr>
       <td>Version</td>
-      <td>2027.0.0-ballot.rc2 (CalVer <code class="language-plaintext highlighter-rouge">YYYY.n.n</code>)</td>
+      <td>2027.0.0-ballot.rc3</td>
     </tr>
     <tr>
       <td>Status</td>
@@ -537,6 +538,22 @@ actually resolves:</p>
 <p>More FHIR implementation guides can be found in the official
 <strong><a href="https://fhir.org/guides/registry/">FHIR IG Registry</a></strong> (source:
 <a href="https://github.com/FHIR/ig-registry"><code class="language-plaintext highlighter-rouge">FHIR/ig-registry</code></a>).</p>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+
+<p>Twelve of this module's twenty-one profiles derive directly from
+<a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/">HL7 Clinical Genomics Reporting STU3</a> —
+Variante, Genotyp, Molekulare Konsequenz, Molekularer Biomarker, both implication
+profiles, GenomicStudy and GenomicStudyAnalysis, and the report itself. The domain model
+behind them, the component structure, the terminology bindings and the naming are the work
+of the <strong>HL7 Clinical Genomics Working Group</strong>. This module constrains, names in German
+and adds the MII context; it does not reinvent the modelling.</p>
+
+<p>That bears on the author statement in the artifact metadata, too. The artifacts of this
+module carry <a href="https://hl7.org/fhir/uv/crmi/">CRMI</a> metadata, <code class="language-plaintext highlighter-rouge">artifact-author</code> among it.
+That statement refers to the <strong>MII-specific constraint</strong>, not to the underlying model.
+Clinical Genomics Reporting carries no CRMI metadata of its own; the annotation here
+neither replaces nor claims authorship of it.</p>
 
 <h3 id="imprint">Imprint</h3>
 
@@ -650,8 +667,8 @@ the content of this specification.</p>
 
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Tue, Sep 8, 2026 06:06+0000">2026-09-08</span>
+          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Fri, Sep 11, 2026 14:33+0000">2026-09-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -7,7 +7,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>mii-sp-molgen-genomic-study-analysis-device - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc2</title>
+    <title>mii-sp-molgen-genomic-study-analysis-device - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc3</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -142,7 +142,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII Implementierungsleitfaden Kerndatensatz-Modul Molekulargenetischer Befundbericht</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc3 - 
 
 
 
@@ -280,7 +280,7 @@
 
 <!-- layouts\layout-canonical -->
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht (v2027.0.0-ballot.rc2: 2027 Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht (v2027.0.0-ballot.rc3: 2027 Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -330,7 +330,7 @@
       <td colspan="4"><i>Offizielle URL</i>: <span class="copy-text">https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-Device<button title="Klicken zum Kopieren der URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-Device"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">2027.0.0-ballot.rc2<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-Device|2027.0.0-ballot.rc2"/></span>
+      <span class="copy-text">2027.0.0-ballot.rc3<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-Device|2027.0.0-ballot.rc3"/></span>
       </td>
     </tr>
 
@@ -383,7 +383,7 @@
   
 
 
-  <div data-fhir="generated"><p class="res-header-id"/><a name="mii-sp-molgen-genomic-study-analysis-device"> </a><a name="hcmii-sp-molgen-genomic-study-analysis-device"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p></div><h2>SP_MII_MolGen_GenomicStudyAnalysis_Device</h2><p>Parameter <code>device</code>:<code>reference</code></p><div><p>Finds analyses run on a given sequencer or analytical device, for tracing results back to the instrument that produced them. The device sits in the genomic-study-analysis-device extension, not in Procedure.</p>
+  <div data-fhir="generated"><p class="res-header-id"/><a name="mii-sp-molgen-genomic-study-analysis-device"> </a><a name="hcmii-sp-molgen-genomic-study-analysis-device"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablesearchparameter.html">CRMI Shareable SearchParameter</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablesearchparameter.html">CRMI Publishable SearchParameter</a></p></div><h2>SP_MII_MolGen_GenomicStudyAnalysis_Device</h2><p>Parameter <code>device</code>:<code>reference</code></p><div><p>Finds analyses run on a given sequencer or analytical device, for tracing results back to the instrument that produced them. The device sits in the genomic-study-analysis-device extension, not in Procedure.</p>
 </div><table class="grid" data-fhir="generated"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a></td></tr><tr><td>Expression</td><td><code>Procedure.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-device').value</code></td></tr><tr><td>Target Resources</td><td><a href="http://hl7.org/fhir/R4/device.html">Device</a></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: It's up to the server whether the parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: It's up to the server whether the parameter can have multiple values (separated by comma) where at least one must be true</li></ul></td></tr></table></div>
 
   <!-- insert notes if present -->
@@ -414,8 +414,8 @@
 
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Tue, Sep 8, 2026 06:06+0000">2026-09-08</span>
+          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Fri, Sep 11, 2026 14:33+0000">2026-09-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

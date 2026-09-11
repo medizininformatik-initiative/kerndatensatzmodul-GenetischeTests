@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Changelog - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc2</title>
+    <title>Changelog - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc3</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc3 - 
 
 
 
@@ -314,7 +314,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht (v2027.0.0-ballot.rc2: 2027 Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht (v2027.0.0-ballot.rc3: 2027 Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Changelog</h2>
   
 
@@ -424,13 +424,80 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 
 <hr />
 
+<h4 id="version-202700-ballotrc3">Version 2027.0.0-ballot.rc3</h4>
+
+<p><strong>Date:</strong> 2026-09-14 · <strong>Release candidate</strong></p>
+
+<p>The third candidate closes what rc2 left open: the artifact metadata, the security
+analysis, and the outstanding editorial notes.</p>
+
+<h5 id="no-breaking-changes">No breaking changes</h5>
+
+<p>Checked: no canonical URL, profile name, slice or cardinality changed. What is added is
+metadata on the artifacts and text in the guide. Instances valid against rc2 remain valid.</p>
+
+<h5 id="metadata">Metadata</h5>
+
+<ul>
+  <li>
+    <p><strong>CRMI is wired up on all 33 artifacts</strong> — 22 StructureDefinitions, 4 ValueSets, 6
+SearchParameters and the CapabilityStatement. Up to rc2 only the ImplementationGuide
+itself claimed CRMI while 32 finished rule sets sat unused in the repository; the
+published rc2 package carries 0 of 22 StructureDefinitions with a CRMI claim.</p>
+
+    <p>This covers <code class="language-plaintext highlighter-rouge">artifact-author</code>, the MII-wide governance statements for editor, reviewer
+and endorser, <code class="language-plaintext highlighter-rouge">artifact-topic</code>, <code class="language-plaintext highlighter-rouge">resource-approvalDate</code>, <code class="language-plaintext highlighter-rouge">artifact-versionPolicy</code>,
+<code class="language-plaintext highlighter-rouge">cqf-knowledgeCapability</code> and the package provenance. The SearchParameters additionally
+carry <code class="language-plaintext highlighter-rouge">artifact-title</code>, because <code class="language-plaintext highlighter-rouge">crmi-publishablesearchparameter</code> requires a title and
+SearchParameter has no native <code class="language-plaintext highlighter-rouge">title</code>.</p>
+  </li>
+</ul>
+
+<h5 id="security-and-privacy">Security and privacy</h5>
+
+<ul>
+  <li>
+    <p><strong>The module-specific section is written.</strong> It had stood as a placeholder since the
+migration and outlived rc1 and rc2, although it said itself that it had to be done
+before the first release.</p>
+
+    <p>It is grounded in the elements the module actually carries: HGVS at DNA and genomic
+level with exact positions, reference and alternate allele, the germline/somatic
+distinction, and the family-history data about relatives. What carries the section
+follows from that — <strong>the sequence detail is itself the identifier</strong>, which is why
+pseudonymisation at profile level does not remove the re-identification risk. Five
+requirements as SHALL, SHOULD and MAY each name the risk they address.</p>
+  </li>
+</ul>
+
+<h5 id="documentation">Documentation</h5>
+
+<ul>
+  <li>
+    <p><strong>The Clinical Genomics Working Group is acknowledged on the home page.</strong> Twelve of the
+twenty-one profiles derive directly from Clinical Genomics Reporting STU3; the domain
+model, the component structure, the terminology bindings and the naming come from there.
+The <code class="language-plaintext highlighter-rouge">artifact-author</code> statement refers to the MII-specific constraint and claims no
+authorship of the model.</p>
+  </li>
+  <li>
+    <p><strong>Breaking changes now carry the <code class="language-plaintext highlighter-rouge">BREAKING:</code> prefix</strong> in their headings — the
+Familienanamnese canonical URL and the URL namespace migration, both from the 2026 line.</p>
+  </li>
+  <li>
+    <p>All <strong>editorial notes from the template migration are resolved</strong>: six were pure records,
+five needed a decision and got one. The "(CalVer <code class="language-plaintext highlighter-rouge">YYYY.n.n</code>)" parenthesis after the
+version was an authoring hint from the template and has been removed.</p>
+  </li>
+</ul>
+
 <h4 id="version-202700-ballotrc2">Version 2027.0.0-ballot.rc2</h4>
 
 <p><strong>Date:</strong> 2026-09-07 · <strong>Release candidate</strong></p>
 
 <p>The first candidate was formally published; this one closes what that exposed.</p>
 
-<h5 id="no-breaking-changes">No breaking changes</h5>
+<h5 id="no-breaking-changes-1">No breaking changes</h5>
 
 <p>Checked rather than assumed, because the CalVer number carries no warning of its own.</p>
 
@@ -501,7 +568,7 @@ unversioned by design.</p>
   </li>
 </ul>
 
-<h5 id="documentation">Documentation</h5>
+<h5 id="documentation-1">Documentation</h5>
 
 <ul>
   <li>
@@ -531,6 +598,85 @@ the <code class="language-plaintext highlighter-rouge">-go-publish</code> invoca
 invocation gets; and the registry validator rejected the <code class="language-plaintext highlighter-rouge">"&lt;sequence&gt; &lt;Status&gt;"</code>
 edition name that any non-release publication receives.</li>
 </ul>
+
+<h5 id="known-issues">Known issues</h5>
+
+<p>This version's QA report lists <strong>53 errors</strong>. Each was examined; the baseline and its
+triage live in <code class="language-plaintext highlighter-rouge">known_errors.txt</code> in the repository. Two groups are explained here,
+because they otherwise read as data defects.</p>
+
+<p><strong>Nine SNOMED CT codes in the family-relationship value set.</strong> The report calls them "not
+valid in the system". They are valid. Each of the nine was looked up individually on the
+MII terminology server against the version pinned here,
+<code class="language-plaintext highlighter-rouge">…/900000000000207008/version/20260701</code> — all present, all active, all with the expected
+display:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Display</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">66839005</code></td>
+      <td>Father</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">699110007</code></td>
+      <td>Second degree blood relative</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">13646006</code></td>
+      <td>Natural parent</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">60614009</code></td>
+      <td>Natural brother</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">73678001</code></td>
+      <td>Natural sister</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">45929001</code></td>
+      <td>Half-brother</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">2272004</code></td>
+      <td>Half-sister</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">62296006</code></td>
+      <td>Natural grandfather</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">17945006</code></td>
+      <td>Natural grandmother</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>What fails is the <strong>shape of the request</strong>, not the code. The full message says so:
+<em>"Type-level request to <code class="language-plaintext highlighter-rouge">$validate-code</code> must specify either valueSet or url parameter."</em>
+The validator asks about a code without the context the server needs to check it, the
+server refuses the request, and the validator reports that as an invalid code. None of
+this module's data is affected.</p>
+
+<p><strong>A gene-fusion code that is not one.</strong> The example <code class="language-plaintext highlighter-rouge">mii-exa-molgen-variante-fgfr</code> carries
+this in its <code class="language-plaintext highlighter-rouge">gene-fusion</code> component:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://www.genenames.org/geneId#HGNC:3689::HGNC:2697   "FGFR2::DBP"
+</code></pre></div></div>
+
+<p>That is the HGVS way of writing a fusion — two HGNC identifiers joined by <code class="language-plaintext highlighter-rouge">::</code>. HGNC
+knows <code class="language-plaintext highlighter-rouge">HGNC:3689</code> and <code class="language-plaintext highlighter-rouge">HGNC:2697</code> separately; the concatenation is not a code there. The
+error is left in place <strong>deliberately</strong> for this version: a workable model of gene fusions
+does not belong here but in the
+<a href="https://simplifier.net/mii-erweiterungsmodul-molekulares-tumorboard">Molecular Tumor Board extension module</a>,
+which provides a detailed representation based on the <strong>dnpm</strong> data set. Until then the
+example shows what is meant without pretending the coding holds up terminologically.</p>
 
 <h5 id="documentation-second-pass">Documentation (second pass)</h5>
 
@@ -633,7 +779,7 @@ server could not have resolved them. The canonicals themselves are unchanged: th
 are what the published 2026.0.4 package ships.</li>
 </ul>
 
-<h5 id="documentation-1">Documentation</h5>
+<h5 id="documentation-2">Documentation</h5>
 
 <ul>
   <li><strong>The upstream relationship to Clinical Genomics STU3 is stated properly.</strong> The
@@ -784,7 +930,7 @@ slice to CodeableConcept).</li>
 
 <h4 id="version-202601">Version 2026.0.1</h4>
 
-<h5 id="hotfix-familienanamnese-canonical-url">Hotfix: Familienanamnese canonical URL</h5>
+<h5 id="breaking-hotfix-familienanamnese-canonical-url">BREAKING: Hotfix Familienanamnese canonical URL</h5>
 
 <p><strong>Breaking change fix</strong></p>
 
@@ -850,7 +996,7 @@ slice to CodeableConcept).</li>
 
 <p>Individual pages removed: ClinVar-Evidence-Level, Condition-Inheritance-Pattern, DNAChangeType, Evidence-Level-Examples, Functional-Effect, HGNC, HGVS, HighLowcodes, MolecularConsequence, PharmGKB-Evidence-Level, TBD-Codes, Variant-Confidence-Status, VariantInheritance</p>
 
-<h6 id="url-namespace-migration">URL namespace migration</h6>
+<h6 id="breaking-url-namespace-migration">BREAKING: URL namespace migration</h6>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">example.org</code> URLs replaced by the MII FHIR namespace (<code class="language-plaintext highlighter-rouge">https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/</code>)</li>
@@ -1156,8 +1302,8 @@ slice to CodeableConcept).</li>
 
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Tue, Sep 8, 2026 06:06+0000">2026-09-08</span>
+          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Fri, Sep 11, 2026 14:33+0000">2026-09-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

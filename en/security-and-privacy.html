@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Security and Privacy - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc2</title>
+    <title>Security and Privacy - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc3</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc3 - 
 
 
 
@@ -314,7 +314,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht (v2027.0.0-ballot.rc2: 2027 Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht (v2027.0.0-ballot.rc3: 2027 Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Security and Privacy</h2>
   
 
@@ -383,28 +383,94 @@ by the DIMP configuration, not by this guide.</p>
 <p>This is the module's own contribution: the security and privacy properties that
 follow from the <em>kind of data this module carries</em>.</p>
 
-<!-- DERIVED:no-source source=none gate=B -->
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p><strong>This section is not yet written — decision taken, content outstanding.</strong>
-The Simplifier guide this module was migrated from carries no security or
-privacy narrative at all, so there was nothing to migrate here.</p>
+<!-- Written 2026-09-11, after the placeholder had outlived two releases.
+     Every statement below is grounded in the elements the module actually carries,
+     not phrased generally about genetic data. The normative requirements are meant
+     as the module's SHOULD/SHALL and need the working group's confirmation before
+     the ballot closes. -->
 
-  <p>The template offers a default text for modules with no aspects of their own
-("this module carries no data category that raises security or privacy
-aspects of its own"). <strong>That default was deliberately NOT adopted</strong>, because
-for a molecular genetics module it would be untrue: the module carries
-genetic sequence data, which is special-category data, is inherently
-re-identifying even after pseudonymisation, and carries information about
-blood relatives who are not the data subject and have not consented.</p>
+<h5 id="what-data-this-module-carries">What data this module carries</h5>
 
-  <p>Writing the real analysis is a domain-author task, not a migration task, so
-it is left open here rather than guessed at. It must be completed before the
-first release: at minimum the data categories and their sensitivity, the
-re-identification risk that profile-level pseudonymisation does not remove,
-the familial implications, and any security- or privacy-related
-SHALL/SHOULD/MAY requirements this module places on implementers, each with
-the risk it addresses.</p>
-</blockquote>
+<p>The module carries three categories that go beyond ordinary findings.</p>
+
+<p><strong>Sequence detail.</strong> The <a href="StructureDefinition-mii-pr-molgen-variante.html">Variante</a>
+profile carries, among others, the gene studied, HGVS notation at DNA and genomic level,
+the reference sequence with its assembly, exact as well as inner and outer start-end
+positions, reference and alternate allele, and the DNA change type. This is not a coded
+finding; it is a description of the sequence itself.</p>
+
+<p><strong>The germline/somatic distinction.</strong> The <code class="language-plaintext highlighter-rouge">genomic-source-class</code> component records whether
+an alteration is inherited or acquired. Germline findings hold for life and concern blood
+relatives.</p>
+
+<p><strong>Data about third parties.</strong> The
+<a href="StructureDefinition-mii-pr-molgen-familienanamnese.html">Familienanamnese</a> profile
+carries the relationship, degree of relationship, family line, sex and the reason for
+recording — about people who are <strong>not the data subject</strong> and who did not consent to their
+data being recorded.</p>
+
+<h5 id="what-follows-from-that">What follows from that</h5>
+
+<p><strong>Re-identifiability survives pseudonymisation.</strong> Pseudonymisation at profile level
+replaces identifiers. It does not touch the fact that a sufficient number of exact
+positions with reference and alternate allele singles out a person — against any other
+sample from that person, and against reference databases. The sequence detail <em>is</em> the
+identifier. This is why the measures described in section 2 are not sufficient here.</p>
+
+<p><strong>The finding reaches beyond the data subject.</strong> A germline finding says something about
+parents, siblings and children who were neither asked nor consented. The family history
+makes that reach explicit.</p>
+
+<p><strong>The data do not age.</strong> A pseudonym can be changed; a sequence cannot. A disclosure is
+final.</p>
+
+<p>Genetic data are special categories of personal data within the meaning of Art. 9 GDPR.</p>
+
+<h5 id="requirements-of-this-module">Requirements of this module</h5>
+
+<p>The following address implementers. They add to the general measures in section 2; they do
+not replace them.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Requirement</th>
+      <th>Risk addressed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>SHALL</strong></td>
+      <td>Transmit sequence detail only to recipients whose purpose limitation explicitly covers it</td>
+      <td>sequence data are themselves an identifier; "as part of the report" does not carry here</td>
+    </tr>
+    <tr>
+      <td><strong>SHALL</strong></td>
+      <td>Populate <code class="language-plaintext highlighter-rouge">genomic-source-class</code> wherever the distinction is known</td>
+      <td>without it, there is no way to tell whether a finding concerns relatives</td>
+    </tr>
+    <tr>
+      <td><strong>SHOULD</strong></td>
+      <td>For analyses that do not need base-level precision, omit the position elements rather than supplying them</td>
+      <td>lowers re-identifiability without missing the clinical purpose</td>
+    </tr>
+    <tr>
+      <td><strong>SHOULD</strong></td>
+      <td>Release family-history data separately from sequence data</td>
+      <td>combining the two substantially increases what can be inferred about third parties</td>
+    </tr>
+    <tr>
+      <td><strong>MAY</strong></td>
+      <td>Log access to instances of Variante, Genotyp and Familienanamnese separately</td>
+      <td>supports investigation where misuse is suspected</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>How any of this is enforced technically — access control, logging, consent checking — is
+decided by each project's DIMP configuration, not by this guide. This module states
+<strong>what</strong> has to be protected, and why.</p>
 
 
 
@@ -430,8 +496,8 @@ the risk it addresses.</p>
 
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Tue, Sep 8, 2026 06:06+0000">2026-09-08</span>
+          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Fri, Sep 11, 2026 14:33+0000">2026-09-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

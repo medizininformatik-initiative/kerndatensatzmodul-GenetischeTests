@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Sicherheit und Datenschutz - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc2</title>
+    <title>Sicherheit und Datenschutz - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc3</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII Implementierungsleitfaden Kerndatensatz-Modul Molekulargenetischer Befundbericht</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc3 - 
 
 
 
@@ -285,7 +285,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht (v2027.0.0-ballot.rc2: 2027 Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht (v2027.0.0-ballot.rc3: 2027 Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Sicherheit und Datenschutz</h2>
   
 
@@ -357,31 +357,96 @@ nicht dieser Leitfaden.</p>
 <p>Dies ist der eigene Beitrag des Moduls: die Sicherheits- und
 Datenschutz-Eigenschaften, die aus der <em>Art der Daten dieses Moduls</em> folgen.</p>
 
-<!-- DERIVED:no-source source=none gate=B -->
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p><strong>Dieser Abschnitt ist noch nicht geschrieben — Entscheidung getroffen, Inhalt offen.</strong>
-Der Simplifier-Leitfaden, aus dem dieses Modul migriert wurde, enthält
-überhaupt keine Sicherheits- oder Datenschutz-Darstellung; es gab hier also
-nichts zu migrieren.</p>
+<!-- Geschrieben 2026-09-11, nachdem der Platzhalter zwei Releases überdauert hatte.
+     Jede Aussage unten ist an den tatsächlich geführten Elementen belegt, nicht
+     allgemein über genetische Daten formuliert. Die normativen Anforderungen sind
+     als SHOULD/SHALL des Moduls gemeint und brauchen die Bestätigung der
+     Fachgruppe, bevor das Ballot schließt. -->
 
-  <p>Das Template bietet einen Standardtext für Module ohne eigene Aspekte
-("führt dieses Modul keine Datenkategorie, die eigene Sicherheits- oder
-Datenschutzaspekte aufwirft"). <strong>Dieser Standardtext wurde bewusst NICHT
-übernommen</strong>, weil er für ein molekulargenetisches Modul unzutreffend wäre:
-Das Modul führt genetische Sequenzdaten. Diese sind besondere Kategorien
-personenbezogener Daten, sind auch nach Pseudonymisierung inhärent
-re-identifizierend und enthalten Informationen über Blutsverwandte, die nicht
-die betroffene Person sind und nicht eingewilligt haben.</p>
+<h5 id="welche-daten-dieses-modul-führt">Welche Daten dieses Modul führt</h5>
 
-  <p>Die eigentliche Analyse zu schreiben ist Aufgabe der Fach-Autorinnen und
--Autoren, nicht der Migration; sie bleibt deshalb offen statt geraten. Sie
-muss vor dem ersten Release erfolgen: mindestens die geführten
-Datenkategorien und ihre Sensibilität, das Re-Identifikationsrisiko, das eine
-Pseudonymisierung auf Profilebene nicht beseitigt, die familiären
-Implikationen sowie sicherheits- oder datenschutzbezogene
-SHALL/SHOULD/MAY-Anforderungen dieses Moduls an Implementierende, jeweils mit
-dem adressierten Risiko.</p>
-</blockquote>
+<p>Das Modul führt drei Kategorien, die über gewöhnliche Befunddaten hinausgehen.</p>
+
+<p><strong>Sequenzangaben.</strong> Das Profil <a href="StructureDefinition-mii-pr-molgen-variante.html">Variante</a>
+führt unter anderem das untersuchte Gen, die HGVS-Notation auf DNA- und Genomebene, die
+Referenzsequenz mit Assembly, exakte sowie innere und äußere Start-End-Positionen,
+Referenz- und Alternativallel und den DNA-Änderungstyp. Das ist keine Kodierung eines
+Befundes, sondern eine Beschreibung der Sequenz selbst.</p>
+
+<p><strong>Die Unterscheidung Keimbahn/somatisch.</strong> Die Komponente <code class="language-plaintext highlighter-rouge">genomic-source-class</code> hält
+fest, ob eine Veränderung ererbt oder erworben ist. Keimbahnbefunde gelten unverändert
+lebenslang und betreffen Blutsverwandte.</p>
+
+<p><strong>Angaben über Dritte.</strong> Das Profil
+<a href="StructureDefinition-mii-pr-molgen-familienanamnese.html">Familienanamnese</a> führt
+Verwandtschaftsverhältnis, Verwandtschaftsgrad, familiäre Linie, Geschlecht und den Grund
+der Erhebung — zu Personen, die <strong>nicht die betroffene Person sind</strong> und in die Erhebung
+ihrer Daten nicht eingewilligt haben.</p>
+
+<h5 id="was-daraus-folgt">Was daraus folgt</h5>
+
+<p><strong>Re-Identifizierbarkeit überlebt die Pseudonymisierung.</strong> Eine Pseudonymisierung auf
+Profilebene ersetzt Identifikatoren. Sie berührt nicht, dass eine hinreichende Zahl
+exakter Positionen mit Referenz- und Alternativallel eine Person eindeutig kennzeichnet —
+gegen jede andere Probe derselben Person und gegen Referenzdatenbanken. Die
+Sequenzangaben sind selbst der Identifikator. Das ist der Grund, warum die in Abschnitt 2
+beschriebenen Maßnahmen hier nicht ausreichen.</p>
+
+<p><strong>Der Befund reicht über die betroffene Person hinaus.</strong> Ein Keimbahnbefund sagt etwas
+über Eltern, Geschwister und Kinder aus, die weder befragt noch eingewilligt haben. Die
+Familienanamnese macht diesen Bezug zusätzlich explizit.</p>
+
+<p><strong>Die Daten altern nicht.</strong> Ein Pseudonym lässt sich wechseln, eine Sequenz nicht. Eine
+Offenlegung ist endgültig.</p>
+
+<p>Genetische Daten sind besondere Kategorien personenbezogener Daten im Sinne von
+Art. 9 DSGVO.</p>
+
+<h5 id="anforderungen-dieses-moduls">Anforderungen dieses Moduls</h5>
+
+<p>Die folgenden Anforderungen richten sich an Implementierende. Sie ergänzen die
+allgemeinen Maßnahmen aus Abschnitt 2, sie ersetzen sie nicht.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Anforderung</th>
+      <th>adressiertes Risiko</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>SHALL</strong></td>
+      <td>Sequenzangaben nur an Empfänger übermitteln, deren Zweckbindung sie ausdrücklich einschließt</td>
+      <td>Sequenzdaten sind selbst Identifikator; eine Weitergabe „im Rahmen des Befundes" trägt hier nicht</td>
+    </tr>
+    <tr>
+      <td><strong>SHALL</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">genomic-source-class</code> führen, wo die Unterscheidung bekannt ist</td>
+      <td>ohne sie ist nicht erkennbar, ob ein Befund Verwandte betrifft</td>
+    </tr>
+    <tr>
+      <td><strong>SHOULD</strong></td>
+      <td>Für Auswertungen, die keine Basengenauigkeit brauchen, die Positionsangaben weglassen statt sie mitzuliefern</td>
+      <td>senkt die Re-Identifizierbarkeit, ohne den fachlichen Zweck zu verfehlen</td>
+    </tr>
+    <tr>
+      <td><strong>SHOULD</strong></td>
+      <td>Familienanamnese-Angaben getrennt von den Sequenzdaten freigeben</td>
+      <td>die Verknüpfung beider erhöht die Aussagekraft über Dritte erheblich</td>
+    </tr>
+    <tr>
+      <td><strong>MAY</strong></td>
+      <td>Zugriffe auf Instanzen der Profile Variante, Genotyp und Familienanamnese gesondert protokollieren</td>
+      <td>ermöglicht Nachvollzug bei Verdacht auf Zweckentfremdung</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Was davon technisch wie durchgesetzt wird — Zugriffskontrolle, Protokollierung,
+Einwilligungsprüfung — entscheidet die DIMP-Konfiguration des jeweiligen Projekts, nicht
+dieser Leitfaden. Dieses Modul benennt, <strong>was</strong> zu schützen ist und warum.</p>
 
 
 
@@ -407,8 +472,8 @@ dem adressierten Risiko.</p>
 
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Tue, Sep 8, 2026 06:06+0000">2026-09-08</span>
+          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Fri, Sep 11, 2026 14:33+0000">2026-09-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
