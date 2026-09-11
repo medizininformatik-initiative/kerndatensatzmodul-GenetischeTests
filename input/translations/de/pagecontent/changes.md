@@ -160,6 +160,51 @@ lieferte. Die übrigen Änderungen betreffen Dokumentation und Release-Automatis
   wies den Editionsnamen „`<Sequence> <Status>`" zurück, den jede
   Nicht-Release-Publikation bekommt.
 
+##### Bekannte Probleme
+
+Der QA-Bericht dieser Version meldet **53 Fehler**. Sie sind einzeln geprüft; die
+Grundlast und ihre Einordnung stehen in `known_errors.txt` im Repository. Zwei Gruppen
+verdienen hier eine Erklärung, weil sie sonst wie Datenfehler aussehen.
+
+**Neun SNOMED-CT-Codes im Verwandtschafts-ValueSet.** Der Bericht sagt, sie seien „not
+valid in the system". Sie sind es. Jeder der neun wurde am MII-Terminologieserver gegen
+die hier gepinnte Version `…/900000000000207008/version/20260701` einzeln nachgeschlagen
+— alle vorhanden, alle aktiv, alle mit dem erwarteten Display:
+
+| Code | Display |
+|---|---|
+| `66839005` | Father |
+| `699110007` | Second degree blood relative |
+| `13646006` | Natural parent |
+| `60614009` | Natural brother |
+| `73678001` | Natural sister |
+| `45929001` | Half-brother |
+| `2272004` | Half-sister |
+| `62296006` | Natural grandfather |
+| `17945006` | Natural grandmother |
+
+Was scheitert, ist die **Form der Anfrage**, nicht der Code. Die vollständige Meldung
+nennt den Grund: *„Type-level request to `$validate-code` must specify either valueSet or
+url parameter."* Der Validator fragt einen Code ohne den Kontext ab, in dem der Server ihn
+prüfen kann; der Server lehnt die Anfrage ab, und der Validator meldet das als
+ungültigen Code. Nichts an den Daten dieses Moduls ist davon betroffen.
+
+**Ein Genfusions-Code, der keiner ist.** Das Beispiel `mii-exa-molgen-variante-fgfr`
+trägt in der Komponente `gene-fusion`:
+
+```
+http://www.genenames.org/geneId#HGNC:3689::HGNC:2697   "FGFR2::DBP"
+```
+
+Das ist die HGVS-Schreibweise einer Fusion — zwei HGNC-Identifikatoren, verkettet mit
+`::`. HGNC selbst kennt `HGNC:3689` und `HGNC:2697` einzeln, die Verkettung ist dort kein
+Code. Der Fehler bleibt in dieser Version **bewusst stehen**: eine tragfähige Modellierung
+von Genfusionen gehört nicht hierher, sondern ins
+[Erweiterungsmodul Molekulares Tumorboard](https://simplifier.net/mii-erweiterungsmodul-molekulares-tumorboard),
+das dafür eine detaillierte Abbildung auf Basis des **dnpm**-Datensatzes vorsieht. Bis
+dahin zeigt das Beispiel, was gemeint ist, ohne vorzugeben, dass die Kodierung
+terminologisch trägt.
+
 ##### Dokumentation (zweiter Durchgang)
 
 * **Das Domänenmodell ist jetzt im Leitfaden zu sehen.** Es lag als Bild im Repository,

@@ -150,6 +150,51 @@ remaining changes are documentation and release automation.
   invocation gets; and the registry validator rejected the `"<sequence> <Status>"`
   edition name that any non-release publication receives.
 
+##### Known issues
+
+This version's QA report lists **53 errors**. Each was examined; the baseline and its
+triage live in `known_errors.txt` in the repository. Two groups are explained here,
+because they otherwise read as data defects.
+
+**Nine SNOMED CT codes in the family-relationship value set.** The report calls them "not
+valid in the system". They are valid. Each of the nine was looked up individually on the
+MII terminology server against the version pinned here,
+`…/900000000000207008/version/20260701` — all present, all active, all with the expected
+display:
+
+| Code | Display |
+|---|---|
+| `66839005` | Father |
+| `699110007` | Second degree blood relative |
+| `13646006` | Natural parent |
+| `60614009` | Natural brother |
+| `73678001` | Natural sister |
+| `45929001` | Half-brother |
+| `2272004` | Half-sister |
+| `62296006` | Natural grandfather |
+| `17945006` | Natural grandmother |
+
+What fails is the **shape of the request**, not the code. The full message says so:
+*"Type-level request to `$validate-code` must specify either valueSet or url parameter."*
+The validator asks about a code without the context the server needs to check it, the
+server refuses the request, and the validator reports that as an invalid code. None of
+this module's data is affected.
+
+**A gene-fusion code that is not one.** The example `mii-exa-molgen-variante-fgfr` carries
+this in its `gene-fusion` component:
+
+```
+http://www.genenames.org/geneId#HGNC:3689::HGNC:2697   "FGFR2::DBP"
+```
+
+That is the HGVS way of writing a fusion — two HGNC identifiers joined by `::`. HGNC
+knows `HGNC:3689` and `HGNC:2697` separately; the concatenation is not a code there. The
+error is left in place **deliberately** for this version: a workable model of gene fusions
+does not belong here but in the
+[Molecular Tumor Board extension module](https://simplifier.net/mii-erweiterungsmodul-molekulares-tumorboard),
+which provides a detailed representation based on the **dnpm** data set. Until then the
+example shows what is meant without pretending the coding holds up terminologically.
+
 ##### Documentation (second pass)
 
 * **The domain model is now visible in the guide.** It sat in the repository as an image
