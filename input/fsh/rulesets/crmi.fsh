@@ -21,14 +21,21 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 // ── Resource-independent version policy ──────────────────────────────────────
+// Die Version 3.0.0 am Coding ist nicht kosmetisch. Zwei Pakete liefern dasselbe
+// CodeSystem-Canonical mit unterschiedlichem Inhalt:
+//   hl7.terminology.r4 7.x            -> Version 3.0.0, Codes metadata/strict/loose/package
+//   hl7.fhir.uv.extensions.r4 5.2.0   -> Version 5.2.0, Codes metadata/strict
+// Ohne die Angabe greift der Validator die Extensions-Variante und meldet
+// "Unbekannter Code package ... Version 5.2.0". kerndatensatz-basis nagelt die
+// Version aus demselben Grund fest; beim Port hierher ging sie verloren.
 
 RuleSet: CRMIVersionPolicyStrict
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy"
-* ^extension[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes#package "Package"
+* ^extension[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes|3.0.0#package "Package"
 
 RuleSet: CRMIVersionPolicyStrictInstance
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy"
-* extension[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes#package "Package"
+* extension[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes|3.0.0#package "Package"
 
 // ── Copyright label ──────────────────────────────────────────────────────────
 // basis notes that there is currently no resource type in the module where
