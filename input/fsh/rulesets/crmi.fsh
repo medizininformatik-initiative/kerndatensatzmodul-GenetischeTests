@@ -77,6 +77,7 @@ RuleSet: CRMIArtifactTopicInstance(system, code)
 
 RuleSet: CRMIArtifactContributors
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-author"
+* ^extension[=].valueContactDetail.name = "Thomas Debertshäuser"
 * ^extension[=].valueContactDetail.telecom[+].system = #email
 * ^extension[=].valueContactDetail.telecom[=].value = "thomas.debertshaeuser@charite.de"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-editor"
@@ -100,6 +101,7 @@ RuleSet: CRMIArtifactContributors
 
 RuleSet: CRMIArtifactContributorsInstance
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-author"
+* extension[=].valueContactDetail.name = "Thomas Debertshäuser"
 * extension[=].valueContactDetail.telecom[+].system = #email
 * extension[=].valueContactDetail.telecom[=].value = "thomas.debertshaeuser@charite.de"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-editor"
@@ -224,12 +226,21 @@ RuleSet: CRMIKnowledgeCapabilitiesValueSet
 // Jede dieser Angaben ist überprüfbar wahr, ohne dass jemand eine Entscheidung
 // treffen müsste.
 //
-// WAS BEWUSST NICHT ANGESCHLOSSEN WIRD: artifact-editor, artifact-reviewer,
-// artifact-endorser und resource-approvalDate. Das sind Aussagen über Gremien
-// und Termine -- wer geprüft hat, wer mitträgt, wann freigegeben wurde. Sie aus
-// kerndatensatz-basis zu übernehmen hieße zu behaupten, dieselben Gremien hätten
-// dasselbe für dieses Modul getan. Die RuleSets dafür bleiben unten stehen und
-// werden eingefügt, sobald die Governance-Frage beantwortet ist -- nicht vorher.
+//   artifact-editor / -reviewer / -endorser          der MII-Governance-Prozess
+//
+// Zu den Gremien: das war zunächst als modulspezifische Behauptung eingeschätzt
+// und übersprungen worden. Das war falsch. Sowohl kerndatensatz-meta als auch
+// kerndatensatz-basis führen exakt dieselben drei Angaben -- Taskforce Core Data
+// Set als editor, Interoperability Working Group und National Steering Committee
+// als reviewer und endorser. Das ist keine Aussage über dieses Modul, sondern
+// über das Verfahren, dem jedes KDS-Modul unterliegt; das Impressum der
+// Startseite sagt dasselbe in Prosa.
+//
+// WAS WEITERHIN NICHT ANGESCHLOSSEN WIRD: resource-approvalDate. Das ist als
+// einziges wirklich artefaktspezifisch -- meta setzt es auf genau vier seiner
+// 172 Artefakte, basis auf ein anderes Datum. Es bezeichnet einen konkreten
+// Freigabetermin, den für dieses Modul niemand benannt hat. Das RuleSet
+// CRMIApprovalDate nimmt das Datum als Parameter entgegen und wartet darauf.
 //
 // ZUR HERKUNFT DER INHALTE: zwölf der Profile dieses Moduls leiten sich von
 // HL7 Clinical Genomics Reporting STU3 ab, das selbst keinerlei CRMI-Metadaten
@@ -241,19 +252,6 @@ RuleSet: CRMIKnowledgeCapabilitiesValueSet
 // und wird im Abschnitt "Danksagung" der Startseite ausdrücklich gewürdigt.
 // ═════════════════════════════════════════════════════════════════════════════
 
-// Nur der Autor -- ohne die Gremienaussagen aus CRMIArtifactContributors.
-RuleSet: CRMIArtifactAuthorOnly
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-author"
-* ^extension[=].valueContactDetail.name = "Thomas Debertshäuser"
-* ^extension[=].valueContactDetail.telecom[+].system = #email
-* ^extension[=].valueContactDetail.telecom[=].value = "thomas.debertshaeuser@charite.de"
-
-RuleSet: CRMIArtifactAuthorOnlyInstance
-* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-author"
-* extension[=].valueContactDetail.name = "Thomas Debertshäuser"
-* extension[=].valueContactDetail.telecom[+].system = #email
-* extension[=].valueContactDetail.telecom[=].value = "thomas.debertshaeuser@charite.de"
-
 // ── Die zwei Sammel-RuleSets, die an den Artefakten eingefügt werden ─────────
 // Ein Aufruf je Artefakt, direkt neben `insert PR_CS_VS_Version`.
 
@@ -263,7 +261,7 @@ RuleSet: CRMIBaselineStructureDefinition
 * insert CRMIPublishableStructureDefinition
 * insert CRMIKnowledgeCapabilitiesStructureDefinition
 * insert CRMIVersionPolicyStrict
-* insert CRMIArtifactAuthorOnly
+* insert CRMIArtifactContributors
 * insert CRMIPackageSourceDefinitionalResource
 * insert CRMIResourceEffectivePeriod
 
@@ -273,5 +271,5 @@ RuleSet: CRMIBaselineValueSet
 * insert CRMIPublishableValueSet
 * insert CRMIKnowledgeCapabilitiesValueSet
 * insert CRMIVersionPolicyStrict
-* insert CRMIArtifactAuthorOnly
+* insert CRMIArtifactContributors
 * insert CRMIPackageSourceDefinitionalResource
