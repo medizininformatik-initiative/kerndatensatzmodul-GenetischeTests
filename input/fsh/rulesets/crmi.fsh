@@ -204,7 +204,7 @@ RuleSet: CRMIKnowledgeCapabilitiesValueSet
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Nachportiert aus kerndatensatzmodul-onkologie (input/fsh/rulesets/crmi.fsh,
-// Stand 2027.0.0-ballot.rc2): vier Bausteine, die der basis-Port noch nicht
+// Stand 2027.0.0-ballot.rc3): vier Bausteine, die der basis-Port noch nicht
 // hatte, plus die MolGen-Komposite, die sie an den Callsites buendeln.
 // Callsite-Werte laut Port-Header dieser Datei: approvalDate 2026-09-15 (User 2026-09-09; der Port-Header nannte 2026-01-02),
 // Topic C17457 (NCI Thesaurus).
@@ -223,7 +223,7 @@ RuleSet: CRMIMetaLicenseAndSource
 // zentralen Version-RuleSet; Lektion aus dem Onko-Modul, wo es beim Sprung auf
 // die Ballot-Linie vergessen wurde).
 * ^meta.extension[=].extension[+].url = "version"
-* ^meta.extension[=].extension[=].valueString = "2027.0.0-ballot.rc2"
+* ^meta.extension[=].extension[=].valueString = "2027.0.0-ballot.rc3"
 * ^meta.extension[=].extension[+].url = "uri"
 * ^meta.extension[=].extension[=].valueUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen"
 
@@ -238,7 +238,7 @@ RuleSet: CRMIMetaLicenseAndSourceInstance
 // ('Extension.url must be an absolute URL'). Versionsliteral: beim
 // Release-Bump mitziehen.
 * meta.extension[=].extension[+].url = "version"
-* meta.extension[=].extension[=].valueString = "2027.0.0-ballot.rc2"
+* meta.extension[=].extension[=].valueString = "2027.0.0-ballot.rc3"
 * meta.extension[=].extension[+].url = "uri"
 * meta.extension[=].extension[=].valueUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen"
 

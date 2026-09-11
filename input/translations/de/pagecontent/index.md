@@ -24,8 +24,8 @@ klinischer Routinedaten für die medizinische Forschung.
 
 | Veröffentlichung |               |
 |-------------|---------------|
-| Datum       | 2026-09-07 |
-| Version     | 2027.0.0-ballot.rc2 |
+| Datum       | 2026-09-14 |
+| Version     | 2027.0.0-ballot.rc3 |
 | Status      | active        |
 | Realm       | DE            |
 
