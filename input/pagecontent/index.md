@@ -88,6 +88,23 @@ More FHIR implementation guides can be found in the official
 **[FHIR IG Registry](https://fhir.org/guides/registry/)** (source:
 [`FHIR/ig-registry`](https://github.com/FHIR/ig-registry)).
 
+### Acknowledgements
+
+Twelve of this module's twenty-one profiles derive directly from
+[HL7 Clinical Genomics Reporting STU3](http://hl7.org/fhir/uv/genomics-reporting/STU3/) —
+Variante, Genotyp, Molekulare Konsequenz, Molekularer Biomarker, both implication
+profiles, GenomicStudy and GenomicStudyAnalysis, and the report itself. The domain model
+behind them, the component structure, the terminology bindings and the naming are the work
+of the **HL7 Clinical Genomics Working Group**. This module constrains, names in German
+and adds the MII context; it does not reinvent the modelling.
+
+That bears on the author statement in the artifact metadata, too. Since
+2027.0.0-ballot.rc2 every artifact in this module carries
+[CRMI](https://hl7.org/fhir/uv/crmi/) metadata including `artifact-author`. That statement
+refers to the **MII-specific constraint**, not to the underlying model. Clinical Genomics
+Reporting carries no CRMI metadata of its own; the annotation here neither replaces nor
+claims authorship of it.
+
 ### Imprint
 
 This guide was created within the Medical Informatics Initiative and is subject,

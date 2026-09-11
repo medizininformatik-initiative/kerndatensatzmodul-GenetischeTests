@@ -5,6 +5,7 @@ Title: "MII PR MolGen Familienanamnese"
 Description: "Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen."
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMIBaselineStructureDefinition
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
 //* ^status = #draft
 
@@ -297,6 +298,7 @@ Title: "MII EX Mol Gen Verwandtschaftsgrad"
 Description: "Extension erlaubt die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen."
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMIBaselineStructureDefinition
 * ^context.type = #element
 * ^context.expression = "FamilyMemberHistory.relationship.coding"
 * value[x] 1..
@@ -309,6 +311,7 @@ Title: "MII VS Mol Gen Verwandtschaftsgrad"
 Description: "ValueSet für die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen."
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMIBaselineValueSet
 
 * $SCT#125678001 "First degree blood relative (person)"
 * $SCT#699110007 "Second degree blood relative (person)"
@@ -319,6 +322,7 @@ Title: "MII EX MolGen Verwandtschaftsverhaeltnis"
 Description: "Extension erlaubt die Angabe eines Verwandtschaftsverhältnisses zwischen Patient und Familienangehörigen."
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMIBaselineStructureDefinition
 
 * ^context.type = #element
 * ^context.expression = "FamilyMemberHistory.relationship.coding"
@@ -332,6 +336,7 @@ Title: "MII VS MolGen Verwandtschaftsverhaeltnis"
 Description: "ValueSet für die Angabe eines Verwandtschaftsverhältnis zwischen Patient und Familienangehörigen."
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMIBaselineValueSet
 
 * $SCT#75226009 "Natural child (person)"
 * $SCT#13646006 "Natural parent (person)"
@@ -348,6 +353,7 @@ Title: "MII EX MolGen Familiare Linie"
 Description: "Extension erlaubt die Angabe der familiären Linie zwischen Patient und Familienangehörigen."
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMIBaselineStructureDefinition
 
 * ^context.type = #element
 * ^context.expression = "FamilyMemberHistory.relationship.coding"
@@ -361,6 +367,7 @@ Title: "MII VS MolGen Familiäre Linie"
 Description: "ValueSet für die Angabe der familären Linie zwischen Patient und Familienangehörigen."
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMIBaselineValueSet
 
 * $SCT#72705000 "Mother (person)"
 * $SCT#66839005 "Father (person)"

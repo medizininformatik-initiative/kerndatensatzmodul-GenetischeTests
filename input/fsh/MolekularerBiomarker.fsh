@@ -5,6 +5,7 @@ Title: "MII PR MolGen Molekularer Biomarker"
 Description: "Dieses Profil beschreibt molekulare Biomarker, z.B. genübergreifende Biomarker wie Tumormutationslast (TMB) oder Mikrosatelliteninstabilität (MSI). Es ist ein abstraktes Profil, konkrete Biomarker-Profile erben davon."
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMIBaselineStructureDefinition
 * ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekularer-biomarker"
 

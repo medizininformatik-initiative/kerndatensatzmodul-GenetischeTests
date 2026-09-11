@@ -4,6 +4,7 @@ Id: mii-vs-molgen-family-member-snomed
 Title: "MII VS MolGen Family Member SNOMED"
 Description: "The ValueSet contains codes for related family member types from SNOMED CT."
 * insert PR_CS_VS_Version
+* insert CRMIBaselineValueSet
 * insert Publisher
 * ^status = #active
 

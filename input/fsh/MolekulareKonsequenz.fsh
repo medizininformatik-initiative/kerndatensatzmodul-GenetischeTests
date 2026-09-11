@@ -5,6 +5,7 @@ Title: "MII PR MolGen Molekulare Konsequenz"
 Description: "Dieses Profil beschreibt den Zusammenhang von bestimmten Varianten, Haplotypen oder Genotypen und bestimmten Konsequenzen auf molekularer Ebene."
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert CRMIBaselineStructureDefinition
 * ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz"
 

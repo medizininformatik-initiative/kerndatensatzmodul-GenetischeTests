@@ -201,3 +201,77 @@ RuleSet: CRMIKnowledgeCapabilitiesValueSet
 * ^extension[=].valueCode = #publishable
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
 * ^extension[=].valueCode = #computable
+
+
+// ═════════════════════════════════════════════════════════════════════════════
+// ANGESCHLOSSEN AM 2026-09-11 — bis dahin lagen alle RuleSets dieser Datei
+// ungenutzt herum: 28 Definitionen, null Verwendungen. Der IG beanspruchte CRMI
+// über sushi-config.yaml (meta.profile), seine Artefakte trugen davon nichts.
+//
+// WAS HIER ANGESCHLOSSEN WIRD und warum nur das:
+//
+//   experimental, version, title, description, url   die fünf Pflichtfelder des
+//                                                    Shareable-Anspruchs
+//   meta.profile shareable + publishable             der Anspruch selbst
+//   cqf-knowledgeCapability                          dasselbe maschinenlesbar
+//   artifact-versionPolicy                           Versionierung: package
+//   package-source                                   Herkunft, falls die
+//                                                    Ressource aus dem Paket
+//                                                    gehoben wird
+//   resource-effectivePeriod                         ab wann sie gilt
+//   artifact-author                                  wer sie verfasst hat
+//
+// Jede dieser Angaben ist überprüfbar wahr, ohne dass jemand eine Entscheidung
+// treffen müsste.
+//
+// WAS BEWUSST NICHT ANGESCHLOSSEN WIRD: artifact-editor, artifact-reviewer,
+// artifact-endorser und resource-approvalDate. Das sind Aussagen über Gremien
+// und Termine -- wer geprüft hat, wer mitträgt, wann freigegeben wurde. Sie aus
+// kerndatensatz-basis zu übernehmen hieße zu behaupten, dieselben Gremien hätten
+// dasselbe für dieses Modul getan. Die RuleSets dafür bleiben unten stehen und
+// werden eingefügt, sobald die Governance-Frage beantwortet ist -- nicht vorher.
+//
+// ZUR HERKUNFT DER INHALTE: zwölf der Profile dieses Moduls leiten sich von
+// HL7 Clinical Genomics Reporting STU3 ab, das selbst keinerlei CRMI-Metadaten
+// führt (73 Artefakte, null Ansprüche). CRMI-Metadaten werden nicht vererbt --
+// jede StructureDefinition trägt ihre eigenen --, technisch steht dem also
+// nichts entgegen. Inhaltlich ist es wichtig: was hier als "author" steht,
+// bezieht sich auf die MII-spezifische Einschränkung, NICHT auf das zugrunde
+// liegende Modell. Das stammt von der Clinical-Genomics-Arbeitsgruppe von HL7
+// und wird im Abschnitt "Danksagung" der Startseite ausdrücklich gewürdigt.
+// ═════════════════════════════════════════════════════════════════════════════
+
+// Nur der Autor -- ohne die Gremienaussagen aus CRMIArtifactContributors.
+RuleSet: CRMIArtifactAuthorOnly
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-author"
+* ^extension[=].valueContactDetail.name = "Thomas Debertshäuser"
+* ^extension[=].valueContactDetail.telecom[+].system = #email
+* ^extension[=].valueContactDetail.telecom[=].value = "thomas.debertshaeuser@charite.de"
+
+RuleSet: CRMIArtifactAuthorOnlyInstance
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-author"
+* extension[=].valueContactDetail.name = "Thomas Debertshäuser"
+* extension[=].valueContactDetail.telecom[+].system = #email
+* extension[=].valueContactDetail.telecom[=].value = "thomas.debertshaeuser@charite.de"
+
+// ── Die zwei Sammel-RuleSets, die an den Artefakten eingefügt werden ─────────
+// Ein Aufruf je Artefakt, direkt neben `insert PR_CS_VS_Version`.
+
+RuleSet: CRMIBaselineStructureDefinition
+* ^experimental = false
+* insert CRMIShareableStructureDefinition
+* insert CRMIPublishableStructureDefinition
+* insert CRMIKnowledgeCapabilitiesStructureDefinition
+* insert CRMIVersionPolicyStrict
+* insert CRMIArtifactAuthorOnly
+* insert CRMIPackageSourceDefinitionalResource
+* insert CRMIResourceEffectivePeriod
+
+RuleSet: CRMIBaselineValueSet
+* ^experimental = false
+* insert CRMIShareableValueSet
+* insert CRMIPublishableValueSet
+* insert CRMIKnowledgeCapabilitiesValueSet
+* insert CRMIVersionPolicyStrict
+* insert CRMIArtifactAuthorOnly
+* insert CRMIPackageSourceDefinitionalResource
