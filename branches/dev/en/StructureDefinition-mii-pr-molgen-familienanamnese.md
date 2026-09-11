@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_PR_MolGen_Familienanamnese |
+| Active as of 2026-09-11 | *Computable Name*:MII_PR_MolGen_Familienanamnese |
 
  
 Dieses Profil beschreibt die Familienanamnese eines Patienten im Kontext von genetischen Analysen. 
@@ -86,7 +86,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-fam
   "name" : "MII_PR_MolGen_Familienanamnese",
   "title" : "MII PR MolGen Familienanamnese",
   "status" : "active",
-  "date" : "2026-09-03T19:08:54+00:00",
+  "date" : "2026-09-11T11:03:31+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
