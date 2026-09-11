@@ -56,10 +56,9 @@ Darstellung von:
 * DNA-Fusionen, in eingeschränkter Form
 * Prozessierungsschritten (Bioinformatik-Pipeline inkl. verwendeter Datenbanken und Software) — vormalig out of scope, aber durch Update auf STU3 über GenomicStudy / GenomicStudyAnalysis möglich
 
-<!-- TODO:REVIEW Die folgenden begrifflichen Absätze stehen in der Quellseite
-     unmittelbar hinter der In-scope-Liste, ohne eigene Überschrift. Die
-     Reihenfolge der Quelle wurde beibehalten; ggf. als eigener Abschnitt vor
-     "Scope" einsortieren. -->
+<!-- ENTSCHIEDEN 2026-09-11: Reihenfolge und Struktur der Quelle bleiben. Die
+     Absätze schließen inhaltlich an die In-scope-Liste an; eine eigene Überschrift
+     würde sie davon trennen, statt sie auffindbarer zu machen. -->
 
 Ein **genetischer Befund** umfasst die Darlegung von Informationen zu genetischen
 Charakteristika einer humanen Probe. Die Probe kann für Menschen aus „normalem“,

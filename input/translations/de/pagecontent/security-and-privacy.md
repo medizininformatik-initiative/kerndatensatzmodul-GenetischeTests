@@ -45,27 +45,64 @@ nicht dieser Leitfaden.
 Dies ist der eigene Beitrag des Moduls: die Sicherheits- und
 Datenschutz-Eigenschaften, die aus der *Art der Daten dieses Moduls* folgen.
 
-<!-- DERIVED:no-source source=none gate=B -->
-> **Dieser Abschnitt ist noch nicht geschrieben — Entscheidung getroffen, Inhalt offen.**
-> Der Simplifier-Leitfaden, aus dem dieses Modul migriert wurde, enthält
-> überhaupt keine Sicherheits- oder Datenschutz-Darstellung; es gab hier also
-> nichts zu migrieren.
->
-> Das Template bietet einen Standardtext für Module ohne eigene Aspekte
-> ("führt dieses Modul keine Datenkategorie, die eigene Sicherheits- oder
-> Datenschutzaspekte aufwirft"). **Dieser Standardtext wurde bewusst NICHT
-> übernommen**, weil er für ein molekulargenetisches Modul unzutreffend wäre:
-> Das Modul führt genetische Sequenzdaten. Diese sind besondere Kategorien
-> personenbezogener Daten, sind auch nach Pseudonymisierung inhärent
-> re-identifizierend und enthalten Informationen über Blutsverwandte, die nicht
-> die betroffene Person sind und nicht eingewilligt haben.
->
-> Die eigentliche Analyse zu schreiben ist Aufgabe der Fach-Autorinnen und
-> -Autoren, nicht der Migration; sie bleibt deshalb offen statt geraten. Sie
-> muss vor dem ersten Release erfolgen: mindestens die geführten
-> Datenkategorien und ihre Sensibilität, das Re-Identifikationsrisiko, das eine
-> Pseudonymisierung auf Profilebene nicht beseitigt, die familiären
-> Implikationen sowie sicherheits- oder datenschutzbezogene
-> SHALL/SHOULD/MAY-Anforderungen dieses Moduls an Implementierende, jeweils mit
-> dem adressierten Risiko.
-{: .ig-highlight .ig-highlight-grey}
+<!-- Geschrieben 2026-09-11, nachdem der Platzhalter zwei Releases überdauert hatte.
+     Jede Aussage unten ist an den tatsächlich geführten Elementen belegt, nicht
+     allgemein über genetische Daten formuliert. Die normativen Anforderungen sind
+     als SHOULD/SHALL des Moduls gemeint und brauchen die Bestätigung der
+     Fachgruppe, bevor das Ballot schließt. -->
+
+##### Welche Daten dieses Modul führt
+
+Das Modul führt drei Kategorien, die über gewöhnliche Befunddaten hinausgehen.
+
+**Sequenzangaben.** Das Profil [Variante](StructureDefinition-mii-pr-molgen-variante.html)
+führt unter anderem das untersuchte Gen, die HGVS-Notation auf DNA- und Genomebene, die
+Referenzsequenz mit Assembly, exakte sowie innere und äußere Start-End-Positionen,
+Referenz- und Alternativallel und den DNA-Änderungstyp. Das ist keine Kodierung eines
+Befundes, sondern eine Beschreibung der Sequenz selbst.
+
+**Die Unterscheidung Keimbahn/somatisch.** Die Komponente `genomic-source-class` hält
+fest, ob eine Veränderung ererbt oder erworben ist. Keimbahnbefunde gelten unverändert
+lebenslang und betreffen Blutsverwandte.
+
+**Angaben über Dritte.** Das Profil
+[Familienanamnese](StructureDefinition-mii-pr-molgen-familienanamnese.html) führt
+Verwandtschaftsverhältnis, Verwandtschaftsgrad, familiäre Linie, Geschlecht und den Grund
+der Erhebung — zu Personen, die **nicht die betroffene Person sind** und in die Erhebung
+ihrer Daten nicht eingewilligt haben.
+
+##### Was daraus folgt
+
+**Re-Identifizierbarkeit überlebt die Pseudonymisierung.** Eine Pseudonymisierung auf
+Profilebene ersetzt Identifikatoren. Sie berührt nicht, dass eine hinreichende Zahl
+exakter Positionen mit Referenz- und Alternativallel eine Person eindeutig kennzeichnet —
+gegen jede andere Probe derselben Person und gegen Referenzdatenbanken. Die
+Sequenzangaben sind selbst der Identifikator. Das ist der Grund, warum die in Abschnitt 2
+beschriebenen Maßnahmen hier nicht ausreichen.
+
+**Der Befund reicht über die betroffene Person hinaus.** Ein Keimbahnbefund sagt etwas
+über Eltern, Geschwister und Kinder aus, die weder befragt noch eingewilligt haben. Die
+Familienanamnese macht diesen Bezug zusätzlich explizit.
+
+**Die Daten altern nicht.** Ein Pseudonym lässt sich wechseln, eine Sequenz nicht. Eine
+Offenlegung ist endgültig.
+
+Genetische Daten sind besondere Kategorien personenbezogener Daten im Sinne von
+Art. 9 DSGVO.
+
+##### Anforderungen dieses Moduls
+
+Die folgenden Anforderungen richten sich an Implementierende. Sie ergänzen die
+allgemeinen Maßnahmen aus Abschnitt 2, sie ersetzen sie nicht.
+
+| | Anforderung | adressiertes Risiko |
+|---|---|---|
+| **SHALL** | Sequenzangaben nur an Empfänger übermitteln, deren Zweckbindung sie ausdrücklich einschließt | Sequenzdaten sind selbst Identifikator; eine Weitergabe „im Rahmen des Befundes" trägt hier nicht |
+| **SHALL** | `genomic-source-class` führen, wo die Unterscheidung bekannt ist | ohne sie ist nicht erkennbar, ob ein Befund Verwandte betrifft |
+| **SHOULD** | Für Auswertungen, die keine Basengenauigkeit brauchen, die Positionsangaben weglassen statt sie mitzuliefern | senkt die Re-Identifizierbarkeit, ohne den fachlichen Zweck zu verfehlen |
+| **SHOULD** | Familienanamnese-Angaben getrennt von den Sequenzdaten freigeben | die Verknüpfung beider erhöht die Aussagekraft über Dritte erheblich |
+| **MAY** | Zugriffe auf Instanzen der Profile Variante, Genotyp und Familienanamnese gesondert protokollieren | ermöglicht Nachvollzug bei Verdacht auf Zweckentfremdung |
+
+Was davon technisch wie durchgesetzt wird — Zugriffskontrolle, Protokollierung,
+Einwilligungsprüfung — entscheidet die DIMP-Konfiguration des jeweiligen Projekts, nicht
+dieser Leitfaden. Dieses Modul benennt, **was** zu schützen ist und warum.

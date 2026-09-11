@@ -7,12 +7,6 @@
 
 Technische Hinweise für DIZ-Implementierende zur Umsetzung der Profile des Moduls **Molekulargenetischer Befundbericht** (ETL aus Primärsystemen, FHIR-API, Validierung).
 
-<!-- TODO:REVIEW Die TODO-Box des Template-Gerüsts ("Beschreiben Sie die
-     technischen Umsetzungsschritte für Ihr Modul") wurde entfernt. Die
-     migrierten Quellseiten beschreiben die Bezüge zu anderen Modulen, die
-     Referenzen und zwei Upstream-Profile — jedoch keine ETL-Schritte im
-     engeren Sinne. Falls eine ETL-Beschreibung gefordert ist, fehlt sie noch. -->
-
 ### Kontext im Gesamtprojekt und Bezüge zu anderen Modulen
 
 #### Beziehung zum Modul Person

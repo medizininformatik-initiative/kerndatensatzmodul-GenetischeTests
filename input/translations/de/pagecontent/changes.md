@@ -402,7 +402,7 @@ deutscher Übersetzung.
 
 #### Version 2026.0.1
 
-##### Hotfix: Familienanamnese Canonical URL
+##### BREAKING: Hotfix Familienanamnese Canonical URL
 
 **Breaking Change Fix**
 
@@ -415,10 +415,11 @@ deutscher Übersetzung.
 
 **Hinweis**: Die URL `familienanamnese` entspricht zwar nicht formal den aktuellen Namenskonventionen (erwartbar wäre `mii-pr-molgen-familienanamnese`), wird aber beibehalten um breaking changes zu vermeiden.
 
-<!-- TODO:REVIEW Dieser Abschnitt und der Abschnitt 2026.0.0 beschreiben Breaking Changes
-     (kanonische URL, umbenannte und entfernte Komponenten/Slices). Bei Gate C prüfen, ob sie
-     mit dem Präfix "BREAKING:" gekennzeichnet und um die von der Vorlage geforderten Angaben
-     (Auswirkung auf bestehende Daten, Migrationsempfehlung) ergänzt werden müssen. -->
+<!-- ENTSCHIEDEN 2026-09-11: Präfix gesetzt. Beide Abschnitte tragen jetzt
+     "BREAKING:" in der Überschrift, damit sie beim Überfliegen auffindbar sind --
+     gerade für Standorte, die von der 2026.0.x-Linie migrieren. Die von der
+     Vorlage geforderten Angaben (Auswirkung, Migrationsempfehlung) stehen im
+     Text der Abschnitte. -->
 
 ---
 
@@ -447,7 +448,7 @@ Konsolidierung von 18 Terminologie-Seiten in 4 übersichtliche Seiten, organisie
 
 Entfernte Einzelseiten: ClinVar-Evidence-Level, Condition-Inheritance-Pattern, DNAChangeType, Evidence-Level-Examples, Functional-Effect, HGNC, HGVS, HighLowcodes, MolecularConsequence, PharmGKB-Evidence-Level, TBD-Codes, Variant-Confidence-Status, VariantInheritance
 
-###### URL-Namensraum-Migration
+###### BREAKING: URL-Namensraum-Migration
 
 - `example.org` URLs durch MII FHIR Namensraum ersetzt (`https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/`)
 
@@ -487,10 +488,10 @@ Das folgende CodeSystem muss auf dem Terminologie-Server importiert werden:
 
 ##### Strukturänderungen der Implementation Guide Navigation
 
-<!-- TODO:REVIEW Die beiden folgenden Navigationsbäume beschreiben die Seitenstruktur des
-     Simplifier-Leitfadens vor dem Umzug auf das KDS-Modul-Template. Sie sind hier als
-     historischer Changelog-Eintrag zu 2026.0.0 erhalten. Bei Gate C entscheiden, ob ein
-     Hinweis auf die neue Template-Struktur ergänzt wird. -->
+<!-- ENTSCHIEDEN 2026-09-11: bleiben unverändert stehen. Sie sind ein
+     historischer Eintrag zu 2026.0.0 und beschreiben den Stand VOR dem Umzug aufs
+     KDS-Modul-Template; ein Verweis auf die heutige Struktur würde den
+     historischen Charakter verwischen. -->
 
 ###### IG-Struktur Version 2025.x (Flache Struktur)
 

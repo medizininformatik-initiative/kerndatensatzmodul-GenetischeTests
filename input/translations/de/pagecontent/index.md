@@ -15,16 +15,17 @@ FHIR-Profile, Extensions und Terminologie-Ressourcen in ihrer verbindlichen
 Form. Der MII-Kerndatensatz ermöglicht die standardisierte Sekundärnutzung
 klinischer Routinedaten für die medizinische Forschung.
 
-<!-- TODO:REVIEW Die migrierte Quellseite nennt als Veröffentlichungsdatum den
-     19.12.2025, das Template-Gerüst den 2026-01-02. Hier steht der Wert des
-     Gerüsts. Ebenfalls zu prüfen: die Klammer "(CalVer YYYY.n.n)" in der
-     Versionszeile stammt aus dem Template und ist eher ein Autorenhinweis als
-     ein Publikationsangabe. -->
+<!-- ENTSCHIEDEN 2026-09-11: Die Tabelle zeigt das Datum der JEWEILS AKTUELLEN
+     Version, gesetzt vom Release-Prozess -- nicht ein historisches Datum einer
+     migrierten Fassung. Die Frage 19.12.2025 gegen 2026-01-02 stellt sich damit
+     nicht mehr. Die Klammer "(CalVer YYYY.n.n)" hinter der Version war ein
+     Autorenhinweis aus dem Template und ist entfernt; die Seite Versionierung
+     erklaert das Schema. -->
 
 | Veröffentlichung |               |
 |-------------|---------------|
 | Datum       | 2026-09-07 |
-| Version     | 2027.0.0-ballot.rc2 (CalVer `YYYY.n.n`) |
+| Version     | 2027.0.0-ballot.rc2 |
 | Status      | active        |
 | Realm       | DE            |
 
@@ -130,9 +131,9 @@ Ansprechpersonen für die fachlichen Inhalte des Moduls:
 
 ### Autoren (in alphabetischer Reihenfolge)
 
-<!-- TODO:REVIEW Die Reihenfolge ist unverändert aus der Quellseite übernommen;
-     sie ist nicht durchgängig alphabetisch (u. a. "Kirsten Toralf",
-     "Stefan Fröhling"). Nicht ohne fachliche Freigabe umsortieren. -->
+<!-- ENTSCHIEDEN 2026-09-11: Reihenfolge bleibt unverändert. Eine Autorenreihenfolge
+     kann Beitragsgewicht ausdrücken; das ist von außen nicht erkennbar, und ohne
+     fachliche Freigabe wird nicht umsortiert. -->
 
 * Alexander Zautke (HL7 Deutschland)
 * Andrew Heidel (SMITH)
@@ -181,10 +182,3 @@ HL7 International gilt.
 Obwohl diese Publikation mit größter Sorgfalt erstellt wurde, können die
 Autoren keinerlei Haftung für direkten oder indirekten Schaden übernehmen, der
 durch den Inhalt dieser Spezifikation entstehen könnte.
-
-<!-- TODO:REVIEW Der migrierte Abschnitt "Navigation und Inhaltsverzeichnis"
-     der Simplifier-Startseite wurde nicht übernommen: er dupliziert die
-     Navigationsmenüs des Templates und den Abschnitt "Inhalt" oben, seine
-     Einträge waren keine Markdown-Links, und er verwies auf die entfallenen
-     STU2-Profile ErgebnisZusammenfassung und UntersuchteRegion. Falls einzelne
-     Sprungziele erhalten bleiben sollen, hier nachtragen. -->

@@ -17,10 +17,6 @@ von Codes: siehe
 [FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html); die
 zugrunde liegenden CodeSystems werden im Terminologie-Abschnitt dieser Seite
 beschrieben — das Modul definiert kein eigenes CodeSystem.
-<!-- TODO:REVIEW Der Satz war im Vorlagen-Scaffold unvollständig ("beschreibt die Seite
-     im Terminologie-Abschnitt dieser Seite beschrieben") und wurde entlang der
-     englischen Quellseite repariert. -->
-
 {:.bg-info}
 **Expansionen:** ValueSet-Expansionen dieses Leitfadens werden über einen
 FHIR-Terminologieserver erzeugt — über SU-TermServ, sofern das
@@ -86,7 +82,7 @@ Kodierung des Verwandtschaftsgrades für die Familienanamnese.
 
 Kodierung des Verwandtschaftsverhältnisses (biologisch, rechtlich, etc.).
 
-[mii-vs-molgen-verwandtschaftsverhaeltnis](ValueSet-mii-vs-molgen-verwandtschaftsverhaeltnis.html) <!-- TODO:REVIEW Tippfehler in der Quelle korrigiert: "mii-vs-molgen-verwandtsverhaeltnis" -> "mii-vs-molgen-verwandtschaftsverhaeltnis" (genau ein Kandidat) -->
+[mii-vs-molgen-verwandtschaftsverhaeltnis](ValueSet-mii-vs-molgen-verwandtschaftsverhaeltnis.html)
 
 ---
 

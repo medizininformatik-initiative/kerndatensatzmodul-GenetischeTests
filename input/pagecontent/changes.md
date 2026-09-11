@@ -386,7 +386,7 @@ a German translation.
 
 #### Version 2026.0.1
 
-##### Hotfix: Familienanamnese canonical URL
+##### BREAKING: Hotfix Familienanamnese canonical URL
 
 **Breaking change fix**
 
@@ -431,7 +431,7 @@ Consolidation of 18 terminology pages into 4 clear pages, organized by origin:
 
 Individual pages removed: ClinVar-Evidence-Level, Condition-Inheritance-Pattern, DNAChangeType, Evidence-Level-Examples, Functional-Effect, HGNC, HGVS, HighLowcodes, MolecularConsequence, PharmGKB-Evidence-Level, TBD-Codes, Variant-Confidence-Status, VariantInheritance
 
-###### URL namespace migration
+###### BREAKING: URL namespace migration
 
 - `example.org` URLs replaced by the MII FHIR namespace (`https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/`)
 
