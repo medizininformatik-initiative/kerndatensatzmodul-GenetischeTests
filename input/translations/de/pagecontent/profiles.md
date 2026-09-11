@@ -383,10 +383,6 @@ Drei spezielle Extensions erweitern die Standardressource:
 - **Familiäre Linie**: Mütterliche oder väterliche Seite
 
 Details siehe [Extensions](extensions.html)
-<!-- TODO:REVIEW Linkziel umgeschrieben: die Simplifier-Quelle verwies auf
-     Extensions/Familienanamnese-Extensions.page.md; dieser Inhalt steht jetzt auf
-     extensions.html. -->
-
 #### Klinische Bedeutung der Familienanamnese
 
 - Identifikation hereditärer Muster

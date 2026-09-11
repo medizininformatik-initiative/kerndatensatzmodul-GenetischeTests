@@ -18,16 +18,16 @@ covers the module's use cases and the associated FHIR profiles, extensions and
 terminology resources in their normative form. The MII Core Dataset enables the
 standardized secondary use of routine clinical data for medical research.
 
-<!-- TODO:REVIEW The migrated source page gives 2025-12-19 as the publication
-     date, the template scaffold gives 2026-01-02. The scaffold value is used
-     here. Also to be checked: the "(CalVer YYYY.n.n)" parenthesis in the
-     version row comes from the template and reads as an authoring hint rather
-     than a publication statement. -->
+<!-- DECIDED 2026-09-11: the table shows the date of the CURRENT version, set by
+     the release process — not a historical date of a migrated edition, so the
+     2025-12-19 versus 2026-01-02 question no longer arises. The "(CalVer
+     YYYY.n.n)" parenthesis was an authoring hint from the template and has been
+     removed; the Versioning page explains the scheme. -->
 
 | Publication |               |
 |-------------|---------------|
 | Date        | 2026-09-07 |
-| Version     | 2027.0.0-ballot.rc2 (CalVer `YYYY.n.n`) |
+| Version     | 2027.0.0-ballot.rc2 |
 | Status      | active        |
 | Realm       | DE            |
 

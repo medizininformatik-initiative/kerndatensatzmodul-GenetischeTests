@@ -26,12 +26,6 @@ In der thematischen Gruppierung **Weiteres / Formales** finden sich zusätzliche
 
 Die vollständige Liste der Datensatz-Elemente mit ihrem Pfad und der zugehörigen Erklärung steht im Element-Verzeichnis auf der Artefakt-Seite des logischen Modells; der IG-Publisher erzeugt diese Ansicht automatisch aus der StructureDefinition.
 
-<!-- TODO:REVIEW Die Simplifier-Quellseite erzeugte hier zwei FQL-Tabellen: (1) Name/Canonical des
-     logischen Modells - entfällt, weil der IG-Publisher den Artefakt-Header selbst rendert;
-     (2) eine Tabelle "Datensatz (path) / Erklaerung (definition)" ueber differential.element -
-     ersetzt durch den obigen Verweis auf das Element-Verzeichnis der Artefakt-Seite, die genau
-     diese beiden Spalten rendert. Bei Gate C pruefen, ob stattdessen das -dict-Fragment inline
-     eingebunden werden soll. -->
 #### Domänenmodell
 
 Das folgende Klassendiagramm zeigt dasselbe Modell als Übersicht: welche fachlichen
