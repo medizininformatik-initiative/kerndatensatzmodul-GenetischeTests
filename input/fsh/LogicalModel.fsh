@@ -3,6 +3,7 @@ Parent: Element
 Id: LogicalModelMolGen
 Title: "MII LM MolGen LogicalModel"
 Description: "LogicalModel des MII Moduls Molekulargenetischer Befundbericht"
+* insert MolGenCRMILogicalModel
 * insert PR_CS_VS_Version
 * ^status = #active
 * Probeninformation 1..1 BackboneElement "Probeninformation"

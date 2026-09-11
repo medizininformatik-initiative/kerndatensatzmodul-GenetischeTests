@@ -125,6 +125,7 @@
 Instance: mii-sp-molgen-genomic-study-analysis-specimen
 InstanceOf: SearchParameter
 Usage: #definition
+* insert MolGenCRMISearchParameter(MII SP MolGen Genomic Study Analysis Specimen)
 * insert SP_Publisher
 * insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-Specimen"
@@ -142,6 +143,7 @@ Usage: #definition
 Instance: mii-sp-molgen-genomic-study-analysis-method
 InstanceOf: SearchParameter
 Usage: #definition
+* insert MolGenCRMISearchParameter(MII SP MolGen Genomic Study Analysis Method Type)
 * insert SP_Publisher
 * insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-MethodType"
@@ -158,6 +160,7 @@ Usage: #definition
 Instance: mii-sp-molgen-genomic-study-analysis-regions-studied
 InstanceOf: SearchParameter
 Usage: #definition
+* insert MolGenCRMISearchParameter(MII SP MolGen Genomic Study Analysis Regions Studied)
 * insert SP_Publisher
 * insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-RegionsStudied"
@@ -174,6 +177,7 @@ Usage: #definition
 Instance: mii-sp-molgen-genomic-study-analysis-device
 InstanceOf: SearchParameter
 Usage: #definition
+* insert MolGenCRMISearchParameter(MII SP MolGen Genomic Study Analysis Device)
 * insert SP_Publisher
 * insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-Device"
@@ -192,6 +196,7 @@ Usage: #definition
 Instance: mii-sp-molgen-diagnostic-report-genomic-study
 InstanceOf: SearchParameter
 Usage: #definition
+* insert MolGenCRMISearchParameter(MII SP MolGen Diagnostic Report Genomic Study)
 * insert SP_Publisher
 * insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/DiagnosticReport-GenomicStudy"
@@ -209,6 +214,7 @@ Usage: #definition
 Instance: mii-sp-molgen-diagnostic-report-recommended-action
 InstanceOf: SearchParameter
 Usage: #definition
+* insert MolGenCRMISearchParameter(MII SP MolGen Diagnostic Report Recommended Action)
 * insert SP_Publisher
 * insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/DiagnosticReport-RecommendedAction"

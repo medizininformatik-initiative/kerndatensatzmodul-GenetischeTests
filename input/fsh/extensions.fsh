@@ -3,6 +3,7 @@ Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/recommende
 Id: mii-ex-molgen-empfohlene-massnahme
 Title: "MII EX MolGen Empfohlene Maßnahme"
 Description: "Die Extension verweist auf eine vorgeschlagene Maßnahme, die auf der Grundlage der Ergebnisse des Befundberichts empfohlen wird."
+* insert MolGenCRMIExtension
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^status = #active

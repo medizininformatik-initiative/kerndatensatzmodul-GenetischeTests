@@ -31,6 +31,7 @@ RuleSet: SupportSearchParam (name, canonical, type, expectation)
 Instance: mii-cps-molgen-capabilitystatement
 InstanceOf: CapabilityStatement
 Usage: #definition
+* insert MolGenCRMICapabilityStatement
 * insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/CapabilityStatement/metadata"
 * name = "MII_CPS_MolGen_CapabilityStatement"

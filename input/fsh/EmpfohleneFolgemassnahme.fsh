@@ -3,6 +3,7 @@ Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/followup-r
 Id: mii-pr-molgen-empfohlene-folgemassnahme
 Title: "MII PR MolGen Empfohlene Folgemaßnahme"
 Description: "Das Profil dieser Task Ressource beschreibt die empfohlenen Folgemaßnahmen."
+* insert MolGenCRMIProfile
 * insert Publisher
 * insert PR_CS_VS_Version
 * ^status = #active
