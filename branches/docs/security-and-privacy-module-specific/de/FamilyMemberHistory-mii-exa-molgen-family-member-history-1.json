@@ -1,0 +1,58 @@
+{
+  "resourceType" : "FamilyMemberHistory",
+  "id" : "mii-exa-molgen-family-member-history-1",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese|2027.0.0-ballot.rc2"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: FamilyMemberHistory mii-exa-molgen-family-member-history-1</b></p><a name=\"de-mii-exa-molgen-family-member-history-1\"> </a><a name=\"de-hcmii-exa-molgen-family-member-history-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-molgen-familienanamnese.html\">MII PR MolGen Familienanamnese</a> version: 2027.0.0-ballot.rc2</p></div><p><b>status</b>: Completed</p><p><b>patient</b>: <a href=\"Patient-mii-exa-molgen-patient.html\">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Krankenaktennummer\u00a0(use:\u00a0usual,\u00a0))</a></p><p><b>date</b>: 2022-04-07</p><p><b>relationship</b>: <span title=\"Codes:{http://snomed.info/sct 72705000}, {http://terminology.hl7.org/CodeSystem/v3-RoleCode MTH}\">Mother (person)</span></p><p><b>sex</b>: <span title=\"Codes:{http://hl7.org/fhir/administrative-gender female}, {http://snomed.info/sct 248152002}\">Female (finding)</span></p><p><b>deceased</b>: true</p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 447886005}\">Adenocarcinoma of anorectum (disorder)</span></p><h3>Conditions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>ContributedToDeath</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 830150003}\">Malignant melanoma with B-Raf proto-oncogene, serine/threonine kinase V600E mutation (disorder)</span></td><td>true</td></tr></table></div>"
+  },
+  "status" : "completed",
+  "patient" : {
+    "reference" : "Patient/mii-exa-molgen-patient"
+  },
+  "date" : "2022-04-07",
+  "relationship" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "72705000",
+      "display" : "Mother (person)"
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+      "code" : "MTH",
+      "display" : "mother"
+    }]
+  },
+  "sex" : {
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/administrative-gender",
+      "code" : "female"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "248152002",
+      "display" : "Female (finding)"
+    }]
+  },
+  "deceasedBoolean" : true,
+  "reasonCode" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "447886005",
+      "display" : "Adenocarcinoma of anorectum (disorder)"
+    }]
+  }],
+  "condition" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "830150003",
+        "display" : "Malignant melanoma with B-Raf proto-oncogene, serine/threonine kinase V600E mutation (disorder)"
+      }]
+    },
+    "contributedToDeath" : true
+  }]
+}

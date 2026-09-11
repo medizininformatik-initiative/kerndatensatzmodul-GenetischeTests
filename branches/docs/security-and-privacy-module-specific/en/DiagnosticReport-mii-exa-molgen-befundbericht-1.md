@@ -1,0 +1,137 @@
+# Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc2
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom**
+
+## Example DiagnosticReport: Molekulargentischer Befund 1: BRAF mutiert colorektales Adenokarzinom
+
+-------
+
+**English**
+
+-------
+
+Profiles: [MII PR MolGen Molekulargenetischer Befundbericht](StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.md) version: 2027.0.0-ballot.rc2, [Genomic Report](http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-genomic-report.html) version: 3.0.0
+
+## Genetic analysis report (Genetics) 
+
+| | |
+| :--- | :--- |
+| Subject | Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Medical record number (use: usual, )) |
+| Performer | [Practitioner Dr. Daniel Schmidt(official)](Practitioner-mii-exa-molgen-practitioner-lab.md) |
+
+**Report Details**
+
+* **Code**: [Diagnostic Implication](Observation-mii-exa-molgen-diagnostische-implikation-1.md)
+  * **Value**: 
+  * **Flags**: Final
+  * **Relevant Time**: 2022-04-07
+* **Code**: [Therapeutic Implication](Observation-mii-exa-molgen-therapeutische-implikation-1.md)
+  * **Value**: 
+  * **Flags**: Final
+  * **Relevant Time**: 2022-04-07
+* **Code**: [Genetic variant assessment](Observation-mii-exa-molgen-variante-1.md)
+  * **Value**: Present
+  * **Flags**: Final
+  * **Relevant Time**: 2022-04-07
+* **Code**: [Genotype display name](Observation-mii-exa-molgen-genotyp-1.md)
+  * **Value**: BRAF rs113488022 T>A
+  * **Flags**: Final
+  * **Relevant Time**: 2022-04-07
+* **Code**: [Mutations/Megabase [# Ratio] in Tumor](Observation-mii-exa-molgen-mutationslast-1.md)
+  * **Value**: 12 Mutations/Megabase (Details: UCUM code1/1000000{Base} = '1/1000000{Base}')
+  * **Flags**: Final
+  * **Relevant Time**: 
+* **Code**: [Microsatellite instability [Interpretation] in Cancer specimen Qualitative](Observation-mii-exa-molgen-mikrosatelliteninstabilitaet-1.md)
+  * **Value**: Stable
+  * **Flags**: Final
+  * **Relevant Time**: 
+
+BRAF p.V600E Mutation liegt vor. Bitte Therapieoption mit einem BRAF-Inhibitor prüfen.
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "DiagnosticReport",
+  "id" : "mii-exa-molgen-befundbericht-1",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht|2027.0.0-ballot.rc2",
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report|3.0.0"]
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-reference",
+    "valueReference" : {
+      "reference" : "Procedure/mii-exa-molgen-genomic-study-1"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/recommended-action",
+    "valueReference" : {
+      "reference" : "Task/mii-exa-molgen-medikationsempfehlung-1"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/recommended-action",
+    "valueReference" : {
+      "reference" : "Task/mii-exa-molgen-folgemassnahme-1"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo",
+    "valueReference" : {
+      "reference" : "FamilyMemberHistory/mii-exa-molgen-family-member-history-1"
+    }
+  }],
+  "basedOn" : [{
+    "reference" : "ServiceRequest/mii-exa-molgen-anforderung-1"
+  }],
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+      "code" : "GE",
+      "display" : "Genetics"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "51969-4",
+      "display" : "Genetic analysis report"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-molgen-patient"
+  },
+  "performer" : [{
+    "reference" : "Practitioner/mii-exa-molgen-practitioner-lab"
+  }],
+  "specimen" : [{
+    "reference" : "Specimen/mii-exa-molgen-specimen-1"
+  }],
+  "result" : [{
+    "reference" : "Observation/mii-exa-molgen-diagnostische-implikation-1"
+  },
+  {
+    "reference" : "Observation/mii-exa-molgen-therapeutische-implikation-1"
+  },
+  {
+    "reference" : "Observation/mii-exa-molgen-variante-1"
+  },
+  {
+    "reference" : "Observation/mii-exa-molgen-genotyp-1"
+  },
+  {
+    "reference" : "Observation/mii-exa-molgen-mutationslast-1"
+  },
+  {
+    "reference" : "Observation/mii-exa-molgen-mikrosatelliteninstabilitaet-1"
+  }],
+  "conclusion" : "BRAF p.V600E Mutation liegt vor. Bitte Therapieoption mit einem BRAF-Inhibitor prüfen."
+}
+
+```
