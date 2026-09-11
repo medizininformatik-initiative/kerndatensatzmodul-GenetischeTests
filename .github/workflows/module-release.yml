@@ -25,14 +25,18 @@
 #   - push tag `v[0-9]+.[0-9]+.[0-9]+*` (CalVer, e.g. v2026.0.1; the same glob
 #     kerndatensatz-basis uses, for example) →
 #     build + publish the release with the changelog notes for that version.
-#   - release published → announce on the MII Zulip.
+#   - release published → announce on the MII Zulip. This fires ONLY when a
+#     human publishes a drafted release: a release created by an Action using
+#     GITHUB_TOKEN raises no event, by GitHub's anti-recursion rule. The normal,
+#     automatic path therefore announces inside the `release` job itself.
 #   - workflow_dispatch → dry run: build only, NO release side effects.
 #
 # Toggles:
 #   - vars.ENABLE_MODULE_RELEASE — gates `build` + `release`; ON by default
 #     (set the repo variable to 'false' to disable the automated release path).
-#   - vars.ENABLE_ZULIP_ANNOUNCE — gates `notify_zulip`; ON by default (set to
-#     'false' to disable the MII announcement). Same toggle name the template's
+#   - vars.ENABLE_ZULIP_ANNOUNCE — gates BOTH announcement paths (the step in
+#     `release` and the `notify_zulip` job); ON by default (set to 'false' to
+#     disable the MII announcement). Same toggle name the template's
 #     notify-zulip.yml uses — both are "MII Zulip release announcement".
 #   - vars.RELEASE_AS_DRAFT — set to 'true' to draft the release instead of
 #     publishing it, for a version that needs a look before it goes out.
@@ -355,6 +359,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # create the GitHub Release for this tag
+    env:
+      # Job level on purpose: a step's `if:` cannot read that step's own `env:`,
+      # so the announcement condition below would silently evaluate to empty.
+      ZULIP_API_KEY: ${{ secrets.ZULIP_API_KEY }}
     steps:
       - name: Check out the tag (the changelog is the source of the notes)
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -436,6 +444,7 @@ jobs:
           path: release-assets
 
       - name: Create the GitHub Release
+        id: gh_release
         uses: softprops/action-gh-release@3d0d9888cb7fd7b750713d6e236d1fcb99157228 # v3.0.2
         with:
           name: "${{ steps.prep.outputs.version }}"
@@ -460,6 +469,61 @@ jobs:
             Actions → "Publish release with IG Publisher" (`go-publish.yml`),
             first with `publish: false` (a complete dry run), then — only after
             review — with `publish: true`.
+
+      # Announcing HERE, in the same job, is not a duplicate of the notify_zulip
+      # job below — it is the only path that can still fire.
+      #
+      # A release created by an Action using GITHUB_TOKEN does NOT trigger further
+      # workflow runs; GitHub suppresses that to prevent recursion. While a human
+      # clicked "Publish release", a real `release: published` event existed and
+      # notify_zulip ran — the release-event runs are in this repository's history
+      # up to v2026.0.4 on 2026-01-02. The moment this workflow began publishing
+      # by itself, that event stopped happening and the announcement fell silent
+      # WITHOUT any error. Found on v2027.0.0-ballot.rc2, which published cleanly
+      # and announced nothing.
+      #
+      # notify_zulip stays for the path where someone publishes a drafted release
+      # by hand; there the event does exist.
+      - name: Announce the release on the MII Zulip
+        if: >-
+          ${{ steps.notes.outputs.found == 'true'
+          && vars.RELEASE_AS_DRAFT != 'true'
+          && vars.ENABLE_ZULIP_ANNOUNCE != 'false'
+          && env.ZULIP_API_KEY != '' }}
+        uses: zulip/github-actions-zulip/send-message@f675f2b4eb2a95fae974215476dcb7ad8dfeff6b # v2.0.2
+        with:
+          api-key: ${{ secrets.ZULIP_API_KEY }}
+          email: "kds-github-bot@mii.zulipchat.com"
+          organization-url: "https://mii.zulipchat.com/"
+          type: "stream"
+          to: "MII-Kerndatensatz"
+          topic: "Releases"
+          content: |
+            **New Release:** `${{ steps.prep.outputs.version }}`
+            **Repository:** `${{ github.repository }}`
+
+            ${{ steps.notes.outputs.body }}
+
+            🔗 [View on GitHub](${{ steps.gh_release.outputs.url }})
+
+      - name: Report why no announcement went out
+        if: >-
+          ${{ steps.notes.outputs.found != 'true'
+          || vars.RELEASE_AS_DRAFT == 'true'
+          || vars.ENABLE_ZULIP_ANNOUNCE == 'false'
+          || env.ZULIP_API_KEY == '' }}
+        shell: bash
+        run: |
+          # Silence is what hid the defect this step exists for. Say the reason.
+          if [ "${{ steps.notes.outputs.found }}" != "true" ]; then
+            echo "::notice::Release was drafted (no changelog section) — announcing when it is published by hand."
+          elif [ "${{ vars.RELEASE_AS_DRAFT }}" = "true" ]; then
+            echo "::notice::RELEASE_AS_DRAFT is set — announcing when the draft is published by hand."
+          elif [ "${{ vars.ENABLE_ZULIP_ANNOUNCE }}" = "false" ]; then
+            echo "::notice::ENABLE_ZULIP_ANNOUNCE=false — MII announcement deliberately skipped."
+          else
+            echo "::notice::ZULIP_API_KEY not set — skipping MII announcement."
+          fi
 
       - name: Hand off to gated formal publication (go-publish.yml)
         shell: bash
