@@ -94,6 +94,64 @@ werden können.</p>
 
 ---
 
+#### Version 2027.0.0-ballot.rc3
+
+**Datum:** 2026-09-14 · **Release-Kandidat**
+
+Der dritte Kandidat schließt, was rc2 offengelassen hat: die Artefakt-Metadaten, die
+Sicherheitsanalyse und die offenen Redaktionsvermerke.
+
+##### Keine Breaking Changes
+
+Geprüft: keine kanonische URL, kein Profilname, kein Slice und keine Kardinalität hat sich
+geändert. Was hinzukommt, sind Metadaten an den Artefakten und Text im Leitfaden.
+Instanzen, die gegen rc2 valide waren, bleiben es.
+
+##### Metadaten
+
+* **CRMI ist an allen 33 Artefakten angeschlossen** — 22 StructureDefinitions, 4
+  ValueSets, 6 SearchParameter und das CapabilityStatement. Bis rc2 beanspruchte nur der
+  ImplementationGuide selbst CRMI, während 32 fertige RuleSets ungenutzt im Repository
+  lagen; das publizierte rc2-Paket trägt 0 von 22 StructureDefinitions mit
+  CRMI-Anspruch.
+
+  Dazu gehören `artifact-author`, die MII-weiten Gremienangaben aus
+  Editor, Reviewer und Endorser, `artifact-topic`, `resource-approvalDate`,
+  `artifact-versionPolicy`, `cqf-knowledgeCapability` und die Paketherkunft. Die
+  SearchParameter tragen zusätzlich `artifact-title`, weil
+  `crmi-publishablesearchparameter` einen Titel verlangt und SearchParameter kein
+  natives `title` kennt.
+
+##### Sicherheit und Datenschutz
+
+* **Der modulspezifische Abschnitt ist geschrieben.** Er stand seit der Migration als
+  Platzhalter und hatte rc1 und rc2 überlebt, obwohl er selbst sagte, er müsse vor dem
+  ersten Release erfolgen.
+
+  Er ist an den tatsächlich geführten Elementen belegt: HGVS auf DNA- und Genomebene mit
+  exakten Positionen, Referenz- und Alternativallel, die Unterscheidung Keimbahn gegen
+  somatisch und die Angaben zu Verwandten in der Familienanamnese. Daraus folgt, was den
+  Abschnitt trägt — **die Sequenzangaben sind selbst der Identifikator**, weshalb eine
+  Pseudonymisierung auf Profilebene das Re-Identifikationsrisiko nicht beseitigt. Fünf
+  Anforderungen als SHALL, SHOULD und MAY benennen jeweils das adressierte Risiko.
+
+##### Dokumentation
+
+* **Die Clinical Genomics Working Group wird auf der Startseite gewürdigt.** Zwölf der
+  einundzwanzig Profile leiten sich unmittelbar von Clinical Genomics Reporting STU3 ab;
+  das fachliche Modell, die Komponentenstruktur, die Terminologiebindungen und die
+  Benennung stammen von dort. Die `artifact-author`-Angabe bezieht sich auf die
+  MII-spezifische Einschränkung und beansprucht keine Urheberschaft am Modell.
+
+* **Breaking Changes tragen jetzt das Präfix `BREAKING:`** in der Überschrift — die
+  kanonische URL der Familienanamnese und die URL-Namensraum-Migration, beide aus der
+  2026er-Linie.
+
+* Alle **redaktionellen Vermerke der Template-Migration sind aufgelöst**: sechs waren
+  reine Protokolle, fünf brauchten eine Entscheidung und haben sie bekommen. Die Klammer
+  „(CalVer `YYYY.n.n`)" hinter der Versionsangabe war ein Autorenhinweis der Vorlage und
+  ist entfernt.
+
 #### Version 2027.0.0-ballot.rc2
 
 **Datum:** 2026-09-07 · **Release-Kandidat**

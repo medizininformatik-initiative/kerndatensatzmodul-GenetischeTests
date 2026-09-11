@@ -21,14 +21,21 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 // ── Resource-independent version policy ──────────────────────────────────────
+// Die Version 3.0.0 am Coding ist nicht kosmetisch. Zwei Pakete liefern dasselbe
+// CodeSystem-Canonical mit unterschiedlichem Inhalt:
+//   hl7.terminology.r4 7.x            -> Version 3.0.0, Codes metadata/strict/loose/package
+//   hl7.fhir.uv.extensions.r4 5.2.0   -> Version 5.2.0, Codes metadata/strict
+// Ohne die Angabe greift der Validator die Extensions-Variante und meldet
+// "Unbekannter Code package ... Version 5.2.0". kerndatensatz-basis nagelt die
+// Version aus demselben Grund fest; beim Port hierher ging sie verloren.
 
 RuleSet: CRMIVersionPolicyStrict
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy"
-* ^extension[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes#package "Package"
+* ^extension[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes|3.0.0#package "Package"
 
 RuleSet: CRMIVersionPolicyStrictInstance
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy"
-* extension[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes#package "Package"
+* extension[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes|3.0.0#package "Package"
 
 // ── Copyright label ──────────────────────────────────────────────────────────
 // basis notes that there is currently no resource type in the module where
@@ -204,7 +211,7 @@ RuleSet: CRMIKnowledgeCapabilitiesValueSet
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Nachportiert aus kerndatensatzmodul-onkologie (input/fsh/rulesets/crmi.fsh,
-// Stand 2027.0.0-ballot.rc2): vier Bausteine, die der basis-Port noch nicht
+// Stand 2027.0.0-ballot.rc3): vier Bausteine, die der basis-Port noch nicht
 // hatte, plus die MolGen-Komposite, die sie an den Callsites buendeln.
 // Callsite-Werte laut Port-Header dieser Datei: approvalDate 2026-09-15 (User 2026-09-09; der Port-Header nannte 2026-01-02),
 // Topic C17457 (NCI Thesaurus).
@@ -223,7 +230,7 @@ RuleSet: CRMIMetaLicenseAndSource
 // zentralen Version-RuleSet; Lektion aus dem Onko-Modul, wo es beim Sprung auf
 // die Ballot-Linie vergessen wurde).
 * ^meta.extension[=].extension[+].url = "version"
-* ^meta.extension[=].extension[=].valueString = "2027.0.0-ballot.rc2"
+* ^meta.extension[=].extension[=].valueString = "2027.0.0-ballot.rc3"
 * ^meta.extension[=].extension[+].url = "uri"
 * ^meta.extension[=].extension[=].valueUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen"
 
@@ -238,7 +245,7 @@ RuleSet: CRMIMetaLicenseAndSourceInstance
 // ('Extension.url must be an absolute URL'). Versionsliteral: beim
 // Release-Bump mitziehen.
 * meta.extension[=].extension[+].url = "version"
-* meta.extension[=].extension[=].valueString = "2027.0.0-ballot.rc2"
+* meta.extension[=].extension[=].valueString = "2027.0.0-ballot.rc3"
 * meta.extension[=].extension[+].url = "uri"
 * meta.extension[=].extension[=].valueUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen"
 
