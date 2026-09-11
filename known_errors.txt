@@ -41,8 +41,33 @@ A3  ANZAHL: 9
      or url parameter.)"
     Betrifft mii-vs-molgen-verwandtschaftsverhaeltnis, -verwandtschaftsgrad und
     -familiaere-linie. Der Aufruf ist fehlerhaft, nicht der Code: der Validator
-    fragt SNOMED typ-gebunden ab, ohne valueSet oder url mitzugeben. Die Codes
-    selbst sind dabei nie geprüft worden.
+    fragt SNOMED typ-gebunden ab, ohne valueSet oder url mitzugeben.
+
+    NACHGEPRÜFT 2026-09-11, von Hand: alle neun Codes einzeln am
+    MII-Terminologieserver (Proxy auf localhost:3000) gegen die hier gepinnte
+    Version http://snomed.info/sct/900000000000207008/version/20260701
+    nachgeschlagen. Alle neun vorhanden, alle aktiv, alle mit dem erwarteten
+    Display:
+
+      66839005   Father                         aktiv
+      699110007  Second degree blood relative   aktiv
+      13646006   Natural parent                 aktiv
+      60614009   Natural brother                aktiv
+      73678001   Natural sister                 aktiv
+      45929001   Half-brother                   aktiv
+      2272004    Half-sister                    aktiv
+      62296006   Natural grandfather            aktiv
+      17945006   Natural grandmother            aktiv
+
+    Der Eintrag sagte vorher, die Codes seien "nie geprüft worden". Für den
+    Validierungslauf gilt das weiter, für diese Datei nicht mehr.
+
+    Eine Warnung an alle, die das nachstellen: das MCP-Terminologiewerkzeug und
+    der Proxy auf Port 3000 sprechen NICHT mit demselben Server. Das Werkzeug
+    fragt das lokale Snowstorm X auf 8090, das nur 20260501 führt und 20260701
+    als "not found" meldet. Nur der Proxy auf 3000 erreicht den MII-Server.
+    Diese Verwechslung hat hier schon zweimal zu der falschen Schlussfolgerung
+    geführt, die gepinnte SNOMED-Version existiere nicht.
 
 
 ## ────────────────────────────────────────────────────────────────────────────
@@ -75,6 +100,19 @@ B1  ANZAHL: 2   (einzeln + im Bundle)
 
     Aufzulösen, sobald es ein Codesystem für Fusionsnotationen gibt oder das
     Profil ohnehin bricht.
+
+    WO DAS HINGEHÖRT, festgelegt 2026-09-11: nicht in dieses Modul. Das
+    Erweiterungsmodul Molekulares Tumorboard
+    (https://simplifier.net/mii-erweiterungsmodul-molekulares-tumorboard) sieht
+    für Genfusionen eine detaillierte Modellierung auf Basis des
+    dnpm-Datensatzes vor. Dieses Modul verweist darauf, statt eine eigene
+    Notlösung zu etablieren, die später zwei konkurrierende Abbildungen ergäbe.
+    Der Eintrag bleibt damit offen, aber nicht mehr richtungslos: er wartet auf
+    das MTB-Modul, nicht auf ein hypothetisches Codesystem.
+
+    Die Seite Änderungshistorie führt diesen Punkt ab 2027.0.0-ballot.rc2 unter
+    "Bekannte Probleme" auf, damit Lesende des Leitfadens ihn nicht für einen
+    übersehenen Datenfehler halten.
 
 
 ## ────────────────────────────────────────────────────────────────────────────
