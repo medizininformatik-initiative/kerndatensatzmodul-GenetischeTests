@@ -1,0 +1,51 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "mii-sp-molgen-genomic-study-analysis-method",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: SearchParameter mii-sp-molgen-genomic-study-analysis-method</b></p><a name=\"mii-sp-molgen-genomic-study-analysis-method\"> </a><a name=\"hcmii-sp-molgen-genomic-study-analysis-method\"> </a><h2>SP_MII_MolGen_GenomicStudyAnalysis_MethodType</h2><p>Parameter <code>method-type</code>:<code>token</code></p><div><p>Finds analyses by the sequencing or genotyping method applied (for example targeted panel, whole exome, whole genome). The method sits in the genomic-study-analysis-method-type extension, which no base Procedure search parameter reaches.</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/procedure.html\">Procedure</a></td></tr><tr><td>Expression</td><td><code>Procedure.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type').value</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: It's up to the server whether the parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: It's up to the server whether the parameter can have multiple values (separated by comma) where at least one must be true</li></ul></td></tr></table></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: SearchParameter mii-sp-molgen-genomic-study-analysis-method</b></p><a name=\"de-mii-sp-molgen-genomic-study-analysis-method\"> </a><a name=\"de-hcmii-sp-molgen-genomic-study-analysis-method\"> </a><h2>SP_MII_MolGen_GenomicStudyAnalysis_MethodType</h2><p>Parameter <code>method-type</code>:<code>token</code></p><div><p>Finds analyses by the sequencing or genotyping method applied (for example targeted panel, whole exome, whole genome). The method sits in the genomic-study-analysis-method-type extension, which no base Procedure search parameter reaches.</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/procedure.html\">Procedure</a></td></tr><tr><td>Expression</td><td><code>Procedure.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type').value</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: It's up to the server whether the parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: It's up to the server whether the parameter can have multiple values (separated by comma) where at least one must be true</li></ul></td></tr></table></div></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-MethodType",
+  "version" : "2027.0.0-ballot.rc2",
+  "name" : "SP_MII_MolGen_GenomicStudyAnalysis_MethodType",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-11-08",
+  "publisher" : "Medizininformatik-Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik-Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik-Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    },
+    {
+      "system" : "email",
+      "value" : "info@medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Finds analyses by the sequencing or genotyping method applied (for example targeted panel, whole exome, whole genome). The method sits in the genomic-study-analysis-method-type extension, which no base Procedure search parameter reaches.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "code" : "method-type",
+  "base" : ["Procedure"],
+  "type" : "token",
+  "expression" : "Procedure.extension.where(url='http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type').value"
+}
