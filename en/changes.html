@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Changelog - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot</title>
+    <title>Changelog - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot - 
+            <span style="display:inline-block;">2027.0.0-ballot.1 - 
 
 
 
@@ -314,7 +314,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht (v2027.0.0-ballot: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht (v2027.0.0-ballot.1: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Changelog</h2>
   
 
@@ -424,6 +424,57 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 
 <hr />
 
+<h4 id="version-202700-ballot1">Version 2027.0.0-ballot.1</h4>
+
+<p><strong>Date:</strong> 2026-09-16 · <strong>Ballot</strong></p>
+
+<p>A correction to the dependency statements. <strong>No profile, extension, value set or example
+changes.</strong></p>
+
+<h5 id="no-breaking-changes">No breaking changes</h5>
+
+<h5 id="dependencies-moved-to-the-mii-modules-ballot-versions">Dependencies moved to the MII modules' ballot versions</h5>
+
+<p><code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code> pointed at release candidates of the three MII modules although the
+ballot version of all three was available:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Module</th>
+      <th>was</th>
+      <th>now</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">kerndatensatz.meta</code></td>
+      <td><code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc3</code></td>
+      <td><code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">kerndatensatz.base</code></td>
+      <td><code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc1</code></td>
+      <td><code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">kerndatensatz.biobank</code></td>
+      <td><code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc2</code></td>
+      <td><code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A ballot validating against other modules' candidates is inconsistent — reviewers would
+have checked against states that are themselves marked provisional.</p>
+
+<p><strong>Without consequence for the content, and that is measured.</strong> A build against the old and
+a build against the new dependencies differ in <strong>none of 139 of 140 resources</strong>; the sole
+difference is the ImplementationGuide resource with the three changed version statements.
+The upstream packages did grow — meta from 173 to 177, base from 36 to 38, biobank from 44
+to 49 resources — but none of it touches what this module uses: eight search parameters
+from meta, one IG reference from base, and <code class="language-plaintext highlighter-rouge">SpecimenCore</code> from biobank.</p>
+
 <h4 id="version-202700-ballot">Version 2027.0.0-ballot</h4>
 
 <p><strong>Date:</strong> 2026-09-15 · <strong>Ballot</strong></p>
@@ -432,7 +483,7 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 publication carries the ballot label; it changes nothing in profiles, extensions, value
 sets or examples.</p>
 
-<h5 id="no-breaking-changes">No breaking changes</h5>
+<h5 id="no-breaking-changes-1">No breaking changes</h5>
 
 <p>No artifact changed against rc3. Whoever implemented against rc3 implements against this
 version.</p>
@@ -462,7 +513,7 @@ Genomics Working Group, and the documented known issues.</li>
 <p>The third candidate closes what rc2 left open: the artifact metadata, the security
 analysis, and the outstanding editorial notes.</p>
 
-<h5 id="no-breaking-changes-1">No breaking changes</h5>
+<h5 id="no-breaking-changes-2">No breaking changes</h5>
 
 <p>Checked: no canonical URL, profile name, slice or cardinality changed. What is added is
 metadata on the artifacts and text in the guide. Instances valid against rc2 remain valid.</p>
@@ -528,7 +579,7 @@ version was an authoring hint from the template and has been removed.</p>
 
 <p>The first candidate was formally published; this one closes what that exposed.</p>
 
-<h5 id="no-breaking-changes-2">No breaking changes</h5>
+<h5 id="no-breaking-changes-3">No breaking changes</h5>
 
 <p>Checked rather than assumed, because the CalVer number carries no warning of its own.</p>
 
@@ -1333,8 +1384,8 @@ slice to CodeableConcept).</li>
 
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Sun, Sep 13, 2026 11:19+0000">2026-09-13</span>
+          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Sun, Sep 13, 2026 17:10+0000">2026-09-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -1,4 +1,4 @@
-# Agilent SureSelect Human All Exon V7 Protocol - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot
+# Agilent SureSelect Human All Exon V7 Protocol - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect | *Version*:2027.0.0-ballot |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect | *Version*:2027.0.0-ballot.1 |
 | Active as of 2026-09-13 | *Computable Name*:AgilentSureSelectV7 |
 
  
@@ -23,11 +23,11 @@ Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the hu
 * **Actions: **: **Url: **
   * : [Agilent SureSelect Human All Exon V7 Kit Protocol](PlanDefinition-mii-exa-molgen-protocol-agilent-sureselect.md)
 * **Actions: **: **Version: **
-  * : 2027.0.0-ballot
+  * : 2027.0.0-ballot.1
 * **Actions: **: **Title: **
   * : Agilent SureSelect Human All Exon V7 Kit Protocol
 * **Actions: **: **Date: **
-  * : 2026-09-13 11:19:28+0000
+  * : 2026-09-13 17:10:50+0000
 * **Actions: **: **Publisher: **
   * : Medizininformatik-Initiative
 * **Actions: **: **Description: **
@@ -44,7 +44,7 @@ Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the hu
   "resourceType" : "PlanDefinition",
   "id" : "mii-exa-molgen-protocol-agilent-sureselect",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.1",
   "name" : "AgilentSureSelectV7",
   "title" : "Agilent SureSelect Human All Exon V7 Kit Protocol",
   "type" : {
@@ -55,7 +55,7 @@ Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the hu
     }]
   },
   "status" : "active",
-  "date" : "2026-09-13T11:19:28+00:00",
+  "date" : "2026-09-13T17:10:50+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "contact" : [{
     "name" : "Medizininformatik-Initiative",

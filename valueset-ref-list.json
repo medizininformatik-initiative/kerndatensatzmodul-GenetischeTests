@@ -11,8 +11,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.235"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.html" : "MII PR MolGen Molekulargenetischer Befundbericht",
-    "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel"
+    "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel",
+    "StructureDefinition-mii-pr-molgen-molekulargenetischer-befundbericht.html" : "MII PR MolGen Molekulargenetischer Befundbericht"
   },
   {
     "url" : "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/condition-inheritance-mode-vs",
@@ -24,8 +24,8 @@
     "systems" : ["http://human-phenotype-ontology.org"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation",
-    "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel"
+    "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel",
+    "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation"
   },
   {
     "url" : "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/evidence-level-example-vs",
@@ -38,10 +38,10 @@
     "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/pharmgkb-evidence-level-custom-cs"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation",
     "StructureDefinition-mii-pr-molgen-therapeutische-implikation.html" : "MII PR MolGen Therapeutische Implikation",
-    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz",
-    "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel"
+    "StructureDefinition-LogicalModelMolGen.html" : "MII LM MolGen LogicalModel",
+    "StructureDefinition-mii-pr-molgen-diagnostische-implikation.html" : "MII PR MolGen Diagnostische Implikation",
+    "StructureDefinition-mii-pr-molgen-molekulare-konsequenz.html" : "MII PR MolGen Molekulare Konsequenz"
   },
   {
     "url" : "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgnc-vs",
@@ -54,11 +54,11 @@
     "http://www.genenames.org"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp",
-    "StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html" : "MII PR MolGen Mikrosatelliteninstabilität",
+    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekularer Biomarker",
     "StructureDefinition-mii-pr-molgen-mutationslast.html" : "MII PR MolGen Mutationslast",
     "StructureDefinition-mii-pr-molgen-variante.html" : "MII PR MolGen Variante",
-    "StructureDefinition-mii-pr-molgen-molekularer-biomarker.html" : "MII PR MolGen Molekularer Biomarker"
+    "StructureDefinition-mii-pr-molgen-mikrosatelliteninstabilitaet.html" : "MII PR MolGen Mikrosatelliteninstabilität",
+    "StructureDefinition-mii-pr-molgen-genotyp.html" : "MII PR MolGen Genotyp"
   },
   {
     "url" : "http://loinc.org/vs/LL1037-2",
@@ -172,7 +172,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct",
-    "version" : "2027.0.0-ballot.rc1",
+    "version" : "2027.0.0-ballot",
     "status" : "active",
     "name" : "MII_VS_Diagnose_DiagnoseCodes_SNOMED",
     "title" : "MII VS Diagnose Diagnose-Codes SNOMED",
@@ -184,11 +184,11 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid",
-    "version" : "2027.0.0-ballot.rc1",
+    "version" : "2027.0.0-ballot",
     "status" : "active",
     "name" : "MII_VS_Diagnose_AlphaID",
     "title" : "MII VS Diagnose Alpha-ID",
-    "description" : "Enthaelt Alpha-ID-Codes der Versionen 2018 bis 2025",
+    "description" : "Enthaelt Alpha-ID-Codes der aller verfügbarer Versionen",
     "systems" : ["http://fhir.de/CodeSystem/bfarm/alpha-id"],
     "uses" : {
     },
@@ -196,11 +196,11 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm",
-    "version" : "2027.0.0-ballot.rc1",
+    "version" : "2027.0.0-ballot",
     "status" : "active",
     "name" : "MII_VS_Diagnose_ICD10GM",
     "title" : "MII VS Diagnose ICD-10-GM",
-    "description" : "Enthaelt ICD-10-GM-Codes der Versionen 2009 bis 2025",
+    "description" : "Enthaelt ICD-10-GM-Codes der aller verfügbarer Versionen",
     "systems" : ["http://fhir.de/CodeSystem/bfarm/icd-10-gm"],
     "uses" : {
     },
@@ -208,7 +208,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet",
-    "version" : "2027.0.0-ballot.rc1",
+    "version" : "2027.0.0-ballot",
     "status" : "active",
     "name" : "MII_VS_Diagnose_Orphanet",
     "title" : "MII VS Diagnose Orphanet",
@@ -220,7 +220,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-familiaere-linie",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.1",
     "status" : "active",
     "name" : "MII_VS_MolGen_FamiliaereLinie",
     "title" : "MII VS MolGen Familiäre Linie",
@@ -232,7 +232,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-family-member-snomed",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.1",
     "status" : "active",
     "name" : "MII_VS_MolGen_FamilyMember_SNOMED",
     "title" : "MII VS MolGen Family Member SNOMED",
@@ -244,7 +244,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-verwandtschaftsgrad",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.1",
     "status" : "active",
     "name" : "MII_VS_MolGen_Verwandtschaftsgrad",
     "title" : "MII VS Mol Gen Verwandtschaftsgrad",
@@ -256,7 +256,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.1",
     "status" : "active",
     "name" : "MII_VS_MolGen_Verwandtsverhaeltnis",
     "title" : "MII VS MolGen Verwandtschaftsverhaeltnis",
