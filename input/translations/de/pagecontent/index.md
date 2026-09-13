@@ -24,8 +24,8 @@ klinischer Routinedaten für die medizinische Forschung.
 
 | Veröffentlichung |               |
 |-------------|---------------|
-| Datum       | 2026-09-15 |
-| Version     | 2027.0.0-ballot |
+| Datum       | 2026-09-16 |
+| Version     | 2027.0.0-ballot.1 |
 | Status      | active        |
 | Realm       | DE            |
 
@@ -74,10 +74,10 @@ was der Build tatsächlich auflöst:
 | Paket | Version | Wofür |
 |---|---|---|
 | `hl7.fhir.uv.genomics-reporting` | `3.0.0` | HL7 Clinical Genomics Reporting STU3 — die internationale Basis, von der jedes genetische Profil hier abstammt |
-| `de.medizininformatikinitiative.kerndatensatz.meta` | `2027.0.0-ballot.rc3` | MII-Kerndatensatz-Modul Meta — Provenienz und die gemeinsamen Suchparameter |
+| `de.medizininformatikinitiative.kerndatensatz.meta` | `2027.0.0-ballot` | MII-Kerndatensatz-Modul Meta — Provenienz und die gemeinsamen Suchparameter |
 | `de.basisprofil.r4` | `1.6.0` | Deutsche Basisprofile — Identifikatoren, Adressen, Versicherung |
-| `de.medizininformatikinitiative.kerndatensatz.base` | `2027.0.0-ballot.rc1` | MII-Kerndatensatz-Modul Basis — Patient, Encounter und die modulübergreifenden Grundlagen |
-| `de.medizininformatikinitiative.kerndatensatz.biobank` | `2027.0.0-ballot.rc2` | MII-Kerndatensatz-Modul Biobank — die Specimen-Profile, auf die die genomischen Studien verweisen |
+| `de.medizininformatikinitiative.kerndatensatz.base` | `2027.0.0-ballot` | MII-Kerndatensatz-Modul Basis — Patient, Encounter und die modulübergreifenden Grundlagen |
+| `de.medizininformatikinitiative.kerndatensatz.biobank` | `2027.0.0-ballot` | MII-Kerndatensatz-Modul Biobank — die Specimen-Profile, auf die die genomischen Studien verweisen |
 | `hl7.terminology.r4` | `7.3.0` | HL7 Terminology — die Codesysteme, auf die sich die FHIR-Kernspezifikation stützt |
 | `hl7.fhir.uv.crmi` | `2.0.0` | Canonical Resource Management Infrastructure — erklärt, wie dieser Leitfaden seine Artefakte versioniert |
 | `hl7.fhir.uv.extensions.r4` | `5.3.0` | HL7-Extension-Paket |

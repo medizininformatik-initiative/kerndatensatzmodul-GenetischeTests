@@ -94,6 +94,37 @@ werden können.</p>
 
 ---
 
+#### Version 2027.0.0-ballot.1
+
+**Datum:** 2026-09-16 · **Ballot**
+
+Korrektur an den Abhängigkeitsangaben. **Kein Profil, keine Extension, kein ValueSet und
+kein Beispiel ändert sich.**
+
+##### Keine Breaking Changes
+
+##### Abhängigkeiten auf die Ballot-Versionen der MII-Module
+
+`2027.0.0-ballot` verwies auf Release-Kandidaten der drei MII-Module, obwohl von allen
+dreien die Ballot-Version vorlag:
+
+| Modul | vorher | jetzt |
+|---|---|---|
+| `kerndatensatz.meta` | `2027.0.0-ballot.rc3` | `2027.0.0-ballot` |
+| `kerndatensatz.base` | `2027.0.0-ballot.rc1` | `2027.0.0-ballot` |
+| `kerndatensatz.biobank` | `2027.0.0-ballot.rc2` | `2027.0.0-ballot` |
+
+Ein Ballot, der gegen Kandidaten anderer Module validiert, ist inkonsistent — Prüfende
+hätten gegen Stände geprüft, die selbst als vorläufig gekennzeichnet sind.
+
+**Inhaltlich folgenlos, und das ist nachgemessen.** Ein Build gegen die alten und ein
+Build gegen die neuen Abhängigkeiten unterscheiden sich in **139 von 140 Ressourcen
+überhaupt nicht**; die einzige Abweichung ist die ImplementationGuide-Ressource mit den
+drei geänderten Versionsangaben. Die Upstream-Pakete sind zwar gewachsen — meta von 173
+auf 177, base von 36 auf 38, biobank von 44 auf 49 Ressourcen —, aber nichts davon
+berührt, was dieses Modul verwendet: acht SearchParameter aus meta, einen IG-Verweis aus
+base und `SpecimenCore` aus biobank.
+
 #### Version 2027.0.0-ballot
 
 **Datum:** 2026-09-15 · **Ballot**

@@ -4,15 +4,15 @@
         "package_name": "de.medizininformatikinitiative.kerndatensatz.molgen",
         "canonical_base": "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen",
         "guide_name": "mii-ig-molgen",
-        "version": "2027.0.0-ballot",
+        "version": "2027.0.0-ballot.1",
         "resource_prefix": "mii-pr-molgen",
         "dependencies": {
             "hl7.fhir.r4.core": "4.0.1",
             "hl7.terminology.r4": "7.3.0",
             "de.basisprofil.r4": "1.6.0",
-            "de.medizininformatikinitiative.kerndatensatz.base": "2027.0.0-ballot.rc1",
-            "de.medizininformatikinitiative.kerndatensatz.meta": "2027.0.0-ballot.rc3",
-            "de.medizininformatikinitiative.kerndatensatz.biobank": "2027.0.0-ballot.rc2"
+            "de.medizininformatikinitiative.kerndatensatz.base": "2027.0.0-ballot",
+            "de.medizininformatikinitiative.kerndatensatz.meta": "2027.0.0-ballot",
+            "de.medizininformatikinitiative.kerndatensatz.biobank": "2027.0.0-ballot"
         },
         "special_dependencies": {
             "genomics_reporting": {
