@@ -97,7 +97,7 @@ description: "FHIR profiles for molecular genetic findings - variants, molecular
 status: active # draft | active | retired | unknown
 # MII modules use CalVer YYYY.n.n (e.g. 2026.0.1) per the MII Module Release
 # Workflow — NOT SemVer. Only the template tooling repos use SemVer.
-version: "2027.0.0-ballot"
+version: "2027.0.0-ballot.1"
 # packageId pattern per the MII naming convention:
 # de.medizininformatikinitiative.kerndatensatz.<slug> (for example,
 # kerndatensatz-basis uses de.medizininformatikinitiative.kerndatensatz.base).
@@ -115,7 +115,7 @@ releaseLabel: Release  # DECIDED 2026-09-02: a formal publication carries Releas
 # releases from here on, not a formalisation of the 2026.0.4 statement.
 license: CC-BY-4.0
 # Must equal the publication date; go-publish.yml validates this.
-date: "2026-09-15"
+date: "2026-09-16"
 jurisdiction: urn:iso:std:iso:3166#DE "Germany" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # NUM-DIZ takes over IG development and maintenance when MII funding ends
 # (end-2026), so NUM-DIZ is the publisher shown in the footer's
@@ -165,7 +165,7 @@ extension:
       - url: packageId
         valueId: de.medizininformatikinitiative.kerndatensatz.molgen
       - url: version
-        valueString: "2027.0.0-ballot"
+        valueString: "2027.0.0-ballot.1"
       - url: uri
         valueUri: https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen
   # Year this release sequence became effective
@@ -277,7 +277,7 @@ dependencies:
   # Bumped 2026-09-01 to the 2027 ballot release candidate (there is no released
   # 2027.0.0 yet; dist-tags.latest still points at 2026.0.0). Measured: identical
   # canonical set, no artefact removed, this module's generated resources byte-identical.
-  de.medizininformatikinitiative.kerndatensatz.meta: 2027.0.0-ballot.rc3
+  de.medizininformatikinitiative.kerndatensatz.meta: 2027.0.0-ballot
 
   # Source pin: 1.5.x, resolved to 1.5.4 at migration time.
   # Bumped 2026-09-01 to 1.6.0 -- a FINAL release and the registry's dist-tags.latest.
@@ -289,12 +289,12 @@ dependencies:
   # by this module (Diagnose, Patient, PatientPseudonymisiert); every change is
   # additive (new 0..1 / 0..* extensions) and one binding on address.country was
   # REMOVED, i.e. loosened. Nothing was deleted or tightened.
-  de.medizininformatikinitiative.kerndatensatz.base: 2027.0.0-ballot.rc1
+  de.medizininformatikinitiative.kerndatensatz.base: 2027.0.0-ballot
 
   # Source pin: 2026.0.x
   # Bumped 2026-09-02 to the 2027 ballot release candidate, in step with meta and base.
   # dist-tags.latest is still 2026.0.1; a released 2027.0.0 is awaited.
-  de.medizininformatikinitiative.kerndatensatz.biobank: 2027.0.0-ballot.rc2
+  de.medizininformatikinitiative.kerndatensatz.biobank: 2027.0.0-ballot
 
   # Source pin was 6.1.x, resolved to 6.1.0 at migration time. Bumped 2026-09-02 to
   # 7.3.0 by maintainer decision - the major jump the migration deliberately did not

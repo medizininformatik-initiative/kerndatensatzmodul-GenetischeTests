@@ -86,6 +86,36 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 
 ---
 
+#### Version 2027.0.0-ballot.1
+
+**Date:** 2026-09-16 · **Ballot**
+
+A correction to the dependency statements. **No profile, extension, value set or example
+changes.**
+
+##### No breaking changes
+
+##### Dependencies moved to the MII modules' ballot versions
+
+`2027.0.0-ballot` pointed at release candidates of the three MII modules although the
+ballot version of all three was available:
+
+| Module | was | now |
+|---|---|---|
+| `kerndatensatz.meta` | `2027.0.0-ballot.rc3` | `2027.0.0-ballot` |
+| `kerndatensatz.base` | `2027.0.0-ballot.rc1` | `2027.0.0-ballot` |
+| `kerndatensatz.biobank` | `2027.0.0-ballot.rc2` | `2027.0.0-ballot` |
+
+A ballot validating against other modules' candidates is inconsistent — reviewers would
+have checked against states that are themselves marked provisional.
+
+**Without consequence for the content, and that is measured.** A build against the old and
+a build against the new dependencies differ in **none of 139 of 140 resources**; the sole
+difference is the ImplementationGuide resource with the three changed version statements.
+The upstream packages did grow — meta from 173 to 177, base from 36 to 38, biobank from 44
+to 49 resources — but none of it touches what this module uses: eight search parameters
+from meta, one IG reference from base, and `SpecimenCore` from biobank.
+
 #### Version 2027.0.0-ballot
 
 **Date:** 2026-09-15 · **Ballot**
