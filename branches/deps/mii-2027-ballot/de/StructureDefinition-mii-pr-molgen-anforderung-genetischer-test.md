@@ -286,7 +286,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-molge
   "title" : "MII PR MolGen Anforderung genetischer Test",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-13T12:33:02+00:00",
+  "date" : "2026-09-13T15:32:17+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

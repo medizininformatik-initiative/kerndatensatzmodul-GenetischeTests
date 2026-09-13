@@ -50,10 +50,10 @@ This guide builds on the following packages. The table is taken from `dependenci
 | | | |
 | :--- | :--- | :--- |
 | `hl7.fhir.uv.genomics-reporting` | `3.0.0` | HL7 Clinical Genomics Reporting STU3 — the international base every genetic profile here derives from |
-| `de.medizininformatikinitiative.kerndatensatz.meta` | `2027.0.0-ballot.rc3` | MII core dataset Meta module — provenance and the shared search parameters |
+| `de.medizininformatikinitiative.kerndatensatz.meta` | `2027.0.0-ballot` | MII core dataset Meta module — provenance and the shared search parameters |
 | `de.basisprofil.r4` | `1.6.0` | German base profiles — identifiers, addresses, coverage |
-| `de.medizininformatikinitiative.kerndatensatz.base` | `2027.0.0-ballot.rc1` | MII core dataset Base module — Patient, Encounter and the cross-module foundations |
-| `de.medizininformatikinitiative.kerndatensatz.biobank` | `2027.0.0-ballot.rc2` | MII core dataset Biobank module — the Specimen profiles the genomic studies reference |
+| `de.medizininformatikinitiative.kerndatensatz.base` | `2027.0.0-ballot` | MII core dataset Base module — Patient, Encounter and the cross-module foundations |
+| `de.medizininformatikinitiative.kerndatensatz.biobank` | `2027.0.0-ballot` | MII core dataset Biobank module — the Specimen profiles the genomic studies reference |
 | `hl7.terminology.r4` | `7.3.0` | HL7 Terminology — the code systems the FHIR core specification relies on |
 | `hl7.fhir.uv.crmi` | `2.0.0` | Canonical Resource Management Infrastructure — declares how this guide versions its artifacts |
 | `hl7.fhir.uv.extensions.r4` | `5.3.0` | HL7 extension pack |

@@ -173,7 +173,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-molgen-emp
   "title" : "MII EX MolGen Empfohlene Maßnahme",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-13T12:33:02+00:00",
+  "date" : "2026-09-13T15:32:17+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
