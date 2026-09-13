@@ -26,8 +26,8 @@ standardized secondary use of routine clinical data for medical research.
 
 | Publication |               |
 |-------------|---------------|
-| Date        | 2026-09-14 |
-| Version     | 2027.0.0-ballot.rc3 |
+| Date        | 2026-09-15 |
+| Version     | 2027.0.0-ballot |
 | Status      | active        |
 | Realm       | DE            |
 

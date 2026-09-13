@@ -94,6 +94,36 @@ werden können.</p>
 
 ---
 
+#### Version 2027.0.0-ballot
+
+**Datum:** 2026-09-15 · **Ballot**
+
+Die Ballot-Version der 2027er-Linie. **Inhaltlich identisch mit
+2027.0.0-ballot.rc3** — diese Publikation trägt die Ballot-Kennzeichnung, sie ändert
+nichts an Profilen, Extensions, ValueSets oder Beispielen.
+
+##### Keine Breaking Changes
+
+Gegenüber rc3 hat sich kein Artefakt geändert. Wer gegen rc3 implementiert hat,
+implementiert gegen diese Version.
+
+##### Was die drei Kandidaten hierher gebracht haben
+
+* **rc1** brachte das Modul auf das MII-KDS-Modul-Template: der Leitfaden wird vom
+  HL7 IG Publisher gebaut statt von Simplifier, englisch mit deutscher Übersetzung.
+* **rc2** pinnte alle extern versionierten Codesysteme — SNOMED CT, LOINC, HGNC, HPO,
+  Sequence Ontology und ICD-10-GM — und brachte die Migration von Clinical Genomics STU2
+  auf STU3 als Seite in den Leitfaden.
+* **rc3** schloss die Metadaten und die Redaktion ab: CRMI an allen 33 Artefakten, der
+  modulspezifische Sicherheits- und Datenschutzabschnitt, die Danksagung an die HL7
+  Clinical Genomics Working Group und die Dokumentation der bekannten Probleme.
+
+##### Publikationsstatus
+
+Der Eintrag im FHIR-IG-Registry trägt diese Version als Edition **2027**. Die
+`publication-request.json` führt `status: release`, wie es die MII-Referenzmodule
+handhaben.
+
 #### Version 2027.0.0-ballot.rc3
 
 **Datum:** 2026-09-14 · **Release-Kandidat**
