@@ -86,6 +86,35 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 
 ---
 
+#### Version 2027.0.0-ballot
+
+**Date:** 2026-09-15 · **Ballot**
+
+The ballot version of the 2027 line. **Content-identical to 2027.0.0-ballot.rc3** — this
+publication carries the ballot label; it changes nothing in profiles, extensions, value
+sets or examples.
+
+##### No breaking changes
+
+No artifact changed against rc3. Whoever implemented against rc3 implements against this
+version.
+
+##### What the three candidates brought here
+
+* **rc1** moved the module onto the MII KDS module template: the guide is built by the
+  HL7 IG Publisher rather than Simplifier, English with a German translation.
+* **rc2** pinned every externally versioned code system — SNOMED CT, LOINC, HGNC, HPO,
+  Sequence Ontology and ICD-10-GM — and brought the Clinical Genomics STU2-to-STU3
+  migration into the guide as a page.
+* **rc3** closed out the metadata and the editing: CRMI on all 33 artifacts, the
+  module-specific security and privacy section, the acknowledgement of the HL7 Clinical
+  Genomics Working Group, and the documented known issues.
+
+##### Publication status
+
+The FHIR IG Registry entry carries this version as edition **2027**. The
+`publication-request.json` states `status: release`, as the MII reference modules do.
+
 #### Version 2027.0.0-ballot.rc3
 
 **Date:** 2026-09-14 · **Release candidate**
