@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-patient-srcc"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Patient mii-exa-molgen-patient-srcc</b></p><a name="de-mii-exa-molgen-patient-srcc"> </a><a name="de-hcmii-exa-molgen-patient-srcc"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Anonymous Patient Male, DoB: 1986-01 ( pseudonymized (use: usual, ))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Known status of Patient">Deceased:</td><td colspan="3">false</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3">10 DE </td></tr></table></div>
+  </text>
+  <identifier>
+    <use value="usual"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+        <code value="PSEUDED"/>
+      </coding>
+    </type>
+    <system value="https://www.charite.de/fhir/sid/pseudonym"/>
+    <value value="66036015"/>
+  </identifier>
+  <gender value="male"/>
+  <birthDate value="1986-01"/>
+  <deceasedBoolean value="false"/>
+  <address>
+    <type value="both"/>
+    <postalCode value="10"/>
+    <country value="DE"/>
+  </address>
+</Patient>

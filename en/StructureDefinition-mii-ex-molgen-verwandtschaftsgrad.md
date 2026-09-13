@@ -1,4 +1,4 @@
-# MII EX Mol Gen Verwandtschaftsgrad - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc3
+# MII EX Mol Gen Verwandtschaftsgrad - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad | *Version*:2027.0.0-ballot.rc3 |
-| Active as of 2026-09-11 | *Computable Name*:MII_EX_MolGen_Verwandtschaftsgrad |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-13 | *Computable Name*:MII_EX_MolGen_Verwandtschaftsgrad |
 
 Extension erlaubt die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen.
 
@@ -52,7 +52,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-molgen-ver
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc3"
+        "valueString" : "2027.0.0-ballot"
       },
       {
         "url" : "uri",
@@ -169,12 +169,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-molgen-ver
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad",
-  "version" : "2027.0.0-ballot.rc3",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_EX_MolGen_Verwandtschaftsgrad",
   "title" : "MII EX Mol Gen Verwandtschaftsgrad",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T14:33:36+00:00",
+  "date" : "2026-09-13T11:19:28+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

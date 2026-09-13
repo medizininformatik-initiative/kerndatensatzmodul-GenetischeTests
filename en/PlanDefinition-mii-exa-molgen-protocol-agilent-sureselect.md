@@ -1,4 +1,4 @@
-# Agilent SureSelect Human All Exon V7 Protocol - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc3
+# Agilent SureSelect Human All Exon V7 Protocol - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect | *Version*:2027.0.0-ballot.rc3 |
-| Active as of 2026-09-11 | *Computable Name*:AgilentSureSelectV7 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-13 | *Computable Name*:AgilentSureSelectV7 |
 
  
 Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the human exome 
@@ -23,11 +23,11 @@ Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the hu
 * **Actions: **: **Url: **
   * : [Agilent SureSelect Human All Exon V7 Kit Protocol](PlanDefinition-mii-exa-molgen-protocol-agilent-sureselect.md)
 * **Actions: **: **Version: **
-  * : 2027.0.0-ballot.rc3
+  * : 2027.0.0-ballot
 * **Actions: **: **Title: **
   * : Agilent SureSelect Human All Exon V7 Kit Protocol
 * **Actions: **: **Date: **
-  * : 2026-09-11 14:33:36+0000
+  * : 2026-09-13 11:19:28+0000
 * **Actions: **: **Publisher: **
   * : Medizininformatik-Initiative
 * **Actions: **: **Description: **
@@ -44,7 +44,7 @@ Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the hu
   "resourceType" : "PlanDefinition",
   "id" : "mii-exa-molgen-protocol-agilent-sureselect",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect",
-  "version" : "2027.0.0-ballot.rc3",
+  "version" : "2027.0.0-ballot",
   "name" : "AgilentSureSelectV7",
   "title" : "Agilent SureSelect Human All Exon V7 Kit Protocol",
   "type" : {
@@ -55,7 +55,7 @@ Target enrichment protocol for whole exome sequencing covering 35.8 Mb of the hu
     }]
   },
   "status" : "active",
-  "date" : "2026-09-11T14:33:36+00:00",
+  "date" : "2026-09-13T11:19:28+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "contact" : [{
     "name" : "Medizininformatik-Initiative",

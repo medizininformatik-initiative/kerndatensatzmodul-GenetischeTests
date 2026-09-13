@@ -1,4 +1,4 @@
-# MII PR MolGen Polygener Risiko Score - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc3
+# MII PR MolGen Polygener Risiko Score - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score | *Version*:2027.0.0-ballot.rc3 |
-| Active as of 2026-09-11 | *Computable Name*:MII_PR_MolGen_PolygenerRisikoScore |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-13 | *Computable Name*:MII_PR_MolGen_PolygenerRisikoScore |
 
  
 Profil für Polygenen Risiko Score 
@@ -83,7 +83,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-pol
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc3"
+        "valueString" : "2027.0.0-ballot"
       },
       {
         "url" : "uri",
@@ -200,12 +200,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-pol
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score",
-  "version" : "2027.0.0-ballot.rc3",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_MolGen_PolygenerRisikoScore",
   "title" : "MII PR MolGen Polygener Risiko Score",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T14:33:36+00:00",
+  "date" : "2026-09-13T11:19:28+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

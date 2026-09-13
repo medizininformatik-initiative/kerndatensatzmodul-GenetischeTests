@@ -1,4 +1,4 @@
-# MII EX MolGen Empfohlene Maßnahme - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc3
+# MII EX MolGen Empfohlene Maßnahme - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-massnahme | *Version*:2027.0.0-ballot.rc3 |
-| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_EX_MolGen_EmpfohleneMassnahme |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-massnahme | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-13 | *Maschinenlesbarer Name*:MII_EX_MolGen_EmpfohleneMassnahme |
 
 Die Extension verweist auf eine vorgeschlagene Maßnahme, die auf der Grundlage der Ergebnisse des Befundberichts empfohlen wird.
 
@@ -80,7 +80,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-molge
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc3"
+        "valueString" : "2027.0.0-ballot"
       },
       {
         "url" : "uri",
@@ -197,12 +197,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-molge
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-massnahme",
-  "version" : "2027.0.0-ballot.rc3",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_EX_MolGen_EmpfohleneMassnahme",
   "title" : "MII EX MolGen Empfohlene Maßnahme",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T14:33:36+00:00",
+  "date" : "2026-09-13T11:19:28+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

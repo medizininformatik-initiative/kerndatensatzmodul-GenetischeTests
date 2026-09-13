@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Änderungshistorie - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc3</title>
+    <title>Änderungshistorie - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII Implementierungsleitfaden Kerndatensatz-Modul Molekulargenetischer Befundbericht</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc3 - 
+            <span style="display:inline-block;">2027.0.0-ballot - 
 
 
 
@@ -285,7 +285,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht (v2027.0.0-ballot.rc3: 2027 Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht (v2027.0.0-ballot: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Änderungshistorie</h2>
   
 
@@ -409,6 +409,38 @@ werden können.</p>
 
 <hr />
 
+<h4 id="version-202700-ballot">Version 2027.0.0-ballot</h4>
+
+<p><strong>Datum:</strong> 2026-09-15 · <strong>Ballot</strong></p>
+
+<p>Die Ballot-Version der 2027er-Linie. <strong>Inhaltlich identisch mit
+2027.0.0-ballot.rc3</strong> — diese Publikation trägt die Ballot-Kennzeichnung, sie ändert
+nichts an Profilen, Extensions, ValueSets oder Beispielen.</p>
+
+<h5 id="keine-breaking-changes">Keine Breaking Changes</h5>
+
+<p>Gegenüber rc3 hat sich kein Artefakt geändert. Wer gegen rc3 implementiert hat,
+implementiert gegen diese Version.</p>
+
+<h5 id="was-die-drei-kandidaten-hierher-gebracht-haben">Was die drei Kandidaten hierher gebracht haben</h5>
+
+<ul>
+  <li><strong>rc1</strong> brachte das Modul auf das MII-KDS-Modul-Template: der Leitfaden wird vom
+HL7 IG Publisher gebaut statt von Simplifier, englisch mit deutscher Übersetzung.</li>
+  <li><strong>rc2</strong> pinnte alle extern versionierten Codesysteme — SNOMED CT, LOINC, HGNC, HPO,
+Sequence Ontology und ICD-10-GM — und brachte die Migration von Clinical Genomics STU2
+auf STU3 als Seite in den Leitfaden.</li>
+  <li><strong>rc3</strong> schloss die Metadaten und die Redaktion ab: CRMI an allen 33 Artefakten, der
+modulspezifische Sicherheits- und Datenschutzabschnitt, die Danksagung an die HL7
+Clinical Genomics Working Group und die Dokumentation der bekannten Probleme.</li>
+</ul>
+
+<h5 id="publikationsstatus">Publikationsstatus</h5>
+
+<p>Der Eintrag im FHIR-IG-Registry trägt diese Version als Edition <strong>2027</strong>. Die
+<code class="language-plaintext highlighter-rouge">publication-request.json</code> führt <code class="language-plaintext highlighter-rouge">status: release</code>, wie es die MII-Referenzmodule
+handhaben.</p>
+
 <h4 id="version-202700-ballotrc3">Version 2027.0.0-ballot.rc3</h4>
 
 <p><strong>Datum:</strong> 2026-09-14 · <strong>Release-Kandidat</strong></p>
@@ -416,7 +448,7 @@ werden können.</p>
 <p>Der dritte Kandidat schließt, was rc2 offengelassen hat: die Artefakt-Metadaten, die
 Sicherheitsanalyse und die offenen Redaktionsvermerke.</p>
 
-<h5 id="keine-breaking-changes">Keine Breaking Changes</h5>
+<h5 id="keine-breaking-changes-1">Keine Breaking Changes</h5>
 
 <p>Geprüft: keine kanonische URL, kein Profilname, kein Slice und keine Kardinalität hat sich
 geändert. Was hinzukommt, sind Metadaten an den Artefakten und Text im Leitfaden.
@@ -487,7 +519,7 @@ ist entfernt.</p>
 
 <p>Der erste Kandidat wurde formal publiziert; dieser räumt auf, was dabei sichtbar wurde.</p>
 
-<h5 id="keine-breaking-changes-1">Keine Breaking Changes</h5>
+<h5 id="keine-breaking-changes-2">Keine Breaking Changes</h5>
 
 <p>Geprüft statt angenommen — die CalVer-Nummer warnt von sich aus nicht.</p>
 
@@ -1301,8 +1333,8 @@ skaliert ist, das Profil den Slice aber an CodeableConcept bindet).</li>
 
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot.rc3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Sep 11, 2026 14:33+0000">2026-09-11</span>
+          Package de.medizininformatikinitiative.kerndatensatz.molgen#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Sun, Sep 13, 2026 11:19+0000">2026-09-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

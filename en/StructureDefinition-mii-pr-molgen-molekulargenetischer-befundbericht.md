@@ -1,4 +1,4 @@
-# MII PR MolGen Molekulargenetischer Befundbericht - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot.rc3
+# MII PR MolGen Molekulargenetischer Befundbericht - MII IG Kerndatensatz-Modul Molekulargenetischer Befundbericht v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht | *Version*:2027.0.0-ballot.rc3 |
-| Active as of 2026-09-11 | *Computable Name*:MII_PR_MolGen_MolekulargenetischerBefundbericht |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-13 | *Computable Name*:MII_PR_MolGen_MolekulargenetischerBefundbericht |
 
  
 Der DiagnosticReport ist zentraler Bestandteil aller genetischen Befundberichte und enthält Metadaten über den gesamten Bericht sowie alle relevanten Informationen, die im Rahmen der molekulargenetischen Analyse gefunden wurden. 
@@ -153,7 +153,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-mol
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc3"
+        "valueString" : "2027.0.0-ballot"
       },
       {
         "url" : "uri",
@@ -270,12 +270,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-molgen-mol
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht",
-  "version" : "2027.0.0-ballot.rc3",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_MolGen_MolekulargenetischerBefundbericht",
   "title" : "MII PR MolGen Molekulargenetischer Befundbericht",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T14:33:36+00:00",
+  "date" : "2026-09-13T11:19:28+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
