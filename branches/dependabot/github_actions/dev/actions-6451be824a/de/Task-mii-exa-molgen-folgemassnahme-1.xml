@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Task xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-folgemassnahme-1"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme|2027.0.0-ballot.rc1"/>
+    <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/followup-recommendation|3.0.0"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Task mii-exa-molgen-folgemassnahme-1</b></p><a name="de-mii-exa-molgen-folgemassnahme-1"> </a><a name="de-hcmii-exa-molgen-folgemassnahme-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="StructureDefinition-mii-pr-molgen-empfohlene-folgemassnahme.html">MII PR MolGen Empfohlene Folgemaßnahme</a> version: 2027.0.0-ballot.rc1, <a href="http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-followup-recommendation.html">Followup Recommendation</a> version: 3.0.0</p></div><p><b>basedOn</b>: <a href="ServiceRequest-mii-exa-molgen-anforderung-1.html">ServiceRequest Molecular genetic test (procedure)</a></p><p><b>status</b>: Requested</p><p><b>intent</b>: proposal</p><p><b>code</b>: <span title="Codes:{http://loinc.org LA14020-4}">Genetic counseling recommended</span></p><p><b>description</b>: Genetische Beratung empfohlen mit Dr. Rosalind Franklin</p><p><b>for</b>: <a href="Patient-mii-exa-molgen-patient.html">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Krankenaktennummer (use: usual, ))</a></p><p><b>reasonReference</b>: <a href="Observation-mii-exa-molgen-therapeutische-implikation-1.html">Observation Therapeutic Implication</a></p></div>
+  </text>
+  <basedOn>
+    <reference value="ServiceRequest/mii-exa-molgen-anforderung-1"/>
+  </basedOn>
+  <status value="requested"/>
+  <intent value="proposal"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LA14020-4"/>
+      <display value="Genetic counseling recommended"/>
+    </coding>
+  </code>
+  <description value="Genetische Beratung empfohlen mit Dr. Rosalind Franklin"/>
+  <for>
+    <reference value="Patient/mii-exa-molgen-patient"/>
+  </for>
+  <reasonReference>
+    <reference value="Observation/mii-exa-molgen-therapeutische-implikation-1"/>
+  </reasonReference>
+</Task>
