@@ -45,7 +45,7 @@ jobs:
       # SUBDIRECTORY of google/osv-scanner-action (the repo-root action.yml has
       # no runnable definition — verified upstream at v2.3.8).
       - name: OSV-Scanner
-        uses: google/osv-scanner-action/osv-scanner-action@6e4298ebc4db23e847df9b2e2de2939d6f066c67 # v2.5.1
+        uses: google/osv-scanner-action/osv-scanner-action@a345acffa64b0eaede81a3d9aae6141214d9c8fc # v2.6.0
         # osv-scanner exits non-zero when it finds vulnerabilities (1) or when
         # the repo has no scannable package sources yet (128). Neither must
         # block the SARIF upload, so the step tolerates failure.
@@ -59,7 +59,7 @@ jobs:
 
       - name: Upload OSV SARIF
         if: ${{ always() && hashFiles('osv.sarif') != '' }}
-        uses: github/codeql-action/upload-sarif@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+        uses: github/codeql-action/upload-sarif@1c5b675653bb5c22dbe9b12b556ec555138e09fd # v4.38.1
         with:
           sarif_file: osv.sarif
           category: osv-scanner
@@ -80,7 +80,7 @@ jobs:
 
       - name: Upload Trivy SARIF
         if: ${{ always() && hashFiles('trivy.sarif') != '' }}
-        uses: github/codeql-action/upload-sarif@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+        uses: github/codeql-action/upload-sarif@1c5b675653bb5c22dbe9b12b556ec555138e09fd # v4.38.1
         with:
           sarif_file: trivy.sarif
           category: trivy-fs
@@ -124,7 +124,7 @@ jobs:
 
       - name: Upload Trivy image SARIF
         if: ${{ always() && hashFiles('trivy-image.sarif') != '' }}
-        uses: github/codeql-action/upload-sarif@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+        uses: github/codeql-action/upload-sarif@1c5b675653bb5c22dbe9b12b556ec555138e09fd # v4.38.1
         with:
           sarif_file: trivy-image.sarif
           category: trivy-image
