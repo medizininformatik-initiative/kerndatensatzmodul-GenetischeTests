@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Specimen xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-specimen-dna-library"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Specimen mii-exa-molgen-specimen-dna-library</b></p><a name="de-mii-exa-molgen-specimen-dna-library"> </a><a name="de-hcmii-exa-molgen-specimen-dna-library"> </a><p><b>identifier</b>: <code>https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids</code>/LIB-2024-001</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 119342007}">DNA Library</span></p><p><b>subject</b>: <a href="Patient-mii-exa-molgen-patient.html">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Krankenaktennummer (use: usual, ))</a></p><p><b>parent</b>: <a href="Specimen-mii-exa-molgen-specimen-blood-edta.html">Specimen: identifier = https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids#EDTA-2024-001; type = Plasma specimen</a></p><h3>Processings</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Description</b></td><td><b>Time[x]</b></td></tr><tr><td style="display: none">*</td><td>DNA extraction and library preparation using Agilent SureSelect</td><td>2024-01-16 14:00:00+0100</td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids"/>
+    <value value="LIB-2024-001"/>
+  </identifier>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="119342007"/>
+      <display value="Saliva specimen"/>
+    </coding>
+    <text value="DNA Library"/>
+  </type>
+  <subject>
+    <reference value="Patient/mii-exa-molgen-patient"/>
+  </subject>
+  <parent>
+    <reference value="Specimen/mii-exa-molgen-specimen-blood-edta"/>
+  </parent>
+  <processing>
+    <description value="DNA extraction and library preparation using Agilent SureSelect"/>
+    <timeDateTime value="2024-01-16T14:00:00+01:00"/>
+  </processing>
+</Specimen>

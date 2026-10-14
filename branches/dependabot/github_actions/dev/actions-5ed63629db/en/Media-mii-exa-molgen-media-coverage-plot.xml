@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Media xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-media-coverage-plot"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Media mii-exa-molgen-media-coverage-plot</b></p><a name="mii-exa-molgen-media-coverage-plot"> </a><a name="hcmii-exa-molgen-media-coverage-plot"> </a><p><b>status</b>: Completed</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/media-type image}">Image</span></p><p><b>subject</b>: <a href="Patient-mii-exa-molgen-patient.html">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Medical record number (use: usual, ))</a></p><p><b>created</b>: 2024-01-20 10:00:00+0100</p><h3>Contents</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Title</b></td></tr><tr><td style="display: none">*</td><td>image/png</td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/plots/coverage_wes_2024001.png">https://www.medizininformatik-initiative.de/fhir/plots/coverage_wes_2024001.png</a></td><td>Exome Coverage Distribution Plot</td></tr></table></div>
+  </text>
+  <status value="completed"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/media-type"/>
+      <code value="image"/>
+      <display value="Image"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/mii-exa-molgen-patient"/>
+  </subject>
+  <createdDateTime value="2024-01-20T10:00:00+01:00"/>
+  <content>
+    <contentType value="image/png"/>
+    <url value="https://www.medizininformatik-initiative.de/fhir/plots/coverage_wes_2024001.png"/>
+    <title value="Exome Coverage Distribution Plot"/>
+  </content>
+</Media>

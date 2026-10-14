@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Device xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-device-thermofisher-ionchef"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Device mii-exa-molgen-device-thermofisher-ionchef</b></p><a name="mii-exa-molgen-device-thermofisher-ionchef"> </a><a name="hcmii-exa-molgen-device-thermofisher-ionchef"> </a><p><b>identifier</b>: <code>https://www.medizininformatik-initiative.de/fhir/sid/lab-devices</code>/IONCHEF-IC12345</p><p><b>status</b>: Active</p><p><b>manufacturer</b>: Thermo Fisher Scientific</p><p><b>serialNumber</b>: IC12345</p><h3>DeviceNames</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td>Ion Chef System</td><td>Model name</td></tr></table><p><b>modelNumber</b>: Ion Chef</p><p><b>type</b>: <span title="Codes:">Template preparation system (Ion Chef)</span></p></div>
+  </text>
+  <identifier>
+    <system value="https://www.medizininformatik-initiative.de/fhir/sid/lab-devices"/>
+    <value value="IONCHEF-IC12345"/>
+  </identifier>
+  <status value="active"/>
+  <manufacturer value="Thermo Fisher Scientific"/>
+  <serialNumber value="IC12345"/>
+  <deviceName>
+    <name value="Ion Chef System"/>
+    <type value="model-name"/>
+  </deviceName>
+  <modelNumber value="Ion Chef"/>
+  <type>
+    <text value="Template preparation system (Ion Chef)"/>
+  </type>
+</Device>
