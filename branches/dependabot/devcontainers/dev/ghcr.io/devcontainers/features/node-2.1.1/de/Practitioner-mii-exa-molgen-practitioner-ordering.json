@@ -1,0 +1,18 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "mii-exa-molgen-practitioner-ordering",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Practitioner mii-exa-molgen-practitioner-ordering</b></p><a name=\"de-mii-exa-molgen-practitioner-ordering\"> </a><a name=\"de-hcmii-exa-molgen-practitioner-ordering\"> </a><p><b>identifier</b>: <code>https://www.medizininformatik-initiative.de/fhir/sid/practitioner-ids</code>/54321</p><p><b>name</b>: Klaus Müller </p></div>"
+  },
+  "identifier" : [{
+    "system" : "https://www.medizininformatik-initiative.de/fhir/sid/practitioner-ids",
+    "value" : "54321"
+  }],
+  "name" : [{
+    "family" : "Müller",
+    "given" : ["Klaus"],
+    "prefix" : ["Dr."]
+  }]
+}

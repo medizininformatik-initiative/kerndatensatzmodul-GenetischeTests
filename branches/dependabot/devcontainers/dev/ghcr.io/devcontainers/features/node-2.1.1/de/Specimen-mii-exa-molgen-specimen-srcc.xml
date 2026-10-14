@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Specimen xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-specimen-srcc"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Specimen mii-exa-molgen-specimen-srcc</b></p><a name="de-mii-exa-molgen-specimen-srcc"> </a><a name="de-hcmii-exa-molgen-specimen-srcc"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2027.0.0-ballot.rc2&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore">MII PR Biobank Specimen Bioprobe Core</a></p></div><p><b>identifier</b>: <code>https://www.charite.de/fhir/sid/bioproben</code>/00070024</p><p><b>status</b>: Available</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 445295009}">Blood specimen with edetic acid (specimen)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-molgen-patient-srcc.html">Anonymous Patient Male, DoB: 1986-01 ( pseudonymized (use: usual, ))</a></p><p><b>receivedTime</b>: 2022-11-30</p><h3>Collections</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Collected[x]</b></td></tr><tr><td style="display: none">*</td><td>2022-11-30</td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="https://www.charite.de/fhir/sid/bioproben"/>
+    <value value="00070024"/>
+  </identifier>
+  <status value="available"/>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="445295009"/>
+      <display value="Blood specimen with edetic acid (specimen)"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/mii-exa-molgen-patient-srcc"/>
+  </subject>
+  <receivedTime value="2022-11-30"/>
+  <collection>
+    <collectedDateTime value="2022-11-30"/>
+  </collection>
+</Specimen>
