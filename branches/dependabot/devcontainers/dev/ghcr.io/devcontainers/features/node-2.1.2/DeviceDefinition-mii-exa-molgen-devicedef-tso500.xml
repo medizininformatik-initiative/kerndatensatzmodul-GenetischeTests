@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DeviceDefinition xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-devicedef-tso500"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: DeviceDefinition mii-exa-molgen-devicedef-tso500</b></p><a name="mii-exa-molgen-devicedef-tso500"> </a><a name="hcmii-exa-molgen-devicedef-tso500"> </a><p><b>identifier</b>: <code>https://www.medizininformatik-initiative.de/fhir/sid/panel-catalog</code>/TSO500-v2</p><p><b>manufacturer</b>: Illumina Inc.</p><h3>DeviceNames</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td>TruSight Oncology 500 v2</td><td>Model name</td></tr></table><p><b>modelNumber</b>: 20130527</p><p><b>type</b>: <span title="Codes:">Comprehensive genomic profiling capture panel</span></p><h3>Specializations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>SystemType</b></td><td><b>Version</b></td></tr><tr><td style="display: none">*</td><td>Hybrid capture-based comprehensive genomic profiling panel for solid tumors (RUO)</td><td>523 SNV/Indel genes; 59 CNV genes; 23 DNA rearrangement genes; 55 RNA fusion/splice genes; TMB; MSI; HRD; 1.94 Mb panel size</td></tr></table><p><b>version</b>: 2</p></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: DeviceDefinition mii-exa-molgen-devicedef-tso500</b></p><a name="de-mii-exa-molgen-devicedef-tso500"> </a><a name="de-hcmii-exa-molgen-devicedef-tso500"> </a><p><b>identifier</b>: <code>https://www.medizininformatik-initiative.de/fhir/sid/panel-catalog</code>/TSO500-v2</p><p><b>manufacturer</b>: Illumina Inc.</p><h3>DeviceNames</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td>TruSight Oncology 500 v2</td><td>Model name</td></tr></table><p><b>modelNumber</b>: 20130527</p><p><b>type</b>: <span title="Codes:">Comprehensive genomic profiling capture panel</span></p><h3>Specializations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>SystemType</b></td><td><b>Version</b></td></tr><tr><td style="display: none">*</td><td>Hybrid capture-based comprehensive genomic profiling panel for solid tumors (RUO)</td><td>523 SNV/Indel genes; 59 CNV genes; 23 DNA rearrangement genes; 55 RNA fusion/splice genes; TMB; MSI; HRD; 1.94 Mb panel size</td></tr></table><p><b>version</b>: 2</p></div></div>
+  </text>
+  <identifier>
+    <system value="https://www.medizininformatik-initiative.de/fhir/sid/panel-catalog"/>
+    <value value="TSO500-v2"/>
+  </identifier>
+  <manufacturerString value="Illumina Inc."/>
+  <deviceName>
+    <name value="TruSight Oncology 500 v2"/>
+    <type value="model-name"/>
+  </deviceName>
+  <modelNumber value="20130527"/>
+  <type>
+    <text value="Comprehensive genomic profiling capture panel"/>
+  </type>
+  <specialization>
+    <systemType value="Hybrid capture-based comprehensive genomic profiling panel for solid tumors (RUO)"/>
+    <version value="523 SNV/Indel genes; 59 CNV genes; 23 DNA rearrangement genes; 55 RNA fusion/splice genes; TMB; MSI; HRD; 1.94 Mb panel size"/>
+  </specialization>
+  <version value="2"/>
+</DeviceDefinition>

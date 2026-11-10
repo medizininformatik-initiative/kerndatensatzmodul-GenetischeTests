@@ -1,0 +1,50 @@
+{
+  "codeSystems" : [{
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-familiaere-linie",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_MolGen_FamiliaereLinie",
+    "title" : "MII VS MolGen Familiäre Linie",
+    "description" : "ValueSet für die Angabe der familären Linie zwischen Patient und Familienangehörigen.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-ex-molgen-familiare-linie.html" : "MII EX MolGen Familiare Linie"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-family-member-snomed",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_MolGen_FamilyMember_SNOMED",
+    "title" : "MII VS MolGen Family Member SNOMED",
+    "description" : "The ValueSet contains codes for related family member types from SNOMED CT.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-molgen-familienanamnese.html" : "MII PR MolGen Familienanamnese"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-verwandtschaftsgrad",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_MolGen_Verwandtschaftsgrad",
+    "title" : "MII VS Mol Gen Verwandtschaftsgrad",
+    "description" : "ValueSet für die Angabe eines Verwandtschaftsgrades zwischen Patient und Familienangehörigen.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-ex-molgen-verwandtschaftsgrad.html" : "MII EX Mol Gen Verwandtschaftsgrad"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_MolGen_Verwandtsverhaeltnis",
+    "title" : "MII VS MolGen Verwandtschaftsverhaeltnis",
+    "description" : "ValueSet für die Angabe eines Verwandtschaftsverhältnis zwischen Patient und Familienangehörigen.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-ex-molgen-verwandtschaftsverhaeltnis.html" : "MII EX MolGen Verwandtschaftsverhaeltnis"
+  }]
+}
