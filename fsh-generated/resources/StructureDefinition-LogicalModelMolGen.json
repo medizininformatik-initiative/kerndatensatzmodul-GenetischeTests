@@ -396,6 +396,13 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure",
+            "comment": "MII_PR_MolGen_GenomicStudy mit MII_PR_MolGen_GenomicStudyAnalysis (seit STU3)"
+          }
         ]
       },
       {
@@ -414,6 +421,11 @@
           {
             "identity": "FHIR",
             "map": "Observation.method"
+          },
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension:method-type",
+            "comment": "MII_PR_MolGen_GenomicStudyAnalysis"
           }
         ]
       },
@@ -463,6 +475,11 @@
           {
             "identity": "FHIR",
             "map": "Device"
+          },
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension:device",
+            "comment": "MII_PR_MolGen_GenomicStudyAnalysis"
           }
         ]
       },
@@ -482,6 +499,11 @@
           {
             "identity": "FHIR",
             "map": "Observation.component:gene-studied"
+          },
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension:regions.extension:studied",
+            "comment": "MII_PR_MolGen_GenomicStudyAnalysis"
           }
         ]
       },
@@ -500,7 +522,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.component:transcript-ref-seq"
+            "map": "Observation.component:representative-transcript-ref-seq"
           }
         ]
       },
@@ -520,6 +542,11 @@
           {
             "identity": "FHIR",
             "map": "Observation.component:allelic-read-depth"
+          },
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension:metrics",
+            "comment": "MII_PR_MolGen_GenomicStudyAnalysis"
           }
         ]
       },
@@ -600,6 +627,109 @@
         ]
       },
       {
+        "id": "LogicalModelMolGen.Methoden.ArtDerUntersuchung",
+        "path": "LogicalModelMolGen.Methoden.ArtDerUntersuchung",
+        "short": "Art der Untersuchung",
+        "definition": "Art der genomischen oder molekulargenetischen Untersuchung (z. B. Panel-, Exom- oder Genomsequenzierung)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.code",
+            "comment": "MII_PR_MolGen_GenomicStudy"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelMolGen.Methoden.Durchfuehrungszeitraum",
+        "path": "LogicalModelMolGen.Methoden.Durchfuehrungszeitraum",
+        "short": "Durchführungszeitraum",
+        "definition": "Zeitraum (oder Zeitpunkt), in dem die Untersuchung durchgeführt wurde",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.performed[x]",
+            "comment": "MII_PR_MolGen_GenomicStudy"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelMolGen.Methoden.UntersuchteVariationstypen",
+        "path": "LogicalModelMolGen.Methoden.UntersuchteVariationstypen",
+        "short": "Untersuchte Variationstypen",
+        "definition": "Arten von Veränderungen, auf die die Analyse untersucht hat (z. B. SNV, Indel, CNV) - Terminologie: Sequence Ontology",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension:change-type",
+            "comment": "MII_PR_MolGen_GenomicStudyAnalysis"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelMolGen.Methoden.ReferenzgenomVersion",
+        "path": "LogicalModelMolGen.Methoden.ReferenzgenomVersion",
+        "short": "Referenzgenom-Version",
+        "definition": "Version des Referenzgenoms, gegen das die Analyse ausgewertet wurde (z. B. GRCh38)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension:genome-build",
+            "comment": "MII_PR_MolGen_GenomicStudyAnalysis"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelMolGen.Methoden.UntersuchteProbe",
+        "path": "LogicalModelMolGen.Methoden.UntersuchteProbe",
+        "short": "Untersuchte Probe",
+        "definition": "In der Analyse verwendete Probe",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Specimen"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Procedure.extension:specimen",
+            "comment": "MII_PR_MolGen_GenomicStudyAnalysis"
+          }
+        ]
+      },
+      {
         "id": "LogicalModelMolGen.Ergebnisse",
         "path": "LogicalModelMolGen.Ergebnisse",
         "short": "Ergebnisse",
@@ -631,7 +761,8 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.valueCodeableConcept"
+            "map": "DiagnosticReport.conclusionCode",
+            "comment": "Seit STU3; das Profil ErgebnisZusammenfassung entfällt"
           }
         ]
       },
@@ -663,7 +794,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.component:protein-hgvs"
+            "map": "Observation.component:representative-protein-hgvs"
           }
         ]
       },
@@ -682,7 +813,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.component:coding-hgvs"
+            "map": "Observation.component:representative-coding-hgvs"
           }
         ]
       },
@@ -720,7 +851,7 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.component:transcript-ref-seq"
+            "map": "Observation.component:representative-transcript-ref-seq"
           }
         ]
       },
@@ -819,7 +950,13 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.component:amino-acid-change-type"
+            "map": "Observation.component:feature-consequence",
+            "comment": "MII_PR_MolGen_MolekulareKonsequenz (seit STU3)"
+          },
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:functional-effect",
+            "comment": "MII_PR_MolGen_MolekulareKonsequenz (seit STU3)"
           }
         ]
       },
@@ -979,7 +1116,8 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.valueQuantity"
+            "map": "Observation.valueQuantity",
+            "comment": "MII_PR_MolGen_Mutationslast"
           }
         ]
       },
@@ -1002,7 +1140,8 @@
         "mapping": [
           {
             "identity": "FHIR",
-            "map": "Observation.valueCodeableConcept"
+            "map": "Observation.valueCodeableConcept",
+            "comment": "MII_PR_MolGen_Mikrosatelliteninstabilitaet"
           }
         ]
       },
@@ -1025,6 +1164,141 @@
           {
             "identity": "FHIR",
             "map": "DocumentReference"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelMolGen.Ergebnisse.MolekulareKonsequenz",
+        "path": "LogicalModelMolGen.Ergebnisse.MolekulareKonsequenz",
+        "short": "Molekulare Konsequenz",
+        "definition": "Konsequenz einer Variante auf molekularer Ebene (seit Clinical Genomics STU3 eine eigene Beobachtung)",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation",
+            "comment": "MII_PR_MolGen_MolekulareKonsequenz"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelMolGen.Ergebnisse.MolekulareKonsequenz.KlinischeSignifikanz",
+        "path": "LogicalModelMolGen.Ergebnisse.MolekulareKonsequenz.KlinischeSignifikanz",
+        "short": "Klinische Signifikanz",
+        "definition": "Klinische Signifikanz der molekularen Konsequenz",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:clinical-significance"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelMolGen.Ergebnisse.MolekulareKonsequenz.Evidenzlevel",
+        "path": "LogicalModelMolGen.Ergebnisse.MolekulareKonsequenz.Evidenzlevel",
+        "short": "Evidenzlevel",
+        "definition": "Evidenzlevel der molekularen Konsequenz",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:evidence-level"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelMolGen.Ergebnisse.MolekulareKonsequenz.Zusammenfassung",
+        "path": "LogicalModelMolGen.Ergebnisse.MolekulareKonsequenz.Zusammenfassung",
+        "short": "Zusammenfassung",
+        "definition": "Textuelle Zusammenfassung der molekularen Konsequenz",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:conclusion-string"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelMolGen.Ergebnisse.MolekularerBiomarker",
+        "path": "LogicalModelMolGen.Ergebnisse.MolekularerBiomarker",
+        "short": "Molekularer Biomarker",
+        "definition": "Genübergreifender molekularer Biomarker wie Mutationslast oder Mikrosatelliteninstabilität (seit Clinical Genomics STU3)",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation",
+            "comment": "MII_PR_MolGen_MolekularerBiomarker; Mutationslast und Mikrosatelliteninstabilitaet erben davon"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelMolGen.Ergebnisse.MolekularerBiomarker.Biomarker",
+        "path": "LogicalModelMolGen.Ergebnisse.MolekularerBiomarker.Biomarker",
+        "short": "Biomarker",
+        "definition": "Code des Biomarkers",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelMolGen.Ergebnisse.MolekularerBiomarker.UntersuchtesGen",
+        "path": "LogicalModelMolGen.Ergebnisse.MolekularerBiomarker.UntersuchtesGen",
+        "short": "Untersuchtes Gen",
+        "definition": "Für den Biomarker untersuchte Gene",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component:gene-studied"
           }
         ]
       },
@@ -1328,6 +1602,26 @@
           {
             "identity": "FHIR",
             "map": "DiagnosticReport.issued"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelMolGen.Weiteres.Bemerkungen",
+        "path": "LogicalModelMolGen.Weiteres.Bemerkungen",
+        "short": "Bemerkungen",
+        "definition": "Bemerkungen zum Befundbericht",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Annotation"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "DiagnosticReport.extension:coded-note",
+            "comment": "R4 kennt kein DiagnosticReport.note"
           }
         ]
       },

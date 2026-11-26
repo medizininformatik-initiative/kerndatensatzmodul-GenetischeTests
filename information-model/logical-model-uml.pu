@@ -1,0 +1,249 @@
+@startuml UML_MolGenBefund
+' UML-Klassendiagramm des Informationsmodells Molekulargenetischer Befundbericht.
+' Nachbau von input/images/UML_MolGenBefund2.JPG, erweitert um Clinical Genomics
+' STU3 (gruen umrandet): Genomische Untersuchung/Analyse, Molekulare Konsequenz,
+' Molekularer Biomarker, Zusammenfassung am Bericht.
+' Jedes Attribut traegt darunter einen Verweis "' lm: <pfad>" auf das Logical
+' Model (LogicalModelMolGen); Abgleich: python3 scripts/check-lm-uml.py
+' Rendern: plantuml -tsvg -o ../input/images information-model/logical-model-uml.pu
+
+skinparam Linetype ortho
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam nodesep 60
+skinparam ranksep 50
+skinparam defaultFontName Arial
+skinparam class {
+  BackgroundColor #C4F7EE
+  BorderColor #333333
+  ArrowColor #333333
+  FontSize 12
+  AttributeFontSize 11
+  BackgroundColor<<Bericht>> #1EF4EE
+  BackgroundColor<<Fremd>> #F2B57A
+  BorderColor<<STU3>> #2E7D32
+  BorderThickness<<STU3>> 2
+  StereotypeFontSize 1
+  StereotypeFontColor #F2B57A
+}
+hide circle
+hide stereotype
+
+' ---------------------------------------------------------------- Kopf: Personen, Probe
+class "<b><i>Anforderer</i></b>\n<size:11>(from Person)</size>" as Anforderer <<Fremd>>
+' lm: Anforderung.Anforderer
+class "<b><i>Patient</i></b>\n<size:11>(from Person)</size>" as Patient <<Fremd>>
+' lm: Probeninformation.Patient
+class "<b>Bioprobe</b>\n<size:11>(from Bioprobe)</size>" as Bioprobe <<Fremd>>
+' lm: Probeninformation.Probe
+
+' ---------------------------------------------------------------- Anforderung
+class "<b>Indikation Anforderung</b>" as Anforderung {
+  +Indikation: string
+  ' lm: Anforderung.Indikation.Indikation
+  +Mögliche Erkrankung: string
+  ' lm: Anforderung.Indikation.Indikation
+  +Gesundheitszustand: code
+  ' lm: Anforderung.Indikation.Gesundheitszustand
+  +Anlageträger: code
+  ' lm: Anforderung.Indikation.Anlagetraeger
+  +Relevante Vorergebnisse: code
+  ' lm: Anforderung.Indikation.RelevanteVorergebnisse
+  +Bemerkungen: string
+  ' lm: Anforderung.Bemerkungen
+  +EBM: code
+  ' lm: Anforderung.Anforderer.EinheitlicherBewertungsmassstab
+  +Anforderungstext: string
+  ' lm: Anforderung.Anforderer.Anforderungstext
+  +Datum der Anforderung: date
+  ' lm: Anforderung.DatumDerAnforderung
+}
+class "<b>Krankengeschichte</b>" as Krankengeschichte {
+  +Familie: code
+  ' lm: Anforderung.Indikation.KrankengeschichteFamilie
+}
+class "<b>Relevante Vorergebnisse</b>" as Vorergebnisse
+' lm: Anforderung.Indikation.RelevanteVorergebnisse
+class "<b>Pathologiebefund</b>" as Pathologiebefund <<Fremd>>
+' lm: -
+class "<b>Laborbefund</b>" as Laborbefund <<Fremd>>
+' lm: -
+class "<b>Zu testende Gene</b>" as ZuTestendeGene {
+  +ID: code
+  ' lm: Anforderung.Anforderer.ZuTestendeGene
+}
+
+' ---------------------------------------------------------------- Bericht
+class "<b>Molekulargenetischer Befundbericht</b>" as Befundbericht <<Bericht>> {
+  +Bericht-ID: code
+  ' lm: Weiteres.BerichtID
+  +Bemerkungen: string
+  ' lm: Weiteres.Bemerkungen
+  +Beratung: code
+  ' offen: Modellierung noch nicht entschieden (Task-Empfehlung LA14020-4 vs. ServiceRequest),
+  ' bis dahin bewusst ohne lm-Verweis
+  +Anhänge: string
+  ' lm: Weiteres.Anhaenge
+  +Berichtstatus: string
+  ' lm: Weiteres.Berichtstatus
+  +Datum des Berichtes: date
+  ' lm: Weiteres.DatumDesBerichts
+  +Zusammenfassung: code
+  ' lm: Ergebnisse.Zusammenfassung
+}
+class "<b>Labor Ansprechpartner</b>\n<size:11>(from Person)</size>" as LaborAnsprechpartner <<Fremd>>
+' lm: Weiteres.LaborInstitutionAnsprechpartner.*
+
+' ---------------------------------------------------------------- Interpretation
+class "<b>Referenzen</b>" as Referenzen {
+  +Name: string
+  ' lm: Interpretation.Referenzen
+}
+class "<b>Interpretation</b>" as Interpretation {
+  +Klinische Signifikanz: code
+  ' lm: Interpretation.KlinischeSignifikanz
+  +Clinical annotation level of evidence: code
+  ' lm: Interpretation.ClinicalAnnotationLevelOfEvidence
+  +Zusammenfassung: string
+  ' lm: Interpretation.Zusammenfassung
+  +Empfehlungen: string
+  ' lm: Interpretation.Empfehlungen
+  +Vererbungsmodus: code
+  ' lm: Interpretation.Vererbungsmodus
+  +Assoziierter Phänotyp: code
+  ' lm: Interpretation.AssoziierterPhaenotyp
+  +Medikationsempfehlung: code
+  ' lm: Interpretation.Medikationsempfehlung
+  +Medikationsbewertung: code
+  ' lm: Interpretation.Medikamentenbewertung
+}
+
+' ---------------------------------------------------------------- Methoden
+class "<b>Genomische Untersuchung</b>\n<size:11>(Methoden)</size>" as Methoden <<STU3>> {
+  +Art der Untersuchung: code
+  ' lm: Methoden.ArtDerUntersuchung
+  +Durchführungszeitraum: period
+  ' lm: Methoden.Durchfuehrungszeitraum
+  +Relevante Parameter: string
+  ' lm: Methoden.RelevanteParameter
+  +Limitierungen Bemerkungen: string
+  ' lm: Methoden.LimitierungenBemerkungen
+}
+class "<b>Analyse</b>" as Analyse <<STU3>> {
+  +Methode: code
+  ' lm: Methoden.Methode
+  +Getestete Gene: code
+  ' lm: Methoden.GetesteteGene
+  +Untersuchte Variationstypen: code
+  ' lm: Methoden.UntersuchteVariationstypen
+  +Referenzgenom-Version: code
+  ' lm: Methoden.ReferenzgenomVersion
+  +Untersuchte Probe: Bioprobe
+  ' lm: Methoden.UntersuchteProbe
+  +Read depth Coverage: quantity
+  ' lm: Methoden.ReadDepthCoverage
+  +Intron spanning IVS: string
+  ' lm: Methoden.IntronSpanningIVS
+  +Start- und Endnukleotid: string
+  ' lm: Methoden.StartUndEndnukleotid
+  +Sensitivität Detektionslimit: quantity
+  ' lm: Methoden.SensitivitaetDetektionslimit
+}
+class "<b>Geräte Software Kits</b>" as Geraete {
+  +Name: string
+  ' lm: Methoden.GeraeteSoftwareKits
+  +Hersteller: string
+  ' lm: Methoden.GeraeteSoftwareKits
+}
+
+' ---------------------------------------------------------------- Ergebnisse
+class "<b>Ergebnisse</b>" as Ergebnisse
+' lm: -
+class "<b>Variante</b>" as Variante {
+  +Veränderung auf Proteinebene: code
+  ' lm: Ergebnisse.Veraenderungen.VeraenderungProteinebene
+  +DNA Veränderung: code
+  ' lm: Ergebnisse.Veraenderungen.DNAVeraenderungen
+  +Genomische DNA Veränderung: code
+  ' lm: Ergebnisse.Veraenderungen.GenomischeDNAVeraenderung
+  +Transkript ID: code
+  ' lm: Ergebnisse.Veraenderungen.TranskriptID
+  +Referenzgenom: code
+  ' lm: Ergebnisse.Veraenderungen.Referenzgenom
+  +Alt Allel: string
+  ' lm: Ergebnisse.Veraenderungen.AltAllel
+  +Ref-Allel: string
+  ' lm: Ergebnisse.Veraenderungen.RefAllel
+  +DNA-Mutationstyp: code
+  ' lm: Ergebnisse.Veraenderungen.DNAMutationstyp
+  +Proben-Allelfrequenz: quantity
+  ' lm: Ergebnisse.Veraenderungen.ProbenAllelfrequenz
+  +Ursprung der Variante: code
+  ' lm: Ergebnisse.Veraenderungen.UrsprungDerVariante
+  +Varianten ID: code
+  ' lm: Ergebnisse.Veraenderungen.VariantenID
+  +Chromosom: code
+  ' lm: Ergebnisse.Veraenderungen.Chromosom
+  +Exon: string
+  ' lm: Ergebnisse.Veraenderungen.Exon
+  +Zytogenetische Lokalisierung: code
+  ' lm: Ergebnisse.Veraenderungen.ZytogenetischeLokalisierung
+  +Kopienzahlvariationen: quantity
+  ' lm: Ergebnisse.Veraenderungen.Kopienzahlvariationen
+}
+class "<b>Molekulare Konsequenz</b>" as Konsequenz <<STU3>> {
+  +Mutationskonsequenz: code
+  ' lm: Ergebnisse.Veraenderungen.MutationskonsequenzFunktionell
+  +Klinische Signifikanz: code
+  ' lm: Ergebnisse.MolekulareKonsequenz.KlinischeSignifikanz
+  +Evidenzlevel: code
+  ' lm: Ergebnisse.MolekulareKonsequenz.Evidenzlevel
+  +Zusammenfassung: string
+  ' lm: Ergebnisse.MolekulareKonsequenz.Zusammenfassung
+}
+class "<b>Molekularer Biomarker</b>" as Biomarker <<STU3>> {
+  +Biomarker: code
+  ' lm: Ergebnisse.MolekularerBiomarker.Biomarker
+  +Untersuchtes Gen: code
+  ' lm: Ergebnisse.MolekularerBiomarker.UntersuchtesGen
+  +Mutationslast: quantity
+  ' lm: Ergebnisse.Mutationslast
+  +Mikrosatellitenstabilität: code
+  ' lm: Ergebnisse.Mikrosatelliteninstabilitaet
+}
+class "<b>Daten</b>" as Daten {
+  +Daten: string
+  ' lm: Ergebnisse.Daten
+}
+class "<b>Referenzsequenz</b>" as Referenzsequenz {
+  +ID: code
+  ' lm: Methoden.Referenzsequenz
+}
+
+' ---------------------------------------------------------------- Beziehungen
+Anforderer "1" -down- "1..*" Anforderung
+Krankengeschichte "0..*" -down- "1" Anforderung
+Anforderung "1" -right- "0..*" Vorergebnisse
+Vorergebnisse "1..*" -right- "0..*" Pathologiebefund
+Vorergebnisse "1..*" -down- "0..*" Laborbefund
+Anforderung "1" -down- "1..*" ZuTestendeGene
+
+Patient "1" -down- "1..*" Bioprobe
+Bioprobe "1" -down- "1..*" Befundbericht
+Anforderung "1..*" -down- "1" Befundbericht
+
+Referenzen "0..*" -down- "1" Interpretation
+Interpretation "1" -right- "1" Befundbericht
+Befundbericht "1" -right- "1..*" Methoden
+Methoden "1" -down- "1..*" Analyse
+Analyse "0..*" -right- "0..*" Geraete
+Befundbericht "1..*" -down- "1" LaborAnsprechpartner
+Befundbericht "1" -down-- "1" Ergebnisse
+Ergebnisse "1" -right- "1..*" Variante
+Ergebnisse "1" -down- "0..*" Biomarker
+Variante "1" -down- "0..*" Konsequenz
+Variante "1" -right- "0..*" Daten
+Variante "1" -right- "1..*" Referenzsequenz
+Daten -[hidden]down- Referenzsequenz
+
+@enduml
