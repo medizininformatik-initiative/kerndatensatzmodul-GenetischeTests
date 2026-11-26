@@ -1,0 +1,245 @@
+[{
+  "id" : "mii-cps-molgen-capabilitystatement",
+  "type" : "CapabilityStatement",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/CapabilityStatement/metadata",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_CPS_MolGen_CapabilityStatement"
+},
+{
+  "id" : "mii-ig-molgen",
+  "type" : "ImplementationGuide",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_IG_MolGen"
+},
+{
+  "id" : "mii-exa-molgen-protocol-agilent-sureselect",
+  "type" : "PlanDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/PlanDefinition/mii-exa-molgen-protocol-agilent-sureselect",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "AgilentSureSelectV7"
+},
+{
+  "id" : "mii-sp-molgen-diagnostic-report-genomic-study",
+  "type" : "SearchParameter",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/DiagnosticReport-GenomicStudy",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "SP_MII_MolGen_DiagnosticReport_GenomicStudy"
+},
+{
+  "id" : "mii-sp-molgen-diagnostic-report-recommended-action",
+  "type" : "SearchParameter",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/DiagnosticReport-RecommendedAction",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "SP_MII_MolGen_DiagnosticReport_RecommendedAction"
+},
+{
+  "id" : "mii-sp-molgen-genomic-study-analysis-device",
+  "type" : "SearchParameter",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-Device",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "SP_MII_MolGen_GenomicStudyAnalysis_Device"
+},
+{
+  "id" : "mii-sp-molgen-genomic-study-analysis-method",
+  "type" : "SearchParameter",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-MethodType",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "SP_MII_MolGen_GenomicStudyAnalysis_MethodType"
+},
+{
+  "id" : "mii-sp-molgen-genomic-study-analysis-regions-studied",
+  "type" : "SearchParameter",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-RegionsStudied",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "SP_MII_MolGen_GenomicStudyAnalysis_RegionsStudied"
+},
+{
+  "id" : "mii-sp-molgen-genomic-study-analysis-specimen",
+  "type" : "SearchParameter",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/SearchParameter/GenomicStudyAnalysis-Specimen",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "SP_MII_MolGen_GenomicStudyAnalysis_Specimen"
+},
+{
+  "id" : "LogicalModelMolGen",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/LogicalModelMolGen",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_LM_MolGen_LogicalModel"
+},
+{
+  "id" : "mii-pr-molgen-anforderung-genetischer-test",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_MolGen_AnforderungGenetischerTest"
+},
+{
+  "id" : "mii-pr-molgen-diagnostische-implikation",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_MolGen_DiagnostischeImplikation"
+},
+{
+  "id" : "mii-pr-molgen-empfohlene-folgemassnahme",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_MolGen_EmpfohleneFolgemassnahme"
+},
+{
+  "id" : "mii-ex-molgen-empfohlene-massnahme",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-massnahme",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_EX_MolGen_EmpfohleneMassnahme"
+},
+{
+  "id" : "mii-pr-molgen-familienanamnese",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_MolGen_Familienanamnese"
+},
+{
+  "id" : "mii-pr-molgen-genotyp",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_MolGen_Genotyp"
+},
+{
+  "id" : "mii-pr-molgen-medikationsempfehlung",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_MolGen_Medikationsempfehlung"
+},
+{
+  "id" : "mii-ex-molgen-familiare-linie",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-familiare-linie",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_EX_MolGen_FamiliareLinie"
+},
+{
+  "id" : "mii-ex-molgen-verwandtschaftsgrad",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsgrad",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_EX_MolGen_Verwandtschaftsgrad"
+},
+{
+  "id" : "mii-ex-molgen-verwandtschaftsverhaeltnis",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-ex-molgen-verwandtschaftsverhaeltnis",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_EX_MolGen_Verwandtschaftsverhaeltnis"
+},
+{
+  "id" : "mii-pr-molgen-genomic-study",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_MolGen_GenomicStudy"
+},
+{
+  "id" : "mii-pr-molgen-genomic-study-analysis",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_MolGen_GenomicStudyAnalysis"
+},
+{
+  "id" : "mii-pr-molgen-molekulare-konsequenz",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_MolGen_MolekulareKonsequenz"
+},
+{
+  "id" : "mii-pr-molgen-molekularer-biomarker",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekularer-biomarker",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_MolGen_MolekularerBiomarker"
+},
+{
+  "id" : "mii-pr-molgen-mikrosatelliteninstabilitaet",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_MolGen_Mikrosatelliteninstabilitaet"
+},
+{
+  "id" : "mii-pr-molgen-molekulargenetischer-befundbericht",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_MolGen_MolekulargenetischerBefundbericht"
+},
+{
+  "id" : "mii-pr-molgen-mutationslast",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_MolGen_Mutationslast"
+},
+{
+  "id" : "mii-pr-molgen-polygener-risiko-score",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_MolGen_PolygenerRisikoScore"
+},
+{
+  "id" : "mii-ex-molgen-risk-assessment-einflussfaktor",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/risk-assessment-einflussfaktor",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_EX_MolGen_RiskAssessment_Einflussfaktor"
+},
+{
+  "id" : "mii-pr-molgen-therapeutische-implikation",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_MolGen_TherapeutischeImplikation"
+},
+{
+  "id" : "mii-pr-molgen-variante",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_MolGen_Variante"
+},
+{
+  "id" : "mii-vs-molgen-familiaere-linie",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-familiaere-linie",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_MolGen_FamiliaereLinie"
+},
+{
+  "id" : "mii-vs-molgen-family-member-snomed",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-family-member-snomed",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_MolGen_FamilyMember_SNOMED"
+},
+{
+  "id" : "mii-vs-molgen-verwandtschaftsgrad",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-verwandtschaftsgrad",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_MolGen_Verwandtschaftsgrad"
+},
+{
+  "id" : "mii-vs-molgen-verwandtschaftsverhaeltnis",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ValueSet/mii-vs-molgen-verwandtschaftsverhaeltnis",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_MolGen_Verwandtsverhaeltnis"
+}]

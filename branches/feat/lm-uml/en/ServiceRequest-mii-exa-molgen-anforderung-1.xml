@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-molgen-anforderung-1"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test|2027.0.0-ballot.rc1"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ServiceRequest mii-exa-molgen-anforderung-1</b></p><a name="mii-exa-molgen-anforderung-1"> </a><a name="hcmii-exa-molgen-anforderung-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-molgen-anforderung-genetischer-test.html">MII PR MolGen Anforderung genetischer Test</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 108252007}">Laboratory procedure (procedure)</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 405825005}, {http://loinc.org 53844-7}, {http://www.genenames.org/geneId HGNC:1097}">BRAF: Exon 15 (Codon 600)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-molgen-patient.html">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Medical record number (use: usual, ))</a></p><p><b>authoredOn</b>: 2022-04-07</p><p><b>requester</b>: <a href="Practitioner-mii-exa-molgen-practitioner-physician.html">Practitioner Dr. Linda Rubens(official)</a></p><p><b>reasonCode</b>: <span title="Codes:{http://snomed.info/sct 447886005}">Adenocarcinoma of anorectum (disorder)</span></p><p><b>supportingInfo</b>: <a href="FamilyMemberHistory-mii-exa-molgen-family-member-history-1.html">FamilyMemberHistory: status = completed; date = 2022-04-07; relationship = Mother (person); sex = Female (finding); deceased[x] = true; reasonCode = Adenocarcinoma of anorectum (disorder)</a></p><p><b>specimen</b>: <a href="Specimen-mii-exa-molgen-specimen-1.html">Specimen: identifier = https://biobank.uk-musterstadt.de/fhir/sid/proben#5432; status = available; type = Tissue specimen from colon (specimen)</a></p></div>
+  </text>
+  <status value="active"/>
+  <intent value="order"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="108252007"/>
+      <display value="Laboratory procedure (procedure)"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="405825005"/>
+      <display value="Molecular genetic test (procedure)"/>
+    </coding>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="53844-7"/>
+      <display value="BRAF gene targeted mutation analysis in Blood or Tissue by Molecular genetics method"/>
+    </coding>
+    <coding>
+      <system value="http://www.genenames.org/geneId"/>
+      <code value="HGNC:1097"/>
+      <display value="BRAF"/>
+    </coding>
+    <text value="BRAF: Exon 15 (Codon 600)"/>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-molgen-patient"/>
+  </subject>
+  <authoredOn value="2022-04-07"/>
+  <requester>
+    <reference value="Practitioner/mii-exa-molgen-practitioner-physician"/>
+  </requester>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="447886005"/>
+      <display value="Adenocarcinoma of anorectum (disorder)"/>
+    </coding>
+  </reasonCode>
+  <supportingInfo>
+    <reference value="FamilyMemberHistory/mii-exa-molgen-family-member-history-1"/>
+  </supportingInfo>
+  <specimen>
+    <reference value="Specimen/mii-exa-molgen-specimen-1"/>
+  </specimen>
+</ServiceRequest>

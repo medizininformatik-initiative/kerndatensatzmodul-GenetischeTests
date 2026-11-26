@@ -1,0 +1,65 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "mii-exa-molgen-anforderung-srcc",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test|2027.0.0-ballot.rc1"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest mii-exa-molgen-anforderung-srcc</b></p><a name=\"de-mii-exa-molgen-anforderung-srcc\"> </a><a name=\"de-hcmii-exa-molgen-anforderung-srcc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-molgen-anforderung-genetischer-test.html\">MII PR MolGen Anforderung genetischer Test</a> version: 2027.0.0-ballot.rc1</p></div><p><b>identifier</b>: <code>https://www.charite.de/fhir/auftragsnummern</code>/7B369EB0</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 108252007}\">Laboratory procedure (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 405825005}\">Molekulargenetische Untersuchung (Stufendiagnostik) der relevanten Gene</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-molgen-patient-srcc.html\">Anonymous Patient Male, DoB: 1986-01 ( pseudonymized\u00a0(use:\u00a0usual,\u00a0))</a></p><p><b>authoredOn</b>: 2022-11-30</p><p><b>requester</b>: <a href=\"Practitioner-mii-exa-molgen-practitioner-physician.html\">Practitioner Dr. Linda Rubens(official)</a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 87737001}, {http://fhir.de/CodeSystem/bfarm/icd-10-gm C16.9}\">Eigenanamnese: Siegelringkarzinom des Magens, diffus wachsend</span>, <span title=\"Codes:{http://snomed.info/sct 429740004}\">Mutter an Brustkrebs verstorben</span></p><p><b>specimen</b>: <a href=\"Specimen-mii-exa-molgen-specimen-srcc.html\">Specimen: identifier = https://www.charite.de/fhir/sid/bioproben#00070024; status = available; type = Blood specimen with edetic acid (specimen); receivedTime = 2022-11-30</a></p></div>"
+  },
+  "identifier" : [{
+    "system" : "https://www.charite.de/fhir/auftragsnummern",
+    "value" : "7B369EB0"
+  }],
+  "status" : "active",
+  "intent" : "order",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "108252007",
+      "display" : "Laboratory procedure (procedure)"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "405825005",
+      "display" : "Molecular genetic test (procedure)"
+    }],
+    "text" : "Molekulargenetische Untersuchung (Stufendiagnostik) der relevanten Gene"
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-molgen-patient-srcc"
+  },
+  "authoredOn" : "2022-11-30",
+  "requester" : {
+    "reference" : "Practitioner/mii-exa-molgen-practitioner-physician"
+  },
+  "reasonCode" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "87737001",
+      "display" : "Signet ring cell carcinoma"
+    },
+    {
+      "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+      "version" : "2024",
+      "code" : "C16.9",
+      "display" : "Bösartige Neubildung: Magen, nicht näher bezeichnet"
+    }],
+    "text" : "Eigenanamnese: Siegelringkarzinom des Magens, diffus wachsend"
+  },
+  {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "429740004",
+      "display" : "Family history of malignant neoplasm of breast (situation)"
+    }],
+    "text" : "Mutter an Brustkrebs verstorben"
+  }],
+  "specimen" : [{
+    "reference" : "Specimen/mii-exa-molgen-specimen-srcc"
+  }]
+}

@@ -1,0 +1,88 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-molgen-genotyp-brca1",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp|2027.0.0-ballot.rc1",
+    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype|3.0.0"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-molgen-genotyp-brca1</b></p><a name=\"de-mii-exa-molgen-genotyp-brca1\"> </a><a name=\"de-hcmii-exa-molgen-genotyp-brca1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-mii-pr-molgen-genotyp.html\">MII PR MolGen Genotyp</a> version: 2027.0.0-ballot.rc1, <a href=\"http://hl7.org/fhir/uv/genomics-reporting/STU3/StructureDefinition-genotype.html\">Genotype</a> version: 3.0.0</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 GE}\">Genetik</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 84413-4}\">Genotype display name</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-molgen-patient-brca1.html\">Elisa Schmidt-Huber (official) Female, DoB: 1973-03-12 ( Krankenaktennummer\u00a0(use:\u00a0usual,\u00a0))</a></p><p><b>effective</b>: 2022-11-01</p><p><b>value</b>: <span title=\"Codes:\">BRCA1, c.5266dup, p.(Gln1756Profs*74)</span></p><p><b>method</b>: <span title=\"Codes:{http://loinc.org LA26398-0}\">Sequencing</span></p><p><b>specimen</b>: <a href=\"Specimen-mii-exa-molgen-specimen-brca1.html\">Specimen: identifier = https://www.charite.de/fhir/sid/bioproben#specimen_03; status = available; type = Tissue specimen from breast (specimen); receivedTime = 2022-11-01</a></p><p><b>device</b>: <a href=\"Device-mii-exa-molgen-device-sequencer-nextseq.html\">Device: status = active; manufacturer = Illumina</a></p><p><b>derivedFrom</b>: <a href=\"Observation-mii-exa-molgen-variante-brca1.html\">Observation Genetic variant assessment</a></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 48018-6}\">Gene studied [ID]</span></p><p><b>value</b>: <span title=\"Codes:{http://www.genenames.org/geneId HGNC:1100}\">BRCA1</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 48001-2}\">Cytogenetic (chromosome) location</span></p><p><b>value</b>: <span title=\"Codes:{urn:oid:2.16.840.1.113883.6.335 17q21.31}\">17q21.31</span></p></blockquote></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory",
+      "display" : "Laboratory"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+      "code" : "GE"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "84413-4",
+      "display" : "Genotype display name"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-molgen-patient-brca1"
+  },
+  "effectiveDateTime" : "2022-11-01",
+  "valueCodeableConcept" : {
+    "text" : "BRCA1, c.5266dup, p.(Gln1756Profs*74)"
+  },
+  "method" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "LA26398-0",
+      "display" : "Sequencing"
+    }]
+  },
+  "specimen" : {
+    "reference" : "Specimen/mii-exa-molgen-specimen-brca1"
+  },
+  "device" : {
+    "reference" : "Device/mii-exa-molgen-device-sequencer-nextseq"
+  },
+  "derivedFrom" : [{
+    "reference" : "Observation/mii-exa-molgen-variante-brca1"
+  }],
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "48018-6",
+        "display" : "Gene studied [ID]"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://www.genenames.org/geneId",
+        "code" : "HGNC:1100",
+        "display" : "BRCA1"
+      }]
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "48001-2",
+        "display" : "Cytogenetic (chromosome) location"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "urn:oid:2.16.840.1.113883.6.335",
+        "code" : "17q21.31"
+      }]
+    }
+  }]
+}

@@ -1,0 +1,47 @@
+{
+  "resourceType" : "Specimen",
+  "id" : "mii-exa-molgen-specimen-blood-edta",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Specimen mii-exa-molgen-specimen-blood-edta</b></p><a name=\"de-mii-exa-molgen-specimen-blood-edta\"> </a><a name=\"de-hcmii-exa-molgen-specimen-blood-edta\"> </a><p><b>identifier</b>: <code>https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids</code>/EDTA-2024-001</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119361006}\">Plasma specimen</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-molgen-patient.html\">Maja Julia Van-der-Dussen (official) Female, DoB: 1968-09-19 ( Krankenaktennummer\u00a0(use:\u00a0usual,\u00a0))</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2024-01-15 09:30:00+0100</td></tr></table><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Capacity</b></td><td><b>SpecimenQuantity</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 767384004}\">Evacuated blood collection tube with clot activator</span></td><td>10 milliliter<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemL = 'mL')</span></td><td>10 milliliter<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemL = 'mL')</span></td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "https://www.medizininformatik-initiative.de/fhir/sid/specimen-ids",
+    "value" : "EDTA-2024-001"
+  }],
+  "type" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "119361006",
+      "display" : "Plasma specimen"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-molgen-patient"
+  },
+  "collection" : {
+    "collectedDateTime" : "2024-01-15T09:30:00+01:00"
+  },
+  "container" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "767384004",
+        "display" : "Evacuated blood collection tube with clot activator"
+      }]
+    },
+    "capacity" : {
+      "value" : 10,
+      "unit" : "milliliter",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mL"
+    },
+    "specimenQuantity" : {
+      "value" : 10,
+      "unit" : "milliliter",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mL"
+    }
+  }]
+}
