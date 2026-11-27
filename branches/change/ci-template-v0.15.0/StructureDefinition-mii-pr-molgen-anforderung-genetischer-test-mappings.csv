@@ -1,0 +1,62 @@
+"Id","MII-KDS","MII-KDS comments","workflow","v2","w5","quick"
+"","","","","","",""
+"ServiceRequest","mide-dataelement-1733","Indikation / Anforderung","Request","ORC","",""
+"ServiceRequest.id","","","","","",""
+"ServiceRequest.meta","","","","","",""
+"ServiceRequest.implicitRules","","","","","",""
+"ServiceRequest.language","","","","","",""
+"ServiceRequest.text","","","","","",""
+"ServiceRequest.contained","","","","","",""
+"ServiceRequest.extension","","","","","",""
+"ServiceRequest.modifierExtension","","","","","",""
+"ServiceRequest.identifier","","","Request.identifier","ORC.2, ORC.3, RF1-6 / RF1-11,","FiveWs.identifier","ClinicalStatement.identifier"
+"ServiceRequest.instantiatesCanonical","","","Request.instantiatesCanonical","Varies by domain","",""
+"ServiceRequest.instantiatesUri","","","Request.instantiatesUri","Varies by domain","",""
+"ServiceRequest.basedOn","mide-dataelement-1742
+mide-dataelement-1743","Zuvor durchgeführte Tests Methode
+Zuvor durchgeführte Tests Gen","Request.basedOn","ORC.8 (plus others)","",""
+"ServiceRequest.replaces","","","Request.replaces","Handled by message location of ORC (ORC.1=RO or RU)","",""
+"ServiceRequest.requisition","","","Request.groupIdentifier","ORC.4","",""
+"ServiceRequest.status","","","Request.status","ORC.5,RF1-1","FiveWs.status","Action.currentStatus"
+"ServiceRequest.intent","","","Request.intent","N/A","FiveWs.class",""
+"ServiceRequest.category","","","","RF1-5","FiveWs.class",""
+"ServiceRequest.priority","","","Request.priority","TQ1.9, RF1-2","FiveWs.grade",""
+"ServiceRequest.doNotPerform","","","Request.doNotPerform","","",""
+"ServiceRequest.code","mide-dataelement-1761
+mide-dataelement-1704","Zu testende Gene, ID
+Einheitlicher Bewertungsmaßstab","Request.code","PR1-3 / OBR-4  (varies by domain)","FiveWs.what[x]","Procedure.procedureCode"
+"ServiceRequest.code.id","","","","","",""
+"ServiceRequest.code.extension","","","","","",""
+"ServiceRequest.code.coding","","","","C*E.1-8, C*E.10-22","",""
+"ServiceRequest.code.text","mide-dataelement-1763","Anforderungstext","","C*E.9. But note many systems use C*E.2 for this","",""
+"ServiceRequest.orderDetail","","","","NTE","","Procedure.procedureCode"
+"ServiceRequest.quantity[x]","","","","NTE","",""
+"ServiceRequest.subject","","","Request.subject","PID","FiveWs.subject[x]
+FiveWs.subject","ClinicalStatement.subject"
+"ServiceRequest.encounter","","","Request.encounter","PV1","FiveWs.context","ClinicalStatement.encounter"
+"ServiceRequest.occurrence[x]","","","Request.occurrence[x]","TQ1/TQ2, OBR-7/OBR-8","FiveWs.planned","Procedure.procedureSchedule"
+"ServiceRequest.asNeeded[x]","","","","","","Proposal.prnReason.reason"
+"ServiceRequest.authoredOn","mide-dataelement-1766","Datum der Anforderung","Request.authoredOn","ORC.9,  RF1-7 / RF1-9","FiveWs.recorded","Proposal.proposedAtTime"
+"ServiceRequest.requester","mide-dataelement-1746","Anforderer","Request.requester","ORC.12, PRT","FiveWs.author","ClinicalStatement.statementAuthor"
+"ServiceRequest.performerType","","","Request.performerType","PRT, RF!-3","FiveWs.actor",""
+"ServiceRequest.performer","","","Request.performer","PRT, Practitioner: PRD-2/PRD-7 where PRD-3 = RT; Organization: PRD-10 where PRD-3 = RT","FiveWs.actor",""
+"ServiceRequest.locationCode","","","","","FiveWs.actor",""
+"ServiceRequest.locationReference","","","","","FiveWs.actor",""
+"ServiceRequest.reasonCode","mide-dataelement-1736","Indikation","Request.reasonCode","ORC.16, RF1-10","FiveWs.why[x]",""
+"ServiceRequest.reasonReference","mide-dataelement-1744
+mide-dataelement-1745","Ergebnisse vorheriger Tests
+Bereichtsverweis","Request.reasonReference","ORC.16","FiveWs.why[x]",""
+"ServiceRequest.insurance","","","Request.insurance","IN1/IN2","",""
+"ServiceRequest.supportingInfo","mide-dataelement-1738
+mide-dataelement-1739
+mide-dataelement-1740
+mide-dataelement-1741","Aktueller Gesundheitszustand
+Krankengeschichte Patient
+Krankengeschichte Familie
+Anlageträger","Request.supportingInfo","Accompanying segments","",""
+"ServiceRequest.supportingInfo:familienanamnese","","","Request.supportingInfo","Accompanying segments","",""
+"ServiceRequest.specimen","","","","SPM","",""
+"ServiceRequest.bodySite","","","","SPM","","Procedure.targetBodySite"
+"ServiceRequest.note","mide-dataelement-1763","Anforderungstext","Request.note","NTE","","ClinicalStatement.additionalText"
+"ServiceRequest.patientInstruction","","","","NTE","",""
+"ServiceRequest.relevantHistory","","","Request.relevantHistory","N/A","",""
